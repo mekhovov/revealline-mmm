@@ -1,4 +1,5 @@
 import path from 'node:path';
+import { readFileSync } from 'node:fs';
 import { parse } from 'acorn';
 import { parse as parseHTML, serialize } from 'parse5';
 
@@ -214,6 +215,39 @@ function projectHTML(source, name, config) {
     `<style>${hiddenSelectors.join(',')}{display:none!important}</style></head>`);
 }
 
+function projectLanding(files) {
+  // Presentation-only customization. Keep official artwork bytes, campaign
+  // identities and the upstream menu's accessibility/lifecycle contracts.
+  const css = readFileSync(new URL('../branding/coupa-landing.css', import.meta.url));
+  const art = readFileSync(new URL('../branding/coupa-landing.html', import.meta.url), 'utf8');
+  files.set('game/ui/coupa-landing.css', css);
+  edit(files, 'game/index.html', (source) => once(once(source,
+    '<div class="home-art" aria-hidden="true"></div>', art, 'Coupa landing decoration'),
+    '</head>', '<link rel="stylesheet" href="ui/coupa-landing.css"></head>', 'Coupa landing styles'));
+  edit(files, 'game/ui/edition-solo.mjs', (source) => once(source,
+    "logo.className = 'edition-home-logo';",
+    "logo.className = 'edition-home-logo coupa-landing-logo';", 'Coupa landing logo'));
+  edit(files, 'game/ui/menu-scene-catalog.mjs', (source) => once(source,
+    'if (!composition) return profile;', `if (!composition) return {
+    ...profile,
+    landscape: '../editions/assets/coupa/wallpaper-network-2024.png',
+    portrait: '../editions/assets/coupa/wallpaper-network-2024.png',
+    landscapePosition: '72% 50%', portraitPosition: '82% 50%',
+    environment: [], portraitEnvironment: [], actorVisible: false,
+    signalOpacity: 0, signalPeakOpacity: 0,
+  };`, 'Coupa official wallpaper'));
+  // The new CSS capture trails own ambient motion. Keep the upstream motion
+  // switch, reduced-motion, visibility and dialog pause lifecycle, without
+  // starting photograph distortion or analog interference renderers.
+  edit(files, 'game/ui/menu-scenes.mjs', (source) => once(source,
+    '    if (running && !artworkMotion) {', '    if (false && running && !artworkMotion) {', 'Coupa static wallpaper renderer'));
+  edit(files, 'game/ui/menu-scenes.mjs', (source) => once(source,
+    '    if (running && !signalLoss) {', '    if (false && running && !signalLoss) {', 'Coupa clean wallpaper'));
+  edit(files, 'game/app.mjs', (source) => once(source,
+    "container: $('shell-home')?.querySelector('.home-content'),",
+    'container: null, // The dedicated landing uses its official rotating Coupa mark.', 'Coupa landing character'));
+}
+
 function pruneUnreachableModules(files) {
   const pending = ['game/app.mjs', 'game/boot.mjs', 'game/company-entry.mjs'];
   for (const [name, bytes] of files) {
@@ -349,6 +383,7 @@ export const createLessonObserver = denyBrandedImport;
     if (/\.(?:mjs|js)$/.test(name)) files.set(name, encoder(scopeStorage(bytes.toString('utf8'), config.repo)));
     if (name.endsWith('.html')) files.set(name, encoder(projectHTML(bytes.toString('utf8'), name, config)));
   }
+  projectLanding(files);
   pruneUnreachableModules(files);
   // The upstream compiler appends shared presentation ledger records, some of
   // which became unused after removing its public archive/default identity.
@@ -370,6 +405,7 @@ export const createLessonObserver = denyBrandedImport;
   const dependencies = JSON.parse(files.get('runtime-dependencies.json'));
   dependencies.resources = dependencies.resources.filter((name) => files.has(name));
   dependencies.resources.push('game/branded-isolation.mjs');
+  dependencies.resources.push('game/ui/coupa-landing.css');
   files.set('runtime-dependencies.json', json(dependencies));
   validateBrandIsolation(files, config);
   return files;

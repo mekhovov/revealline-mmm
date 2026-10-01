@@ -348,7 +348,14 @@ export function resolveMenuScene({ themeId, editionId, mode } = {}) {
   // Editions support Solo only. Worlds without authored mode artwork retain
   // their base composition; an unknown world uses the approved FPV fallback.
   const composition = !editionId && MENU_SCENE_COMPOSITIONS[profile.id]?.[menuSceneMode(mode)];
-  if (!composition) return profile;
+  if (!composition) return {
+    ...profile,
+    landscape: '../editions/assets/coupa/wallpaper-network-2024.png',
+    portrait: '../editions/assets/coupa/wallpaper-network-2024.png',
+    landscapePosition: '72% 50%', portraitPosition: '82% 50%',
+    environment: [], portraitEnvironment: [], actorVisible: false,
+    signalOpacity: 0, signalPeakOpacity: 0,
+  };
   if (!compositionProfiles.has(composition))
     compositionProfiles.set(composition, Object.freeze({ ...profile, ...composition }));
   return compositionProfiles.get(composition);

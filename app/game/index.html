@@ -151,7 +151,7 @@ html[data-edition-id] #boot-screen h1{color:var(--paper);font-family:var(--brand
 html[data-edition-id] #boot-screen .launch-kicker,html[data-edition-id] #boot-screen a{color:var(--accent)}
 html[data-edition-id] #boot-screen .launch-signal i{background:var(--accent)}
 html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:3rem;max-width:9rem;object-fit:contain;vertical-align:middle}
-</style><style>#shell-home-fpv,#shell-home-practice,#shell-optional-practice,#shell-team,#shell-versus,#shell-title-team,#shell-title-versus,#shell-mode-choice,#shell-controller-lab,#shell-replay-theater,#shell-release-explorer,#shell-catalogue,#shell-guide,#shell-asset-studio,#shell-playground,#shell-enemy-catalog,#shell-motion-lab,#shell-still-media,#shell-video-poster,#shell-design-atlas,#creator-tools,#native-diagnostics,#shell-offline,#settings-offline,#offline-button,#first-flight-help-enter,#first-flight-enter,#first-flight-entry,#library-packs,#library-saves,#pack-file,#pack-json,#install-pack,#save-file,#save-json,#import-save,#undo-library,#undo-backup,#shell-workshop,#settings-tab-content,#settings-panel-content,#settings-saves,#soundtrack-open,[data-library-panel="packs"],[data-library-panel="saves"],[data-release-explorer],[data-source-only],.workshop-tools,.edition-offline,.optional-practice-dialog,[data-branded-unavailable]{display:none!important}</style></head>
+</style><style>#shell-home-fpv,#shell-home-practice,#shell-optional-practice,#shell-team,#shell-versus,#shell-title-team,#shell-title-versus,#shell-mode-choice,#shell-controller-lab,#shell-replay-theater,#shell-release-explorer,#shell-catalogue,#shell-guide,#shell-asset-studio,#shell-playground,#shell-enemy-catalog,#shell-motion-lab,#shell-still-media,#shell-video-poster,#shell-design-atlas,#creator-tools,#native-diagnostics,#shell-offline,#settings-offline,#offline-button,#first-flight-help-enter,#first-flight-enter,#first-flight-entry,#library-packs,#library-saves,#pack-file,#pack-json,#install-pack,#save-file,#save-json,#import-save,#undo-library,#undo-backup,#shell-workshop,#settings-tab-content,#settings-panel-content,#settings-saves,#soundtrack-open,[data-library-panel="packs"],[data-library-panel="saves"],[data-release-explorer],[data-source-only],.workshop-tools,.edition-offline,.optional-practice-dialog,[data-branded-unavailable]{display:none!important}</style><link rel="stylesheet" href="ui/coupa-landing.css"></head>
   <body class="field-kit">
     <section id="boot-screen" class="launch-screen" aria-labelledby="boot-title">
       <div class="launch-card">
@@ -1521,7 +1521,28 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
       </div>
     </dialog>
     <dialog id="shell-home" class="shell-home" aria-labelledby="shell-title">
-      <div class="home-art" aria-hidden="true"></div>
+      <div class="coupa-capture-art" aria-hidden="true" inert>
+  <svg viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="coupa-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M40 0H0V40" stroke="#74dfff" stroke-opacity=".13"/>
+      </pattern>
+      <radialGradient id="coupa-grid-fade">
+        <stop stop-color="white"/><stop offset="1" stop-color="black"/>
+      </radialGradient>
+      <mask id="coupa-grid-mask"><rect width="640" height="640" fill="url(#coupa-grid-fade)"/></mask>
+    </defs>
+    <rect width="640" height="640" fill="url(#coupa-grid)" mask="url(#coupa-grid-mask)"/>
+    <path class="coupa-territory" d="M160 440V240H280V160H480V360H400V440Z" fill="#50d6ff" fill-opacity=".1"/>
+    <path d="M160 440V240H280V160H480V360H400V440Z" stroke="#8de5ff" stroke-opacity=".18" stroke-width="1"/>
+    <path class="coupa-capture-trail" pathLength="100" d="M160 440V240H280V160H480V360H400V440Z" stroke="#a5efff" stroke-width="2" stroke-linejoin="round"/>
+    <circle class="coupa-capture-player" r="5" fill="white"/>
+    <circle cx="160" cy="440" r="5" fill="#64dbff"/>
+    <circle cx="480" cy="160" r="4" fill="#64dbff"/>
+    <path d="M280 120v12m-6-6h12M520 360v12m-6-6h12M120 280v12m-6-6h12" stroke="#a5efff" stroke-opacity=".5"/>
+  </svg>
+</div>
+
       <div class="home-content">
         <p id="shell-title-edition" class="eyebrow" data-i18n="interface:fpvFieldKitFlightReady">
           FPV FIELD KIT / FLIGHT READY

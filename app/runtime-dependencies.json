@@ -120,6 +120,7 @@
     "game/ui/soundtrack-panel.css",
     "game/vendor/QRCODEGEN-LICENSE.txt",
     "game/vendor/qrcodegen-1.8.0.json",
-    "game/branded-isolation.mjs"
+    "game/branded-isolation.mjs",
+    "game/ui/coupa-landing.css"
   ]
 }

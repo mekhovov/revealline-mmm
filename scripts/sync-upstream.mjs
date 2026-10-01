@@ -203,6 +203,8 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     "brand.config.json",
     "scripts/isolate-brand.mjs",
     "scripts/sync-upstream.mjs",
+    "branding/coupa-landing.css",
+    "branding/coupa-landing.html",
   ])
     projectionFiles.set(name, await fs.readFile(path.join(root, name)));
   await fs.mkdir(path.join(root, ".cache"), { recursive: true });

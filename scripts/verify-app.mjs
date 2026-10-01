@@ -161,7 +161,8 @@ export async function verifyApp(appRoot = path.join(repository, 'app')) {
   assert.equal(inventory.sourceRevision, lock.commit);
   assert.equal((await json('game/build-info.json')).sourceRevision, lock.commit);
   assert.deepEqual(new Set(lock.projectionInputs.map(({ path: name }) => name)),
-    new Set(['brand.config.json', 'scripts/isolate-brand.mjs', 'scripts/sync-upstream.mjs']));
+    new Set(['brand.config.json', 'scripts/isolate-brand.mjs', 'scripts/sync-upstream.mjs',
+      'branding/coupa-landing.css', 'branding/coupa-landing.html']));
   for (const record of lock.projectionInputs) {
     const bytes = await readFile(path.join(repository, record.path));
     assert.equal(bytes.length, record.bytes, `${record.path} changed; regenerate app/ before publishing`);

@@ -1,0 +1,195 @@
+/* Coupa presentation override. The original brand media is never redrawn.
+   Keep these rules scoped to home: gameplay, dialogs and save formats stay upstream. */
+html[data-branded-app='revealline-mmm'] body.field-kit.game-shell #shell-home.native-landing {
+  --native-menu-width: 440px;
+  --native-ink: #0c1d4b;
+  --fk-accent: #61d9fa;
+  --fk-text: #f6fbff;
+  padding: clamp(28px, 5.5vw, 88px);
+  padding-bottom: max(76px, env(safe-area-inset-bottom));
+  color: #f6fbff;
+  background: #0c1d4b;
+  font-family: var(--brand-font, system-ui, sans-serif);
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .home-content {
+  width: min(440px, 100%);
+  position: relative;
+  z-index: 2;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .coupa-landing-logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  margin: 0 0 28px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: auto;
+  filter: brightness(0) invert(1);
+  transform-origin: center;
+  animation: coupa-logo-turn 32s linear infinite;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title {
+  margin: 0 0 32px;
+  font-family: var(--brand-font, system-ui, sans-serif);
+  font-size: clamp(38px, 4.6vw, 64px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title .native-brand-fallback {
+  color: #f6fbff;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title.native-edition-title .native-edition-line,
+html[data-branded-app] body.field-kit #shell-home.native-landing .game-mode-choice {
+  display: none;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(button, a) {
+  min-height: 52px;
+  padding: 13px 18px;
+  border: 1px solid #88caff40;
+  border-radius: 12px;
+  color: #e2efff;
+  background: #12285bcc;
+  font: 400 15px/1.4 var(--brand-font, system-ui, sans-serif);
+  gap: 12px;
+  transition: background-color .2s, border-color .2s, transform .2s;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(.primary, .field-kit-primary) {
+  grid-column: 1 / -1;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(.primary, .field-kit-primary) {
+  min-height: 64px;
+  color: #092344;
+  background: #64dcf7;
+  border-color: #95edff;
+  box-shadow: 0 8px 32px #15bfee1a;
+  font-size: 19px;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(button, a):hover {
+  background: #1c3d76;
+  border-color: #86dfff;
+  transform: translateY(-2px);
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(.primary, .field-kit-primary):hover {
+  background: #9aedff;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing [data-menu-icon]::before {
+  flex-basis: 18px;
+  width: 18px;
+  height: 18px;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-utilities {
+  width: 100%;
+  margin-top: 16px;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-fullscreen {
+  color: #a8c4e7;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 8px;
+  font-size: 13px;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-footer {
+  color: #9eb9dc;
+  font-size: 11px;
+  letter-spacing: .06em;
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing #journey-save-status {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid #ffd97870;
+  border-radius: 12px;
+  background: #152543ed;
+  font: 400 12px/1.6 var(--brand-font, system-ui, sans-serif);
+}
+html[data-branded-app] body.field-kit #shell-home.native-landing #journey-save-status p { margin: 0 0 8px; }
+html[data-branded-app] body.field-kit #shell-home.native-landing #journey-save-status button {
+  min-height: 44px;
+  padding: 6px 10px;
+  margin: 3px 3px 0 0;
+  border-radius: 6px;
+  font: inherit;
+}
+/* The left scrim gives the live logo clear space over the wallpaper's printed lockup. */
+html[data-branded-app] #shell-home .menu-scene { background: #0c1d4b; }
+html[data-branded-app] #shell-home .menu-scene::after {
+  background: linear-gradient(90deg, #0c1d4b 0%, #0c1d4b 25%, #0c1d4bd9 40%, #0c1d4b26 75%),
+    linear-gradient(0deg, #0c1d4b99, transparent 25%);
+}
+html[data-branded-app] #shell-home .menu-scene-art-plane { animation: none; }
+html[data-branded-app] #shell-home .menu-scene-signal { display: none; }
+html[data-branded-app] #shell-home .coupa-capture-art {
+  position: absolute;
+  inset: 50% 0 auto auto;
+  width: min(58vw, 860px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: .72;
+}
+.coupa-capture-art svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.coupa-capture-trail {
+  stroke-dasharray: 100;
+  animation: coupa-trace 14s linear infinite;
+}
+.coupa-capture-player {
+  offset-path: path('M160 440V240H280V160H480V360H400V440Z');
+  animation: coupa-player 14s linear infinite;
+  filter: drop-shadow(0 0 6px #83eaff);
+}
+.coupa-territory { animation: coupa-fill 14s linear infinite; }
+@keyframes coupa-logo-turn { to { transform: rotate(360deg); } }
+@keyframes coupa-trace { 0% { stroke-dashoffset: 100; } 72%, 90% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes coupa-player { 0% { offset-distance: 0%; opacity: 1; } 72%, 90% { offset-distance: 100%; opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+@keyframes coupa-fill { 0%, 65% { opacity: 0; } 76%, 90% { opacity: 1; } 100% { opacity: 0; } }
+/* All ambient motion follows the upstream switch, page visibility and modal lifecycle. */
+html[data-branded-app] #shell-home:not([open]) :is(.coupa-landing-logo, .coupa-capture-art *),
+html[data-branded-app] #shell-home:has(.menu-scene[data-running='false']) :is(.coupa-landing-logo, .coupa-capture-art *) {
+  animation-play-state: paused !important;
+}
+html[data-branded-app] #shell-home:has(.menu-scene[data-motion='off']) :is(.coupa-landing-logo, .coupa-capture-art *),
+html[data-branded-app] body:is([data-effects='reduced'], [data-reduced-effects='true']) #shell-home :is(.coupa-landing-logo, .coupa-capture-art *) {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-branded-app] #shell-home :is(.coupa-landing-logo, .coupa-capture-art *) { animation: none !important; }
+  html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(button, a) { transition: none; transform: none; }
+}
+@media (max-width: 760px) {
+  html[data-branded-app='revealline-mmm'] body.field-kit.game-shell #shell-home.native-landing {
+    padding: 32px 24px 64px;
+    justify-content: safe center;
+  }
+  html[data-branded-app] body.field-kit #shell-home.native-landing .home-content { width: min(440px, 100%); }
+  html[data-branded-app] body.field-kit #shell-home.native-landing .coupa-landing-logo { width: 76px; height: 76px; margin-bottom: 24px; }
+  html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title { font-size: clamp(36px, 9vw, 54px); margin-bottom: 28px; }
+  html[data-branded-app] #shell-home .menu-scene::after {
+    background: linear-gradient(90deg, #0c1d4be8, #0c1d4b99), linear-gradient(0deg, #0c1d4b, transparent 75%);
+  }
+  html[data-branded-app] #shell-home .coupa-capture-art { width: 90vw; top: 24%; right: -25%; opacity: .35; }
+  html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-footer { inset-inline: 24px; font-size: 10px; }
+}
+@media (max-height: 640px) and (min-width: 761px) {
+  html[data-branded-app='revealline-mmm'] body.field-kit.game-shell #shell-home.native-landing { padding-block: 28px 64px; }
+  html[data-branded-app] body.field-kit #shell-home.native-landing .coupa-landing-logo { width: 60px; height: 60px; margin-bottom: 16px; }
+  html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title { font-size: 40px; margin-bottom: 20px; }
+}
+html[data-branded-app] body.field-kit[data-text-size='large'] #shell-home.native-landing .native-menu-actions > :is(button, a) { font-size: 20px; }
+@media (forced-colors: active) {
+  html[data-branded-app] #shell-home .coupa-capture-art { display: none; }
+  html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(button, a) { border: 1px solid ButtonText; }
+}

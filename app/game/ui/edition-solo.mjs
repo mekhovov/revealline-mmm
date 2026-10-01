@@ -180,7 +180,7 @@ export async function mountEditionSoloUI({
     }
   } else if (logoAsset) {
     const logo = node('img');
-    logo.className = 'edition-home-logo';
+    logo.className = 'edition-home-logo coupa-landing-logo';
     if (propeller) logo.classList.add('edition-propeller');
     logo.src = provider.assetURL(logoAsset);
     logo.alt = brandName;
