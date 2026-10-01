@@ -49,6 +49,80 @@
   inset: 0;
   transform-origin: center;
 }
+.menu-scene-route {
+  position: absolute;
+  left: var(--scene-route-left, 48%);
+  top: var(--scene-route-top, 5%);
+  width: var(--scene-route-width, 50%);
+  aspect-ratio: 1;
+  z-index: 1;
+  color: var(--scene-accent, #83dae7);
+  opacity: var(--scene-route-opacity, 0.5);
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 12px color-mix(in srgb, currentcolor 28%, transparent));
+}
+.menu-scene-route::before {
+  content: '';
+  position: absolute;
+  inset: 7%;
+  background-image:
+    linear-gradient(color-mix(in srgb, currentcolor 12%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, currentcolor 12%, transparent) 1px, transparent 1px);
+  background-size: 8.333% 8.333%;
+  mask-image: radial-gradient(circle, #000 18%, transparent 72%);
+}
+.menu-scene-route svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.menu-scene-route-territory {
+  fill: currentcolor;
+  opacity: 0;
+  animation: menu-route-fill 16s linear infinite;
+}
+.menu-scene-route-ghost {
+  stroke: currentcolor;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  opacity: 0.24;
+}
+.menu-scene-route-trail {
+  stroke: color-mix(in srgb, currentcolor 82%, white);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  animation: menu-route-trace 16s linear infinite;
+}
+.menu-scene-route-player {
+  fill: white;
+  offset-rotate: 0deg;
+  filter: drop-shadow(0 0 7px currentcolor);
+  animation: menu-route-player 16s linear infinite;
+}
+.menu-scene-route-node {
+  fill: currentcolor;
+  opacity: 0.9;
+}
+.menu-scene-route-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: menu-route-pulse 2.4s ease-in-out infinite;
+}
+.menu-scene:not([data-loaded='true']) .menu-scene-route {
+  opacity: 0;
+}
+.menu-scene[data-motion='off'] .menu-scene-route * {
+  animation: none;
+}
+.menu-scene[data-motion='off'] .menu-scene-route-player {
+  display: none;
+}
+.menu-scene[data-motion='off'] .menu-scene-route-territory {
+  opacity: 0.06;
+}
 .menu-scene-art,
 .menu-scene-art-motion,
 .menu-scene-reception {
@@ -125,7 +199,63 @@
     background-position: 100% 0;
   }
 }
+@keyframes menu-route-trace {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0.18;
+  }
+  70%,
+  88% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.12;
+  }
+}
+@keyframes menu-route-player {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  4%,
+  88% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    offset-distance: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes menu-route-fill {
+  0%,
+  64% {
+    opacity: 0;
+  }
+  74%,
+  88% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes menu-route-pulse {
+  50% {
+    transform: scale(1.8);
+    opacity: 0.28;
+  }
+}
 @media (orientation: portrait) {
+  .menu-scene-route {
+    left: var(--scene-route-portrait-left, 28%);
+    top: var(--scene-route-portrait-top, 3%);
+    width: var(--scene-route-portrait-width, 71%);
+  }
   .menu-scene::after {
     background: linear-gradient(
       0deg,
@@ -156,5 +286,14 @@
   .menu-scene .menu-scene-art-plane {
     animation: none !important;
     transform: none;
+  }
+  .menu-scene .menu-scene-route * {
+    animation: none !important;
+  }
+  .menu-scene .menu-scene-route-player {
+    display: none;
+  }
+  .menu-scene .menu-scene-route-territory {
+    opacity: 0.06;
   }
 }

@@ -5,6 +5,51 @@ import { attachMenuSignalLoss } from './menu-signal-loss.mjs';
 export const MENU_ANIMATION_KEY = 'revealline-mmm.menu-animation.v1';
 const PREFERENCE_EVENT = 'revealline-menu-animation';
 const memoryPreferences = new WeakMap();
+const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
+const ROUTE_PATHS = Object.freeze({
+  rise: 'M110 500V270H250V140H515V360H405V500Z',
+  bridge: 'M95 470H220V185H430V315H545V500H350V405H95Z',
+  horizon: 'M85 500V385H235V220H505V125H585V420H445V500Z',
+  circuit: 'M125 500V175H300V300H495V125H570V430H390V500Z',
+});
+
+function createRouteArtwork(doc) {
+  const create = (tag) => doc.createElementNS?.(SVG_NAMESPACE, tag) ?? doc.createElement(tag);
+  const setClass = (element, value) => {
+    element.setAttribute('class', value);
+    // Lightweight DOM fixtures model className as a string; real SVG uses an
+    // SVGAnimatedString and is already updated through the attribute above.
+    if (typeof element.className === 'string') element.className = value;
+  };
+  const route = doc.createElement('div');
+  route.className = 'menu-scene-route';
+  const svg = create('svg');
+  svg.setAttribute('viewBox', '0 0 640 640');
+  svg.setAttribute('fill', 'none');
+  const territory = create('path');
+  setClass(territory, 'menu-scene-route-territory');
+  const ghost = create('path');
+  setClass(ghost, 'menu-scene-route-ghost');
+  const trail = create('path');
+  setClass(trail, 'menu-scene-route-trail');
+  trail.setAttribute('pathLength', '100');
+  const player = create('circle');
+  setClass(player, 'menu-scene-route-player');
+  player.setAttribute('r', '7');
+  const start = create('circle');
+  setClass(start, 'menu-scene-route-node menu-scene-route-start');
+  start.setAttribute('cx', '110');
+  start.setAttribute('cy', '500');
+  start.setAttribute('r', '6');
+  const pulse = create('circle');
+  setClass(pulse, 'menu-scene-route-node menu-scene-route-pulse');
+  pulse.setAttribute('cx', '515');
+  pulse.setAttribute('cy', '140');
+  pulse.setAttribute('r', '5');
+  svg.append(territory, ghost, trail, player, start, pulse);
+  route.append(svg);
+  return { route, territory, ghost, trail, player };
+}
 
 export function getMenuAnimation(win = globalThis.window) {
   try {
@@ -67,9 +112,10 @@ export function attachMenuScene({
   reception.className = 'menu-scene-reception';
   reception.hidden = true;
   plane.append(art, canvas, reception);
+  const routeArtwork = createRouteArtwork(doc);
   const signal = doc.createElement('div');
   signal.className = 'menu-scene-signal';
-  scene.append(plane, signal);
+  scene.append(plane, routeArtwork.route, signal);
   scene.dataset.renderer = 'css';
   root.prepend(scene);
   root.classList.add('menu-scene-host');
@@ -136,6 +182,31 @@ export function attachMenuScene({
       scene.style.setProperty('--scene-accent', profile.accent);
       scene.style.setProperty('--scene-signal-opacity', String(profile.signalOpacity));
       scene.style.setProperty('--scene-signal-peak', String(profile.signalPeakOpacity));
+      const routeProfile = profile.route;
+      const routePath = ROUTE_PATHS[routeProfile?.variant] ?? ROUTE_PATHS.rise;
+      routeArtwork.route.dataset.variant = routeProfile?.variant ?? 'rise';
+      routeArtwork.route.style.setProperty('--scene-route-left', `${routeProfile?.left ?? 48}%`);
+      routeArtwork.route.style.setProperty('--scene-route-top', `${routeProfile?.top ?? 5}%`);
+      routeArtwork.route.style.setProperty('--scene-route-width', `${routeProfile?.width ?? 50}%`);
+      routeArtwork.route.style.setProperty(
+        '--scene-route-opacity',
+        String(routeProfile?.opacity ?? 0.5),
+      );
+      routeArtwork.route.style.setProperty(
+        '--scene-route-portrait-left',
+        `${routeProfile?.portraitLeft ?? 28}%`,
+      );
+      routeArtwork.route.style.setProperty(
+        '--scene-route-portrait-top',
+        `${routeProfile?.portraitTop ?? 3}%`,
+      );
+      routeArtwork.route.style.setProperty(
+        '--scene-route-portrait-width',
+        `${routeProfile?.portraitWidth ?? 71}%`,
+      );
+      for (const path of [routeArtwork.territory, routeArtwork.ghost, routeArtwork.trail])
+        path.setAttribute('d', routePath);
+      routeArtwork.player.style.setProperty('offset-path', `path("${routePath}")`);
       scene.style.setProperty(
         '--scene-focal',
         vertical ? profile.portraitPosition : profile.landscapePosition,

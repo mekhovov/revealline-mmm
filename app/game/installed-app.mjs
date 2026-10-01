@@ -56,6 +56,7 @@ export function validateInstalledEdition(value, locationRef = globalThis.locatio
   }
   if (
     !/^v?\d+\.\d+\.\d+$/.test(value.version) ||
+    (value.buildId !== undefined && !/^[a-f0-9]{64}$/.test(value.buildId)) ||
     scope.origin !== app.origin ||
     scope.username ||
     scope.password ||
@@ -76,6 +77,7 @@ export function validateInstalledEdition(value, locationRef = globalThis.locatio
   return {
     ...(editionId === undefined ? {} : { editionId }),
     version: value.version,
+    ...(value.buildId === undefined ? {} : { buildId: value.buildId }),
     scope: scope.href,
     selection: value.selection || [],
     allGameplay: Boolean(value.allGameplay),
@@ -184,6 +186,7 @@ export async function activateInstalledEdition(
     restorePrevious = false,
     heldWriter,
     ownsWriter = () => false,
+    prepare,
   } = {},
 ) {
   const candidate = validateInstalledEdition(value, locationRef);
@@ -233,15 +236,23 @@ export async function activateInstalledEdition(
                 'Edition downloaded. Open this edition’s Game data → Flight library → Bring progress from an earlier release. Review and copy the previous edition there, then return here to switch. An incompatible saved flight or a busy profile leaves your working edition selected.',
             };
         }
-        if (borrowed && !profileWriterOwns(heldWriter, logicalWriterKey))
-          throw new Error(
-            'The edition saving lease was released. Retry the installation selection.',
-          );
-        for (const key of borrowedProfiles)
-          if (!ownsWriter(key))
+        const requireWriters = () => {
+          if (borrowed && !profileWriterOwns(heldWriter, logicalWriterKey))
             throw new Error(
-              'The game stopped owning its save profile. Your working edition is kept.',
+              'The edition saving lease was released. Retry the installation selection.',
             );
+          for (const key of borrowedProfiles)
+            if (!ownsWriter(key))
+              throw new Error(
+                'The game stopped owning its save profile. Your working edition is kept.',
+              );
+        };
+        requireWriters();
+        // An updater may replace a worker at the same URL. Run that preparation
+        // only after migration/recovery checks, keeping both profile locks until
+        // the verified candidate becomes active. Refusal must not replace a core.
+        if (prepare) await prepare();
+        requireWriters();
         storage.setItem(
           installedStateKey(editionId),
           JSON.stringify({

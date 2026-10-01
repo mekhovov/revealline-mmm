@@ -14,6 +14,8 @@ const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const conditionalReferences = new Map([
   // Offline navigation is disabled for compiled editions and blocked by the URL guard.
   ['game/app.mjs', new Set(['./downloads.html'])],
+  ['game/couch/couch.mjs', new Set(['../downloads.html'])],
+  ['game/couch/relay-rescue.mjs', new Set(['../downloads.html'])],
   ['game/ui/install-offline-panel.mjs', new Set(['../downloads.html'])],
   // The official native bridge exists only when an iOS distribution is staged.
   ['game/platform.mjs', new Set(['../native/bridge.mjs'])],
@@ -29,7 +31,7 @@ const excludedPaths = [
   // The enemy guide shares this small lifecycle observer with the upstream studio.
   /^game\/studio\/(?!preview-readiness\.mjs$)/,
   /^game\/(?:controller-lab|replay-theater)\//,
-  /^game\/content\/(?:campaign|packs|archives|versus|team)\.json$/,
+  /^game\/content\/(?:packs|archives|versus|team)\.json$/,
   /^game\/(?:content\/company-(?:boot|campaigns)|editions\/(?:assets|retained))\/(?:droneaid|ukraine|victory|social-drone|fpv-learning)/,
   /^game\/ui\/art\/menu-scenes\/(?:droneaid|ukraine|retro|fpv)[-.]/,
   /^game\/ui\/art\/identity\/fpv-line\//,
@@ -76,7 +78,8 @@ export async function verifyApp(appRoot = path.join(repository, 'app')) {
   for (const name of names)
     assert.ok(!excludedPaths.some((rule) => rule.test(name)), `Unrelated content is published: ${name}`);
   assert.deepEqual(names.filter((name) => name.endsWith('.html')).sort(),
-    ['game/company.html', 'game/index.html', 'index.html'], 'Only the branded game entry points may be published');
+    ['game/company.html', 'game/couch/index.html', 'game/couch/relay-rescue.html',
+      'game/index.html', 'index.html'], 'Only the branded game entry points may be published');
 
   const catalog = await json('edition-catalog.json');
   assert.equal(catalog.defaultEditionId, 'coupa-all');

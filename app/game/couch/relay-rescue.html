@@ -1,0 +1,680 @@
+<!DOCTYPE html><html data-access-state="locked" lang="en" data-build-version="__REVEALLINE_VERSION__" data-tool-state="loading" data-branded-app="revealline-mmm"><head><meta name="revealline-access-id" content="revealline-mmm"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="../access-gate.css"><script src="../access-gate.mjs" defer></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../i18n/style.css">
+    <script src="../vendor/i18next-26.4.2.min.js"></script>
+    <script src="../i18n/catalogs.mjs"></script>
+    <script src="../i18n/bootstrap.mjs"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1a24">
+    <title data-i18n="interface:relayRescueRevealline">Relay Rescue · FPV / LINE</title>
+    <link rel="stylesheet" href="../ui/field-kit-fonts.css">
+    <link rel="stylesheet" href="../ui/field-kit-tokens.css">
+    <link rel="stylesheet" href="relay-rescue.css">
+    <link rel="stylesheet" href="../ui/field-kit-components.css">
+    <link rel="stylesheet" href="../ui/field-kit-compiled.css">
+    <link rel="stylesheet" href="../ui/operation-status.css">
+    <link rel="stylesheet" href="../ui/mode-choice.css">
+    <link rel="stylesheet" href="../ui/menu-appearance.css">
+    <link rel="stylesheet" href="../ui/settings.css">
+    <link rel="stylesheet" href="../ui/handheld-play.css">
+    <link rel="stylesheet" href="../ui/journey-save-cue.css">
+    <link rel="stylesheet" href="../ui/journey.css">
+    <link rel="stylesheet" href="../ui/quick-music-controls.css">
+    <link rel="stylesheet" href="../ui/menu-scenes.css">
+    <link rel="stylesheet" href="../ui/native-menu.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../editions/assets/coupa/icon-512.png">
+  <style>#shell-home-fpv,#shell-home-practice,#shell-optional-practice,#shell-controller-lab,#shell-replay-theater,#shell-release-explorer,#shell-catalogue,#shell-guide,#shell-asset-studio,#shell-playground,#shell-enemy-catalog,#shell-motion-lab,#shell-still-media,#shell-video-poster,#shell-design-atlas,#creator-tools,#native-diagnostics,#shell-offline,#settings-offline,#offline-button,#first-flight-help-enter,#first-flight-enter,#first-flight-entry,#library-packs,#library-saves,#pack-file,#pack-json,#install-pack,#save-file,#save-json,#import-save,#undo-library,#undo-backup,#shell-workshop,#settings-tab-content,#settings-panel-content,#settings-saves,#soundtrack-open,#race-library-switch,#coop-catalogue,#coop-more-catalogue,[data-library-panel="packs"],[data-library-panel="saves"],[data-release-explorer],[data-source-only],.workshop-tools,.edition-offline,.optional-practice-dialog,[data-branded-unavailable],[data-language-control]{display:none!important}</style></head>
+  <body class="field-kit field-kit-support" data-field-kit-page="relay-rescue">
+    <div data-language-control="" data-language-launch="" hidden="" data-branded-unavailable=""></div>
+
+    <main id="coop-app">
+      <header class="masthead">
+        <a id="coop-home" class="brand" data-i18n-rich="interface:reveal" href="..?edition=coupa-all">FPV<span data-i18n="interface:line2" data-i18n-slot="slot0">/ LINE</span></a>
+        <span class="mode-label" data-i18n-rich="interface:couchCoOp">COUCH CO-OP
+          <b id="coop-stage" data-i18n="interface:firstConnection" data-i18n-slot="slot0">FIRST CONNECTION</b></span>
+        <a id="coop-race" data-i18n="interface:raceMode" href="./index.html?journey=coupa-all">Race mode ↗</a>
+      </header>
+
+      <section id="coop-menu" class="menu" aria-labelledby="coop-title">
+        <div class="menu-copy">
+          <div id="coop-lobby-modes"></div>
+          <p class="eyebrow" data-i18n="interface:oneArenaTwoPartners">ONE ARENA. TWO PARTNERS.</p>
+          <h1 id="coop-title" class="field-kit-display" data-i18n-rich="interface:findYour">
+            Find your
+            <em data-i18n="interface:commonGround" data-i18n-slot="slot0">common ground.</em>
+          </h1>
+          <p id="coop-intro" class="lead" data-i18n="interface:startWithASmallLoopCoverEachOtherThenMeet">
+            Start with a small loop. Cover each other, then meet to join a larger cut.
+          </p>
+          <p id="coop-boot" class="operation-status" data-state="busy" role="status">
+            <span aria-hidden="true" style="display: inline-flex; gap: 3px; color: #78dce8"><i style="display: inline-block; width: 4px; height: 8px; background: currentColor"></i><i style="display: inline-block; width: 4px; height: 8px; background: currentColor"></i><i style="display: inline-block; width: 4px; height: 8px; background: currentColor"></i></span><span data-i18n="interface:loadingRelayRescue">Loading Relay Rescue.</span>
+          </p>
+          <script src="team-entry.js"></script>
+          <p id="coop-selection-status" class="setup-note" role="status" hidden=""></p>
+          <div class="coop-launch-grid">
+            <figure id="coop-picture-preview" class="coop-picture-preview" data-state="preparing">
+              <div class="coop-preview-frame">
+                <canvas id="coop-preview-canvas" width="576" height="288" aria-hidden="true" hidden=""></canvas>
+                <p id="coop-preview-message" data-i18n="interface:preparingArtwork">
+                  Preparing artwork…
+                </p>
+              </div>
+              <figcaption id="coop-preview-caption" data-i18n="interface:selectedArenaTeaserBrowseArenasForAnOptionalFullPreview">
+                Selected arena teaser. Browse arenas for an optional full preview; viewing earns no
+                progress. Scenery does not mark obstacles.
+              </figcaption>
+            </figure>
+            <div class="coop-launch-actions">
+              <p class="objective" data-i18n-rich="interface:teamObjective">
+                TEAM OBJECTIVE
+                <strong id="coop-menu-goal" data-i18n="interface:reveal65OfTheField" data-i18n-slot="slot0">Reveal 65% of the field</strong>
+              </p>
+              <button id="coop-start" class="primary field-kit-primary" type="button" disabled="" data-i18n="interface:preparingArena">
+                Preparing arena…
+              </button>
+              <button id="coop-discovery-open" type="button" disabled="" data-i18n="interface:browseTeamArenas">
+                Browse Team arenas
+              </button>
+              <button id="coop-offline-main" type="button" data-i18n="interface:installAppGameAndSoundtrackDownloads">
+                Install &amp; offline play
+              </button>
+              <p id="coop-offline-status" class="setup-note" role="status"></p>
+            </div>
+          </div>
+          <div id="coop-language" data-language-control="" hidden="" data-branded-unavailable=""></div>
+          <details id="coop-optional-setup" class="optional-setup">
+            <summary id="coop-optional-setup-toggle" data-i18n="interface:couch.teamOptions">
+              Arena &amp; team options
+            </summary>
+            <div class="setup coop-arena-choice">
+              <label><span data-i18n="interface:arena">Arena</span><select id="coop-level">
+                  <option value="first-connection" selected="" data-i18n="interface:firstConnectionTerritoryChallenge">
+                    First Connection · territory challenge
+                  </option>
+                  <option value="relay-yard" data-i18n="interface:relayYardStrongholdChallenge">
+                    Relay Yard · stronghold challenge
+                  </option>
+                </select></label>
+            </div>
+            <p id="coop-advanced-note" class="setup-note"></p>
+            <div class="setup">
+              <label><span data-i18n="interface:playStyle">Play style</span><select id="coop-experiment">
+                  <option value="full" data-i18n="interface:fullTeamwork">Full teamwork</option>
+                  <option value="joint" data-i18n="interface:jointCutsOrdinaryCover">
+                    Joint Cuts + ordinary cover
+                  </option>
+                  <option value="independent" data-i18n="interface:individualCutsOrdinaryCover">
+                    Individual cuts + ordinary cover
+                  </option>
+                </select></label>
+              <label><span data-i18n="interface:difficulty">Difficulty</span><select id="coop-difficulty">
+                  <option value="gentle" data-i18n="interface:gentle">Gentle</option>
+                  <option value="standard" selected="" data-i18n="interface:standard">Standard</option>
+                  <option value="expert" data-i18n="interface:expert">Expert</option>
+                </select></label>
+              <label><span data-i18n="interface:actors">Actors</span><select id="coop-actor-style" aria-describedby="coop-actor-style-note">
+                  <option value="fpv" selected="">FPV</option>
+                  <option value="campaign" data-i18n="interface:campaign">Campaign</option>
+                </select></label>
+            </div>
+            <p id="coop-actor-style-note" class="setup-note" role="status"></p>
+            <details class="pack-picker">
+              <summary data-i18n="interface:couch.createdTeamPacks">Created Team packs</summary>
+              <label for="coop-pack-file" data-i18n="interface:openATeamPackOrArtworkBundle">Open a Team pack or artwork bundle</label>
+              <input id="coop-pack-file" type="file" accept=".json,.rlteam,.rlteamcampaign,application/json,application/vnd.revealline.team+json,application/vnd.revealline.team-presentation">
+              <button id="coop-pack-cancel" type="button" hidden="" data-i18n="common:actions.stopWaiting">
+                Stop waiting
+              </button>
+              <button id="coop-pack-retry" type="button" hidden="" data-i18n="interface:retryPack">
+                Retry pack
+              </button>
+              <p id="coop-pack-status" role="status" data-i18n="interface:relayRescue2Levels">
+                Relay Rescue · 2 levels
+              </p>
+              <button id="coop-pack-reset" type="button" hidden="" data-i18n="interface:returnToRelayRescue">
+                Return to Relay Rescue
+              </button>
+            </details>
+          </details>
+          <div id="coop-lobby-tools"></div>
+          <div id="coop-music-menu-now-playing" class="couch-music-credit" aria-label="Current music" hidden="" data-i18n-aria-label="interface:currentMusic"></div>
+        </div>
+      </section>
+
+      <section id="coop-play" aria-label="Shared Relay Rescue arena" hidden="" data-i18n-aria-label="interface:sharedRelayRescueArena">
+        <div class="hud">
+          <div class="identity sunflower">
+            <span class="player-number">1</span><strong data-i18n="interface:sunflower">SUNFLOWER</strong><span id="coop-state-0" data-i18n="common:status.ready">Ready</span>
+            <span id="coop-charge-0" class="charge-state" data-i18n="interface:supportReady">Support ready</span>
+          </div>
+          <div class="team-status">
+            <span data-i18n="interface:teamTerritory">TEAM TERRITORY</span><strong id="coop-coverage">0%</strong><span id="coop-reserves" data-i18n="interface:3Reserves">3 reserves</span><progress id="coop-progress" max="65" value="0" aria-label="Team territory" data-i18n-aria-label="interface:teamTerritory2"></progress>
+          </div>
+          <div class="identity skyline">
+            <span class="player-number">2</span><strong data-i18n="interface:skyline">SKYLINE</strong><span id="coop-state-1" data-i18n="common:status.ready">Ready</span>
+            <span id="coop-charge-1" class="charge-state" data-i18n="interface:supportReady">Support ready</span>
+          </div>
+        </div>
+        <p id="coop-objective" class="live-objective" data-i18n="interface:reveal65Together">
+          Reveal 65% together
+        </p>
+        <p id="coop-bonus-live" class="micro-note" hidden=""></p>
+        <div class="coop-board-slot">
+          <div class="arena-wrap">
+            <canvas id="coop-canvas" width="1152" height="576" tabindex="-1" role="img" aria-label="One shared arena. Sunflower is marked 1 and Skyline is marked 2." data-i18n-aria-label="interface:oneSharedArenaSunflowerIsMarked1AndSkylineIs"></canvas>
+            <div id="coop-overlay" class="overlay" hidden="">
+              <div class="overlay-card">
+                <p class="eyebrow" id="coop-overlay-kicker" data-i18n="interface:paused3">PAUSED</p>
+                <h2 id="coop-overlay-title" class="field-kit-display" data-i18n="interface:bothPlayersPaused">
+                  Both players paused
+                </h2>
+                <p id="coop-overlay-copy" data-i18n="interface:releaseYourControlsThenChooseResumeTogether">
+                  Release your controls, then choose Resume together.
+                </p>
+                <section id="coop-bonus-details" aria-label="Pickup field details" hidden="" data-i18n-aria-label="interface:pickupFieldDetails">
+                  <h3 data-i18n="interface:pickupFieldDetails">Pickup field details</h3>
+                  <p id="coop-bonus-detail-state"></p>
+                  <p id="coop-bonus-help" class="micro-note"></p>
+                </section>
+                <p id="coop-journey-reactions" class="micro-note" hidden=""></p>
+                <p id="coop-next-status" role="status" aria-live="polite" hidden=""></p>
+                <section id="coop-victory-story" aria-label="Optional Team victory story" data-i18n-aria-label="interface:team.optionalVictoryStory" hidden="">
+                  <p id="coop-victory-story-description"></p>
+                  <video id="coop-victory-story-video" playsinline="" preload="metadata" hidden=""></video>
+                  <p id="coop-victory-story-status" role="status" aria-live="polite"></p>
+                  <div class="overlay-actions">
+                    <button id="coop-victory-story-play" type="button" data-i18n="interface:team.playVictoryStory">
+                      Play victory story
+                    </button>
+                    <button id="coop-victory-story-skip" type="button" data-i18n="interface:team.skipVictoryStory">
+                      Skip story
+                    </button>
+                  </div>
+                </section>
+                <div class="overlay-actions">
+                  <button id="coop-next" class="primary field-kit-primary" type="button" hidden="" data-i18n="interface:nextArena">
+                    Next arena
+                  </button>
+                  <button id="coop-next-cancel" type="button" hidden="" data-i18n="interface:cancelNextArena">
+                    Cancel next arena
+                  </button>
+                  <button id="coop-journey-skip-confirm" type="button" hidden="" data-i18n="interface:skipMission">
+                    Skip mission
+                  </button>
+                  <button id="coop-resume" class="primary field-kit-primary" type="button" data-i18n="interface:resumeTogether">
+                    Resume together
+                  </button>
+                  <button id="coop-journey-save-options" type="button" hidden="" data-i18n="interface:progressNotSavedSaveOptions">
+                    Progress not saved · Save options
+                  </button>
+                  <button id="coop-view-picture" type="button" hidden="" data-i18n="common:actions.viewPicture">
+                    View picture
+                  </button>
+                  <button id="coop-retry" type="button" data-i18n="interface:retrySameArena">
+                    Retry same arena
+                  </button>
+                  <button id="coop-discovery-paused" type="button" data-i18n="interface:browseTeamArenas">
+                    Browse Team arenas
+                  </button>
+                  <div id="coop-pause-core" class="coop-pause-core" hidden="">
+                    <button id="coop-home-paused" type="button" data-i18n="common:navigation.home">
+                      Home
+                    </button>
+                  </div>
+                  <button id="coop-lobby" type="button" data-i18n="interface:changeSetup">
+                    Change setup
+                  </button>
+                </div>
+                <div id="coop-pause-modes"></div>
+                <nav id="coop-mode-actions" class="coop-mode-actions" aria-label="Other game modes" data-i18n-aria-label="interface:otherGameModes">
+                  <a id="coop-solo" data-i18n="interface:returnToSolo3" href="..?edition=coupa-all">Return to Solo</a>
+                  <a id="coop-versus" data-i18n="interface:goToVersus" href="./index.html?journey=coupa-all">Go to Versus</a>
+                </nav>
+                <div id="coop-pause-tools"></div>
+              </div>
+            </div>
+          </div>
+          <div id="coop-cue-overflow" aria-live="off" hidden="">
+            <button id="coop-field-details" type="button" hidden="">
+              <span data-i18n="interface:fieldDetails">Field details</span>
+              <span id="coop-cue-summary"></span>
+            </button>
+          </div>
+        </div>
+        <div class="board-footer">
+          <span id="coop-cue-announcement" class="coop-cue-announcement" role="status" aria-live="polite"></span>
+          <p id="coop-message" role="status" aria-live="polite" data-i18n="interface:tryACutFromOppositeEdgesAgreeOnAMeeting">
+            Try a cut from opposite edges. Agree on a meeting point first.
+          </p>
+          <span id="coop-clock">0:00</span><button id="coop-pause" type="button" data-i18n="common:actions.pause">Pause</button>
+          <span id="coop-journey-save-announcement" class="journey-save-announcement" role="status" aria-live="polite"></span>
+          <div id="coop-music-now-playing" class="couch-music-credit" aria-label="Current music" hidden="" data-i18n-aria-label="interface:currentMusic"></div>
+          <button id="coop-journey-skip" type="button" hidden="" data-i18n="interface:skipMission">
+            Skip mission
+          </button>
+        </div>
+      </section>
+
+      <section id="coop-controls" class="controls" aria-label="Two player touch controls" hidden="" data-i18n-aria-label="interface:twoPlayerTouchControls">
+        <article class="control-card sunflower">
+          <h2 data-i18n-rich="interface:sunflower3">
+            <span class="player-number" data-i18n-slot="slot0">1</span> Sunflower
+          </h2>
+          <div class="race-pad" data-player="0" aria-label="Player 1 touch controls" hidden="" data-i18n-aria-label="interface:player1TouchControls">
+            <div class="race-cross" role="group" aria-label="Player 1 directions" data-i18n-aria-label="interface:player1Directions">
+              <button type="button" data-direction="up" aria-label="Player 1 up" data-i18n-aria-label="interface:player1Up">
+                ↑
+              </button>
+              <button type="button" data-direction="left" aria-label="Player 1 left" data-i18n-aria-label="interface:player1Left">
+                ←
+              </button>
+              <span class="cross-center" aria-hidden="true">1</span>
+              <button type="button" data-direction="right" aria-label="Player 1 right" data-i18n-aria-label="interface:player1Right">
+                →
+              </button>
+              <button type="button" data-direction="down" aria-label="Player 1 down" data-i18n-aria-label="interface:player1Down">
+                ↓
+              </button>
+            </div>
+            <button type="button" data-action="boost" aria-pressed="false" aria-label="Player 1 Boost" data-i18n="common:controls.boost" data-i18n-aria-label="interface:player1Boost">
+              Boost
+            </button>
+            <button type="button" data-action="action" aria-pressed="false" aria-label="Player 1 Support; hold beside a downed partner to rescue" data-i18n="interface:support" data-i18n-aria-label="interface:player1SupportHoldBesideADownedPartnerToRescue">
+              Support
+            </button>
+          </div>
+        </article>
+        <article class="control-card skyline">
+          <h2 data-i18n-rich="interface:skyline3">
+            <span class="player-number" data-i18n-slot="slot0">2</span> Skyline
+          </h2>
+          <div class="race-pad" data-player="1" aria-label="Player 2 touch controls" hidden="" data-i18n-aria-label="interface:player2TouchControls">
+            <div class="race-cross" role="group" aria-label="Player 2 directions" data-i18n-aria-label="interface:player2Directions">
+              <button type="button" data-direction="up" aria-label="Player 2 up" data-i18n-aria-label="interface:player2Up">
+                ↑
+              </button>
+              <button type="button" data-direction="left" aria-label="Player 2 left" data-i18n-aria-label="interface:player2Left">
+                ←
+              </button>
+              <span class="cross-center" aria-hidden="true">2</span>
+              <button type="button" data-direction="right" aria-label="Player 2 right" data-i18n-aria-label="interface:player2Right">
+                →
+              </button>
+              <button type="button" data-direction="down" aria-label="Player 2 down" data-i18n-aria-label="interface:player2Down">
+                ↓
+              </button>
+            </div>
+            <button type="button" data-action="boost" aria-pressed="false" aria-label="Player 2 Boost" data-i18n="common:controls.boost" data-i18n-aria-label="interface:player2Boost">
+              Boost
+            </button>
+            <button type="button" data-action="action" aria-pressed="false" aria-label="Player 2 Support; hold beside a downed partner to rescue" data-i18n="interface:support" data-i18n-aria-label="interface:player2SupportHoldBesideADownedPartnerToRescue">
+              Support
+            </button>
+          </div>
+        </article>
+      </section>
+      <dialog id="coop-discovery-dialog" class="team-discovery field-kit-panel" aria-labelledby="coop-discovery-title" aria-describedby="coop-discovery-description">
+        <header class="team-discovery-heading">
+          <h2 id="coop-discovery-title" data-i18n="interface:teamArenas">Team arenas</h2>
+          <button id="coop-discovery-back" type="button" data-i18n="common:actions.back">
+            Back
+          </button>
+        </header>
+        <p id="coop-discovery-description" data-i18n="interface:findAMissionAndPlayDirectlyYourCurrentAttemptStays">
+          Find a mission and Play directly. Your current attempt stays available until you choose
+          another. Created packs keep their authored rules.
+        </p>
+        <div class="team-discovery-filters">
+          <label><span data-i18n="interface:searchAllTeamMissions">Search all Team missions</span>
+            <input id="coop-discovery-search" type="search" maxlength="160" autocomplete="off">
+          </label>
+          <label><span data-i18n="interface:campaignOrPack">Campaign or pack</span>
+            <select id="coop-discovery-campaign">
+              <option value="" data-i18n="interface:allCampaignsAndPacks">
+                All campaigns and packs
+              </option>
+            </select>
+          </label>
+        </div>
+        <div id="coop-discovery-list" class="team-discovery-list" aria-busy="false"></div>
+        <section id="coop-discovery-preview" aria-labelledby="coop-discovery-preview-title" hidden="">
+          <h3 id="coop-discovery-preview-title" data-i18n="interface:picturePreview">
+            Picture preview
+          </h3>
+          <figure class="team-discovery-full-picture">
+            <canvas id="coop-discovery-preview-canvas" width="1152" height="576" aria-hidden="true" hidden=""></canvas>
+            <figcaption data-i18n="interface:fullPicturePreviewViewingDoesNotCompleteAnArenaOr">
+              Full picture preview · Viewing does not complete an arena or earn a picture.
+            </figcaption>
+          </figure>
+          <p id="coop-discovery-preview-status" class="operation-status" role="status" aria-live="polite"></p>
+          <button id="coop-discovery-preview-retry" type="button" hidden="" data-i18n="common:preview.retry">
+            Retry preview
+          </button>
+        </section>
+        <footer class="team-discovery-footer">
+          <p id="coop-discovery-status" class="operation-status" role="status" aria-live="polite"></p>
+          <button id="coop-discovery-cancel" type="button" hidden="" data-i18n="common:actions.cancelPreparation">
+            Cancel preparation
+          </button>
+        </footer>
+      </dialog>
+      <dialog id="coop-discard-dialog" class="coop-confirm-dialog" role="alertdialog" aria-labelledby="coop-discard-title" aria-describedby="coop-discard-copy">
+        <h2 id="coop-discard-title" data-i18n="interface:discardThisTeamAttempt">
+          Discard this Team attempt?
+        </h2>
+        <p id="coop-discard-copy" data-i18n="interface:thisUnfinishedAttemptIsNotSavedDiscardingItLosesIts">
+          This unfinished attempt is not saved; discarding it loses its current territory, not
+          previously recorded mission clears.
+        </p>
+        <div class="coop-confirm-actions">
+          <button id="coop-discard-stay" type="button" autofocus="" data-i18n="interface:stay">
+            Stay
+          </button>
+          <button id="coop-discard-confirm" type="button" data-i18n="interface:discardThisAttempt">
+            Discard this attempt
+          </button>
+        </div>
+      </dialog>
+      <aside id="coop-tools" class="coop-tools" aria-label="Journeys, Help, Settings and sound" data-i18n-aria-label="interface:journeysHelpSettingsAndSound">
+        <a id="coop-catalogue" data-i18n="interface:legacyArenas" hidden="" data-branded-unavailable="">Legacy arenas</a>
+        <button id="coop-journey-pictures" type="button" hidden="" data-i18n="interface:journeyPictures">
+          Journey pictures
+        </button>
+        <section id="coop-journey-preferences" class="coop-picture" aria-label="Journey difficulty saving" hidden="" data-i18n-aria-label="interface:journeyDifficultySaving">
+          <p id="coop-journey-preferences-message" role="status" aria-live="polite"></p>
+          <div class="coop-picture-actions">
+            <button id="coop-journey-preferences-retry" type="button" data-i18n="interface:retrySavingDifficulty">
+              Retry saving difficulty
+            </button>
+            <button id="coop-journey-preferences-export" type="button" data-i18n="interface:exportDifficulty">
+              Export difficulty
+            </button>
+          </div>
+        </section>
+        <section id="coop-journey-save" class="coop-picture" aria-label="Team Journey progress" hidden="" data-i18n-aria-label="interface:teamJourneyProgress">
+          <p id="coop-journey-save-message" role="status" aria-live="polite"></p>
+          <div class="coop-picture-actions">
+            <button id="coop-journey-save-retry" type="button" data-i18n="interface:retrySavingProgress">
+              Retry saving progress
+            </button>
+            <button id="coop-journey-save-export" type="button" data-i18n="interface:exportProgress">
+              Export progress
+            </button>
+          </div>
+        </section>
+        <section class="coop-picture" aria-label="Arena picture" data-i18n-aria-label="interface:arenaPicture">
+          <p id="coop-picture-status" role="status" aria-live="polite" data-i18n="interface:preparingTheTeamPicture">
+            Preparing the Team picture…
+          </p>
+          <div class="coop-picture-actions">
+            <button id="coop-picture-cancel" type="button" hidden="" data-i18n="interface:cancelPictureLoading">
+              Cancel picture loading
+            </button>
+            <button id="coop-picture-retry" type="button" hidden="" data-i18n="interface:retryPicture2">
+              Retry picture
+            </button>
+          </div>
+        </section>
+        <details id="coop-more">
+          <summary id="coop-more-toggle" data-i18n="common:navigation.more">More</summary>
+          <nav class="coop-more-destinations" aria-label="More destinations" data-i18n-aria-label="common:navigation.moreDestinations">
+            <a id="coop-more-home" data-i18n="common:navigation.home" href="..?edition=coupa-all">Home</a>
+            <a id="coop-more-catalogue" data-i18n="interface:legacyArenas" hidden="" data-branded-unavailable="">Legacy arenas</a>
+            <a id="coop-more-about" data-i18n="common:navigation.aboutCredits" hidden="" data-branded-unavailable="">About &amp; credits</a>
+            <a id="coop-release-explorer" data-i18n="common:navigation.releases">Releases</a>
+          </nav>
+        </details>
+        <details id="coop-help">
+          <summary id="coop-help-toggle" data-i18n="interface:howToPlayAndControls">
+            How to play and controls
+          </summary>
+          <div id="coop-help-unit">
+            <div class="reading-toolbar">
+              <button id="coop-help-read" type="button" data-i18n="interface:readControls">
+                Read controls
+              </button>
+              <button id="coop-help-reading-done" type="button" disabled="" data-i18n="interface:doneReading">
+                Done reading
+              </button>
+            </div>
+            <p id="coop-help-reading-hint" class="reading-hint" role="status" data-i18n="interface:readWithoutStartingOrResuming">
+              Read without starting or resuming.
+            </p>
+            <div id="coop-help-reading" aria-describedby="coop-help-reading-hint" role="region" aria-label="Relay Rescue controls" tabindex="0" data-game-reading="" data-i18n-aria-label="interface:relayRescueControls">
+              <section id="coop-field-details-section" aria-live="off" hidden="">
+                <h3 data-i18n="interface:fieldDetails">Field details</h3>
+                <ul id="coop-field-details-list"></ul>
+              </section>
+              <div class="briefing field-kit-panel">
+                <p class="eyebrow" id="coop-briefing-title" data-i18n="interface:yourFirstConnection">
+                  YOUR FIRST CONNECTION
+                </p>
+                <ol>
+                  <li>
+                    <strong data-i18n="interface:startSmall">Start small.</strong>
+                    <span id="coop-closure-help" data-i18n="interface:drawAShortLoopBackToSafeGroundToClaim">Draw a short loop back to safe ground to claim it. Banking stops your craft;
+                      steer again for your next cut.</span>
+                  </li>
+                  <li>
+                    <strong id="coop-cut-title" data-i18n="interface:joinWhenReady">Join when ready.</strong>
+                    <span id="coop-cut-help" data-i18n="interface:steerBothMovingHeadsTogetherToBankASharedCut">
+                      Steer both moving heads together to bank a shared cut. Crossing an old part of
+                      a partner’s line is harmless.
+                    </span>
+                  </li>
+                  <li>
+                    <strong id="coop-threat-title" data-i18n="interface:watchTheThreats">Watch the threats.</strong>
+                    <span id="coop-threat-help" data-i18n="interface:preparingTheSelectedArenaSThreatGuidance">Preparing the selected arena’s threat guidance.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="interface:coverEachOther">Cover each other.</strong>
+                    <span id="coop-support-help" data-i18n="interface:preparingSupportAndRescueGuidance">Preparing Support and rescue guidance.</span>
+                  </li>
+                  <li id="coop-stronghold-help" hidden="">
+                    <strong id="coop-stronghold-title" data-i18n="interface:secureTheRelayCores">Secure the relay cores.</strong>
+                    <span id="coop-stronghold-copy" data-i18n="interface:preparingRelayObjectiveGuidance">Preparing relay objective guidance.</span>
+                  </li>
+                </ol>
+              </div>
+              <p id="coop-setup-note" class="setup-note" data-i18n="interface:capturesRechargeBothPlayersSupportAndCanRescueADowned">
+                Captures recharge both players’ Support and can rescue a downed partner.
+              </p>
+              <p id="coop-level-note" class="setup-note" data-i18n="interface:bothHalvesAreContestedCreateSafeRoutesInSmallSteps">
+                Both halves are contested. Create safe routes in small steps, then coordinate a
+                larger cut.
+              </p>
+              <p data-i18n="interface:tapADirectionToKeepMovingBankingACutStops">
+                Tap a direction to keep moving. Banking a cut stops your craft; steer again to
+                leave. Esc / P or Menu pauses both players. Resume together is always explicit.
+              </p>
+              <p data-i18n-rich="interface:steerBoostSupport">
+                <strong data-i18n="interface:sunflower4" data-i18n-slot="slot0">Sunflower:</strong>
+                <kbd data-i18n="interface:w" data-i18n-slot="slot1">W</kbd><kbd data-i18n="interface:a" data-i18n-slot="slot2">A</kbd><kbd data-i18n="interface:s" data-i18n-slot="slot3">S</kbd><kbd data-i18n="interface:d" data-i18n-slot="slot4">D</kbd> steer,
+                <kbd data-i18n="common:controls.leftShift" data-i18n-slot="slot5">Left Shift</kbd>
+                Boost, <kbd data-i18n="interface:q" data-i18n-slot="slot6">Q</kbd> Support.
+              </p>
+              <p data-i18n-rich="interface:arrowKeysSteerBoostSupport">
+                <strong data-i18n="interface:skyline4" data-i18n-slot="slot0">Skyline:</strong>
+                arrow keys steer,
+                <kbd data-i18n="common:controls.rightShift" data-i18n-slot="slot1">Right Shift</kbd>
+                Boost, <kbd data-i18n="interface:enter" data-i18n-slot="slot2">Enter</kbd> Support.
+              </p>
+              <p data-i18n="interface:controllersStickOrDPadSteersRightShoulderHoldsBoost">
+                Controllers: stick or D-pad steers, right shoulder holds Boost, South uses Support,
+                and Menu pauses. Each player keeps their controller assignment.
+              </p>
+              <p id="coop-help-support" data-i18n="interface:preparingSupportAndRescueGuidance">
+                Preparing Support and rescue guidance.
+              </p>
+              <p id="coop-slowed-legend">↓ — <span data-i18n="interface:slowed">Slowed</span></p>
+              <p id="coop-support-0" class="support-status" data-i18n="interface:sunflowerSupportReady">
+                Sunflower: Support ready
+              </p>
+              <p id="coop-support-1" class="support-status" data-i18n="interface:skylineSupportReady">
+                Skyline: Support ready
+              </p>
+            </div>
+          </div>
+        </details>
+        <button id="coop-settings-open" type="button" data-i18n="common:navigation.settings">
+          Settings
+        </button>
+        <button id="coop-offline" type="button" data-i18n="interface:installAppGameAndSoundtrackDownloads">
+          Install &amp; offline play
+        </button>
+        <button id="coop-quick-sound" type="button" aria-pressed="false" data-i18n="interface:soundOff">
+          Sound: off
+        </button>
+      </aside>
+      <dialog id="coop-earned-picture" aria-labelledby="coop-earned-picture-title">
+        <header class="earned-picture-header">
+          <h2 id="coop-earned-picture-title" data-i18n="interface:yourSharedPicture">
+            Your shared picture
+          </h2>
+          <button id="coop-picture-return" type="button" data-i18n="interface:backToResults">
+            Back to results
+          </button>
+        </header>
+        <canvas id="coop-earned-picture-canvas" width="0" height="0" role="img" aria-label="The complete picture earned by this Team attempt" data-i18n-aria-label="interface:theCompletePictureEarnedByThisTeamAttempt"></canvas>
+      </dialog>
+
+      <dialog id="coop-options" class="shared-settings" aria-labelledby="coop-settings-title">
+        <div class="shared-settings-heading">
+          <h2 id="coop-settings-title" data-i18n="common:navigation.settings">Settings</h2>
+          <button id="coop-settings-close" type="button" data-i18n="common:actions.back">
+            Back
+          </button>
+        </div>
+        <p class="setting-note" data-i18n="interface:soundAndAppearanceApplyAcrossGameModesTouchSteeringIs">
+          Sound and appearance apply across game modes. Touch steering is shared across modes; which
+          player pads are shown is for this visit.
+        </p>
+        <div class="field-kit-settings-tabs" role="tablist" aria-label="Settings categories" data-i18n-aria-label="interface:settingsCategories">
+          <button id="coop-settings-tab-controls" type="button" role="tab" aria-controls="coop-settings-panel-controls" aria-selected="false" tabindex="-1" data-i18n="interface:controls">
+            Controls
+          </button>
+          <button id="coop-settings-tab-audio" type="button" role="tab" aria-controls="coop-settings-panel-audio" aria-selected="false" tabindex="-1" data-i18n="interface:audio">
+            Audio
+          </button>
+          <button id="coop-settings-tab-display" type="button" role="tab" aria-controls="coop-settings-panel-display" aria-selected="true" tabindex="0" data-i18n="interface:appearanceAccessibility">
+            Appearance &amp; accessibility
+          </button>
+          <button id="coop-settings-tab-data" type="button" role="tab" aria-controls="coop-settings-panel-data" aria-selected="false" tabindex="-1" data-i18n="interface:gameData">
+            Game data
+          </button>
+        </div>
+        <section id="coop-settings-panel-controls" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="coop-settings-tab-controls" hidden="">
+          <h3 data-i18n="interface:controls">Controls</h3>
+          <section id="coop-gameplay-tuning" aria-label="Shared gameplay tuning" data-i18n-aria-label="interface:sharedGameplayTuning"></section>
+          <label for="coop-touch" data-i18n="interface:touchControls">Touch controls</label>
+          <select id="coop-touch">
+            <option value="auto" selected="" data-i18n="interface:autoTouchPlayersWithoutAController">
+              Auto · touch players without a controller
+            </option>
+            <option value="on" data-i18n="interface:showBothPlayers">Show both players</option>
+            <option value="off" data-i18n="interface:hideTouchControls">Hide touch controls</option>
+          </select>
+          <p class="setting-note" data-i18n="interface:touchControlsAppearOnlyWhilePlayingAutoFollowsThisScreen">
+            Touch controls appear only while playing. Auto follows this screen's touch capability
+            and each player's actual controller assignment. Show and Hide override that choice for
+            this visit.
+          </p>
+          <span id="coop-pads" role="status"></span>
+        </section>
+        <section id="coop-settings-panel-audio" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="coop-settings-tab-audio" hidden="">
+          <h3 data-i18n="interface:audio">Audio</h3>
+          <button id="coop-audio" type="button" data-i18n="common:audio.unmute">
+            Unmute sound
+          </button>
+          <label for="coop-master-volume" data-i18n="common:audio.masterVolume">Master sound volume</label>
+          <input id="coop-master-volume" type="range" min="0" max="1" step="0.01" value="0.65">
+          <p id="coop-audio-note" class="setting-note" data-i18n="interface:sharedWithSoloVersusAndPreviewsMusicIsAvailableBelow">
+            Shared with Solo, Versus and previews. Music is available below; Team gameplay cues
+            remain visual.
+          </p>
+          <p id="coop-audio-status" class="setting-note" role="status"></p>
+        </section>
+        <section id="coop-settings-panel-display" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="coop-settings-tab-display">
+          <h3 data-i18n="interface:appearanceAccessibility">Appearance &amp; accessibility</h3>
+          <div id="coop-settings-language" data-language-control="" hidden="" data-branded-unavailable=""></div>
+          <label for="coop-text-face" data-i18n="interface:textStyle">Text style</label>
+          <select id="coop-text-face">
+            <option value="pixel" data-i18n="interface:themeFont">Theme font</option>
+            <option value="plain" data-i18n="common:text.plain">Plain</option>
+          </select>
+          <label for="coop-text-size" data-i18n="interface:textSize">Text size</label>
+          <select id="coop-text-size">
+            <option value="standard" data-i18n="interface:display.textSize.standard">
+              Standard
+            </option>
+            <option value="large" data-i18n="interface:large">Large</option>
+          </select>
+          <label class="field-kit-page-text"><span data-i18n="interface:uiSkin">UI skin</span><select id="coop-menu-palette">
+              <option value="auto" data-i18n="interface:neonArcade">Neon Arcade</option>
+              <option value="ukrainian">Field Kit</option>
+            </select></label>
+          <label class="field-kit-page-text"><span data-i18n="interface:menuOrnaments">Menu ornaments</span><select id="coop-menu-ornaments">
+              <option value="off" data-i18n="common:status.off">Off</option>
+              <option value="subtle" data-i18n="interface:subtle">Subtle</option>
+              <option value="rich" data-i18n="interface:rich">Rich</option>
+            </select></label>
+          <p id="coop-menu-style-status" class="micro-note" role="status"></p>
+          <label><input id="coop-reduced" type="checkbox">
+            <span data-i18n="interface:reduceEffects">Reduce effects</span></label>
+          <label class="settings-check"><input id="coop-enemy-remains" type="checkbox" aria-describedby="coop-enemy-remains-hint"><span data-i18n="common:preferences.enemyRemains">Show enemy remains</span></label>
+          <p id="coop-enemy-remains-hint" class="micro-note" data-i18n="common:preferences.enemyRemainsHint">
+            Show defeated optional enemies where supported. Warnings, shots and brief hit effects
+            stay visible.
+          </p>
+          <p id="coop-enemy-remains-status" class="micro-note" role="status" hidden=""></p>
+          <button id="coop-enemy-remains-retry" type="button" data-i18n="common:preferences.retryEncounterSave" hidden="">
+            Retry saving
+          </button>
+          <p id="coop-system-reduction" class="setting-note"></p>
+          <p id="coop-display-status" class="setting-note" role="status"></p>
+          <label><input id="coop-journey-reactions-enabled" type="checkbox" aria-describedby="coop-journey-reactions-help">
+            <span data-i18n="interface:characterReactions">Character reactions</span></label>
+          <p id="coop-journey-reactions-help" class="micro-note" data-i18n="interface:optionalCaptionsAfterCompletedJourneyMissionsNoVoiceOrAnimation">
+            Optional captions after completed Journey missions. No voice or animation.
+          </p>
+          <p id="coop-journey-reactions-status" class="micro-note" role="status" hidden=""></p>
+          <button id="coop-journey-reactions-retry" type="button" hidden="" data-i18n="interface:retrySavingReactions">
+            Retry saving reactions
+          </button>
+        </section>
+        <section id="coop-settings-panel-data" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="coop-settings-tab-data" hidden="">
+          <h3 data-i18n="interface:gameData">Game data</h3>
+          <div id="coop-data-unit" class="settings-reading-unit">
+            <div class="reading-toolbar">
+              <button id="coop-data-read" type="button" data-i18n="interface:readGameData">
+                Read game data
+              </button>
+              <button id="coop-data-reading-done" type="button" disabled="" data-i18n="interface:doneReading">
+                Done reading
+              </button>
+            </div>
+            <p id="coop-data-reading-hint" class="reading-hint" role="status" data-i18n="interface:readWithoutStartingOrResuming">
+              Read without starting or resuming.
+            </p>
+            <div id="coop-data-reading" class="settings-reading-region" role="region" aria-label="Team game data" aria-describedby="coop-data-reading-hint" tabindex="0" data-game-reading="" data-i18n-aria-label="interface:teamGameData">
+              <p data-i18n="interface:teamAttemptsStayOnThisPageClosingOrReloadingIt">
+                Team attempts stay on this page. Closing or reloading it discards the current
+                attempt.
+              </p>
+              <p data-i18n="interface:teamPlayDoesNotWriteSoloSavesCampaignProgressScores">
+                Team play does not write Solo saves, campaign progress, scores or earned pictures.
+                Shared sound and appearance preferences and your last built-in Team arena choice are
+                saved separately on this device. Imported packs remain on this page.
+              </p>
+            </div>
+          </div>
+        </section>
+      </dialog>
+    </main>
+    <script defer="" src="./mode-entry.js" data-mode="team"></script>
+    <script defer="" src="../ui/direct-tool-launch.js" data-module="./relay-rescue.mjs" data-status="coop-boot"></script>
+  
+
+</body></html>

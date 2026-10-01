@@ -366,7 +366,14 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     const ledger = read(runtime.EDITION_RUNTIME_ASSET_LEDGER);
     const sharedAssets = JSON.parse(ledger);
     engine.set(runtime.EDITION_RUNTIME_ASSET_LEDGER, ledger);
-    const pending = ["game/company.html"];
+    // The dedicated edition exposes the same local two-player hosts as the
+    // shared game. Their code still receives only the selected edition data;
+    // no default-game campaign catalogs are added to the extraction.
+    const pending = [
+      "game/company.html",
+      "game/couch/index.html",
+      "game/couch/relay-rescue.html",
+    ];
     while (pending.length) {
       const batch = [
         ...new Set(

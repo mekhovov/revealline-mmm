@@ -286,16 +286,9 @@ export async function mountEditionSoloUI({
     about.append(p);
   }
   (doc.getElementById('settings-panel-extras') ?? editionMenu).append(about);
-  // Mode controls stay on the common template, but this delivery contains only
-  // Solo. The mission library itself derives availability from selected sources.
-  for (const id of [
-    'shell-mode-choice',
-    'shell-team',
-    'shell-versus',
-    'shell-title-team',
-    'shell-title-versus',
-  ])
-    if (doc.getElementById(id)) doc.getElementById(id).hidden = true;
+  // This edition keeps the common Solo, Team and Versus navigation.
+  for (const id of ['shell-mode-choice', 'shell-team', 'shell-versus', 'shell-title-team', 'shell-title-versus'])
+    if (doc.getElementById(id)) doc.getElementById(id).hidden = false;
   const actorStyle = doc.getElementById('menu-actor-style');
   if (actorStyle) {
     actorStyle.value = 'campaign';

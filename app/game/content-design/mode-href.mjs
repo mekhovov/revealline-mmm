@@ -1,5 +1,6 @@
 // The explicit review routes, not arbitrary imported project IDs or URLs.
 export const AUTHORED_JOURNEY_ROUTE_IDS = Object.freeze([
+  "coupa-all",
   'opening',
   'authored',
   'whole-originals',

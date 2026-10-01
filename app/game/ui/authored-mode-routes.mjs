@@ -18,6 +18,10 @@ export function authoredModeDestinations(mode, route) {
           },
     );
   if (!ROUTES.has(route) || !['solo', 'versus'].includes(mode)) return null;
+  if (route === "coupa-all")
+    return Object.freeze(mode === 'solo'
+      ? { versus: 'couch/?journey=coupa-all&return=solo', team: 'couch/relay-rescue.html?journey=coupa-all&return=solo' }
+      : { solo: '../?edition=coupa-all', team: 'relay-rescue.html?journey=coupa-all&return=versus' });
   return Object.freeze(
     mode === 'solo'
       ? {

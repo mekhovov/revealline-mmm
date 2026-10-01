@@ -177,6 +177,7 @@ export function createOfficialDownloads({
     acquire,
     readExisting,
     selection,
+    allGameplay,
     onProgress = () => {},
   }) {
     const unique = [...new Map(files.map((file) => [checkFile(file).sha256, file])).values()];
@@ -190,6 +191,7 @@ export function createOfficialDownloads({
         hashes: unique.map((file) => file.sha256),
         complete: false,
         ...(selection ? { selection } : {}),
+        ...(typeof allGameplay === 'boolean' ? { allGameplay } : {}),
       };
       await metadata.put(stateKey(edition, group), new Response(JSON.stringify(checkpoint)));
       let report = await inspect(unique, { verify: true, signal });
