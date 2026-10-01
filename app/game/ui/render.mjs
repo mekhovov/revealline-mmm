@@ -376,6 +376,7 @@ export class BoardPainter {
       feedbackComparison = null,
       pictureVisibility = 'clear',
       demoTransition = 0,
+      pictureInterference = true,
       signalReception = 'off',
       signalEffectsRunning = false,
     } = {},
@@ -571,12 +572,16 @@ export class BoardPainter {
         ? Math.max(0, Math.min(1, demoTransition)) * 0.35
         : 0;
     const picture = this.jammerPictureFilter.select(protectedPicture, {
-      strength: Math.max(
-        transitionStrength,
-        pictureVisibility === 'clear'
-          ? jammerPictureStrength(state, { fullReveal }) * (reduced ? 0.65 : 1)
-          : 0,
-      ),
+      // A demo can explicitly preview its validated artwork without reception
+      // noise. Gameplay signals, territory masks and actors remain unchanged.
+      strength: pictureInterference
+        ? Math.max(
+            transitionStrength,
+            pictureVisibility === 'clear'
+              ? jammerPictureStrength(state, { fullReveal }) * (reduced ? 0.65 : 1)
+              : 0,
+          )
+        : 0,
       time: this.time,
       animate: !reduced,
     });

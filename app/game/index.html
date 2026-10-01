@@ -1092,6 +1092,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           <label><input id="demo-auto" type="checkbox"><span data-i18n="demo:auto">Show a demo after 60 seconds on the idle home screen</span></label>
           <label><input id="demo-collect" type="checkbox"><span data-i18n="demo:collect">Use my successful runs in demos</span></label>
           <label><input id="demo-hide-pictures" type="checkbox"><span data-i18n="demo:hidePictures">Hide every demo picture behind signal noise</span></label>
+          <label><input id="demo-show-all-pictures" type="checkbox"><span data-i18n="demo:showAllPictures">Show all demo pictures without noise</span></label>
           <p class="micro-note" data-i18n="demo:localOnly">
             Recordings stay on this device. The disposable demo cache holds up to 12 recordings / 32
             MiB and is separate from saved flights.
@@ -1465,6 +1466,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           </button>
         </div>
         <div id="demo-audio" data-demo-ui=""></div>
+        <label class="demo-picture-setting" data-demo-ui=""><input id="demo-show-all-pictures-live" type="checkbox"><span data-i18n="demo:showAllPictures">Show all demo pictures without noise</span></label>
         <div class="demo-notes">
           <p id="demo-caption"></p>
           <p id="demo-status"></p>

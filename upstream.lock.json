@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "repository": "mekhovov/revealline",
-  "requestedRef": "e870684598ca2767e24320573caff400eb930f46",
-  "commit": "e870684598ca2767e24320573caff400eb930f46",
-  "tree": "800ef26bf8a20433304b3c64b5c4921d00673324",
+  "requestedRef": "6836617ba1a2ebf06c9887b0fd5f3397d39421e5",
+  "commit": "6836617ba1a2ebf06c9887b0fd5f3397d39421e5",
+  "tree": "1b2292df1c7e02e882054181a8af73ec5ee5d315",
   "upstreamVersion": "0.142.4",
   "editionId": "coupa-all",
   "brandId": "coupa",
@@ -390,8 +390,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1084303,
-      "sha256": "15f523b738530f4025fd2d9b49424a9d03e6c33fc8a6c58a585d0a797beaf809"
+      "bytes": 1084579,
+      "sha256": "7680ed3f9a38387a88cd59e22e8fcd3c0c77281f11258c2e2724e813b23aa7ef"
     },
     {
       "path": "game/i18n/index.mjs",
@@ -1692,8 +1692,8 @@
     },
     {
       "path": "game/demo-experience.mjs",
-      "bytes": 5869,
-      "sha256": "63380825a056e7a5789f95e7d2752e4837f1ce1d2820183161505ddb873c495d"
+      "bytes": 6149,
+      "sha256": "d51d37259f6099546b22b2bf94cf50e6bfa957bb9789fb11a9d3376ddd937fc7"
     },
     {
       "path": "game/demo-improv-player.mjs",
@@ -2147,8 +2147,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1084303,
-      "sha256": "15f523b738530f4025fd2d9b49424a9d03e6c33fc8a6c58a585d0a797beaf809"
+      "bytes": 1084579,
+      "sha256": "7680ed3f9a38387a88cd59e22e8fcd3c0c77281f11258c2e2724e813b23aa7ef"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -2177,8 +2177,8 @@
     },
     {
       "path": "game/index.html",
-      "bytes": 133729,
-      "sha256": "83d978fb2a91a36693c5d9e5383566775f6bbfdc8ed776380e1459117331ccf8"
+      "bytes": 134218,
+      "sha256": "e02206130213d09145f1030c84a815cd22c1d1fcf7c74efc6d1289095527991c"
     },
     {
       "path": "game/input-presentation.mjs",
@@ -3357,8 +3357,8 @@
     },
     {
       "path": "game/ui/demo-host.mjs",
-      "bytes": 26124,
-      "sha256": "2d1326a81c5b5e751678975cdafd71fad88c88239e8f51ddc5e6808d4f5b5c05"
+      "bytes": 27246,
+      "sha256": "da72293019c341912e62500dd82b5860a7ac1c365113153dd8dd6b40bff62933"
     },
     {
       "path": "game/ui/demo-input.mjs",
@@ -3367,18 +3367,18 @@
     },
     {
       "path": "game/ui/demo-journey-picture.mjs",
-      "bytes": 4595,
-      "sha256": "fe523986894dc4d25206d689bcece200653fbed4e9fd7153581edec5a9ef83ee"
+      "bytes": 4649,
+      "sha256": "32252eacecc89367880344254a767a3382cb0e0beecf60f6542e375ad7008e5f"
     },
     {
       "path": "game/ui/demo-picture.mjs",
-      "bytes": 13650,
-      "sha256": "eb51a0b79427ad05bb4095c2e0a86a7c3f859f0618a513a81b2b987acbf4c176"
+      "bytes": 13878,
+      "sha256": "96da8005969190e53b66a93d9bd2b04020c9f10a7ca73741cd5eb8fc46a16058"
     },
     {
       "path": "game/ui/demo.css",
-      "bytes": 5609,
-      "sha256": "a99acc0c869a7b44b318e42058b1fb7b16b448bb572540e47050c5d46e2a671d"
+      "bytes": 5838,
+      "sha256": "7a1722e0532f99f996fbdf8d677e0c6fdfb9116148f5f16ef0a40ad103cff5bc"
     },
     {
       "path": "game/ui/device-controls.css",
@@ -4152,8 +4152,8 @@
     },
     {
       "path": "game/ui/render.mjs",
-      "bytes": 42390,
-      "sha256": "3c5a98cc9413911451e98857fb393d6af9e615e1948fa048c8a76e7f776b74fc"
+      "bytes": 42644,
+      "sha256": "3ffc9077d93bf43d0d509a73bbe87a7ca25ca082bd5769d5b42d6e23a2c006cc"
     },
     {
       "path": "game/ui/result-continuation.mjs",
@@ -4412,7 +4412,7 @@
     {
       "path": "edition-build.json",
       "bytes": 113600,
-      "sha256": "11ca64d60c3a636e7d260bc2bdd25163b878489ed982d0a3fce726231df79c91"
+      "sha256": "016af3d1ca15a0dd35063b55877c1d1d8eb2036fba23a33ff579dd35bcbb4113"
     },
     {
       "path": "edition-catalog.json",
@@ -4492,7 +4492,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "0b6b66d4b910aa2e3a86e47afbed00c23658c1e640c3b439356111637323c6b4"
+      "sha256": "21a2de582f24c99e2095978d7f45217f29b9fe0f2e4bf59d6929f25b2001239c"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -5291,8 +5291,8 @@
     },
     {
       "path": "game/demo-experience.mjs",
-      "bytes": 5869,
-      "sha256": "63380825a056e7a5789f95e7d2752e4837f1ce1d2820183161505ddb873c495d"
+      "bytes": 6149,
+      "sha256": "d51d37259f6099546b22b2bf94cf50e6bfa957bb9789fb11a9d3376ddd937fc7"
     },
     {
       "path": "game/demo-improv-player.mjs",
@@ -5731,8 +5731,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 895019,
-      "sha256": "f41907bb3ea554451c12470e8ae5dd641e84867b4366381e26064f27280c0598"
+      "bytes": 895443,
+      "sha256": "0e590a2e41dbc7d093a4348ea7f9f240e2e1a411410cfb2a3d869c5d09754db5"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -5761,8 +5761,8 @@
     },
     {
       "path": "game/index.html",
-      "bytes": 117300,
-      "sha256": "514bfb6670806ba3be57abc2caec9b83400e65c560562d981dc0c6c4455fb13f"
+      "bytes": 117666,
+      "sha256": "5194747f3c876c1f134d7c669d2b13152011500b20a172228405686a0143afca"
     },
     {
       "path": "game/input-presentation.mjs",
@@ -6821,8 +6821,8 @@
     },
     {
       "path": "game/ui/demo-host.mjs",
-      "bytes": 26124,
-      "sha256": "2d1326a81c5b5e751678975cdafd71fad88c88239e8f51ddc5e6808d4f5b5c05"
+      "bytes": 27246,
+      "sha256": "da72293019c341912e62500dd82b5860a7ac1c365113153dd8dd6b40bff62933"
     },
     {
       "path": "game/ui/demo-input.mjs",
@@ -6831,18 +6831,18 @@
     },
     {
       "path": "game/ui/demo-journey-picture.mjs",
-      "bytes": 4595,
-      "sha256": "fe523986894dc4d25206d689bcece200653fbed4e9fd7153581edec5a9ef83ee"
+      "bytes": 4649,
+      "sha256": "32252eacecc89367880344254a767a3382cb0e0beecf60f6542e375ad7008e5f"
     },
     {
       "path": "game/ui/demo-picture.mjs",
-      "bytes": 13650,
-      "sha256": "eb51a0b79427ad05bb4095c2e0a86a7c3f859f0618a513a81b2b987acbf4c176"
+      "bytes": 13878,
+      "sha256": "96da8005969190e53b66a93d9bd2b04020c9f10a7ca73741cd5eb8fc46a16058"
     },
     {
       "path": "game/ui/demo.css",
-      "bytes": 5609,
-      "sha256": "a99acc0c869a7b44b318e42058b1fb7b16b448bb572540e47050c5d46e2a671d"
+      "bytes": 5838,
+      "sha256": "7a1722e0532f99f996fbdf8d677e0c6fdfb9116148f5f16ef0a40ad103cff5bc"
     },
     {
       "path": "game/ui/device-controls.css",
@@ -7591,8 +7591,8 @@
     },
     {
       "path": "game/ui/render.mjs",
-      "bytes": 42390,
-      "sha256": "3c5a98cc9413911451e98857fb393d6af9e615e1948fa048c8a76e7f776b74fc"
+      "bytes": 42644,
+      "sha256": "3ffc9077d93bf43d0d509a73bbe87a7ca25ca082bd5769d5b42d6e23a2c006cc"
     },
     {
       "path": "game/ui/result-continuation.mjs",
