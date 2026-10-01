@@ -209,7 +209,9 @@
       else controls[0]?.focus();
     } else moveFocus(command === 'down' ? 1 : -1);
   }
-  function mount() {
+  async function mount() {
+    if (mounted) return;
+    await globalThis.RevealLineAccess?.ready;
     if (mounted) return;
     mounted = true;
     doc.addEventListener('keydown', keydown);

@@ -215,6 +215,29 @@ function projectHTML(source, name, config) {
     `<style>${hiddenSelectors.join(',')}{display:none!important}</style></head>`);
 }
 
+function projectAccessGate(files, config) {
+  const gateScript = readFileSync(new URL('../branding/access-gate.mjs', import.meta.url));
+  const gateStyles = readFileSync(new URL('../branding/access-gate.css', import.meta.url));
+  files.set('game/access-gate.mjs', gateScript);
+  files.set('game/access-gate.css', gateStyles);
+  const head = `<meta name="revealline-access-id" content="${config.repo}"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="access-gate.css"><script src="access-gate.mjs" defer></script>`;
+  for (const name of ['game/index.html', 'game/company.html'])
+    edit(files, name, (source) => once(once(source,
+      '<html', '<html data-access-state="locked"', `${name} access state`),
+    '<head>', `<head>${head}`, `${name} access head`));
+  edit(files, 'game/index.html', (source) => once(source,
+    ':not(#boot-screen):not(script)', ':not(#boot-screen):not(#access-gate):not(script)',
+    'Coupa boot access visibility'));
+  edit(files, 'game/boot.mjs', (source) => once(source,
+    '  function mount() {\n    if (mounted) return;',
+    '  async function mount() {\n    if (mounted) return;\n    await globalThis.RevealLineAccess?.ready;\n    if (mounted) return;',
+    'Coupa boot access wait'));
+  edit(files, 'game/company-entry.mjs', (source) => once(source,
+    'if (globalThis.document && globalThis.location) {',
+    'if (globalThis.document && globalThis.location) {\n  await globalThis.RevealLineAccess?.ready;',
+    'Coupa company access wait'));
+}
+
 function projectLanding(files) {
   // Presentation-only customization. Keep official artwork bytes, campaign
   // identities and the upstream menu's accessibility/lifecycle contracts.
@@ -384,6 +407,7 @@ export const createLessonObserver = denyBrandedImport;
     if (name.endsWith('.html')) files.set(name, encoder(projectHTML(bytes.toString('utf8'), name, config)));
   }
   projectLanding(files);
+  projectAccessGate(files, config);
   pruneUnreachableModules(files);
   // The upstream compiler appends shared presentation ledger records, some of
   // which became unused after removing its public archive/default identity.
@@ -399,12 +423,14 @@ export const createLessonObserver = denyBrandedImport;
   catalog.assets = catalog.assets.filter((asset) => !removedAssetIds.has(asset.id));
   files.set('edition-catalog.json', json(catalog));
   const title = config.name.replace(/[<>&"]/g, '');
-  files.set('index.html', encoder(`<!doctype html><html lang="en" data-branded-app="${config.repo}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title}</title></head><body><main><h1>${title}</h1><p id="entry-status">Opening your Coupa campaign…</p><a href="game/index.html?edition=${config.editionId}">Play ${title}</a></main><script type="module">import { assertBrandedLocation } from './game/branded-isolation.mjs'; try { assertBrandedLocation(location.href); const target = new URL('game/index.html', location.href); target.search = location.search; target.hash = location.hash; location.replace(target); } catch (error) { document.getElementById('entry-status').textContent = error.message; }</script></body></html>`));
+  files.set('index.html', encoder(`<!doctype html><html lang="en" data-branded-app="${config.repo}" data-access-state="locked"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="revealline-access-id" content="${config.repo}"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="game/access-gate.css"><script src="game/access-gate.mjs" defer></script><title>${title}</title></head><body><main><h1>${title}</h1><p id="entry-status">Opening your Coupa campaign…</p><a href="game/index.html?edition=${config.editionId}">Play ${title}</a></main><script type="module">import { assertBrandedLocation } from './game/branded-isolation.mjs'; await globalThis.RevealLineAccess?.ready; try { assertBrandedLocation(location.href); const target = new URL('game/index.html', location.href); target.search = location.search; target.hash = location.hash; location.replace(target); } catch (error) { document.getElementById('entry-status').textContent = error.message; }</script></body></html>`));
   // Journey's IndexedDB is now application-specific; keep logical profile and
   // content IDs unchanged so upstream updates retain compatibility.
   const dependencies = JSON.parse(files.get('runtime-dependencies.json'));
   dependencies.resources = dependencies.resources.filter((name) => files.has(name));
   dependencies.resources.push('game/branded-isolation.mjs');
+  dependencies.resources.push('game/access-gate.mjs');
+  dependencies.resources.push('game/access-gate.css');
   dependencies.resources.push('game/ui/coupa-landing.css');
   files.set('runtime-dependencies.json', json(dependencies));
   validateBrandIsolation(files, config);

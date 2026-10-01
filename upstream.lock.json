@@ -4378,6 +4378,16 @@
       "sha256": "1c1c3bb2a6e751c5e9ec76d9803a64a2efd4274f6fda45b6bd2d34479d5504d1"
     },
     {
+      "path": "branding/access-gate.css",
+      "bytes": 1763,
+      "sha256": "a275bd057f78c6a5bf8f0747485aac01532ef0d2f807db7ac31e9f4561336160"
+    },
+    {
+      "path": "branding/access-gate.mjs",
+      "bytes": 4718,
+      "sha256": "cf38c8fc0504ef02ff51bba93992971142affc19de820d7a0a99a3c6a1310be3"
+    },
+    {
       "path": "branding/coupa-landing.css",
       "bytes": 8771,
       "sha256": "6e46af9230068c0987fd676156b5660c66c0de07833457ce739dcd9d9201c29e"
@@ -4389,13 +4399,13 @@
     },
     {
       "path": "scripts/isolate-brand.mjs",
-      "bytes": 26944,
-      "sha256": "3cc32820ba3371849c42768166f474fc680c3e9d00699611f92a3410d1f4bb71"
+      "bytes": 29304,
+      "sha256": "f8486b75dd64983b686bf8bb7d9cc4e9affc52d33e87c9e9af351461a0a22361"
     },
     {
       "path": "scripts/sync-upstream.mjs",
-      "bytes": 19744,
-      "sha256": "aede6ab40b7a99f3cf426b937c3e7d0c55b9921c4fdd787b732a9b4bf4171ff3"
+      "bytes": 19808,
+      "sha256": "d0a66083344150c0506065a6e33deea06f6d3df39181382bda244b68c00c2ad7"
     }
   ],
   "generatedFiles": [
@@ -4411,13 +4421,23 @@
     },
     {
       "path": "edition-build.json",
-      "bytes": 113600,
-      "sha256": "016af3d1ca15a0dd35063b55877c1d1d8eb2036fba23a33ff579dd35bcbb4113"
+      "bytes": 113911,
+      "sha256": "14983e0df673a6ea98c07a2263cc10787e8151b569bf64d8c4f49edf79b2f103"
     },
     {
       "path": "edition-catalog.json",
       "bytes": 19353,
       "sha256": "6b09434a08e26d5eeb20729db7929e87ca3a667041a9143be2ba90620a55c7d0"
+    },
+    {
+      "path": "game/access-gate.css",
+      "bytes": 1763,
+      "sha256": "a275bd057f78c6a5bf8f0747485aac01532ef0d2f807db7ac31e9f4561336160"
+    },
+    {
+      "path": "game/access-gate.mjs",
+      "bytes": 4718,
+      "sha256": "cf38c8fc0504ef02ff51bba93992971142affc19de820d7a0a99a3c6a1310be3"
     },
     {
       "path": "game/actor-style-preferences.mjs",
@@ -4476,8 +4496,8 @@
     },
     {
       "path": "game/boot.mjs",
-      "bytes": 9544,
-      "sha256": "208aa35622021179b4e357880b3dea944cf48050e670272c4db824d29dc6a034"
+      "bytes": 9621,
+      "sha256": "232047c02b4ac40f93ced85110de1c46d08e54890dd06de8c8ba9a8c39a1a76d"
     },
     {
       "path": "game/branded-isolation.mjs",
@@ -4566,8 +4586,8 @@
     },
     {
       "path": "game/company-entry.mjs",
-      "bytes": 1070,
-      "sha256": "5125d741673b587b07f64b035d5cbce801f4d0f5fddf69326602d9b275948338"
+      "bytes": 1114,
+      "sha256": "38e60290b0ccf4ee4b6ca66bf60222a5c8313805b84248ae48732fcfb7a57cf8"
     },
     {
       "path": "game/company-session.mjs",
@@ -4581,8 +4601,8 @@
     },
     {
       "path": "game/company.html",
-      "bytes": 3641,
-      "sha256": "96624625b3982eddf4a532f01e38a73c4164b9e492c7a8e62c43817349414437"
+      "bytes": 4078,
+      "sha256": "d8ea1178f410b4a20115db1011e47c8c52bd288f3c690332f0ffe6bab742ad1e"
     },
     {
       "path": "game/content-design/actor-marker.mjs",
@@ -5761,8 +5781,8 @@
     },
     {
       "path": "game/index.html",
-      "bytes": 117666,
-      "sha256": "5194747f3c876c1f134d7c669d2b13152011500b20a172228405686a0143afca"
+      "bytes": 118121,
+      "sha256": "bb78cd9055692f62615445e8ee61f200ac46cd6da3a1885c330e77410c83c70f"
     },
     {
       "path": "game/input-presentation.mjs",
@@ -7786,13 +7806,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 751,
-      "sha256": "25e9adbb89e17cfbcd4ae1c26e05d6e99f8812d38bb77b0dab8ede94b02940bc"
+      "bytes": 1240,
+      "sha256": "46b3a0849057d4b5471bbd67b820d2800c957dac9548ee2c0d235c5b4ea9aba0"
     },
     {
       "path": "runtime-dependencies.json",
-      "bytes": 6441,
-      "sha256": "1135f3058a1070ceecfc9d51e595b8ed56f94f1543d064be124946516c12ee16"
+      "bytes": 6497,
+      "sha256": "faf15797f11f8a0b2f8a6996e28ee45a3907fc03df07f205a70f89ef1f118d1b"
     }
   ]
 }

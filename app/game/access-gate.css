@@ -1,0 +1,95 @@
+html[data-access-state='locked'] body > :not(#access-gate):not(script),
+html[data-access-state='checking'] body > :not(#access-gate):not(script) {
+  display: none !important;
+}
+
+html[data-access-state='unlocked'] #access-gate {
+  display: none !important;
+}
+
+.access-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow: auto;
+  background: #070914;
+  color: #edf2ff;
+  font: 17px/1.5 'Field Kit UI', system-ui, sans-serif;
+}
+
+.access-gate-card {
+  width: min(100%, 440px);
+  box-sizing: border-box;
+  padding: 28px;
+  border: 2px solid #425563;
+  background: #101923;
+  box-shadow: 12px 12px 0 rgb(0 0 0 / 35%);
+}
+
+.access-gate-card h1 {
+  margin: 4px 0 12px;
+  font-size: clamp(2rem, 8vw, 3.4rem);
+  line-height: 0.95;
+}
+
+.access-gate-eyebrow {
+  margin: 0;
+  color: #78dce8;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.access-gate-card label {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+  font-weight: 700;
+}
+
+.access-gate-card input,
+.access-gate-card button {
+  min-height: 48px;
+  box-sizing: border-box;
+  border: 2px solid #78dce8;
+  border-radius: 0;
+  font: inherit;
+}
+
+.access-gate-card input {
+  width: 100%;
+  padding: 8px 12px;
+  background: #070914;
+  color: #fff;
+}
+
+.access-gate-card button {
+  margin-top: 16px;
+  padding: 8px 20px;
+  background: #78dce8;
+  color: #071018;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.access-gate-card button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.access-gate-card :focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.access-gate-status {
+  min-height: 1.5em;
+  margin-bottom: 0;
+  color: #ffcf66;
+}
