@@ -203,6 +203,8 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     "brand.config.json",
     "scripts/isolate-brand.mjs",
     "scripts/sync-upstream.mjs",
+    "branding/access-gate.css",
+    "branding/access-gate.mjs",
     "branding/coupa-landing.css",
     "branding/coupa-landing.html",
   ])

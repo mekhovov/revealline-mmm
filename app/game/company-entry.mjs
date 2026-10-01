@@ -17,6 +17,7 @@ export function companyEntryHref(href, compiledEdition) {
   return target.href;
 }
 if (globalThis.document && globalThis.location) {
+  await globalThis.RevealLineAccess?.ready;
   translateDOM(document);
   attachLanguageControls(document);
   const href = companyEntryHref(location.href, document.documentElement.dataset.editionId);

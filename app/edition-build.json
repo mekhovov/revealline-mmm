@@ -23,6 +23,16 @@
       "sha256": "6b09434a08e26d5eeb20729db7929e87ca3a667041a9143be2ba90620a55c7d0"
     },
     {
+      "path": "game/access-gate.css",
+      "bytes": 1763,
+      "sha256": "a275bd057f78c6a5bf8f0747485aac01532ef0d2f807db7ac31e9f4561336160"
+    },
+    {
+      "path": "game/access-gate.mjs",
+      "bytes": 4718,
+      "sha256": "cf38c8fc0504ef02ff51bba93992971142affc19de820d7a0a99a3c6a1310be3"
+    },
+    {
       "path": "game/actor-style-preferences.mjs",
       "bytes": 5249,
       "sha256": "dfbee4df7247dc9e38cd7bb809ecfa2617c549c615c2d6756f1c7dece3a7c9e8"
@@ -79,8 +89,8 @@
     },
     {
       "path": "game/boot.mjs",
-      "bytes": 9544,
-      "sha256": "208aa35622021179b4e357880b3dea944cf48050e670272c4db824d29dc6a034"
+      "bytes": 9621,
+      "sha256": "232047c02b4ac40f93ced85110de1c46d08e54890dd06de8c8ba9a8c39a1a76d"
     },
     {
       "path": "game/branded-isolation.mjs",
@@ -169,8 +179,8 @@
     },
     {
       "path": "game/company-entry.mjs",
-      "bytes": 1070,
-      "sha256": "5125d741673b587b07f64b035d5cbce801f4d0f5fddf69326602d9b275948338"
+      "bytes": 1114,
+      "sha256": "38e60290b0ccf4ee4b6ca66bf60222a5c8313805b84248ae48732fcfb7a57cf8"
     },
     {
       "path": "game/company-session.mjs",
@@ -184,8 +194,8 @@
     },
     {
       "path": "game/company.html",
-      "bytes": 3641,
-      "sha256": "96624625b3982eddf4a532f01e38a73c4164b9e492c7a8e62c43817349414437"
+      "bytes": 4078,
+      "sha256": "d8ea1178f410b4a20115db1011e47c8c52bd288f3c690332f0ffe6bab742ad1e"
     },
     {
       "path": "game/content-design/actor-marker.mjs",
@@ -1364,8 +1374,8 @@
     },
     {
       "path": "game/index.html",
-      "bytes": 117666,
-      "sha256": "5194747f3c876c1f134d7c669d2b13152011500b20a172228405686a0143afca"
+      "bytes": 118121,
+      "sha256": "bb78cd9055692f62615445e8ee61f200ac46cd6da3a1885c330e77410c83c70f"
     },
     {
       "path": "game/input-presentation.mjs",
@@ -3389,13 +3399,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 751,
-      "sha256": "25e9adbb89e17cfbcd4ae1c26e05d6e99f8812d38bb77b0dab8ede94b02940bc"
+      "bytes": 1240,
+      "sha256": "46b3a0849057d4b5471bbd67b820d2800c957dac9548ee2c0d235c5b4ea9aba0"
     },
     {
       "path": "runtime-dependencies.json",
-      "bytes": 6441,
-      "sha256": "1135f3058a1070ceecfc9d51e595b8ed56f94f1543d064be124946516c12ee16"
+      "bytes": 6497,
+      "sha256": "faf15797f11f8a0b2f8a6996e28ee45a3907fc03df07f205a70f89ef1f118d1b"
     }
   ]
 }

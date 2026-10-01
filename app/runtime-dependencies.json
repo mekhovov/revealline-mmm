@@ -121,6 +121,8 @@
     "game/vendor/QRCODEGEN-LICENSE.txt",
     "game/vendor/qrcodegen-1.8.0.json",
     "game/branded-isolation.mjs",
+    "game/access-gate.mjs",
+    "game/access-gate.css",
     "game/ui/coupa-landing.css"
   ]
 }
