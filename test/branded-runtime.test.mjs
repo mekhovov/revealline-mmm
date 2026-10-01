@@ -66,6 +66,48 @@ test('the actual upstream content provider boots all 30 missions under a GitHub 
   assert.ok(['coupa-all', 'coupa'].includes(ownURL.searchParams.get('edition')));
 });
 
+test('both local two-player hosts compile all 30 missions from the isolated Coupa projection', async () => {
+  const previousFetch = globalThis.fetch;
+  globalThis.fetch = async (input) => {
+    const url = new URL(input);
+    const marker = '/app/';
+    const offset = url.pathname.indexOf(marker);
+    assert.notEqual(offset, -1, `Unexpected multiplayer request: ${url}`);
+    const relative = decodeURIComponent(url.pathname.slice(offset + marker.length));
+    try {
+      return new Response(await readFile(path.join(appRoot, relative)), { status: 200 });
+    } catch (error) {
+      if (error.code === 'ENOENT') return new Response('', { status: 404 });
+      throw error;
+    }
+  };
+  try {
+    const [{ loadAuthoredJourneyRoute }, { createCandidateTeamHost },
+      { createCandidateVersusHost }] = await Promise.all([
+      import('../app/game/editions/standalone/route-loader.mjs'),
+      import('../app/game/content-design/team-host.mjs'),
+      import('../app/game/content-design/versus-host.mjs'),
+    ]);
+    const route = await loadAuthoredJourneyRoute('coupa-all');
+    assert.equal(route.source.missions.length, 30);
+    assert.ok(route.source.missions.every((mission) =>
+      mission.modes.join(',') === 'team,versus' && mission.team?.format === 'TeamMissionV1'));
+    const team = createCandidateTeamHost(route.source, { corePackIds: route.corePackIds });
+    const themes = JSON.parse(await readFile(path.join(appRoot, catalog.editions[0].boot.themes))).themes;
+    const versus = createCandidateVersusHost(route.source, {
+      themes,
+      corePackIds: route.corePackIds,
+      optionalCampaignIds: [],
+    });
+    assert.equal(team.catalog.missions.length, 30);
+    assert.equal(versus.catalog.missions.length, 30);
+    assert.ok(team.catalog.missions.every((mission) => mission.packId.startsWith('coupa-')));
+    assert.ok(versus.catalog.missions.every((mission) => mission.packId.startsWith('coupa-')));
+  } finally {
+    globalThis.fetch = previousFetch;
+  }
+});
+
 test('foreign edition and chapter selectors fail before loading content or assets', async () => {
   const { loadRuntimeContentProvider } = await import('../app/game/runtime-content-provider.mjs');
   for (const query of [

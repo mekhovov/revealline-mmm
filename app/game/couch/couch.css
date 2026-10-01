@@ -1,0 +1,731 @@
+/* Couch owns the viewport. Each arena is complete; touch controls follow it. */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 280px;
+}
+#boot-return {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 14px;
+}
+#boot-return[hidden] {
+  display: none;
+}
+#couch-app {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  --sun: #f3ce78;
+  --sky: #78dfff;
+}
+/* HUD and each seat's content reserve their actual height. Only the arena
+   shares the remaining viewport space; complete bitmaps fit inside that slot. */
+body.race-focus #couch-app {
+  height: 100dvh;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+/* Save recovery lives in the menu, never in a running board's grid row. */
+body.race-focus.candidate-journey #couch-app {
+  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-areas: 'journey' 'hud' 'boards';
+}
+body.candidate-journey #race-journey-controls {
+  grid-area: journey;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px max(14px, env(safe-area-inset-right)) 8px max(14px, env(safe-area-inset-left));
+  background: #091324;
+}
+body.race-focus.candidate-journey #race-journey-controls {
+  position: static;
+}
+/* The lobby and Pause already expose Missions in their owned action stack.
+   Keep continuation shortcuts with the boards/results surface so one action
+   never appears in two competing menu regions. */
+body:not(.race-focus) #race-journey-controls {
+  display: none !important;
+}
+body.candidate-journey #race-journey-save {
+  margin: 0;
+  padding: 8px 14px;
+}
+body.candidate-journey .race-hud {
+  grid-area: hud;
+}
+body.candidate-journey .race-boards {
+  grid-area: boards;
+}
+body.candidate-journey .race-shell {
+  min-height: 0;
+}
+#couch-app [hidden] {
+  display: none !important;
+}
+#couch-app button,
+#couch-app a,
+#couch-app select {
+  min-height: 44px;
+  min-width: 44px;
+}
+#couch-app button,
+#couch-app a {
+  touch-action: manipulation;
+}
+#couch-app a {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: #c8daed;
+}
+#couch-app button:focus-visible,
+#couch-app a:focus-visible,
+#couch-app select:focus-visible,
+#couch-app .controller-focus {
+  outline: 3px solid #8deaff;
+  outline-offset: 3px;
+}
+.sun {
+  color: var(--sun);
+}
+.sky {
+  color: var(--sky);
+}
+.race-shell {
+  min-height: 100dvh;
+  padding: max(24px, env(safe-area-inset-top)) max(22px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(22px, env(safe-area-inset-left));
+  background: radial-gradient(ellipse at 95% 5%, #142743, transparent 65%), #070b18;
+}
+.race-screen,
+#race-preparation,
+#race-presentation-status {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+#race-preparation,
+#race-message {
+  position: sticky;
+  top: max(0px, env(safe-area-inset-top));
+  z-index: 2;
+  background: #070b18;
+}
+.race-screen h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 0.98;
+  margin: 12px 0;
+  max-width: 720px;
+  text-shadow: 3px 3px #203657;
+}
+.race-screen p {
+  max-width: 760px;
+  line-height: 1.35;
+}
+.race-kicker {
+  color: #98b3d4;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.race-summary {
+  color: #a2c7e6;
+  padding-block: 8px;
+  margin-block: 8px;
+  border-block: 1px solid #2b4364;
+}
+.race-seats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+.seat {
+  padding: 12px 18px;
+  border-left: 3px solid currentColor;
+  background: #0b1529;
+  min-width: 0;
+}
+.seat h2 {
+  color: inherit;
+  margin: 2px 0;
+  font-size: 28px;
+}
+.seat > span {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.seat p {
+  margin: 4px 0;
+  font-size: 18px;
+}
+.race-menu-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 18px;
+}
+body[data-couch-status='paused']
+  #race-main
+  > :is(
+    #race-mode-choices,
+    .race-kicker,
+    #race-journey-note,
+    .race-summary,
+    .race-seats,
+    #race-format-note
+  ) {
+  display: none;
+}
+body[data-couch-status='paused'] #race-main {
+  width: min(34rem, 100%);
+}
+body[data-couch-status='paused'] #race-title {
+  margin-top: 0;
+}
+body[data-couch-status='paused'] .race-menu-actions {
+  gap: 8px;
+}
+body[data-couch-status='paused'] .race-menu-actions > #race-start {
+  grid-column: 1 / -1;
+}
+.race-optional-setup {
+  grid-column: 1 / -1;
+  min-width: 0;
+  border: 1px solid #537ca0;
+  background: #0b1529;
+}
+.race-optional-setup > summary {
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: 12px 14px;
+  cursor: pointer;
+  color: #9deeff;
+  font-size: 18px;
+  list-style-position: inside;
+}
+.race-optional-setup > summary:hover {
+  border-color: #9deeff;
+}
+.race-optional-setup[open] > summary {
+  border-bottom: 1px solid #537ca0;
+}
+.race-optional-setup > .race-fields {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  margin: 0;
+  padding: 14px;
+}
+.race-optional-setup #race-focus {
+  min-height: 48px;
+}
+body.unified-missions #race-library-switch {
+  display: none;
+}
+#couch-app .race-menu-actions button,
+#couch-app .race-menu-actions a {
+  text-align: left;
+  padding: 9px 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 24px;
+}
+#couch-app .race-menu-actions .race-primary {
+  grid-column: 1 / -1;
+  background: #142641;
+  border-color: #537ca0;
+  color: #9deeff;
+}
+#couch-app .race-menu-actions button:hover,
+#couch-app .race-menu-actions a:hover {
+  background: #142641;
+  border-color: #537ca0;
+}
+.race-footnote,
+.race-menu-status {
+  color: #91a6c2;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.race-menu-status {
+  width: min(900px, 100%);
+  margin: 18px auto 0;
+}
+.race-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0;
+}
+#race-setup #race-actor-style-status,
+#race-setup #race-journey-preferences-recovery {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.race-more-destinations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-block: 12px 20px;
+}
+.race-secondary-details {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin: 0;
+  border: 1px solid transparent;
+}
+.race-secondary-details > summary {
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 9px 14px;
+  cursor: pointer;
+  font-size: 24px;
+  list-style-position: inside;
+}
+.race-secondary-details > summary:hover,
+.race-secondary-details > summary:focus-visible {
+  border-color: #537ca0;
+  background: #142641;
+}
+#couch-app .race-more-destinations a {
+  justify-content: center;
+  border: 1px solid #537ca0;
+  background: #142641;
+  text-align: center;
+}
+.race-fields label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: #9bb8d4;
+}
+.race-fields select {
+  width: 100%;
+}
+.race-check {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 44px;
+  margin: 10px 0;
+}
+.race-check input {
+  width: 22px;
+  height: 22px;
+}
+#race-options-back,
+#race-help-back,
+#race-setup-back {
+  display: block;
+  margin-top: 24px;
+}
+.race-hud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  padding: max(6px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 6px
+    max(12px, env(safe-area-inset-left));
+  border-bottom: 1px solid #2b4364;
+  background: #080e1e;
+}
+#couch-app .couch-music-credit {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  min-width: 0;
+  font-size: var(--fk-text-secondary, 0.875rem);
+  line-height: 1.4;
+  color: #bdcce0;
+}
+#couch-app .couch-music-credit[hidden] {
+  display: none;
+}
+#couch-app .couch-music-credit span {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#couch-app .couch-music-credit a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 2px 0;
+}
+.race-score {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+}
+#series-score {
+  color: #e9f2ff;
+  font-size: 28px;
+  white-space: nowrap;
+}
+#race-clock {
+  min-width: 64px;
+  text-align: right;
+  color: #d7eaff;
+  font-size: 28px;
+}
+.race-boards {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 12px max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom))
+    max(12px, env(safe-area-inset-left));
+}
+.race-start-cue {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  background: rgb(3 8 18 / 42%);
+}
+.race-start-cue strong {
+  min-width: 2.4ch;
+  padding: 0.15em 0.3em;
+  color: #ffd15c;
+  background: #07101f;
+  border: 3px solid #78dfff;
+  box-shadow: 8px 8px 0 rgb(0 0 0 / 45%);
+  font-family: var(--fk-font-display);
+  font-size: clamp(4rem, 16vmin, 9rem);
+  line-height: 1;
+  text-align: center;
+}
+body[data-effects='reduced'] .race-start-cue strong {
+  box-shadow: none;
+}
+.racer {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(48px, 1fr) auto auto auto auto;
+  --seat-color: var(--sun);
+}
+.racer[data-player='1'] {
+  --seat-color: var(--sky);
+}
+.racer-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+  color: var(--seat-color);
+}
+.racer-heading h2 {
+  font-size: 23px;
+  margin: 0;
+  color: inherit;
+}
+.racer-heading span {
+  font-size: 15px;
+}
+.race-arena {
+  position: relative;
+  display: flex;
+  padding: 0;
+  min-height: 0;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  background: #000;
+  border: 1px solid #344d71;
+}
+.race-arena canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: #000;
+}
+.racer-stats {
+  text-align: center;
+  font-size: 17px;
+  margin: 6px 0;
+}
+.racer-input {
+  text-align: center;
+  font-size: 14px;
+  color: #8ea8c8;
+  margin: 5px 0;
+}
+.racer-capture {
+  margin: 4px 0;
+  color: #aedfff;
+  font-size: 14px;
+  line-height: 1.3;
+}
+.racer-encounter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 5px 8px;
+  color: #aedfff;
+  background: #101f37;
+  font-size: 15px;
+  line-height: 1.2;
+}
+.race-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+.race-cross {
+  display: grid;
+  grid-template-columns: repeat(3, 44px);
+  grid-template-rows: repeat(3, 44px);
+  gap: 2px;
+  flex-shrink: 0;
+}
+.race-cross button {
+  padding: 0;
+  font-size: 27px;
+  touch-action: none !important;
+}
+.race-cross [data-direction='up'] {
+  grid-area: 1 / 2;
+}
+.race-cross [data-direction='left'] {
+  grid-area: 2 / 1;
+}
+.race-cross [data-direction='right'] {
+  grid-area: 2 / 3;
+}
+.race-cross [data-direction='down'] {
+  grid-area: 3 / 2;
+}
+.cross-center {
+  grid-area: 2 / 2;
+  display: grid;
+  place-items: center;
+  color: var(--seat-color);
+  font-size: 21px;
+}
+.race-equipment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 200px;
+}
+.race-equipment button {
+  touch-action: none !important;
+  padding: 6px 9px;
+  font-size: 17px;
+}
+.race-pad button.pressed,
+.race-pad button[aria-pressed='true'] {
+  color: #06101e;
+  background: var(--seat-color);
+}
+@media (max-width: 700px), (max-aspect-ratio: 3/2) {
+  .race-boards {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding-top: 6px;
+  }
+}
+/* Stacked tablet seats have room for a side pad. Keeping its three rows
+   beside the arena gives the picture back the height used by a bottom pad. */
+@media (min-width: 720px) and (max-aspect-ratio: 3/2) {
+  .racer:has(.race-pad:not([hidden])) {
+    grid-template-columns: minmax(0, 1fr) 144px;
+    grid-template-rows: auto minmax(48px, 1fr) auto auto auto;
+    column-gap: 12px;
+  }
+  .racer:has(.race-pad:not([hidden])) > :not(.race-pad) {
+    grid-column: 1;
+  }
+  .racer:has(.race-pad:not([hidden])) .race-pad {
+    grid-column: 2;
+    grid-row: 2 / 5;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+@media (max-width: 700px) {
+  .race-score > span {
+    display: none;
+  }
+  .racer-heading h2 {
+    font-size: 19px;
+  }
+  .racer-stats {
+    font-size: 15px;
+    margin: 3px 0;
+  }
+  .racer-input {
+    display: none;
+  }
+  .race-shell {
+    padding-inline: max(16px, env(safe-area-inset-left)) max(16px, env(safe-area-inset-right));
+  }
+  .race-fields,
+  .race-optional-setup > .race-fields {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .race-menu-actions {
+    grid-template-columns: 1fr;
+  }
+  .race-more-destinations {
+    grid-template-columns: 1fr;
+  }
+  .race-seats {
+    gap: 8px;
+  }
+  .seat {
+    padding: 10px;
+  }
+  .seat h2 {
+    font-size: 23px;
+  }
+}
+@media (max-height: 500px) and (min-width: 701px) {
+  body[data-couch-status='paused'] .race-shell {
+    padding-block: 12px;
+  }
+  body[data-couch-status='paused'] .race-screen h1 {
+    font-size: 32px;
+    margin-block: 4px;
+  }
+  body[data-couch-status='paused'] #race-message {
+    margin-block: 4px 8px;
+  }
+  body[data-couch-status='paused'] .race-menu-actions > * {
+    min-height: 44px;
+  }
+  .race-hud {
+    min-height: 50px;
+  }
+  .racer-input {
+    display: none;
+  }
+  .racer:has(.race-pad:not([hidden])) {
+    grid-template-columns: minmax(0, 1fr) 144px;
+    grid-template-rows: auto minmax(48px, 1fr) auto auto auto;
+    column-gap: 8px;
+  }
+  .racer:has(.race-pad:not([hidden])) > :not(.race-pad) {
+    grid-column: 1;
+  }
+  .racer:has(.race-pad:not([hidden])) .race-pad {
+    grid-column: 2;
+    grid-row: 2 / 5;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .racer[data-player='0']:has(.race-pad:not([hidden])) {
+    grid-template-columns: 144px minmax(0, 1fr);
+  }
+  .racer[data-player='0']:has(.race-pad:not([hidden])) > :not(.race-pad) {
+    grid-column: 2;
+  }
+  .racer[data-player='0']:has(.race-pad:not([hidden])) .race-pad {
+    grid-column: 1;
+  }
+}
+
+#race-help-reading {
+  max-height: 52dvh;
+  overflow: auto;
+  padding: 8px 14px;
+  margin-top: 12px;
+  border: 1px solid #2b4364;
+}
+
+#race-help-unit .reading-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fk-space-2);
+}
+#race-help-unit .reading-hint {
+  margin-block: var(--fk-space-2);
+  color: var(--fk-text);
+}
+
+/* The replacement decision preserves both boards behind the shared browser. */
+.race-chapter-replace {
+  width: min(34rem, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  box-sizing: border-box;
+  overflow: auto;
+  border: var(--fk-border-width) solid var(--fk-line);
+  border-radius: var(--fk-corner);
+  background: var(--fk-panel);
+  color: var(--fk-text);
+  padding: var(--fk-space-6);
+}
+.race-chapter-replace::backdrop {
+  background: rgb(4 10 18 / 85%);
+}
+.race-chapter-replace .race-menu-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fk-space-3);
+}
+.race-chapter-replace button {
+  flex: 1 1 10rem;
+  min-height: var(--fk-target-size);
+  min-width: var(--fk-target-size);
+}
+
+.multiplayer-controllers {
+  border-top: 1px solid currentColor;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.multiplayer-controllers select,
+.multiplayer-controllers input:not([type='checkbox']),
+.multiplayer-controllers textarea {
+  max-width: 100%;
+  min-height: 44px;
+}
+.multiplayer-controllers select,
+.multiplayer-controllers textarea,
+.multiplayer-controllers output {
+  display: block;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+.multiplayer-controllers button {
+  min-height: 44px;
+  margin: 0.25rem;
+}
+.multiplayer-controllers fieldset {
+  min-width: 0;
+}
+.multiplayer-controllers [hidden] {
+  display: none;
+}

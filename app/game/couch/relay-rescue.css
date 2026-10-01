@@ -1,0 +1,1666 @@
+/* Layout only: Field Kit owns the shared typography, palette and controls. */
+:root {
+  color-scheme: dark;
+  --ink: var(--fk-text);
+  --muted: var(--fk-muted);
+  --bg: var(--fk-bg);
+  --panel: var(--fk-panel);
+  --sun: var(--fk-amber);
+  --sky: var(--fk-cyan);
+  --line: var(--fk-line);
+  font-family: var(--fk-font-ui);
+  color: var(--ink);
+  background: var(--bg);
+}
+.setup-note {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+.pack-picker {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+.pack-picker summary {
+  cursor: pointer;
+  padding: 10px 0;
+}
+.pack-picker label {
+  display: block;
+  margin: 8px 0;
+}
+.pack-picker input {
+  max-width: 100%;
+}
+.live-objective {
+  margin: 0 0 12px;
+  color: var(--sun);
+  font-size: 0.85rem;
+}
+.control-card .support-status {
+  color: inherit;
+  font-size: 0.75rem;
+  margin-top: 8px;
+  min-height: 1.7em;
+  line-height: 1.5;
+}
+.control-card .support-status[data-support-role='interceptor']::before {
+  content: 'I · ';
+  color: var(--sky);
+}
+.control-card .support-status[data-support-role='disruptor']::before {
+  content: 'D · ';
+  color: var(--sun);
+}
+.controller-focus {
+  outline: 3px solid var(--sky);
+  outline-offset: 3px;
+}
+.field-kit dialog.team-discovery {
+  width: min(860px, calc(100% - 24px));
+  max-height: calc(100svh - 24px);
+  overflow: auto;
+  color: var(--fk-text);
+  background: var(--fk-panel);
+  padding: 20px;
+  overscroll-behavior: contain;
+}
+.team-discovery::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+.team-discovery-heading,
+.team-discovery-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.team-discovery-heading h2 {
+  margin: 0;
+}
+.team-discovery-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-block: 16px;
+}
+.team-discovery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.team-discovery-filters label {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+.team-discovery-filters :is(input, select) {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 6px;
+}
+.field-kit .team-discovery .team-discovery-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  overflow-wrap: anywhere;
+}
+.team-discovery-card h3,
+.team-discovery-card p {
+  margin: 0;
+}
+.team-discovery-card button {
+  width: 100%;
+  margin-top: auto;
+  white-space: normal;
+}
+.team-mission-optional summary {
+  min-height: 44px;
+  padding-block: 10px;
+  cursor: pointer;
+}
+.team-mission-optional[open] summary {
+  margin-bottom: 8px;
+}
+.field-kit .team-discovery .team-discovery-play {
+  margin-top: auto;
+}
+.field-kit .team-discovery .team-discovery-preview-button {
+  margin-top: 0;
+}
+.field-kit .team-discovery button,
+#coop-discovery-open,
+#coop-discovery-paused {
+  min-height: 44px;
+  min-width: 44px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.field-kit .team-discovery .team-discovery-teaser {
+  margin: 0;
+  min-width: 0;
+  color: var(--fk-text, #f3f0db);
+  background: var(--fk-bg, #070b12);
+  border: var(--fk-border-width, 2px) solid var(--fk-line, #425563);
+}
+.field-kit .team-discovery .team-discovery-thumbnail-frame {
+  width: 100%;
+  max-width: 288px;
+  aspect-ratio: 2 / 1;
+  margin-inline: auto;
+}
+.field-kit .team-discovery .team-discovery-teaser canvas {
+  display: block;
+  width: 100%;
+  max-width: 288px;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  margin-inline: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.field-kit .team-discovery .team-mission-diagram canvas {
+  aspect-ratio: auto;
+}
+.field-kit .team-discovery .team-discovery-teaser-message {
+  margin: 0;
+  padding: 12px;
+  color: var(--fk-text, #f3f0db);
+  font-size: var(--fk-text-secondary, 14px);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.field-kit .team-discovery .team-discovery-full-picture {
+  margin: 16px 0;
+  min-width: 0;
+  color: var(--fk-text, #f3f0db);
+}
+.field-kit #coop-discovery-preview-title {
+  overflow-wrap: anywhere;
+}
+.field-kit #coop-discovery-preview-canvas {
+  display: block;
+  width: min(100%, 1152px, 120svh);
+  max-width: 100%;
+  height: auto;
+  max-height: 60svh;
+  aspect-ratio: 2 / 1;
+  margin-inline: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: var(--fk-bg, #070b12);
+}
+.field-kit .team-discovery .team-discovery-full-picture figcaption {
+  margin-top: 12px;
+  color: var(--fk-muted, #a5b2bb);
+  font-size: var(--fk-text-secondary, 14px);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+/* Full previews reserve space for navigation and text before fitting the artwork.
+   The gallery keeps its scrolling layout; only the picture view owns a viewport. */
+.field-kit dialog.team-discovery[open]:has(#coop-discovery-preview:not([hidden])) {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 8px;
+  height: min(720px, calc(100svh - 24px));
+  box-sizing: border-box;
+  padding: 12px;
+  overflow: auto;
+}
+.field-kit
+  .team-discovery:has(#coop-discovery-preview:not([hidden]))
+  :is(
+    #coop-discovery-description,
+    .team-discovery-filters,
+    .team-discovery-footer,
+    .team-discovery-heading h2
+  ) {
+  display: none;
+}
+.field-kit .team-discovery:has(#coop-discovery-preview:not([hidden])) .team-discovery-heading {
+  justify-content: flex-end;
+}
+.field-kit #coop-discovery-preview:not([hidden]) {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  gap: 8px;
+  min-height: 0;
+  min-width: 0;
+}
+.field-kit #coop-discovery-preview-title {
+  margin: 0;
+  font-size: var(--fk-text-body, 18px);
+  line-height: 1.3;
+}
+.field-kit #coop-discovery-preview .team-discovery-full-picture {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin: 0;
+  min-height: 0;
+}
+.field-kit #coop-discovery-preview #coop-discovery-preview-canvas {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.field-kit #coop-discovery-preview .team-discovery-full-picture figcaption,
+.field-kit #coop-discovery-preview-status {
+  margin: 0;
+}
+/* Keep successful loading announcements available to assistive technology
+   without repeating the visible caption. Errors and procedural notes stay visible. */
+.field-kit
+  #coop-discovery-preview:has(#coop-discovery-preview-canvas:not([hidden]))
+  #coop-discovery-preview-status[data-state='ready'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+/* Tall portrait screens can show the picture at its natural 2:1 size without
+   reserving an entire viewport of empty letterbox space. */
+@media (orientation: portrait) {
+  .field-kit dialog.team-discovery[open]:has(#coop-discovery-preview:not([hidden])) {
+    height: fit-content;
+    grid-template-rows: auto auto;
+    align-content: start;
+  }
+  .field-kit #coop-discovery-preview:not([hidden]) {
+    grid-template-rows: auto auto auto auto;
+  }
+  .field-kit #coop-discovery-preview .team-discovery-full-picture {
+    grid-template-rows: auto auto;
+  }
+  .field-kit #coop-discovery-preview #coop-discovery-preview-canvas {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 2 / 1;
+  }
+}
+/* Author display/grid rules must not expose hidden preview or gallery content. */
+.field-kit .team-discovery [hidden],
+.field-kit .team-discovery canvas[hidden],
+.field-kit #coop-discovery-preview-canvas[hidden] {
+  display: none;
+}
+.team-discovery-footer p {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+@media (max-width: 600px) {
+  .field-kit dialog.team-discovery {
+    padding: 12px;
+  }
+  .team-discovery-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.playing .masthead {
+  min-height: 56px;
+}
+/* During flight, Pause owns the mode exits. Keep the full arena and controls
+   in view at every size; menus and results restore their masthead normally. */
+.playing:has(#coop-overlay[hidden]) .masthead {
+  display: none;
+}
+.playing .controls {
+  padding-top: 8px;
+}
+.playing .control-card {
+  padding: 8px 12px;
+}
+.playing .control-card h2,
+.playing .control-card .support-status {
+  display: none;
+}
+.playing .help-footer {
+  padding-top: 4px;
+}
+.playing .help-footer p {
+  display: none;
+}
+@media (min-width: 761px) {
+  .playing .arena-wrap {
+    width: min(100%, max(240px, calc((100svh - 240px) * 2)));
+    margin-inline: auto;
+  }
+  .playing[data-coop-touch='visible'] .arena-wrap {
+    width: min(100%, max(240px, calc((100svh - 440px) * 2)));
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--fk-bg);
+}
+button,
+select,
+input {
+  font: inherit;
+}
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+select {
+  border: 1px solid var(--line);
+  border-radius: var(--fk-corner);
+  background: #18323c;
+  color: var(--ink);
+  padding: 0.75rem 1rem;
+}
+button {
+  cursor: pointer;
+  font-weight: 650;
+  min-height: 44px;
+}
+button:hover {
+  background: #25434c;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+a {
+  color: var(--muted);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--ink);
+}
+:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 4px;
+}
+[hidden] {
+  display: none !important;
+}
+#coop-app {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 max(12px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom))
+    max(12px, env(safe-area-inset-left));
+}
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 90px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8rem;
+}
+.brand {
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  color: var(--ink);
+}
+.brand span {
+  font-weight: 400;
+  color: var(--sun);
+}
+.mode-label {
+  display: flex;
+  gap: 28px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.mode-label b {
+  font-weight: 500;
+  color: var(--ink);
+}
+.menu {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 8%;
+  padding: clamp(30px, 5vw, 76px) 0 42px;
+}
+.coop-picture-preview {
+  margin: 0 0 20px;
+}
+.coop-preview-frame {
+  position: relative;
+  width: min(100%, 480px);
+  aspect-ratio: 2 / 1;
+  margin-inline: auto;
+  background: var(--fk-bg);
+  border: 1px solid var(--fk-control-line);
+}
+#coop-preview-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+#coop-preview-canvas[hidden],
+#coop-preview-message[hidden] {
+  display: none;
+}
+#coop-preview-message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  margin: 0;
+  padding: 12px;
+  color: var(--fk-muted);
+  text-align: center;
+}
+.coop-picture-preview figcaption {
+  margin-top: 8px;
+  color: var(--fk-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+@media (max-height: 500px) {
+  .coop-preview-frame {
+    width: min(100%, 288px);
+  }
+}
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--sun);
+  font-weight: 700;
+}
+h1 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+  margin: 20px 0;
+}
+h1 em {
+  font-style: normal;
+  color: var(--sun);
+}
+.lead {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 38rem;
+}
+.setup {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.setup label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.field-kit dialog.coop-confirm-dialog {
+  box-sizing: border-box;
+  inset: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  width: min(
+    520px,
+    calc(100vw - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px) - 32px)
+  );
+  max-height: calc(
+    100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 32px
+  );
+  margin: auto;
+  padding: clamp(20px, 4vw, 32px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  color: var(--fk-text);
+  background: var(--fk-panel);
+  border: 2px solid var(--fk-control-line);
+}
+.coop-confirm-dialog h2 {
+  margin-top: 0;
+}
+.coop-confirm-dialog p {
+  overflow-wrap: anywhere;
+  line-height: var(--fk-leading-body);
+}
+.coop-confirm-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+.field-kit .coop-confirm-dialog .coop-confirm-actions button {
+  min-block-size: 50px;
+  width: 100%;
+}
+.primary {
+  background: var(--sun);
+  color: #172426;
+  border-color: var(--sun);
+  padding: 0.9rem 1.5rem;
+}
+.primary:hover {
+  background: #ffe6a3;
+}
+.briefing {
+  border: 1px solid var(--line);
+  border-radius: var(--fk-corner);
+  background: var(--fk-panel);
+  padding: 28px;
+  align-self: center;
+}
+.briefing ol {
+  padding-left: 1.5rem;
+  margin: 28px 0;
+  display: grid;
+  gap: 24px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.briefing li {
+  padding-left: 8px;
+}
+.briefing li::marker {
+  color: var(--sun);
+  font-weight: 700;
+}
+.briefing strong {
+  display: block;
+  color: var(--ink);
+}
+.objective {
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  line-height: 2;
+}
+.objective strong {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+.hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+.identity {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 10px;
+  font-size: 0.8rem;
+}
+.identity .player-number {
+  grid-row: span 3;
+  align-self: center;
+}
+.identity > span:last-child {
+  color: var(--muted);
+}
+.identity .charge-state {
+  grid-column: 2;
+  font-size: 0.7rem;
+}
+.player-number {
+  display: inline-grid;
+  place-items: center;
+  font-weight: 750;
+  width: 30px;
+  height: 30px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+.sunflower {
+  color: var(--sun);
+}
+.skyline {
+  color: var(--sky);
+}
+.team-status {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 3px 12px;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.team-status > strong {
+  grid-column: 2;
+  grid-row: span 2;
+  font-size: 2rem;
+  letter-spacing: -0.07em;
+  color: var(--ink);
+}
+progress {
+  width: 100%;
+  height: 4px;
+  grid-column: span 2;
+  border: 0;
+  border-radius: 3px;
+  accent-color: var(--sun);
+}
+progress::-webkit-progress-bar {
+  background: var(--line);
+}
+progress::-webkit-progress-value {
+  background: var(--sun);
+}
+.arena-wrap {
+  position: relative;
+  border: var(--fk-border-width) solid var(--fk-line);
+  border-radius: var(--fk-corner);
+  overflow: hidden;
+  background: var(--fk-bg);
+}
+#coop-cue-overflow {
+  inline-size: 100%;
+  min-inline-size: 0;
+  max-inline-size: 32rem;
+  margin-inline: auto;
+}
+#coop-cue-overflow #coop-field-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  inline-size: 100%;
+  min-block-size: 44px;
+  min-inline-size: 44px;
+  padding: 2px 4px;
+  font-size: var(--handheld-label, 14px);
+  line-height: 1.1;
+}
+#coop-cue-summary {
+  display: block;
+  inline-size: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+}
+#coop-pause-core #coop-cue-summary {
+  display: none;
+}
+#coop-field-details-list {
+  padding-inline-start: 1.4em;
+  overflow-wrap: anywhere;
+}
+#coop-field-details-list li + li {
+  margin-block-start: 0.6em;
+}
+.coop-cue-announcement {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2/1;
+}
+.board-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  min-height: 66px;
+  font-size: 0.8rem;
+}
+#coop-app .couch-music-credit {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  min-width: 0;
+  font-size: var(--fk-text-secondary, 0.875rem);
+  line-height: 1.4;
+  color: var(--muted);
+}
+#coop-app .couch-music-credit[hidden] {
+  display: none;
+}
+#coop-app .couch-music-credit span {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#coop-app .couch-music-credit a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 2px 0;
+}
+.board-footer p {
+  flex: 1;
+  color: var(--muted);
+}
+#coop-message[data-coach] {
+  border-inline-start: 3px solid var(--sun);
+  padding-inline-start: 10px;
+  color: var(--ink);
+}
+#coop-message[data-coach='support'] {
+  border-inline-start-color: var(--sky);
+}
+#coop-clock {
+  font-variant-numeric: tabular-nums;
+}
+.board-footer button {
+  padding: 0.5rem 0.8rem;
+  min-height: 36px;
+}
+.overlay {
+  position: fixed;
+  inset: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) auto
+    max(12px, env(safe-area-inset-left));
+  z-index: 2;
+  display: block;
+  max-width: 672px;
+  max-height: calc(
+    100svh - max(12px, env(safe-area-inset-top)) - max(12px, env(safe-area-inset-bottom))
+  );
+  margin-inline: auto;
+  border: var(--fk-border-width) solid var(--fk-line);
+  background: var(--fk-panel);
+  backdrop-filter: none;
+  padding: 16px;
+  overflow: auto;
+  /* Keep the shared 7px focus ring inside this bounded scroller. */
+  scroll-padding: 8px;
+  overscroll-behavior: contain;
+}
+.overlay-card {
+  text-align: center;
+  width: min(100%, 640px);
+  margin-inline: auto;
+}
+.overlay-card h2 {
+  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  letter-spacing: -0.04em;
+  margin: 14px 0;
+}
+.overlay-card > p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+.overlay-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+#coop-victory-story {
+  margin-block: 14px;
+  padding: 12px;
+  border: 1px solid var(--fk-line);
+}
+#coop-victory-story-video {
+  display: block;
+  width: min(100%, 560px);
+  max-height: min(42dvh, 315px);
+  margin: 10px auto 0;
+  background: #02050a;
+  object-fit: contain;
+}
+#coop-victory-story-video[hidden] {
+  display: none;
+}
+#coop-victory-story .overlay-actions {
+  margin-top: 10px;
+}
+/* The return action has its own row: nothing covers the earned original.
+   The canvas remains a complete 2:1 frame, including in short landscape. */
+.field-kit #coop-earned-picture {
+  box-sizing: border-box;
+  inset: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  width: calc(100vw - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px) - 32px);
+  max-width: 1440px;
+  height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 32px);
+  max-height: calc(
+    100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 32px
+  );
+  margin: auto;
+  padding: 16px;
+  color: var(--ink);
+  background: var(--bg);
+  border: var(--fk-border-width) solid var(--fk-line);
+  overflow: auto;
+  scroll-padding: 8px;
+}
+#coop-earned-picture[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 12px;
+}
+#coop-earned-picture::backdrop {
+  background: #02050a;
+}
+.earned-picture-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.earned-picture-header h2 {
+  min-width: 0;
+  margin: 0;
+  font-size: var(--fk-text-body);
+  overflow-wrap: anywhere;
+}
+#coop-earned-picture-canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.field-kit #coop-pause-modes {
+  margin-block-start: var(--fk-space-4, 16px);
+}
+.coop-mode-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-block: 14px;
+}
+.field-kit .coop-mode-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 50px;
+  max-inline-size: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--fk-corner);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+.control-card {
+  background: #11273190;
+  border: 1px solid var(--line);
+  border-radius: var(--fk-corner);
+  padding: 16px 20px;
+}
+.control-card h2 {
+  font-size: 1rem;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.control-card p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--muted);
+  line-height: 2.3;
+}
+kbd {
+  display: inline-block;
+  border: 1px solid #3c555c;
+  border-bottom-width: 3px;
+  border-radius: 4px;
+  padding: 0 5px;
+  line-height: 1.7;
+  margin-right: 3px;
+  font: inherit;
+  color: var(--ink);
+}
+.control-card p > span {
+  margin: 0 8px;
+}
+.race-pad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.race-cross {
+  display: grid;
+  grid-template-columns: repeat(3, var(--fk-target-size));
+  grid-template-rows: repeat(3, var(--fk-target-size));
+  grid-template-areas: '. up .' 'left center right' '. down .';
+  gap: 4px;
+  grid-column: 1 / -1;
+  justify-content: center;
+}
+.race-cross [data-direction='up'] {
+  grid-area: up;
+}
+.race-cross [data-direction='left'] {
+  grid-area: left;
+}
+.race-cross [data-direction='right'] {
+  grid-area: right;
+}
+.race-cross [data-direction='down'] {
+  grid-area: down;
+}
+.cross-center {
+  grid-area: center;
+  display: grid;
+  place-items: center;
+  font-family: var(--fk-font-mono);
+  color: currentColor;
+}
+.race-pad button {
+  touch-action: none;
+  user-select: none;
+  min-width: 44px;
+}
+.race-pad .pressed {
+  background: var(--sun);
+  color: #0b1a24;
+}
+.skyline .race-pad .pressed {
+  background: var(--sky);
+}
+.help-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  padding-top: 14px;
+}
+.help-footer p {
+  width: 100%;
+  margin: 0;
+  line-height: 1.6;
+}
+.help-footer label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+}
+#coop-boot {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+@media (max-width: 760px) {
+  .mode-label {
+    display: none;
+  }
+  .masthead {
+    min-height: 64px;
+  }
+  .menu {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .briefing {
+    padding: 20px;
+  }
+  .briefing ol {
+    gap: 14px;
+  }
+  .controls {
+    gap: 10px;
+  }
+  .control-card {
+    padding: 12px;
+  }
+  .identity strong {
+    font-size: 0.66rem;
+  }
+  .hud {
+    gap: 8px;
+  }
+  .identity {
+    gap: 2px 5px;
+  }
+  .identity .player-number {
+    width: 24px;
+    height: 24px;
+  }
+  .team-status {
+    font-size: 0.6rem;
+    gap: 2px 6px;
+  }
+  .team-status > strong {
+    font-size: 1.5rem;
+  }
+  .help-footer {
+    font-size: 0.7rem;
+  }
+  .overlay-card > p {
+    font-size: 0.8rem;
+  }
+  .overlay-actions {
+    margin-top: 10px;
+  }
+  .overlay-actions button {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .overlay-card .eyebrow {
+    display: none;
+  }
+  .overlay-card h2 {
+    margin: 0;
+  }
+  .control-card p > span {
+    margin: 0 3px;
+  }
+  .race-pad {
+    gap: 6px;
+  }
+  .overlay-card > p {
+    margin: 8px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+  .overlay {
+    backdrop-filter: none;
+  }
+}
+
+/* Mirror the system preference when players explicitly enable Reduced effects.
+   Gameplay-state cues remain rendered; this only removes decorative DOM motion
+   and the overlay filter from the shared Versus/Team host. */
+body[data-effects='reduced'] *,
+body[data-effects='reduced'] *::before,
+body[data-effects='reduced'] *::after {
+  scroll-behavior: auto !important;
+  transition: none !important;
+  animation: none !important;
+}
+body[data-effects='reduced'] .overlay {
+  backdrop-filter: none;
+}
+
+/* Live controls contain only the actual touch targets. Desktop help lives in
+   the shared lobby/pause disclosures, never beneath a running arena. */
+.controls {
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 8px;
+  padding-top: 8px;
+}
+.playing .control-card {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.control-card[data-touch-visible='false'] {
+  visibility: hidden;
+}
+.race-pad {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(var(--fk-target-size), 1fr));
+  gap: 4px;
+  margin: 0 auto;
+  width: 140px;
+}
+.field-kit .race-pad button {
+  min-width: var(--fk-target-size);
+  min-height: var(--fk-target-size);
+  padding: var(--fk-space-1);
+  font-size: var(--fk-text-secondary);
+}
+.field-kit .race-pad .pressed {
+  color: var(--fk-on-accent);
+  background: var(--sun);
+  border-color: currentColor;
+}
+.field-kit .skyline .race-pad .pressed {
+  background: var(--sky);
+}
+.coop-tools {
+  margin-top: var(--fk-space-4);
+  text-align: left;
+}
+.coop-more-destinations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.coop-more-destinations > * {
+  justify-content: center;
+  min-width: 0;
+  min-height: var(--fk-target-size);
+  padding: 8px 12px;
+  border: 1px solid var(--fk-control-line);
+  background: var(--fk-panel);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.coop-more-destinations {
+  margin-block: 8px;
+}
+.coop-tools details,
+.coop-pause-core details {
+  border-top: 1px solid var(--fk-line);
+  padding-block: var(--fk-space-2);
+}
+.coop-tools summary,
+.coop-pause-core summary {
+  cursor: pointer;
+  display: list-item;
+  padding: var(--fk-space-2);
+}
+.coop-pause-core {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.coop-pause-core > * {
+  min-width: 0;
+  min-height: var(--fk-target-size);
+}
+.coop-pause-core > #coop-help {
+  grid-column: 1 / -1;
+  padding: 0;
+}
+.coop-pause-core > #coop-help[open] {
+  padding-bottom: var(--fk-space-2);
+}
+.coop-tools label,
+.coop-tools select,
+#coop-options label,
+#coop-options select,
+#coop-pads {
+  display: block;
+  margin-block: var(--fk-space-2);
+}
+#coop-help-reading {
+  max-height: 38svh;
+  overflow: auto;
+  padding: var(--fk-space-2);
+}
+#coop-help-reading p {
+  margin: 0 0 var(--fk-space-3);
+}
+#coop-help-reading:focus-visible {
+  outline: 3px solid var(--fk-focus);
+  outline-offset: -3px;
+}
+#coop-clock,
+.team-status > strong {
+  font-family: var(--fk-font-mono);
+}
+@media (max-width: 319px) {
+  .controls {
+    grid-template-columns: minmax(140px, 1fr);
+  }
+  .control-card[data-touch-visible='false'] {
+    display: none;
+  }
+}
+
+.masthead a,
+#coop-catalogue {
+  display: flex;
+  align-items: center;
+  min-height: var(--fk-target-size);
+}
+#coop-quick-sound {
+  min-height: var(--fk-target-size);
+}
+
+/* Short landscape gives each touch player a gutter beside the whole arena.
+   The existing wrappers and DOM order remain intact for menus and pause. */
+@media (orientation: landscape) and (min-width: 640px) and (max-height: 500px) {
+  .playing[data-coop-touch='visible'] #coop-app {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr) 140px;
+    grid-template-rows: auto auto minmax(188px, 1fr) auto;
+    gap: 4px 12px;
+    height: 100svh;
+    max-width: none;
+    padding-block: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-bottom));
+  }
+  .playing[data-coop-touch='visible'] #coop-play,
+  .playing[data-coop-touch='visible'] #coop-controls {
+    display: contents;
+  }
+  .playing[data-coop-touch='visible'] .hud {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding: 0;
+    gap: 8px;
+  }
+  .playing[data-coop-touch='visible'] .live-objective {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+    font-size: var(--fk-text-secondary);
+    line-height: 1.3;
+  }
+  .playing[data-coop-touch='visible'] .arena-wrap {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    width: 100%;
+    max-width: calc(
+      (
+          100svh - max(12px, env(safe-area-inset-top)) - max(12px, env(safe-area-inset-bottom)) -
+            144px
+        ) *
+        2
+    );
+    margin: 0 auto;
+  }
+  .playing[data-coop-touch='visible'] .control-card {
+    grid-row: 3;
+    align-self: center;
+    min-width: 0;
+  }
+  .playing[data-coop-touch='visible'] .control-card:first-child {
+    grid-column: 1;
+  }
+  .playing[data-coop-touch='visible'] .control-card:last-child {
+    grid-column: 3;
+  }
+  .playing[data-coop-touch='visible'] .board-footer {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    min-height: var(--fk-target-size);
+    gap: 8px;
+  }
+  .playing[data-coop-touch='visible'] .board-footer p {
+    margin: 0;
+    font-size: var(--fk-text-secondary);
+    line-height: 1.3;
+  }
+}
+
+/* Shared display roles enlarge text without changing either player's geometry. */
+.field-kit[data-field-kit-page='relay-rescue']
+  :is(.identity, .identity strong, .identity > span, .team-status, .masthead, .eyebrow) {
+  font-size: var(--fk-text-secondary);
+  line-height: 1.35;
+}
+.field-kit[data-field-kit-page='relay-rescue'] :is(.team-status > strong, #coop-clock) {
+  font-family: var(--fk-font-mono);
+  font-size: var(--fk-text-counter);
+}
+.field-kit[data-field-kit-page='relay-rescue'] :is(.mode-label, .team-status) {
+  letter-spacing: normal;
+}
+.field-kit[data-field-kit-page='relay-rescue'] .identity {
+  min-width: 0;
+}
+.field-kit[data-field-kit-page='relay-rescue'] .identity strong {
+  overflow-wrap: anywhere;
+}
+
+/* Give each partner a readable half-row before the shared territory summary.
+   The HUD contains no controls; input order and the arena stay unchanged. */
+@media (max-width: 600px) {
+  .field-kit[data-field-kit-page='relay-rescue'] .hud {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: 'one two' 'team team';
+    align-items: start;
+    gap: 12px;
+    padding-block: 12px;
+  }
+  .field-kit[data-field-kit-page='relay-rescue'] .hud > .sunflower {
+    grid-area: one;
+  }
+  .field-kit[data-field-kit-page='relay-rescue'] .hud > .skyline {
+    grid-area: two;
+  }
+  .field-kit[data-field-kit-page='relay-rescue'] .hud .player-number {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .field-kit[data-field-kit-page='relay-rescue'] .hud .identity strong {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .field-kit[data-field-kit-page='relay-rescue'] .hud .identity > span:not(.player-number) {
+    grid-column: 1 / -1;
+  }
+  .field-kit[data-field-kit-page='relay-rescue'] .hud > .team-status {
+    grid-area: team;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    padding-top: 8px;
+    border-top: 1px solid var(--fk-line);
+  }
+}
+
+/* Picture controls share the movable lobby/pause tools and their current root. */
+.coop-picture {
+  min-inline-size: 0;
+}
+.coop-picture p {
+  overflow-wrap: anywhere;
+}
+.coop-picture-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.coop-picture-actions button {
+  min-block-size: 50px;
+}
+
+#coop-help-unit .reading-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fk-space-2);
+}
+#coop-help-unit .reading-hint {
+  margin-block: var(--fk-space-2);
+  color: var(--fk-text);
+}
+
+/* Running landscape arenas reserve actual text and complete controls first.
+   Wide touch layouts share this fit: large pads include Boost and Support,
+   without a fixed chrome-height estimate, stretched bitmap or hidden status. */
+@media (orientation: landscape) {
+  body.playing:has(#coop-overlay[hidden]) #coop-app {
+    --coop-touch-column: 156px;
+  }
+  body.playing:has(#coop-overlay[hidden]) #coop-app:has(.race-pad[data-touch-size='large']) {
+    --coop-touch-column: 192px;
+  }
+  body.playing:has(#coop-overlay[hidden]) #coop-app {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    gap: 4px 8px;
+    block-size: 100svh;
+    max-inline-size: none;
+    padding-block: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-bottom));
+  }
+  body.playing:has(#coop-overlay[hidden]) :is(#coop-play, #coop-controls) {
+    display: contents;
+  }
+  body.playing:has(#coop-overlay[hidden]) .hud {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: 'one team two';
+    align-items: start;
+    gap: 8px;
+    padding: 0;
+  }
+  body.playing:has(#coop-overlay[hidden]) .hud > .sunflower {
+    grid-area: one;
+  }
+  body.playing:has(#coop-overlay[hidden]) .hud > .skyline {
+    grid-area: two;
+    justify-self: end;
+  }
+  body.playing:has(#coop-overlay[hidden]) .hud > .team-status {
+    grid-area: team;
+    padding: 0;
+    border: 0;
+  }
+  body.playing:has(#coop-overlay[hidden]) .live-objective {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+    font-size: var(--fk-text-secondary);
+    line-height: 1.3;
+  }
+  body.playing:has(#coop-overlay[hidden]) .coop-board-slot {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    place-items: center;
+    min-inline-size: 0;
+    min-block-size: 0;
+    padding: var(--fk-border-width);
+  }
+  body.playing:has(#coop-overlay[hidden]) .coop-board-slot > .arena-wrap {
+    display: contents;
+  }
+  body.playing:has(#coop-overlay[hidden]) #coop-canvas {
+    /* Replaced-element intrinsic sizing keeps the drawable box exactly 2:1.
+       The slot reserves the decorative frame; it never stretches the canvas. */
+    inline-size: auto;
+    block-size: auto;
+    max-inline-size: 100%;
+    max-block-size: 100%;
+    aspect-ratio: auto;
+    object-fit: contain;
+    box-shadow: 0 0 0 var(--fk-border-width) var(--fk-line);
+  }
+  body.playing:has(#coop-overlay[hidden]) .board-footer {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    gap: 8px;
+    min-block-size: var(--fk-target-size);
+    min-inline-size: 0;
+  }
+  body.playing:has(#coop-overlay[hidden]) .board-footer p {
+    min-inline-size: 0;
+    margin: 0;
+    font-size: var(--fk-text-secondary);
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+  body.playing:has(#coop-overlay[hidden]) .board-footer button {
+    min-block-size: var(--fk-target-size);
+    padding: var(--fk-space-1) var(--fk-space-2);
+  }
+  body.playing[data-coop-touch='visible']:has(#coop-overlay[hidden]) #coop-app {
+    grid-template-columns: var(--coop-touch-column) minmax(0, 1fr) var(--coop-touch-column);
+  }
+  body.playing[data-coop-touch='visible']:has(#coop-overlay[hidden]) .coop-board-slot {
+    grid-column: 2;
+  }
+  body.playing:has(#coop-overlay[hidden]) .control-card {
+    grid-row: 3;
+    align-self: center;
+    min-inline-size: 0;
+  }
+  body.playing:has(#coop-overlay[hidden]) .control-card:first-child {
+    grid-column: 1;
+  }
+  body.playing:has(#coop-overlay[hidden]) .control-card:last-child {
+    grid-column: 3;
+  }
+  body.playing:has(#coop-overlay[hidden]) .control-card[data-touch-visible='false'] {
+    display: none;
+  }
+  body.playing[data-coop-touch='visible']:has(#coop-overlay[hidden])
+    #coop-app:has(.control-card:first-child[data-touch-visible='false']) {
+    grid-template-columns: minmax(0, 1fr) var(--coop-touch-column);
+  }
+  body.playing[data-coop-touch='visible']:has(#coop-overlay[hidden])
+    #coop-app:has(.control-card:first-child[data-touch-visible='false'])
+    .coop-board-slot {
+    grid-column: 1;
+  }
+  body.playing[data-coop-touch='visible']:has(#coop-overlay[hidden])
+    #coop-app:has(.control-card:first-child[data-touch-visible='false'])
+    .control-card:last-child {
+    grid-column: 2;
+  }
+  body.playing[data-coop-touch='visible']:has(#coop-overlay[hidden])
+    #coop-app:has(.control-card:last-child[data-touch-visible='false']) {
+    grid-template-columns: var(--coop-touch-column) minmax(0, 1fr);
+  }
+}
+
+/* Keep arena and Start together; full guidance remains in the existing reading panel. */
+.field-kit #coop-menu {
+  display: block;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding: 16px 0 24px;
+}
+#coop-menu .menu-copy {
+  min-width: 0;
+}
+#coop-menu #coop-title {
+  font-size: var(--fk-text-display);
+  line-height: 1.15;
+  margin: 8px 0;
+}
+#coop-menu :is(.eyebrow, .lead, #coop-boot) {
+  margin-block: 8px;
+}
+#coop-menu .lead {
+  max-width: none;
+}
+#coop-menu .setup {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-block: 14px;
+}
+#coop-menu .setup :is(label, select) {
+  min-width: 0;
+  width: 100%;
+}
+#coop-menu .coop-arena-choice {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 480px;
+}
+#coop-menu .optional-setup {
+  margin-top: 14px;
+  border: 1px solid var(--fk-control-line);
+  background: var(--fk-panel);
+}
+#coop-menu .optional-setup > summary {
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: 12px 14px;
+  cursor: pointer;
+  color: var(--fk-text);
+  font-size: var(--fk-text-body);
+}
+#coop-menu .optional-setup[open] > summary {
+  border-bottom: 1px solid var(--fk-control-line);
+}
+#coop-menu .optional-setup > :not(summary) {
+  margin-inline: 14px;
+}
+#coop-menu .optional-setup > .pack-picker {
+  margin-block: 0 14px;
+}
+.coop-launch-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+#coop-menu .coop-picture-preview {
+  margin: 0;
+}
+#coop-menu .coop-preview-frame {
+  width: 100%;
+  max-width: 480px;
+}
+.coop-launch-actions {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+.coop-launch-actions > button {
+  width: 100%;
+}
+.coop-launch-actions .objective {
+  margin: 0;
+  padding: 0 0 8px;
+  border-top: 0;
+}
+.coop-launch-actions .objective strong {
+  display: block;
+}
+.coop-launch-actions .pack-picker {
+  margin-top: 0;
+}
+/* The lobby's shared mode selector is the single mode-switching owner. */
+body:not(.playing) .masthead :is(.mode-label, #coop-race) {
+  display: none;
+}
+#coop-lobby-tools .coop-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 8px;
+  margin-top: 12px;
+}
+#coop-lobby-tools .coop-picture {
+  flex-basis: 100%;
+}
+#coop-lobby-tools .coop-picture p {
+  margin-block: 0 6px;
+  font-size: var(--fk-text-secondary);
+}
+#coop-lobby-tools #coop-help {
+  border-top: 0;
+  padding: 0;
+}
+#coop-lobby-tools #coop-help[open] {
+  flex-basis: 100%;
+}
+#coop-lobby-tools #coop-more {
+  flex-basis: 100%;
+}
+#coop-lobby-tools #coop-catalogue {
+  display: none;
+}
+#coop-lobby-tools :is(#coop-settings-open, #coop-quick-sound) {
+  flex: 1 1 10rem;
+}
+/* More stays collapsed below the direct Pause actions. */
+#coop-help-reading .briefing {
+  border: 0;
+  background: none;
+  padding: 0;
+}
+#coop-help-reading .briefing ol {
+  margin-block: 12px;
+  gap: 12px;
+}
+@media (max-width: 680px) {
+  #coop-menu .setup {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .coop-launch-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .coop-more-destinations {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #coop-menu .coop-preview-frame {
+    max-width: 360px;
+  }
+}

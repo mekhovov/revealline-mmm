@@ -1,0 +1,544 @@
+<!DOCTYPE html><html data-access-state="locked" lang="en" data-build-version="__REVEALLINE_VERSION__" data-tool-state="loading" data-branded-app="revealline-mmm"><head><meta name="revealline-access-id" content="revealline-mmm"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="../access-gate.css"><script src="../access-gate.mjs" defer></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../i18n/style.css">
+    <script src="../vendor/i18next-26.4.2.min.js"></script>
+    <script src="../i18n/catalogs.mjs"></script>
+    <script src="../i18n/bootstrap.mjs"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title data-i18n="interface:couchRaceRevealLine">Couch race · FPV / LINE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../ui/game-shell.css">
+    <link rel="stylesheet" href="../ui/pixel-theme.css">
+    <link rel="stylesheet" href="couch.css">
+    <link rel="stylesheet" href="../ui/field-kit-fonts.css">
+    <link rel="stylesheet" href="../ui/field-kit-tokens.css">
+    <link rel="stylesheet" href="../ui/field-kit-components.css">
+    <link rel="stylesheet" href="../ui/field-kit-surfaces.css">
+    <link rel="stylesheet" href="../ui/settings.css">
+    <link rel="stylesheet" href="../ui/field-kit-compiled.css">
+    <script type="module" src="../ui/field-kit-surfaces.mjs"></script>
+    <link rel="stylesheet" href="../ui/operation-status.css">
+    <link rel="stylesheet" href="../ui/optional-chapters-panel.css">
+    <link rel="stylesheet" href="../ui/mode-choice.css">
+    <link rel="stylesheet" href="../ui/menu-appearance.css">
+    <link rel="stylesheet" href="../ui/journey.css">
+    <link rel="stylesheet" href="../ui/handheld-play.css">
+    <link rel="stylesheet" href="../ui/journey-save-cue.css">
+    <link rel="stylesheet" href="../ui/quick-music-controls.css">
+    <link rel="stylesheet" href="../ui/menu-scenes.css">
+    <link rel="stylesheet" href="../ui/native-menu.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../editions/assets/coupa/icon-512.png">
+  <style>#shell-home-fpv,#shell-home-practice,#shell-optional-practice,#shell-controller-lab,#shell-replay-theater,#shell-release-explorer,#shell-catalogue,#shell-guide,#shell-asset-studio,#shell-playground,#shell-enemy-catalog,#shell-motion-lab,#shell-still-media,#shell-video-poster,#shell-design-atlas,#creator-tools,#native-diagnostics,#shell-offline,#settings-offline,#offline-button,#first-flight-help-enter,#first-flight-enter,#first-flight-entry,#library-packs,#library-saves,#pack-file,#pack-json,#install-pack,#save-file,#save-json,#import-save,#undo-library,#undo-backup,#shell-workshop,#settings-tab-content,#settings-panel-content,#settings-saves,#soundtrack-open,#race-library-switch,#coop-catalogue,#coop-more-catalogue,[data-library-panel="packs"],[data-library-panel="saves"],[data-release-explorer],[data-source-only],.workshop-tools,.edition-offline,.optional-practice-dialog,[data-branded-unavailable],[data-language-control]{display:none!important}</style></head>
+  <body class="field-kit field-kit-support" data-field-kit-page="couch">
+    <div data-language-control="" data-language-launch="" hidden="" data-branded-unavailable=""></div>
+
+    <p id="boot-status" class="operation-status" data-state="busy" role="status">
+      <span aria-hidden="true" style="display: inline-flex; gap: 3px; color: #78dce8"><i style="display: inline-block; width: 4px; height: 8px; background: currentColor"></i><i style="display: inline-block; width: 4px; height: 8px; background: currentColor"></i><i style="display: inline-block; width: 4px; height: 8px; background: currentColor"></i></span><span data-i18n="interface:preparingBothBoards">Preparing both boards…</span>
+    </p>
+    <a id="boot-return" data-i18n="interface:backToTheGame2" href="..?edition=coupa-all">Back to the game</a>
+    <main id="couch-app" data-boot-inert="" inert="" aria-busy="true">
+      <nav id="race-journey-controls" class="race-actions" aria-label="Mission continuation" hidden="" data-i18n-aria-label="interface:missionContinuation">
+        <button id="race-journey-next" type="button" hidden="" data-i18n="interface:nextMission2">
+          Next mission
+        </button>
+        <button id="race-journey-skip" type="button" data-i18n="interface:skipMission">
+          Skip mission
+        </button>
+        <button id="race-journey-find" type="button" data-i18n="interface:findMissions">
+          Find missions
+        </button>
+        <button id="race-journey-pictures" type="button" hidden="" data-i18n="interface:journeyPictures">
+          Journey pictures
+        </button>
+      </nav>
+      <p id="race-journey-save-announcement" class="journey-save-announcement" role="status" aria-live="polite"></p>
+      <div id="race-hud" class="race-hud" hidden="">
+        <button id="race-pause" type="button" disabled="" data-i18n="common:actions.pause">
+          Pause
+        </button>
+        <span class="race-score"><span class="sun" data-i18n="interface:sunflower">SUNFLOWER</span>
+          <strong id="series-score">0 : 0</strong>
+          <span class="sky" data-i18n="interface:skyline">SKYLINE</span></span>
+        <strong id="race-clock">1:30</strong>
+        <div id="race-music-now-playing" class="couch-music-credit" aria-label="Current music" hidden="" data-i18n-aria-label="interface:currentMusic"></div>
+      </div>
+      <div id="race-boards" class="race-boards" aria-label="Two separate race boards" hidden="" data-i18n-aria-label="interface:twoSeparateRaceBoards">
+        <div id="race-start-cue" class="race-start-cue" role="status" aria-live="polite" aria-atomic="true" hidden="">
+          <strong id="race-start-cue-label"></strong>
+        </div>
+        <section class="racer" data-player="0" aria-label="Player 1: Sunflower" data-i18n-aria-label="interface:player1Sunflower">
+          <div class="racer-heading">
+            <h2 data-i18n="interface:sunflower2">Sunflower</h2>
+            <span id="racer-state-0" data-i18n="common:status.ready">Ready</span>
+          </div>
+          <div class="race-arena">
+            <canvas id="race-canvas-0" width="768" height="576" tabindex="-1" role="img" aria-label="Player 1 race board" data-i18n-aria-label="interface:player1RaceBoard"></canvas>
+          </div>
+          <p id="racer-stats-0" class="racer-stats" data-i18n="interface:003Lives0Points">
+            0.0% · 3 lives · 0 points
+          </p>
+          <p id="racer-capture-0" class="racer-capture" role="status" aria-label="Player 1 capture" hidden="" data-i18n-aria-label="interface:player1Capture"></p>
+          <div id="racer-encounter-0" class="racer-encounter" role="group" aria-label="Player 1 encounter" hidden="" data-i18n-aria-label="interface:player1Encounter">
+            <strong id="racer-encounter-title-0"></strong><span id="racer-encounter-instruction-0"></span>
+          </div>
+          <div class="race-pad" data-player="0" aria-label="Player 1 touch controls" hidden="" data-i18n-aria-label="interface:player1TouchControls">
+            <div class="race-cross" role="group" aria-label="Player 1 directions" data-i18n-aria-label="interface:player1Directions">
+              <button type="button" data-direction="up" aria-label="Player 1 up" data-i18n-aria-label="interface:player1Up">
+                ↑
+              </button>
+              <button type="button" data-direction="left" aria-label="Player 1 left" data-i18n-aria-label="interface:player1Left">
+                ←
+              </button>
+              <span class="cross-center" aria-hidden="true">1</span>
+              <button type="button" data-direction="right" aria-label="Player 1 right" data-i18n-aria-label="interface:player1Right">
+                →
+              </button>
+              <button type="button" data-direction="down" aria-label="Player 1 down" data-i18n-aria-label="interface:player1Down">
+                ↓
+              </button>
+            </div>
+            <div class="race-equipment" role="group" aria-label="Player 1 equipment" data-i18n-aria-label="interface:player1Equipment">
+              <button type="button" data-action="action" data-i18n="interface:ability">
+                Ability
+              </button>
+              <button type="button" data-action="pickup" data-i18n="interface:supply">
+                Supply
+              </button>
+              <button type="button" data-action="boost" aria-pressed="false" data-i18n="interface:boost">
+                Boost
+              </button>
+            </div>
+          </div>
+          <p id="racer-input-0" class="racer-input"></p>
+        </section>
+        <section class="racer" data-player="1" aria-label="Player 2: Skyline" data-i18n-aria-label="interface:player2Skyline">
+          <div class="racer-heading">
+            <h2 data-i18n="interface:skyline2">Skyline</h2>
+            <span id="racer-state-1" data-i18n="common:status.ready">Ready</span>
+          </div>
+          <div class="race-arena">
+            <canvas id="race-canvas-1" width="768" height="576" tabindex="-1" role="img" aria-label="Player 2 race board" data-i18n-aria-label="interface:player2RaceBoard"></canvas>
+          </div>
+          <p id="racer-stats-1" class="racer-stats" data-i18n="interface:003Lives0Points">
+            0.0% · 3 lives · 0 points
+          </p>
+          <p id="racer-capture-1" class="racer-capture" role="status" aria-label="Player 2 capture" hidden="" data-i18n-aria-label="interface:player2Capture"></p>
+          <div id="racer-encounter-1" class="racer-encounter" role="group" aria-label="Player 2 encounter" hidden="" data-i18n-aria-label="interface:player2Encounter">
+            <strong id="racer-encounter-title-1"></strong><span id="racer-encounter-instruction-1"></span>
+          </div>
+          <div class="race-pad" data-player="1" aria-label="Player 2 touch controls" hidden="" data-i18n-aria-label="interface:player2TouchControls">
+            <div class="race-cross" role="group" aria-label="Player 2 directions" data-i18n-aria-label="interface:player2Directions">
+              <button type="button" data-direction="up" aria-label="Player 2 up" data-i18n-aria-label="interface:player2Up">
+                ↑
+              </button>
+              <button type="button" data-direction="left" aria-label="Player 2 left" data-i18n-aria-label="interface:player2Left">
+                ←
+              </button>
+              <span class="cross-center" aria-hidden="true">2</span>
+              <button type="button" data-direction="right" aria-label="Player 2 right" data-i18n-aria-label="interface:player2Right">
+                →
+              </button>
+              <button type="button" data-direction="down" aria-label="Player 2 down" data-i18n-aria-label="interface:player2Down">
+                ↓
+              </button>
+            </div>
+            <div class="race-equipment" role="group" aria-label="Player 2 equipment" data-i18n-aria-label="interface:player2Equipment">
+              <button type="button" data-action="action" data-i18n="interface:ability">
+                Ability
+              </button>
+              <button type="button" data-action="pickup" data-i18n="interface:supply">
+                Supply
+              </button>
+              <button type="button" data-action="boost" aria-pressed="false" data-i18n="interface:boost">
+                Boost
+              </button>
+            </div>
+          </div>
+          <p id="racer-input-1" class="racer-input"></p>
+        </section>
+      </div>
+      <div id="race-shell" class="race-shell">
+        <p id="race-preparation" hidden=""></p>
+        <p id="race-presentation-status" hidden=""></p>
+        <section id="race-main" class="race-screen" aria-labelledby="race-title">
+          <nav id="race-mode-choices" aria-label="Game mode" data-i18n-aria-label="common:game.mode"></nav>
+          <p class="race-kicker" data-i18n="interface:revealLineLocalTwoPlayer">
+            FPV / LINE / LOCAL TWO PLAYER
+          </p>
+          <h1 class="field-kit-display" id="race-title" data-i18n-rich="interface:twoBoardsOneRace">
+            Two boards.<br data-i18n-slot="slot0">One race.
+          </h1>
+          <p id="race-journey-note" hidden="" data-i18n="interface:openingJourneyUnvalidatedVersusTestBuildWebPreviewsNeedA">
+            OPENING JOURNEY / UNVALIDATED VERSUS TEST BUILD. Web previews need a connection for
+            original pictures; core offline preparation does not save them.
+          </p>
+          <p id="race-message" role="status" data-i18n="interface:bothBoardsUseTheSameMapClassAndSeed">
+            Both boards use the same map, class and seed.
+          </p>
+          <p id="race-summary" class="race-summary"></p>
+          <div class="race-seats">
+            <article class="seat sun">
+              <span data-i18n="interface:player1">PLAYER 1</span>
+              <h2 data-i18n="interface:sunflower2">Sunflower</h2>
+              <p id="race-seat-0" data-i18n="interface:wASD">W A S D</p>
+              <p id="race-result-0" hidden=""></p>
+            </article>
+            <article class="seat sky">
+              <span data-i18n="interface:player2">PLAYER 2</span>
+              <h2 data-i18n="interface:skyline2">Skyline</h2>
+              <p id="race-seat-1" data-i18n="interface:arrowKeys">Arrow keys</p>
+              <p id="race-result-1" hidden=""></p>
+            </article>
+          </div>
+          <div class="race-menu-actions">
+            <a id="race-coop" class="race-primary" data-i18n="interface:relayRescueTeamUp" href="./relay-rescue.html?journey=coupa-all&amp;return=versus">Relay Rescue · team up</a>
+            <button id="race-start" class="race-primary" type="button" data-i18n="interface:startRace">
+              Start race
+            </button>
+            <button id="race-retry" type="button" hidden="" data-i18n="interface:couch.retryRace">
+              Retry race
+            </button>
+            <button id="race-journey-save-options" type="button" hidden="" data-i18n="interface:progressNotSavedSaveOptions">
+              Progress not saved · Save options
+            </button>
+            <button id="race-chapter-retry" type="button" hidden="" data-i18n="interface:retryPicture2">
+              Retry picture
+            </button>
+            <button id="race-picture-cancel" type="button" hidden="" data-i18n="interface:cancelPictureLoading">
+              Cancel picture loading
+            </button>
+            <button id="race-chapters" type="button" data-i18n="interface:browseMissions">
+              Browse missions
+            </button>
+            <details id="race-optional-setup" class="race-optional-setup">
+              <summary id="race-optional-setup-toggle" data-i18n="interface:couch.matchOptions">
+                Match options
+              </summary>
+              <div class="race-fields">
+                <label><span data-i18n="interface:actors">Actors</span><select id="race-actor-style" aria-describedby="race-actor-style-status">
+                    <option value="fpv">Field Kit</option>
+                    <option value="campaign" data-i18n="interface:campaignActors">
+                      Campaign actors
+                    </option>
+                  </select></label>
+                <p id="race-actor-style-status" class="race-footnote" role="status" data-i18n="interface:couch.actorStyleNextRace">
+                  New races use this actor style. Rematch keeps the accepted style.
+                </p>
+                <label id="race-journey-difficulty-field" hidden=""><span data-i18n="interface:difficulty">Difficulty</span><select id="race-journey-difficulty"></select>
+                  <span id="race-journey-difficulty-note" role="status"></span>
+                </label>
+                <div id="race-journey-preferences-recovery" hidden="">
+                  <p id="race-journey-preferences-message" role="status"></p>
+                  <button id="race-journey-preferences-retry" type="button" data-i18n="interface:retrySavingDifficulty">
+                    Retry saving difficulty
+                  </button>
+                  <button id="race-journey-preferences-export" type="button" data-i18n="interface:exportDifficulty">
+                    Export difficulty
+                  </button>
+                </div>
+                <button id="race-focus" type="button" data-i18n="interface:couch.advancedSetup">
+                  Advanced setup
+                </button>
+              </div>
+            </details>
+            <button id="race-options" type="button" data-i18n="common:navigation.settings">
+              Settings
+            </button>
+            <button id="race-offline" type="button" data-i18n="interface:installAppGameAndSoundtrackDownloads">
+              Install &amp; offline play
+            </button>
+            <p id="race-offline-status" class="race-footnote" role="status"></p>
+            <button id="race-quick-sound" type="button" class="quick-sound" aria-pressed="false" data-i18n="interface:soundOff">
+              Sound: off
+            </button>
+            <button id="race-help" type="button" data-i18n="common:navigation.howToPlay">
+              How to play
+            </button>
+            <details id="race-more" class="race-secondary-details">
+              <summary id="race-more-toggle" data-i18n="common:navigation.more">More</summary>
+              <nav class="race-more-destinations" aria-label="More destinations" data-i18n-aria-label="common:navigation.moreDestinations">
+                <a id="race-more-home" data-i18n="common:navigation.home" href="..?edition=coupa-all">Home</a>
+                <a id="race-more-about" data-i18n="common:navigation.aboutCredits" hidden="" data-branded-unavailable="">About &amp; credits</a>
+                <a id="race-release-explorer" data-i18n="common:navigation.releases">Releases</a>
+              </nav>
+            </details>
+            <a id="race-home" hidden="" data-i18n="common:navigation.home" href="..?edition=coupa-all">Home</a>
+            <button id="race-review" type="button" hidden="" data-i18n="interface:viewBothBoards">
+              View both boards
+            </button>
+            <a id="race-solo-return" data-i18n="interface:returnToSolo" href="..?edition=coupa-all">Return to solo</a>
+            <a id="race-library-switch" data-i18n="interface:newJourney" hidden="" data-branded-unavailable="">New Journey</a>
+          </div>
+          <div id="race-language" data-language-control="" hidden="" data-branded-unavailable=""></div>
+          <p id="race-format-note" class="race-footnote" data-i18n="interface:couch.defaultRaceNote">
+            One race · Match options includes First to two · Solo progress stays separate
+          </p>
+          <aside id="race-journey-save" class="journey-status" aria-label="Journey race progress saving" hidden="" data-i18n-aria-label="interface:journeyRaceProgressSaving">
+            <p id="race-journey-save-message" role="status"></p>
+            <button id="race-journey-save-retry" type="button" data-i18n="interface:retryProgressSave">
+              Retry progress save
+            </button>
+            <button id="race-journey-save-export" type="button" data-i18n="interface:exportJourneyProgress">
+              Export Journey progress
+            </button>
+          </aside>
+          <div id="race-music-menu-now-playing" class="couch-music-credit" aria-label="Current music" hidden="" data-i18n-aria-label="interface:currentMusic"></div>
+          <p id="race-journey-reactions" class="race-footnote" hidden=""></p>
+        </section>
+        <section id="race-setup" class="race-screen" aria-labelledby="race-setup-title" hidden="" inert="">
+          <p class="race-kicker" data-i18n="interface:sameConditionsTwoRoutes">
+            SAME CONDITIONS / TWO ROUTES
+          </p>
+          <h1 id="race-setup-title" data-i18n="interface:raceSetup">Race setup</h1>
+          <p data-i18n="interface:couch.optionalMatchChanges">
+            Optional match changes. Both players always receive the same conditions.
+          </p>
+          <div class="race-fields">
+            <label><span data-i18n="interface:map">Map</span><select id="race-level"></select></label>
+            <label><span data-i18n="interface:format">Format</span><select id="race-format">
+                <option value="single" data-i18n="interface:oneRace">One race</option>
+                <option value="first-to-two" data-i18n="interface:firstToTwo">First to two</option>
+              </select></label>
+            <label><span data-i18n="interface:world">World</span><select id="race-theme"></select></label>
+            <label id="race-class-field"><span data-i18n="interface:craft">Craft</span><select id="race-class"></select></label>
+            <label><span data-i18n="interface:steering">Steering</span><select id="race-turn">
+                <option value="immediate" data-i18n="interface:immediateTurns">
+                  Immediate turns
+                </option>
+                <option value="grid-center" data-i18n="interface:gridCenterTurns">
+                  Grid-center turns
+                </option>
+              </select></label>
+            <label id="race-time-field"><span data-i18n="interface:timeLimit">Time limit</span><select id="race-time">
+                <option value="90" data-i18n="interface:90Seconds">90 seconds</option>
+                <option value="180" data-i18n="interface:3Minutes">3 minutes</option>
+                <option value="30" data-i18n="interface:30Seconds">30 seconds</option>
+              </select></label>
+          </div>
+          <p id="race-loadout" class="race-summary"></p>
+          <p id="race-installed-status" role="status"></p>
+          <button id="race-installed-refresh" type="button" data-i18n="interface:refreshInstalledChapters">
+            Refresh installed chapters
+          </button>
+          <button id="race-setup-back" type="button" data-i18n="common:actions.done">Done</button>
+        </section>
+        <section id="race-options-panel" class="race-screen shared-settings" aria-labelledby="race-options-title" hidden="" inert="">
+          <div class="shared-settings-heading">
+            <h1 id="race-options-title" data-field-kit-copy="settings.couchTitle" data-i18n="common:navigation.settings">
+              Settings
+            </h1>
+            <button id="race-options-back" type="button" data-i18n="common:actions.back">
+              Back
+            </button>
+          </div>
+          <div class="field-kit-settings-tabs" role="tablist" aria-label="Settings categories" data-i18n-aria-label="interface:settingsCategories">
+            <button id="race-settings-tab-controls" type="button" role="tab" aria-controls="race-settings-panel-controls" aria-selected="false" tabindex="-1" data-i18n="interface:controls">
+              Controls
+            </button>
+            <button id="race-settings-tab-audio" type="button" role="tab" aria-controls="race-settings-panel-audio" aria-selected="false" tabindex="-1" data-i18n="interface:audio">
+              Audio
+            </button>
+            <button id="race-settings-tab-display" type="button" role="tab" aria-controls="race-settings-panel-display" aria-selected="true" tabindex="0" data-i18n="interface:appearanceAccessibility">
+              Appearance &amp; accessibility
+            </button>
+            <button id="race-settings-tab-data" type="button" role="tab" aria-controls="race-settings-panel-data" aria-selected="false" tabindex="-1" data-i18n="interface:gameData">
+              Game data
+            </button>
+          </div>
+          <section id="race-settings-panel-controls" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="race-settings-tab-controls" hidden="" inert="">
+            <h2 data-i18n="interface:controls">Controls</h2>
+            <section id="race-gameplay-tuning" aria-label="Shared gameplay tuning" data-i18n-aria-label="interface:sharedGameplayTuning"></section>
+            <div class="race-fields">
+              <label><span data-i18n="interface:player1TouchControls">Player 1 touch controls</span><select id="race-touch-0">
+                  <option value="auto" data-i18n="interface:auto">Auto</option>
+                  <option value="always" data-i18n="interface:always">Always</option>
+                  <option value="off" data-i18n="common:status.off">Off</option>
+                </select></label>
+              <label><span data-i18n="interface:player2TouchControls">Player 2 touch controls</span><select id="race-touch-1">
+                  <option value="auto" data-i18n="interface:auto">Auto</option>
+                  <option value="always" data-i18n="interface:always">Always</option>
+                  <option value="off" data-i18n="common:status.off">Off</option>
+                </select></label>
+            </div>
+            <p data-i18n="interface:autoShowsAPlayerSControlsAfterATouchOn">
+              Auto shows a player's controls after a touch on their board. Keyboard or controller
+              use hides them at the next pause. Choose Always to play with a mouse.
+            </p>
+            <label id="race-tap-field" class="race-check"><input id="race-tap" type="checkbox">
+              <span data-i18n="interface:toggleOnScreenBoost">Toggle on-screen Boost</span></label>
+            <button id="race-menu-release" type="button" hidden="" disabled="" data-i18n="interface:releaseMenuController">
+              Release menu controller
+            </button>
+            <p id="race-pad-status" class="race-footnote"></p>
+          </section>
+          <section id="race-settings-panel-audio" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="race-settings-tab-audio" hidden="" inert="">
+            <h2 data-i18n="interface:audio">Audio</h2>
+            <button id="race-audio" type="button" data-i18n="common:audio.unmute">
+              Unmute sound
+            </button>
+            <label for="race-master-volume" data-i18n="common:audio.masterVolume">Master sound volume</label>
+            <input id="race-master-volume" type="range" min="0" max="1" step="0.01" value="0.65">
+            <p id="race-audio-status" role="status"></p>
+            <p data-i18n="interface:masterSoundAppliesAcrossGameModesMusicFollowsYourShared">
+              Master sound applies across game modes. Music follows your shared library selection;
+              race effects follow the selected game presentation.
+            </p>
+          </section>
+          <section id="race-settings-panel-display" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="race-settings-tab-display">
+            <h2 data-i18n="interface:appearanceAccessibility">Appearance &amp; accessibility</h2>
+            <div id="race-settings-language" data-language-control="" hidden="" data-branded-unavailable=""></div>
+            <label class="field-kit-page-text"><span data-i18n="interface:textStyle">Text style</span><select id="race-text-face">
+                <option value="pixel" data-i18n="interface:themeFont">Theme font</option>
+                <option value="plain" data-i18n="common:text.plain">Plain</option>
+              </select></label>
+            <label class="field-kit-page-text"><span data-field-kit-copy="display.textSize" data-i18n="interface:textSize">Text size</span><select id="race-text-size">
+                <option value="standard" data-field-kit-copy="display.standard" data-i18n="interface:display.textSize.standard">
+                  Standard
+                </option>
+                <option value="large" data-field-kit-copy="display.large" data-i18n="interface:large">
+                  Large
+                </option>
+              </select></label>
+            <label class="field-kit-page-text"><span data-i18n="interface:uiSkin">UI skin</span><select id="race-menu-palette">
+                <option value="auto" data-i18n="interface:neonArcade">Neon Arcade</option>
+                <option value="ukrainian">Field Kit</option>
+              </select></label>
+            <label class="field-kit-page-text"><span data-i18n="interface:menuOrnaments">Menu ornaments</span><select id="race-menu-ornaments">
+                <option value="off" data-i18n="common:status.off">Off</option>
+                <option value="subtle" data-i18n="interface:subtle">Subtle</option>
+                <option value="rich" data-i18n="interface:rich">Rich</option>
+              </select></label>
+            <p id="race-menu-style-status" class="micro-note" role="status"></p>
+            <label class="race-check"><input id="race-reduced" type="checkbox">
+              <span data-i18n="interface:reducedEffects">Reduced effects</span></label>
+            <label class="settings-check"><input id="race-enemy-remains" type="checkbox" aria-describedby="race-enemy-remains-hint"><span data-i18n="common:preferences.enemyRemains">Show enemy remains</span></label>
+            <p id="race-enemy-remains-hint" class="micro-note" data-i18n="common:preferences.enemyRemainsHint">
+              Show defeated optional enemies where supported. Warnings, shots and brief hit effects
+              stay visible.
+            </p>
+            <p id="race-enemy-remains-status" class="micro-note" role="status" hidden=""></p>
+            <button id="race-enemy-remains-retry" type="button" data-i18n="common:preferences.retryEncounterSave" hidden="">
+              Retry saving
+            </button>
+            <p id="race-system-reduction" class="setting-note"></p>
+            <p id="race-display-status" class="setting-note" role="status"></p>
+            <label><input id="race-journey-reactions-enabled" type="checkbox" aria-describedby="race-journey-reactions-help">
+              <span data-i18n="interface:characterReactions">Character reactions</span></label>
+            <p id="race-journey-reactions-help" class="race-footnote" data-i18n="interface:optionalCaptionsAfterCompletedJourneyMissionsNoVoiceOrAnimation">
+              Optional captions after completed Journey missions. No voice or animation.
+            </p>
+            <p id="race-journey-reactions-status" class="race-footnote" role="status" hidden=""></p>
+            <button id="race-journey-reactions-retry" type="button" hidden="" data-i18n="interface:retrySavingReactions">
+              Retry saving reactions
+            </button>
+          </section>
+          <section id="race-settings-panel-data" class="field-kit-settings-panel" role="tabpanel" aria-labelledby="race-settings-tab-data" hidden="" inert="">
+            <h2 data-i18n="interface:gameData">Game data</h2>
+            <div id="race-data-unit" class="settings-reading-unit">
+              <div class="reading-toolbar">
+                <button id="race-data-read" type="button" data-i18n="interface:readGameData">
+                  Read game data
+                </button>
+                <button id="race-data-reading-done" type="button" disabled="" data-i18n="interface:doneReading">
+                  Done reading
+                </button>
+              </div>
+              <p id="race-data-reading-hint" class="reading-hint" role="status" data-i18n="interface:readWithoutStartingOrResuming">
+                Read without starting or resuming.
+              </p>
+              <div id="race-data-reading" class="settings-reading-region" role="region" aria-label="Versus game data" aria-describedby="race-data-reading-hint" tabindex="0" data-game-reading="" data-i18n-aria-label="interface:versusGameData">
+                <p data-i18n="interface:thisCouchMatchStaysInThisPageItDoesNot">
+                  This Couch match stays in this page. It does not replace your Solo flight,
+                  pictures or records.
+                </p>
+                <p data-i18n="interface:finishThisMatchBeforeLeavingInstalledCampaignsAndSoloBackups">
+                  Finish this match before leaving. Installed campaigns and Solo backups are managed
+                  from Solo Settings → Game data.
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section id="race-help-panel" class="race-screen" aria-labelledby="race-help-title" hidden="" inert="">
+          <p class="race-kicker" data-i18n="interface:couch.helpKicker">FPV / LINE / HOW TO PLAY</p>
+          <h1 id="race-help-title" data-i18n="common:navigation.howToPlay">How to play</h1>
+          <div id="race-help-unit">
+            <div class="reading-toolbar">
+              <button id="race-help-read" type="button" data-i18n="interface:readControls">
+                Read controls
+              </button>
+              <button id="race-help-reading-done" type="button" disabled="" data-i18n="interface:doneReading">
+                Done reading
+              </button>
+            </div>
+            <p id="race-help-reading-hint" class="reading-hint" role="status" data-i18n="interface:readWithoutStartingOrResuming">
+              Read without starting or resuming.
+            </p>
+            <div id="race-help-reading" aria-describedby="race-help-reading-hint" role="region" aria-label="Couch controls and rules" tabindex="0" data-game-reading="" data-i18n-aria-label="interface:couchControlsAndRules">
+              <p data-i18n="interface:leaveTheSafeEdgeDrawALineAndReturnTo">
+                Leave the safe edge, draw a line, and return to safety to capture territory. Avoid
+                enemies touching you or your unfinished line.
+              </p>
+              <p data-i18n="interface:aDirectionKeepsMovingAfterReleaseTurnWithAFresh">
+                A direction keeps moving after release. Turn with a fresh direction. Capture and
+                recovery stop that player's movement; choose a fresh direction to leave again.
+              </p>
+              <div class="race-seats">
+                <article class="seat sun">
+                  <h2 data-i18n="interface:player12">Player 1</h2>
+                  <p id="race-help-0"></p>
+                </article>
+                <article class="seat sky">
+                  <h2 data-i18n="interface:player22">Player 2</h2>
+                  <p id="race-help-1"></p>
+                </article>
+              </div>
+              <p id="race-controller-help"></p>
+              <p data-i18n="interface:escPOrEitherControllerSMenuPausesBothBoards">
+                Esc / P or either controller's Menu pauses both boards. Resume is always explicit.
+                Each controller needs neutral controls before it can join or resume.
+              </p>
+              <p id="race-format-help" data-i18n="interface:firstClearWinsTheRaceAtTheTimeLimitCoverage">
+                First clear wins the race. At the time limit: coverage, then lives, then score
+                decide. One race ends after this result. Rematch plays the same mission again.
+              </p>
+              <section id="race-encounter-help" hidden=""></section>
+            </div>
+          </div>
+          <button id="race-help-back" type="button" data-i18n="common:actions.back">Back</button>
+        </section>
+        <section id="race-confirm" class="race-screen" aria-labelledby="race-confirm-title" hidden="" inert="">
+          <p class="race-kicker" data-i18n="interface:bothPlayersArePaused">
+            BOTH PLAYERS ARE PAUSED
+          </p>
+          <h1 id="race-confirm-title" data-i18n="interface:startANewMatch">Start a new match?</h1>
+          <p data-i18n="interface:theCurrentCouchRoundAndSeriesScoreWillBeReplaced">
+            The current couch round and series score will be replaced. Your solo progress stays
+            saved.
+          </p>
+          <button id="race-confirm-back" class="race-primary" type="button" data-i18n="interface:keepThisMatch">
+            Keep this match
+          </button>
+          <button id="race-confirm-reset" type="button" data-i18n="interface:newMatchEditSetup">
+            New match · edit setup
+          </button>
+        </section>
+        <section id="race-leave-panel" class="race-screen" aria-labelledby="race-leave-title" hidden="" inert="">
+          <h1 id="race-leave-title" data-i18n="interface:leaveThisVersusAttempt">
+            Leave this Versus attempt?
+          </h1>
+          <p id="race-leave-copy" data-i18n="interface:thisAttemptIsOnlyKeptOnThisPageAndIs">
+            This attempt is only kept on this page and is not saved.
+          </p>
+          <button id="race-leave-back" class="race-primary" type="button" data-i18n="interface:stayHere">
+            Stay here</button><a id="race-leave" data-i18n="interface:leaveCouchReturnToSolo" href="..?edition=coupa-all">Leave couch · return to solo</a>
+        </section>
+        <p id="race-menu-status" class="race-menu-status" role="status"></p>
+      </div>
+    </main>
+    <script defer="" src="./mode-entry.js" data-mode="versus"></script>
+    <script defer="" src="../ui/direct-tool-launch.js" data-module="./couch.mjs" data-status="boot-status"></script>
+  
+
+</body></html>

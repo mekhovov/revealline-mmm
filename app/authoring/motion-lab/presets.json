@@ -1,0 +1,34 @@
+{
+  "animationRecipes": { "still": { "components": [], "label": "Rigid body" } },
+  "characters": {
+    "coupa-flower": {
+      "animationRecipe": "still",
+      "bodyBacking": { "color": "#FFFFFF", "kind": "opaque-interior" },
+      "bodyMotion": {
+        "kind": "rigid-spin",
+        "radiansPerSecond": 3.141592653589793,
+        "travelGain": 0
+      },
+      "headingOffsetDegrees": 0,
+      "heightCells": 1.5,
+      "label": "Coupa flower",
+      "rotors": [],
+      "sampling": "linear",
+      "sourceStatus": "Official Coupa flower; gameplay rotation chosen for this game",
+      "src": "../../game/editions/assets/coupa/flower-blue.png",
+      "widthCells": 1.5
+    },
+    "neutral-marker": {
+      "animationRecipe": "still",
+      "headingOffsetDegrees": 0,
+      "heightCells": 1.5,
+      "label": "Community marker",
+      "rotors": [],
+      "sampling": "linear",
+      "sourceStatus": "Original directional marker",
+      "src": null,
+      "widthCells": 1.5
+    }
+  },
+  "version": "1.0.0"
+}

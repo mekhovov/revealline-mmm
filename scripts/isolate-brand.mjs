@@ -1,70 +1,118 @@
-import path from 'node:path';
-import { readFileSync } from 'node:fs';
-import { parse } from 'acorn';
-import { parse as parseHTML, serialize } from 'parse5';
+import path from "node:path";
+import { readFileSync } from "node:fs";
+import { parse } from "acorn";
+import { parse as parseHTML, serialize } from "parse5";
 
 // This is the deliberately small downstream policy layer. Every source edit
 // matches a reviewed structural boundary; upstream drift stops synchronization.
 const encoder = (value) => Buffer.from(value);
-const json = (value) => encoder(JSON.stringify(value) + '\n');
+const json = (value) => encoder(JSON.stringify(value) + "\n");
 const hiddenIds = [
-  'shell-home-fpv', 'shell-home-practice', 'shell-optional-practice',
-  'shell-team', 'shell-versus', 'shell-title-team', 'shell-title-versus', 'shell-mode-choice',
-  'shell-controller-lab', 'shell-replay-theater', 'shell-release-explorer', 'shell-catalogue', 'shell-guide',
-  'shell-asset-studio', 'shell-playground', 'shell-enemy-catalog', 'shell-motion-lab',
-  'shell-still-media', 'shell-video-poster', 'shell-design-atlas', 'creator-tools',
-  'native-diagnostics', 'shell-offline', 'settings-offline', 'offline-button',
-  'first-flight-help-enter', 'first-flight-enter', 'first-flight-entry',
-  'library-packs', 'library-saves', 'pack-file', 'pack-json', 'install-pack',
-  'save-file', 'save-json', 'import-save', 'undo-library', 'undo-backup',
-  'shell-workshop', 'settings-tab-content', 'settings-panel-content', 'settings-saves', 'soundtrack-open',
+  "shell-home-fpv",
+  "shell-home-practice",
+  "shell-optional-practice",
+  "shell-controller-lab",
+  "shell-replay-theater",
+  "shell-release-explorer",
+  "shell-catalogue",
+  "shell-guide",
+  "shell-asset-studio",
+  "shell-playground",
+  "shell-enemy-catalog",
+  "shell-motion-lab",
+  "shell-still-media",
+  "shell-video-poster",
+  "shell-design-atlas",
+  "creator-tools",
+  "native-diagnostics",
+  "shell-offline",
+  "settings-offline",
+  "offline-button",
+  "first-flight-help-enter",
+  "first-flight-enter",
+  "first-flight-entry",
+  "library-packs",
+  "library-saves",
+  "pack-file",
+  "pack-json",
+  "install-pack",
+  "save-file",
+  "save-json",
+  "import-save",
+  "undo-library",
+  "undo-backup",
+  "shell-workshop",
+  "settings-tab-content",
+  "settings-panel-content",
+  "settings-saves",
+  "soundtrack-open",
+  "race-library-switch",
+  "coop-catalogue",
+  "coop-more-catalogue",
 ];
 const hiddenSelectors = [
   ...hiddenIds.map((id) => `#${id}`),
-  '[data-library-panel="packs"]', '[data-library-panel="saves"]',
-  '[data-release-explorer]', '[data-source-only]', '.workshop-tools',
-  '.edition-offline', '.optional-practice-dialog', '[data-branded-unavailable]',
+  '[data-library-panel="packs"]',
+  '[data-library-panel="saves"]',
+  "[data-release-explorer]",
+  "[data-source-only]",
+  ".workshop-tools",
+  ".edition-offline",
+  ".optional-practice-dialog",
+  "[data-branded-unavailable]",
+  "[data-language-control]",
 ];
 
 function walk(node, visit) {
-  if (!node || typeof node !== 'object') return;
+  if (!node || typeof node !== "object") return;
   visit(node);
   for (const child of Object.values(node)) {
     if (Array.isArray(child)) child.forEach((entry) => walk(entry, visit));
-    else if (child && typeof child === 'object') walk(child, visit);
+    else if (child && typeof child === "object") walk(child, visit);
   }
 }
 
 function edit(files, name, transform) {
   if (!files.has(name)) throw new Error(`Isolation boundary missing: ${name}`);
-  files.set(name, encoder(transform(files.get(name).toString('utf8'))));
+  files.set(name, encoder(transform(files.get(name).toString("utf8"))));
 }
 
 function once(source, search, replacement, description) {
   const first = source.indexOf(search);
   if (first < 0 || source.indexOf(search, first + search.length) !== -1)
     throw new Error(`Upstream changed isolation boundary: ${description}`);
-  return source.slice(0, first) + replacement + source.slice(first + search.length);
+  return (
+    source.slice(0, first) + replacement + source.slice(first + search.length)
+  );
 }
 
 function removeImports(source, specifiers) {
-  const tree = parse(source, { ecmaVersion: 'latest', sourceType: 'module' });
-  const nodes = tree.body.filter((node) =>
-    node.type === 'ImportDeclaration' && specifiers.includes(node.source.value));
-  if (nodes.length !== specifiers.length) throw new Error('Upstream changed shell imports.');
-  for (const node of nodes.reverse()) source = source.slice(0, node.start) + source.slice(node.end);
+  const tree = parse(source, { ecmaVersion: "latest", sourceType: "module" });
+  const nodes = tree.body.filter(
+    (node) =>
+      node.type === "ImportDeclaration" &&
+      specifiers.includes(node.source.value),
+  );
+  if (nodes.length !== specifiers.length)
+    throw new Error("Upstream changed shell imports.");
+  for (const node of nodes.reverse())
+    source = source.slice(0, node.start) + source.slice(node.end);
   return source;
 }
 
 function functionGuard(source, name, guard) {
-  const tree = parse(source, { ecmaVersion: 'latest', sourceType: 'module' });
+  const tree = parse(source, { ecmaVersion: "latest", sourceType: "module" });
   const matches = [];
   walk(tree, (node) => {
-    if (node.type === 'FunctionDeclaration' && node.id?.name === name) matches.push(node);
+    if (node.type === "FunctionDeclaration" && node.id?.name === name)
+      matches.push(node);
   });
-  if (matches.length !== 1) throw new Error(`Upstream changed function boundary: ${name}`);
+  if (matches.length !== 1)
+    throw new Error(`Upstream changed function boundary: ${name}`);
   const position = matches[0].body.start + 1;
-  return source.slice(0, position) + '\n' + guard + '\n' + source.slice(position);
+  return (
+    source.slice(0, position) + "\n" + guard + "\n" + source.slice(position)
+  );
 }
 
 function policyModule(config, catalog) {
@@ -73,7 +121,8 @@ function policyModule(config, catalog) {
     brandId: config.brandId,
     repo: config.repo,
     campaignIds: catalog.campaigns.map(({ id }) => id),
-    presentationIds: catalog.editions[0].presentationHistory?.map(({ id }) => id) ?? [],
+    presentationIds:
+      catalog.editions[0].presentationHistory?.map(({ id }) => id) ?? [],
   };
   return `// Generated by scripts/isolate-brand.mjs. Never hand-edit generated app files.
 export const BRAND_POLICY = Object.freeze(${JSON.stringify(settings)});
@@ -86,7 +135,7 @@ export function assertBrandedPacks(packs) {
 export function denyBrandedImport() { throw new TypeError(unavailable); }
 export function assertBrandedLocation(href) {
   const url = new URL(href), params = url.searchParams;
-  const allowed = new Set(['edition', 'campaign', 'presentation', 'lang', 'controllerTrace', 'journey']);
+  const allowed = new Set(['edition', 'campaign', 'presentation', 'controllerTrace', 'journey', 'return']);
   for (const key of params.keys()) {
     if (!allowed.has(key) || params.getAll(key).length !== 1) throw new TypeError(unavailable);
   }
@@ -94,14 +143,15 @@ export function assertBrandedLocation(href) {
   if (params.has('campaign') && !BRAND_POLICY.campaignIds.includes(params.get('campaign'))) throw new TypeError(unavailable);
   if (params.has('presentation') && !BRAND_POLICY.presentationIds.includes(params.get('presentation'))) throw new TypeError(unavailable);
   if (params.has('journey') && params.get('journey') !== BRAND_POLICY.editionId && params.get('journey') !== '1') throw new TypeError(unavailable);
+  if (params.has('return') && !['solo', 'versus'].includes(params.get('return'))) throw new TypeError(unavailable);
   return url;
 }
 export function brandedHrefAllowed(href, baseHref) {
   try {
     const base = new URL(baseHref), target = new URL(href, base);
-    const root = new URL('./', base);
+    const root = new URL(base.pathname.includes('/couch/') ? '../' : './', base);
     if (target.origin !== base.origin || target.username || target.password) return false;
-    if (!['', 'index.html', 'company.html'].some((entry) => target.pathname === root.pathname + entry)) return false;
+    if (!['', 'index.html', 'company.html', 'couch/', 'couch/index.html', 'couch/relay-rescue.html'].some((entry) => target.pathname === root.pathname + entry)) return false;
     assertBrandedLocation(target.href);
     return true;
   } catch { return false; }
@@ -143,153 +193,641 @@ function scopeStorage(source, repo) {
   // Storage keys, lock names and internal notification topics are deliberately
   // separate from portable format strings (revealline-*.vN), content IDs and pins.
   const names = [
-    'actor-style', 'audio-master', 'company', 'company-accessibility', 'company-installed',
-    'company-learning', 'company-learning-draft', 'company-learning-proofs', 'display', 'encounter-display',
-    'couch-controller-profiles', 'couch-radio-setup', 'game-activity', 'creator', 'playground',
-    'flight-profiles', 'gameplay-tuning', 'install-suggestion', 'installed-app',
-    'journey-mastery-proofs', 'journey-preferences', 'journey-reactions', 'library',
-    'locale', 'menu-animation', 'menu-audio', 'menu-style', 'mission-goal',
-    'mission-library', 'mode-return', 'movement-audio', 'music-shortcuts',
-    'official-downloads', 'offline-panel', 'packs', 'player', 'profile', 'progress',
-    'radio-audio', 'session', 'settings', 'solo-radio-profiles', 'solo-radio-setup',
-    'suspended', 'touch', 'window', 'demo',
+    "actor-style",
+    "audio-master",
+    "company",
+    "company-accessibility",
+    "company-installed",
+    "company-learning",
+    "company-learning-draft",
+    "company-learning-proofs",
+    "display",
+    "encounter-display",
+    "couch-controller-profiles",
+    "couch-radio-setup",
+    "game-activity",
+    "creator",
+    "playground",
+    "flight-profiles",
+    "gameplay-tuning",
+    "install-suggestion",
+    "installed-app",
+    "journey-mastery-proofs",
+    "journey-preferences",
+    "journey-reactions",
+    "library",
+    "locale",
+    "menu-animation",
+    "menu-audio",
+    "menu-style",
+    "mission-goal",
+    "mission-library",
+    "mode-return",
+    "movement-audio",
+    "music-shortcuts",
+    "official-downloads",
+    "offline-panel",
+    "packs",
+    "player",
+    "profile",
+    "progress",
+    "radio-audio",
+    "session",
+    "settings",
+    "solo-radio-profiles",
+    "solo-radio-setup",
+    "suspended",
+    "touch",
+    "window",
+    "demo",
   ];
   for (const name of names)
-    source = source.replace(new RegExp('revealline\\.' + name.replaceAll('-', '\\-') + '(?=[.\'"\x60])', 'g'), `${repo}.${name}`);
+    source = source.replace(
+      new RegExp(
+        "revealline\\." + name.replaceAll("-", "\\-") + "(?=[.'\"\x60])",
+        "g",
+      ),
+      `${repo}.${name}`,
+    );
   return source
     .replaceAll("startsWith('revealline.')", `startsWith('${repo}.')`)
-    .replaceAll('revealline\\.', `${repo}\\.`)
-    .replaceAll('revealline-journey-v1', `${repo}-journey-v1`)
-    .replaceAll('revealline-soundtrack-v1', `${repo}-soundtrack-v1`)
-    .replaceAll('revealline-assets-v1', `${repo}-assets-v1`)
-    .replaceAll('revealline-demo-recordings-v1', `${repo}-demo-recordings-v1`)
-    .replaceAll('revealline-official-content-v1', `${repo}-official-content-v1`)
-    .replaceAll('revealline-official-downloads-v1', `${repo}-official-downloads-v1`)
-    .replaceAll('revealline-official-original-index-v1', `${repo}-official-original-index-v1`)
-    .replaceAll('/.revealline-official/', `/.${repo}-official/`);
+    .replaceAll("revealline\\.", `${repo}\\.`)
+    .replaceAll("revealline-journey-v1", `${repo}-journey-v1`)
+    .replaceAll("revealline-soundtrack-v1", `${repo}-soundtrack-v1`)
+    .replaceAll("revealline-assets-v1", `${repo}-assets-v1`)
+    .replaceAll("revealline-demo-recordings-v1", `${repo}-demo-recordings-v1`)
+    .replaceAll("revealline-official-content-v1", `${repo}-official-content-v1`)
+    .replaceAll(
+      "revealline-official-downloads-v1",
+      `${repo}-official-downloads-v1`,
+    )
+    .replaceAll(
+      "revealline-official-original-index-v1",
+      `${repo}-official-original-index-v1`,
+    )
+    .replaceAll("/.revealline-official/", `/.${repo}-official/`);
 }
 
-function projectHTML(source, name, config) {
+function projectHTML(source, name, config, brandIconPath) {
   const document = parseHTML(source);
   const visit = (node) => {
-    if (node.childNodes) node.childNodes = node.childNodes.filter((child) =>
-      !(child.tagName === 'link' && child.attrs?.some((entry) =>
-        ['href', 'data-boot-href'].includes(entry.name) && /optional-practice-panel\.css$/.test(entry.value))));
+    if (node.childNodes)
+      node.childNodes = node.childNodes.filter(
+        (child) =>
+          !(
+            child.tagName === "link" &&
+            child.attrs?.some(
+              (entry) =>
+                ["href", "data-boot-href"].includes(entry.name) &&
+                /optional-practice-panel\.css$/.test(entry.value),
+            )
+          ),
+      );
     if (node.attrs) {
-      const attr = (key) => node.attrs.find((entry) => entry.name === key)?.value;
-      const add = (key, value = '') => {
+      const attr = (key) =>
+        node.attrs.find((entry) => entry.name === key)?.value;
+      const add = (key, value = "") => {
         node.attrs = node.attrs.filter((entry) => entry.name !== key);
         node.attrs.push({ name: key, value });
       };
-      const blocked = hiddenIds.includes(attr('id')) ||
-        ['packs', 'saves'].includes(attr('data-library-panel')) ||
-        attr('data-release-explorer') !== undefined || attr('data-source-only') !== undefined;
-      if (node.tagName === 'select' && attr('id') === 'menu-actor-style')
-        node.childNodes = node.childNodes.filter((child) => child.tagName !== 'option' ||
-          child.attrs?.some((entry) => entry.name === 'value' && entry.value === 'campaign'));
-      if (node.tagName === 'option' && attr('data-i18n') === 'interface:fpvFieldKit') {
-        node.attrs = node.attrs.filter((entry) => entry.name !== 'data-i18n');
-        node.childNodes = [{nodeName:'#text', value:'Field Kit', parentNode:node}];
+      const blocked =
+        hiddenIds.includes(attr("id")) ||
+        ["packs", "saves"].includes(attr("data-library-panel")) ||
+        attr("data-release-explorer") !== undefined ||
+        attr("data-source-only") !== undefined ||
+        attr("data-language-control") !== undefined;
+      if (node.tagName === "select" && attr("id") === "menu-actor-style")
+        node.childNodes = node.childNodes.filter(
+          (child) =>
+            child.tagName !== "option" ||
+            child.attrs?.some(
+              (entry) => entry.name === "value" && entry.value === "campaign",
+            ),
+        );
+      if (
+        node.tagName === "link" &&
+        /icon/.test(attr("rel") ?? "") &&
+        attr("href")
+      ) {
+        let relative = path.posix.relative(
+          path.posix.dirname(name),
+          brandIconPath,
+        );
+        if (!relative.startsWith(".")) relative = "./" + relative;
+        add("href", relative);
+      }
+      if (
+        node.tagName === "option" &&
+        attr("data-i18n") === "interface:fpvFieldKit"
+      ) {
+        node.attrs = node.attrs.filter((entry) => entry.name !== "data-i18n");
+        node.childNodes = [
+          { nodeName: "#text", value: "Field Kit", parentNode: node },
+        ];
       }
       if (blocked) {
-        add('hidden'); add('data-branded-unavailable');
-        if (['button', 'input', 'select', 'textarea'].includes(node.tagName)) add('disabled');
+        add("hidden");
+        add("data-branded-unavailable");
+        if (["button", "input", "select", "textarea"].includes(node.tagName))
+          add("disabled");
       }
-      if (node.tagName === 'a' && attr('href') !== undefined) {
-        const target = new URL(attr('href'), `https://brand.invalid/${name}`);
-        if (target.origin !== 'https://brand.invalid' ||
-            !['/game/', '/game/index.html', '/game/company.html'].includes(target.pathname) || blocked) {
-          node.attrs = node.attrs.filter((entry) => entry.name !== 'href');
-          add('hidden'); add('data-branded-unavailable');
+      if (node.tagName === "a" && attr("href") !== undefined) {
+        const target = new URL(attr("href"), `https://brand.invalid/${name}`);
+        const targetPath = target.pathname.endsWith("/couch/")
+          ? "/game/couch/index.html"
+          : target.pathname;
+        if (
+          target.origin !== "https://brand.invalid" ||
+          ![
+            "/game/",
+            "/game/index.html",
+            "/game/company.html",
+            "/game/couch/index.html",
+            "/game/couch/relay-rescue.html",
+          ].includes(targetPath) ||
+          blocked
+        ) {
+          node.attrs = node.attrs.filter((entry) => entry.name !== "href");
+          add("hidden");
+          add("data-branded-unavailable");
         } else {
-          target.search = `?edition=${config.editionId}`;
-          add('href', './' + target.search + target.hash);
+          target.pathname = targetPath;
+          target.search = "";
+          if (targetPath.includes("/couch/")) {
+            target.searchParams.set("journey", config.editionId);
+            if (!name.includes("/couch/"))
+              target.searchParams.set("return", "solo");
+            else if (attr("id") === "race-coop")
+              target.searchParams.set("return", "versus");
+          } else target.searchParams.set("edition", config.editionId);
+          const from = path.posix.dirname("/" + name);
+          let relative = path.posix.relative(from, target.pathname);
+          if (!relative.startsWith(".")) relative = "./" + relative;
+          add("href", relative + target.search + target.hash);
         }
       }
-      if (node.tagName === 'html') add('data-branded-app', config.repo);
+      if (node.tagName === "html") add("data-branded-app", config.repo);
     }
     node.childNodes?.forEach(visit);
   };
   visit(document);
-  return serialize(document).replace('</head>',
-    `<style>${hiddenSelectors.join(',')}{display:none!important}</style></head>`);
+  return serialize(document).replace(
+    "</head>",
+    `<style>${hiddenSelectors.join(",")}{display:none!important}</style></head>`,
+  );
 }
 
 function projectAccessGate(files, config) {
-  const gateScript = readFileSync(new URL('../branding/access-gate.mjs', import.meta.url));
-  const gateStyles = readFileSync(new URL('../branding/access-gate.css', import.meta.url));
-  files.set('game/access-gate.mjs', gateScript);
-  files.set('game/access-gate.css', gateStyles);
-  const head = `<meta name="revealline-access-id" content="${config.repo}"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="access-gate.css"><script src="access-gate.mjs" defer></script>`;
-  for (const name of ['game/index.html', 'game/company.html'])
-    edit(files, name, (source) => once(once(source,
-      '<html', '<html data-access-state="locked"', `${name} access state`),
-    '<head>', `<head>${head}`, `${name} access head`));
-  edit(files, 'game/index.html', (source) => once(source,
-    ':not(#boot-screen):not(script)', ':not(#boot-screen):not(#access-gate):not(script)',
-    'Coupa boot access visibility'));
-  edit(files, 'game/boot.mjs', (source) => once(source,
-    '  function mount() {\n    if (mounted) return;',
-    '  async function mount() {\n    if (mounted) return;\n    await globalThis.RevealLineAccess?.ready;\n    if (mounted) return;',
-    'Coupa boot access wait'));
-  edit(files, 'game/company-entry.mjs', (source) => once(source,
-    'if (globalThis.document && globalThis.location) {',
-    'if (globalThis.document && globalThis.location) {\n  await globalThis.RevealLineAccess?.ready;',
-    'Coupa company access wait'));
+  const gateScript = readFileSync(
+    new URL("../branding/access-gate.mjs", import.meta.url),
+  );
+  const gateStyles = readFileSync(
+    new URL("../branding/access-gate.css", import.meta.url),
+  );
+  files.set("game/access-gate.mjs", gateScript);
+  files.set("game/access-gate.css", gateStyles);
+  const head = (prefix = "") =>
+    `<meta name="revealline-access-id" content="${config.repo}"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="${prefix}access-gate.css"><script src="${prefix}access-gate.mjs" defer></script>`;
+  edit(files, "game/index.html", (source) => {
+    const values = {
+      "revealline-access-id": config.repo,
+      "revealline-access-title": "Coupa Village",
+      "revealline-access-salt":
+        "bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ",
+      "revealline-access-verifier":
+        "1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw",
+    };
+    for (const [name, value] of Object.entries(values)) {
+      const expression = new RegExp(`(<meta name="${name}" content=")[^"]*(")`);
+      const matches = source.match(new RegExp(expression.source, "g")) ?? [];
+      if (matches.length !== 1)
+        throw new Error(`Upstream changed access metadata: ${name}`);
+      source = source.replace(expression, `$1${value}$2`);
+    }
+    return source;
+  });
+  for (const name of [
+    "game/company.html",
+    "game/couch/index.html",
+    "game/couch/relay-rescue.html",
+  ])
+    edit(files, name, (source) =>
+      once(
+        once(
+          source,
+          "<html",
+          '<html data-access-state="locked"',
+          `${name} access state`,
+        ),
+        "<head>",
+        `<head>${head(name.includes("/couch/") ? "../" : "")}`,
+        `${name} access head`,
+      ),
+    );
+  edit(files, "game/boot.mjs", (source) =>
+    source.includes("RevealLineAccess?.ready")
+      ? source
+      : once(
+          source,
+          "  function mount() {\n    if (mounted) return;",
+          "  async function mount() {\n    if (mounted) return;\n    await globalThis.RevealLineAccess?.ready;\n    if (mounted) return;",
+          "Coupa boot access wait",
+        ),
+  );
+  edit(files, "game/company-entry.mjs", (source) =>
+    once(
+      source,
+      "if (globalThis.document && globalThis.location) {",
+      "if (globalThis.document && globalThis.location) {\n  await globalThis.RevealLineAccess?.ready;",
+      "Coupa company access wait",
+    ),
+  );
+  for (const name of ["game/couch/couch.mjs", "game/couch/relay-rescue.mjs"])
+    edit(
+      files,
+      name,
+      (source) => `await globalThis.RevealLineAccess?.ready;\n${source}`,
+    );
 }
 
 function projectLanding(files) {
   // Presentation-only customization. Keep official artwork bytes, campaign
   // identities and the upstream menu's accessibility/lifecycle contracts.
-  const css = readFileSync(new URL('../branding/coupa-landing.css', import.meta.url));
-  const art = readFileSync(new URL('../branding/coupa-landing.html', import.meta.url), 'utf8');
-  files.set('game/ui/coupa-landing.css', css);
-  edit(files, 'game/index.html', (source) => once(once(source,
-    '<div class="home-art" aria-hidden="true"></div>', art, 'Coupa landing decoration'),
-    '</head>', '<link rel="stylesheet" href="ui/coupa-landing.css"></head>', 'Coupa landing styles'));
-  edit(files, 'game/ui/edition-solo.mjs', (source) => once(source,
-    "logo.className = 'edition-home-logo';",
-    "logo.className = 'edition-home-logo coupa-landing-logo';", 'Coupa landing logo'));
-  edit(files, 'game/ui/menu-scene-catalog.mjs', (source) => once(source,
-    'if (!composition) return profile;', `if (!composition) return {
+  const css = readFileSync(
+    new URL("../branding/coupa-landing.css", import.meta.url),
+  );
+  const art = readFileSync(
+    new URL("../branding/coupa-landing.html", import.meta.url),
+    "utf8",
+  );
+  files.set("game/ui/coupa-landing.css", css);
+  edit(files, "game/index.html", (source) =>
+    once(
+      once(
+        source,
+        '<div class="home-art" aria-hidden="true"></div>',
+        art,
+        "Coupa landing decoration",
+      ),
+      "</head>",
+      '<link rel="stylesheet" href="ui/coupa-landing.css"></head>',
+      "Coupa landing styles",
+    ),
+  );
+  edit(files, "game/ui/edition-solo.mjs", (source) =>
+    once(
+      source,
+      "logo.className = 'edition-home-logo';",
+      "logo.className = 'edition-home-logo coupa-landing-logo';",
+      "Coupa landing logo",
+    ),
+  );
+  edit(files, "game/ui/menu-scene-catalog.mjs", (source) =>
+    once(
+      source,
+      "if (!composition) return profile;",
+      `if (!composition) return {
     ...profile,
     landscape: '../editions/assets/coupa/wallpaper-network-2024.png',
     portrait: '../editions/assets/coupa/wallpaper-network-2024.png',
     landscapePosition: '72% 50%', portraitPosition: '82% 50%',
     environment: [], portraitEnvironment: [], actorVisible: false,
     signalOpacity: 0, signalPeakOpacity: 0,
-  };`, 'Coupa official wallpaper'));
+  };`,
+      "Coupa official wallpaper",
+    ),
+  );
   // The new CSS capture trails own ambient motion. Keep the upstream motion
   // switch, reduced-motion, visibility and dialog pause lifecycle, without
   // starting photograph distortion or analog interference renderers.
-  edit(files, 'game/ui/menu-scenes.mjs', (source) => once(source,
-    '    if (running && !artworkMotion) {', '    if (false && running && !artworkMotion) {', 'Coupa static wallpaper renderer'));
-  edit(files, 'game/ui/menu-scenes.mjs', (source) => once(source,
-    '    if (running && !signalLoss) {', '    if (false && running && !signalLoss) {', 'Coupa clean wallpaper'));
-  edit(files, 'game/app.mjs', (source) => once(source,
-    "container: $('shell-home')?.querySelector('.home-content'),",
-    'container: null, // The dedicated landing uses its official rotating Coupa mark.', 'Coupa landing character'));
+  edit(files, "game/ui/menu-scenes.mjs", (source) =>
+    once(
+      source,
+      "    if (running && !artworkMotion) {",
+      "    if (false && running && !artworkMotion) {",
+      "Coupa static wallpaper renderer",
+    ),
+  );
+  edit(files, "game/ui/menu-scenes.mjs", (source) =>
+    once(
+      source,
+      "    if (running && !signalLoss) {",
+      "    if (false && running && !signalLoss) {",
+      "Coupa clean wallpaper",
+    ),
+  );
+  edit(files, "game/app.mjs", (source) =>
+    once(
+      source,
+      "container: $('shell-home')?.querySelector('.home-content'),",
+      "container: null, // The dedicated landing uses its official rotating Coupa mark.",
+      "Coupa landing character",
+    ),
+  );
+}
+
+function projectEnglishMultiplayer(files, config, catalog) {
+  // The dedicated application has one language contract. Removing the second
+  // locale at the bootstrap boundary also overrides an older saved preference.
+  edit(files, "game/i18n/bootstrap.mjs", (source) =>
+    once(
+      source,
+      'const locales = ["en","uk"];',
+      'const locales = ["en"];',
+      "English-only locale catalog",
+    ),
+  );
+
+  const routeLoader = `import { mergeEditionProjects } from '../bootstrap.mjs';
+const ROUTE_ID = ${JSON.stringify(config.editionId)};
+let loading;
+const seatIds = Object.freeze(['coupa-seat-one', 'coupa-seat-two']);
+function multiplayerProject(source) {
+  const maps = source.maps.map((map) => {
+    const primary = map.spawns.find((spawn) => spawn.id === source.missions.find((mission) =>
+      mission.map.id === map.id && mission.map.revision === map.revision)?.spawnId) ?? map.spawns[0];
+    const x1 = Math.max(.5, Math.min(map.width - 2.5, primary.x - 1));
+    const x2 = Math.min(map.width - .5, x1 + 2);
+    const { gates, speedZones, ...base } = map;
+    return { ...base, format: 'MapDesignV1', terrain: [], spawns: [
+      ...map.spawns.filter((spawn) => !seatIds.includes(spawn.id)),
+      { id: seatIds[0], x: x1, y: primary.y },
+      { id: seatIds[1], x: x2, y: primary.y },
+    ] };
+  });
+  const missions = source.missions.map((mission) => ({
+    ...mission,
+    format: 'MissionDesignV1',
+    spawnId: seatIds[0],
+    modes: ['team', 'versus'],
+    team: { format: 'TeamMissionV1', spawnIds: [...seatIds] },
+    actors: mission.actors.filter((actor) => actor.role === 'field-keeper'),
+    objectives: [],
+    bonuses: [],
+    timeLimitSeconds: 0,
+    design: { ...mission.design, difficulty: {
+      ...mission.design.difficulty,
+      coordination: Math.max(1, mission.design.difficulty.coordination ?? 0),
+      timePressure: 0,
+    } },
+  })).map(({ combat, timedBonuses, encounter, relayLinks, ...mission }) => mission);
+  return { ...source, id: 'edition-' + ROUTE_ID + '-multiplayer', maps, missions };
+}
+async function readJSON(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new TypeError('The Coupa multiplayer campaign is unavailable.');
+  return response.json();
+}
+export async function loadAuthoredJourneyRoute(id) {
+  if (id !== ROUTE_ID) return null;
+  return loading ??= (async () => {
+    const catalogURL = new URL('../../../edition-catalog.json', import.meta.url);
+    const runtime = await readJSON(catalogURL);
+    const edition = runtime.editions.find((entry) => entry.id === ROUTE_ID);
+    if (!edition) throw new TypeError('The Coupa multiplayer edition is unavailable.');
+    const campaigns = edition.campaignIds.map((campaignId) =>
+      runtime.campaigns.find((entry) => entry.id === campaignId));
+    if (campaigns.some((entry) => !entry))
+      throw new TypeError('The Coupa multiplayer campaign list is incomplete.');
+    const sources = await Promise.all(campaigns.map((entry) =>
+      readJSON(new URL(entry.sourcePath, catalogURL))));
+    const source = multiplayerProject(mergeEditionProjects({ edition, campaigns }, sources));
+    return Object.freeze({
+      id: ROUTE_ID,
+      label: edition.name,
+      profileKey: ROUTE_ID + '-multiplayer',
+      sessionKey: ${JSON.stringify(config.repo)} + '.suspended.multiplayer.v1',
+      source,
+      corePackIds: Object.freeze(source.packs.map((entry) => entry.id)),
+      optionalCampaignIds: Object.freeze([]),
+      preserveOriginalThemes: true,
+    });
+  })();
+}
+`;
+  files.set("game/editions/standalone/route-loader.mjs", encoder(routeLoader));
+  files.set(
+    "game/editions/standalone/team-entry.mjs",
+    encoder(`import { createCandidateTeamHost } from '../../content-design/team-host.mjs';
+import { createJourneyPreferences } from '../../journey/preferences.mjs';
+import { loadAuthoredJourneyRoute } from './route-loader.mjs';
+export async function createStandaloneTeamEntry(id) {
+  const route = await loadAuthoredJourneyRoute(id);
+  if (!route) throw new TypeError('The Coupa Team campaign is unavailable.');
+  const candidateJourney = createCandidateTeamHost(route.source, { corePackIds: route.corePackIds });
+  const candidatePreferences = createJourneyPreferences({ window: globalThis.window ?? globalThis });
+  return Object.freeze({
+    candidateJourney,
+    candidatePreferences,
+    candidateDifficulty: candidatePreferences.snapshot().difficulty,
+    candidateEditionLabel: route.label,
+  });
+}
+`),
+  );
+  const themePath = catalog.editions[0].boot.themes;
+  for (const [target, key] of [
+    ["game/content/campaign.json", "campaign"],
+    ["game/content/classes.json", "classes"],
+    ["game/content/themes.json", "themes"],
+    ["authoring/motion-lab/presets.json", "presets"],
+  ])
+    files.set(target, Buffer.from(files.get(catalog.editions[0].boot[key])));
+  files.set(
+    "game/content-design/themes.json",
+    Buffer.from(files.get(themePath)),
+  );
+
+  edit(files, "game/content-design/mode-href.mjs", (source) =>
+    once(
+      source,
+      "export const AUTHORED_JOURNEY_ROUTE_IDS = Object.freeze([\n  'opening',",
+      `export const AUTHORED_JOURNEY_ROUTE_IDS = Object.freeze([\n  ${JSON.stringify(config.editionId)},\n  'opening',`,
+      "Coupa authored route",
+    ),
+  );
+  edit(files, "game/ui/authored-mode-routes.mjs", (source) =>
+    once(
+      source,
+      "  if (!ROUTES.has(route) || !['solo', 'versus'].includes(mode)) return null;",
+      `  if (!ROUTES.has(route) || !['solo', 'versus'].includes(mode)) return null;
+  if (route === ${JSON.stringify(config.editionId)})
+    return Object.freeze(mode === 'solo'
+      ? { versus: 'couch/?journey=${config.editionId}&return=solo', team: 'couch/relay-rescue.html?journey=${config.editionId}&return=solo' }
+      : { solo: '../?edition=${config.editionId}', team: 'relay-rescue.html?journey=${config.editionId}&return=versus' });`,
+      "Coupa multiplayer destinations",
+    ),
+  );
+  edit(files, "game/couch/relay-rescue.mjs", (source) => {
+    source = once(
+      source,
+      "  let candidateEntry;\n  if (",
+      `  let candidateEntry;
+  if (journeyRequest === ${JSON.stringify(config.editionId)}) {
+    const { createStandaloneTeamEntry } = await import('../editions/standalone/team-entry.mjs');
+    candidateEntry = await createStandaloneTeamEntry(journeyRequest);
+  } else if (`,
+      "Coupa Team entry",
+    );
+    source = once(
+      source,
+      "  const homeHref = authoredReturn?.solo ?? (legacyEntry ? '../?journey=legacy' : '../');\n  const versusHref = authoredReturn?.versus ?? (legacyEntry ? './?journey=legacy' : './');",
+      `  const dedicatedEntry = candidateJourney && entryParams.get('journey') === ${JSON.stringify(config.editionId)};
+  const homeHref = dedicatedEntry ? '../?edition=${config.editionId}' : authoredReturn?.solo ?? (legacyEntry ? '../?journey=legacy' : '../');
+  const versusHref = dedicatedEntry ? './?journey=${config.editionId}' : authoredReturn?.versus ?? (legacyEntry ? './?journey=legacy' : './');`,
+      "Coupa Team return routes",
+    );
+    source = once(
+      source,
+      `  const presentationPage = mountPresentationPage({ document, window });
+  presentationPage.bindPainter(painter);`,
+      `  const presentationPage = mountPresentationPage({ document, window });
+  presentationPage.bindPainter(painter);
+  // The branded build retains the authored Coupa picture while omitting the
+  // main game's optional presentation release. Candidate picture ownership
+  // still needs a stable theme identity for its exact-attempt checks.
+  const dedicatedCoupaTeamPresentation = Object.freeze({
+    resolved: Object.freeze({
+      theme: Object.freeze({ id: 'fpv', revision: 1 }),
+      collection: null,
+    }),
+  });`,
+      "Coupa Team presentation identity",
+    );
+    source = once(
+      source,
+      `              getSnapshot: presentationPage.current,
+            })`,
+      `              getSnapshot: () => dedicatedCoupaTeamPresentation,
+            })`,
+      "Coupa Team candidate picture identity",
+    );
+    source = once(
+      source,
+      `    const eligible =
+      !artworkSource &&
+      (sourcePack === COOP_STARTER_PACK || (journeyRow && candidateJourney.owns(journeyRow)));`,
+      `    const eligible = !artworkSource && sourcePack === COOP_STARTER_PACK;`,
+      "Coupa Team actor cosmetics",
+    );
+    source = once(
+      source,
+      `    const asset = candidateTeamPictureFrame(binding, row.level, presentationPage.current());`,
+      `    const asset = candidateTeamPictureFrame(
+      binding,
+      row.level,
+      dedicatedCoupaTeamPresentation,
+    );`,
+      "Coupa Team earned picture identity",
+    );
+    return source;
+  });
+  edit(files, "game/couch/couch.mjs", (source) =>
+    once(
+      source,
+      "    if (candidateJourney?.owns(row)) {",
+      `    if (candidateJourney?.owns(row)) {
+      // Coupa multiplayer keeps the campaign's compiled actor geometry. It has
+      // no dependency on the main game's separate cosmetic release bundle.
+      return null;`,
+      "Coupa Versus actor presentation",
+    ),
+  );
+  edit(files, "game/couch/couch.mjs", (source) =>
+    once(
+      source,
+      `      presentationOperation?.finish({
+        state: status.status === 'error' ? 'error' : 'ready',
+        message:
+          status.status === 'error'
+            ? t('interface:releaseArtworkIsUnavailableTheCurrentLookIsKept')
+            : '',
+      });`,
+      `      // This branded build deliberately omits the main game's optional
+      // presentation release and keeps the authored Coupa artwork.
+      presentationOperation?.finish({ state: 'ready', message: '' });`,
+      "Coupa Versus presentation status",
+    ),
+  );
+  edit(files, "game/couch/mode-entry.js", (source) => {
+    source = once(
+      source,
+      "  const authoredRoutes = [\n    'opening',",
+      `  const authoredRoutes = [\n    ${JSON.stringify(config.editionId)},\n    'opening',`,
+      "Coupa Versus bootstrap route",
+    );
+    return once(
+      source,
+      "  const teamRoutes = [\n    'team-greybox',",
+      `  const teamRoutes = [\n    ${JSON.stringify(config.editionId)},\n    'team-greybox',`,
+      "Coupa Team bootstrap route",
+    );
+  });
+  edit(files, "game/ui/edition-solo.mjs", (source) =>
+    once(
+      source,
+      `  // Mode controls stay on the common template, but this delivery contains only
+  // Solo. The mission library itself derives availability from selected sources.
+  for (const id of [
+    'shell-mode-choice',
+    'shell-team',
+    'shell-versus',
+    'shell-title-team',
+    'shell-title-versus',
+  ])
+    if (doc.getElementById(id)) doc.getElementById(id).hidden = true;`,
+      `  // This edition keeps the common Solo, Team and Versus navigation.
+  for (const id of ['shell-mode-choice', 'shell-team', 'shell-versus', 'shell-title-team', 'shell-title-versus'])
+    if (doc.getElementById(id)) doc.getElementById(id).hidden = false;`,
+      "Coupa multiplayer controls",
+    ),
+  );
 }
 
 function pruneUnreachableModules(files) {
-  const pending = ['game/app.mjs', 'game/boot.mjs', 'game/company-entry.mjs'];
+  const pending = ["game/app.mjs", "game/boot.mjs", "game/company-entry.mjs"];
   for (const [name, bytes] of files) {
-    if (!name.endsWith('.html')) continue;
-    for (const match of bytes.toString().matchAll(/\b(?:src|data-module)=["']([^"']+\.(?:mjs|js))["']/g))
-      pending.push(path.posix.normalize(path.posix.join(path.posix.dirname(name), match[1])));
+    if (!name.endsWith(".html")) continue;
+    for (const match of bytes
+      .toString()
+      .matchAll(/\b(?:src|data-module)=["']([^"']+\.(?:mjs|js))["']/g))
+      pending.push(
+        path.posix.normalize(
+          path.posix.join(path.posix.dirname(name), match[1]),
+        ),
+      );
   }
   const visited = new Set();
   while (pending.length) {
     const name = pending.pop();
     if (visited.has(name) || !files.has(name)) continue;
     visited.add(name);
-    const tree = parse(files.get(name).toString(), { ecmaVersion: 'latest', sourceType: 'module', allowHashBang: true });
+    const tree = parse(files.get(name).toString(), {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      allowHashBang: true,
+    });
     walk(tree, (node) => {
-      const target = ['ImportDeclaration', 'ExportNamedDeclaration', 'ExportAllDeclaration', 'ImportExpression'].includes(node.type)
+      const target = [
+        "ImportDeclaration",
+        "ExportNamedDeclaration",
+        "ExportAllDeclaration",
+        "ImportExpression",
+      ].includes(node.type)
         ? node.source?.value
-        : node.type === 'NewExpression' && node.callee?.name === 'URL' ? node.arguments[0]?.value : null;
-      if (typeof target === 'string' && /^\.{1,2}\//.test(target) && /\.(?:mjs|js)$/.test(target))
-        pending.push(path.posix.normalize(path.posix.join(path.posix.dirname(name), target)));
+        : node.type === "NewExpression" && node.callee?.name === "URL"
+          ? node.arguments[0]?.value
+          : null;
+      if (
+        typeof target === "string" &&
+        /^\.{1,2}\//.test(target) &&
+        /\.(?:mjs|js)$/.test(target)
+      )
+        pending.push(
+          path.posix.normalize(
+            path.posix.join(path.posix.dirname(name), target),
+          ),
+        );
     });
   }
   for (const name of files.keys())
@@ -298,50 +836,110 @@ function pruneUnreachableModules(files) {
 
 export function isolateBrand(input, config) {
   if (!(input instanceof Map) || !/^[a-z][a-z0-9-]+$/.test(config.repo))
-    throw new TypeError('An isolated brand needs a file map and stable application identity.');
+    throw new TypeError(
+      "An isolated brand needs a file map and stable application identity.",
+    );
   const files = new Map(input);
-  const catalog = JSON.parse(files.get('edition-catalog.json'));
-  if (catalog.editions.length !== 1 || catalog.editions[0].id !== config.editionId ||
-      catalog.brands.length !== 1 || catalog.brands[0].id !== config.brandId ||
-      catalog.campaigns.some((entry) => entry.brandId !== config.brandId))
-    throw new Error('The compiler did not select exactly the dedicated brand.');
-  files.set('game/branded-isolation.mjs', encoder(policyModule(config, catalog)));
-  edit(files, 'game/runtime-content-provider.mjs', (source) => {
-    source = `import { assertBrandedLocation } from './branded-isolation.mjs';\n` + source;
-    return once(source, '  const sourceURL = new URL(locationRef.href);',
-      '  const sourceURL = assertBrandedLocation(locationRef.href);', 'provider URL');
+  const catalog = JSON.parse(files.get("edition-catalog.json"));
+  if (
+    catalog.editions.length !== 1 ||
+    catalog.editions[0].id !== config.editionId ||
+    catalog.brands.length !== 1 ||
+    catalog.brands[0].id !== config.brandId ||
+    catalog.campaigns.some((entry) => entry.brandId !== config.brandId)
+  )
+    throw new Error("The compiler did not select exactly the dedicated brand.");
+  files.set(
+    "game/branded-isolation.mjs",
+    encoder(policyModule(config, catalog)),
+  );
+  edit(files, "game/runtime-content-provider.mjs", (source) => {
+    source =
+      `import { assertBrandedLocation } from './branded-isolation.mjs';\n` +
+      source;
+    return once(
+      source,
+      "  const sourceURL = new URL(locationRef.href);",
+      "  const sourceURL = assertBrandedLocation(locationRef.href);",
+      "provider URL",
+    );
   });
-  edit(files, 'game/app.mjs', (source) => {
-    source = `import { installBrandedIsolation, assertBrandedLocation, assertBrandedPacks, denyBrandedImport } from './branded-isolation.mjs';\n` + source;
-    source = once(source, '  const previewSession = createStudioPreviewSession(location.href);',
-      '  assertBrandedLocation(location.href);\n  const previewSession = createStudioPreviewSession(location.href);', 'pre-preview startup');
-    source = once(source, '  const runtimeContent = await loadCompanyStartup();',
-      '  installBrandedIsolation(document, window);\n  const runtimeContent = await loadCompanyStartup();', 'host startup');
-    source = functionGuard(source, 'prepareContentCatalog', '    assertBrandedPacks(nextPacks);');
-    source = functionGuard(source, 'replacePackLibrary', '    assertBrandedPacks(next);');
-    for (const boundary of ['    setLibrary: (next) => {', '    applyBackup: async (prepared) => {'])
-      source = once(source, boundary, boundary + '\n      denyBrandedImport();', boundary);
+  edit(files, "game/app.mjs", (source) => {
+    source =
+      `import { installBrandedIsolation, assertBrandedLocation, assertBrandedPacks, denyBrandedImport } from './branded-isolation.mjs';\n` +
+      source;
+    source = once(
+      source,
+      "  const previewSession = createStudioPreviewSession(location.href);",
+      "  assertBrandedLocation(location.href);\n  const previewSession = createStudioPreviewSession(location.href);",
+      "pre-preview startup",
+    );
+    source = once(
+      source,
+      "  const runtimeContent = await loadCompanyStartup();",
+      "  installBrandedIsolation(document, window);\n  const runtimeContent = await loadCompanyStartup();",
+      "host startup",
+    );
+    source = functionGuard(
+      source,
+      "prepareContentCatalog",
+      "    assertBrandedPacks(nextPacks);",
+    );
+    source = functionGuard(
+      source,
+      "replacePackLibrary",
+      "    assertBrandedPacks(next);",
+    );
+    for (const boundary of [
+      "    setLibrary: (next) => {",
+      "    applyBackup: async (prepared) => {",
+    ])
+      source = once(
+        source,
+        boundary,
+        boundary + "\n      denyBrandedImport();",
+        boundary,
+      );
     // Registered training and reusable controller mechanisms remain upstream
     // engine code; no training/course content can be entered in this product.
-    source = functionGuard(source, 'enterFirstFlight', '    denyBrandedImport();');
-    source = functionGuard(source, 'initializeSoundtrack',
-      "    soundtrackLoading = false;\n    soundtrackStatus('Campaign music ready.');\n    return; // Dedicated editions use their authored procedural soundtrack.");
+    source = functionGuard(
+      source,
+      "enterFirstFlight",
+      "    denyBrandedImport();",
+    );
+    source = functionGuard(
+      source,
+      "initializeSoundtrack",
+      "    soundtrackLoading = false;\n    soundtrackStatus('Campaign music ready.');\n    return; // Dedicated editions use their authored procedural soundtrack.",
+    );
     return source;
   });
-  edit(files, 'game/ui/library-panel.mjs', (source) => {
-    source = `import { denyBrandedImport } from '../branded-isolation.mjs';\n` + source;
-    source = functionGuard(source, 'install', '    denyBrandedImport();');
-    return functionGuard(source, 'importSave', '    denyBrandedImport();');
+  edit(files, "game/ui/library-panel.mjs", (source) => {
+    source =
+      `import { denyBrandedImport } from '../branded-isolation.mjs';\n` +
+      source;
+    source = functionGuard(source, "install", "    denyBrandedImport();");
+    return functionGuard(source, "importSave", "    denyBrandedImport();");
   });
-  edit(files, 'game/ui/game-shell.mjs', (source) => {
-    source = removeImports(source, ['../fpv-entry.mjs', './optional-practice-panel.mjs', '../release-explorer.mjs']);
-    const start = source.indexOf('  const optionalPractice = !isolated');
-    const end = source.indexOf('  const deck =', start);
-    if (start < 0 || end < 0) throw new Error('Upstream changed optional practice shell.');
-    return source.slice(0, start) +
-      "  const optionalPractice = null;\n  const homeFPV = $('shell-home-fpv');\n  const homePractice = $('shell-home-practice');\n" + source.slice(end);
+  edit(files, "game/ui/game-shell.mjs", (source) => {
+    source = removeImports(source, [
+      "../fpv-entry.mjs",
+      "./optional-practice-panel.mjs",
+      "../release-explorer.mjs",
+    ]);
+    const start = source.indexOf("  const optionalPractice = !isolated");
+    const end = source.indexOf("  const deck =", start);
+    if (start < 0 || end < 0)
+      throw new Error("Upstream changed optional practice shell.");
+    return (
+      source.slice(0, start) +
+      "  const optionalPractice = null;\n  const homeFPV = $('shell-home-fpv');\n  const homePractice = $('shell-home-practice');\n" +
+      source.slice(end)
+    );
   });
-  files.set('game/ui/edition-navigation.mjs', encoder(`import { installBrandedIsolation } from '../branded-isolation.mjs';
+  files.set(
+    "game/ui/edition-navigation.mjs",
+    encoder(`import { installBrandedIsolation } from '../branded-isolation.mjs';
 export function mountEditionNavigation({provider, document: doc}) {
   for (const link of doc.querySelectorAll('a[href]')) {
     const target = new URL(link.getAttribute('href'), provider.href());
@@ -351,36 +949,86 @@ export function mountEditionNavigation({provider, document: doc}) {
   }
   installBrandedIsolation(doc, doc.defaultView ?? globalThis.window);
 }
-`));
-  edit(files, 'game/ui/edition-solo.mjs', (source) => once(source,
-    "if (!previewSession && root.dataset.editionId && version !== 'DEV') {",
-    'if (false) { // Dedicated web app does not publish the upstream edition launcher.', 'edition offline launcher'));
-  edit(files, 'game/ui/brand-identity.mjs', (source) => once(source,
-    "export const GAME_BRAND_NAME = 'FPV / LINE';",
-    `export const GAME_BRAND_NAME = ${JSON.stringify(config.name)};`, 'brand fallback'));
-  const brandIcon = catalog.assets.find((asset) => asset.id === catalog.brands[0].iconAssetId);
-  if (!brandIcon) throw new Error('The dedicated brand must provide a browser icon.');
-  edit(files, 'game/ui/brand-identity.css', (source) => once(source,
-    './art/identity/fpv-line/icon-192.png',
-    path.posix.relative('game/ui', brandIcon.path), 'shared brand CSS icon'));
+`),
+  );
+  edit(files, "game/ui/edition-solo.mjs", (source) =>
+    once(
+      source,
+      "if (!previewSession && root.dataset.editionId && version !== 'DEV') {",
+      "if (false) { // Dedicated web app does not publish the upstream edition launcher.",
+      "edition offline launcher",
+    ),
+  );
+  edit(files, "game/ui/brand-identity.mjs", (source) =>
+    once(
+      source,
+      "export const GAME_BRAND_NAME = 'FPV / LINE';",
+      `export const GAME_BRAND_NAME = ${JSON.stringify(config.name)};`,
+      "brand fallback",
+    ),
+  );
+  const brandIcon = catalog.assets.find(
+    (asset) => asset.id === catalog.brands[0].iconAssetId,
+  );
+  if (!brandIcon)
+    throw new Error("The dedicated brand must provide a browser icon.");
+  edit(files, "game/ui/brand-identity.css", (source) =>
+    once(
+      source,
+      "./art/identity/fpv-line/icon-192.png",
+      path.posix.relative("game/ui", brandIcon.path),
+      "shared brand CSS icon",
+    ),
+  );
   // Full-game public routing has no role in a pinned edition, and must not
   // carry a discoverable registry of other communities into the derivative.
-  files.set('game/community-routes.mjs', encoder(`export const COMMUNITY_ROUTES = Object.freeze([]);
+  files.set(
+    "game/community-routes.mjs",
+    encoder(`export const COMMUNITY_ROUTES = Object.freeze([]);
 export function communityRouteFromURL() { return null; }
 export function communityHref() { return null; }
 export function communityEntryURL() { throw new TypeError('Community selection is unavailable.'); }
 export function gameDocumentURL(href) { const source = new URL(href), target = new URL('index.html', source); target.search = source.search; target.hash = source.hash; return target; }
-`));
-  files.set('game/content/soundtrack-catalogue.mjs', encoder(`// Community apps retain authored campaign music; the public recording archive is not distributed.
+export function communityDirectoryURL(href) { return gameDocumentURL(href); }
+export function communityDirectoryReturnURL(value, directoryURL) {
+  const game = new URL('../', directoryURL);
+  try {
+    const target = new URL(value, game);
+    if (target.origin === game.origin && target.pathname.startsWith(game.pathname)) return target;
+  } catch {}
+  return game;
+}
+`),
+  );
+  files.set(
+    "game/content/soundtrack-catalogue.mjs",
+    encoder(`// Community apps retain authored campaign music; the public recording archive is not distributed.
 export const SOUNDTRACK_CATALOGUE = Object.freeze({format:'revealline-soundtrack-catalogue.v2',edition:'${config.editionId}',tracks:[]});
 export const SOUNDTRACK_ARCHIVES = Object.freeze([]);
 export const SOUNDTRACK_COLLECTIONS = Object.freeze([]);
 export const SOUNDTRACK_BUNDLED_ASSETS = Object.freeze([]);
-`));
-  files.set('game/ui/soundtrack-panel.mjs', encoder(`// The dedicated game has campaign music and normal volume controls only.
-export function attachSoundtrackPanel() { throw new TypeError('The public music library is unavailable in this community app.'); }
-`));
-  files.set('game/first-flight.mjs', encoder(`// Standalone general-flight course content is excluded from this community app.
+`),
+  );
+  files.set(
+    "game/ui/soundtrack-panel.mjs",
+    encoder(`// The dedicated game has campaign music and normal volume controls only.
+export function attachSoundtrackPanel({ document: doc = globalThis.document } = {}) {
+  const element = doc.createElement('div');
+  element.hidden = true;
+  return Object.freeze({
+    element,
+    isOpen: () => false,
+    open: async () => false,
+    close() {},
+    update() {},
+    dispose() { element.remove?.(); },
+  });
+}
+`),
+  );
+  files.set(
+    "game/first-flight.mjs",
+    encoder(`// Standalone general-flight course content is excluded from this community app.
 import { denyBrandedImport } from './branded-isolation.mjs';
 export const FIRST_FLIGHT_LESSONS = Object.freeze([]);
 export function resolveCourseRequest() { return null; }
@@ -388,23 +1036,48 @@ export const getFirstFlightLesson = denyBrandedImport;
 export const createLessonScenario = denyBrandedImport;
 export const captureLessonFacts = denyBrandedImport;
 export const createLessonObserver = denyBrandedImport;
-`));
+`),
+  );
   // The original demo catalogue embeds unrelated first-game missions. Live
   // demonstrations of the selected mission remain available through the engine.
-  if (files.has('game/demo-data/catalog.json'))
-    files.set('game/demo-data/catalog.json', json({ format: 'revealline-demo-catalog.v1', clips: [] }));
-  if (files.has('game/demo-data/variant-provenance.json'))
-    files.set('game/demo-data/variant-provenance.json', json({ recordings: [] }));
+  if (files.has("game/demo-data/catalog.json"))
+    files.set(
+      "game/demo-data/catalog.json",
+      json({ format: "revealline-demo-catalog.v1", clips: [] }),
+    );
+  if (files.has("game/demo-data/variant-provenance.json"))
+    files.set(
+      "game/demo-data/variant-provenance.json",
+      json({ recordings: [] }),
+    );
   for (const name of [...files.keys()]) {
-    if (/^game\/(?:controller-lab|replay-theater)\/.*\.(?:html|css)$/.test(name) ||
-        /^game\/ui\/art\/identity\/fpv-line\//.test(name) ||
-        /^game\/demo-data\/.*\.replay\.json$/.test(name) ||
-        /^game\/audio\/soundtracks\/.*\.mp3$/.test(name) ||
-        /^game\/(?:fpv-entry|optional-practice[^/]*|ui\/optional-practice-panel)\.(?:mjs|css)$/.test(name)) files.delete(name);
+    if (
+      /^game\/(?:controller-lab|replay-theater)\/.*\.(?:html|css)$/.test(
+        name,
+      ) ||
+      /^game\/ui\/art\/identity\/fpv-line\//.test(name) ||
+      /^game\/demo-data\/.*\.replay\.json$/.test(name) ||
+      /^game\/audio\/soundtracks\/.*\.mp3$/.test(name) ||
+      /^game\/(?:fpv-entry|optional-practice[^/]*|ui\/optional-practice-panel)\.(?:mjs|css)$/.test(
+        name,
+      )
+    )
+      files.delete(name);
   }
+  projectEnglishMultiplayer(files, config, catalog);
   for (const [name, bytes] of files) {
-    if (/\.(?:mjs|js)$/.test(name)) files.set(name, encoder(scopeStorage(bytes.toString('utf8'), config.repo)));
-    if (name.endsWith('.html')) files.set(name, encoder(projectHTML(bytes.toString('utf8'), name, config)));
+    if (/\.(?:mjs|js)$/.test(name))
+      files.set(
+        name,
+        encoder(scopeStorage(bytes.toString("utf8"), config.repo)),
+      );
+    if (name.endsWith(".html"))
+      files.set(
+        name,
+        encoder(
+          projectHTML(bytes.toString("utf8"), name, config, brandIcon.path),
+        ),
+      );
   }
   projectLanding(files);
   projectAccessGate(files, config);
@@ -413,45 +1086,103 @@ export const createLessonObserver = denyBrandedImport;
   // which became unused after removing its public archive/default identity.
   // Remove only unowned runtime records; selected brand/campaign pins may never
   // silently lose bytes during projection.
-  const removedAssetIds = new Set(catalog.assets.filter((asset) => !files.has(asset.path)).map((asset) => asset.id));
-  const ownedAssetIds = new Set([...catalog.brands, ...catalog.editions, ...catalog.campaigns].flatMap((entry) =>
-    [...(entry.assetIds ?? []), ...['heroAssetId', 'logoAssetId', 'fontAssetId', 'iconAssetId'].map((key) => entry[key]).filter(Boolean)]));
+  const removedAssetIds = new Set(
+    catalog.assets
+      .filter((asset) => !files.has(asset.path))
+      .map((asset) => asset.id),
+  );
+  const ownedAssetIds = new Set(
+    [...catalog.brands, ...catalog.editions, ...catalog.campaigns].flatMap(
+      (entry) => [
+        ...(entry.assetIds ?? []),
+        ...["heroAssetId", "logoAssetId", "fontAssetId", "iconAssetId"]
+          .map((key) => entry[key])
+          .filter(Boolean),
+      ],
+    ),
+  );
   for (const id of removedAssetIds)
-    if (!id.startsWith('runtime-') || ownedAssetIds.has(id) || catalog.assets.some((asset) =>
-      !removedAssetIds.has(asset.id) && asset.dependencies.includes(id)))
-      throw new Error(`Projection would remove selected presentation bytes: ${id}`);
-  catalog.assets = catalog.assets.filter((asset) => !removedAssetIds.has(asset.id));
-  files.set('edition-catalog.json', json(catalog));
-  const title = config.name.replace(/[<>&"]/g, '');
-  files.set('index.html', encoder(`<!doctype html><html lang="en" data-branded-app="${config.repo}" data-access-state="locked"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="revealline-access-id" content="${config.repo}"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="game/access-gate.css"><script src="game/access-gate.mjs" defer></script><title>${title}</title></head><body><main><h1>${title}</h1><p id="entry-status">Opening your Coupa campaign…</p><a href="game/index.html?edition=${config.editionId}">Play ${title}</a></main><script type="module">import { assertBrandedLocation } from './game/branded-isolation.mjs'; await globalThis.RevealLineAccess?.ready; try { assertBrandedLocation(location.href); const target = new URL('game/index.html', location.href); target.search = location.search; target.hash = location.hash; location.replace(target); } catch (error) { document.getElementById('entry-status').textContent = error.message; }</script></body></html>`));
+    if (
+      !id.startsWith("runtime-") ||
+      ownedAssetIds.has(id) ||
+      catalog.assets.some(
+        (asset) =>
+          !removedAssetIds.has(asset.id) && asset.dependencies.includes(id),
+      )
+    )
+      throw new Error(
+        `Projection would remove selected presentation bytes: ${id}`,
+      );
+  catalog.assets = catalog.assets.filter(
+    (asset) => !removedAssetIds.has(asset.id),
+  );
+  files.set("edition-catalog.json", json(catalog));
+  const title = config.name.replace(/[<>&"]/g, "");
+  files.set(
+    "index.html",
+    encoder(
+      `<!doctype html><html lang="en" data-branded-app="${config.repo}" data-access-state="locked"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="revealline-access-id" content="${config.repo}"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="game/access-gate.css"><script src="game/access-gate.mjs" defer></script><title>${title}</title></head><body><main><h1>${title}</h1><p id="entry-status">Opening your Coupa campaign…</p><a href="game/index.html?edition=${config.editionId}">Play ${title}</a></main><script type="module">import { assertBrandedLocation } from './game/branded-isolation.mjs'; await globalThis.RevealLineAccess?.ready; try { assertBrandedLocation(location.href); const target = new URL('game/index.html', location.href); target.search = location.search; target.hash = location.hash; location.replace(target); } catch (error) { document.getElementById('entry-status').textContent = error.message; }</script></body></html>`,
+    ),
+  );
   // Journey's IndexedDB is now application-specific; keep logical profile and
   // content IDs unchanged so upstream updates retain compatibility.
-  const dependencies = JSON.parse(files.get('runtime-dependencies.json'));
-  dependencies.resources = dependencies.resources.filter((name) => files.has(name));
-  dependencies.resources.push('game/branded-isolation.mjs');
-  dependencies.resources.push('game/access-gate.mjs');
-  dependencies.resources.push('game/access-gate.css');
-  dependencies.resources.push('game/ui/coupa-landing.css');
-  files.set('runtime-dependencies.json', json(dependencies));
+  const dependencies = JSON.parse(files.get("runtime-dependencies.json"));
+  dependencies.resources = dependencies.resources.filter((name) =>
+    files.has(name),
+  );
+  dependencies.resources.push("game/branded-isolation.mjs");
+  dependencies.resources.push("game/access-gate.mjs");
+  dependencies.resources.push("game/access-gate.css");
+  dependencies.resources.push("game/ui/coupa-landing.css");
+  files.set("runtime-dependencies.json", json(dependencies));
   validateBrandIsolation(files, config);
   return files;
 }
 
 export function validateBrandIsolation(files, config) {
-  const catalog = JSON.parse(files.get('edition-catalog.json'));
-  if (catalog.editions.length !== 1 || catalog.editions[0].id !== config.editionId ||
-      catalog.brands.length !== 1 || catalog.brands[0].id !== config.brandId ||
-      catalog.campaigns.some((entry) => entry.brandId !== config.brandId))
-    throw new Error('Foreign audience entered the dedicated artifact.');
+  const catalog = JSON.parse(files.get("edition-catalog.json"));
+  if (
+    catalog.editions.length !== 1 ||
+    catalog.editions[0].id !== config.editionId ||
+    catalog.brands.length !== 1 ||
+    catalog.brands[0].id !== config.brandId ||
+    catalog.campaigns.some((entry) => entry.brandId !== config.brandId)
+  )
+    throw new Error("Foreign audience entered the dedicated artifact.");
   for (const name of files.keys()) {
-    if (/^(?:optional-practice\/|game\/(?:communities|community|couch)\/.*\.html$)/.test(name) ||
-        /^game\/(?:fpv-entry|optional-practice[^/]*|ui\/optional-practice-panel)\.(?:mjs|css)$/.test(name) ||
-        (/\.html$/.test(name) && !['index.html', 'game/index.html', 'game/company.html'].includes(name)))
-      throw new Error(`Unrelated destination entered the dedicated artifact: ${name}`);
+    if (
+      /^(?:optional-practice\/|game\/(?:communities|community)\/.*\.html$)/.test(
+        name,
+      ) ||
+      /^game\/(?:fpv-entry|optional-practice[^/]*|ui\/optional-practice-panel)\.(?:mjs|css)$/.test(
+        name,
+      ) ||
+      (/\.html$/.test(name) &&
+        ![
+          "index.html",
+          "game/index.html",
+          "game/company.html",
+          "game/couch/index.html",
+          "game/couch/relay-rescue.html",
+        ].includes(name))
+    )
+      throw new Error(
+        `Unrelated destination entered the dedicated artifact: ${name}`,
+      );
   }
-  if (!files.get('game/profile-database.mjs')?.toString().includes(`${config.repo}-journey-v1`) ||
-      !files.get('game/edition-context.mjs')?.toString().includes(`${config.repo}.library.`))
-    throw new Error('The branded app must have its own browser storage identity.');
+  if (
+    !files
+      .get("game/profile-database.mjs")
+      ?.toString()
+      .includes(`${config.repo}-journey-v1`) ||
+    !files
+      .get("game/edition-context.mjs")
+      ?.toString()
+      .includes(`${config.repo}.library.`)
+  )
+    throw new Error(
+      "The branded app must have its own browser storage identity.",
+    );
   return true;
 }
 

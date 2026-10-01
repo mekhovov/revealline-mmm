@@ -128,6 +128,47 @@ const rows = [
   ],
 ];
 
+// The capture route is composed against each artwork instead of floating at a
+// single global position. Values are percentages of the visible menu frame;
+// the route stays in the quieter half of the image and outside the menu copy.
+const routeRows = {
+  fpv: ['rise', 48, 5, 48, 0.5, 27, 3, 72],
+  ukraine: ['horizon', 47, 4, 50, 0.48, 24, 2, 75],
+  retro: ['circuit', 50, 8, 47, 0.58, 30, 4, 68],
+  coupa: ['bridge', 49, 5, 49, 0.52, 28, 3, 71],
+  'coupa-village': ['rise', 48, 4, 50, 0.54, 28, 3, 71],
+  'coupa-spend-in-motion-theme': ['bridge', 47, 5, 51, 0.48, 27, 2, 72],
+  'coupa-inside-village-theme': ['horizon', 48, 6, 49, 0.48, 27, 3, 72],
+  'coupa-source-to-pay-theme': ['bridge', 50, 5, 48, 0.5, 29, 3, 70],
+  'coupa-product-operations-theme': ['circuit', 48, 4, 50, 0.48, 28, 3, 71],
+  'coupa-developer-integration-theme': ['circuit', 47, 4, 51, 0.62, 27, 2, 72],
+  'droneaid-community': ['bridge', 49, 6, 48, 0.46, 28, 4, 70],
+  'droneaid-nl-community': ['horizon', 49, 5, 49, 0.5, 28, 3, 71],
+  'droneaid-nl-workshop-lights-theme': ['rise', 50, 5, 47, 0.52, 29, 3, 69],
+  'droneaid-nl-parts-in-motion-theme': ['circuit', 49, 6, 48, 0.52, 28, 4, 70],
+  'droneaid-nl-makers-together-theme': ['bridge', 48, 5, 49, 0.48, 27, 3, 71],
+  'droneaid-nl-careful-handoff-theme': ['horizon', 49, 6, 48, 0.5, 28, 4, 70],
+  'droneaid-nl-signals-of-support-theme': ['circuit', 48, 4, 50, 0.58, 27, 3, 72],
+  'droneaid-nl-shared-horizon-theme': ['horizon', 47, 4, 51, 0.48, 26, 2, 73],
+};
+const routes = Object.fromEntries(
+  Object.entries(routeRows).map(
+    ([id, [variant, left, top, width, opacity, portraitLeft, portraitTop, portraitWidth]]) => [
+      id,
+      Object.freeze({
+        variant,
+        left,
+        top,
+        width,
+        opacity,
+        portraitLeft,
+        portraitTop,
+        portraitWidth,
+      }),
+    ],
+  ),
+);
+
 // Top-left rectangles in the uncropped source image, measured in percentages.
 // Effects stay attached to scenery when the image is cropped or the camera moves.
 // Water patches deliberately avoid bridge, shoreline and building silhouettes.
@@ -287,6 +328,7 @@ export const MENU_SCENES = ((scenes) => Object.freeze({...Object.fromEntries(Obj
           portraitPosition,
           actor,
           actorVisible: !indoorActors.has(id),
+          route: routes[id],
           environment: environments[id],
           portraitEnvironment:
             id === 'fpv' ? fpvPortraitEnvironment : (portraitEnvironments[id] ?? environments[id]),

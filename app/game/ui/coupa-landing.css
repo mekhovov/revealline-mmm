@@ -46,8 +46,7 @@ html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title {
 html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title .native-brand-fallback {
   color: #f6fbff;
 }
-html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title.native-edition-title .native-edition-line,
-html[data-branded-app] body.field-kit #shell-home.native-landing .game-mode-choice {
+html[data-branded-app] body.field-kit #shell-home.native-landing #shell-title.native-edition-title .native-edition-line {
   display: none;
 }
 html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions {
@@ -131,42 +130,18 @@ html[data-branded-app] #shell-home .menu-scene::after {
 }
 html[data-branded-app] #shell-home .menu-scene-art-plane { animation: none; }
 html[data-branded-app] #shell-home .menu-scene-signal { display: none; }
-html[data-branded-app] #shell-home .coupa-capture-art {
-  position: absolute;
-  inset: 50% 0 auto auto;
-  width: min(58vw, 860px);
-  aspect-ratio: 1;
-  transform: translateY(-50%);
-  z-index: 1;
-  pointer-events: none;
-  opacity: .72;
-}
-.coupa-capture-art svg { display: block; width: 100%; height: 100%; overflow: visible; }
-.coupa-capture-trail {
-  stroke-dasharray: 100;
-  animation: coupa-trace 14s linear infinite;
-}
-.coupa-capture-player {
-  offset-path: path('M160 440V240H280V160H480V360H400V440Z');
-  animation: coupa-player 14s linear infinite;
-  filter: drop-shadow(0 0 6px #83eaff);
-}
-.coupa-territory { animation: coupa-fill 14s linear infinite; }
 @keyframes coupa-logo-turn { to { transform: rotate(360deg); } }
-@keyframes coupa-trace { 0% { stroke-dashoffset: 100; } 72%, 90% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
-@keyframes coupa-player { 0% { offset-distance: 0%; opacity: 1; } 72%, 90% { offset-distance: 100%; opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
-@keyframes coupa-fill { 0%, 65% { opacity: 0; } 76%, 90% { opacity: 1; } 100% { opacity: 0; } }
 /* All ambient motion follows the upstream switch, page visibility and modal lifecycle. */
-html[data-branded-app] #shell-home:not([open]) :is(.coupa-landing-logo, .coupa-capture-art *),
-html[data-branded-app] #shell-home:has(.menu-scene[data-running='false']) :is(.coupa-landing-logo, .coupa-capture-art *) {
+html[data-branded-app] #shell-home:not([open]) .coupa-landing-logo,
+html[data-branded-app] #shell-home:has(.menu-scene[data-running='false']) .coupa-landing-logo {
   animation-play-state: paused !important;
 }
-html[data-branded-app] #shell-home:has(.menu-scene[data-motion='off']) :is(.coupa-landing-logo, .coupa-capture-art *),
-html[data-branded-app] body:is([data-effects='reduced'], [data-reduced-effects='true']) #shell-home :is(.coupa-landing-logo, .coupa-capture-art *) {
+html[data-branded-app] #shell-home:has(.menu-scene[data-motion='off']) .coupa-landing-logo,
+html[data-branded-app] body:is([data-effects='reduced'], [data-reduced-effects='true']) #shell-home .coupa-landing-logo {
   animation: none !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  html[data-branded-app] #shell-home :is(.coupa-landing-logo, .coupa-capture-art *) { animation: none !important; }
+  html[data-branded-app] #shell-home .coupa-landing-logo { animation: none !important; }
   html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(button, a) { transition: none; transform: none; }
 }
 @media (max-width: 760px) {
@@ -180,7 +155,6 @@ html[data-branded-app] body:is([data-effects='reduced'], [data-reduced-effects='
   html[data-branded-app] #shell-home .menu-scene::after {
     background: linear-gradient(90deg, #0c1d4be8, #0c1d4b99), linear-gradient(0deg, #0c1d4b, transparent 75%);
   }
-  html[data-branded-app] #shell-home .coupa-capture-art { width: 90vw; top: 24%; right: -25%; opacity: .35; }
   html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-footer { inset-inline: 24px; font-size: 10px; }
 }
 @media (max-height: 640px) and (min-width: 761px) {
@@ -190,6 +164,5 @@ html[data-branded-app] body:is([data-effects='reduced'], [data-reduced-effects='
 }
 html[data-branded-app] body.field-kit[data-text-size='large'] #shell-home.native-landing .native-menu-actions > :is(button, a) { font-size: 20px; }
 @media (forced-colors: active) {
-  html[data-branded-app] #shell-home .coupa-capture-art { display: none; }
   html[data-branded-app] body.field-kit #shell-home.native-landing .native-menu-actions > :is(button, a) { border: 1px solid ButtonText; }
 }

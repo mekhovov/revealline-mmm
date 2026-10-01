@@ -4,7 +4,7 @@
   if (host.RevealLineI18n) return;
   const engine = host.i18next.createInstance();
   const storageKey = 'revealline-mmm.locale.v1';
-  const locales = ["en","uk"];
+  const locales = ["en"];
   const listeners = new Set();
   const beforeListeners = new Set();
   const bindings = new WeakMap();
