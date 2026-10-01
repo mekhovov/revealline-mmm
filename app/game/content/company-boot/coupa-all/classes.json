@@ -1,0 +1,82 @@
+[
+  {
+    "capacity": 0,
+    "cooldown": 6,
+    "description": "Mark hidden objectives permanently; show enemy direction hints for four seconds. No slowing.",
+    "duration": 4,
+    "id": "scout",
+    "label": "Scout",
+    "primitive": "scan",
+    "radius": 48,
+    "revision": "1"
+  },
+  {
+    "capacity": 1,
+    "cooldown": 2,
+    "description": "Pick up one charge at a supply pad; drop a field that stuns nearby field enemies.",
+    "duration": 2.5,
+    "id": "bomber",
+    "label": "Light carrier",
+    "primitive": "stun-field",
+    "radius": 3,
+    "revision": "1"
+  },
+  {
+    "capacity": 2,
+    "cooldown": 2,
+    "description": "Carry two charges; each creates the same temporary stun field.",
+    "duration": 2.5,
+    "id": "carrier",
+    "label": "Heavy carrier",
+    "primitive": "stun-field",
+    "radius": 3,
+    "revision": "1"
+  },
+  {
+    "capacity": 0,
+    "cooldown": 9,
+    "description": "Absorb one enemy or lane contact: cancel the cut and recover at spawn without losing a life. Self-crossing remains dangerous.",
+    "duration": 1.5,
+    "id": "interceptor",
+    "label": "Interceptor",
+    "primitive": "shield",
+    "radius": 0,
+    "revision": "1"
+  },
+  {
+    "capacity": 0,
+    "cooldown": 7,
+    "description": "Ignore signal interference and scan for hidden relays. Your cable is the live trail: enemy contact still breaks it.",
+    "duration": 3,
+    "id": "fiber",
+    "label": "Fiber relay",
+    "moveSpeedMultiplier": 1,
+    "primitive": "scan",
+    "radius": 30,
+    "revision": "1",
+    "signalResistance": true
+  },
+  {
+    "capacity": 0,
+    "cooldown": 10,
+    "description": "Release a close-range stun pulse, abandon the unfinished cut and redeploy at home without losing a life. The pulse never captures territory.",
+    "duration": 3,
+    "id": "impact",
+    "label": "Impact craft",
+    "primitive": "impact-pulse",
+    "radius": 5,
+    "revision": "1"
+  },
+  {
+    "capacity": 1,
+    "cooldown": 2,
+    "description": "Pick up one charge and place a four-second field that slows field enemies to one quarter speed.",
+    "duration": 4,
+    "id": "trapper",
+    "label": "Trapper",
+    "primitive": "slow-field",
+    "radius": 4,
+    "revision": "1",
+    "slowFactor": 0.25
+  }
+]

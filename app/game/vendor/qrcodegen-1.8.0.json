@@ -1,0 +1,13 @@
+{
+  "package": "Project Nayuki QR Code generator",
+  "version": "1.8.0",
+  "source": "https://github.com/nayuki/QR-Code-generator/releases/download/v1.8.0/qrcodegen-v1.8.0-es6.js",
+  "sourceSha256": "6a1116192ed1dd67fa1bf31e77f5817103d71c23bbac24c382e698b7668bdd01",
+  "artifact": "qrcodegen-1.8.0.mjs",
+  "artifactSha256": "155bb508fdb5fb93d35968609e3968b494b455f809c26d513cc42e7ccce50c10",
+  "license": "MIT",
+  "licenseFile": "QRCODEGEN-LICENSE.txt",
+  "licenseSha256": "4e9c1ba5c8ae43c3bb90e8cb718f8460d79e348c9ed53bc5711a9c6979574b98",
+  "modification": "Appended one ES module named export; upstream encoder is unchanged.",
+  "usage": "Lazy local QR generation on explicit player or author action. No remote QR service."
+}

@@ -1,0 +1,159 @@
+/* UI-skin colours never replace a release's root tokens or canvas palette. */
+body[data-menu-palette='neon'] {
+  --rl-menu-skin-bg: var(--rl-menu-neon-bg);
+  --rl-menu-skin-panel: var(--rl-menu-neon-panel);
+  --rl-menu-skin-panel-raised: var(--rl-menu-neon-panel-raised);
+  --rl-menu-skin-text: var(--rl-menu-neon-text);
+  --rl-menu-skin-muted: var(--rl-menu-neon-muted);
+  --rl-menu-skin-line: var(--rl-menu-neon-line);
+  --rl-menu-skin-control-line: var(--rl-menu-neon-control-line);
+  --rl-menu-skin-cyan: var(--rl-menu-neon-cyan);
+  --rl-menu-skin-amber: var(--rl-menu-neon-amber);
+  --rl-menu-skin-hazard: var(--rl-menu-neon-hazard);
+  --rl-menu-skin-decorative: var(--rl-menu-neon-decorative);
+}
+
+body[data-menu-palette='field-kit'] {
+  --rl-menu-skin-bg: var(--rl-menu-field-kit-bg);
+  --rl-menu-skin-panel: var(--rl-menu-field-kit-panel);
+  --rl-menu-skin-panel-raised: var(--rl-menu-field-kit-panel-raised);
+  --rl-menu-skin-text: var(--rl-menu-field-kit-text);
+  --rl-menu-skin-muted: var(--rl-menu-field-kit-muted);
+  --rl-menu-skin-line: var(--rl-menu-field-kit-line);
+  --rl-menu-skin-control-line: var(--rl-menu-field-kit-control-line);
+  --rl-menu-skin-cyan: var(--rl-menu-field-kit-cyan);
+  --rl-menu-skin-amber: var(--rl-menu-field-kit-amber);
+  --rl-menu-skin-hazard: var(--rl-menu-field-kit-hazard);
+  --rl-menu-skin-decorative: var(--rl-menu-field-kit-decorative);
+}
+
+body:is([data-menu-palette='neon'], [data-menu-palette='field-kit'])
+  :is(dialog, .race-screen, #coop-menu, #coop-overlay, #game-overlay .overlay-card) {
+  --fk-bg: var(--rl-menu-skin-bg);
+  --fk-panel: var(--rl-menu-skin-panel);
+  --fk-panel-raised: var(--rl-menu-skin-panel-raised);
+  --fk-text: var(--rl-menu-skin-text);
+  --fk-muted: var(--rl-menu-skin-muted);
+  --fk-line: var(--rl-menu-skin-line);
+  --fk-control-line: var(--rl-menu-skin-control-line);
+  --fk-cyan: var(--rl-menu-skin-cyan);
+  --fk-amber: var(--rl-menu-skin-amber);
+  --fk-hazard: var(--rl-menu-skin-hazard);
+  --fk-accent: var(--fk-amber);
+  --fk-focus: var(--fk-cyan);
+  --fk-on-accent: var(--fk-bg);
+  --paper: var(--fk-bg);
+  --ink: var(--fk-text);
+  --muted: var(--fk-muted);
+  --line: var(--fk-line);
+  --accent: var(--fk-accent);
+  --safe: var(--fk-cyan);
+  --danger: var(--fk-hazard);
+  --bg: var(--fk-bg);
+  --panel: var(--fk-panel);
+  --sun: var(--fk-amber);
+  --sky: var(--fk-cyan);
+  color: var(--fk-text);
+  background-color: var(--fk-panel);
+}
+
+/* Keep the exact authored frame borders, while opaque menu tokens own the
+   interior under functional labels. Filled raster centres must not override the
+   selected palette or disabled/primary/danger state colours. */
+body:is([data-menu-palette='neon'], [data-menu-palette='field-kit']) dialog {
+  border-image-slice: var(--fk-border-slice-ui-dialog, 8);
+}
+body:is([data-menu-palette='neon'], [data-menu-palette='field-kit'])
+  :is(dialog, .race-screen, #coop-menu, #coop-overlay, #game-overlay .overlay-card)
+  :is(button, .button) {
+  --fk-button-paint-slice: var(--fk-button-border-slice);
+}
+body:is([data-menu-palette='neon'], [data-menu-palette='field-kit'])
+  :is(dialog, .race-screen, #coop-menu, #coop-overlay, #game-overlay .overlay-card)
+  :is(.field-kit-panel, .inspection-card, .mission-detail, .settings-group) {
+  border-image-slice: var(--fk-border-slice-ui-panel, 8);
+}
+body:is([data-menu-palette='neon'], [data-menu-palette='field-kit'])
+  :is(dialog, .race-screen, #coop-menu, #coop-overlay, #game-overlay .overlay-card)
+  :is(select, input[type='text'], textarea) {
+  border-image-slice: var(--fk-border-slice-ui-input-text, 8);
+}
+
+/* The fixed/absolute dialog and pause owners keep their positioning. */
+.race-screen,
+#coop-menu {
+  position: relative;
+}
+
+/* Couch shells previously had no inline gutter. Reserve 8px inset + 8px
+   maximum stripe + 7px focus outline/offset + 5px clear space inside their
+   border-box. Team retains its larger lobby block spacing. No clipping hides
+   content or focus: native menu children can shrink and existing layouts wrap. */
+body:is([data-menu-ornaments='subtle'], [data-menu-ornaments='rich'])
+  :is(.race-screen, #coop-menu, #coop-overlay) {
+  --menu-ornament-gutter: 28px;
+  box-sizing: border-box;
+  padding-inline: var(--menu-ornament-gutter);
+  min-inline-size: 0;
+}
+body:is([data-menu-ornaments='subtle'], [data-menu-ornaments='rich'])
+  :is(.race-screen, #coop-overlay) {
+  padding-block: var(--menu-ornament-gutter);
+}
+body:is([data-menu-ornaments='subtle'], [data-menu-ornaments='rich'])
+  :is(.race-screen, #coop-menu, #coop-overlay)
+  > * {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+body:is([data-menu-ornaments='subtle'], [data-menu-ornaments='rich'])
+  :is(.race-screen, #coop-menu, #coop-overlay)
+  :is(label, select, input, textarea) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+/* Static frame decoration never owns navigation or pointer input. Its separation
+   from actual text/focus boxes requires native verification after layout. */
+.menu-ornament {
+  display: none;
+  position: absolute;
+  inset: 8px;
+  pointer-events: none;
+  user-select: none;
+  animation: none !important;
+  transition: none !important;
+  --menu-stripe: 4px;
+  --menu-ornament-blue: var(--fk-cyan);
+  background:
+    repeating-linear-gradient(45deg, var(--menu-ornament-blue) 0 4px, transparent 4px 8px) left
+      top / var(--menu-stripe) 100% no-repeat,
+    repeating-linear-gradient(45deg, var(--fk-accent) 0 4px, transparent 4px 8px) right top /
+      var(--menu-stripe) 100% no-repeat;
+}
+
+body:is([data-menu-palette='neon'], [data-menu-palette='field-kit']) .menu-ornament {
+  --menu-ornament-blue: var(--rl-menu-skin-decorative);
+}
+
+body[data-menu-ornaments='subtle'] .menu-ornament,
+body[data-menu-ornaments='rich'] .menu-ornament {
+  display: block;
+}
+
+body[data-menu-ornaments='rich'] .menu-ornament {
+  --menu-stripe: 8px;
+  border-block: 2px dashed var(--fk-accent);
+}
+
+@media (max-width: 480px), (max-height: 480px) {
+  body[data-menu-ornaments='rich'] .menu-ornament {
+    --menu-stripe: 4px;
+  }
+}
+
+@media (forced-colors: active) {
+  .menu-ornament {
+    display: none !important;
+  }
+}

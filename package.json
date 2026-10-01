@@ -1,0 +1,22 @@
+{
+  "name": "revealline-mmm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An isolated Coupa community game, derived from RevealLine",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "node scripts/verify-app.mjs",
+    "build": "npm run verify && node scripts/build.mjs",
+    "sync:upstream": "node scripts/sync-upstream.mjs"
+  },
+  "devDependencies": {
+    "acorn": "8.18.0",
+    "lz-string": "1.5.0",
+    "parse5": "8.0.1"
+  }
+}

@@ -1,0 +1,38 @@
+.quick-music-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  grid-column: 1 / -1;
+  flex: 1 1 100%;
+  min-width: 0;
+  width: 100%;
+  padding-block: 8px;
+}
+.quick-music-controls .quick-music-title {
+  flex: 1 1 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--fk-muted, var(--muted, currentColor));
+  font-size: 0.8rem;
+}
+.quick-music-controls button {
+  flex: 1 1 auto;
+  min-height: 44px;
+  width: auto;
+  margin: 0;
+}
+.quick-music-settings {
+  margin-block: 12px;
+}
+.quick-music-settings label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+.quick-music-settings input {
+  width: auto;
+}

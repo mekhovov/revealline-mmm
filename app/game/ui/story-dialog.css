@@ -1,0 +1,52 @@
+.story-dialog {
+  max-width: min(960px, calc(100vw - 24px));
+  padding: clamp(16px, 3vw, 24px);
+  font-family: var(--pixel-font);
+}
+.story-dialog .story-stage > canvas,
+.story-dialog .story-stage video {
+  display: block;
+  width: 100%;
+  max-height: min(52dvh, 480px);
+  object-fit: contain;
+  background: #060914;
+}
+.story-dialog .victory-story > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.story-dialog .victory-story label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.story-dialog p {
+  margin: 10px 0;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.5;
+}
+.story-dialog > p:empty {
+  display: none;
+}
+.story-dialog h2 {
+  margin-bottom: 12px;
+  padding-right: 44px;
+}
+.game-shell .story-dialog :is(button, label, input) {
+  font-size: 18px;
+}
+.story-dialog button,
+.story-dialog input[type='range'] {
+  min-width: 44px;
+  min-height: 44px;
+}
+.game-shell[data-text-size='large'] .story-dialog :is(p, button, label, input) {
+  font-size: 22px;
+}
+
+.story-dialog .victory-story video {
+  max-height: min(52dvh, 480px) !important;
+}

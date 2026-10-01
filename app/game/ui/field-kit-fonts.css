@@ -1,0 +1,34 @@
+@import url('./brand-identity.css');
+
+/* Original font names and OFL notices are retained beside their font files. */
+@font-face {
+  font-family: 'Reveal Line Pixel';
+  src: url('./fonts/departure-mono/DepartureMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Field Kit Display';
+  src: url('./fonts/field-kit/handjet-display-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Field Kit UI';
+  src: url('./fonts/field-kit/exo2-ui-400-600.woff2') format('woff2');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Field Kit Mono';
+  src: url('./fonts/field-kit/ibm-plex-mono-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,70 @@
+/* Keep backup commands readable; full transport names are optional detail. */
+.field-kit #backup-set-files {
+  display: grid;
+  gap: var(--fk-space-3);
+  margin: var(--fk-space-4) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.field-kit #backup-set-files > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--fk-space-2) var(--fk-space-4);
+  min-inline-size: 0;
+}
+
+.field-kit #backup-set-files .button,
+.field-kit #backup-set-filenames > summary {
+  box-sizing: border-box;
+  min-block-size: max(44px, var(--fk-target-size));
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.field-kit #backup-set-files .button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.field-kit #backup-set-files > li > span {
+  color: var(--fk-muted);
+  font-size: var(--fk-text-secondary);
+}
+
+.field-kit #backup-set-filenames {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+.field-kit #backup-set-filenames > summary {
+  padding: var(--fk-space-2) var(--fk-space-3);
+  border: var(--fk-border-width) solid var(--fk-control-line);
+  background: var(--fk-panel-raised);
+  cursor: pointer;
+}
+
+.field-kit #backup-set-filename-list {
+  margin: var(--fk-space-3) 0;
+}
+
+.field-kit #backup-set-filename-list dt {
+  margin-block-start: var(--fk-space-3);
+  color: var(--fk-muted);
+  font-size: var(--fk-text-secondary);
+}
+
+.field-kit #backup-set-filename-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .field-kit #backup-set-files > li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

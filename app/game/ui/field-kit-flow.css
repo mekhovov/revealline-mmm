@@ -1,0 +1,487 @@
+/* Player flow: presentation only. Native dialogs, controls and host state own actions. */
+.field-kit.game-shell .shell-home {
+  padding: clamp(24px, 5vw, 88px);
+  background: var(--fk-bg);
+}
+.field-kit.game-shell .shell-home[open] {
+  grid-template-columns: minmax(270px, 460px) 1fr;
+  align-items: center;
+}
+.field-kit .home-art {
+  inset: 0;
+  opacity: 1;
+  background:
+    linear-gradient(90deg, rgb(7 11 18 / 60%), transparent 65%),
+    url('../presentation/compiled/assets/72b6c93f47090f3a3724223477e22cbc461132329768e70b82cdb87d85a72052.png')
+      center / cover no-repeat;
+  image-rendering: pixelated;
+}
+.field-kit .home-art::before {
+  display: none;
+}
+.field-kit .home-content {
+  max-width: 460px;
+}
+.field-kit .home-content .eyebrow {
+  color: var(--fk-cyan);
+  margin: 0 0 16px;
+}
+.field-kit.game-shell #shell-title {
+  margin: 0 0 14px;
+  font-size: clamp(58px, 6vw, 92px);
+  line-height: 0.9;
+}
+.field-kit #shell-title span {
+  color: var(--fk-amber);
+}
+.field-kit .home-copy {
+  color: var(--fk-text);
+  font-size: var(--fk-text-body);
+  line-height: 1.5;
+  margin: 0;
+}
+.field-kit.game-shell .home-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin: 16px 0 10px;
+  max-width: 360px;
+}
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured) {
+  padding: 8px 14px;
+  min-height: 44px;
+  font-size: 18px;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  touch-action: manipulation;
+  color: var(--fk-text);
+}
+.field-kit.game-shell .home-actions :is(#shell-course-return, #shell-featured, #shell-continue) {
+  grid-column: 1 / -1;
+}
+.field-kit.game-shell .home-actions :is(#shell-featured, #shell-continue) {
+  color: var(--fk-on-accent);
+  background: var(--fk-amber);
+  border-color: var(--fk-amber);
+}
+.field-kit.game-shell
+  .home-actions
+  :is(#shell-play, #shell-gallery, #shell-options, #shell-workshop, #shell-sound) {
+  grid-column: auto;
+}
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured):hover {
+  border-color: var(--fk-cyan);
+  background: var(--fk-panel-raised);
+  color: var(--fk-text);
+}
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured):active {
+  background: var(--fk-cyan);
+  color: var(--fk-on-accent);
+}
+.field-kit .home-destination {
+  max-width: 38ch;
+  margin-block: 10px 0;
+  color: var(--fk-cyan);
+  font-size: var(--fk-text-secondary);
+  line-height: 1.5;
+}
+.field-kit .home-play-options {
+  max-width: 350px;
+  margin-top: 10px;
+  color: var(--fk-text-muted);
+  font-size: var(--fk-text-secondary);
+}
+.field-kit .home-play-options summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--fk-text);
+}
+.field-kit .home-play-options-fields {
+  display: grid;
+  gap: 8px;
+  padding: 8px 0 4px;
+}
+.field-kit .home-play-options-fields .micro-note,
+.field-kit .home-play-options-fields .home-status {
+  margin: 0 0 4px;
+}
+.field-kit .more-destinations {
+  margin-top: 20px;
+}
+.field-kit .workshop-tools > .workshop-destinations {
+  margin-top: 12px;
+}
+.field-kit .landing-version {
+  margin: 0;
+}
+.field-kit .home-art-caption {
+  position: absolute;
+  right: 4vw;
+  bottom: 28px;
+  display: flex;
+  gap: 36px;
+  color: var(--fk-text);
+  font: 500 14px var(--fk-font-mono);
+  padding: 8px 12px;
+  background: var(--fk-bg);
+}
+.field-kit .home-art-caption span {
+  color: var(--fk-amber);
+}
+.field-kit.game-shell .shell-workshop-dialog {
+  width: min(900px, calc(100vw - 24px));
+  padding: clamp(20px, 4vw, 40px);
+}
+.field-kit .workshop-destinations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+.field-kit .workshop-destinations .button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 80px;
+  text-align: left;
+}
+.field-kit .workshop-destinations span {
+  font-size: var(--fk-text-secondary);
+  line-height: 1.4;
+}
+.field-kit .shell-tools {
+  font-size: var(--fk-text-secondary);
+}
+.field-kit.game-shell .shell-missions {
+  width: min(1180px, calc(100vw - 32px));
+  padding: 24px;
+}
+.field-kit .shell-mode-choice {
+  border-bottom: 1px solid var(--fk-line);
+  margin-bottom: 16px;
+}
+.field-kit .shell-mode-choice summary {
+  padding: 8px 0;
+  cursor: pointer;
+}
+.field-kit .shell-mode-choice nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 0;
+}
+.field-kit .mission-picker-stage {
+  grid-template-columns: minmax(190px, 0.65fr) minmax(0, 2fr);
+  gap: 24px;
+}
+.field-kit .mission-picker-chapter-section {
+  max-height: 520px;
+}
+.field-kit .mission-picker-card {
+  background: var(--fk-panel-raised);
+  border-color: var(--fk-control-line);
+  font-size: var(--fk-text-control);
+}
+.field-kit .mission-picker-card-state {
+  font-size: var(--fk-text-secondary);
+  line-height: 1.4;
+}
+.field-kit .mission-picker-card[aria-pressed='true'] {
+  border-color: var(--fk-amber);
+}
+.field-kit .mission-picker-missions .mission-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.field-kit .mission-gallery .mission {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: start;
+  gap: 8px;
+  min-height: 0;
+  padding: 0 0 12px;
+  text-align: left;
+  overflow: hidden;
+}
+.field-kit .mission-gallery .mission .number {
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 10px;
+  color: var(--fk-muted);
+  font-size: 14px;
+}
+.field-kit .mission-gallery .mission .name {
+  grid-column: 2;
+  grid-row: 2;
+  padding-right: 10px;
+  color: var(--fk-text);
+  font-size: var(--fk-text-control);
+  line-height: 1.35;
+}
+.field-kit .mission-gallery .mission .medal {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  padding: 0 10px;
+  color: var(--fk-amber);
+  min-height: 20px;
+  font-size: 16px;
+}
+.field-kit .mission-gallery .mission:disabled {
+  opacity: 1;
+  border-style: dashed;
+}
+.field-kit .mission-gallery .mission:disabled .name {
+  color: var(--fk-muted);
+}
+.field-kit .mission-gallery-art {
+  position: relative;
+  display: block;
+  grid-row: 1;
+  grid-column: 1 / -1;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--fk-line);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 15px, #78dce817 15px 16px),
+    repeating-linear-gradient(90deg, transparent 0 15px, #78dce817 15px 16px),
+    linear-gradient(160deg, #182531 50%, #243c42 50% 65%, #101923 65%);
+}
+.field-kit .mission-gallery-art[data-scene='1'] {
+  background-color: #3c3840;
+  background-blend-mode: screen;
+}
+.field-kit .mission-gallery-art[data-scene='2'] {
+  background-color: #313b28;
+  background-blend-mode: screen;
+}
+.field-kit .mission-gallery-art::before {
+  content: '';
+  position: absolute;
+  width: 22%;
+  aspect-ratio: 1;
+  left: 36%;
+  top: 20%;
+  border: 2px solid var(--fk-cyan);
+  border-left-color: var(--fk-line);
+  transform: rotate(45deg);
+}
+.field-kit .mission-gallery .mission:disabled .mission-gallery-art {
+  filter: saturate(0.25);
+}
+.field-kit .mission-gallery-picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+.field-kit .mission-gallery-state {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px 8px;
+  background: rgb(7 11 18 / 90%);
+  color: var(--fk-muted);
+  font: 400 14px/1.3 var(--fk-font-ui);
+}
+.field-kit .mission-gallery-pages {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.field-kit .shell-deploy-bar {
+  position: sticky;
+  bottom: -24px;
+  background: var(--fk-panel);
+  border-top: 2px solid var(--fk-line);
+  margin-top: 20px;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.field-kit #shell-missions > .shell-dialog-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  row-gap: 8px;
+}
+.field-kit #shell-craft-feedback {
+  grid-column: 1 / -1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 8px 12px;
+  background: var(--fk-panel);
+  border: 1px solid var(--fk-line);
+}
+.field-kit #shell-craft-feedback:not(:has(> :not([hidden]))) {
+  display: none;
+}
+.field-kit #shell-craft-feedback > .operation-status {
+  margin: 0;
+}
+.field-kit .shell-deploy-bar > div {
+  display: flex;
+  gap: 12px;
+}
+.field-kit #shell-briefing {
+  margin-top: 0;
+}
+.field-kit .mission-picker-setup,
+.field-kit .mission-picker-older {
+  border-color: var(--fk-line);
+}
+.field-kit .mission-picker-setup > summary {
+  color: var(--fk-cyan);
+}
+.field-kit .mission-picker .deck-footer {
+  display: none;
+}
+.field-kit .mission-gallery [hidden],
+.field-kit .home-actions [hidden],
+.field-kit .shell-deploy-bar[hidden],
+.field-kit .mission-gallery-pages[hidden] {
+  display: none !important;
+}
+@media (max-width: 1000px) {
+  .field-kit .mission-picker-stage {
+    grid-template-columns: minmax(175px, 0.6fr) minmax(0, 1.6fr);
+  }
+  .field-kit .mission-picker-missions .mission-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 680px) {
+  .field-kit.game-shell .shell-home {
+    padding: 28px 24px;
+  }
+  .field-kit.game-shell .shell-home[open] {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .field-kit .home-art {
+    background: url('../presentation/compiled/assets/8fe3df81db48bf682862a06c8f7434365ff49151a2a72a94c0a85ea85a3adf27.png')
+      center bottom / cover no-repeat;
+  }
+  .field-kit .home-art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 48%, rgb(7 11 18 / 30%));
+  }
+  .field-kit.game-shell #shell-title {
+    font-size: 64px;
+  }
+  .field-kit .home-content {
+    max-width: none;
+  }
+  .field-kit .home-art-caption {
+    display: none;
+  }
+  .field-kit .workshop-destinations {
+    grid-template-columns: 1fr;
+  }
+  .field-kit.game-shell .shell-missions {
+    width: calc(100vw - 16px);
+    padding: 16px;
+  }
+  .field-kit .mission-picker-stage {
+    grid-template-columns: 1fr;
+  }
+  .field-kit .mission-picker-chapter-section {
+    max-height: none;
+  }
+  .field-kit .mission-picker-missions .mission-gallery {
+    grid-template-columns: 1fr;
+  }
+  .field-kit .mission-gallery-art {
+    aspect-ratio: 2 / 1;
+  }
+  .field-kit .shell-deploy-bar {
+    bottom: -16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .field-kit .shell-deploy-bar p {
+    margin: 0;
+  }
+  .field-kit .shell-deploy-bar > div {
+    justify-content: space-between;
+  }
+}
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured) {
+  justify-content: flex-start;
+  gap: 14px;
+}
+.field-kit.game-shell .home-actions .button > span[aria-hidden] {
+  margin-inline-start: auto;
+}
+.field-kit.game-shell .home-actions .button::before {
+  background: currentColor;
+}
+.field-kit.game-shell :is(.shell-deploy-bar, .workshop-destinations) .button.primary {
+  background: var(--fk-amber);
+  color: var(--fk-on-accent);
+  border-color: var(--fk-amber);
+}
+.field-kit.game-shell :is(.shell-deploy-bar, .workshop-destinations) .button.primary:disabled {
+  background: var(--fk-panel);
+  color: var(--fk-muted);
+  border-color: var(--fk-line);
+}
+.field-kit.game-shell .home-art {
+  mask-image: none;
+}
+@media (min-width: 1100px) {
+  .field-kit .mission-gallery-art {
+    aspect-ratio: 2.2 / 1;
+  }
+}
+@media (min-width: 681px) and (max-height: 500px) {
+  .field-kit.game-shell .home-actions {
+    background: rgb(7 11 18 / 90%);
+    padding: 8px;
+    border: 1px solid var(--fk-line);
+  }
+  .field-kit .home-art-caption {
+    display: none;
+  }
+}
+.field-kit .shell-deploy-bar .shell-prepared-context {
+  align-items: center;
+  gap: 16px;
+}
+.field-kit .shell-prepared-context p {
+  margin: 0;
+}
+.field-kit .shell-prepared-context .button {
+  font-size: var(--fk-text-secondary);
+}
+.field-kit .mission-picker-setup {
+  scroll-margin-block: 16px;
+}
+@media (max-width: 680px) {
+  .field-kit .shell-deploy-bar .shell-prepared-context {
+    justify-content: space-between;
+  }
+}
+.field-kit.game-shell #shell-mission-content .flight-deck.mission-picker {
+  max-height: none;
+  overflow: visible;
+}
+.field-kit .mission-picker-setup {
+  scroll-margin-block-start: calc(var(--fk-text-display) * 2 + 60px);
+}

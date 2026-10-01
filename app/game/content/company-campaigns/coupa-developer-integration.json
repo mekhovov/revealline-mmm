@@ -1,0 +1,646 @@
+{
+  "actorCatalogId": "journey-actors-v9",
+  "assets": [
+    {
+      "alt": "An illustrated network atlas with luminous data shelves, reference drawers and connected stations.",
+      "bytes": 2918671,
+      "format": "AssetRevisionV1",
+      "height": 887,
+      "id": "coupa-developer-integration-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/network-atlas-v2.png",
+      "review": "candidate",
+      "revision": "2",
+      "sha256": "aa6a581b04384b06e730e36399c0c75a03145b501c96dcb1247ec29f24b3d518",
+      "width": 1774
+    },
+    {
+      "alt": "A fictional blue archive garden with two circular reading plazas, book-lined groves, glass drawers and white ribbon canopies.",
+      "bytes": 3180834,
+      "format": "AssetRevisionV1",
+      "height": 887,
+      "id": "coupa-developer-integration-02-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/scoped-access-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "05865bd2f0a028ab582889736574e776876d0735a91c377dff3c89f04ff9b2a0",
+      "width": 1774
+    },
+    {
+      "alt": "Three stepped blue archive terraces unfold across a luminous library, with blank page trays and clear reading landings.",
+      "bytes": 876039,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-developer-integration-03-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/beyond-page-one-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "783a1086fa752ca083f2239fb424ba8c014436c6a8838a647ec129fe71464f55",
+      "width": 960
+    },
+    {
+      "alt": "A blue reference observatory brings three physical model collections around calm central archive terraces.",
+      "bytes": 886581,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-developer-integration-04-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/known-references-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "dc64a854959590085d322a7d9e9f6dab1a477f6c651ad1d6271e39e058c2b0dc",
+      "width": 960
+    },
+    {
+      "alt": "A transparent blue validation atelier arranges blank input cards and a small modular draft beside clear review floors.",
+      "bytes": 925292,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-developer-integration-05-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/draft-validate-explain-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "3b3671602b4bab7cc611d84fd208c7c2b72b62bb97288274599e09d8eda6e2bd",
+      "width": 960
+    },
+    {
+      "alt": "A blue network archive displays organized record trays and a small recovery bench beneath a luminous roof.",
+      "bytes": 969855,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-developer-integration-06-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/run-ledger-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "7a9f66fb74c22ce6cdcc435e2f03dd85bfa4592e79ed53c33b03283edd780752",
+      "width": 960
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 11,
+      "format": "CampaignDesignV1",
+      "id": "coupa-developer-integration",
+      "missionIds": [
+        "coupa-developer-integration-01",
+        "coupa-developer-integration-02",
+        "coupa-developer-integration-03",
+        "coupa-developer-integration-04",
+        "coupa-developer-integration-05",
+        "coupa-developer-integration-06"
+      ],
+      "name": "Connect the Network",
+      "revision": "4"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v2",
+  "format": "ContentProjectV1",
+  "id": "coupa-developer-integration",
+  "maps": [
+    {
+      "format": "MapDesignV3",
+      "foundations": [
+        { "h": 4, "w": 10, "x": 12, "y": 14 },
+        { "h": 4, "w": 10, "x": 44, "y": 20 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-developer-integration-01-map",
+      "name": "Resource Atlas",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 16.5, "y": 0.5 }],
+      "speedZones": [
+        { "direction": "down", "h": 7, "id": "outbound-flow", "w": 3, "x": 24, "y": 8 },
+        { "direction": "right", "h": 3, "id": "return-flow", "w": 7, "x": 41, "y": 24 }
+      ],
+      "terrain": [],
+      "walls": [{ "h": 14, "w": 2, "x": 30, "y": 10 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV3",
+      "foundations": [
+        { "h": 5, "w": 7, "x": 32, "y": 8 },
+        { "h": 5, "w": 7, "x": 32, "y": 23 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-developer-integration-02-map",
+      "name": "Scoped Access",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "speedZones": [
+        { "direction": "down", "h": 7, "id": "outbound-flow", "w": 3, "x": 24, "y": 5 },
+        { "direction": "right", "h": 3, "id": "return-flow", "w": 7, "x": 41, "y": 24 }
+      ],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 12, "x": 17, "y": 12 },
+        { "h": 2, "w": 12, "x": 43, "y": 22 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV3",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 10, "y": 19 },
+        { "h": 4, "w": 9, "x": 31, "y": 13 },
+        { "h": 4, "w": 8, "x": 54, "y": 13 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-developer-integration-03-map",
+      "name": "Beyond Page One",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "speedZones": [
+        { "direction": "down", "h": 7, "id": "outbound-flow", "w": 3, "x": 26, "y": 8 },
+        { "direction": "right", "h": 3, "id": "return-flow", "w": 7, "x": 40, "y": 24 }
+      ],
+      "terrain": [],
+      "walls": [
+        { "h": 8, "w": 2, "x": 24, "y": 8 },
+        { "h": 8, "w": 2, "x": 47, "y": 20 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV3",
+      "foundations": [
+        { "h": 4, "w": 11, "x": 30, "y": 8 },
+        { "h": 4, "w": 11, "x": 30, "y": 24 },
+        { "h": 3, "w": 7, "x": 32, "y": 16 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-developer-integration-04-map",
+      "name": "Known References",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "speedZones": [],
+      "terrain": [],
+      "walls": [
+        { "h": 14, "w": 3, "x": 17, "y": 9 },
+        { "h": 14, "w": 3, "x": 51, "y": 12 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV3",
+      "foundations": [
+        { "h": 5, "w": 11, "x": 30, "y": 14 },
+        { "h": 4, "w": 7, "x": 13, "y": 24 }
+      ],
+      "gates": [{ "h": 7, "id": "return-1", "w": 1, "x": 16, "y": 28 }],
+      "height": 36,
+      "id": "coupa-developer-integration-05-map",
+      "name": "Draft, Validate, Explain",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "speedZones": [],
+      "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 15, "x": 28, "y": 7 }],
+      "walls": [
+        { "h": 2, "w": 14, "x": 12, "y": 12 },
+        { "h": 2, "w": 14, "x": 45, "y": 12 },
+        { "h": 2, "w": 7, "x": 32, "y": 24 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV3",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 10, "y": 23 },
+        { "h": 4, "w": 10, "x": 31, "y": 12 },
+        { "h": 4, "w": 10, "x": 31, "y": 23 },
+        { "h": 4, "w": 7, "x": 54, "y": 7 }
+      ],
+      "gates": [
+        { "h": 6, "id": "return-1", "w": 1, "x": 57, "y": 1 },
+        { "h": 7, "id": "return-2", "w": 1, "x": 36, "y": 16 }
+      ],
+      "height": 36,
+      "id": "coupa-developer-integration-06-map",
+      "name": "Run Ledger",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "speedZones": [
+        { "direction": "down", "h": 7, "id": "outbound-flow", "w": 3, "x": 24, "y": 8 },
+        { "direction": "right", "h": 3, "id": "return-flow", "w": 7, "x": 41, "y": 24 }
+      ],
+      "terrain": [],
+      "walls": [
+        { "h": 8, "w": 3, "x": 20, "y": 10 },
+        { "h": 8, "w": 3, "x": 48, "y": 18 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "axis": "horizontal",
+          "id": "scheduled-wave",
+          "role": "lane-emitter",
+          "tier": "measured",
+          "x": 57.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6020000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Plan a complete return around the lane warning before committing to the marked flow. Arrows speed travel with the flow and slow opposite travel in unclaimed field. Capture neutralizes them.",
+        "difficulty": {
+          "band": 11,
+          "coordination": 0,
+          "execution": 10,
+          "mechanicLoad": 11,
+          "planning": 11,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [70, 240],
+        "introduces": ["directional-fields"],
+        "lesson": "Map a fictional integration requirement to its resources. Plan a complete return around the lane warning before committing to the marked flow.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A blueprint of the village exposes labelled resource districts and data routes.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "lane-emitter",
+          "directional-fields"
+        ],
+        "routeDecision": "Link the input and output hubs through the smallest useful resource loop. Choose the flow direction that reaches a return before the next lane pulse."
+      },
+      "encounter": null,
+      "format": "MissionDesignV4",
+      "id": "coupa-developer-integration-01",
+      "map": { "id": "coupa-developer-integration-01-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Resource Atlas",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-developer-integration-01-picture",
+        "themeId": "coupa-developer-integration-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "axis": "vertical",
+          "id": "scheduled-wave",
+          "role": "lane-emitter",
+          "tier": "measured",
+          "x": 57.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6520000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Plan a complete return around the lane warning before committing to the marked flow. Arrows speed travel with the flow and slow opposite travel in unclaimed field. Capture neutralizes them.",
+        "difficulty": {
+          "band": 11,
+          "coordination": 0,
+          "execution": 10,
+          "mechanicLoad": 11,
+          "planning": 11,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [70, 240],
+        "introduces": [],
+        "lesson": "Select only the fictional permissions the task needs. Plan a complete return around the lane warning before committing to the marked flow.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Clearly labelled access stations protect distinct data districts.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "lane-emitter",
+          "directional-fields"
+        ],
+        "routeDecision": "Take the narrow authorized route or inspect the broader perimeter first. Choose the flow direction that reaches a return before the next lane pulse."
+      },
+      "encounter": null,
+      "format": "MissionDesignV4",
+      "id": "coupa-developer-integration-02",
+      "map": { "id": "coupa-developer-integration-02-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Scoped Access",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-developer-integration-02-picture",
+        "themeId": "coupa-developer-integration-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "axis": "horizontal",
+          "id": "scheduled-wave",
+          "role": "lane-emitter",
+          "tier": "measured",
+          "x": 57.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6820000000000002,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Plan a complete return around the lane warning before committing to the marked flow. Arrows speed travel with the flow and slow opposite travel in unclaimed field. Capture neutralizes them.",
+        "difficulty": {
+          "band": 11,
+          "coordination": 0,
+          "execution": 10,
+          "mechanicLoad": 11,
+          "planning": 11,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [70, 240],
+        "introduces": [],
+        "lesson": "Read every page of a filtered fictional record set. Plan a complete return around the lane warning before committing to the marked flow.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Three numbered data shelves fill a complete local response ledger.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "lane-emitter",
+          "directional-fields"
+        ],
+        "routeDecision": "Use the page landings in sequence without mistaking the first for the whole collection. Choose the flow direction that reaches a return before the next lane pulse."
+      },
+      "encounter": null,
+      "format": "MissionDesignV4",
+      "id": "coupa-developer-integration-03",
+      "map": { "id": "coupa-developer-integration-03-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Beyond Page One",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-developer-integration-03-picture",
+        "themeId": "coupa-developer-integration-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        { "id": "shared-core", "role": "relay-sentinel", "tier": "measured", "x": 55.5, "y": 17.5 }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 30.5, "y": 8.5 }],
+      "coverage": 0.82,
+      "design": {
+        "captureConsequence": "Shield capture advances the shared core encounter; only its release secures the remaining picture. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["shield-relay-sentinel"],
+        "counterplay": "Capture every shield relay. After the vertical core attack, close eight fresh trail cells during CORE OPEN or isolate the core; release secures the remaining field.",
+        "difficulty": {
+          "band": 12,
+          "coordination": 0,
+          "execution": 10,
+          "mechanicLoad": 12,
+          "planning": 12,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [70, 240],
+        "introduces": ["shield-relay-sentinel"],
+        "lesson": "Resolve valid references before preparing a transaction. Capture every shield relay. After the vertical core attack, close eight fresh trail cells during CORE OPEN or isolate the core; release secures the remaining field.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Supplier, requester and accounting nodes connect to one draft hub.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "shield-relay-sentinel"
+        ],
+        "routeDecision": "Connect the reference islands before making the long return through the hub. Connect the shield relays before committing to the exposed shared core."
+      },
+      "encounter": {
+        "coreObjectiveId": "core",
+        "enemyId": "shared-core",
+        "recipeId": "shield-relays-v1",
+        "shieldObjectiveIds": ["connection"]
+      },
+      "format": "MissionDesignV4",
+      "id": "coupa-developer-integration-04",
+      "map": { "id": "coupa-developer-integration-04-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Known References",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "core", "required": true, "x": 55.5, "y": 17.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-developer-integration-04-picture",
+        "themeId": "coupa-developer-integration-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        { "id": "shared-core", "role": "relay-sentinel", "tier": "measured", "x": 55.5, "y": 17.5 }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 30.5, "y": 14.5 }],
+      "coverage": 0.82,
+      "design": {
+        "captureConsequence": "The captured relay opens its matching return. Shield capture advances the shared core encounter; only its release secures the remaining picture. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["shield-relay-sentinel", "relay-gates"],
+        "counterplay": "Capture every shield relay. After the vertical core attack, close eight fresh trail cells during CORE OPEN or isolate the core; release secures the remaining field. Each numbered objective opens its matching connector. Closed connectors block a cut; open ones become safe returns without another fill.",
+        "difficulty": {
+          "band": 12,
+          "coordination": 0,
+          "execution": 10,
+          "mechanicLoad": 12,
+          "planning": 12,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [70, 240],
+        "introduces": [],
+        "lesson": "Inspect an error and correct a fictional draft request. Capture every shield relay. After the vertical core attack, close eight fresh trail cells during CORE OPEN or isolate the core; release secures the remaining field.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A transparent validation workshop shows inputs, feedback and a corrected draft.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "shield-relay-sentinel",
+          "relay-gates"
+        ],
+        "routeDecision": "Use the validation landing to recover before crossing the second input lane. Connect the shield relays before committing to the exposed shared core."
+      },
+      "encounter": {
+        "coreObjectiveId": "core",
+        "enemyId": "shared-core",
+        "recipeId": "shield-relays-v1",
+        "shieldObjectiveIds": ["connection", "handoff"]
+      },
+      "format": "MissionDesignV4",
+      "id": "coupa-developer-integration-05",
+      "map": { "id": "coupa-developer-integration-05-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Draft, Validate, Explain",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 47.5, "y": 27.5 },
+        { "hidden": false, "id": "core", "required": true, "x": 55.5, "y": 17.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-developer-integration-05-picture",
+        "themeId": "coupa-developer-integration-theme"
+      },
+      "relayLinks": [{ "gateId": "return-1", "objectiveId": "connection" }],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        { "id": "shared-core", "role": "relay-sentinel", "tier": "measured", "x": 55.5, "y": 17.5 },
+        {
+          "clockwise": true,
+          "edge": { "side": "east", "x": 9, "y": 23 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 10.5, "y": 23.5 }],
+      "coverage": 0.82,
+      "design": {
+        "captureConsequence": "The captured relay opens its matching return. Shield capture advances the shared core encounter; only its release secures the remaining picture. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [
+          "shield-relay-sentinel",
+          "frontier-patrol",
+          "relay-gates",
+          "directional-fields"
+        ],
+        "counterplay": "Capture every shield relay. After the vertical core attack, close eight fresh trail cells during CORE OPEN or isolate the core; release secures the remaining field. Frontier patrols follow the changed boundary after capture; check the return edge before departing. Each numbered objective opens its matching connector. Closed connectors block a cut; open ones become safe returns without another fill. Arrows speed travel with the flow and slow opposite travel in unclaimed field. Capture neutralizes them.",
+        "difficulty": {
+          "band": 12,
+          "coordination": 0,
+          "execution": 10,
+          "mechanicLoad": 12,
+          "planning": 12,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [70, 240],
+        "introduces": [],
+        "lesson": "Reconcile processed records and recover one failed item. Capture every shield relay. After the vertical core attack, close eight fresh trail cells during CORE OPEN or isolate the core; release secures the remaining field.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A complete network lights up while one recoverable record is clearly identified.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "shield-relay-sentinel",
+          "frontier-patrol",
+          "relay-gates",
+          "directional-fields"
+        ],
+        "routeDecision": "Connect all ledger stations without revisiting the long outside route. Connect the shield relays before committing to the exposed shared core."
+      },
+      "encounter": {
+        "coreObjectiveId": "core",
+        "enemyId": "shared-core",
+        "recipeId": "shield-relays-v1",
+        "shieldObjectiveIds": ["connection", "handoff"]
+      },
+      "format": "MissionDesignV4",
+      "id": "coupa-developer-integration-06",
+      "map": { "id": "coupa-developer-integration-06-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Run Ledger",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 47.5, "y": 27.5 },
+        { "hidden": false, "id": "core", "required": true, "x": 55.5, "y": 17.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-developer-integration-06-picture",
+        "themeId": "coupa-developer-integration-theme"
+      },
+      "relayLinks": [
+        { "gateId": "return-1", "objectiveId": "connection" },
+        { "gateId": "return-2", "objectiveId": "handoff" }
+      ],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "Connect the Network",
+  "packs": [
+    {
+      "campaignIds": ["coupa-developer-integration"],
+      "format": "PackDesignV1",
+      "id": "coupa-developer-integration-pack",
+      "name": "Connect the Network",
+      "revision": "4"
+    }
+  ],
+  "policyId": "journey-trail-impact-v3",
+  "revision": "4"
+}

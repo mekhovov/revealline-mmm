@@ -1,0 +1,64 @@
+/* Original FPV / LINE identity. The transparent canvas is framed in CSS so the
+   same untouched source image works in menus, tools and marketing chrome. */
+.fpv-line-wordmark {
+  display: block;
+  width: min(100%, 510px);
+  height: auto;
+  aspect-ratio: 5.7;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 0;
+}
+.fpv-line-brand {
+  display: block;
+  width: min(100%, 300px);
+  line-height: 1;
+}
+.fpv-line-brand .fpv-line-wordmark {
+  width: 100%;
+}
+.fpv-line-brand--compact {
+  max-width: 12rem;
+}
+.edition-compact-logo {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+}
+.edition-compact-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.brand-mark:not(:has(img)) {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  overflow: hidden;
+  font-size: 0;
+  background: url('../editions/assets/coupa/icon-512.png') center / contain no-repeat;
+}
+.edition-propeller {
+  animation: edition-propeller-turn 10s linear infinite;
+  transform-origin: center;
+}
+@keyframes edition-propeller-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+body[data-effects='reduced'] .edition-propeller,
+body[data-reduced-effects='true'] .edition-propeller,
+.native-landing:has(.menu-scene[data-running='false']) .edition-propeller,
+.native-landing:has(.menu-scene[data-motion='off']) .edition-propeller {
+  animation: none;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .edition-propeller {
+    animation: none;
+    transform: none;
+  }
+}

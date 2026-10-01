@@ -1,0 +1,677 @@
+{
+  "actorCatalogId": "journey-actors-v9",
+  "assets": [
+    {
+      "alt": "An illustrated welcoming village courtyard with shared workspaces.",
+      "bytes": 1997148,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-inside-village-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/coupa-inside-village-key.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "50cf52f3ff6faeef17171a44acb83bf8b80e7090dcfa5fad512496676c18eb0f",
+      "width": 1280
+    },
+    {
+      "alt": "Two blue listening pavilions face a sunlit collaboration garden with quiet porcelain courtyards.",
+      "bytes": 953677,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-inside-village-02-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/listen-then-link-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "66d93ec13abcc1e3095c435278e7a4599ace4618724c93acdfd4ce0277f8b4d5",
+      "width": 960
+    },
+    {
+      "alt": "A generous blue community conservatory surrounds a central gathering table and two welcoming quiet contribution nooks.",
+      "bytes": 883373,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-inside-village-03-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/room-for-everyone-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "6939aa6f3ed8253504639cbd8db3d3449f160029211be4d30fc3dac6ce97b3b7",
+      "width": 960
+    },
+    {
+      "alt": "Two crafted blue workshop stations share blank folders and parcel trays across a calm central handoff courtyard.",
+      "bytes": 929184,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-inside-village-04-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/own-the-handoff-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "d8d385fabf56624d69362f0287deb5236f081994b24dbcabe8af7e96e3bc11cd",
+      "width": 960
+    },
+    {
+      "alt": "A sunlit blue invention greenhouse gathers separated craft benches around a calm shared prototype garden.",
+      "bytes": 914825,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-inside-village-05-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/build-tomorrow-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "f44ca426cec434334b31cadddab96a036c365f2a0492a39d935c73fe2475c14f",
+      "width": 960
+    },
+    {
+      "alt": "Six welcoming blue village landmarks gather around a shared festival garden with three quiet porcelain plazas.",
+      "bytes": 997763,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-inside-village-06-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/all-of-us-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "556af50d368e0912547dc03f9b6854b43b13cea825fe5d3d0ad0979ab8e00f3b",
+      "width": 960
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 4,
+      "format": "CampaignDesignV1",
+      "id": "coupa-inside-village",
+      "missionIds": [
+        "coupa-inside-village-01",
+        "coupa-inside-village-02",
+        "coupa-inside-village-03",
+        "coupa-inside-village-04",
+        "coupa-inside-village-05",
+        "coupa-inside-village-06"
+      ],
+      "name": "Inside the Village",
+      "revision": "4"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v2",
+  "format": "ContentProjectV1",
+  "id": "coupa-inside-village",
+  "maps": [
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 12, "x": 12, "y": 16 },
+        { "h": 4, "w": 12, "x": 40, "y": 15 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-01-map",
+      "name": "Hello, Village",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 17.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 8, "w": 2, "x": 25, "y": 9 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 8, "x": 17, "y": 13 },
+        { "h": 5, "w": 8, "x": 43, "y": 18 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-02-map",
+      "name": "Listen, Then Link",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 20.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 7, "w": 3, "x": 32, "y": 8 },
+        { "h": 7, "w": 3, "x": 32, "y": 22 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 7, "x": 11, "y": 9 },
+        { "h": 5, "w": 10, "x": 31, "y": 15 },
+        { "h": 4, "w": 7, "x": 54, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-03-map",
+      "name": "Room for Everyone",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 13, "w": 3, "x": 22, "y": 10 },
+        { "h": 13, "w": 3, "x": 47, "y": 12 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 6, "x": 31, "y": 11 },
+        { "h": 5, "w": 6, "x": 33, "y": 22 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-04-map",
+      "name": "Own the Handoff",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 34.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 16, "x": 13, "y": 9 },
+        { "h": 2, "w": 16, "x": 42, "y": 25 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 31, "y": 7 },
+        { "h": 4, "w": 9, "x": 31, "y": 24 },
+        { "h": 3, "w": 7, "x": 8, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-05-map",
+      "name": "Build Tomorrow",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [{ "h": 6, "id": "slow-1", "kind": "slow", "w": 11, "x": 30, "y": 14 }],
+      "walls": [
+        { "h": 2, "w": 8, "x": 19, "y": 15 },
+        { "h": 2, "w": 8, "x": 45, "y": 15 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 8, "x": 10, "y": 14 },
+        { "h": 5, "w": 11, "x": 30, "y": 14 },
+        { "h": 5, "w": 8, "x": 54, "y": 14 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-06-map",
+      "name": "All of Us",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 7, "w": 3, "x": 24, "y": 9 },
+        { "h": 7, "w": 3, "x": 45, "y": 21 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": false,
+          "edge": { "side": "east", "x": 11, "y": 16 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 26.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.554,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "difficulty": {
+          "band": 4,
+          "coordination": 0,
+          "execution": 3,
+          "mechanicLoad": 4,
+          "planning": 4,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": ["frontier-patrol"],
+        "lesson": "Meet the people and roles that make a shared outcome possible. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "An illustrated welcome square frames fictional reflections inspired by Coupa’s public culture page.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "frontier-patrol"
+        ],
+        "routeDecision": "Connect the welcome desk and the distant meeting nook in the order you prefer. Read the moving boundary before committing to the next connection."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-01",
+      "map": { "id": "coupa-inside-village-01-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Hello, Village",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-inside-village-01-picture",
+        "themeId": "coupa-inside-village-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "edge": { "side": "east", "x": 16, "y": 13 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 26.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6040000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "difficulty": {
+          "band": 4,
+          "coordination": 0,
+          "execution": 3,
+          "mechanicLoad": 4,
+          "planning": 4,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Discover two teams’ needs before completing their shared handoff. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Two listening spaces connect through a bright collaboration garden.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "frontier-patrol"
+        ],
+        "routeDecision": "Read both sides of the courtyard before choosing your linking route. Read the moving boundary before committing to the next connection."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-02",
+      "map": { "id": "coupa-inside-village-02-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Listen, Then Link",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-inside-village-02-picture",
+        "themeId": "coupa-inside-village-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": false,
+          "edge": { "side": "east", "x": 10, "y": 9 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 26.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6340000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "difficulty": {
+          "band": 4,
+          "coordination": 0,
+          "execution": 3,
+          "mechanicLoad": 4,
+          "planning": 4,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Make every participation point part of the finished picture. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Different workspaces contribute to one welcoming community room.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "frontier-patrol"
+        ],
+        "routeDecision": "Connect the small side rooms as well as the large central gathering space. Read the moving boundary before committing to the next connection."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-03",
+      "map": { "id": "coupa-inside-village-03-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Room for Everyone",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-inside-village-03-picture",
+        "themeId": "coupa-inside-village-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "edge": { "side": "east", "x": 30, "y": 11 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 26.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 9.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 31.5, "y": 11.5 }],
+      "coverage": 0.654,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["frontier-patrol", "reclaimed-roamer"],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing. A dormant backlog knot wakes only after you reclaim its whole body; leave its warning area before using the new ground.",
+        "difficulty": {
+          "band": 5,
+          "coordination": 0,
+          "execution": 3,
+          "mechanicLoad": 5,
+          "planning": 5,
+          "threatDensity": 4,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": ["reclaimed-roamer"],
+        "lesson": "Bring evidence, an owner and a next step to a shared task. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A visible handoff travels between friendly workshop stations.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "frontier-patrol",
+          "reclaimed-roamer"
+        ],
+        "routeDecision": "Build an interior return before crossing the exposed handoff lane. Read the moving boundary before committing to the next connection."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-04",
+      "map": { "id": "coupa-inside-village-04-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Own the Handoff",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 24.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-inside-village-04-picture",
+        "themeId": "coupa-inside-village-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": false,
+          "edge": { "side": "east", "x": 30, "y": 7 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 26.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 11.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 31.5, "y": 7.5 }],
+      "coverage": 0.674,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["frontier-patrol", "reclaimed-roamer"],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing. A dormant backlog knot wakes only after you reclaim its whole body; leave its warning area before using the new ground.",
+        "difficulty": {
+          "band": 5,
+          "coordination": 0,
+          "execution": 3,
+          "mechanicLoad": 5,
+          "planning": 5,
+          "threatDensity": 4,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Combine contributions into a shared prototype. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "An inventive workshop displays sketches, models and a finished collaboration.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "frontier-patrol",
+          "reclaimed-roamer"
+        ],
+        "routeDecision": "Link the separated benches through the central prototype island. Read the moving boundary before committing to the next connection."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-05",
+      "map": { "id": "coupa-inside-village-05-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Build Tomorrow",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-inside-village-05-picture",
+        "themeId": "coupa-inside-village-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "edge": { "side": "east", "x": 9, "y": 14 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 26.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 9.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 10.5, "y": 14.5 }],
+      "coverage": 0.7140000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["frontier-patrol", "reclaimed-roamer"],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing. A dormant backlog knot wakes only after you reclaim its whole body; leave its warning area before using the new ground.",
+        "difficulty": {
+          "band": 5,
+          "coordination": 0,
+          "execution": 3,
+          "mechanicLoad": 5,
+          "planning": 5,
+          "threatDensity": 4,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Celebrate what the community has built together. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A six-part festival mosaic reunites the people and places of the journey.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "frontier-patrol",
+          "reclaimed-roamer"
+        ],
+        "routeDecision": "Choose a tour through familiar spaces without leaving the small corners isolated. Read the moving boundary before committing to the next connection."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-06",
+      "map": { "id": "coupa-inside-village-06-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "All of Us",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-inside-village-06-picture",
+        "themeId": "coupa-inside-village-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "Inside the Village",
+  "packs": [
+    {
+      "campaignIds": ["coupa-inside-village"],
+      "format": "PackDesignV1",
+      "id": "coupa-inside-village-pack",
+      "name": "Inside the Village",
+      "revision": "4"
+    }
+  ],
+  "policyId": "journey-trail-impact-v3",
+  "revision": "4"
+}

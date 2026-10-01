@@ -1,0 +1,68 @@
+/* Below menu content, never an overlay on controls or a navigation delay. */
+.menu-retune-surface {
+  isolation: isolate;
+}
+#race-setup.menu-retune-surface {
+  position: relative;
+}
+.menu-retune-layer {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  contain: strict;
+  border-radius: inherit;
+  pointer-events: none;
+  background: url('./art/menu-scenes/analog-noise-atlas.png') 0 0 / 400% 100% no-repeat;
+  opacity: 0;
+}
+.menu-scene > .menu-retune-layer {
+  z-index: 1;
+}
+.menu-retune-layer[data-active='true'] {
+  animation:
+    menu-retune 220ms linear 1,
+    menu-retune-frames 220ms step-end 1;
+}
+@keyframes menu-retune {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.18;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes menu-retune-frames {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 33.333% 0;
+  }
+  50% {
+    background-position: 66.667% 0;
+  }
+  75%,
+  100% {
+    background-position: 100% 0;
+  }
+}
+body[data-effects='reduced'] .menu-retune-layer,
+body[data-reduced-effects='true'] .menu-retune-layer,
+html[data-reduced-motion='true'] .menu-retune-layer {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-retune-layer {
+    display: none;
+  }
+}

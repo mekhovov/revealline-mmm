@@ -1,0 +1,1550 @@
+#journey-chooser {
+  width: min(92rem, calc(100vw - 2rem));
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: auto;
+  color: var(--ink, #e5eddd);
+  background: var(--panel, #15251f);
+}
+.journey-chooser::backdrop {
+  background: #09140de6;
+}
+.journey-chooser[open] {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto minmax(0, 1fr) auto;
+  height: min(56rem, calc(100dvh - 2rem));
+}
+.journey-chooser h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+.journey-filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.journey-filters label {
+  display: grid;
+  gap: 0.4rem;
+  flex: 1 1 16rem;
+}
+.journey-filters input,
+.journey-filters select {
+  width: 100%;
+  min-height: 44px;
+}
+.journey-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+  gap: 0.75rem;
+  align-content: start;
+  grid-auto-rows: max-content;
+  overflow: auto;
+  padding: 4px;
+}
+.journey-campaign-rail {
+  display: flex;
+  gap: 0.5rem;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 4px;
+  scroll-padding-inline: 4px;
+  scrollbar-width: thin;
+}
+.journey-campaign-rail[hidden] {
+  display: none;
+}
+#journey-chooser .journey-campaign-shortcut {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-height: 44px;
+  min-block-size: 44px;
+  max-width: min(19rem, 72vw);
+  padding: 0.5rem 0.75rem;
+  overflow: hidden;
+  color: #bacdc0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid #799786;
+  border-radius: 0.2rem;
+  background: #102219;
+}
+#journey-chooser .journey-campaign-shortcut[aria-pressed='true'] {
+  color: #07120d;
+  border-color: #d7f891;
+  background: #d7f891;
+}
+#journey-chooser .journey-card {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 0.35rem 0.75rem;
+  min-height: 8rem;
+  min-block-size: 8rem;
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #799786;
+  border-radius: 0.35rem;
+  background: #182d23;
+  color: #f0f5e9;
+}
+#journey-chooser .journey-card::before {
+  content: attr(data-campaign-title);
+  grid-column: 1 / -1;
+  overflow: hidden;
+  color: #94c6b0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#journey-chooser .journey-card[data-campaign-start='true'] {
+  border-top: 3px solid #d7f891;
+}
+#journey-chooser .journey-card[data-current='true'] {
+  box-shadow: inset 0 0 0 2px #ffcb5c;
+}
+#journey-chooser .journey-card[data-completion-state='earned'] .journey-card-progress {
+  color: #ffcb5c;
+}
+#journey-chooser .journey-card[data-availability-state='unavailable'] {
+  border-color: #b87373;
+}
+@media (max-height: 480px) {
+  #journey-chooser {
+    padding: 0.5rem 1rem;
+  }
+  #journey-chooser > p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+  }
+  #journey-chooser h2 {
+    font-size: 1.35rem;
+    line-height: 1.1;
+  }
+  #journey-chooser .journey-filters {
+    flex-wrap: nowrap;
+  }
+  #journey-chooser .journey-filters label {
+    min-width: 0;
+  }
+  #journey-chooser #journey-back {
+    margin-top: 0.35rem;
+  }
+}
+.journey-card-number {
+  grid-row: span 3;
+  font-size: 2rem;
+  color: #c7e78e;
+}
+.journey-card strong {
+  min-width: 0;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+.journey-card-campaign {
+  grid-column: 2;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.journey-card-progress {
+  color: #c7e78e;
+  font-size: 0.85rem;
+}
+.journey-card-edition,
+.journey-card-tags,
+.journey-card-action {
+  grid-column: 1 / -1;
+  overflow-wrap: anywhere;
+}
+.mission-library-chooser:not(.mission-library-detailed)
+  .journey-card
+  :is(
+    .journey-card-campaign,
+    .journey-card-edition,
+    .journey-card-tags,
+    .journey-card-challenge,
+    .journey-card-route,
+    .journey-card-mastery
+  ) {
+  display: none;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card-illustrated {
+  grid-template-rows: auto auto auto auto auto auto;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card-illustrated::before {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card-number {
+  grid-column: 1;
+  grid-row: 2;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card > strong {
+  grid-column: 2;
+  grid-row: 2;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card-progress {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+.mission-library-chooser:not(.mission-library-detailed)
+  .journey-card-illustrated
+  > .journey-card-map {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card-picture-status {
+  grid-column: 1 / -1;
+  grid-row: 5;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card-action {
+  grid-column: 1 / -1;
+  grid-row: 6;
+}
+@media (max-width: 600px) {
+  /* Give search its own row. Long translated actions must never collapse the
+     editable field; the controls retain their native DOM and keyboard order. */
+  #journey-chooser.mission-library-chooser .journey-search-controls {
+    display: contents;
+  }
+  #journey-chooser.mission-library-chooser .journey-search-field {
+    grid-column: 1 / -1;
+  }
+  #journey-chooser.mission-library-chooser #journey-search-clear {
+    grid-column: 1;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  #journey-chooser.mission-library-chooser .journey-filter-details {
+    grid-column: 2;
+  }
+}
+.journey-card-edition {
+  color: #bacdc0;
+  font-size: 0.85rem;
+}
+.journey-card-tags {
+  font-size: 0.85rem;
+  color: #f5ffba;
+}
+.journey-card-action {
+  font-weight: bold;
+  min-height: 1.5em;
+}
+#journey-chooser.mission-library-chooser .journey-filters label {
+  flex: 1 1 10rem;
+  min-width: 0;
+}
+.journey-search-controls {
+  display: flex;
+  align-items: end;
+  gap: 0.4rem;
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+#journey-chooser #journey-search-clear {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-height: 44px;
+  min-block-size: 44px;
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+}
+#journey-chooser #journey-search-clear[hidden] {
+  display: none;
+}
+.journey-filter-details {
+  flex: 3 1 30rem;
+  min-width: 0;
+}
+.journey-filter-details > summary {
+  display: none;
+}
+.journey-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#journey-chooser .journey-card-detail-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  min-block-size: 44px;
+}
+#journey-chooser .journey-card-detail-control input {
+  width: 1.25rem;
+  min-height: 1.25rem;
+  flex: 0 0 auto;
+}
+@media (max-height: 480px) {
+  #journey-chooser.mission-library-chooser .journey-filters {
+    flex-wrap: wrap;
+    gap: 0.3rem 0.6rem;
+  }
+}
+#journey-chooser .journey-card-illustrated {
+  grid-template-columns: 2.5rem 1fr;
+  grid-template-rows: auto auto auto auto auto auto 1fr;
+  align-content: start;
+  height: max-content;
+  border-top: 3px solid #94c6b0;
+}
+.journey-card-illustrated .journey-card-number {
+  grid-row: 1 / 4;
+  font-variant-numeric: tabular-nums;
+}
+.journey-card-map {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2;
+  margin: 0.5rem 0 0.25rem;
+  border: 1px solid #94c6b0;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+.journey-card-picture-status {
+  grid-column: 1 / -1;
+  color: #bacdc0;
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+.journey-card-challenge,
+.journey-card-route,
+.journey-card-mastery {
+  grid-column: 1 / -1;
+  line-height: 1.45;
+}
+.journey-card-challenge {
+  color: #f5ffba;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+.journey-card-route {
+  font-size: 0.95rem;
+}
+.journey-card-mastery {
+  padding-top: 0.35rem;
+  color: #bacdc0;
+  font-size: 0.8rem;
+}
+@media (max-height: 480px) and (min-width: 600px) {
+  .journey-cards {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  }
+  #journey-chooser .journey-card-illustrated {
+    grid-template-columns: 2rem minmax(0, 1fr) minmax(7rem, 0.8fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 0.25rem 0.5rem;
+    padding: 0.5rem;
+  }
+  .journey-card-illustrated > strong,
+  .journey-card-illustrated > span:not([class]),
+  .journey-card-illustrated .journey-card-progress {
+    grid-column: 2;
+  }
+  .journey-card-illustrated .journey-card-map {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    align-self: center;
+    justify-self: end;
+    max-width: 10rem;
+    margin: 0;
+  }
+}
+@media (min-width: 601px) and (max-width: 899px) and (min-height: 481px) {
+  #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+.journey-card:focus-visible,
+.journey-card:hover {
+  outline: 3px solid #d7f891;
+  outline-offset: 1px;
+}
+#journey-back {
+  margin-top: 1rem;
+  min-height: 44px;
+}
+#journey-picture-viewer :is(#journey-picture-retry, #journey-picture-back) {
+  min-height: 44px;
+}
+@media (max-height: 480px) and (min-width: 600px) {
+  #journey-picture-viewer[open] {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(11rem, 0.75fr);
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+    gap: 0.5rem 1rem;
+    align-items: start;
+    max-height: calc(100dvh - 1rem);
+  }
+  #journey-picture-title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+  #journey-picture-viewer canvas {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: center;
+    width: 100%;
+    max-height: calc(100dvh - 2rem);
+    object-fit: contain;
+  }
+  #journey-picture-status {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+  #journey-picture-retry {
+    grid-column: 2;
+    grid-row: 3;
+    width: 100%;
+  }
+  #journey-picture-back {
+    grid-column: 2;
+    grid-row: 4;
+    width: 100%;
+  }
+}
+.journey-mode-pictures {
+  box-sizing: border-box;
+  width: min(58rem, calc(100vw - 2rem));
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: auto;
+  color: var(--ink, #e5eddd);
+  background: var(--panel, #15251f);
+}
+.journey-mode-pictures::backdrop {
+  background: #09140de6;
+}
+.journey-mode-pictures > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.journey-mode-pictures > header h2,
+.journey-mode-picture-card h3 {
+  margin: 0;
+}
+.journey-mode-pictures button {
+  min-height: 44px;
+}
+.journey-mode-picture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+  gap: 0.75rem;
+}
+.journey-mode-picture-card {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+  padding: 1rem;
+  border: 1px solid #799786;
+  background: #182d23;
+}
+.journey-mode-picture-card p {
+  margin: 0;
+}
+.journey-mode-picture-viewer {
+  display: grid;
+  gap: 0.75rem;
+}
+.journey-mode-picture-viewer[hidden] {
+  display: none;
+}
+.journey-mode-picture-viewer canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 60dvh;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.journey-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: end;
+}
+.journey-footer button {
+  min-height: 44px;
+}
+#journey-chooser #coop-library-status,
+#journey-chooser #race-library-status {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+#journey-chooser #coop-library-status p,
+#journey-chooser #race-library-status p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+#journey-chooser #coop-library-remote-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+#journey-chooser #coop-library-remote-feedback[hidden] {
+  display: none;
+}
+#journey-chooser #coop-library-remote-status {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+#journey-chooser #coop-library-remote-retry {
+  flex: 0 0 auto;
+  min-height: 44px;
+  min-block-size: 44px;
+  margin: 0;
+}
+.mission-library-setup {
+  flex-basis: 100%;
+  min-width: 0;
+}
+.mission-library-setup[open] {
+  max-height: min(22rem, 38dvh);
+  overflow: auto;
+}
+.mission-library-setup .content-switcher,
+.mission-library-setup .deck-footer {
+  display: none;
+}
+#journey-chooser.mission-library-chooser[open] {
+  grid-template-rows: auto auto auto auto auto minmax(0, 1fr) auto auto;
+  overflow: hidden;
+}
+@media (max-width: 600px), (max-height: 720px) {
+  #journey-chooser.mission-library-chooser {
+    width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+    height: calc(100dvh - 1rem);
+    max-height: calc(100dvh - 1rem);
+    padding: 0.5rem;
+    grid-template-rows: auto auto auto auto minmax(9rem, 1fr) auto auto;
+    gap: 0.35rem;
+  }
+  #journey-chooser.mission-library-chooser h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  .mission-library-chooser .journey-library-copy {
+    display: none;
+  }
+  #journey-chooser.mission-library-chooser .journey-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem;
+    align-items: end;
+  }
+  /* Field-kit dialog details have panel spacing; these are compact controls. */
+  #journey-chooser.mission-library-chooser .journey-filter-details,
+  #journey-chooser.mission-library-chooser .mission-library-setup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-block-size: 0;
+  }
+  #journey-chooser.mission-library-chooser .journey-search-field {
+    margin: 0;
+    gap: 0;
+  }
+  #journey-chooser.mission-library-chooser #journey-search {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-block-size: 44px;
+    margin: 0;
+  }
+  .mission-library-chooser .journey-search-field > .journey-filter-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .mission-library-chooser .journey-filter-details {
+    position: relative;
+  }
+  #journey-chooser.mission-library-chooser .journey-filter-details > summary {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 44px;
+    min-block-size: 44px;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid #799786;
+    border-radius: 0.35rem;
+    cursor: pointer;
+  }
+  .mission-library-chooser .journey-filter-details > summary::after {
+    content: ' +';
+    margin-inline-start: 0.4rem;
+  }
+  .mission-library-chooser .journey-filter-details[open] > summary::after {
+    content: ' −';
+  }
+  .mission-library-chooser .journey-filter-options {
+    position: absolute;
+    z-index: 3;
+    top: calc(100% + 0.35rem);
+    right: 0;
+    width: min(28rem, calc(100vw - 3rem));
+    max-height: min(24rem, 55dvh);
+    overflow: auto;
+    padding: 0.75rem;
+    gap: 0.65rem;
+    border: 1px solid #94c6b0;
+    border-radius: 0.35rem;
+    background: var(--panel, #15251f);
+    box-shadow: 0 0.75rem 1.5rem #0008;
+  }
+  #journey-chooser .journey-card-detail-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+  }
+  #journey-chooser .journey-card-detail-control input {
+    width: 1.25rem;
+    min-height: 1.25rem;
+    flex: 0 0 auto;
+  }
+  #journey-chooser.mission-library-chooser #journey-chooser-status {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+  #journey-chooser.mission-library-chooser .journey-cards {
+    min-height: 9rem;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #journey-chooser.mission-library-chooser .journey-card {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    min-height: 44px;
+    min-block-size: 44px;
+    padding: 0.5rem;
+    gap: 0.2rem 0.5rem;
+  }
+  .mission-library-chooser .journey-card-number {
+    font-size: 1.35rem;
+  }
+  .mission-library-chooser .journey-card strong {
+    font-size: 1rem;
+  }
+  .mission-library-chooser .journey-card-edition,
+  .mission-library-chooser .journey-card-tags,
+  .mission-library-chooser .journey-card-progress {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  #journey-chooser.mission-library-chooser .journey-card-map {
+    margin-top: 0.2rem;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer {
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    align-items: start;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer > button {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-block-size: 44px;
+    margin: 0;
+  }
+  #journey-chooser.mission-library-chooser #journey-back {
+    margin-top: 0;
+  }
+  .mission-library-chooser .mission-library-setup {
+    flex: 1 1 13rem;
+  }
+  #journey-chooser.mission-library-chooser .mission-library-setup > summary {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 44px;
+    min-block-size: 44px;
+    padding: 0.35rem 0.5rem;
+  }
+  .mission-library-chooser .mission-library-setup[open] {
+    flex-basis: 100%;
+    max-height: 38dvh;
+  }
+}
+/* Large text keeps one useful reading column on narrow screens. Mission cards
+   remain ordinary buttons in the same DOM order; this changes neither
+   selection identity nor controller traversal. */
+@media (max-width: 600px) {
+  .game-shell[data-text-size='large'] #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 380px) {
+  #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (min-width: 601px) and (max-width: 899px) and (max-height: 720px) {
+  #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) and (max-height: 720px) {
+  #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1200px) and (max-height: 720px) {
+  #journey-chooser.mission-library-chooser .journey-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-height: 480px) {
+  #journey-chooser #coop-library-status,
+  #journey-chooser #race-library-status {
+    max-height: 5rem;
+    overflow: auto;
+    scroll-padding: 4px;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer {
+    position: relative;
+  }
+  #journey-chooser.mission-library-chooser .mission-library-setup[open] {
+    flex-basis: 13rem;
+    max-height: none;
+    overflow: visible;
+  }
+  /* Keep Back and the setup summary in place while the existing fields scroll. */
+  #journey-chooser.mission-library-chooser .mission-library-setup > .mission-picker-setup-fields {
+    position: absolute;
+    z-index: 3;
+    bottom: calc(100% + 0.35rem);
+    left: 0;
+    right: 0;
+    max-height: min(24rem, calc(100dvh - 8rem));
+    overflow: auto;
+    padding: 0.75rem;
+    border: 1px solid #94c6b0;
+    border-radius: 0.35rem;
+    background: var(--panel, #15251f);
+    box-shadow: 0 -0.75rem 1.5rem #0008;
+  }
+}
+
+/* Unified level gallery: one vertical scroll surface, fixed card geometry and
+   Field Kit signal colours. Company editions may override the semantic tokens. */
+#journey-chooser.mission-library-chooser {
+  --level-card-bg: var(--fk-panel-raised, #182531);
+  --level-card-bg-selected: color-mix(
+    in srgb,
+    var(--fk-panel-raised, #182531) 84%,
+    var(--fk-cyan, #78dce8)
+  );
+  --level-card-line: var(--fk-line, #425563);
+  --level-card-focus: var(--fk-cyan, #78dce8);
+  --level-card-award: var(--fk-amber, #f4bf62);
+  --level-card-muted: var(--fk-muted, #a5b2bb);
+  box-sizing: border-box;
+  min-height: 0;
+  padding-block-start: max(clamp(0.75rem, 2vw, 1.5rem), env(safe-area-inset-top));
+  padding-inline: max(clamp(0.75rem, 2vw, 1.5rem), env(safe-area-inset-left));
+  padding-inline-end: max(clamp(0.75rem, 2vw, 1.5rem), env(safe-area-inset-right));
+  overflow: hidden;
+  color: var(--fk-text, #f3f0db);
+  background: radial-gradient(circle at 85% 0%, #173046 0, transparent 35%), var(--fk-bg, #070b12);
+}
+#journey-chooser.mission-library-chooser[open] {
+  grid-template-areas:
+    'title'
+    'copy'
+    'filters'
+    'status'
+    'campaigns'
+    'cards'
+    'footer';
+  grid-template-rows: auto auto auto auto auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+#journey-chooser.mission-library-chooser > h2 {
+  grid-area: title;
+}
+#journey-chooser.mission-library-chooser > .journey-library-copy {
+  grid-area: copy;
+}
+#journey-chooser.mission-library-chooser > .journey-filters {
+  grid-area: filters;
+}
+#journey-chooser.mission-library-chooser > #journey-chooser-status {
+  grid-area: status;
+}
+#journey-chooser.mission-library-chooser > .journey-campaign-rail {
+  grid-area: campaigns;
+}
+#journey-chooser.mission-library-chooser > .journey-cards {
+  grid-area: cards;
+}
+#journey-chooser.mission-library-chooser > .journey-footer {
+  grid-area: footer;
+}
+#journey-chooser.mission-library-chooser .journey-cards {
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-block: 2.25rem 0.5rem;
+  grid-auto-rows: auto;
+  scrollbar-gutter: stable;
+}
+#journey-chooser .journey-campaign-heading {
+  position: static;
+  z-index: 1;
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  color: var(--level-card-focus);
+  background: transparent;
+  border: 0;
+  font-family: var(--fk-font-mono, monospace);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#journey-chooser .journey-campaign-heading[hidden] {
+  display: none;
+}
+#journey-chooser .journey-card[data-campaign-start='true'] {
+  padding-top: 0.58rem;
+}
+#journey-chooser .journey-card[data-campaign-start='true'] .journey-card-number {
+  grid-column: 2;
+  text-align: end;
+}
+#journey-chooser .journey-campaign-shortcut {
+  color: var(--level-card-muted);
+  border-color: var(--level-card-line);
+  border-radius: 0;
+  background: var(--fk-panel, #101923);
+}
+#journey-chooser .journey-campaign-shortcut[aria-pressed='true'] {
+  color: var(--fk-bg, #070b12);
+  border-color: var(--level-card-focus);
+  background: var(--level-card-focus);
+}
+#journey-chooser.mission-library-chooser .journey-card,
+#journey-chooser.mission-library-chooser .journey-card-illustrated {
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto minmax(2.45em, auto) auto auto 3.35rem;
+  gap: 0.18rem 0.5rem;
+  height: 11.2rem;
+  min-height: 11.2rem;
+  min-block-size: 11.2rem;
+  padding: 0.58rem;
+  overflow: hidden;
+  color: var(--fk-text, #f3f0db);
+  border: 1px solid var(--level-card-line);
+  border-top: 2px solid var(--level-card-focus);
+  border-radius: 0;
+  background: var(--level-card-bg);
+  transition:
+    border-color var(--fk-motion-fast, 100ms) ease-out,
+    background var(--fk-motion-fast, 100ms) ease-out,
+    transform var(--fk-motion-fast, 100ms) ease-out;
+}
+#journey-chooser .journey-card::before {
+  content: none;
+}
+#journey-chooser .journey-card[data-current='true'] {
+  box-shadow: inset 0 0 0 2px var(--level-card-award);
+}
+#journey-chooser .journey-card[data-completion-state='completed'] {
+  border-color: color-mix(in srgb, var(--level-card-award) 75%, var(--level-card-line));
+}
+#journey-chooser .journey-card[data-completion-state='completed']::after {
+  content: none;
+}
+#journey-chooser .journey-card-meta,
+#journey-chooser .journey-card-progress-group {
+  display: contents;
+}
+#journey-chooser .journey-card-check {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.45rem;
+  display: none;
+  color: var(--level-card-award);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+#journey-chooser .journey-card[data-completion-state='completed'] .journey-card-check {
+  display: block;
+}
+#journey-chooser .journey-card:focus-visible,
+#journey-chooser .journey-card:hover {
+  outline: 2px solid var(--level-card-focus);
+  outline-offset: 1px;
+  background: var(--level-card-bg-selected);
+}
+#journey-chooser .journey-card:hover {
+  transform: translateY(-1px);
+}
+#journey-chooser .journey-card-number {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--level-card-focus);
+  font-family: var(--fk-font-mono, monospace);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+#journey-chooser .journey-card > strong {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 0.94rem;
+  line-height: 1.2;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+#journey-chooser .journey-card-campaign {
+  grid-column: 1;
+  grid-row: 3;
+  display: block;
+  overflow: hidden;
+  color: var(--level-card-muted);
+  font-size: 0.7rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#journey-chooser .journey-card-position {
+  grid-column: 2;
+  grid-row: 3;
+  color: var(--level-card-muted);
+  font-family: var(--fk-font-mono, monospace);
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+#journey-chooser .journey-card-progress {
+  grid-column: 1;
+  grid-row: 4;
+  overflow: hidden;
+  color: var(--level-card-muted);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#journey-chooser .journey-card-stars {
+  grid-column: 2;
+  grid-row: 4;
+  color: var(--level-card-award);
+  font-family: var(--fk-font-mono, monospace);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  white-space: nowrap;
+}
+#journey-chooser .journey-card[data-completion-state='new'] .journey-card-stars,
+#journey-chooser .journey-card[data-completion-state='skipped'] .journey-card-stars {
+  color: var(--level-card-line);
+}
+#journey-chooser .journey-card-preview {
+  grid-column: 1 / -1;
+  grid-row: 5;
+  display: block;
+  min-height: 3.35rem;
+  overflow: hidden;
+  border: 1px solid var(--level-card-line);
+  background:
+    linear-gradient(90deg, transparent 49%, #78dce812 50%, transparent 51%),
+    linear-gradient(#78dce80d 49%, transparent 50%);
+  background-size: 1rem 1rem;
+}
+#journey-chooser .journey-card-preview .journey-card-map {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  margin: 0;
+  object-fit: cover;
+  border: 0;
+}
+#journey-chooser .journey-card-action:not([hidden]) {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  max-width: calc(100% - 0.8rem);
+  min-height: 0;
+  padding: 0.18rem 0.35rem;
+  overflow: hidden;
+  color: var(--fk-bg, #070b12);
+  background: var(--level-card-award);
+  font-size: 0.65rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mission-library-chooser:not(.mission-library-detailed) .journey-card-campaign {
+  display: block;
+}
+.mission-library-chooser:not(.mission-library-detailed)
+  .journey-card
+  :is(
+    .journey-card-edition,
+    .journey-card-tags,
+    .journey-card-challenge,
+    .journey-card-route,
+    .journey-card-mastery
+  ) {
+  display: none;
+}
+#journey-chooser.mission-library-detailed .journey-card {
+  height: 18rem;
+  min-height: 18rem;
+}
+#journey-chooser.mission-library-chooser .journey-footer {
+  position: relative;
+  z-index: 4;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  min-height: calc(44px + 0.6rem);
+  margin: 0;
+  padding-block: 0.45rem max(0.15rem, env(safe-area-inset-bottom));
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-top: 1px solid var(--level-card-line);
+  background: var(--fk-bg, #070b12);
+}
+#journey-chooser.mission-library-chooser .journey-footer > button,
+#journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
+  flex-shrink: 0;
+}
+#journey-chooser.mission-library-chooser .journey-footer > button {
+  box-sizing: border-box;
+  min-height: 44px;
+  min-block-size: 44px;
+  margin: 0;
+}
+#journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
+  flex-basis: auto;
+  min-block-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#journey-chooser.mission-library-chooser .mission-library-setup > summary {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 44px;
+  min-block-size: 44px;
+  padding: 0.35rem 0.5rem;
+}
+#journey-chooser.mission-library-chooser .journey-footer > .journey-goal {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  min-height: 44px;
+  min-block-size: 44px;
+}
+#journey-chooser.mission-library-chooser .journey-goal > p {
+  flex: 0 0 auto !important;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#journey-chooser.mission-library-chooser .journey-goal > button {
+  flex: 0 0 auto;
+  min-height: 44px;
+  min-block-size: 44px;
+  margin: 0;
+}
+#journey-chooser.mission-library-chooser .journey-filter-details > summary,
+#journey-chooser.mission-library-chooser .journey-filter-options,
+#journey-chooser.mission-library-chooser .mission-picker-setup-fields {
+  border-color: var(--level-card-line);
+  background: var(--fk-panel, #101923);
+}
+@media (max-width: 600px), (max-height: 720px) {
+  #journey-chooser.mission-library-chooser {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    padding-block-start: max(0.45rem, env(safe-area-inset-top));
+    padding-inline: max(0.45rem, env(safe-area-inset-left));
+    padding-inline-end: max(0.45rem, env(safe-area-inset-right));
+    border: 0;
+  }
+  #journey-chooser.mission-library-chooser[open] {
+    grid-template-rows: auto auto auto auto auto minmax(9rem, 1fr) auto;
+  }
+  #journey-chooser.mission-library-chooser .journey-cards {
+    gap: 0.38rem;
+  }
+  #journey-chooser.mission-library-chooser .journey-card,
+  #journey-chooser.mission-library-chooser .journey-card-illustrated {
+    height: 9.7rem;
+    min-height: 9.7rem;
+    min-block-size: 9.7rem;
+    grid-template-rows: auto minmax(2.35em, auto) auto auto 2.25rem;
+    padding: 0.45rem;
+  }
+  #journey-chooser .journey-card-preview {
+    min-height: 2.25rem;
+  }
+  #journey-chooser.mission-library-detailed .journey-card {
+    height: 16rem;
+    min-height: 16rem;
+  }
+}
+@media (max-height: 480px) {
+  /* On short phone landscapes, keep the useful controls on one line and give
+     the gallery the remaining height. Campaigns are still available from the
+     filter menu and remain embedded in the uninterrupted card collection. */
+  #journey-chooser.mission-library-chooser h2,
+  #journey-chooser.mission-library-chooser .journey-campaign-rail {
+    display: none;
+  }
+  #journey-chooser.mission-library-chooser[open] {
+    grid-template-areas:
+      'filters'
+      'status'
+      'cards'
+      'footer';
+    grid-template-rows: auto auto minmax(5.5rem, 1fr) auto;
+  }
+  #journey-chooser.mission-library-chooser .journey-search-field {
+    grid-column: 1;
+  }
+  #journey-chooser.mission-library-chooser .journey-filter-details {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+@media (max-width: 600px) {
+  .game-shell[data-text-size='large'] #journey-chooser.mission-library-chooser .journey-card,
+  .game-shell[data-text-size='large']
+    #journey-chooser.mission-library-chooser
+    .journey-card-illustrated {
+    height: auto;
+    min-height: 11rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #journey-chooser.mission-library-chooser .journey-card {
+    transition: none;
+  }
+  #journey-chooser.mission-library-chooser .journey-card:hover {
+    transform: none;
+  }
+}
+
+/* The action dock has two jobs: leave the library and manage the optional
+   focused-mission goal. Keep those jobs visually distinct, but in the same
+   keyboard and controller order as the DOM. */
+#journey-chooser.mission-library-chooser .journey-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: start;
+  gap: 0.45rem;
+  grid-auto-rows: max-content;
+  min-width: 0;
+  overflow: visible;
+}
+#journey-chooser.mission-library-chooser .journey-footer > button {
+  flex: 1 1 10rem;
+  min-width: min(100%, 9rem);
+  margin: 0;
+  white-space: normal;
+}
+#journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
+  flex: 1 1 13rem;
+}
+#journey-chooser.mission-library-chooser .journey-footer > .journey-goal {
+  order: 10;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) auto;
+  align-items: center;
+  gap: 0.45rem 0.65rem;
+  flex: 999 1 40rem;
+  width: auto !important;
+  max-width: 100%;
+  min-width: min(100%, 24rem);
+  padding: 0.35rem;
+  border: 1px solid var(--level-card-line);
+  background: var(--fk-panel, #101923);
+}
+#journey-chooser.mission-library-chooser #journey-goal-status {
+  min-width: 0;
+  max-width: none;
+  white-space: normal;
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--level-card-muted);
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+#journey-chooser.mission-library-chooser #journey-goal-status::before {
+  content: '';
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-inline-end: 0.45rem;
+  border: 1px solid var(--level-card-focus);
+  background: color-mix(in srgb, var(--level-card-focus) 32%, transparent);
+}
+#journey-chooser.mission-library-chooser .journey-goal-actions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(6.75rem, auto);
+  gap: 0.35rem;
+}
+#journey-chooser.mission-library-chooser .journey-goal-actions > button {
+  box-sizing: border-box;
+  min-height: 44px;
+  min-block-size: 44px;
+  margin: 0;
+  padding: 0.4rem 0.55rem;
+  line-height: 1.15;
+  white-space: normal;
+}
+
+@media (max-width: 899px) {
+  /* Tablet portrait still needs the gallery to dominate the screen. Keep the
+     three primary actions on one target-sized row and the goal on a second,
+     instead of inheriting the roomy menu-button proportions. */
+  #journey-chooser.mission-library-chooser .journey-footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer > button,
+  #journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    margin: 0;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.15;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
+    grid-column: auto;
+  }
+  #journey-chooser.mission-library-chooser .mission-library-setup > summary {
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+  #journey-chooser.mission-library-chooser .journey-goal {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-column: 1 / -1;
+    gap: 0.35rem;
+    min-width: 0;
+    padding: 0.25rem;
+  }
+  #journey-chooser.mission-library-chooser .journey-goal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Search, clear and filters form one compact toolbar. The multiplication
+     mark is visual only; the localized "Clear search" name remains exposed
+     to assistive technology. */
+  #journey-chooser.mission-library-chooser .journey-filters {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+  #journey-chooser.mission-library-chooser .journey-search-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    grid-column: 1;
+    align-items: end;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+  #journey-chooser.mission-library-chooser .journey-search-field {
+    grid-column: 1;
+    min-width: 0;
+  }
+  #journey-chooser.mission-library-chooser #journey-search-clear {
+    grid-column: 2;
+    width: 44px;
+    min-width: 44px;
+    padding: 0;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+  }
+  #journey-chooser.mission-library-chooser #journey-search-clear::before {
+    content: '×';
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+  #journey-chooser.mission-library-chooser #journey-search::-webkit-search-cancel-button {
+    display: none;
+    -webkit-appearance: none;
+  }
+  #journey-chooser.mission-library-chooser .journey-filter-details {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer > button,
+  #journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0.3rem;
+    font-size: 0.72rem;
+    line-height: 1.1;
+  }
+  #journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
+    grid-column: auto;
+  }
+  #journey-chooser.mission-library-chooser .mission-library-setup > summary {
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+  }
+  #journey-chooser.mission-library-chooser .mission-library-setup > summary::before {
+    content: '⚙';
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  #journey-chooser.mission-library-chooser .journey-goal {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-column: 1 / -1;
+    gap: 0.35rem;
+    min-width: 0;
+    padding: 0.25rem;
+  }
+  #journey-chooser.mission-library-chooser .journey-goal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 0.35rem;
+  }
+  #journey-chooser.mission-library-chooser .journey-goal-actions > button {
+    min-width: 44px;
+    padding: 0.25rem 0.4rem;
+    font-size: 0.68rem;
+  }
+  #journey-chooser.mission-library-chooser
+    .journey-goal-actions
+    > :is(#journey-goal-find, #journey-goal-clear):disabled {
+    display: none;
+  }
+  #journey-chooser.mission-library-chooser #journey-goal-retry:not([hidden]) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 380px) {
+  #journey-chooser.mission-library-chooser .journey-goal {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #journey-chooser.mission-library-chooser .journey-goal-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mission previews are supplementary. In forced-colour mode the native text,
+   borders and state cues stay authoritative instead of depending on themed
+   raster borders or authored greens and yellows. */
+@media (forced-colors: active) {
+  #journey-chooser,
+  #journey-chooser .journey-card,
+  #journey-chooser .journey-campaign-shortcut,
+  #journey-chooser .journey-filter-options,
+  #journey-chooser .mission-picker-setup-fields {
+    color: CanvasText;
+    border-color: ButtonText;
+    border-image: none;
+    background: Canvas;
+  }
+  #journey-chooser .journey-card[data-current='true'] {
+    outline: 2px solid Highlight;
+    outline-offset: -4px;
+    box-shadow: none;
+  }
+  #journey-chooser .journey-card[data-completion-state='completed'] .journey-card-progress,
+  #journey-chooser .journey-card[data-completion-state='completed'] .journey-card-stars {
+    color: LinkText;
+  }
+  #journey-chooser .journey-card[data-availability-state='unavailable'] {
+    color: GrayText;
+    border-color: GrayText;
+    border-style: dashed;
+  }
+  #journey-chooser .journey-campaign-shortcut[aria-pressed='true'] {
+    color: HighlightText;
+    border-color: Highlight;
+    background: Highlight;
+  }
+  #journey-chooser .journey-card-map {
+    border-color: ButtonText;
+  }
+}
+#journey-backup {
+  width: min(36rem, calc(100vw - 2rem));
+  height: min(34rem, calc(100dvh - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow: hidden;
+  padding: 1rem;
+  color: var(--ink, #e5eddd);
+  background: var(--panel, #15251f);
+}
+#journey-backup[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.5rem;
+}
+#journey-backup h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.journey-backup-content {
+  overflow: auto;
+  padding: 4px;
+}
+.journey-backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+#journey-backup::backdrop {
+  background: #09140de6;
+}
+.journey-backup label {
+  display: grid;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+.journey-backup input {
+  max-width: 100%;
+  min-height: 44px;
+}
+.journey-backup button {
+  min-height: 44px;
+  margin-block: 0.25rem;
+}
+.journey-status {
+  margin: 0.5rem 0;
+  padding: 0.65rem;
+  border: 1px solid currentColor;
+}
+.journey-status button {
+  min-height: 44px;
+}
+/* Use the existing menu target: persistence changes never resize the arena or
+   add a control over the field. Shape and text supplement the amber color. */
+.game-shell #shell-menu {
+  position: relative;
+}
+.game-shell #shell-menu[data-journey-unsaved='true'] {
+  box-shadow: inset 0 0 0 2px #f3c84b;
+}
+.game-shell #shell-menu .journey-save-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 1em;
+  height: 1em;
+  color: #080d1c;
+  background: #f3c84b;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.game-shell #shell-menu .journey-save-badge[hidden] {
+  display: none;
+}
+/* Compact flight hides branding spans; this status is not branding. */
+body.field-kit.game-shell[data-flight-state='running']
+  #shell-menu
+  .journey-save-badge:not([hidden]) {
+  display: grid;
+}
+.game-shell .game-overlay .journey-save-options {
+  color: #f3c84b;
+  border-color: #f3c84b;
+}
+.field-kit.game-shell .game-overlay .overlay-actions #journey-save-options {
+  grid-column: 1 / -1;
+}
+.game-shell #journey-save-status {
+  color: #f3c84b;
+  overflow-wrap: anywhere;
+}
+.game-shell #journey-save-status p {
+  margin-block: 0 0.5rem;
+}
+body.journey-preview.game-shell .shell-bar #shell-packs {
+  display: inline-flex;
+  align-items: center;
+}
+body.journey-preview.game-shell .shell-bar #journey-skip {
+  max-width: 8rem;
+  white-space: normal;
+}

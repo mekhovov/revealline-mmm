@@ -1,0 +1,104 @@
+/* Field Kit v1: semantic roles shared by the game and presentation tools. */
+:root {
+  --fk-bg: #070b12;
+  --fk-panel: #101923;
+  --fk-panel-raised: #182531;
+  --fk-text: #f3f0db;
+  --fk-muted: #a5b2bb;
+  --fk-line: #425563;
+  --fk-control-line: #647786;
+  --fk-cyan: #78dce8;
+  --fk-amber: #f4bf62;
+  --fk-hazard: #f07879;
+  --fk-success: #9dbb7a;
+  --fk-accent: var(--fk-amber);
+  --fk-focus: var(--fk-cyan);
+  --fk-on-accent: var(--fk-bg);
+  --fk-font-pixel: 'Reveal Line Pixel', 'Field Kit UI', system-ui, sans-serif;
+  --fk-font-display: var(--fk-font-pixel);
+  --fk-font-ui: 'Field Kit UI', 'Field Kit Mono', system-ui, sans-serif;
+  --fk-font-mono: 'Field Kit Mono', ui-monospace, monospace;
+  /* Departure Mono keeps its native 11px grid in prominent menu text. */
+  --fk-text-menu: 22px;
+  --fk-text-menu-title: 66px;
+  --fk-text-body: 18px;
+  --fk-text-control: 16px;
+  --fk-text-secondary: 14px;
+  --fk-text-display: 40px;
+  --fk-text-counter: 26px;
+  --fk-leading-body: 1.5;
+  --fk-leading-control: 1.35;
+  --fk-leading-display: 1.05;
+  --fk-space-1: 4px;
+  --fk-space-2: 8px;
+  --fk-space-3: 12px;
+  --fk-space-4: 16px;
+  --fk-space-5: 20px;
+  --fk-space-6: 24px;
+  --fk-space-8: 32px;
+  --fk-border-width: 2px;
+  --fk-corner: 0px;
+  --fk-target-size: 44px;
+  --fk-motion-fast: 100ms;
+  --fk-motion-normal: 180ms;
+  --fk-ease: ease-out;
+}
+
+/* Hosts apply the existing Standard/Large preference to body. */
+.field-kit[data-text-size='large'],
+[data-text-size='large'] .field-kit {
+  --fk-text-menu: 33px;
+  --fk-text-menu-title: 77px;
+  --fk-text-body: 22px;
+  --fk-text-control: 20px;
+  --fk-text-secondary: 18px;
+  --fk-text-display: 48px;
+  --fk-text-counter: 30px;
+}
+
+/* Bridge the existing presentation until individual screens use semantic roles. */
+.field-kit {
+  color-scheme: dark;
+  --paper: var(--fk-bg);
+  --ink: var(--fk-text);
+  --muted: var(--fk-muted);
+  --line: var(--fk-line);
+  --accent: var(--fk-accent);
+  --safe: var(--fk-cyan);
+  --danger: var(--fk-hazard);
+  --pixel-font: var(--fk-font-pixel);
+}
+
+/* Accepted presentation bundles may supply campaign type for authored content.
+   Pixel mode still owns the shared shell/display roles; Plain below remains the
+   explicit accessibility override. The more specific host selector is needed
+   because compiled presentation variables are applied through `.field-kit`. */
+body.field-kit:not([data-text-face='plain']) {
+  --fk-font-display: var(--fk-font-pixel);
+  --pixel-font: var(--fk-font-pixel);
+}
+
+/* An explicit accessibility choice takes precedence over a release's inline
+   font tokens. Removing the preference restores the accepted theme unchanged.
+   Numeric text stays aligned, using the platform's ordinary monospace face. */
+body.field-kit[data-text-face='plain'],
+body.game-shell[data-text-face='plain'] {
+  --fk-font-pixel: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  --fk-font-display:
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  --fk-font-ui: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  --fk-font-mono: ui-monospace, 'SFMono-Regular', Consolas, monospace !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --fk-motion-fast: 0ms;
+    --fk-motion-normal: 0ms;
+  }
+}
+
+/* A host's explicit or system reduction also governs shared DOM transitions. */
+.field-kit[data-effects='reduced'] {
+  --fk-motion-fast: 0ms !important;
+  --fk-motion-normal: 0ms !important;
+}

@@ -1,0 +1,472 @@
+.soundtrack-dialog {
+  box-sizing: border-box;
+  width: min(1120px, calc(100vw - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: clamp(12px, 2vw, 24px);
+  color: #eaf2ff;
+  background: linear-gradient(180deg, #071521 0, #080d19 220px), #080d19;
+  border: 2px solid #4adbc6;
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 4px #080d19,
+    0 0 64px #000b;
+  font: 14px/1.5 var(--fk-font-mono, monospace);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.soundtrack-dialog::backdrop {
+  background: #01030cef;
+}
+.soundtrack-dialog h2,
+.soundtrack-dialog h3 {
+  color: #a5f5ec;
+  letter-spacing: 0.06em;
+}
+.soundtrack-dialog h2 {
+  margin: 0;
+  font-size: clamp(20px, 3vw, 30px);
+  flex: 1;
+  text-shadow: 3px 3px 0 #12354d;
+}
+.soundtrack-dialog h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+.soundtrack-dialog p {
+  overflow-wrap: anywhere;
+}
+.soundtrack-dialog .micro-note {
+  color: #a7b6ce;
+  font-size: 12px;
+}
+.soundtrack-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.soundtrack-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.soundtrack-section {
+  min-width: 0;
+  padding: 16px;
+  margin: 12px 0;
+  border: 1px solid #273a52;
+  background: #0c1424;
+}
+.soundtrack-now-card,
+.soundtrack-listen-card,
+.soundtrack-online-card {
+  border-color: #3f7592;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #112640 0%, #0c1728 70%), #0c1424;
+  box-shadow: inset 0 1px 0 #ffffff0e;
+}
+.soundtrack-now-card {
+  position: relative;
+  overflow: hidden;
+}
+.soundtrack-now-card::after {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  content: '';
+  background: linear-gradient(90deg, #4adbc6, #f4c552 52%, #ff6e79);
+}
+.soundtrack-listen-card > h3,
+.soundtrack-now-card > h3,
+.soundtrack-online-card > h3 {
+  font-size: 18px;
+}
+.soundtrack-online-card {
+  border-color: #7f6ab7;
+  background: #101326;
+}
+.soundtrack-online-card > .soundtrack-actions > .soundtrack-field {
+  min-width: min(220px, 100%);
+  flex: 1 1 220px;
+  margin: 0;
+}
+.soundtrack-online-styles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #3b4868;
+}
+.soundtrack-online-styles legend {
+  padding: 0 5px;
+  color: #c8d8e9;
+}
+.soundtrack-online-style {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 5px 8px;
+  background: #0a1a2c;
+  border: 1px solid #324968;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.soundtrack-online-style:focus-within {
+  border-color: #a5f5ec;
+  outline: 2px solid #a5f5ec55;
+}
+.soundtrack-online-status {
+  margin: 12px 0 8px;
+  color: #bcd0e8;
+}
+.soundtrack-online-results {
+  display: grid;
+  max-height: min(460px, 56vh);
+  border: 1px solid #2c3e58;
+  background: #070d18;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.soundtrack-online-track {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+  padding: 9px;
+  border-bottom: 1px solid #1d2c42;
+}
+.soundtrack-online-track:last-child {
+  border-bottom: 0;
+}
+.soundtrack-online-track:hover,
+.soundtrack-online-track:focus-within {
+  background: #142039;
+}
+.soundtrack-online-details {
+  display: grid;
+  min-width: 0;
+}
+.soundtrack-online-details strong,
+.soundtrack-online-details span,
+.soundtrack-online-details small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.soundtrack-online-details strong {
+  color: #f7f0ff;
+}
+.soundtrack-online-details span {
+  color: #9de3d9;
+}
+.soundtrack-online-details small {
+  color: #8296b0;
+}
+.soundtrack-online-source {
+  color: #f4c552;
+}
+.soundtrack-lede {
+  max-width: 62ch;
+  margin: -4px 0 4px;
+  color: #c8d8e9;
+}
+.soundtrack-quick-status {
+  display: inline-flex;
+  margin: 4px 0 14px;
+  padding: 5px 9px;
+  color: #07121b;
+  background: #a5f5ec;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.soundtrack-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.soundtrack-choice {
+  display: flex;
+  min-width: 0;
+  min-height: 156px;
+  flex-direction: column;
+  padding: 14px;
+  border: 1px solid #35516d;
+  border-radius: 6px;
+  background: #08111f99;
+}
+.soundtrack-choice-all {
+  border-color: #d4a83a;
+  background: radial-gradient(circle at 100% 0, #f4c5522b, transparent 52%), #101729;
+}
+.soundtrack-choice strong {
+  margin: 9px 0 2px;
+  color: #fff2b3;
+  font-size: 16px;
+}
+.soundtrack-choice p {
+  margin: 4px 0 12px;
+  color: #aebed2;
+  font-size: 12px;
+}
+.soundtrack-choice .soundtrack-field {
+  margin: 8px 0 12px;
+}
+.soundtrack-choice button {
+  width: 100%;
+  margin-top: auto;
+}
+.soundtrack-choice-kicker {
+  color: #63d9ca;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+.soundtrack-dialog .soundtrack-primary-action {
+  color: #07121b;
+  border-color: #f4c552;
+  background: #f4c552;
+  font-weight: 900;
+  box-shadow: 3px 3px 0 #8e5624;
+}
+.soundtrack-settings-style-card {
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid var(--fk-border-strong, #3f7592);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--fk-panel, #0c1424) 88%, #17385a);
+}
+.soundtrack-settings-style-card > h3 {
+  margin: 0 0 8px;
+}
+.soundtrack-settings-styles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--fk-border, #3b4868);
+}
+.soundtrack-settings-styles legend {
+  padding: 0 5px;
+}
+.soundtrack-settings-style-card .soundtrack-primary-action {
+  color: #07121b;
+  border-color: #f4c552;
+  background: #f4c552;
+  font-weight: 900;
+  box-shadow: 3px 3px 0 #8e5624;
+}
+.soundtrack-settings-style-card .soundtrack-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.soundtrack-advanced {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid #273a52;
+  border-radius: 6px;
+  background: #0b1423;
+}
+.soundtrack-advanced[data-open='true'] {
+  border-color: #438ca5;
+}
+.soundtrack-dialog .soundtrack-advanced-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  width: 100%;
+  min-height: 64px;
+  align-content: center;
+  padding: 11px 44px 11px 14px;
+  color: inherit;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+}
+.soundtrack-dialog .soundtrack-advanced-summary:hover {
+  background: #132239;
+}
+.soundtrack-advanced-summary::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 20px;
+  color: #80decf;
+  content: '+';
+  font-size: 23px;
+  line-height: 1;
+  text-align: center;
+  transform: translateY(-50%);
+}
+.soundtrack-advanced-summary[aria-expanded='true']::after {
+  content: '−';
+}
+.soundtrack-advanced-title {
+  align-self: center;
+  color: #dffbf7;
+  font-size: 14px;
+  font-weight: 800;
+}
+.soundtrack-advanced-description {
+  align-self: center;
+  color: #7f94ae;
+  font-size: 11px;
+  text-align: right;
+}
+.soundtrack-advanced-body {
+  padding: 4px 14px 16px;
+  border-top: 1px solid #273a52;
+}
+.soundtrack-advanced-body > .soundtrack-section {
+  background: #080f1c;
+}
+.soundtrack-field {
+  display: grid;
+  gap: 5px;
+  margin: 10px 0;
+  color: #cbd8ef;
+}
+.soundtrack-field > span {
+  font-size: 12px;
+}
+.soundtrack-dialog input,
+.soundtrack-dialog select,
+.soundtrack-dialog button,
+.soundtrack-dialog a.button {
+  box-sizing: border-box;
+  min-height: 44px;
+  max-width: 100%;
+  border: 1px solid #405775;
+  border-radius: 2px;
+  padding: 9px;
+  color: #e8f5ff;
+  background: #12223a;
+  font: inherit;
+}
+.soundtrack-dialog input,
+.soundtrack-dialog select {
+  width: 100%;
+}
+.soundtrack-dialog input[type='range'] {
+  padding: 0;
+  accent-color: #89ead8;
+}
+.soundtrack-dialog input[type='file'] {
+  font-size: 12px;
+}
+.soundtrack-dialog select[size] {
+  min-height: 112px;
+}
+.soundtrack-dialog option {
+  padding: 5px;
+}
+.soundtrack-dialog button,
+.soundtrack-dialog a.button {
+  cursor: pointer;
+}
+.soundtrack-dialog a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+.soundtrack-dialog :disabled,
+.soundtrack-dialog [aria-disabled='true'] {
+  opacity: 0.46;
+  cursor: default;
+}
+.soundtrack-dialog :focus-visible {
+  outline: 3px solid #f5bded;
+  outline-offset: 3px;
+}
+.soundtrack-dialog audio {
+  width: 100%;
+  margin: 12px 0;
+}
+.soundtrack-dialog [hidden] {
+  display: none !important;
+}
+.soundtrack-footer {
+  position: static;
+  padding: 12px 0 4px;
+  background: #080d19f5;
+  border-top: 1px solid #438ca5;
+}
+#soundtrack-status {
+  min-height: 3em;
+  color: #dce9ff;
+}
+#soundtrack-save,
+#soundtrack-use-selection,
+#soundtrack-play-style,
+#soundtrack-download-prepared {
+  border-color: #80decf;
+  color: #b7fff2;
+}
+@media (max-width: 720px) {
+  .soundtrack-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .soundtrack-quick-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .soundtrack-choice {
+    min-height: 0;
+  }
+  .soundtrack-dialog .soundtrack-advanced-summary {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+  }
+  .soundtrack-advanced-description {
+    text-align: left;
+  }
+  .soundtrack-dialog {
+    width: calc(100vw - 12px);
+    max-height: calc(100dvh - 12px);
+    padding: 12px;
+  }
+  .soundtrack-section {
+    padding: 12px;
+  }
+  .soundtrack-online-track {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .soundtrack-online-source {
+    grid-column: 2;
+  }
+  .soundtrack-footer {
+    position: static;
+  }
+  .soundtrack-actions > button,
+  .soundtrack-actions > a.button {
+    flex: 1 1 150px;
+  }
+}
+
+#soundtrack-operation {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  background: #080d19;
+}
+#soundtrack-operation > .operation-status {
+  flex: 1 1 240px;
+  min-width: 0;
+  margin: 0;
+}

@@ -1,0 +1,420 @@
+/* Load after legacy screen CSS; opt in with .field-kit on the page root. */
+body.field-kit,
+body.field-kit.game-shell,
+.field-kit {
+  background-color: var(--fk-bg);
+  color: var(--fk-text);
+  font-family: var(--fk-font-ui);
+  font-size: var(--fk-text-body);
+  line-height: var(--fk-leading-body);
+  font-synthesis: none;
+  scrollbar-color: var(--fk-line) var(--fk-bg);
+}
+
+.field-kit :is(h1, h2, h3, h4, button, .button, label, select, input, textarea, summary) {
+  font-family: var(--fk-font-ui);
+  letter-spacing: normal;
+}
+
+.field-kit :is(h1, h2, h3, h4, strong, b) {
+  font-weight: 600;
+}
+
+.field-kit :is(p, li, dd, label, .field-kit-copy) {
+  overflow-wrap: break-word;
+}
+
+.field-kit-support :is(p, li, dd) {
+  font-size: var(--fk-text-body);
+  line-height: var(--fk-leading-body);
+}
+
+.field-kit :is(label, legend, .field),
+.field-kit.game-shell[data-text-size] :is(label, legend, .field),
+.field-kit-support .range-field > span {
+  font-size: var(--fk-text-control);
+  line-height: var(--fk-leading-control);
+}
+
+.field-kit
+  :is(
+    .version,
+    .edition,
+    .deck-heading,
+    .section-line,
+    .readout-label,
+    .scope-note,
+    .asset-status,
+    .control-hint,
+    .material-legend,
+    .inspection-heading,
+    .setting-note,
+    .detail-note,
+    .arena-heading,
+    .arena-caption,
+    .controller-hint,
+    .page-footer,
+    .site-footer
+  ) {
+  font-family: var(--fk-font-ui);
+  font-size: var(--fk-text-secondary);
+  line-height: 1.45;
+  letter-spacing: normal;
+}
+
+.field-kit :is(output, .readout-value) {
+  font-family: var(--fk-font-mono);
+  font-size: var(--fk-text-control);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.field-kit-support :is(.inspection-card, .segmented, .motion-event, .load-error) {
+  color: var(--fk-text);
+  background: var(--fk-panel);
+  border-color: var(--fk-line);
+}
+
+.field-kit-support .segmented input:checked + span {
+  color: var(--fk-on-accent);
+  background: var(--fk-amber);
+}
+
+.field-kit .field-kit-copy {
+  max-inline-size: 65ch;
+  font-size: var(--fk-text-body);
+  line-height: var(--fk-leading-body);
+}
+
+.field-kit .field-kit-display,
+.field-kit #shell-title,
+.field-kit.game-shell dialog h2,
+.field-kit.game-shell .shell-dialog-heading h2,
+.field-kit.game-shell .game-overlay .pause-label {
+  font-family: var(--fk-font-display);
+  font-weight: 600;
+  font-size: var(--fk-text-display);
+  line-height: var(--fk-leading-display);
+  letter-spacing: 0.015em;
+  text-shadow: none;
+  text-wrap: balance;
+}
+
+.field-kit #shell-title {
+  font-size: clamp(56px, 8vw, 104px);
+}
+
+.field-kit.game-shell .telemetry strong,
+.field-kit :is(.field-kit-counter, .mission .number, .mission .medal, kbd, code, pre) {
+  font-family: var(--fk-font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings:
+    'liga' 0,
+    'calt' 0;
+  letter-spacing: normal;
+}
+
+.field-kit.game-shell .telemetry strong,
+.field-kit .field-kit-counter {
+  color: var(--fk-amber);
+  font-size: var(--fk-text-counter);
+}
+
+.field-kit
+  :is(.field-kit-secondary, .eyebrow, .micro-note, .reading-hint, .home-hint, .landing-version),
+.field-kit.game-shell[data-text-size]
+  :is(.field-kit-secondary, .eyebrow, .micro-note, .reading-hint, .home-hint, .landing-version),
+.field-kit.game-shell .telemetry :is(.stat-label, span, label, em) {
+  color: var(--fk-muted);
+  font-family: var(--fk-font-ui);
+  font-size: var(--fk-text-secondary);
+  line-height: 1.45;
+  letter-spacing: normal;
+  opacity: 1;
+}
+
+.field-kit.game-shell :is(dialog, .field-kit-panel) {
+  color: var(--fk-text);
+  background-color: var(--fk-panel);
+  border-color: var(--fk-line);
+  border-radius: var(--fk-corner);
+  font-family: var(--fk-font-ui);
+  font-size: var(--fk-text-body);
+}
+
+.field-kit .field-kit-panel {
+  padding: var(--fk-space-6);
+  border: var(--fk-border-width) solid var(--fk-line);
+  background: var(--fk-panel);
+}
+
+.field-kit dialog::backdrop {
+  background: rgb(7 11 18 / 88%);
+  backdrop-filter: none;
+}
+
+.field-kit :is(button, .button, summary, select, input, textarea),
+.field-kit.game-shell dialog :is(button, .button, summary, select, input, textarea),
+.field-kit.game-shell .shell-bar button,
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured),
+.field-kit.game-shell .game-overlay .overlay-actions .button {
+  min-block-size: var(--fk-target-size);
+  color: var(--fk-text);
+  font-family: var(--fk-font-ui);
+  font-size: var(--fk-text-control);
+  font-weight: 500;
+  line-height: var(--fk-leading-control);
+  letter-spacing: normal;
+  border-radius: var(--fk-corner);
+}
+
+.field-kit :is(button, .button, .field-kit-control) {
+  padding: var(--fk-space-2) var(--fk-space-4);
+  border: var(--fk-border-width) solid var(--fk-control-line);
+  background: var(--fk-panel-raised);
+  box-shadow: none;
+  text-decoration: none;
+  transition:
+    background-color var(--fk-motion-fast) var(--fk-ease),
+    border-color var(--fk-motion-fast) var(--fk-ease),
+    color var(--fk-motion-fast) var(--fk-ease);
+}
+
+.field-kit
+  :is(button, .button, .field-kit-control):not(:disabled):not([aria-disabled='true']):hover {
+  color: var(--fk-text);
+  background: var(--fk-panel-raised);
+  border-color: var(--fk-cyan);
+  transform: none;
+}
+
+.field-kit
+  :is(button, .button, .field-kit-control):not(:disabled):not([aria-disabled='true']):active {
+  color: var(--fk-on-accent);
+  background: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+  box-shadow: inset 0 3px 0 rgb(7 11 18 / 30%);
+  transform: none;
+}
+
+.field-kit :is(.button.primary, .button-primary, .field-kit-primary) {
+  color: var(--fk-on-accent);
+  background: var(--fk-accent);
+  border-color: var(--fk-accent);
+  font-weight: 600;
+}
+
+.field-kit :is(.button.danger, .button-danger, .field-kit-danger) {
+  color: var(--fk-on-accent);
+  background: var(--fk-hazard);
+  border-color: var(--fk-hazard);
+  font-weight: 600;
+}
+
+.field-kit
+  :is(
+    .button.primary,
+    .button-primary,
+    .field-kit-primary,
+    .button.danger,
+    .button-danger,
+    .field-kit-danger
+  ):not(:disabled):not([aria-disabled='true']):hover {
+  color: var(--fk-on-accent);
+  background: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+}
+
+/* Keep the existing title menu as a consistent list of game commands. */
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured) {
+  color: var(--fk-text);
+  background: transparent;
+  border-color: transparent;
+}
+
+.field-kit.game-shell .home-actions :is(.button.primary, #shell-play, #shell-featured) {
+  color: var(--fk-amber);
+}
+
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured):hover {
+  color: var(--fk-text);
+  background: var(--fk-panel-raised);
+  border-color: var(--fk-cyan);
+}
+
+.field-kit.game-shell .home-actions :is(.button, #shell-play, #shell-featured):active {
+  color: var(--fk-on-accent);
+  background: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+}
+
+.field-kit
+  :is(
+    [aria-selected='true'],
+    [aria-current]:not([aria-current='false']),
+    [aria-pressed='true'],
+    .selected
+  ) {
+  border-color: var(--fk-amber);
+  box-shadow: inset 4px 0 var(--fk-amber);
+}
+
+.field-kit :is(button, .button, input, select, textarea):is(:disabled, [aria-disabled='true']) {
+  color: var(--fk-muted);
+  background: var(--fk-panel);
+  border-color: var(--fk-line);
+  border-style: dashed;
+  opacity: 1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.field-kit :is(input, select, textarea) {
+  max-inline-size: 100%;
+  padding: var(--fk-space-2) var(--fk-space-3);
+  color: var(--fk-text);
+  background: var(--fk-bg);
+  border: var(--fk-border-width) solid var(--fk-control-line);
+  accent-color: var(--fk-amber);
+}
+
+/* Keep the native chooser; its inner button needs an explicit colour pair. */
+.field-kit input[type='file']::file-selector-button {
+  box-sizing: border-box;
+  min-block-size: var(--fk-target-size);
+  min-inline-size: var(--fk-target-size);
+  max-inline-size: 100%;
+  margin: 0;
+  margin-inline-end: var(--fk-space-1);
+  padding: var(--fk-space-2);
+  border: var(--fk-border-width) solid var(--fk-control-line);
+  border-radius: var(--fk-corner);
+  color: var(--fk-text);
+  background: var(--fk-panel-raised);
+  font: inherit;
+  white-space: normal;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.field-kit
+  input[type='file']:not(:disabled):not([aria-disabled='true']):hover::file-selector-button {
+  border-color: var(--fk-cyan);
+}
+
+.field-kit
+  input[type='file']:not(:disabled):not([aria-disabled='true']):active::file-selector-button {
+  color: var(--fk-on-accent);
+  background: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+  box-shadow: inset 0 3px 0 rgb(7 11 18 / 30%);
+}
+
+/* :disabled includes an input disabled by its owning fieldset. */
+.field-kit input[type='file']:is(:disabled, [aria-disabled='true'])::file-selector-button {
+  color: var(--fk-muted);
+  background: var(--fk-panel);
+  border-color: var(--fk-line);
+  border-style: dashed;
+  box-shadow: none;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.field-kit :is(input[type='checkbox'], input[type='radio']) {
+  min-block-size: auto;
+  inline-size: 20px;
+  block-size: 20px;
+  margin-inline-end: var(--fk-space-2);
+  padding: 0;
+}
+
+.field-kit input[type='range'] {
+  padding: 0;
+}
+
+.field-kit option {
+  background: var(--fk-panel);
+  color: var(--fk-text);
+}
+
+.field-kit :is(input, textarea)::placeholder {
+  color: var(--fk-muted);
+  opacity: 1;
+}
+
+.field-kit :is(input, select, textarea)[aria-invalid='true'] {
+  border-color: var(--fk-hazard);
+  border-inline-start-width: 4px;
+}
+
+.field-kit :is(.field-kit-error, [data-kind='error'], [data-status='error']) {
+  color: var(--fk-hazard);
+}
+
+.field-kit .field-kit-status {
+  border-inline-start: 4px solid var(--fk-cyan);
+  padding: var(--fk-space-2) var(--fk-space-3);
+  background: var(--fk-panel);
+  font-size: var(--fk-text-control);
+}
+
+.field-kit .field-kit-status[data-kind='error'] {
+  border-inline-start-color: var(--fk-hazard);
+}
+
+.field-kit .field-kit-status[data-kind='success'] {
+  border-inline-start-color: var(--fk-success);
+}
+
+.field-kit kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  color: var(--fk-text);
+  background: var(--fk-panel-raised);
+  border: 1px solid var(--fk-line);
+  border-bottom-width: 3px;
+  border-radius: var(--fk-corner);
+  font-size: var(--fk-text-secondary);
+}
+
+/* Actual controller navigation adds .controller-focus; it must match keyboard focus. */
+.field-kit :is(button, a, input, select, textarea, summary, [tabindex]):focus-visible,
+.field-kit .controller-focus,
+.field-kit.game-shell .home-actions .button:focus-visible {
+  outline: 3px solid var(--fk-focus) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 7px var(--fk-bg);
+  scroll-margin-block: var(--fk-space-4);
+}
+
+.field-kit [data-controller-pressed='true'] {
+  transform: translateY(2px);
+  filter: brightness(1.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field-kit :is(button, .button, .field-kit-control) {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .field-kit :is(button, .button, input, select, textarea, .field-kit-panel) {
+    border-color: ButtonText;
+  }
+  .field-kit
+    :is(
+      [aria-selected='true'],
+      [aria-current]:not([aria-current='false']),
+      [aria-pressed='true'],
+      .selected
+    ) {
+    border: 3px solid Highlight;
+  }
+  .field-kit :is(button, a, input, select, textarea, summary, [tabindex]):focus-visible,
+  .field-kit .controller-focus {
+    outline-color: Highlight !important;
+  }
+}

@@ -1,0 +1,79 @@
+.controller-field-editor {
+  position: fixed;
+  inset: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right))
+    max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  z-index: 100;
+  box-sizing: border-box;
+  margin: auto;
+  max-inline-size: 900px;
+  padding: 16px;
+  overflow: auto;
+  background: var(--fk-panel, #101923);
+  color: var(--fk-text, #f3f0db);
+  border: 2px solid var(--fk-focus, #78dce8);
+  box-shadow: 0 0 0 100vmax #030911e8;
+  font: 16px/1.4 var(--fk-font-ui, sans-serif);
+  isolation: isolate;
+}
+.controller-field-editor h2 {
+  margin: 0 0 8px;
+  font: inherit;
+  font-weight: 700;
+}
+.controller-field-editor p {
+  margin: 6px 0;
+}
+.controller-field-draft {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-block-size: 56px;
+  max-block-size: 25dvh;
+  color: inherit;
+  background: #070f18;
+  font: 16px/1.4 monospace;
+  resize: vertical;
+  white-space: pre;
+}
+.controller-field-editor-row {
+  display: flex;
+  gap: 4px;
+  margin-block: 4px;
+}
+.controller-field-editor-row > button {
+  flex: 1 1 0;
+  min-inline-size: 0;
+  min-block-size: 44px;
+  padding: 4px;
+  font: inherit;
+  font-size: clamp(12px, 2vw, 18px);
+  color: inherit;
+  background: var(--fk-panel-raised, #233443);
+  border: 1px solid var(--fk-line, #526877);
+  overflow-wrap: anywhere;
+}
+.controller-field-editor-row > button[aria-pressed='true'] {
+  box-shadow: inset 0 -3px var(--fk-accent, #ffda65);
+}
+.controller-field-editor :is(.controller-focus, :focus-visible) {
+  outline: 3px solid var(--fk-focus, #78dce8);
+  outline-offset: -3px;
+  background-color: var(--fk-control-focus, #354b61);
+}
+.controller-color-swatch::before {
+  content: '';
+  display: block;
+  block-size: 12px;
+  background: var(--editor-swatch);
+}
+@media (max-height: 500px) {
+  .controller-field-editor {
+    padding: 8px;
+  }
+  .controller-field-editor h2 {
+    position: sticky;
+    top: 0;
+    background: var(--fk-panel, #101923);
+    z-index: 1;
+  }
+}

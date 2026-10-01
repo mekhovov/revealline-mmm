@@ -1,0 +1,160 @@
+/* Artwork moves beneath stationary controls. No floating imitation scenery. */
+.menu-scene-host {
+  isolation: isolate;
+}
+.menu-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 76% 35%, var(--scene-accent, #83dae7), transparent 65%),
+    var(--scene-ink, #080e18);
+  contain: paint;
+}
+.menu-scene-host > :not(.menu-scene) {
+  position: relative;
+  z-index: 1;
+}
+/* Frame the supplied poster's drone panels; its promotional copy stays outside
+   the live menu. Both the original bytes and the official colors are preserved. */
+[data-menu-scene='droneaid-nl-community'] .menu-scene {
+  background: linear-gradient(145deg, #202775, #2935a4);
+}
+[data-menu-scene='droneaid-nl-community'] .menu-scene-art-plane {
+  clip-path: inset(7.8% 5% 8.5% 50.7%);
+}
+.menu-scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(5 10 20 / 94%) 0%,
+      rgb(5 10 20 / 75%) 28%,
+      rgb(5 10 20 / 22%) 63%,
+      rgb(5 10 20 / 8%)
+    ),
+    linear-gradient(0deg, rgb(5 10 20 / 65%), transparent 30%);
+}
+[data-menu-scene='droneaid-nl-community'] .menu-scene::after {
+  background:
+    linear-gradient(90deg, rgb(10 12 14 / 84%), rgb(10 12 14 / 60%) 33%, transparent 69%),
+    linear-gradient(0deg, rgb(10 12 14 / 58%), transparent 22%);
+}
+.menu-scene-art-plane {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+.menu-scene-art,
+.menu-scene-art-motion,
+.menu-scene-reception {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.menu-scene-art {
+  object-fit: cover;
+  object-position: var(--scene-focal, 68% 50%);
+  opacity: 0;
+}
+.menu-scene-art-motion,
+.menu-scene-reception {
+  position: absolute;
+  inset: 0;
+}
+.menu-scene[data-loaded='true'] .menu-scene-art {
+  opacity: 1;
+}
+/* One camera owner for every still, even when WebGL animates selected picture regions. */
+.menu-scene[data-loaded='true'][data-motion='on'] .menu-scene-art-plane {
+  animation: menu-art-settle 6s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+}
+.menu-scene[data-loaded='true'][data-motion='on'][data-renderer='webgl'] .menu-scene-art {
+  visibility: hidden;
+}
+.menu-scene-art-motion[hidden],
+.menu-scene-reception[hidden],
+.menu-scene:not([data-loaded='true']) .menu-scene-reception,
+.menu-scene[data-motion='off'] .menu-scene-reception,
+.menu-scene:not([data-loaded='true']) .menu-scene-art-motion,
+.menu-scene[data-motion='off'] .menu-scene-art-motion {
+  display: none;
+}
+.menu-scene-signal {
+  position: absolute;
+  inset: 0;
+  background: url('./art/menu-scenes/analog-noise-atlas.png') 0 0 / 400% 100% no-repeat;
+  mix-blend-mode: soft-light;
+  opacity: var(--scene-signal-opacity, 0.03);
+  animation: menu-signal-frames 1s step-end infinite;
+}
+.menu-scene[data-running='false'] *,
+.menu-scene[data-running='false'] *::before,
+.menu-scene[data-running='false'] *::after {
+  animation-play-state: paused !important;
+}
+.menu-scene:not([data-loaded='true']) .menu-scene-signal,
+.menu-scene[data-motion='off'] .menu-scene-signal {
+  display: none;
+  animation: none;
+}
+@keyframes menu-art-settle {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.035);
+  }
+}
+@keyframes menu-signal-frames {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 33.333333% 0;
+  }
+  50% {
+    background-position: 66.666667% 0;
+  }
+  75% {
+    background-position: 100% 0;
+  }
+}
+@media (orientation: portrait) {
+  .menu-scene::after {
+    background: linear-gradient(
+      0deg,
+      rgb(5 10 20 / 94%) 0%,
+      rgb(5 10 20 / 73%) 35%,
+      rgb(5 10 20 / 23%) 80%
+    );
+  }
+  [data-menu-scene='droneaid-nl-community'] .menu-scene::after {
+    background: linear-gradient(
+      0deg,
+      rgb(10 12 14 / 86%),
+      rgb(10 12 14 / 66%) 48%,
+      rgb(10 12 14 / 15%)
+    );
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-scene .menu-scene-signal,
+  .menu-scene .menu-scene-reception,
+  .menu-scene .menu-scene-art-motion {
+    display: none;
+    animation: none;
+  }
+  .menu-scene[data-loaded='true'] .menu-scene-art {
+    visibility: visible;
+  }
+  .menu-scene .menu-scene-art-plane {
+    animation: none !important;
+    transform: none;
+  }
+}

@@ -1,0 +1,50 @@
+[data-language-control] {
+  font: inherit;
+  max-width: 100%;
+}
+[data-language-control] label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+[data-language-control] select {
+  font: inherit;
+  color: inherit;
+  background: #101b2a;
+  border: 1px solid #64829d;
+  padding: 8px 12px;
+  min-height: 44px;
+  max-width: 100%;
+}
+.locale-storage-status {
+  display: block;
+  font-size: 0.85em;
+}
+[data-language-control] select:focus-visible {
+  outline: 3px solid #68d9fa;
+  outline-offset: 3px;
+}
+html[lang='uk'] :is(button, .button, summary, label, h1, h2, h3) {
+  overflow-wrap: anywhere;
+}
+html[lang='uk'] .home-actions {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+}
+
+html[data-tool-state='ready'] [data-language-launch] {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  html[lang='uk'] .field-kit .field-kit-settings-panel > label.field-kit-page-text {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: none;
+    gap: 8px;
+  }
+  html[lang='uk'] .field-kit .field-kit-settings-panel > label.field-kit-page-text > select {
+    width: 100%;
+    min-width: 0;
+  }
+}

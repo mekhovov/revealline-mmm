@@ -1,0 +1,825 @@
+body[data-edition-id] {
+  --fk-accent: var(--brand-accent);
+  --fk-bg: var(--brand-ink);
+  --fk-panel: var(--brand-grid);
+  --fk-text: var(--brand-paper);
+  --fk-muted: var(--brand-muted);
+}
+body[data-edition-id] #shell-home {
+  isolation: isolate;
+}
+.edition-home-art {
+  display: block;
+  width: 100%;
+  max-height: min(38dvh, 320px);
+  object-fit: cover;
+  border-radius: 8px;
+  margin-block-end: 18px;
+}
+.edition-brand-logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  background: white;
+  border-radius: 6px;
+  padding: 3px;
+}
+.edition-switcher,
+.edition-about {
+  margin-block: 16px;
+}
+.edition-about p {
+  max-width: 70ch;
+}
+.edition-lesson-dialog {
+  width: min(760px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  padding: 24px;
+  background: var(--brand-ink, #10202a);
+  color: var(--brand-paper, #fff);
+}
+.edition-lesson-dialog button,
+.edition-lesson-dialog select {
+  min-height: 44px;
+  font: inherit;
+}
+.edition-lesson-dialog button {
+  border: 1px solid var(--brand-accent, #5fd6ff);
+  color: inherit;
+  background: transparent;
+  padding: 8px 12px;
+}
+.edition-lesson-dialog select {
+  max-width: 100%;
+}
+.edition-lesson-dialog .company-workbench-field {
+  display: grid;
+  gap: 6px;
+  margin-block: 12px;
+}
+.edition-lesson-dialog .company-workbench-record {
+  margin-block: 12px;
+  padding: 12px;
+  border: 1px solid var(--brand-muted, #789);
+}
+.edition-learning-data,
+.edition-offline {
+  margin-block: 20px;
+}
+.edition-learning-data label {
+  display: grid;
+  gap: 8px;
+  margin-block: 12px;
+}
+/* Discovery feedback never resizes or interrupts the simulation board. */
+.completion-reward-result {
+  margin-block: 1rem;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  border-inline-start: 3px solid var(--brand-primary, #74c9ff);
+  border-radius: 0.9rem;
+  text-align: start;
+}
+.completion-reward-result h3,
+.completion-reward-result p {
+  margin-block: 0 0.55rem;
+}
+.completion-reward-result .button {
+  margin-inline-end: 0.5rem;
+}
+/* The earned teaser and action are an independent result row. Longer
+   discoveries remain in the keyboard/controller-owned reading pane. */
+.overlay-card:has(> .completion-reward-result[data-placement='summary']:not([hidden]))
+  > #overlay-reading {
+  min-height: 0;
+}
+.completion-reward-result[data-placement='summary'] {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin-block: 8px;
+  padding: 8px 12px;
+}
+.completion-reward-result-copy {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+.completion-reward-result[data-placement='summary'] h3 {
+  margin: 0 0 3px;
+  font-size: 0.78rem;
+}
+.completion-reward-result-copy p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+.completion-reward-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.completion-reward-result-actions .button {
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 12px;
+}
+.completion-reward-result[data-placement='summary'] .completion-reward-save-note {
+  flex-basis: 100%;
+  margin: 0;
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']:has(
+      .completion-reward-result[data-placement='summary']:not([hidden])
+    )
+    #overlay-reading {
+    grid-row: 1;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    > .overlay-card
+    > .completion-reward-result[data-placement='summary'] {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+}
+.completion-reward-finale {
+  font-size: 0.9em;
+}
+.completion-reward-arrive {
+  animation: discovery-arrive 800ms ease-out both;
+}
+@keyframes discovery-arrive {
+  from {
+    opacity: 0.5;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.completion-reward-result[data-reduced-motion='true'] {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .completion-reward-arrive {
+    animation: none;
+  }
+}
+.completion-reward-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 0.75rem;
+}
+.completion-reward-card {
+  padding: 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+}
+.completion-reward-card[data-earned='true'] {
+  border-color: var(--brand-primary, #74c9ff);
+}
+.completion-reward-card h4 {
+  margin-block: 0.5rem;
+}
+.completion-reward-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.completion-reward-dialog {
+  width: min(52rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  box-sizing: border-box;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: auto;
+}
+.completion-reward-dialog section {
+  margin-block: 1.5rem;
+}
+.completion-reward-dialog figure {
+  margin: 0;
+}
+.completion-reward-dialog img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+.completion-reward-dialog a,
+.completion-reward-dialog p,
+.completion-reward-dialog code {
+  overflow-wrap: anywhere;
+}
+.completion-reward-dialog > .button {
+  position: sticky;
+  bottom: 0;
+}
+.completion-reward-data label {
+  display: grid;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+.completion-reward-save-note {
+  padding: 0.6rem 0.8rem;
+  border-inline-start: 3px solid currentColor;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* The expedition keeps the canonical mission buttons, focus order and launch
+   guards. Only their arrangement and discovery annotations change. */
+#journey-chooser.mission-library-chooser.edition-expedition[open] {
+  grid-template-rows: auto auto auto auto auto auto minmax(12rem, 1fr) auto;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 0.75rem;
+}
+#journey-chooser.edition-expedition > * {
+  min-width: 0;
+}
+/* Explicit tracks keep the mission viewport in its flexible row when compact
+   mode hides the introduction or a filter hides the campaign rail. */
+#journey-chooser.edition-expedition > h2 {
+  grid-row: 1;
+  margin-block: 0;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+#journey-chooser.edition-expedition > .journey-library-copy {
+  grid-row: 2;
+  display: none;
+}
+#journey-chooser.edition-expedition > .journey-filters {
+  grid-row: 3;
+  display: flex;
+  align-items: end;
+  gap: 0.75rem;
+}
+#journey-chooser.edition-expedition .journey-filter-details {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+#journey-chooser.edition-expedition .journey-filter-details > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.9rem;
+  cursor: pointer;
+}
+#journey-chooser.edition-expedition .journey-filter-options {
+  position: absolute;
+  z-index: 5;
+  inset-inline-end: 0;
+  inset-block-start: 100%;
+  width: min(30rem, calc(100vw - 4rem));
+  max-height: min(25rem, 60dvh);
+  overflow: auto;
+  padding: 1rem;
+  background: var(--brand-ink, #081d4d);
+  border: 1px solid var(--brand-accent, #aee5ed);
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem #0008;
+}
+#journey-chooser.edition-expedition > #journey-chooser-status {
+  grid-row: 4;
+}
+#journey-chooser.edition-expedition > .journey-campaign-rail {
+  grid-row: 5;
+}
+#journey-chooser.edition-expedition > .edition-expedition-toolbar {
+  grid-row: 6;
+}
+#journey-chooser.edition-expedition > .journey-cards {
+  grid-row: 7;
+}
+#journey-chooser.edition-expedition > .journey-footer {
+  grid-row: 8;
+}
+.edition-expedition-toolbar {
+  min-width: 0;
+  margin-block: 0.65rem;
+}
+.edition-expedition-toolbar h3,
+.edition-expedition-toolbar h4,
+.edition-expedition-toolbar p {
+  margin-block: 0 0.35rem;
+}
+.edition-expedition-note,
+.edition-expedition-teaser,
+.edition-expedition-requirements {
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+.edition-expedition-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 0.65rem;
+}
+.edition-expedition-controls button {
+  min-height: 44px;
+}
+.edition-expedition-controls [aria-pressed='true'] {
+  color: var(--brand-ink, #081d4d);
+  background: var(--brand-accent, #aee5ed);
+  border-color: var(--brand-accent, #aee5ed);
+}
+.edition-expedition-overview {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.2rem;
+  scroll-padding-inline: 0.2rem;
+  scrollbar-width: thin;
+}
+.edition-expedition-campaign {
+  flex: 1 0 min(24rem, 82%);
+  min-width: 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--brand-paper, #e5eddd) 25%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--brand-primary, #1565c0) 15%, transparent);
+  overflow-wrap: anywhere;
+  display: flow-root;
+}
+.edition-expedition-campaign > .button {
+  min-height: 44px;
+  max-width: 100%;
+  white-space: normal;
+}
+.edition-expedition-campaign .completion-reward-exhibit-picture:not(:empty) {
+  clear: both;
+  padding-block-start: 0.5rem;
+}
+.edition-expedition-campaign .completion-reward-exhibit-picture img {
+  max-height: 10rem;
+}
+.edition-expedition-campaign[data-finale-earned='true'] {
+  border-color: var(--brand-accent, #aee5ed);
+  box-shadow: inset 3px 0 var(--brand-accent, #aee5ed);
+}
+.edition-expedition-finale {
+  font-weight: 700;
+}
+#journey-chooser.edition-expedition-map .journey-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+  padding: 1rem;
+  isolation: isolate;
+  border-radius: 1rem;
+  background:
+    linear-gradient(120deg, #081525ed, #081525b8), var(--expedition-scene, none),
+    radial-gradient(
+      ellipse at 30% 25%,
+      color-mix(in srgb, var(--brand-primary, #1565c0) 22%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse at 85% 80%,
+      color-mix(in srgb, var(--brand-accent, #aee5ed) 10%, transparent),
+      transparent 60%
+    );
+  background-size: cover;
+  background-position: center;
+}
+#journey-chooser.edition-expedition-map .journey-card {
+  position: relative;
+  min-width: 0;
+  min-block-size: 11rem;
+  border-radius: 1.25rem;
+  background: var(--brand-ink, #081d4d);
+  border-color: color-mix(in srgb, var(--brand-paper, #e5eddd) 40%, transparent);
+}
+#journey-chooser.edition-expedition-map .journey-card[data-expedition-connect='true']::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  inset-inline-start: 100%;
+  inset-block-start: 50%;
+  width: 1.5rem;
+  border-block-start: 3px dotted var(--brand-accent, #aee5ed);
+  pointer-events: none;
+}
+#journey-chooser.edition-expedition-map .journey-card:nth-child(3n)::after,
+#journey-chooser.edition-expedition-map .journey-card[data-expedition-layout='gallery']::after {
+  display: none;
+}
+#journey-chooser.edition-expedition-map .journey-card-number {
+  display: grid;
+  place-items: center;
+  align-self: start;
+  min-height: 3rem;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  font-size: 1.35rem;
+  color: var(--brand-accent, #aee5ed);
+}
+#journey-chooser.edition-expedition-map
+  .journey-card[data-expedition-layout='mosaic']
+  .journey-card-number {
+  border-radius: 0.35rem;
+}
+#journey-chooser.edition-expedition .journey-card[data-expedition-cleared='true'] {
+  border-color: var(--brand-accent, #aee5ed);
+}
+#journey-chooser.edition-expedition
+  .journey-card[data-expedition-collected='true']
+  .edition-expedition-discovery {
+  color: var(--brand-accent, #aee5ed);
+}
+.edition-expedition-discovery {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+#journey-chooser.edition-expedition-list .journey-cards {
+  grid-template-columns: minmax(0, 1fr);
+}
+#journey-chooser.edition-expedition-list .journey-card {
+  min-block-size: auto;
+}
+@media (max-width: 900px) {
+  #journey-chooser.edition-expedition-map .journey-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #journey-chooser.edition-expedition-map .journey-card:nth-child(3n)::after {
+    display: block;
+  }
+  #journey-chooser.edition-expedition-map .journey-card:nth-child(2n)::after,
+  #journey-chooser.edition-expedition-map .journey-card[data-expedition-layout='gallery']::after {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  #journey-chooser.edition-expedition-map .journey-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+  #journey-chooser.edition-expedition-map .journey-card[data-expedition-connect='true']::after {
+    display: block;
+    inset-inline-start: 2.5rem;
+    inset-block-start: 100%;
+    width: 0;
+    height: 1.5rem;
+    border-block-start: 0;
+    border-inline-start: 3px dotted var(--brand-accent, #aee5ed);
+  }
+  #journey-chooser.edition-expedition-map .journey-card[data-expedition-layout='gallery']::after {
+    display: none;
+  }
+}
+@media (max-height: 600px) {
+  .edition-expedition-toolbar h3,
+  .edition-expedition-note {
+    display: none;
+  }
+  .edition-expedition-controls {
+    margin-block: 0.25rem;
+  }
+}
+
+.edition-expedition-campaign-art {
+  display: block;
+  float: inline-start;
+  width: 7rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  margin-block-end: 0.65rem;
+  margin-inline-end: 0.75rem;
+}
+.edition-expedition-campaign-art[hidden] {
+  display: none;
+}
+
+/* A campaign pane beside the missions leaves their viewport usable at laptop
+   heights. DOM order, canonical mission buttons and launch guards stay intact. */
+@media (min-width: 960px) and (min-height: 600px) {
+  #journey-chooser.mission-library-chooser.edition-expedition[open] {
+    grid-template-columns: minmax(16rem, 25%) minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto minmax(12rem, 1fr) auto;
+    gap: 0.45rem 0.8rem;
+  }
+  #journey-chooser.edition-expedition > h2 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  #journey-chooser.edition-expedition > .journey-filters {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  #journey-chooser.edition-expedition > #journey-chooser-status {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-block: 0;
+  }
+  #journey-chooser.edition-expedition > .journey-campaign-rail {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+  #journey-chooser.edition-expedition > .edition-expedition-toolbar {
+    grid-column: 1;
+    grid-row: 5;
+    min-height: 0;
+    overflow: auto;
+    margin: 0;
+    padding: 0.25rem;
+    scroll-padding-block: 0.5rem;
+  }
+  #journey-chooser.edition-expedition .edition-expedition-overview {
+    display: grid;
+    overflow: visible;
+  }
+  #journey-chooser.edition-expedition .edition-expedition-campaign {
+    padding: 0.65rem;
+  }
+  #journey-chooser.edition-expedition > .journey-cards {
+    grid-column: 2;
+    grid-row: 5;
+    min-height: 12rem;
+    padding: 0.75rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  }
+  #journey-chooser.edition-expedition-map .journey-card[data-expedition-connect='true']::after {
+    display: none;
+  }
+  #journey-chooser.edition-expedition-list > .journey-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #journey-chooser.edition-expedition > .journey-footer {
+    grid-column: 1 / -1;
+    grid-row: 6;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.35rem 0.75rem;
+  }
+  #journey-chooser.edition-expedition .journey-goal {
+    min-width: 0;
+  }
+  #journey-chooser.edition-expedition .mission-library-setup {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Short and narrow windows keep an outer recovery scroll. The mission list
+   retains a useful bounded viewport, and the complete footer remains in flow
+   after it instead of being clipped by a fixed grid or an upward setup panel. */
+@media (max-width: 959px), (max-height: 599px) {
+  #journey-chooser.mission-library-chooser.edition-expedition[open] {
+    display: block;
+    overflow: auto;
+  }
+  #journey-chooser.edition-expedition > .journey-filters,
+  #journey-chooser.edition-expedition > .journey-campaign-rail,
+  #journey-chooser.edition-expedition > .journey-footer {
+    margin-block: 0.5rem;
+  }
+  #journey-chooser.edition-expedition > .journey-cards {
+    min-height: 14rem;
+    max-height: max(14rem, 48dvh);
+    overflow: auto;
+    scroll-padding: 0.75rem;
+  }
+  #journey-chooser.edition-expedition .mission-library-setup[open] {
+    max-height: none;
+    overflow: visible;
+  }
+  #journey-chooser.edition-expedition .mission-library-setup > .mission-picker-setup-fields {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}
+@media (max-height: 720px) {
+  #journey-chooser.edition-expedition .edition-expedition-toolbar > h3,
+  #journey-chooser.edition-expedition .edition-expedition-note {
+    display: none;
+  }
+  #journey-chooser.edition-expedition .edition-expedition-campaign-art {
+    width: 4.5rem;
+    height: 3.25rem;
+    margin-inline-end: 0.5rem;
+  }
+}
+
+/* Authored campaign layouts use the same earned discoveries in every edition. */
+.completion-reward-exhibit-controls {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1rem;
+}
+.completion-reward-exhibit-controls label {
+  display: grid;
+  gap: 0.35rem;
+  flex: 1 1 15rem;
+}
+.completion-reward-exhibit-controls select {
+  max-width: 100%;
+  min-width: 0;
+}
+.completion-reward-exhibit .completion-reward-card {
+  position: relative;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--brand-field, #112543) 80%, transparent);
+}
+.completion-reward-piece {
+  float: inline-end;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: color-mix(in srgb, currentColor 45%, transparent);
+}
+.completion-reward-card[data-earned='true'] .completion-reward-piece {
+  color: var(--brand-safe, #b5dfb2);
+}
+.completion-reward-exhibit[data-layout='mosaic'] {
+  gap: 0.35rem;
+}
+.completion-reward-exhibit[data-layout='mosaic'] .completion-reward-card {
+  border-radius: 0.35rem;
+}
+.completion-reward-exhibit[data-layout='gallery'] .completion-reward-card {
+  border-width: 0.3rem;
+  border-radius: 0.25rem;
+}
+.completion-reward-exhibit .completion-reward-card[data-scope='campaign'] {
+  grid-column: 1 / -1;
+}
+.completion-reward-exhibit-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2;
+  object-fit: contain;
+  border-radius: 0.35rem;
+}
+
+/* Earned results reserve the main surface for the picture, outcome and primary
+   actions. Secondary controls keep their real handlers in a native disclosure. */
+.field-kit.game-shell .overlay-card[data-earned-result-layout='true'] {
+  overflow: auto;
+}
+.field-kit.game-shell:has(
+    .game-overlay[data-kind='won']:not([hidden]) > .overlay-card[data-earned-result-layout='true']
+  )
+  .telemetry {
+  /* The result already contains the accepted score and time. Preserve the
+     measured HUD space without painting duplicate counters over the picture. */
+  visibility: hidden;
+}
+.field-kit.game-shell .overlay-card[data-earned-result-layout='true'] > .reading-toolbar {
+  margin-block: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.field-kit.game-shell .overlay-card[data-earned-result-layout='true'] .reading-actions {
+  display: flex;
+  gap: 6px;
+}
+.field-kit.game-shell .overlay-card[data-earned-result-layout='true'] .reading-actions button {
+  padding-inline: 12px;
+}
+.field-kit.game-shell .overlay-card[data-earned-result-layout='true'] #result-picture {
+  height: min(30dvh, 240px);
+  max-height: min(30dvh, 240px);
+  object-fit: contain;
+}
+.field-kit.game-shell .overlay-card[data-earned-result-layout='true'] > #overlay-reading {
+  flex: 1 1 auto;
+  min-height: min(24dvh, 180px);
+}
+.completion-reward-result-copy .completion-reward-session-status {
+  font-size: 0.75rem;
+  margin-block-start: 4px;
+  display: block;
+}
+.earned-result-more {
+  min-width: 0;
+}
+.earned-result-more > summary {
+  cursor: pointer;
+  min-height: 44px;
+  list-style: none;
+}
+.earned-result-more > summary::-webkit-details-marker {
+  display: none;
+}
+.earned-result-more > summary::after {
+  content: '▾';
+}
+.earned-result-more[open] > summary::after {
+  content: '▴';
+}
+.earned-result-more[open] {
+  flex-basis: 100%;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+.earned-result-more-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: min(32dvh, 220px);
+  overflow: auto;
+  padding: 8px 0;
+}
+.earned-result-more-content > .overlay-footnote,
+.earned-result-more-content > .completion-reward-save-note {
+  flex-basis: 100%;
+  margin: 0;
+}
+@media (max-width: 799px), (max-height: 500px) {
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #overlay-reading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #overlay-reading
+    > * {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #result-picture {
+    width: 100%;
+    height: auto;
+    max-height: min(23dvh, 190px);
+    aspect-ratio: 16 / 9;
+    margin: 0 0 4px;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #overlay-title {
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.1;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #overlay-copy {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #overlay-difficulty {
+    padding-inline-end: 0;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #result-medals {
+    justify-self: start;
+  }
+}
+@media (max-width: 600px) {
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    .overlay-actions
+    #next-button {
+    grid-column: auto;
+  }
+}
+@media (max-height: 500px) {
+  .field-kit.game-shell
+    .game-overlay[data-kind='won']
+    .overlay-card[data-earned-result-layout='true']
+    #result-picture {
+    height: min(26dvh, 130px);
+    max-height: min(26dvh, 130px);
+    aspect-ratio: auto;
+  }
+  .field-kit.game-shell .overlay-card[data-earned-result-layout='true'] > #overlay-reading {
+    min-height: min(20dvh, 100px);
+  }
+}

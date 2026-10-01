@@ -1,0 +1,667 @@
+/* Values are set only by the verified release host. Without a compiled binding,
+   existing native control styling and authored scenes remain in use. */
+.field-kit :is(.field-kit-panel, .inspection-card, .mission-detail, .settings-group) {
+  border-image-source: var(--fk-asset-ui-panel, none);
+  border-image-slice: var(--fk-slice-ui-panel, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-panel, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit dialog {
+  border-image-source: var(--fk-asset-ui-dialog, none);
+  border-image-slice: var(--fk-slice-ui-dialog, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-dialog, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(button, .button) {
+  --fk-button-border-slice: var(--fk-border-slice-ui-button-secondary, 8);
+  border-image-source: var(--fk-asset-ui-button-secondary, none);
+  border-image-slice: var(--fk-button-paint-slice, var(--fk-slice-ui-button-secondary, 8 fill));
+  border-image-width: var(--fk-slice-width-ui-button-secondary, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(.primary, .primary-action, #shell-featured, #shell-continue) {
+  --fk-button-border-slice: var(--fk-border-slice-ui-button-primary, 8);
+  border-image-source: var(--fk-asset-ui-button-primary, none);
+  border-image-slice: var(--fk-button-paint-slice, var(--fk-slice-ui-button-primary, 8 fill));
+  border-image-width: var(--fk-slice-width-ui-button-primary, 8px);
+}
+.field-kit :is(.danger, .danger-action) {
+  --fk-button-border-slice: var(--fk-border-slice-ui-button-danger, 8);
+  border-image-source: var(--fk-asset-ui-button-danger, none);
+  border-image-slice: var(--fk-button-paint-slice, var(--fk-slice-ui-button-danger, 8 fill));
+  border-image-width: var(--fk-slice-width-ui-button-danger, 8px);
+}
+.field-kit :is(select, input[type='text'], textarea) {
+  border-image-source: var(--fk-asset-ui-input-text, none);
+  border-image-slice: var(--fk-slice-ui-input-text, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-input-text, 8px);
+}
+.field-kit .home-art {
+  background-image:
+    linear-gradient(90deg, rgb(7 11 18 / 60%), transparent 65%),
+    var(
+      --fk-asset-screen-title-background,
+      url('../presentation/compiled/assets/72b6c93f47090f3a3724223477e22cbc461132329768e70b82cdb87d85a72052.png')
+    );
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  .field-kit .home-art {
+    background-image:
+      linear-gradient(0deg, rgb(7 11 18 / 60%), transparent 65%),
+      var(
+        --fk-asset-screen-title-portrait,
+        url('../presentation/compiled/assets/8fe3df81db48bf682862a06c8f7434365ff49151a2a72a94c0a85ea85a3adf27.png')
+      );
+  }
+}
+/* Decorative icons accompany real text; they never become an accessible label. */
+.field-kit [data-presentation-icon]::before {
+  content: '';
+  display: inline-block;
+  inline-size: 24px;
+  block-size: 24px;
+  flex: 0 0 24px;
+  background: var(--fk-current-icon, none) center / contain no-repeat;
+  image-rendering: pixelated;
+}
+.field-kit [data-presentation-icon='settings'] {
+  --fk-current-icon: var(--fk-asset-icon-settings);
+}
+.field-kit [data-presentation-icon='play'] {
+  --fk-current-icon: var(--fk-asset-icon-play);
+}
+.field-kit [data-presentation-icon='back'] {
+  --fk-current-icon: var(--fk-asset-icon-back);
+}
+.field-kit [data-presentation-icon='save'] {
+  --fk-current-icon: var(--fk-asset-icon-save);
+}
+.field-kit [data-presentation-icon='close'] {
+  --fk-current-icon: var(--fk-asset-icon-close);
+}
+.field-kit [data-presentation-icon='retry'] {
+  --fk-current-icon: var(--fk-asset-icon-retry);
+}
+.field-kit [data-presentation-icon='fullscreen'] {
+  --fk-current-icon: var(--fk-asset-icon-fullscreen);
+}
+
+/* Optional raster bindings preserve real labels and native state/interaction. */
+.field-kit :is([role='tooltip']) {
+  border-image-source: var(--fk-asset-ui-tooltip, none);
+  border-image-slice: var(--fk-slice-ui-tooltip, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-tooltip, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is([role='status'], [role='alert']) {
+  border-image-source: var(--fk-asset-ui-toast, none);
+  border-image-slice: var(--fk-slice-ui-toast, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-toast, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(.icon-button, .dialog-close) {
+  --fk-button-border-slice: var(--fk-border-slice-ui-button-icon, 8);
+  border-image-source: var(--fk-asset-ui-button-icon, none);
+  border-image-slice: var(--fk-button-paint-slice, var(--fk-slice-ui-button-icon, 8 fill));
+  border-image-width: var(--fk-slice-width-ui-button-icon, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is([role='tab'], .library-tabs button) {
+  --fk-button-border-slice: var(--fk-border-slice-ui-button-tab, 8);
+  border-image-source: var(--fk-asset-ui-button-tab, none);
+  border-image-slice: var(--fk-button-paint-slice, var(--fk-slice-ui-button-tab, 8 fill));
+  border-image-width: var(--fk-slice-width-ui-button-tab, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(.chip, .filter-chip) {
+  --fk-button-border-slice: var(--fk-border-slice-ui-button-chip, 8);
+  border-image-source: var(--fk-asset-ui-button-chip, none);
+  border-image-slice: var(--fk-button-paint-slice, var(--fk-slice-ui-button-chip, 8 fill));
+  border-image-width: var(--fk-slice-width-ui-button-chip, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(select) {
+  border-image-source: var(--fk-asset-ui-input-select, none);
+  border-image-slice: var(--fk-slice-ui-input-select, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-input-select, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(textarea, input[type='text'], input[type='search'], input[type='number']) {
+  border-image-source: var(--fk-asset-ui-input-text, none);
+  border-image-slice: var(--fk-slice-ui-input-text, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-input-text, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(.meter:has(#coverage-bar)) {
+  border-image-source: var(--fk-asset-ui-meter-coverage, none);
+  border-image-slice: var(--fk-slice-ui-meter-coverage, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-meter-coverage, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(progress, [role='progressbar'], .reward-progress) {
+  border-image-source: var(--fk-asset-ui-meter-progress, none);
+  border-image-slice: var(--fk-slice-ui-meter-progress, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-meter-progress, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(#time, #race-clock) {
+  border-image-source: var(--fk-asset-ui-meter-time, none);
+  border-image-slice: var(--fk-slice-ui-meter-time, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-meter-time, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(#ability-state) {
+  border-image-source: var(--fk-asset-ui-meter-ability, none);
+  border-image-slice: var(--fk-slice-ui-meter-ability, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-meter-ability, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit :is(input[id$='-volume'], #soundtrack-volume) {
+  border-image-source: var(--fk-asset-ui-meter-volume, none);
+  border-image-slice: var(--fk-slice-ui-meter-volume, 8 fill);
+  border-image-width: var(--fk-slice-width-ui-meter-volume, 8px);
+  border-image-repeat: stretch;
+}
+.field-kit [data-presentation-icon='menu'] {
+  --fk-current-icon: var(--fk-asset-icon-menu);
+}
+.field-kit [data-presentation-icon='pause'] {
+  --fk-current-icon: var(--fk-asset-icon-pause);
+}
+.field-kit [data-presentation-icon='audio'] {
+  --fk-current-icon: var(--fk-asset-icon-audio);
+}
+.field-kit [data-presentation-icon='music'] {
+  --fk-current-icon: var(--fk-asset-icon-music);
+}
+.field-kit [data-presentation-icon='load'] {
+  --fk-current-icon: var(--fk-asset-icon-load);
+}
+.field-kit [data-presentation-icon='download'] {
+  --fk-current-icon: var(--fk-asset-icon-download);
+}
+.field-kit [data-presentation-icon='upload'] {
+  --fk-current-icon: var(--fk-asset-icon-upload);
+}
+.field-kit [data-presentation-icon='copy'] {
+  --fk-current-icon: var(--fk-asset-icon-copy);
+}
+.field-kit [data-presentation-icon='check'] {
+  --fk-current-icon: var(--fk-asset-icon-check);
+}
+.field-kit [data-presentation-icon='warning'] {
+  --fk-current-icon: var(--fk-asset-icon-warning);
+}
+.field-kit [data-presentation-icon='info'] {
+  --fk-current-icon: var(--fk-asset-icon-info);
+}
+.field-kit [data-presentation-icon='lock'] {
+  --fk-current-icon: var(--fk-asset-icon-lock);
+}
+.field-kit [data-presentation-icon='offline'] {
+  --fk-current-icon: var(--fk-asset-icon-offline);
+}
+.field-kit [data-presentation-icon='trash'] {
+  --fk-current-icon: var(--fk-asset-icon-trash);
+}
+.field-kit [data-presentation-icon='undo'] {
+  --fk-current-icon: var(--fk-asset-icon-undo);
+}
+.field-kit [data-presentation-icon='redo'] {
+  --fk-current-icon: var(--fk-asset-icon-redo);
+}
+.field-kit [data-presentation-icon='keyboard'] {
+  --fk-current-icon: var(--fk-asset-icon-keyboard);
+}
+.field-kit [data-presentation-icon='controller'] {
+  --fk-current-icon: var(--fk-asset-icon-controller);
+}
+.field-kit [data-presentation-icon='touch'] {
+  --fk-current-icon: var(--fk-asset-icon-touch);
+}
+.field-kit :is(#shell-missions) {
+  background-image:
+    linear-gradient(rgb(7 11 18 / 88%), rgb(7 11 18 / 92%)),
+    var(--fk-asset-screen-missions-background, none);
+  background-position: center;
+  background-size: cover;
+}
+.field-kit :is(#hangar-dialog) {
+  background-image:
+    linear-gradient(rgb(7 11 18 / 88%), rgb(7 11 18 / 92%)),
+    var(--fk-asset-screen-hangar-background, none);
+  background-position: center;
+  background-size: cover;
+}
+.field-kit[data-flight-state='result'] .overlay-card,
+.field-kit #race-main:has([id^='race-result-']:not([hidden])) {
+  background-image:
+    linear-gradient(rgb(7 11 18 / 88%), rgb(7 11 18 / 92%)),
+    var(--fk-asset-screen-results-background, none);
+  background-position: center;
+  background-size: cover;
+}
+.field-kit :is(#collection-dialog) {
+  background-image:
+    linear-gradient(rgb(7 11 18 / 88%), rgb(7 11 18 / 92%)),
+    var(--fk-asset-screen-collection-background, none);
+  background-position: center;
+  background-size: cover;
+}
+.field-kit :is(#settings-dialog) {
+  background-image:
+    linear-gradient(rgb(7 11 18 / 88%), rgb(7 11 18 / 92%)),
+    var(--fk-asset-screen-settings-background, none);
+  background-position: center;
+  background-size: cover;
+}
+.field-kit :is(#race-main) {
+  background-image:
+    linear-gradient(rgb(7 11 18 / 88%), rgb(7 11 18 / 92%)),
+    var(--fk-asset-screen-couch-background, none);
+  background-position: center;
+  background-size: cover;
+}
+.field-kit :is([data-presentation-screen='studio']) {
+  background-image:
+    linear-gradient(rgb(7 11 18 / 88%), rgb(7 11 18 / 92%)),
+    var(--fk-asset-screen-studio-background, none);
+  background-position: center;
+  background-size: cover;
+}
+
+.field-kit :is(button, a[href], select, summary) {
+  cursor: var(--fk-asset-ui-cursor, auto), pointer;
+}
+.field-kit[data-presentation-focus] :is(:focus-visible, .controller-focus) {
+  border-image-source: var(--fk-asset-ui-focus, none);
+  border-image-slice: var(--fk-slice-ui-focus, 8);
+  border-image-width: var(--fk-slice-width-ui-focus, 8px);
+}
+.field-kit
+  :is(
+    [data-presentation-input='checkbox'],
+    [data-presentation-input='radio'],
+    [data-presentation-input='toggle']
+  ) {
+  appearance: none;
+  border-image-source: var(--fk-input-frame);
+  border-image-slice: var(--fk-input-slice, 8);
+  border-image-width: var(--fk-input-slice-width, 8px);
+  border-image-repeat: stretch;
+  background: var(--fk-bg);
+}
+.field-kit [data-presentation-input='checkbox'] {
+  --fk-input-frame: var(--fk-asset-ui-input-checkbox);
+  --fk-input-slice: var(--fk-border-slice-ui-input-checkbox, 8);
+  --fk-input-slice-width: var(--fk-slice-width-ui-input-checkbox, 8px);
+}
+.field-kit [data-presentation-input='radio'] {
+  --fk-input-frame: var(--fk-asset-ui-input-radio);
+  --fk-input-slice: var(--fk-border-slice-ui-input-radio, 8);
+  --fk-input-slice-width: var(--fk-slice-width-ui-input-radio, 8px);
+  border-radius: 50%;
+}
+.field-kit [data-presentation-input='toggle'] {
+  --fk-input-frame: var(--fk-asset-ui-input-toggle);
+  --fk-input-slice: var(--fk-border-slice-ui-input-toggle, 8);
+  --fk-input-slice-width: var(--fk-slice-width-ui-input-toggle, 8px);
+}
+.field-kit
+  :is(
+    [data-presentation-input='checkbox'],
+    [data-presentation-input='radio'],
+    [data-presentation-input='toggle']
+  ):is(:checked, [aria-checked='true']) {
+  background: var(--fk-cyan);
+  box-shadow: inset 0 0 0 5px var(--fk-bg);
+  outline: 2px solid var(--fk-cyan);
+  outline-offset: 2px;
+}
+.field-kit [data-presentation-input='slider']::-webkit-slider-thumb {
+  background-image: var(--fk-asset-ui-input-slider);
+  background-size: cover;
+}
+.field-kit [data-presentation-input='slider']::-moz-range-thumb {
+  background-image: var(--fk-asset-ui-input-slider);
+  background-size: cover;
+}
+.field-kit [data-presentation-input='scrollbar']::-webkit-scrollbar-thumb {
+  background-image: var(--fk-asset-ui-input-scrollbar);
+  background-size: 100% 24px;
+}
+@media (forced-colors: active) {
+  .field-kit
+    :is(
+      [data-presentation-input='checkbox'],
+      [data-presentation-input='radio'],
+      [data-presentation-input='toggle']
+    ) {
+    appearance: auto;
+  }
+}
+
+.field-kit
+  :is([data-presentation-control], [data-presentation-hud], [data-presentation-reward])::before {
+  content: '';
+  display: inline-block;
+  width: var(--fk-glyph-size, 24px);
+  height: var(--fk-glyph-size, 24px);
+  background: var(--fk-current-glyph, none) center / contain no-repeat;
+  image-rendering: pixelated;
+  vertical-align: middle;
+  margin-inline-end: 4px;
+}
+.field-kit [data-presentation-control='up'] {
+  --fk-current-glyph: var(--fk-asset-control-up);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-control='right'] {
+  --fk-current-glyph: var(--fk-asset-control-right);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-control='down'] {
+  --fk-current-glyph: var(--fk-asset-control-down);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-control='left'] {
+  --fk-current-glyph: var(--fk-asset-control-left);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-control='boost'] {
+  --fk-current-glyph: var(--fk-asset-control-boost);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-control='ability'] {
+  --fk-current-glyph: var(--fk-asset-control-ability);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-control='confirm'] {
+  --fk-current-glyph: var(--fk-asset-control-confirm);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-control='cancel'] {
+  --fk-current-glyph: var(--fk-asset-control-cancel);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-hud='life'] {
+  --fk-current-glyph: var(--fk-asset-hud-life);
+  --fk-glyph-size: 16px;
+}
+.field-kit [data-presentation-hud='score'] {
+  --fk-current-glyph: var(--fk-asset-hud-score);
+  --fk-glyph-size: 16px;
+}
+.field-kit [data-presentation-hud='time'] {
+  --fk-current-glyph: var(--fk-asset-hud-time);
+  --fk-glyph-size: 16px;
+}
+.field-kit [data-presentation-hud='coverage'] {
+  --fk-current-glyph: var(--fk-asset-hud-coverage);
+  --fk-glyph-size: 16px;
+}
+.field-kit [data-presentation-hud='signal'] {
+  --fk-current-glyph: var(--fk-asset-hud-signal);
+  --fk-glyph-size: 16px;
+}
+.field-kit [data-presentation-hud='connection'] {
+  --fk-current-glyph: var(--fk-asset-hud-connection);
+  --fk-glyph-size: 16px;
+}
+.field-kit [data-presentation-reward='gold'] {
+  --fk-current-glyph: var(--fk-asset-reward-gold);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-reward='silver'] {
+  --fk-current-glyph: var(--fk-asset-reward-silver);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-reward='bronze'] {
+  --fk-current-glyph: var(--fk-asset-reward-bronze);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-reward='mastery'] {
+  --fk-current-glyph: var(--fk-asset-reward-mastery);
+  --fk-glyph-size: 24px;
+}
+.field-kit [data-presentation-reward='unlock'] {
+  --fk-current-glyph: var(--fk-asset-reward-unlock);
+  --fk-glyph-size: 24px;
+}
+
+.field-kit
+  :is(
+    [data-presentation-control='up'],
+    [data-presentation-control='down'],
+    [data-presentation-control='left'],
+    [data-presentation-control='right']
+  )[aria-label] {
+  font-size: 0;
+}
+.field-kit
+  :is(
+    [data-presentation-control='up'],
+    [data-presentation-control='down'],
+    [data-presentation-control='left'],
+    [data-presentation-control='right']
+  )[aria-label]::before {
+  margin: 0;
+}
+.field-kit
+  :is(
+    input[data-presentation-input='checkbox'],
+    input[data-presentation-input='radio'],
+    input[data-presentation-input='toggle']
+  ),
+.field-kit.game-shell
+  dialog
+  :is(
+    input[data-presentation-input='checkbox'],
+    input[data-presentation-input='radio'],
+    input[data-presentation-input='toggle']
+  ) {
+  inline-size: 24px;
+  block-size: 24px;
+  min-inline-size: 24px;
+  min-block-size: 24px;
+  min-height: 24px;
+  max-height: 24px;
+  flex: 0 0 24px;
+}
+.field-kit :is(.dialog-close, .icon-button)[data-presentation-icon][aria-label] {
+  padding: 4px;
+  font-size: 0;
+  display: grid;
+  place-items: center;
+}
+.field-kit :is(.dialog-close, .icon-button)[data-presentation-icon][aria-label]::before {
+  margin: 0;
+}
+.field-kit input[data-presentation-input='slider'] {
+  appearance: none;
+  background: transparent;
+}
+.field-kit input[data-presentation-input='slider']::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--fk-control-line);
+}
+.field-kit input[data-presentation-input='slider']::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -10px;
+  background-color: var(--fk-panel);
+  border: 1px solid var(--fk-cyan);
+}
+.field-kit input[data-presentation-input='slider']::-moz-range-track {
+  height: 4px;
+  background: var(--fk-control-line);
+}
+.field-kit input[data-presentation-input='slider']::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: var(--fk-panel);
+  border: 1px solid var(--fk-cyan);
+}
+
+.field-kit [data-presentation-reward='gold']::before {
+  display: var(--fk-show-reward-gold, none);
+}
+
+.field-kit [data-presentation-reward='silver']::before {
+  display: var(--fk-show-reward-silver, none);
+}
+
+.field-kit [data-presentation-reward='bronze']::before {
+  display: var(--fk-show-reward-bronze, none);
+}
+
+.field-kit [data-presentation-reward='mastery']::before {
+  display: var(--fk-show-reward-mastery, none);
+}
+
+.field-kit [data-presentation-reward='unlock']::before {
+  display: var(--fk-show-reward-unlock, none);
+}
+/* An opaque uploaded center must not cover code-owned interaction colors.
+   Keep the accepted frame and its slice geometry; native focus stays separate. */
+.field-kit
+  :is(button, .button):is(
+    :hover,
+    :active,
+    :focus-visible,
+    [aria-selected='true'],
+    [aria-pressed='true'],
+    [aria-current]:not([aria-current='false']),
+    .selected,
+    :disabled,
+    [aria-disabled='true']
+  ) {
+  --fk-button-paint-slice: var(--fk-button-border-slice);
+}
+/* Hover must not erase a selected category when a custom frame is present. */
+.field-kit.game-shell dialog [role='tab'][aria-selected='true']:is(:hover, :focus-visible) {
+  background-color: var(--fk-cyan);
+  color: var(--fk-bg);
+}
+
+/* Compiled semantic icons replace the earlier decorative menu markers. */
+.field-kit.game-shell .home-actions .button[data-presentation-icon]::before,
+.field-kit.game-shell
+  .game-overlay[data-kind='pause']
+  .overlay-actions
+  .button[data-presentation-icon]::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  background: var(--fk-current-icon, none) center / contain no-repeat;
+  clip-path: none;
+  vertical-align: middle;
+}
+/* Numeric telemetry is one unit; glyphs must not force a value onto another line. */
+.field-kit.game-shell .telemetry strong {
+  white-space: nowrap;
+}
+@media (max-width: 520px) and (orientation: portrait) {
+  .field-kit.game-shell .telemetry {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 8px 12px;
+    height: auto;
+  }
+  .field-kit.game-shell .telemetry > div {
+    min-width: 0;
+    padding-left: 8px;
+  }
+}
+/* Keep the starting border and actors clear of the HUD in short landscape. */
+@media (orientation: landscape) and (max-height: 600px),
+  (orientation: landscape) and (any-pointer: coarse) {
+  .field-kit.game-shell[data-flight-state='running'] {
+    --fk-flight-header: 112px;
+    --fk-flight-bottom: 4px;
+    --fk-flight-music: 0px;
+  }
+  .field-kit.game-shell[data-flight-state='running']:has(#game-now-playing:not([hidden])) {
+    --fk-flight-music: 44px;
+  }
+  .field-kit.game-shell[data-flight-state='running'] #game-now-playing {
+    position: fixed;
+    z-index: 6;
+    top: calc(var(--safe-top) + var(--fk-flight-header));
+    left: max(12px, var(--safe-left));
+    right: max(12px, var(--safe-right));
+    height: var(--fk-flight-music);
+    margin: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: var(--fk-bg);
+    font-size: var(--fk-text-secondary);
+  }
+  .field-kit.game-shell[data-flight-state='running'] #game-now-playing-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .field-kit.game-shell[data-flight-state='running'] #game-now-playing-source {
+    flex-shrink: 0;
+  }
+  .field-kit.game-shell[data-flight-state='running'][data-text-size='large'] {
+    --fk-flight-header: 128px;
+  }
+  .field-kit.game-shell[data-flight-state='running'] .telemetry {
+    width: min(calc(100vw - 192px), 680px);
+    left: calc(50% - 26px);
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    border-radius: 0;
+    background: var(--fk-bg);
+  }
+  .field-kit.game-shell[data-flight-state='running'] .telemetry #target {
+    white-space: nowrap;
+  }
+  .field-kit.game-shell[data-flight-state='running'] #run-message {
+    position: fixed;
+    top: calc(var(--safe-top) + var(--fk-flight-header) - 28px);
+    left: max(12px, var(--safe-left));
+    right: max(12px, var(--safe-right));
+    width: auto;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--fk-text-secondary);
+    line-height: 1.3;
+    background: var(--fk-bg);
+    z-index: 6;
+  }
+  .field-kit.game-shell[data-flight-state='running'] #shell-menu[data-presentation-icon] {
+    font-size: 0;
+    display: grid;
+    place-items: center;
+  }
+  .field-kit.game-shell[data-flight-state='running'] .arena-panel > .arena-shell,
+  .field-kit.game-shell[data-flight-state='running']
+    .arena-panel:has(> .encounter-status:not([hidden]))
+    > .arena-shell {
+    top: calc(
+      var(--safe-top) + var(--fk-flight-header) + var(--fk-flight-music) +
+        (
+          100% - var(--fk-flight-header) - var(--fk-flight-music) - var(--fk-flight-bottom) -
+            var(--safe-top) - var(--safe-bottom)
+        ) /
+        2
+    );
+    width: min(
+      calc(100% - var(--safe-left) - var(--safe-right)),
+      calc(
+        (
+            100dvh - var(--fk-flight-header) - var(--fk-flight-music) - var(--fk-flight-bottom) -
+              var(--safe-top) - var(--safe-bottom)
+          ) *
+          var(--board-aspect, 1.333333)
+      )
+    );
+  }
+}

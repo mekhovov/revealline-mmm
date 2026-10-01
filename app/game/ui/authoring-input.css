@@ -1,0 +1,153 @@
+@import url('./field-kit-fonts.css');
+
+.authoring-input-rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 8px 16px;
+  background: #0b1625;
+  color: #f0f4ff;
+}
+.authoring-input-hint {
+  margin: 0;
+  font:
+    14px/1.5 'Field Kit UI',
+    system-ui,
+    sans-serif;
+}
+.authoring-input-rail button,
+.authoring-input-rail a,
+.authoring-reference-media button,
+.authoring-preview-enter,
+.authoring-source-open,
+.authoring-sections-dialog button,
+.authoring-source-dialog button {
+  min-height: 44px;
+  padding: 8px 14px;
+  color: inherit;
+  background: #152a40;
+  border: 2px solid #7bdff2;
+  font:
+    400 16px/1.4 'Reveal Line Pixel',
+    'Field Kit UI',
+    monospace;
+}
+
+.authoring-reference-rail {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+}
+.authoring-reference-rail a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.authoring-reference-read[aria-pressed='true'] {
+  outline: 3px solid #ffe077;
+}
+.authoring-reference-media {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.authoring-reference-media input[type='range'] {
+  flex: 1 1 180px;
+  min-width: 120px;
+  min-height: 44px;
+}
+.authoring-preview-enter,
+.authoring-source-open {
+  margin: 8px;
+}
+.authoring-source-dialog,
+.authoring-sections-dialog {
+  box-sizing: border-box;
+  width: min(620px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+  padding: 20px;
+  color: #f0f4ff;
+  background: #0b1625;
+  border: 2px solid #7bdff2;
+  font:
+    16px/1.5 'Field Kit UI',
+    system-ui,
+    sans-serif;
+}
+.authoring-source-dialog button,
+.authoring-sections-dialog button {
+  display: block;
+  width: 100%;
+  text-align: start;
+  margin-block: 8px;
+}
+.authoring-source-dialog::backdrop,
+.authoring-sections-dialog::backdrop {
+  background: #000b;
+}
+:is(.authoring-input-rail, .authoring-source-dialog, .authoring-sections-dialog) :focus-visible,
+.authoring-preview-enter:focus-visible,
+.authoring-source-open:focus-visible,
+.authoring-reference-media :focus-visible,
+.authoring-input-page .controller-focus,
+[data-controller-editor]:focus-visible,
+[data-controller-editor].controller-focus {
+  outline: 3px solid #ffe077;
+  outline-offset: 3px;
+}
+.authoring-source-open[hidden],
+.authoring-preview-enter[hidden] {
+  display: none;
+}
+
+:is(.authoring-input-rail, .authoring-source-dialog, .authoring-sections-dialog)
+  [data-menu-icon]::before,
+.authoring-preview-enter[data-menu-icon]::before,
+.authoring-source-open[data-menu-icon]::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-inline-end: 0.65em;
+  vertical-align: -0.08em;
+  background: currentColor;
+  mask: var(--native-menu-icon) center / contain no-repeat;
+}
+
+.authoring-reference-media [data-menu-icon]::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-inline-end: 0.65em;
+  background: currentColor;
+  mask: var(--native-menu-icon) center / contain no-repeat;
+}
+
+@media (forced-colors: active) {
+  /* Keep native system colors on the controls, but retain their monochrome icons. */
+  :is(
+      .authoring-input-rail,
+      .authoring-source-dialog,
+      .authoring-sections-dialog,
+      .authoring-reference-media
+    )
+    [data-menu-icon]::before,
+  .authoring-preview-enter[data-menu-icon]::before,
+  .authoring-source-open[data-menu-icon]::before {
+    forced-color-adjust: none;
+    background: currentColor;
+  }
+  .authoring-input-page :is(:focus-visible, .controller-focus),
+  :is(.authoring-source-dialog, .authoring-sections-dialog) :focus-visible {
+    outline-color: Highlight;
+  }
+  .authoring-reference-read[aria-pressed='true'] {
+    border: 3px double Highlight;
+    outline-color: Highlight;
+  }
+}

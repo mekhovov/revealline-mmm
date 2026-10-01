@@ -1,0 +1,53 @@
+name: Prepare upstream update
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: RevealLine branch, tag, or commit to extract
+        required: true
+        default: main
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: coupa-upstream-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: main
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22.22.2
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Extract requested upstream revision
+        env:
+          UPSTREAM_REF: ${{ inputs.ref }}
+        run: npm run sync:upstream -- --ref "$UPSTREAM_REF"
+      - run: npm test
+      - run: npm run build
+      - name: Open reviewed update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Already synchronized."
+            exit 0
+          fi
+          branch="codex/upstream-update-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add app upstream.lock.json
+          git commit -m "Update isolated Coupa app from RevealLine"
+          git push origin "$branch"
+          cat > "$RUNNER_TEMP/pr-body.md" <<'BODY'
+          Refreshes the Coupa app from the pinned upstream revision recorded in `upstream.lock.json`. The extraction keeps the selected Coupa edition and applies the same isolation policy.
+
+          Validation: isolation and dependency checks, automated tests, and the Pages build passed in the update workflow. Review the source revision, projected file changes, and test the game before merging. This workflow does not merge or deploy the update.
+          BODY
+          gh pr create --base main --head "$branch" --title "Update Coupa app from RevealLine" --body-file "$RUNNER_TEMP/pr-body.md"

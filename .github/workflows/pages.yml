@@ -1,0 +1,60 @@
+name: Test and publish Coupa app
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: coupa-pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22.22.2
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: dist
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
+        id: deployment
+      - name: Verify deployed revision
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          node --input-type=module <<'NODE'
+          let last;
+          for (let attempt = 0; attempt < 12; attempt++) {
+            try {
+              const response = await fetch(`${process.env.PAGE_URL}deployment.json?revision=${process.env.EXPECTED_SHA}-${attempt}`, { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+              if (!response.ok) throw new Error(`HTTP ${response.status}`);
+              const data = await response.json();
+              if (data.revision !== process.env.EXPECTED_SHA || data.edition !== 'coupa-all') throw new Error('Deployment identity mismatch');
+              console.log(`Verified ${process.env.PAGE_URL} at ${data.revision}`);
+              process.exit(0);
+            } catch (error) { last = error; }
+            await new Promise(resolve => setTimeout(resolve, 5000));
+          }
+          throw last;
+          NODE

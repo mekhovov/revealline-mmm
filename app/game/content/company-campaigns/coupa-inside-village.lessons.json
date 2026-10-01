@@ -1,0 +1,342 @@
+[
+  {
+    "brief": "Choose a small next step in a fictional first week. This is a reflection on how you prefer to connect, not a test of belonging.",
+    "campaignId": "coupa-inside-village",
+    "fields": [
+      {
+        "expected": null,
+        "explanation": "There is no scored personality or values assessment.",
+        "id": "connection",
+        "label": "Your first step",
+        "options": [
+          {
+            "consequence": "A buddy can provide immediate context and introduce another teammate.",
+            "label": "Ask a buddy for a short conversation",
+            "value": "Ask a buddy for a short conversation"
+          },
+          {
+            "consequence": "A written introduction gives colleagues across time zones a way to respond.",
+            "label": "Write a short introduction",
+            "value": "Write a short introduction"
+          }
+        ]
+      }
+    ],
+    "fixtureRevision": "2",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-inside-village-01-lesson",
+    "kind": "reflection",
+    "missionId": "coupa-inside-village-01",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "welcome",
+        "lines": [
+          "Coupa’s public culture page names Cultivate Belonging as a core value.",
+          "The fictional team offers a buddy conversation and a written introduction thread.",
+          "Both routes are available; neither determines whether someone belongs."
+        ],
+        "title": "Village welcome"
+      },
+      {
+        "id": "handoff",
+        "lines": [
+          "Share your role, one current question, and how teammates can reach you.",
+          "Keep personal details optional."
+        ],
+        "title": "A helpful introduction"
+      }
+    ],
+    "revision": "3",
+    "role": "New colleague",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      { "title": "Coupa — Life at Coupa", "url": "https://careers.coupa.com/en/life-at-coupa/" }
+    ],
+    "success": "Your connection plan is saved. Different approaches can build the same community.",
+    "title": "Make a first connection"
+  },
+  {
+    "brief": "A fictional colleague asks for help with a confusing handoff. Choose how to understand the need before proposing a fix.",
+    "campaignId": "coupa-inside-village",
+    "fields": [
+      {
+        "expected": null,
+        "explanation": "There is no scored personality or values assessment.",
+        "id": "start",
+        "label": "Where you begin",
+        "options": [
+          {
+            "consequence": "A short conversation can uncover missing context; record the agreed next step afterward.",
+            "label": "Ask the colleague to describe the blocker",
+            "value": "Ask the colleague to describe the blocker"
+          },
+          {
+            "consequence": "Reviewing the note together can expose the gap; check that it matches the colleague’s experience.",
+            "label": "Read the handoff note together",
+            "value": "Read the handoff note together"
+          }
+        ]
+      }
+    ],
+    "fixtureRevision": "2",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-inside-village-02-lesson",
+    "kind": "reflection",
+    "missionId": "coupa-inside-village-02",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "request",
+        "lines": [
+          "“I am not sure who owns the next step.”",
+          "There are no customer records in this exercise."
+        ],
+        "title": "Colleague’s message"
+      },
+      {
+        "id": "context",
+        "lines": [
+          "Drive Success for #AllofUs is one of Coupa’s current public core values.",
+          "A shared handoff note may be stale. The colleague is available today.",
+          "You can begin with either the person or the written context, then confirm understanding."
+        ],
+        "title": "Available context"
+      }
+    ],
+    "revision": "3",
+    "role": "Teammate",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      { "title": "Coupa — Life at Coupa", "url": "https://careers.coupa.com/en/life-at-coupa/" }
+    ],
+    "success": "Listening approach saved. The next handoff begins with a shared understanding.",
+    "title": "Listen before connecting"
+  },
+  {
+    "brief": "A fictional team workshop spans time zones and communication preferences. Choose the first improvement you would make.",
+    "campaignId": "coupa-inside-village",
+    "fields": [
+      {
+        "expected": null,
+        "explanation": "There is no scored personality or values assessment.",
+        "id": "support",
+        "label": "First improvement",
+        "options": [
+          {
+            "consequence": "Advance questions create more time to consider and contribute; leave an asynchronous response route.",
+            "label": "Share questions before the session",
+            "value": "Share questions before the session"
+          },
+          {
+            "consequence": "An open thread gives colleagues outside the live hour a place to contribute; bring their ideas into the summary.",
+            "label": "Open an asynchronous contribution thread",
+            "value": "Open an asynchronous contribution thread"
+          }
+        ]
+      }
+    ],
+    "fixtureRevision": "2",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-inside-village-03-lesson",
+    "kind": "reflection",
+    "missionId": "coupa-inside-village-03",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "workshop",
+        "lines": [
+          "Two colleagues cannot join the live hour. Another prefers time to consider written questions.",
+          "The team wants everyone to have a useful way to contribute."
+        ],
+        "title": "Workshop constraints"
+      },
+      {
+        "id": "options",
+        "lines": [
+          "A shared document and a recorded summary are available.",
+          "Ask participants what helps; do not infer anyone’s disability or personal circumstances."
+        ],
+        "title": "Available support"
+      }
+    ],
+    "revision": "3",
+    "role": "Workshop host",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      { "title": "Coupa — Life at Coupa", "url": "https://careers.coupa.com/en/life-at-coupa/" }
+    ],
+    "success": "Participation plan saved. Follow up with the people it is intended to help.",
+    "title": "Make participation easier"
+  },
+  {
+    "brief": "Your fictional project moves to another team tomorrow. Choose how to make the transition understandable.",
+    "campaignId": "coupa-inside-village",
+    "fields": [
+      {
+        "expected": null,
+        "explanation": "There is no scored personality or values assessment.",
+        "id": "handoff",
+        "label": "Handoff approach",
+        "options": [
+          {
+            "consequence": "A written handoff gives the receiving team a durable reference; invite corrections.",
+            "label": "Write status, owner and next step",
+            "value": "Write status, owner and next step"
+          },
+          {
+            "consequence": "A walkthrough can surface questions quickly; save the resulting owner and next step.",
+            "label": "Walk through the work and record decisions",
+            "value": "Walk through the work and record decisions"
+          }
+        ]
+      }
+    ],
+    "fixtureRevision": "2",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-inside-village-04-lesson",
+    "kind": "reflection",
+    "missionId": "coupa-inside-village-04",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "work",
+        "lines": [
+          "Coupa’s public culture page names Own our Results as a core value.",
+          "The prototype works. One open question remains about the demonstration schedule.",
+          "The receiving team needs an owner and a clear next step."
+        ],
+        "title": "Current state"
+      },
+      {
+        "id": "handoff",
+        "lines": [
+          "You can write a short status note or host a short walkthrough.",
+          "Both routes should retain the open question instead of hiding it."
+        ],
+        "title": "Available handoff routes"
+      }
+    ],
+    "revision": "3",
+    "role": "Project contributor",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      { "title": "Coupa — Life at Coupa", "url": "https://careers.coupa.com/en/life-at-coupa/" }
+    ],
+    "success": "Handoff approach saved. Ownership stays visible after the transition.",
+    "title": "Own the handoff"
+  },
+  {
+    "brief": "A fictional repeated task slows your team. Choose a small, reversible way to learn before proposing a wider change.",
+    "campaignId": "coupa-inside-village",
+    "fields": [
+      {
+        "expected": null,
+        "explanation": "There is no scored personality or values assessment.",
+        "id": "experiment",
+        "label": "First experiment",
+        "options": [
+          {
+            "consequence": "A small link change tests whether discoverability is the main problem; observe whether questions decrease.",
+            "label": "Try one visible team-page link",
+            "value": "Try one visible team-page link"
+          },
+          {
+            "consequence": "A small usability check can reveal confusing labels before the index grows.",
+            "label": "Test a guide index with three teammates",
+            "value": "Test a guide index with three teammates"
+          }
+        ]
+      }
+    ],
+    "fixtureRevision": "2",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-inside-village-05-lesson",
+    "kind": "reflection",
+    "missionId": "coupa-inside-village-05",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "problem",
+        "lines": [
+          "Build Tomorrow Together is one of Coupa’s current public core values.",
+          "Teammates repeatedly ask where the latest workshop guide lives.",
+          "No production system or customer information is involved."
+        ],
+        "title": "Repeated task"
+      },
+      {
+        "id": "experiment",
+        "lines": [
+          "Try a visible link on the team page, or try a short guide index with three teammates.",
+          "Use what you learn to decide whether the change helps."
+        ],
+        "title": "Two local experiments"
+      }
+    ],
+    "revision": "3",
+    "role": "Team contributor",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      { "title": "Coupa — Life at Coupa", "url": "https://careers.coupa.com/en/life-at-coupa/" }
+    ],
+    "success": "Experiment saved. A useful result can be improvement or evidence to change direction.",
+    "title": "Build a small experiment"
+  },
+  {
+    "brief": "Close the fictional team project by choosing how to carry useful learning forward. This reflection does not score your values.",
+    "campaignId": "coupa-inside-village",
+    "fields": [
+      {
+        "expected": null,
+        "explanation": "There is no scored personality or values assessment.",
+        "id": "share",
+        "label": "Sharing format",
+        "options": [
+          {
+            "consequence": "A conversation can surface more perspectives; preserve the agreed learning afterward.",
+            "label": "Host a short retrospective",
+            "value": "Host a short retrospective"
+          },
+          {
+            "consequence": "A durable guide supports future teammates; invite additions from contributors.",
+            "label": "Publish an annotated team guide",
+            "value": "Publish an annotated team guide"
+          }
+        ]
+      }
+    ],
+    "fixtureRevision": "2",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-inside-village-06-lesson",
+    "kind": "reflection",
+    "missionId": "coupa-inside-village-06",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "result",
+        "lines": [
+          "A shared owner list reduced confusion. An early scheduling assumption proved wrong.",
+          "Several colleagues helped; the team wants their contribution recognized."
+        ],
+        "title": "Project notes"
+      },
+      {
+        "id": "next",
+        "lines": [
+          "A short retrospective or an annotated handoff guide can carry learning forward.",
+          "Include what changed and credit the collaborators in either format."
+        ],
+        "title": "Two ways to share"
+      }
+    ],
+    "revision": "3",
+    "role": "Team contributor",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      { "title": "Coupa — Life at Coupa", "url": "https://careers.coupa.com/en/life-at-coupa/" }
+    ],
+    "success": "Reflection saved. Community learning continues beyond this route.",
+    "title": "Share what the village learned"
+  }
+]

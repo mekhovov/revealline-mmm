@@ -1,0 +1,26 @@
+{
+  "family": "Departure Mono",
+  "designer": "Helena Zhang",
+  "version": "1.500",
+  "license": "SIL Open Font License 1.1",
+  "unmodified": true,
+  "source": "https://github.com/rektdeckard/departure-mono/releases/download/v1.500/DepartureMono-1.500.zip",
+  "sourceSha256": "bf3e48059aeef4617ec585bdea81dcc3491c576b3e7a472f52faf40e09ee5c3a",
+  "files": [
+    {
+      "file": "DepartureMono-Regular.woff2",
+      "bytes": 22496,
+      "sha256": "5b4fed1daa90708aa9c6ee1190abca9dc22164a1c1def0020386e46b61038cfb"
+    },
+    {
+      "file": "DepartureMono-Regular.otf",
+      "bytes": 84480,
+      "sha256": "4d53f663155cf8bf7ffc8e688776e719625f7bbb80a8d90073438b249261a2e0"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 4357,
+      "sha256": "b65e42750f3cb65437a97f4dfd781c58f199259949db2341012be60e32500e83"
+    }
+  ]
+}

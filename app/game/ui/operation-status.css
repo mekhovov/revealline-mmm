@@ -1,0 +1,71 @@
+/* No image or font download is required to acknowledge an operation. */
+.operation-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  min-width: 0;
+  color: var(--fk-text, #f3f0db);
+  font: 400 var(--fk-text-control, 16px) / 1.5 var(--fk-font-ui, system-ui, sans-serif);
+  overflow-wrap: anywhere;
+}
+.operation-status[hidden],
+.operation-status [hidden] {
+  display: none !important;
+}
+.operation-status-label {
+  flex: 1 1 160px;
+}
+.operation-status-signal {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  min-height: 20px;
+  color: var(--fk-focus, #78dce8);
+}
+.operation-status-signal i {
+  width: 4px;
+  height: 8px;
+  background: currentColor;
+}
+.operation-status[data-state='busy'] .operation-status-signal i {
+  animation: operation-signal 900ms steps(2, end) infinite;
+}
+.operation-status-signal i:nth-child(2) {
+  animation-delay: 150ms !important;
+}
+.operation-status-signal i:nth-child(3) {
+  animation-delay: 300ms !important;
+}
+.operation-status[data-state='error'] .operation-status-signal {
+  color: var(--fk-hazard, #f07879);
+}
+.operation-status[data-state='detached'] .operation-status-signal,
+.operation-status[data-state='cancelled'] .operation-status-signal {
+  color: var(--fk-amber, #f4bf62);
+}
+.operation-status-progress {
+  flex: 1 1 120px;
+  width: 120px;
+  max-width: 240px;
+  height: 8px;
+  accent-color: var(--fk-focus, #78dce8);
+}
+.operation-status-count {
+  font-family: var(--fk-font-mono, ui-monospace, monospace);
+  font-variant-numeric: tabular-nums;
+}
+@keyframes operation-signal {
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .operation-status[data-state='busy'] .operation-status-signal i {
+    animation: none;
+  }
+}
+[data-reduced-motion='true'] .operation-status-signal i,
+[data-effects='reduced'] .operation-status-signal i {
+  animation: none !important;
+}

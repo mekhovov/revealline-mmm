@@ -1,0 +1,156 @@
+/* Shared categories; each host continues to own pause, input and preferences. */
+.shared-settings {
+  color: var(--fk-text);
+  background-color: var(--fk-panel);
+  min-inline-size: 0;
+}
+.shared-settings-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.shared-settings .shared-settings-heading :is(h1, h2) {
+  margin: 0;
+}
+dialog.shared-settings {
+  box-sizing: border-box;
+  inline-size: min(1040px, calc(100vw - 32px));
+  max-inline-size: none;
+  max-block-size: calc(100dvh - 32px);
+  overflow: auto;
+  padding: clamp(20px, 4vw, 40px);
+  border: 2px solid var(--fk-line);
+  border-radius: 0;
+}
+/* Keep Solo navigation outside the long settings panel's scroll region. */
+#settings-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#settings-dialog > :is(.eyebrow, h2, .field-kit-settings-tabs) {
+  flex-shrink: 0;
+}
+#settings-dialog > .field-kit-settings-panel {
+  flex: 1 1 auto;
+  min-block-size: 0;
+  overflow: auto;
+  padding-inline: 4px;
+}
+.shared-settings .field-kit-settings-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding-block: 12px;
+  margin-block: 12px 20px;
+  border-block: 1px solid var(--fk-line);
+}
+.shared-settings .field-kit-settings-tabs > button {
+  min-inline-size: 0;
+  min-block-size: 44px;
+  padding: 10px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+.shared-settings .field-kit-settings-tabs [aria-selected='true'] {
+  background-color: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+  color: var(--fk-on-accent);
+}
+.shared-settings .field-kit-settings-panel[hidden] {
+  display: none;
+}
+.shared-settings .field-kit-settings-panel {
+  min-inline-size: 0;
+  padding-block: 4px 16px;
+}
+.shared-settings :is(label, select, input, button) {
+  box-sizing: border-box;
+  max-inline-size: 100%;
+  scroll-margin: 8px;
+}
+.shared-settings :is(button, select, input[type='range']) {
+  min-block-size: 44px;
+}
+.shared-settings .field-kit-settings-panel > label {
+  min-block-size: 44px;
+  align-content: center;
+  margin-block: 12px;
+}
+.shared-settings :is(.race-check, .settings-check),
+#coop-options label.settings-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-block-size: 44px;
+  cursor: pointer;
+}
+.shared-settings :is(.race-check, .settings-check) input[type='checkbox'] {
+  flex: 0 0 auto;
+  inline-size: 22px;
+  block-size: 22px;
+  margin: 0;
+}
+.quick-sound {
+  min-block-size: 44px;
+  min-inline-size: 44px;
+}
+.shared-settings .settings-reading-unit .reading-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fk-space-2);
+}
+.shared-settings .settings-reading-unit .reading-hint {
+  margin-block: var(--fk-space-2);
+}
+.shared-settings .settings-reading-region {
+  max-block-size: 38svh;
+  overflow: auto;
+  padding: var(--fk-space-2);
+  border: 1px solid var(--fk-line);
+}
+.shared-settings .settings-reading-region p {
+  margin: 0 0 var(--fk-space-3);
+}
+.shared-settings .settings-reading-region p:last-child {
+  margin-bottom: 0;
+}
+.shared-settings .settings-reading-region:focus-visible {
+  outline: 3px solid var(--fk-focus);
+  outline-offset: -3px;
+}
+@media (max-width: 640px) {
+  .shared-settings .field-kit-settings-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  dialog.shared-settings {
+    padding: 20px;
+  }
+}
+
+@media (max-height: 500px) {
+  .field-kit.game-shell #settings-dialog.shared-settings {
+    padding: 12px 16px;
+  }
+  #settings-dialog > .eyebrow {
+    display: none;
+  }
+  #settings-dialog > h2 {
+    display: flex;
+    align-items: center;
+    min-block-size: 44px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin: 0 52px 8px 0;
+  }
+  #settings-dialog .field-kit-settings-tabs {
+    margin-block: 4px 8px;
+    padding-block: 4px;
+  }
+  #settings-dialog .field-kit-settings-tabs > button {
+    padding: 4px 6px;
+  }
+}

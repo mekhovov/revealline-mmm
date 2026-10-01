@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "repo": "revealline-mmm",
+  "brandId": "coupa",
+  "editionId": "coupa-all",
+  "name": "Coupa Village",
+  "basePath": "/revealline-mmm/",
+  "upstream": {
+    "repository": "mekhovov/revealline",
+    "branch": "main"
+  }
+}

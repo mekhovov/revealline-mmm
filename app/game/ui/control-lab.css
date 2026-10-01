@@ -1,0 +1,201 @@
+.control-lab-dialog {
+  width: min(74rem, calc(100vw - 2rem));
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: var(--panel, #15251f);
+  color: var(--ink, #eef4e9);
+  border: 1px solid var(--line, #799786);
+  border-radius: 1rem;
+}
+.control-lab-dialog::backdrop {
+  background: #07110dee;
+}
+.control-lab-dialog h2 {
+  margin-block-start: 0;
+}
+.control-lab-dialog p {
+  line-height: 1.5;
+}
+.control-lab-notice {
+  padding-inline-start: 0.8rem;
+  border-inline-start: 3px solid var(--accent, #d7f891);
+}
+.control-lab-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-block: 1rem;
+}
+.control-lab-options label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.control-lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.control-lab-control {
+  min-width: 0;
+  border: 1px solid var(--line, #799786);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+.control-lab-control legend {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.control-lab-control > label,
+.control-lab-control > output {
+  display: block;
+}
+.control-lab-control input[type='range'] {
+  width: 100%;
+  min-height: 44px;
+  margin-block: 0.5rem;
+  accent-color: var(--accent, #d7f891);
+}
+.control-lab-control :focus-visible,
+.control-lab-dialog :focus-visible {
+  outline: 3px solid var(--accent, #d7f891);
+  outline-offset: 3px;
+}
+.control-lab-figure {
+  margin: 0.5rem 0;
+}
+.control-lab-figure figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.control-lab-diagram {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 9rem;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #35604a55, transparent 65%);
+}
+.control-lab-diagram::before {
+  content: '';
+  position: absolute;
+  inset-inline: 10%;
+  inset-block-start: 50%;
+  border-block-start: 1px dashed #a6b9ac;
+}
+.control-lab-craft {
+  position: relative;
+  width: 8rem;
+  height: 0.7rem;
+  background: #e5eddd;
+  border: 2px solid #09170e;
+  border-radius: 0.2rem;
+}
+.control-lab-rotor {
+  position: absolute;
+  width: 2.5rem;
+  height: 0.35rem;
+  background: #d7f891;
+  border: 1px solid #182d23;
+  top: -0.5rem;
+}
+.control-lab-rotor:nth-child(odd) {
+  left: -0.4rem;
+}
+.control-lab-rotor:nth-child(even) {
+  right: -0.4rem;
+}
+.control-lab-pitch .control-lab-craft::after {
+  content: '';
+  position: absolute;
+  right: -0.7rem;
+  top: -0.25rem;
+  border-block: 0.5rem solid transparent;
+  border-inline-start: 0.8rem solid #d7f891;
+}
+.control-lab-yaw .control-lab-craft {
+  width: 4rem;
+  height: 4rem;
+  background: #e5eddd;
+  border-radius: 1rem 1rem 0.3rem 0.3rem;
+}
+.control-lab-yaw .control-lab-craft::after {
+  content: '';
+  position: absolute;
+  left: 1.2rem;
+  top: -1.1rem;
+  border-inline: 0.65rem solid transparent;
+  border-block-end: 1.3rem solid #d7f891;
+}
+.control-lab-yaw .control-lab-rotor {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  top: -0.2rem;
+}
+.control-lab-yaw .rotor-2,
+.control-lab-yaw .rotor-3 {
+  top: 2.4rem;
+}
+.control-lab-yaw .control-lab-rotor:nth-child(odd) {
+  left: -1rem;
+}
+.control-lab-yaw .control-lab-rotor:nth-child(even) {
+  right: -1rem;
+}
+.control-lab-thrust-arrow {
+  display: none;
+}
+.control-lab-throttle .control-lab-thrust-arrow {
+  display: block;
+  position: absolute;
+  inset-inline: 0;
+  bottom: 1rem;
+  color: #d7f891;
+  text-align: center;
+  font-size: calc(1rem + var(--control-lab-thrust, 0) * 2rem);
+}
+.control-lab-author textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 10rem;
+  margin-block: 0.5rem;
+  font-family: monospace;
+}
+.control-lab-dialog button {
+  min-height: 44px;
+  margin: 0.25rem;
+}
+.control-lab-dialog > button {
+  position: sticky;
+  bottom: 0;
+  background: var(--panel, #15251f);
+}
+.control-lab-direction {
+  min-height: 3em;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  .control-lab-dialog {
+    width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+    padding: 0.75rem;
+  }
+  .control-lab-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .control-lab-dialog *,
+  .control-lab-dialog *::before,
+  .control-lab-dialog *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

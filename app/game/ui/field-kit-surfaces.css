@@ -1,0 +1,914 @@
+/* Collection, settings and supporting screens share the same Field Kit surfaces.
+   Canvas sizing, native modal state, input controls and save handlers stay owned
+   by their existing hosts. */
+.field-kit.game-shell :is(#settings-dialog, #collection-dialog, #library-dialog, #help-dialog) {
+  width: min(1040px, calc(100vw - 32px));
+  max-width: none;
+  padding: clamp(20px, 4vw, 40px);
+}
+.field-kit.game-shell :is(dialog p, dialog li) {
+  font-size: var(--fk-text-body);
+  line-height: var(--fk-leading-body);
+}
+.field-kit.game-shell dialog :is(.micro-note, .reading-hint, .eyebrow) {
+  font-size: var(--fk-text-secondary);
+  line-height: 1.5;
+}
+.field-kit.game-shell dialog :is(h3, h4) {
+  color: var(--fk-text);
+  font-size: var(--fk-text-body);
+  line-height: 1.4;
+}
+.field-kit.game-shell dialog h2 {
+  color: var(--fk-text);
+  margin-block: 8px 20px;
+}
+.field-kit.game-shell dialog :is(details, .soundtrack-section, .profile-section) {
+  border-color: var(--fk-line);
+  border-radius: 0;
+  background-color: var(--fk-panel-raised);
+}
+.field-kit.game-shell dialog details {
+  padding: 12px 16px;
+  margin-block: 16px;
+}
+.field-kit.game-shell dialog summary {
+  color: var(--fk-text);
+  cursor: pointer;
+  align-content: center;
+}
+.field-kit.game-shell dialog summary::marker {
+  color: var(--fk-cyan);
+}
+.field-kit.game-shell :is(.field-kit-settings-tabs, .library-tabs) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-block: 12px;
+  margin-bottom: 20px;
+  border-block: 1px solid var(--fk-line);
+}
+.field-kit.game-shell .field-kit-settings-tabs > button {
+  flex: 1 1 140px;
+  text-align: center;
+}
+.field-kit.game-shell .field-kit-settings-tabs [aria-selected='true'] {
+  background: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+  color: var(--fk-on-accent);
+}
+.field-kit .field-kit-settings-panel {
+  min-width: 0;
+}
+.field-kit .field-kit-settings-panel > h3 {
+  margin: 0 0 4px;
+}
+.field-kit .field-kit-settings-panel > .micro-note:first-of-type {
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+.field-kit .field-kit-settings-panel :is(.field, .slider-field, .soundtrack-field) {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.6fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-block: 16px;
+  color: var(--fk-text);
+}
+.field-kit .field-kit-settings-panel :is(select, input[type='range']) {
+  width: 100%;
+  min-width: 0;
+}
+.field-kit .field-kit-settings-panel > label:not(.field, .slider-field) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: var(--fk-target-size);
+  margin-block: 16px;
+}
+.field-kit .field-kit-data-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.field-kit.game-shell #collection-dialog .gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-block: 24px;
+}
+.field-kit.game-shell .gallery-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 0 16px;
+  text-align: left;
+  border: 2px solid var(--fk-control-line);
+  background-color: var(--fk-panel-raised);
+  color: var(--fk-text);
+  overflow: hidden;
+}
+.field-kit.game-shell .gallery-card canvas {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-bottom: 1px solid var(--fk-line);
+  margin-bottom: 12px;
+  background-color: var(--fk-bg);
+}
+.field-kit.game-shell .gallery-card :is(strong, span) {
+  display: block;
+  margin: 4px 14px;
+  line-height: 1.4;
+}
+.field-kit.game-shell .gallery-card strong {
+  font-size: var(--fk-text-control);
+  color: var(--fk-text);
+}
+.field-kit.game-shell .gallery-card span {
+  font-size: var(--fk-text-secondary);
+  color: var(--fk-muted);
+}
+.field-kit.game-shell #gallery-view-dialog {
+  width: min(1200px, calc(100vw - 24px));
+}
+.field-kit.game-shell #gallery-canvas {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 65svh;
+  margin: 20px auto;
+  object-fit: contain;
+  background-color: var(--fk-bg);
+  border: 1px solid var(--fk-line);
+  border-radius: 0;
+}
+.field-kit.game-shell :is(.appearance-reward, .scoreboard section, .pack-list article) {
+  padding: 16px;
+  margin-block: 12px;
+  border: 1px solid var(--fk-line);
+  background-color: var(--fk-panel-raised);
+  border-radius: 0;
+}
+.field-kit.game-shell :is(.appearance-reward p, .mastery-note) {
+  font-size: var(--fk-text-secondary);
+  line-height: 1.5;
+}
+.field-kit.game-shell .appearance-reward.earned {
+  border-color: var(--fk-success);
+}
+.field-kit.game-shell :is(.scoreboard ol, .scoreboard h3) {
+  font-size: var(--fk-text-control);
+  line-height: 1.5;
+}
+.field-kit.game-shell .scoreboard ol {
+  font-family: var(--fk-font-mono);
+}
+.field-kit.game-shell :is(#help-reading, #collection-reading, #gallery-story-reading) {
+  line-height: var(--fk-leading-body);
+  color: var(--fk-text);
+  border-color: var(--fk-line);
+}
+.field-kit.game-shell .reading-toolbar {
+  margin-block: 20px;
+  padding: 12px;
+  background-color: var(--fk-panel-raised);
+  border: 1px solid var(--fk-line);
+}
+.field-kit.game-shell .soundtrack-dialog :is(input, select, option) {
+  color: var(--fk-text);
+  background-color: var(--fk-bg);
+  font-family: var(--fk-font-ui);
+  font-size: var(--fk-text-control);
+}
+.field-kit.game-shell .soundtrack-field > span {
+  color: var(--fk-muted);
+  font-size: var(--fk-text-secondary);
+}
+.field-kit.game-shell dialog :is(pre, textarea) {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+/* Supporting pages opt in explicitly, leaving boards and their input geometry alone. */
+body.field-kit-support[data-menu-palette='neon'] {
+  --rl-support-bg: var(--rl-menu-neon-bg);
+  --rl-support-panel: var(--rl-menu-neon-panel);
+  --rl-support-panel-raised: var(--rl-menu-neon-panel-raised);
+  --rl-support-text: var(--rl-menu-neon-text);
+  --rl-support-muted: var(--rl-menu-neon-muted);
+  --rl-support-line: var(--rl-menu-neon-line);
+  --rl-support-control-line: var(--rl-menu-neon-control-line);
+  --rl-support-cyan: var(--rl-menu-neon-cyan);
+  --rl-support-amber: var(--rl-menu-neon-amber);
+  --rl-support-hazard: var(--rl-menu-neon-hazard);
+}
+body.field-kit-support[data-menu-palette='field-kit'] {
+  --rl-support-bg: var(--rl-menu-field-kit-bg);
+  --rl-support-panel: var(--rl-menu-field-kit-panel);
+  --rl-support-panel-raised: var(--rl-menu-field-kit-panel-raised);
+  --rl-support-text: var(--rl-menu-field-kit-text);
+  --rl-support-muted: var(--rl-menu-field-kit-muted);
+  --rl-support-line: var(--rl-menu-field-kit-line);
+  --rl-support-control-line: var(--rl-menu-field-kit-control-line);
+  --rl-support-cyan: var(--rl-menu-field-kit-cyan);
+  --rl-support-amber: var(--rl-menu-field-kit-amber);
+  --rl-support-hazard: var(--rl-menu-field-kit-hazard);
+}
+body.field-kit-support:is([data-menu-palette='neon'], [data-menu-palette='field-kit']) {
+  --fk-bg: var(--rl-support-bg);
+  --fk-panel: var(--rl-support-panel);
+  --fk-panel-raised: var(--rl-support-panel-raised);
+  --fk-text: var(--rl-support-text);
+  --fk-muted: var(--rl-support-muted);
+  --fk-line: var(--rl-support-line);
+  --fk-control-line: var(--rl-support-control-line);
+  --fk-cyan: var(--rl-support-cyan);
+  --fk-amber: var(--rl-support-amber);
+  --fk-hazard: var(--rl-support-hazard);
+  --fk-accent: var(--fk-amber);
+  --fk-focus: var(--fk-cyan);
+  --fk-on-accent: var(--fk-bg);
+  --paper: var(--fk-bg);
+  --ink: var(--fk-text);
+  --muted: var(--fk-muted);
+  --line: var(--fk-line);
+  --accent: var(--fk-accent);
+  --safe: var(--fk-cyan);
+  --danger: var(--fk-hazard);
+  color: var(--fk-text);
+  background-color: var(--fk-bg);
+}
+
+.field-kit[data-field-kit-page] {
+  --line: var(--fk-line);
+  --accent: var(--fk-cyan);
+  color-scheme: dark;
+}
+.field-kit[data-field-kit-page] :is(h1, .race-screen h1) {
+  font-family: var(--fk-font-display);
+  font-size: clamp(var(--fk-text-display), 6vw, 72px);
+  line-height: 1.05;
+  letter-spacing: 0.015em;
+  text-shadow: none;
+}
+.field-kit[data-field-kit-page] :is(h2, h3) {
+  color: var(--fk-text);
+  font-size: calc(var(--fk-text-body) + 4px);
+  line-height: 1.3;
+  letter-spacing: normal;
+}
+.field-kit[data-field-kit-page] :is(a, label) {
+  color: var(--fk-text);
+}
+.field-kit[data-field-kit-page] a:hover {
+  color: var(--fk-cyan);
+}
+.field-kit[data-field-kit-page]
+  :is(.watch, .panel, aside, .stage, .seat, .notice, .checkpoint, .encounter-cue) {
+  color: var(--fk-text);
+  background-color: var(--fk-panel);
+  border-color: var(--fk-line);
+  border-radius: 0;
+}
+.field-kit[data-field-kit-page]
+  :is(
+    .quiet,
+    .smallprint,
+    .guide,
+    .footer-note,
+    .feedback,
+    .race-footnote,
+    .race-menu-status,
+    .stage-heading
+  ) {
+  color: var(--fk-muted);
+  font-size: var(--fk-text-secondary);
+  line-height: 1.5;
+}
+.field-kit[data-field-kit-page]
+  :is(.badge, .readouts, .race-kicker, .seat > span, .face-buttons span, .dpad span) {
+  font-size: var(--fk-text-secondary);
+  color: var(--fk-muted);
+  letter-spacing: normal;
+  border-radius: 0;
+}
+.field-kit[data-field-kit-page]
+  :is(select, textarea, input:not([type='checkbox'], [type='range'])) {
+  background-color: var(--fk-bg);
+  color: var(--fk-text);
+  border-color: var(--fk-control-line);
+}
+.field-kit[data-field-kit-page] :is(.readouts, #series-score, #race-clock) {
+  font-family: var(--fk-font-mono);
+}
+.field-kit[data-field-kit-page]
+  :is(#load-example, #play-pause, #connect, #load):not(:disabled):not([aria-disabled='true']) {
+  color: var(--fk-on-accent);
+  background-color: var(--fk-amber);
+  border-color: var(--fk-amber);
+}
+.field-kit .field-kit-page-text {
+  display: grid;
+  gap: 8px;
+  max-width: 230px;
+  margin-block: 12px;
+  font-size: var(--fk-text-control);
+}
+.field-kit[data-field-kit-page='couch'] #couch-app {
+  --sun: var(--fk-amber);
+  --sky: var(--fk-cyan);
+}
+.field-kit[data-field-kit-page='couch'] .race-shell {
+  background: var(--fk-bg);
+}
+.field-kit[data-field-kit-page='couch'] .race-screen {
+  border-top: 2px solid var(--fk-cyan);
+  padding-block: 20px;
+}
+.field-kit[data-field-kit-page='couch'] .race-seats .sun {
+  border-left-color: var(--fk-amber);
+}
+.field-kit[data-field-kit-page='couch'] .race-seats .sky {
+  border-left-color: var(--fk-cyan);
+}
+.field-kit[data-field-kit-page='couch'] .race-summary {
+  color: var(--fk-muted);
+  border-color: var(--fk-line);
+}
+.field-kit[data-field-kit-page='couch'] #couch-app .race-menu-actions :is(button, a) {
+  font-size: var(--fk-text-body);
+  min-height: 48px;
+  border-color: var(--fk-control-line);
+  background-color: var(--fk-panel);
+}
+.field-kit[data-field-kit-page='couch'] #couch-app .race-menu-actions .race-primary {
+  color: var(--fk-on-accent);
+  background-color: var(--fk-amber);
+  border-color: var(--fk-amber);
+}
+.field-kit[data-field-kit-page='couch'] #couch-app .race-menu-actions :is(button, a):hover {
+  border-color: var(--fk-cyan);
+}
+.field-kit[data-field-kit-page='couch']
+  #couch-app
+  .race-menu-actions
+  :is(button, a):is(:disabled, [aria-disabled='true']) {
+  color: var(--fk-muted);
+  background-color: var(--fk-panel);
+  border-color: var(--fk-line);
+  border-style: dashed;
+}
+.field-kit[data-field-kit-page='controller'] :is(.setup, .lab-grid) {
+  gap: 20px;
+}
+.field-kit[data-field-kit-page='controller'] .face-buttons b {
+  font-size: var(--fk-text-control);
+}
+.field-kit[data-field-kit-page='controller'] :is(.stage-heading, .feedback dt) {
+  color: var(--fk-cyan);
+}
+.field-kit[data-field-kit-page='about']
+  :is(.flight-window, .mode-card, .pack-card, .feature-card, .site-header) {
+  border-color: var(--fk-line);
+  border-radius: 0;
+  background-color: var(--fk-panel);
+}
+.field-kit[data-field-kit-page='about']
+  :is(.brand, .brand i, .brand-mark, .hero-deck, .input-note) {
+  color: var(--fk-text);
+}
+.field-kit[data-field-kit-page='about'] .grain {
+  display: none;
+}
+.field-kit[data-field-kit-page='about'] .hero h1 {
+  font-size: clamp(56px, 7vw, 104px);
+}
+.field-kit[data-field-kit-page='about'] :is(.header-play, .button-primary) {
+  color: var(--fk-on-accent);
+  background-color: var(--fk-amber);
+  border-color: var(--fk-amber);
+}
+.field-kit-support > main > nav a {
+  border-radius: 0;
+  min-height: var(--fk-target-size);
+}
+@media (max-width: 900px) {
+  .field-kit.game-shell #collection-dialog .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .field-kit.game-shell :is(#settings-dialog, #collection-dialog, #library-dialog, #help-dialog) {
+    width: calc(100vw - 16px);
+    padding: 20px 16px;
+  }
+  .field-kit.game-shell .field-kit-settings-tabs > button {
+    flex-basis: calc(50% - 8px);
+    padding-inline: 8px;
+  }
+  .field-kit .field-kit-settings-panel :is(.field, .slider-field, .soundtrack-field) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .field-kit.game-shell #collection-dialog .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .field-kit[data-field-kit-page='replay'] {
+    padding-inline: 16px;
+  }
+  .field-kit[data-field-kit-page='couch'] :is(.race-menu-actions, .race-fields, .race-seats) {
+    grid-template-columns: 1fr;
+  }
+  .field-kit[data-field-kit-page='about'] .site-header {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .field-kit .field-kit-settings-panel {
+    scroll-behavior: auto;
+  }
+}
+.field-kit[data-effects='reduced'] .field-kit-settings-panel {
+  scroll-behavior: auto;
+}
+/* Earned status is conveyed by wording and marks, never by unreadable dim text. */
+.field-kit.game-shell .achievement:not(.earned) {
+  opacity: 1;
+}
+.field-kit.game-shell .achievement strong {
+  color: var(--fk-text);
+  font-size: var(--fk-text-control);
+}
+.field-kit.game-shell .achievement span {
+  color: var(--fk-muted);
+  font-size: var(--fk-text-secondary);
+  line-height: 1.5;
+}
+.field-kit.game-shell dialog .button.primary {
+  color: var(--fk-on-accent);
+  background-color: var(--fk-amber);
+  border-color: var(--fk-amber);
+}
+.field-kit.game-shell .gallery-card span {
+  font-family: var(--fk-font-ui);
+  letter-spacing: normal;
+}
+.field-kit.game-shell #gallery-grid:not(:has(.gallery-card)) {
+  display: block;
+  padding: 32px;
+  border: 1px dashed var(--fk-control-line);
+  color: var(--fk-muted);
+  background-color: var(--fk-bg);
+}
+
+.field-kit.game-shell dialog .button.primary:not(:disabled):hover {
+  color: var(--fk-on-accent);
+  background-color: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+}
+:root:has(body.field-kit[data-field-kit-page]) {
+  background-color: var(--fk-bg);
+  color-scheme: dark;
+}
+body.field-kit[data-field-kit-page]
+  :is(#load-example, #play-pause, #connect, #load):not(:disabled):not(
+    [aria-disabled='true']
+  ):hover {
+  color: var(--fk-on-accent);
+  background-color: var(--fk-cyan);
+  border-color: var(--fk-cyan);
+}
+.field-kit[data-field-kit-page='controller'] :is(label, select, aside) {
+  min-width: 0;
+  max-width: 100%;
+}
+.field-kit[data-field-kit-page='controller'] select {
+  width: 100%;
+}
+.field-kit[data-field-kit-page] header {
+  font-size: var(--fk-text-secondary);
+  letter-spacing: normal;
+}
+.field-kit.game-shell .game-overlay {
+  color: var(--fk-text);
+  background-color: var(--fk-panel);
+  border-color: var(--fk-control-line);
+  border-radius: 0;
+}
+.field-kit.game-shell .game-overlay :is(h1, h2) {
+  color: var(--fk-text);
+  font-family: var(--fk-font-display);
+  font-size: var(--fk-text-display);
+  line-height: 1.1;
+  text-shadow: none;
+}
+.field-kit.game-shell .game-overlay .button.primary {
+  color: var(--fk-on-accent);
+  background-color: var(--fk-amber);
+  border-color: var(--fk-amber);
+}
+
+/* Briefing, Pause and Title share one non-reflowing progress rail. Preparation
+   remains cancellable with Back/Escape, so an extra temporary command never
+   appears in the action hierarchy or steals controller focus. */
+.field-kit.game-shell .preparation-cancel-hook {
+  display: none !important;
+}
+.field-kit.game-shell .menu-progress-status:not([hidden]) {
+  position: fixed;
+  z-index: 120;
+  inset-inline-start: 50%;
+  inset-block-end: max(10px, var(--safe-bottom, 0px));
+  translate: -50% 0;
+  display: flex;
+  width: min(640px, calc(100vw - var(--safe-left, 0px) - var(--safe-right, 0px) - 20px));
+  min-height: 38px;
+  max-height: min(30dvh, 160px);
+  margin: 0;
+  padding: 7px 10px;
+  overflow: auto;
+  color: var(--fk-text);
+  background: #07101ef5;
+  border: 1px solid #3f6486;
+  box-shadow:
+    0 0 0 1px #02040a,
+    0 10px 30px #000a;
+  font-size: 14px;
+  line-height: 1.3;
+  pointer-events: none;
+}
+.field-kit.game-shell .menu-progress-status .operation-status-label {
+  min-width: 0;
+}
+.field-kit.game-shell .menu-progress-status .operation-status-progress {
+  flex-basis: 90px;
+  max-width: 160px;
+}
+
+/* Ready and Pause are two states of the same command deck. The content changes,
+   but the panel surface, edge, width and command sizing do not. */
+.field-kit.game-shell .game-overlay:is([data-kind='ready'], [data-kind='pause']) .overlay-card {
+  width: min(680px, 100%);
+  max-width: 680px;
+  padding: clamp(10px, 2vw, 16px);
+  background: #050a14fa;
+  border-color: #30496d;
+  box-shadow:
+    0 0 0 1px #02040a,
+    0 20px 60px #000c;
+}
+
+/* Ready owns a real command grid. The legacy flex row gave every direct child
+   (including the Pause-only mission group) an equal shrinking share; long
+   translated labels could consequently collapse to a single character wide
+   while a picture or font was being prepared. */
+.field-kit.game-shell .game-overlay[data-kind='ready'] .overlay-card {
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 12px;
+}
+.field-kit.game-shell .game-overlay[data-kind='ready'] .overlay-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  gap: 8px;
+}
+.field-kit.game-shell .game-overlay[data-kind='ready'] .overlay-actions > * {
+  min-width: 0;
+}
+.field-kit.game-shell
+  .game-overlay[data-kind='ready']
+  .overlay-actions
+  > :is(#flight-preparation-cancel, #continue-saved, #start-button, #next-button, #overlay-menu) {
+  grid-column: 1 / -1;
+}
+.field-kit.game-shell .game-overlay[data-kind='ready'] .overlay-actions .button {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  flex: none;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+.field-kit.game-shell .game-overlay[data-kind='ready'] #start-button {
+  min-height: 48px;
+  font-size: 17px;
+}
+.field-kit.game-shell
+  .game-overlay[data-kind='ready']
+  .pause-missions-section
+  .pause-mission-info
+  > div {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* Pause is a compact command deck: one dominant continuation, labeled rows of
+   related actions, then a quiet exit. Side labels preserve hierarchy without
+   consuming another line on phones or shallow landscape screens. */
+.field-kit.game-shell .game-overlay[data-kind='pause'] .overlay-card {
+  gap: 6px;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] .pause-label {
+  align-self: stretch;
+  margin: 0;
+  padding: 0 2px 6px;
+  color: var(--fk-amber);
+  border-bottom: 1px solid #263b5b;
+  font-family: var(--fk-font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] .overlay-actions {
+  gap: 6px;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] .pause-menu-section {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 6px;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] .pause-menu-section > h3 {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  margin: 0;
+  padding: 4px 8px;
+  color: #9bb1c9;
+  background: #0a1220;
+  border-inline-start: 3px solid #36587d;
+  font: 700 11px/1.15 var(--fk-font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] .pause-action-grid {
+  gap: 5px;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] .pause-secondary-groups {
+  gap: 6px;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] .overlay-actions :is(.button, summary) {
+  min-height: 44px;
+  padding: 6px 8px;
+  font-size: 15px;
+  line-height: 1.15;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.field-kit.game-shell
+  .game-overlay[data-kind='pause']
+  .overlay-actions
+  :is(.button:not([data-presentation-icon]), summary)::before {
+  display: none;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] #start-button {
+  min-height: 48px;
+  font-size: 17px;
+}
+.field-kit.game-shell .game-overlay[data-kind='pause'] #overlay-menu {
+  color: #c1cfdd;
+  background: transparent;
+  border-color: #30496d;
+}
+.field-kit.game-shell[data-text-size='large'] .game-overlay[data-kind='pause'] .pause-menu-section {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 380px) {
+  .field-kit.game-shell .game-overlay[data-kind='ready'] .overlay-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .field-kit.game-shell .game-overlay[data-kind='pause'] .pause-menu-section {
+    grid-template-columns: 62px minmax(0, 1fr);
+  }
+  .field-kit.game-shell .game-overlay[data-kind='pause'] .pause-menu-section > h3 {
+    padding-inline: 5px;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 540px) {
+  .field-kit.game-shell .game-overlay[data-kind='pause'] .overlay-card {
+    gap: 4px;
+    padding: 6px 10px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='pause'] .overlay-actions {
+    gap: 4px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='pause'] .pause-menu-section {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 4px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='pause'] .pause-menu-section > h3 {
+    position: static;
+    padding: 3px 6px;
+    background: #0a1220;
+    font-size: 10px;
+  }
+  .field-kit.game-shell
+    .game-overlay[data-kind='pause']
+    :is(.pause-action-grid, .pause-secondary-groups) {
+    gap: 4px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .field-kit.game-shell .menu-progress-status:not([hidden]) {
+    inset-inline-start: auto;
+    inset-inline-end: max(6px, var(--safe-right, 0px));
+    inset-block-end: max(6px, var(--safe-bottom, 0px));
+    translate: 0 0;
+    width: min(420px, calc(100vw - var(--safe-left, 0px) - var(--safe-right, 0px) - 12px));
+    max-height: 72px;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .field-kit.game-shell .game-overlay:where(:not([data-kind='pause'])) .overlay-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+}
+.field-kit.game-shell #gallery-view-meta {
+  padding-inline-end: 64px;
+}
+@media (max-width: 600px) {
+  .field-kit.game-shell .library-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .field-kit.game-shell .library-tabs > button {
+    min-width: 0;
+  }
+}
+
+/* Results lead with the completed attempt's still. Reading and actions retain
+   their existing independent overflow/keyboard ownership. */
+.field-kit.game-shell #result-picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(30dvh, 260px);
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: var(--fk-bg);
+  border: 2px solid var(--fk-control-line);
+  margin-block-end: 16px;
+}
+.field-kit.game-shell #result-picture[hidden] {
+  display: none;
+}
+@media (max-height: 500px) {
+  .field-kit.game-shell #result-picture {
+    max-height: 100px;
+  }
+}
+@media (min-width: 800px) and (min-height: 501px) {
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-card {
+    width: min(1000px, 100%);
+    max-width: 1000px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-reading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    column-gap: 24px;
+    align-items: start;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-reading > * {
+    grid-column: 2;
+    min-width: 0;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #result-picture {
+    grid-column: 1;
+    grid-row: 1 / span 6;
+    margin: 0;
+    max-height: 300px;
+  }
+}
+
+/* A compact result header keeps the earned image, score and medals together.
+   The reading region still owns overflow and its existing focus controls. */
+@media (max-width: 799px), (max-height: 500px) {
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-reading {
+    display: grid;
+    grid-template-columns: minmax(72px, 0.34fr) minmax(0, 1fr);
+    grid-auto-rows: min-content;
+    gap: 8px 12px;
+    align-content: start;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-reading > * {
+    min-width: 0;
+    margin: 0;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #result-picture {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+    max-height: 100px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-eyebrow {
+    grid-column: 2;
+    grid-row: 1;
+    line-height: 1.25;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-title {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 40px;
+    line-height: 1;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-copy {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    max-width: none;
+    line-height: 1.35;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-difficulty {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    padding-right: 88px;
+    align-self: center;
+    line-height: 1.35;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #result-medals {
+    grid-column: 2;
+    grid-row: 4;
+    justify-self: end;
+    align-self: center;
+    line-height: 1.2;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #mastery-overlay {
+    grid-column: 1 / -1;
+    grid-row: 5;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-actions {
+    margin-top: 12px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] .reading-toolbar {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    margin-block: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-actions #next-button {
+    grid-column: 1 / -1;
+  }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(250px, 0.85fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 10px 16px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 12px;
+    overflow: hidden;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] #overlay-reading {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-actions {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: max-content;
+    align-content: start;
+    gap: 8px;
+    min-height: 0;
+    overflow-y: auto;
+    margin: 0;
+    padding: 4px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-actions .button {
+    padding: 8px;
+    min-height: 44px;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-actions #next-button {
+    grid-column: 1 / -1;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] .reading-toolbar {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+  .field-kit.game-shell .game-overlay[data-kind='won'] .overlay-footnote {
+    display: none;
+  }
+}
