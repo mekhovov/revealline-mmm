@@ -14,11 +14,12 @@ const same = (left, right) => canonicalJSON(left) === canonicalJSON(right);
 const check = (signal) => {
   if (signal?.aborted) throw new DOMException('Demo Journey picture cancelled.', 'AbortError');
 };
-const result = (backdrop = null, pictureVisibility = 'blurred') => {
+const result = (backdrop = null, pictureVisibility = 'blurred', previewAvailable = false) => {
   let disposed = false;
   return Object.freeze({
     backdrop,
     pictureVisibility,
+    previewAvailable,
     artSeed: null,
     dispose() {
       if (disposed) return;
@@ -114,7 +115,7 @@ export async function resolveDemoJourneyPicture({
     check(signal);
     claimCandidatePicture(asset, picture);
     claimed = true;
-    return result(picture, earned ? 'clear' : 'blurred');
+    return result(picture, earned ? 'clear' : 'blurred', true);
   } catch (error) {
     if (claimed) picture.release();
     else discardUnclaimedCandidatePicture(picture);

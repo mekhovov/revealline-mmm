@@ -105,6 +105,19 @@
 .demo-notes {
   background: #101a28;
 }
+.demo-picture-setting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  cursor: pointer;
+}
+.demo-picture-setting input {
+  flex-shrink: 0;
+}
 .demo-notes p {
   margin: 0 0 8px;
 }
