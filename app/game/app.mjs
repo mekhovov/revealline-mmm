@@ -2142,7 +2142,7 @@ try {
     },
   });
   const titleCharacter = mountTitleCharacter({
-    container: $('shell-home')?.querySelector('.home-content'),
+    container: null, // The dedicated landing uses its official rotating Coupa mark.
     getCharacter: () => ({
       body: painter.body,
       recipe: painter.recipe,

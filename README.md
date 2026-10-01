@@ -44,6 +44,8 @@ The **Verify pinned upstream extraction** workflow reproduces the committed app 
 
 Keep general gameplay fixes in the upstream game. Keep this repository's changes in its brand configuration, extraction policy, and tests, then regenerate `app/`. This limits divergence and lets the same process import later engine fixes. Do not routinely hand-edit generated engine files.
 
+The Coupa landing presentation lives in `branding/coupa-landing.css` and `branding/coupa-landing.html`. The projection applies these files, the official Coupa wallpaper, and the rotating flower without changing the campaign or its artwork pins. These inputs are hashed in the extraction lock and reapplied on upstream updates. Decorative motion follows the game's animation preference, reduced-motion settings, and menu visibility.
+
 Campaign, map, lesson, and asset identities are preserved. This preserves upstream's content and replay compatibility rules; it is not a promise that every historical replay works after a gameplay change. Coupa saves remain in the edition's namespace. Future brands need their own repository, selected edition, Pages path, isolation checks, and application/storage identity. Never combine their catalogs in a branded distribution.
 
 A new upstream UI or content format can require a deliberate projection update. Automated checks enforce the release boundary; human playtesting still covers gameplay feel, art, audio, and device behavior.

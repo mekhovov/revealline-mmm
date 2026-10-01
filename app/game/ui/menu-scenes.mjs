@@ -164,7 +164,7 @@ export function attachMenuScene({
       scene.dataset.loaded === 'true' &&
       scene.dataset.motion === 'on' &&
       scene.dataset.running === 'true';
-    if (running && !artworkMotion) {
+    if (false && running && !artworkMotion) {
       artworkMotion = createMotion({
         canvas,
         image: art,
@@ -176,7 +176,7 @@ export function attachMenuScene({
       });
     }
     artworkMotion?.setRunning(running);
-    if (running && !signalLoss) {
+    if (false && running && !signalLoss) {
       signalLoss = createSignalLoss({
         canvas: reception,
         drawSource(ctx, width, height) {
