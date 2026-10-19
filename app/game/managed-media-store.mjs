@@ -1,3 +1,9 @@
+import {
+  ONLINE_SOUNDTRACK_SOURCE_SETTINGS_KEY,
+  ONLINE_SOUNDTRACK_SOURCE_SETTINGS_FORMAT,
+  resolveOnlineSoundtrackSources,
+  validateOnlineSoundtrackSourceSettings,
+} from './online-soundtrack-sources.mjs';
 import { readOfficialOriginal, OFFICIAL_REFERENCE_MIME } from './official-downloads.mjs';
 import { boundedJSON, canonicalJSON, exactKeys, required } from './data-json.mjs';
 import {
@@ -253,7 +259,8 @@ export function createManagedMediaStore({
   const domainValid = (d) => required(domains.includes(d), 'Unknown managed media domain.');
   const metadataBytes = (state, except) =>
     domains.filter((d) => d !== except).reduce((n, d) => n + encoded(state[`${d}Row`]), 0) +
-    (except === 'audio' ? 0 : state.audioStyleBytes);
+    (except === 'audio' ? 0 : state.audioStyleBytes) +
+    state.audioSourceBytes;
   function validateStoryState(media, story) {
     if (!storyMedia) return;
     storyRecords.validateStoredStories(story, media);
@@ -433,7 +440,7 @@ export function createManagedMediaStore({
       tx.onabort = () => finish(failure || tx.error || new Error('Media transaction failed.'));
       signal?.addEventListener('abort', cancel, { once: true });
       const values = {};
-      let left = (storyMedia ? 10 : 9) + (soundtrackCatalogue ? 1 : 0);
+      let left = (storyMedia ? 10 : 9) + (soundtrackCatalogue ? 2 : 0);
       function read(key, request) {
         request.onsuccess = () => {
           values[key] = request.result;
@@ -454,6 +461,8 @@ export function createManagedMediaStore({
               externalRow = externalUsage(values.externalRow),
               audioStyleSelection = validateSoundtrackStyleSelection(values.audioStyleSelection),
               audioStyleBytes = audioStyleSelection ? encoded(audioStyleSelection) : 0,
+              audioSources = validateOnlineSoundtrackSourceSettings(values.audioSources),
+              audioSourceBytes = values.audioSources === undefined ? 0 : encoded(audioSources),
               blobs = new Map();
             let blobBytes = 0;
             for (const [kind, keys, files] of [
@@ -504,6 +513,7 @@ export function createManagedMediaStore({
               blobBytes +
               encoded(audioRow) +
               audioStyleBytes +
+              audioSourceBytes +
               encoded(mediaRow) +
               (storyMedia ? encoded(storyRow) : 0) +
               (values.externalRow === undefined ? 0 : externalStoredBytes(externalRow)) +
@@ -512,6 +522,8 @@ export function createManagedMediaStore({
               audioRow,
               audioStyleSelection,
               audioStyleBytes,
+              audioSources,
+              audioSourceBytes,
               mediaRow,
               ...(storyMedia ? { storyRow } : {}),
               blobs,
@@ -534,6 +546,8 @@ export function createManagedMediaStore({
         read('audioRow', stores.metadata.get('library'));
         if (soundtrackCatalogue)
           read('audioStyleSelection', stores.metadata.get(SOUNDTRACK_STYLE_SELECTION_KEY));
+        if (soundtrackCatalogue)
+          read('audioSources', stores.metadata.get(ONLINE_SOUNDTRACK_SOURCE_SETTINGS_KEY));
         read('mediaRow', stores.mediaRecords.get('library'));
         if (storyMedia) read('storyRow', stores.storyRecords.get('library'));
         read('audioKeys', stores.audio.getAllKeys());
@@ -1357,6 +1371,38 @@ export function createManagedMediaStore({
     abort(signal);
     return original;
   }
+  function readOnlineSoundtrackSources({ signal } = {}) {
+    required(soundtrackCatalogue, 'Soundtrack sources require DB5.');
+    return transact('readonly', (state) => state.audioSources, signal);
+  }
+  function commitOnlineSoundtrackSources(sources, { expectedGeneration, signal } = {}) {
+    required(soundtrackCatalogue, 'Soundtrack sources require DB5.');
+    const resolved = resolveOnlineSoundtrackSources(sources);
+    required(integer(expectedGeneration), 'Invalid soundtrack source settings generation.');
+    return transact(
+      'readwrite',
+      (state, stores) => {
+        required(
+          state.audioSources.generation === expectedGeneration,
+          'Soundtrack sources changed in another tab; reload before saving.',
+        );
+        const next = validateOnlineSoundtrackSourceSettings({
+          format: ONLINE_SOUNDTRACK_SOURCE_SETTINGS_FORMAT,
+          generation: expectedGeneration + 1,
+          sources: resolved,
+        });
+        const usedBytes = state.usedBytes - state.audioSourceBytes + encoded(next);
+        required(
+          usedBytes + reservationBytes(active(state, clock())) <= MANAGED_MEDIA_LIMITS.bytes,
+          'Soundtrack sources exceed the shared media storage budget.',
+        );
+        stores.metadata.put(next, ONLINE_SOUNDTRACK_SOURCE_SETTINGS_KEY);
+        ledger(state, stores, usedBytes);
+        return next;
+      },
+      signal,
+    );
+  }
   function close() {
     closed = true;
     opening?.cancel?.();
@@ -1369,6 +1415,8 @@ export function createManagedMediaStore({
     richStillMedia,
     storyMedia,
     soundtrackCatalogue,
+    readOnlineSoundtrackSources,
+    commitOnlineSoundtrackSources,
     readDomain,
     readDomainMetadata,
     readPresentationMetadata,

@@ -10,7 +10,8 @@ export function attachTouchSteering({
   window: win = globalThis.window,
   getSettings,
   active,
-  onDirection,
+  onDirection = () => {},
+  onVector = () => {},
   onRelease = () => {},
   onCancel = () => {},
 }) {
@@ -37,6 +38,7 @@ export function attachTouchSteering({
     gesture = null;
     paint();
     if (!old) return;
+    onVector({ x: 0, y: 0 }, old.id);
     onRelease(old.id);
     try {
       if (old.element.hasPointerCapture(old.id)) old.element.releasePointerCapture(old.id);
@@ -66,6 +68,23 @@ export function attachTouchSteering({
       if (gesture !== current) return;
       gesture.direction = direction;
     }
+    const current = gesture;
+    if (gesture.mode === 'stick') {
+      // Match the floating anchor's full travel. Cardinal hosts retain their
+      // existing turn callbacks; continuous flight can keep diagonal intent.
+      const scale = 1 / Math.max(56, Math.hypot(x, y));
+      onVector(direction ? { x: x * scale, y: y * scale } : { x: 0, y: 0 }, gesture.id);
+    } else {
+      const heading = gesture.mode === 'swipe' ? gesture.direction : direction;
+      onVector(
+        {
+          x: heading === 'left' ? -1 : heading === 'right' ? 1 : 0,
+          y: heading === 'up' ? -1 : heading === 'down' ? 1 : 0,
+        },
+        gesture.id,
+      );
+    }
+    if (gesture !== current) return;
     paint(x, y);
     if (gesture.mode === 'swipe' && direction) {
       gesture.x = event.clientX;
@@ -96,7 +115,9 @@ export function attachTouchSteering({
         return;
       if (element === pad && mode !== 'dpad') return;
       event.preventDefault();
-      const rect = element.getBoundingClientRect();
+      // Floating gestures use the contact point, so only the fixed D-pad
+      // needs layout geometry. Avoid a forced layout before stick/swipe input.
+      const rect = mode === 'dpad' ? element.getBoundingClientRect() : null;
       gesture = {
         id: event.pointerId,
         element,
@@ -110,6 +131,7 @@ export function attachTouchSteering({
       } catch {}
       paint();
       if (mode === 'dpad') move(event);
+      else onVector({ x: 0, y: 0 }, gesture.id);
     });
     listen(element, 'pointermove', move);
     for (const type of ['pointerup', 'pointercancel', 'lostpointercapture'])

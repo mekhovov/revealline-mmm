@@ -84,8 +84,13 @@ export async function verifyLearningEvidence({
   attempt: input,
   replay: sourceReplay,
   signal,
+  scheduleChunk,
 }) {
   checkAbort(signal);
+  required(
+    scheduleChunk === undefined || typeof scheduleChunk === 'function',
+    'Learning chunk admission must be a function.',
+  );
   const lesson = validateCompanyLesson(source);
   const checked = verifyLearningAttempt(lesson, input);
   required(checked.valid, checked.reason ?? 'Invalid learning transcript.');
@@ -129,36 +134,88 @@ export async function verifyLearningEvidence({
   // Snapshot caller-owned data before yielding; never accept later mutations.
   await yieldToHost();
   checkAbort(signal);
-  checkActions();
-  let chunkTicks = 0,
-    started = performance.now();
-  for (const segment of replay.segments) {
-    if (segment.releaseBefore) releaseInputs(state);
-    for (let tick = 0; tick < segment.ticks; tick++) {
-      required(
-        state.status !== 'won' && state.status !== 'lost',
-        'Replay contains input after its terminal result.',
-      );
-      stepRun(state, segment.input, FIXED_DT);
-      observer.observe(state);
-      checkActions();
-      chunkTicks++;
-      if (chunkTicks >= 600 || (chunkTicks % 8 === 0 && performance.now() - started >= 8)) {
-        await yieldToHost();
-        checkAbort(signal);
-        chunkTicks = 0;
-        started = performance.now();
+  function* steps() {
+    checkActions();
+    for (const segment of replay.segments) {
+      if (segment.releaseBefore) releaseInputs(state);
+      for (let tick = 0; tick < segment.ticks; tick++) {
+        required(
+          state.status !== 'won' && state.status !== 'lost',
+          'Replay contains input after its terminal result.',
+        );
+        stepRun(state, segment.input, FIXED_DT);
+        observer.observe(state);
+        checkActions();
+        yield;
       }
     }
   }
-  if (replay.releaseAfter) releaseInputs(state);
-  checkAbort(signal);
-  required(actionIndex === attempt.actions.length, 'Learning actions extend beyond the replay.');
-  required(
-    state.tick === replay.ticks &&
-      canonicalJSON(authoritativeCheckpoint(state)) === canonicalJSON(replay.checkpoint) &&
-      canonicalJSON(getSummary(state)) === canonicalJSON(replay.summary),
-    'The learning evidence replay could not be verified.',
-  );
-  return { attempt, replay, state, evidence: observer.snapshot(), observer };
+  async function admittedChunk(work) {
+    let called = false,
+      retired = false,
+      failure;
+    try {
+      await scheduleChunk(
+        () => {
+          try {
+            required(
+              !retired && !called,
+              'Learning chunk admission must invoke work exactly once.',
+            );
+            called = true;
+            checkAbort(signal);
+            work();
+          } catch (error) {
+            failure = error;
+            throw error;
+          }
+        },
+        { signal },
+      );
+      if (failure) throw failure;
+      required(called, 'Learning chunk admission did not run work.');
+      checkAbort(signal);
+    } finally {
+      retired = true;
+    }
+  }
+  const iterator = steps();
+  let done = false;
+  while (!done) {
+    const work = () => {
+      checkAbort(signal);
+      const started = performance.now();
+      for (let ticks = 0; ticks < 600; ticks++) {
+        if (iterator.next().done) {
+          done = true;
+          break;
+        }
+        if (ticks % 8 === 7 && performance.now() - started >= 8) break;
+      }
+    };
+    if (scheduleChunk) await admittedChunk(work);
+    else work();
+    if (!done) {
+      await yieldToHost();
+      checkAbort(signal);
+    }
+  }
+  const finish = () => {
+    if (replay.releaseAfter) releaseInputs(state);
+    checkAbort(signal);
+    required(actionIndex === attempt.actions.length, 'Learning actions extend beyond the replay.');
+    required(
+      state.tick === replay.ticks &&
+        canonicalJSON(authoritativeCheckpoint(state)) === canonicalJSON(replay.checkpoint) &&
+        canonicalJSON(getSummary(state)) === canonicalJSON(replay.summary),
+      'The learning evidence replay could not be verified.',
+    );
+    return { attempt, replay, state, evidence: observer.snapshot(), observer };
+  };
+  if (!scheduleChunk) return finish();
+  let result;
+  await admittedChunk(() => {
+    result = finish();
+  });
+  return result;
 }

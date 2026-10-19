@@ -206,7 +206,7 @@ export function preparePackCatalog(candidate) {
   exactKeys(catalog, ['format', 'packs'], t('errors:contentLaunch.labels.catalog'));
   if (catalog.format !== PACK_CATALOG_VERSION || !Array.isArray(catalog.packs))
     throw new TypeError(t('errors:contentLaunch.unsupportedCatalog'));
-  if (catalog.packs.length < 1 || catalog.packs.length > 12)
+  if (catalog.packs.length < 1 || catalog.packs.length > 16)
     throw new TypeError(t('errors:contentLaunch.invalidCatalogSize'));
   const packIds = new Set();
   for (const pack of catalog.packs) {

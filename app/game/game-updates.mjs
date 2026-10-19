@@ -94,8 +94,9 @@ export function restoredGameplaySelection(catalogue, { saved, active, edition, u
       ? true
       : typeof saved?.allGameplay === 'boolean'
         ? saved.allGameplay
-        : installed?.allGameplay === true ||
-          (selected.length > 0 &&
+        : typeof installed?.allGameplay === 'boolean'
+          ? installed.allGameplay
+          : selected.length > 0 &&
             catalogue.groups
               .filter(
                 (g) =>
@@ -103,6 +104,6 @@ export function restoredGameplaySelection(catalogue, { saved, active, edition, u
                   g.current !== false &&
                   !['archive', 'tooling'].includes(g.category),
               )
-              .every((g) => selected.includes(g.id)));
+              .every((g) => selected.includes(g.id));
   return { selected, all };
 }

@@ -3,7 +3,7 @@
   const host = globalThis,
     doc = host.document,
     script = doc.currentScript;
-  if (host.RevealLineToolLaunch || !script) return;
+  if (host.RevealLineToolLaunch || host.RevealLineSnakeRedirect || !script) return;
   const moduleURL = new URL(script.dataset.module, doc.baseURI).href;
   const statusId = script.dataset.status;
   const i18n = host.RevealLineI18n;

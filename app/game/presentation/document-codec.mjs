@@ -47,7 +47,7 @@ const envelopeOptions = {
 function documentAssets(document) {
   required(plainObject(document) && Array.isArray(document.assets), 'Invalid metadata document.');
   required(
-    document.format === 'revealline-theme-bundle.v1',
+    ['revealline-theme-bundle.v1', 'revealline-theme-bundle.v2'].includes(document.format),
     'Unsupported metadata document format.',
   );
   required(

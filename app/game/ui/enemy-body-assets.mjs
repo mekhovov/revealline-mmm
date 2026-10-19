@@ -50,9 +50,18 @@ async function readBounded(response, maxBytes, signal) {
 let catalogPromise = null;
 export async function loadEnemyPresentationCatalog() {
   catalogPromise ??= (async () => {
-    const response = await fetch(new URL('../content/enemy-presentations.json', import.meta.url));
-    const bytes = await readBounded(response, ENEMY_PRESENTATION_LIMITS.bytes);
-    return createEnemyPresentations(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 15000);
+    try {
+      const response = await fetch(
+        new URL('../content/enemy-presentations.json', import.meta.url),
+        { signal: controller.signal },
+      );
+      const bytes = await readBounded(response, ENEMY_PRESENTATION_LIMITS.bytes, controller.signal);
+      return createEnemyPresentations(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+    } finally {
+      clearTimeout(timer);
+    }
   })();
   try {
     return await catalogPromise;
@@ -101,7 +110,8 @@ async function imageFallback(blob, record, signal) {
   require(typeof Image === 'function', t('interface:enemyImageDecoderIsUnavailable'));
   const image = new Image();
   const url = URL.createObjectURL(blob);
-  let released = false;
+  let released = false,
+    decoding = null;
   const release = () => {
     if (released) return;
     released = true;
@@ -126,7 +136,10 @@ async function imageFallback(blob, record, signal) {
         15000,
       );
       signal.addEventListener('abort', abort, { once: true });
-      image.onload = () => finish();
+      image.onload = () => {
+        decoding = Promise.resolve().then(() => image.decode?.());
+        decoding.then(() => finish(), finish);
+      };
       image.onerror = () => finish(new Error(t('interface:enemyImageCouldNotDecode')));
       if (signal.aborted) return abort();
       image.src = url;
@@ -138,6 +151,8 @@ async function imageFallback(blob, record, signal) {
     return { image, release, kind: 'image', rgbaBytes: record.width * record.height * 4 };
   } catch (error) {
     release();
+    // Keep the pool reservation until a browser decoder actually settles.
+    await decoding?.catch(() => {});
     throw error;
   }
 }
@@ -186,7 +201,30 @@ export async function loadEnemyDrawable(record, { signal }) {
 
 export function createEnemyImagePool({ load = loadEnemyDrawable } = {}) {
   const entries = new Map();
-  let queue = Promise.resolve();
+  const queue = [];
+  let active = false,
+    reservedBytes = 0;
+  const pump = () => {
+    if (active || !queue.length) return;
+    active = true;
+    const work = queue.shift();
+    reservedBytes = work.reservedBytes ?? 0;
+    Promise.resolve()
+      .then(work)
+      .catch(() => {})
+      .finally(() => {
+        active = false;
+        reservedBytes = 0;
+        pump();
+      });
+  };
+  const notify = (entry) => {
+    for (const callback of entry.refs) {
+      try {
+        callback();
+      } catch {}
+    }
+  };
   return Object.freeze({
     acquire(record, changed = () => {}) {
       const key = `${record.presentationId}:${record.sha256}`;
@@ -202,27 +240,51 @@ export function createEnemyImagePool({ load = loadEnemyDrawable } = {}) {
         };
         entries.set(key, entry);
         const own = entry;
-        queue = queue
-          .catch(() => {})
-          .then(async () => {
-            if (own.controller.signal.aborted) return;
-            try {
-              const value = await abortable(
-                () => load(record, { signal: own.controller.signal }),
-                own.controller.signal,
-              );
-              if (entries.get(key) !== own || own.controller.signal.aborted) return dispose(value);
-              own.drawable = value;
-            } catch (error) {
-              own.error = error;
-            }
-            if (entries.get(key) === own) for (const callback of own.refs) callback();
-          });
+        let finishReady;
+        own.ready = new Promise((resolve) => {
+          finishReady = resolve;
+        });
+        const timer = setTimeout(() => {
+          own.error = new Error(t('interface:enemyImageDecodeTimedOut'));
+          own.controller.abort();
+          own.finishReady();
+          notify(own);
+        }, 15000);
+        own.finishReady = () => {
+          clearTimeout(timer);
+          if (own.controller.signal.aborted) {
+            const index = queue.indexOf(own.work);
+            if (index !== -1) queue.splice(index, 1);
+          }
+          finishReady();
+        };
+        own.work = async () => {
+          if (own.controller.signal.aborted) {
+            own.finishReady();
+            return;
+          }
+          try {
+            // Keep a non-cancelable decoder's reservation until it settles.
+            const value = await load(record, { signal: own.controller.signal });
+            if (entries.get(key) !== own || own.controller.signal.aborted) return dispose(value);
+            own.drawable = value;
+          } catch (error) {
+            own.error = error;
+          } finally {
+            own.finishReady();
+          }
+          if (entries.get(key) === own) notify(own);
+        };
+        // Reserve the original-size fallback, even when bitmap resizing is available.
+        own.work.reservedBytes = record.width * record.height * 4;
+        queue.push(own.work);
+        pump();
       }
       const token = () => changed();
       entry.refs.add(token);
       let released = false;
       return Object.freeze({
+        ready: ({ signal } = {}) => (signal ? abortable(() => entry.ready, signal) : entry.ready),
         current: () => (released ? null : entry.drawable),
         error: () => (released ? null : entry.error),
         release() {
@@ -232,12 +294,23 @@ export function createEnemyImagePool({ load = loadEnemyDrawable } = {}) {
           if (entry.refs.size) return;
           if (entries.get(key) === entry) entries.delete(key);
           entry.controller.abort();
+          entry.finishReady();
           dispose(entry.drawable);
           entry.drawable = null;
         },
       });
     },
     size: () => entries.size,
+    snapshot: () => ({
+      entries: entries.size,
+      active: Number(active),
+      queued: queue.length,
+      reservedBytes,
+      decodedBytes: [...entries.values()].reduce(
+        (total, entry) => total + (entry.drawable?.rgbaBytes ?? 0),
+        0,
+      ),
+    }),
   });
 }
 
@@ -252,7 +325,8 @@ export function createEnemyBodyAssets({
     failed = false,
     generation = 0,
     desired = [],
-    overrides = {};
+    overrides = {},
+    pendingCatalog = Promise.resolve();
   const leases = new Map();
   function reconcile() {
     if (!model) return;
@@ -278,7 +352,7 @@ export function createEnemyBodyAssets({
       if (loading || failed || !all.some((frame) => frame.themeId === 'fpv')) return;
       loading = true;
       const ticket = generation;
-      Promise.resolve()
+      pendingCatalog = Promise.resolve()
         .then(catalog)
         .then(
           (value) => {
@@ -297,6 +371,16 @@ export function createEnemyBodyAssets({
           },
         );
     },
+    async ready({ signal } = {}) {
+      const ticket = generation;
+      const wait = async () => {
+        await pendingCatalog;
+        if (ticket !== generation) throw cancelled();
+        await Promise.all([...leases.values()].map((lease) => lease.ready()));
+        if (ticket !== generation) throw cancelled();
+      };
+      return signal ? abortable(wait, signal) : wait();
+    },
     current(frame) {
       const record = model?.forFrame(frame, overrides);
       const drawable = record ? leases.get(record.type)?.current() : null;
@@ -307,6 +391,7 @@ export function createEnemyBodyAssets({
     record(frame) {
       return model?.forFrame(frame, overrides) ?? null;
     },
+    resourceSnapshot: () => ({ scope: 'page', ...pool.snapshot?.(), ownedLeases: leases.size }),
     status() {
       return failed || [...leases.values()].some((lease) => lease.error())
         ? 'Some enemy artwork is unavailable; its existing vector body is shown.'
@@ -316,6 +401,7 @@ export function createEnemyBodyAssets({
       ++generation;
       loading = false;
       failed = false;
+      pendingCatalog = Promise.resolve();
       desired = [];
       overrides = {};
       for (const lease of leases.values()) lease.release();

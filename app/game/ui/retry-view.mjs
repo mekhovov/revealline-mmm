@@ -1,4 +1,5 @@
-import { t } from '../i18n/index.mjs';
+import { t, getLocale } from '../i18n/index.mjs';
+import { specialistFailureCopy } from '../hunt/actor-catalog.mjs';
 const explanations = () => ({
   'self-contact': [
     t('interface:yourUnfinishedLineCrossedItself'),
@@ -11,6 +12,10 @@ const explanations = () => ({
   'enemy-player': [
     t('interface:anEnemyReachedYourCharacter'),
     t('interface:keepAGapFromEnemiesIncludingPatrolsOnSafeGround'),
+  ],
+  'combat-specialist': [
+    specialistFailureCopy(null, getLocale()).reason,
+    specialistFailureCopy(null, getLocale()).tip,
   ],
   'combat-projectile': [
     t('interface:failure.combatProjectile'),

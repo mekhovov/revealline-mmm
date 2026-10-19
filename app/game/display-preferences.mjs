@@ -66,6 +66,7 @@ export function createDisplayPreferences({
     explicit = false,
     stored = false,
     unsaved = false,
+    writing = false,
     warning = '',
     warningKey = '',
     systemReduced = false;
@@ -128,8 +129,21 @@ export function createDisplayPreferences({
     }
   };
   const persist = () => {
+    if (writing) return;
+    writing = true;
+    const revision = state.revision,
+      current = () => !disposed && state.revision === revision;
+    const failed = () => {
+      unsaved = true;
+      notice(
+        'Display changed for this session, but could not be saved for another page.',
+        'common:preferences.displaySaveFailed',
+      );
+    };
     try {
-      if (!writable()) {
+      const allowed = writable();
+      if (!current()) return;
+      if (!allowed) {
         unsaved = true;
         notice(
           'Display changes apply only to this session; saving is disabled here.',
@@ -138,17 +152,24 @@ export function createDisplayPreferences({
         return;
       }
       const storage = getStorage();
+      if (!current()) return;
       if (!storage) throw new Error('Storage unavailable.');
-      storage.setItem(DISPLAY_PREFERENCES_KEY, JSON.stringify(raw()));
+      const encoded = JSON.stringify(raw());
+      storage.setItem(DISPLAY_PREFERENCES_KEY, encoded);
+      if (!current()) return;
+      const confirmed = storage.getItem(DISPLAY_PREFERENCES_KEY);
+      if (!current()) return;
+      if (confirmed !== encoded) throw new Error('The display save could not be confirmed.');
       stored = true;
       unsaved = false;
       notice('');
     } catch {
-      unsaved = true;
-      notice(
-        'Display changed for this session, but could not be saved for another page.',
-        'common:preferences.displaySaveFailed',
-      );
+      if (current()) failed();
+    } finally {
+      writing = false;
+      // A nested explicit action is already visible but did not join this write.
+      // Never let an older save acknowledge or replace that newer session intent.
+      if (!disposed && state.revision !== revision) failed();
     }
   };
   const receive = (event) => {
@@ -218,6 +239,7 @@ export function createDisplayPreferences({
       if (disposed) throw new Error('Display preferences are disposed.');
       const next = { ...raw(), ...patch(value) };
       explicit = true;
+      unsaved = true;
       try {
         apply(next);
       } finally {

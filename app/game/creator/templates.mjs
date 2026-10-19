@@ -418,6 +418,18 @@ export function selectCreatorTemplate(seed) {
   });
 }
 
+/** The batch seed already includes item position and regeneration count. */
+export function selectCreatorBatchTemplate({ seed, index, total, pacing }) {
+  required(uint32(seed), 'Generation seed must be an unsigned 32-bit integer.');
+  required(
+    Number.isInteger(total) && total > 0 && Number.isInteger(index) && index >= 0 && index < total,
+    'Choose an item within the current batch.',
+  );
+  if (pacing === 'gentle-first' && index < Math.ceil(total / 3)) return CREATOR_TEMPLATES[0].id;
+  if (pacing === 'steady') return CREATOR_TEMPLATES[2].id;
+  return pacing === 'balanced' ? selectCreatorTemplate(seed).templateId : undefined;
+}
+
 function buildCreatorProject(value, selection) {
   const { template, variant, version } = selection;
   const source = createStarterProject(value.id);

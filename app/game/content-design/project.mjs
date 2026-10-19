@@ -1,3 +1,8 @@
+import { validatePursuitPopulation } from '../hunt/pursuit-goals.mjs';
+import { prepareRunningEnemyLevel } from '../hunt/running-enemies.mjs';
+import { validateSnakeDefinition } from '../snake/rules.mjs';
+import { prepareHuntLevel } from '../hunt/level.mjs';
+import { huntTargetKind, HUNT_RUNNER_TURN_TICKS } from '../hunt/rules.mjs';
 import { boundedJSON, exactKeys, required, stableId, dataIdentity } from '../data-json.mjs';
 import { normalizedLevel } from '../core/level.mjs';
 import { CLASSES, rosterHash } from '../core/registry.mjs';
@@ -187,18 +192,29 @@ export function compileContentProject(source) {
   const assets = (project.assets ?? []).map(compileAssetRevision);
   const maps = project.maps.map(compileMapDesign);
   for (const mission of project.missions) {
-    const sentinel = mission.format === 'MissionDesignV4';
-    const directional = mission.format === 'MissionDesignV3' || sentinel;
-    const relays = mission.format === 'MissionDesignV2' || directional;
+    const pursuit = ['MissionDesignV5', 'MissionDesignV6'].includes(mission.format);
+    const authoredMap = maps.find((entry) => entry.source.id === mission.map?.id)?.source.format;
+    const sentinel =
+      mission.format === 'MissionDesignV4' || (pursuit && Object.hasOwn(mission, 'encounter'));
+    const directional =
+      mission.format === 'MissionDesignV3' ||
+      sentinel ||
+      (pursuit && authoredMap === 'MapDesignV3');
+    const relays =
+      mission.format === 'MissionDesignV2' ||
+      directional ||
+      (pursuit && authoredMap === 'MapDesignV2');
     identity(
       mission,
-      sentinel
-        ? 'MissionDesignV4'
-        : directional
-          ? 'MissionDesignV3'
-          : relays
-            ? 'MissionDesignV2'
-            : 'MissionDesignV1',
+      pursuit
+        ? mission.format
+        : sentinel
+          ? 'MissionDesignV4'
+          : directional
+            ? 'MissionDesignV3'
+            : relays
+              ? 'MissionDesignV2'
+              : 'MissionDesignV1',
       [
         'map',
         'spawnId',
@@ -208,6 +224,9 @@ export function compileContentProject(source) {
         'bonuses',
         'timedBonuses',
         'combat',
+        'hunt',
+        'snake',
+        ...(pursuit ? ['pursuit'] : []),
         'coverage',
         'timeLimitSeconds',
         'design',
@@ -219,6 +238,15 @@ export function compileContentProject(source) {
       ],
     );
     archiveFlag(mission);
+    if (pursuit) {
+      exactKeys(mission.pursuit, ['version', 'actors'], 'Mission pursuit');
+      required(
+        mission.pursuit.version ===
+          (mission.format === 'MissionDesignV6' ? 'mission-pursuit.v2' : 'mission-pursuit.v1'),
+        'Pursuit missions require a versioned finite population.',
+      );
+      validatePursuitPopulation(mission.pursuit.actors);
+    }
     if (sentinel)
       required(
         Object.hasOwn(mission, 'encounter'),
@@ -263,14 +291,27 @@ export function compileContentProject(source) {
         'Mission combat requires a registered optional-combat actor catalogue.',
       );
       required(
-        !mission.modes.includes('team'),
-        'Optional combat is not qualified for Team, even when disabled.',
+        !mission.modes.includes('team') ||
+          ['TeamMissionV7', 'TeamMissionV8'].includes(mission.team?.format),
+        'Optional combat requires the explicitly qualified Team hunt edition.',
       );
     }
     required(
       !combatActors.length || Object.hasOwn(mission, 'combat'),
       'Optional actors require an explicit mission combat setting.',
     );
+    if (Object.hasOwn(mission, 'hunt'))
+      required(
+        mission.combat?.enabled === true,
+        'Hunting requires an explicit enabled combat population.',
+      );
+    if (Object.hasOwn(mission, 'snake')) {
+      validateSnakeDefinition(mission.snake, mission.hunt);
+      required(
+        !mission.modes.includes('team') || mission.team?.format === 'TeamMissionV8',
+        'Snake missions require the explicitly qualified Team Snake edition.',
+      );
+    }
     unique(mission.objectives, 'objectives', 40);
     unique(mission.bonuses, 'bonuses', 64);
     if (relays) {
@@ -386,10 +427,18 @@ export function resolveMission(project, id, { mode = 'solo', difficulty = 'stand
   const pressureActors = mission.actors
     .filter((actor) => project.actors.roles[actor.role]?.pressureRecipe)
     .sort((a, b) => (a.id < b.id ? -1 : 1));
-  const sentinel = mission.format === 'MissionDesignV4';
-  const directional = mission.format === 'MissionDesignV3' || sentinel;
-  const relays = mission.format === 'MissionDesignV2' || directional;
-  const level = normalizedLevel({
+  const pursuit = ['MissionDesignV5', 'MissionDesignV6'].includes(mission.format);
+  const sentinel =
+    mission.format === 'MissionDesignV4' || (pursuit && Object.hasOwn(mission, 'encounter'));
+  const directional =
+    mission.format === 'MissionDesignV3' ||
+    sentinel ||
+    (pursuit && map.source.format === 'MapDesignV3');
+  const relays =
+    mission.format === 'MissionDesignV2' ||
+    directional ||
+    (pursuit && map.source.format === 'MapDesignV2');
+  let level = normalizedLevel({
     version: sentinel
       ? 'xonix-level.v8'
       : directional
@@ -454,9 +503,24 @@ export function resolveMission(project, id, { mode = 'solo', difficulty = 'stand
             combatPatrols: {
               version: 'combat-patrols.v1',
               enabled: mission.combat.enabled,
-              actors: combatActors.map((actor) =>
-                compileActor(actor, difficulty, project.actors.id, project.difficulty.id),
-              ),
+              actors: combatActors.map((actor) => {
+                const compiled = compileActor(
+                  actor,
+                  difficulty,
+                  project.actors.id,
+                  project.difficulty.id,
+                );
+                return huntTargetKind(mission.hunt, actor.id) === 'runner'
+                  ? {
+                      ...compiled,
+                      turnTicks: HUNT_RUNNER_TURN_TICKS,
+                      speed:
+                        policy.rules.moveSpeed *
+                        Math.min(...CLASSES.map((recipe) => recipe.moveSpeedMultiplier ?? 1)) *
+                        0.7,
+                    }
+                  : compiled;
+              }),
             },
           }
         : {}),
@@ -484,6 +548,26 @@ export function resolveMission(project, id, { mode = 'solo', difficulty = 'stand
       timeLimitSeconds: preset.failingDeadline ? mission.timeLimitSeconds : 0,
     },
   });
+  if (mission.hunt)
+    level = prepareHuntLevel(level, {
+      id: mission.id,
+      revision: mission.revision,
+      actors: level.classic.combatPatrols.actors,
+      hunt: mission.hunt,
+    });
+  if (mission.snake)
+    level = normalizedLevel({
+      ...level,
+      version: 'xonix-level.v11',
+      snake: structuredClone(mission.snake),
+    });
+  if (mission.pursuit)
+    level = prepareRunningEnemyLevel(level, {
+      style: 'varied',
+      population: mission.pursuit.actors,
+      generation:
+        mission.pursuit.version === 'mission-pursuit.v2' ? 'pursuit-goals.v2' : 'pursuit-goals.v1',
+    });
   const { name: _name, id: _id, revision: _revision, ...simulation } = level;
   const topology = inspectMissionTopology(level, map.geometry);
   const simulationIdentity = dataIdentity({
@@ -522,7 +606,7 @@ export function resolveMission(project, id, { mode = 'solo', difficulty = 'stand
               severity: 'warning',
               code: 'candidate-combat-not-presentation-qualified',
               message:
-                'Optional encounters can be tested in Solo practice. Production presentation, player preferences and human qualification are pending.',
+                'Optional encounters can be tested in Solo practice. Human play qualification is required before publishing a candidate.',
             },
           ]
         : []),

@@ -27,6 +27,7 @@ const absentStoreNotice = t('interface:savedPictureChoicesAreUnavailableInThisBr
  * The established manager may initialize/upgrade its schema, as other readers do;
  * this consumer never prepares or commits media, assignments, history or progress.
  * Existing authored backdrops are borrowed from the chapter owner, never released here.
+ * A registered authored source without a borrowed backdrop is decoded and owned here.
  */
 export function createCouchStaticPictures({
   entries,
@@ -99,6 +100,11 @@ export function createCouchStaticPictures({
       identity,
       background: row.authoredBackground ? Object.freeze({ ...row.authoredBackground }) : null,
       backdrop: row.backdrop ?? null,
+      authoredSource:
+        row.pictureEntry.levelVisuals?.find((visual) => visual.levelId === level.id)
+          ?.visualOverrides?.background ??
+        row.pictureEntry.visualOverrides?.background ??
+        null,
     };
   }
   function operation(signal, onStatus, work) {
@@ -244,15 +250,20 @@ export function createCouchStaticPictures({
           .join(' ');
       state.original = null;
       if (state.background) {
-        required(state.backdrop?.image, t('interface:theSelectedAuthoredOriginalIsUnavailable'));
+        state.ownedAuthored = !state.backdrop?.image;
+        required(
+          !state.ownedAuthored || same(state.background, state.authoredSource),
+          t('interface:theSelectedAuthoredOriginalIsUnavailable'),
+        );
         const header = inspectImageDataUrl(state.background.dataUrl);
         required(header.valid, t('interface:theSelectedAuthoredPictureDescriptorIsInvalid'));
-        const image = state.backdrop.image,
+        const image = state.backdrop?.image,
           fit = state.background.fit ?? 'cover';
         required(
-          (image.naturalWidth ?? image.width) === header.width &&
-            (image.naturalHeight ?? image.height) === header.height &&
-            (state.backdrop.fit ?? 'cover') === fit,
+          state.ownedAuthored ||
+            ((image.naturalWidth ?? image.width) === header.width &&
+              (image.naturalHeight ?? image.height) === header.height &&
+              (state.backdrop.fit ?? 'cover') === fit),
           t('interface:theBorrowedAuthoredPictureDiffersFromItsOriginalDimensionsOr'),
         );
         const binary = atob(state.background.dataUrl.split(',')[1]);
@@ -281,7 +292,9 @@ export function createCouchStaticPictures({
     const latest = contextFor(state.row, state.themeId, state.raceId);
     required(same(latest.request, state.request), t('interface:theSelectedCouchOwnerChanged'));
     required(
-      same(latest.background, state.background) && latest.backdrop === state.backdrop,
+      same(latest.background, state.background) &&
+        latest.backdrop === state.backdrop &&
+        (!state.ownedAuthored || same(latest.authoredSource, state.background)),
       t('interface:theSelectedAuthoredPictureChangedChooseSetupAgain'),
     );
     if (state.kind !== 'still')
@@ -311,6 +324,30 @@ export function createCouchStaticPictures({
       URLImpl,
     });
   }
+  async function acquireAuthored(state, signal, report) {
+    report('decoding', t('interface:openingOneOriginalForBothBoards'));
+    let image = null;
+    const release = () => {
+      const owned = image;
+      image = null;
+      releaseImage(owned);
+    };
+    try {
+      image = await decode(state.background.dataUrl, signal);
+      check(signal);
+      required(
+        image.naturalWidth === state.original.width &&
+          image.naturalHeight === state.original.height &&
+          image.width === state.original.width &&
+          image.height === state.original.height,
+        t('interface:theDecodedReleasePictureDimensionsDiffer'),
+      );
+      return { image, fit: state.original.fit, sampling: 'nearest', release };
+    } catch (error) {
+      release();
+      throw error;
+    }
+  }
   async function select(
     row,
     { themeId = row.defaultThemeId, raceId, signal, onStatus } = {},
@@ -338,6 +375,7 @@ export function createCouchStaticPictures({
             { signal: s, ImageClass, URLImpl },
           );
         } else if (state.kind === 'release') candidate = await acquireRelease(state, s, report);
+        else if (state.ownedAuthored) candidate = await acquireAuthored(state, s, report);
         else candidate = { ...(state.backdrop ?? {}), release() {} };
         current();
         await verifyMedia(state, s);

@@ -105,6 +105,7 @@ export function attachMissionLibraryGoal({
   }
   refresh();
   return {
+    element: root,
     refresh,
     dispose() {
       if (disposed) return;

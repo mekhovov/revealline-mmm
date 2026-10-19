@@ -1,0 +1,747 @@
+[
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-spend-in-motion",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-spend-in-motion-01-discovery",
+    "locales": {
+      "en": {
+        "teaser": "Discover what makes this village more than a collection of buildings.",
+        "title": "A connection needs a purpose"
+      },
+      "uk": {
+        "teaser": "Дізнайтеся, що перетворює окремі будівлі на спільне містечко.",
+        "title": "Кожен зв’язок має мету"
+      }
+    },
+    "payloads": [
+      {
+        "asset": {
+          "assetId": "coupa-spend-city-v2",
+          "sha256": "fb468b9b308377d0e83517c64c34c6df4492d7909add3f3e700e03cfaf039d18"
+        },
+        "id": "coupa-spend-in-motion-01-image",
+        "locales": {
+          "en": {
+            "alt": "An illustrated blue city with ribbon bridges, collaboration halls and sunlit gardens.",
+            "title": "A connection needs a purpose"
+          },
+          "uk": {
+            "alt": "Ілюстроване синє місто зі стрічковими мостами, залами для співпраці та сонячними садами.",
+            "title": "Кожен зв’язок має мету"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "id": "coupa-spend-in-motion-01-knowledge",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "Coupa’s public culture connects success with customers, partners and employees. The village is our fictional picture of that shared effort.",
+              "Look at the bridge you revealed: name the two places it connects, then imagine what each needs from the other. A useful connection carries a clear purpose."
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              }
+            ],
+            "title": "A connection needs a purpose"
+          },
+          "uk": {
+            "paragraphs": [
+              "У публічному описі культури Coupa успіх пов’язаний із клієнтами, партнерами та працівниками. Це вигадане містечко зображує їхню спільну роботу.",
+              "Погляньте на відкритий міст: назвіть два місця, які він з’єднує, та уявіть, що їм потрібно одне від одного. Корисний зв’язок має зрозумілу мету."
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              }
+            ],
+            "title": "Кожен зв’язок має мету"
+          }
+        },
+        "type": "knowledge"
+      }
+    ],
+    "requirements": {
+      "learning": [],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "704a92f5c095e9e0" },
+            { "difficulty": "standard", "gameplayId": "81306666440370cc" },
+            { "difficulty": "expert", "gameplayId": "f2c1329764e91fc1" }
+          ],
+          "missionId": "coupa-spend-in-motion-01"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-spend-in-motion-01", "kind": "mission" }
+  },
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-spend-in-motion",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-spend-in-motion-02-discovery",
+    "locales": {
+      "en": {
+        "teaser": "Open a supplier-square picture and discover why shared references matter.",
+        "title": "Two sides of the same order"
+      },
+      "uk": {
+        "teaser": "Відкрийте площу постачальників і дізнайтеся, навіщо потрібні спільні номери документів.",
+        "title": "Дві сторони одного замовлення"
+      }
+    },
+    "payloads": [
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-02-reveal-v1",
+          "sha256": "0d539a4f1fc673b5c28622eb29aab7c124f29dc947646829cd00e839f246bd81"
+        },
+        "id": "coupa-spend-in-motion-02-image",
+        "locales": {
+          "en": {
+            "alt": "Blue supplier arcades around two white market courts separated by a planted colonnade.",
+            "title": "Two sides of the same order"
+          },
+          "uk": {
+            "alt": "Сині галереї постачальників навколо двох білих дворів, розділених озелененою колонадою.",
+            "title": "Дві сторони одного замовлення"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "id": "coupa-spend-in-motion-02-knowledge",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "Coupa documents several ways for suppliers to receive purchase orders: the Supplier Portal, email and cXML. A route is a way to exchange a record, not a different supplier’s value.",
+              "In this fictional square, both stalls refer to order VILLAGE-24. Matching that reference lets the buyer and supplier discuss the same request instead of guessing from a picture."
+            ],
+            "sources": [
+              {
+                "title": "Coupa Documentation — About Purchase Orders",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/purchase-orders/about-purchase-orders"
+              }
+            ],
+            "title": "Two sides of the same order"
+          },
+          "uk": {
+            "paragraphs": [
+              "Документація Coupa описує кілька способів отримання замовлень постачальниками: портал, електронна пошта та cXML. Це способи обміну документами, а не оцінка постачальника.",
+              "На цій вигаданій площі обидві крамниці посилаються на замовлення VILLAGE-24. Спільний номер допомагає покупцеві й постачальнику говорити про той самий запис, а не здогадуватися за зображенням."
+            ],
+            "sources": [
+              {
+                "title": "Coupa Documentation — About Purchase Orders",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/purchase-orders/about-purchase-orders"
+              }
+            ],
+            "title": "Дві сторони одного замовлення"
+          }
+        },
+        "type": "knowledge"
+      }
+    ],
+    "requirements": {
+      "learning": [],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "d61cfc29dfb0096d" },
+            { "difficulty": "standard", "gameplayId": "121e9faebbf0862c" },
+            { "difficulty": "expert", "gameplayId": "e6928da60722551e" }
+          ],
+          "missionId": "coupa-spend-in-motion-02"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-spend-in-motion-02", "kind": "mission" }
+  },
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-spend-in-motion",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-spend-in-motion-03-discovery",
+    "locales": {
+      "en": {
+        "teaser": "Collect the paper arcade and inspect a tiny fictional record puzzle.",
+        "title": "Similar is not the same"
+      },
+      "uk": {
+        "teaser": "Зберіть паперову галерею та розгляньте невелику загадку з вигаданими записами.",
+        "title": "Схоже не означає однакове"
+      }
+    },
+    "payloads": [
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-03-reveal-v1",
+          "sha256": "27ce16100d34d2c9675dda83ba044413e949324e5fa2aaf5ab895142419f11b8"
+        },
+        "id": "coupa-spend-in-motion-03-image",
+        "locales": {
+          "en": {
+            "alt": "Folded blank-paper architecture forms a blue arcade around a clear central court.",
+            "title": "Similar is not the same"
+          },
+          "uk": {
+            "alt": "Архітектура зі складених чистих аркушів утворює синю галерею навколо відкритого двору.",
+            "title": "Схоже не означає однакове"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "id": "coupa-spend-in-motion-03-knowledge",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "Two fictional cards show the same amount: 40 credits. One belongs to order VILLAGE-24 and the other to VILLAGE-25. Equal totals alone do not make them duplicates.",
+              "Coupa’s invoicing options depend on the customer’s configuration. In real work, use the stated process and check the underlying references; this paper puzzle is not a universal Coupa policy."
+            ],
+            "sources": [
+              {
+                "title": "Coupa Documentation — FAQ About Invoicing for Suppliers",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/faq-about-invoicing-for-suppliers"
+              }
+            ],
+            "title": "Similar is not the same"
+          },
+          "uk": {
+            "paragraphs": [
+              "На двох вигаданих картках однакова сума: 40 кредитів. Одна стосується VILLAGE-24, інша — VILLAGE-25. Однакові підсумки ще не означають дублювання.",
+              "Способи виставлення рахунків у Coupa залежать від налаштувань клієнта. У роботі дотримуйтеся визначеного процесу та перевіряйте посилання на записи; ця загадка не є універсальним правилом Coupa."
+            ],
+            "sources": [
+              {
+                "title": "Coupa Documentation — FAQ About Invoicing for Suppliers",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/faq-about-invoicing-for-suppliers"
+              }
+            ],
+            "title": "Схоже не означає однакове"
+          }
+        },
+        "type": "knowledge"
+      }
+    ],
+    "requirements": {
+      "learning": [],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "9a25441b6d675e84" },
+            { "difficulty": "standard", "gameplayId": "d2e1626769b9789f" },
+            { "difficulty": "expert", "gameplayId": "aa0c5a4fd27bb146" }
+          ],
+          "missionId": "coupa-spend-in-motion-03"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-spend-in-motion-03", "kind": "mission" }
+  },
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-spend-in-motion",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-spend-in-motion-04-discovery",
+    "locales": {
+      "en": {
+        "teaser": "Reveal the harbour and turn a vague handoff into a clear one.",
+        "title": "Leave a useful next step"
+      },
+      "uk": {
+        "teaser": "Відкрийте гавань і перетворіть нечітку передачу справи на зрозумілу.",
+        "title": "Залиште зрозумілий наступний крок"
+      }
+    },
+    "payloads": [
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-04-reveal-v1",
+          "sha256": "17ac9b2b0ddbe1810eba1940080b346b7840bd97ac01c18cdf9783039e7b3a64"
+        },
+        "id": "coupa-spend-in-motion-04-image",
+        "locales": {
+          "en": {
+            "alt": "A long blue harbour dock connects to a workshop landing through white bridges and planted terraces.",
+            "title": "Leave a useful next step"
+          },
+          "uk": {
+            "alt": "Довгий синій причал з’єднаний із майстернею білими мостами та озелененими терасами.",
+            "title": "Залиште зрозумілий наступний крок"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "id": "coupa-spend-in-motion-04-knowledge",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "Coupa’s culture emphasizes collaboration and accountability. Our illustrated bridge turns those ideas into a fictional handoff.",
+              "Compare “Please handle this” with “Mira will check delivery VILLAGE-24 against the arrival note, then update the workshop.” The second gives an owner, evidence and next action. What would you still ask?"
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              }
+            ],
+            "title": "Leave a useful next step"
+          },
+          "uk": {
+            "paragraphs": [
+              "Культура Coupa підкреслює співпрацю та відповідальність. Ілюстрований міст перетворює ці ідеї на вигаданий приклад передачі справи.",
+              "Порівняйте «Займіться цим» і «Міра звірить доставку VILLAGE-24 із записом про прибуття та повідомить майстерню». Другий варіант називає відповідальну особу, дані й наступну дію. Що ще ви запитали б?"
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              }
+            ],
+            "title": "Залиште зрозумілий наступний крок"
+          }
+        },
+        "type": "knowledge"
+      }
+    ],
+    "requirements": {
+      "learning": [],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "c2129618d9ee1a0c" },
+            { "difficulty": "standard", "gameplayId": "d31bc7d945b670ab" },
+            { "difficulty": "expert", "gameplayId": "b298c7b0a8f8ab0b" }
+          ],
+          "missionId": "coupa-spend-in-motion-04"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-spend-in-motion-04", "kind": "mission" }
+  },
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-spend-in-motion",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-spend-in-motion-05-discovery",
+    "locales": {
+      "en": {
+        "teaser": "Find a calm district and discover why a record needs context.",
+        "title": "A status is a useful clue"
+      },
+      "uk": {
+        "teaser": "Знайдіть тихий район і дізнайтеся, чому запис потребує контексту.",
+        "title": "Статус — це підказка"
+      }
+    },
+    "payloads": [
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-05-reveal-v1",
+          "sha256": "1cf77eb26a6b2347e95fc5e65e59ecd8391cefd7af1f703dcf7122e84f393f3d"
+        },
+        "id": "coupa-spend-in-motion-05-image",
+        "locales": {
+          "en": {
+            "alt": "A blue village glows after rain, with sheltered courts and a quiet central promenade.",
+            "title": "A status is a useful clue"
+          },
+          "uk": {
+            "alt": "Синє містечко світиться після дощу; затишні двори оточують тиху центральну алею.",
+            "title": "Статус — це підказка"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "id": "coupa-spend-in-motion-05-knowledge",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "An invoice status and a payment record answer different questions. Coupa’s supplier FAQ notes that customers do not always update every payment detail in the portal.",
+              "In this fictional district, a lamp marked “reviewed” does not tell you when a payment arrived. Ask which event the lamp represents and where its supporting record lives."
+            ],
+            "sources": [
+              {
+                "title": "Coupa Documentation — FAQ About Invoicing for Suppliers",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/faq-about-invoicing-for-suppliers"
+              }
+            ],
+            "title": "A status is a useful clue"
+          },
+          "uk": {
+            "paragraphs": [
+              "Статус рахунку та запис про оплату відповідають на різні запитання. У довідці Coupa для постачальників зазначено, що клієнти не завжди оновлюють усі платіжні відомості на порталі.",
+              "У цьому вигаданому районі лампа «перевірено» не показує, коли надійшла оплата. Запитайте, яку саме подію вона позначає та де зберігається відповідний запис."
+            ],
+            "sources": [
+              {
+                "title": "Coupa Documentation — FAQ About Invoicing for Suppliers",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/faq-about-invoicing-for-suppliers"
+              }
+            ],
+            "title": "Статус — це підказка"
+          }
+        },
+        "type": "knowledge"
+      }
+    ],
+    "requirements": {
+      "learning": [],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "cb9d58f8b01e6859" },
+            { "difficulty": "standard", "gameplayId": "022f98588bd491ee" },
+            { "difficulty": "expert", "gameplayId": "45fe87e7794c3944" }
+          ],
+          "missionId": "coupa-spend-in-motion-05"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-spend-in-motion-05", "kind": "mission" }
+  },
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-spend-in-motion",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-spend-in-motion-06-discovery",
+    "locales": {
+      "en": {
+        "teaser": "Complete the village celebration and reflect on what made the routes work.",
+        "title": "Make room for another contribution"
+      },
+      "uk": {
+        "teaser": "Завершіть свято містечка та поміркуйте, що допомогло з’єднати його маршрути.",
+        "title": "Місце для нового внеску"
+      }
+    },
+    "payloads": [
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-06-reveal-v1",
+          "sha256": "83d2875d09e4c0685980c5be1e1a147f1325ab8eff44b7097f054c2e17e64296"
+        },
+        "id": "coupa-spend-in-motion-06-image",
+        "locales": {
+          "en": {
+            "alt": "A completed blue village celebrates around illuminated gardens, plazas and connected buildings.",
+            "title": "Make room for another contribution"
+          },
+          "uk": {
+            "alt": "Завершене синє містечко святкує серед освітлених садів, площ і з’єднаних будівель.",
+            "title": "Місце для нового внеску"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "id": "coupa-spend-in-motion-06-knowledge",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "Coupa names belonging and building together among its public values. This celebration is an original illustration, not a photograph of a company event.",
+              "You connected six different places. Choose one bridge, one clear reference and one useful handoff from your discoveries. Explain how each helped the fictional village work together."
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              }
+            ],
+            "title": "Make room for another contribution"
+          },
+          "uk": {
+            "paragraphs": [
+              "Серед публічних цінностей Coupa — відчуття належності та спільне творення. Це свято є оригінальною ілюстрацією, а не фотографією корпоративної події.",
+              "Ви з’єднали шість різних місць. Оберіть один міст, один зрозумілий номер запису та один корисний приклад передачі справи. Поясніть, як кожен допоміг вигаданому містечку працювати разом."
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              }
+            ],
+            "title": "Місце для нового внеску"
+          }
+        },
+        "type": "knowledge"
+      }
+    ],
+    "requirements": {
+      "learning": [],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "c32a8c5fc2e823a5" },
+            { "difficulty": "standard", "gameplayId": "b10522f669fa262b" },
+            { "difficulty": "expert", "gameplayId": "a7b65c897e0b015d" }
+          ],
+          "missionId": "coupa-spend-in-motion-06"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-spend-in-motion-06", "kind": "mission" }
+  },
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-spend-in-motion",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-spend-in-motion-finale",
+    "locales": {
+      "en": {
+        "teaser": "Win all six missions to collect the complete village gallery and its connection guide.",
+        "title": "The Connected Village"
+      },
+      "uk": {
+        "teaser": "Переможіть у всіх шести місіях, щоб зібрати галерею містечка та довідник корисних зв’язків.",
+        "title": "З’єднане містечко"
+      }
+    },
+    "payloads": [
+      {
+        "id": "coupa-spend-in-motion-guide",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "Six places, one collection: purpose, shared references, careful comparison, useful handoffs, meaningful status and room for another contribution.",
+              "Try a new fictional situation: a library needs replacement lamps. Who needs to agree on the requirement? Which reference connects the conversation? What evidence would the next person need? Use your six discoveries to explain a clear next step.",
+              "This is an illustrative adventure. It does not certify product knowledge or represent a universal customer policy. The public sources remain available below and on each discovery."
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              },
+              {
+                "title": "Coupa Documentation — About Purchase Orders",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/purchase-orders/about-purchase-orders"
+              },
+              {
+                "title": "Coupa Documentation — FAQ About Invoicing for Suppliers",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/faq-about-invoicing-for-suppliers"
+              }
+            ],
+            "title": "The Connected Village"
+          },
+          "uk": {
+            "paragraphs": [
+              "Шість місць, одна колекція: мета, спільні номери записів, уважне порівняння, зрозуміла передача справи, значення статусу та місце для нового внеску.",
+              "Розгляньте нову вигадану ситуацію: бібліотеці потрібні нові лампи. Хто має узгодити потребу? Який номер запису об’єднає розмову? Які дані потрібні наступній людині? Використайте шість відкриттів, щоб пояснити зрозумілий наступний крок.",
+              "Це ілюстрована пригода. Вона не підтверджує кваліфікацію з продукту й не встановлює універсальних правил клієнтів. Публічні джерела доступні нижче та в кожному відкритті."
+            ],
+            "sources": [
+              {
+                "title": "Coupa — Life at Coupa",
+                "url": "https://careers.coupa.com/en/life-at-coupa/"
+              },
+              {
+                "title": "Coupa Documentation — About Purchase Orders",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/purchase-orders/about-purchase-orders"
+              },
+              {
+                "title": "Coupa Documentation — FAQ About Invoicing for Suppliers",
+                "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/faq-about-invoicing-for-suppliers"
+              }
+            ],
+            "title": "З’єднане містечко"
+          }
+        },
+        "type": "knowledge"
+      },
+      {
+        "asset": {
+          "assetId": "coupa-spend-city-v2",
+          "sha256": "fb468b9b308377d0e83517c64c34c6df4492d7909add3f3e700e03cfaf039d18"
+        },
+        "id": "coupa-spend-in-motion-01-image",
+        "locales": {
+          "en": {
+            "alt": "An illustrated blue city with ribbon bridges, collaboration halls and sunlit gardens.",
+            "title": "A connection needs a purpose"
+          },
+          "uk": {
+            "alt": "Ілюстроване синє місто зі стрічковими мостами, залами для співпраці та сонячними садами.",
+            "title": "Кожен зв’язок має мету"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-02-reveal-v1",
+          "sha256": "0d539a4f1fc673b5c28622eb29aab7c124f29dc947646829cd00e839f246bd81"
+        },
+        "id": "coupa-spend-in-motion-02-image",
+        "locales": {
+          "en": {
+            "alt": "Blue supplier arcades around two white market courts separated by a planted colonnade.",
+            "title": "Two sides of the same order"
+          },
+          "uk": {
+            "alt": "Сині галереї постачальників навколо двох білих дворів, розділених озелененою колонадою.",
+            "title": "Дві сторони одного замовлення"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-03-reveal-v1",
+          "sha256": "27ce16100d34d2c9675dda83ba044413e949324e5fa2aaf5ab895142419f11b8"
+        },
+        "id": "coupa-spend-in-motion-03-image",
+        "locales": {
+          "en": {
+            "alt": "Folded blank-paper architecture forms a blue arcade around a clear central court.",
+            "title": "Similar is not the same"
+          },
+          "uk": {
+            "alt": "Архітектура зі складених чистих аркушів утворює синю галерею навколо відкритого двору.",
+            "title": "Схоже не означає однакове"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-04-reveal-v1",
+          "sha256": "17ac9b2b0ddbe1810eba1940080b346b7840bd97ac01c18cdf9783039e7b3a64"
+        },
+        "id": "coupa-spend-in-motion-04-image",
+        "locales": {
+          "en": {
+            "alt": "A long blue harbour dock connects to a workshop landing through white bridges and planted terraces.",
+            "title": "Leave a useful next step"
+          },
+          "uk": {
+            "alt": "Довгий синій причал з’єднаний із майстернею білими мостами та озелененими терасами.",
+            "title": "Залиште зрозумілий наступний крок"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-05-reveal-v1",
+          "sha256": "1cf77eb26a6b2347e95fc5e65e59ecd8391cefd7af1f703dcf7122e84f393f3d"
+        },
+        "id": "coupa-spend-in-motion-05-image",
+        "locales": {
+          "en": {
+            "alt": "A blue village glows after rain, with sheltered courts and a quiet central promenade.",
+            "title": "A status is a useful clue"
+          },
+          "uk": {
+            "alt": "Синє містечко світиться після дощу; затишні двори оточують тиху центральну алею.",
+            "title": "Статус — це підказка"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "asset": {
+          "assetId": "coupa-spend-in-motion-06-reveal-v1",
+          "sha256": "83d2875d09e4c0685980c5be1e1a147f1325ab8eff44b7097f054c2e17e64296"
+        },
+        "id": "coupa-spend-in-motion-06-image",
+        "locales": {
+          "en": {
+            "alt": "A completed blue village celebrates around illuminated gardens, plazas and connected buildings.",
+            "title": "Make room for another contribution"
+          },
+          "uk": {
+            "alt": "Завершене синє містечко святкує серед освітлених садів, площ і з’єднаних будівель.",
+            "title": "Місце для нового внеску"
+          }
+        },
+        "type": "image"
+      },
+      {
+        "id": "coupa-spend-in-motion-official-source",
+        "locales": {
+          "en": { "title": "Explore Coupa’s public culture" },
+          "uk": { "title": "Дізнатися про культуру Coupa" }
+        },
+        "type": "url",
+        "url": "https://careers.coupa.com/en/life-at-coupa/"
+      }
+    ],
+    "requirements": {
+      "learning": [],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "704a92f5c095e9e0" },
+            { "difficulty": "standard", "gameplayId": "81306666440370cc" },
+            { "difficulty": "expert", "gameplayId": "f2c1329764e91fc1" }
+          ],
+          "missionId": "coupa-spend-in-motion-01"
+        },
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "d61cfc29dfb0096d" },
+            { "difficulty": "standard", "gameplayId": "121e9faebbf0862c" },
+            { "difficulty": "expert", "gameplayId": "e6928da60722551e" }
+          ],
+          "missionId": "coupa-spend-in-motion-02"
+        },
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "9a25441b6d675e84" },
+            { "difficulty": "standard", "gameplayId": "d2e1626769b9789f" },
+            { "difficulty": "expert", "gameplayId": "aa0c5a4fd27bb146" }
+          ],
+          "missionId": "coupa-spend-in-motion-03"
+        },
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "c2129618d9ee1a0c" },
+            { "difficulty": "standard", "gameplayId": "d31bc7d945b670ab" },
+            { "difficulty": "expert", "gameplayId": "b298c7b0a8f8ab0b" }
+          ],
+          "missionId": "coupa-spend-in-motion-04"
+        },
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "cb9d58f8b01e6859" },
+            { "difficulty": "standard", "gameplayId": "022f98588bd491ee" },
+            { "difficulty": "expert", "gameplayId": "45fe87e7794c3944" }
+          ],
+          "missionId": "coupa-spend-in-motion-05"
+        },
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "c32a8c5fc2e823a5" },
+            { "difficulty": "standard", "gameplayId": "b10522f669fa262b" },
+            { "difficulty": "expert", "gameplayId": "a7b65c897e0b015d" }
+          ],
+          "missionId": "coupa-spend-in-motion-06"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-spend-in-motion", "kind": "campaign" }
+  }
+]

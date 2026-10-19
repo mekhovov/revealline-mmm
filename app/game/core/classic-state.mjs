@@ -1,6 +1,8 @@
+import { huntDefinition } from '../hunt/running-enemy-definition.mjs';
 import { CELL } from './registry.mjs';
-import { isClassicRuleset } from './versions.mjs';
+import { isClassicRuleset, isRunningEnemyRuleset } from './versions.mjs';
 import { createTimedBonusState } from './timed-bonuses.mjs';
+import { createHuntState } from '../hunt/rules.mjs';
 
 export const CLASSIC_MATERIAL = Object.freeze({ normal: 0, slow: 1, lethal: 2 });
 export const CLASSIC_EFFECTS = Object.freeze({
@@ -18,6 +20,7 @@ export function createClassicState(level, cells) {
         terrain[y * level.width + x] = CLASSIC_MATERIAL[area.kind];
   return {
     version: 'classic-state.v1',
+    ...(huntDefinition(level) ? { hunt: createHuntState() } : {}),
     terrain,
     eligible: Uint8Array.from(cells, (cell) => Number(cell === CELL.FIELD)),
     everClaimed: new Uint8Array(cells.length),
@@ -56,7 +59,7 @@ export function classicEffectActive(state, kind) {
 
 /** Complete new-branch authority. Derived graph caches are rebuilt from these fields. */
 export function projectClassicState(state) {
-  if (!isClassicRuleset(state.ruleset) || !state.classic)
+  if ((!isClassicRuleset(state.ruleset) && !isRunningEnemyRuleset(state.ruleset)) || !state.classic)
     throw new TypeError('Classic projection requires a classic run');
   const { terrain, eligible, everClaimed, ...data } = state.classic;
   return {

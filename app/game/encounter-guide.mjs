@@ -2,14 +2,7 @@ import { t, localizedMessage } from './i18n/index.mjs';
 import { CLASSES } from './core/registry.mjs';
 import { validateLevel } from './core/level.mjs';
 import { boundedJSON } from './data-json.mjs';
-import {
-  CLASSIC_SCENARIO_VERSION,
-  FOUNDATION_SCENARIO_VERSION,
-  RELAY_SCENARIO_VERSION,
-  DIRECTIONAL_SCENARIO_VERSION,
-  SENTINEL_SCENARIO_VERSION,
-  validateScenario,
-} from './content.mjs';
+import { scenarioFormatForLevel, validateScenario } from './content.mjs';
 
 const lessons = Object.freeze({
   'optional-scout': Object.freeze({
@@ -75,9 +68,12 @@ export function encounterGuideAvailability(topic, level) {
   let reason = 'unavailable';
   if (level != null) {
     if (!validateLevel(level).valid) reason = 'invalid';
+    // Original v10 overlays have no raw practice transport. Pursuit successors
+    // have exact versions, so the complete accepted recipe is retained.
+    else if (level.version === 'xonix-level.v10') reason = 'unavailable';
     else {
       const role = lessons[topic].role,
-        combat = level.classic?.combatPatrols,
+        combat = level.runningEnemies?.combatPatrols ?? level.classic?.combatPatrols,
         present = role
           ? combat?.enabled === true && combat.actors.some((actor) => actor.role === role)
           : level.classic?.enemyPressure?.actors.some((actor) => actor.mode === topic);
@@ -94,15 +90,8 @@ export function createEncounterGuideScenario({ topic, level, theme, turnPolicy, 
   if (!availability.available)
     throw new TypeError(t(`interface:encounterGuide.${availability.reason}`));
   const options = boundedJSON(runOptions ?? { seed: 1, classId: 'scout', classRecipes: CLASSES });
-  const formats = {
-    'xonix-level.v4': CLASSIC_SCENARIO_VERSION,
-    'xonix-level.v5': FOUNDATION_SCENARIO_VERSION,
-    'xonix-level.v6': RELAY_SCENARIO_VERSION,
-    'xonix-level.v7': DIRECTIONAL_SCENARIO_VERSION,
-    'xonix-level.v8': SENTINEL_SCENARIO_VERSION,
-  };
   const candidate = {
-    format: formats[level.version],
+    format: scenarioFormatForLevel(level.version),
     level,
     theme,
     classRecipes: options.classRecipes,

@@ -1,3 +1,4 @@
+(function(){const url=new URL(location.href);if(!url.searchParams.has('journey')){url.searchParams.set('journey',"coupa-all");history.replaceState(null,'',url.href);}})();
 // Native Back must work while the large mode module is still preparing or fails.
 // These finite routes match authored-mode-routes.mjs; bootstrap tests cover both.
 (() => {
@@ -6,9 +7,40 @@
   const params = new URL(doc.baseURI).searchParams;
   const set = (id, href) => doc.getElementById(id)?.setAttribute('href', href);
   if (!['versus', 'team'].includes(mode)) return;
+  // The host prepares its real controls out of sight. Keep its original live
+  // status and native recovery links visible until the shared menu is ready.
+  const boot = doc.getElementById('mode-boot');
+  if (boot && mode === 'team' && typeof MutationObserver === 'function') {
+    const restoreStatus = () => {
+      if (doc.documentElement.dataset.toolState !== 'ready') return false;
+      const status = doc.getElementById('coop-boot');
+      const slot = doc.getElementById('coop-boot-slot');
+      if (status && slot) {
+        slot.parentNode.insertBefore(status, slot);
+        slot.remove();
+      }
+      return true;
+    };
+    if (!restoreStatus()) {
+      const observer = new MutationObserver(() => {
+        if (restoreStatus()) observer.disconnect();
+      });
+      observer.observe(doc.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-tool-state'],
+      });
+      globalThis.addEventListener('pagehide', (event) => {
+        if (!event.persisted) observer.disconnect();
+      });
+    }
+  }
   const authoredRoutes = [
     "coupa-all",
     'opening',
+    'humanoid-hunt-v1',
+    'pursuit-pilots-v1',
+    'pursuit-campaigns-v1',
+    'snake-hunt-v1',
     'authored',
     'whole-originals',
     'whole-originals-v2',
@@ -47,6 +79,11 @@
     'whole-spatial-v31',
     'whole-spatial-v32',
     'whole-spatial-v33',
+    'whole-spatial-v34',
+    'whole-spatial-v35',
+    'whole-spatial-v36',
+    'whole-spatial-v37',
+    'whole-spatial-v38',
     'whole-ornament-v1',
     'whole-ornament-v2',
   ];
@@ -70,6 +107,7 @@
     set('coop-solo', solo);
     set('coop-versus', versus);
     set('coop-race', fromSolo ? solo : versus);
+    set('mode-boot-return', solo);
     const back = doc.getElementById('coop-race');
     if (back) back.textContent = fromSolo ? 'Back to Solo' : 'Race mode ↗';
   };

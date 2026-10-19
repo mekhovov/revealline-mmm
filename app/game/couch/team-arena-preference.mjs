@@ -1,5 +1,5 @@
 import { t } from '../i18n/index.mjs';
-export const TEAM_ARENA_PREFERENCE_KEY = 'revealline.team-arena.v1';
+export const TEAM_ARENA_PREFERENCE_KEY = 'revealline-mmm.team-arena.v1';
 const version = 'revealline-team-arena.v1';
 const fields = ['version', 'packId', 'packRevision', 'levelId'];
 const identifier = (value) => typeof value === 'string' && /^[a-z0-9][a-z0-9-]{0,95}$/.test(value);

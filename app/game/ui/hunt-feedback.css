@@ -1,0 +1,255 @@
+/* Optional presentation always has its own flow space, below critical HUD data. */
+.hunt-feedback,
+.coop-mission-feedback,
+.racer-readouts {
+  min-inline-size: 0;
+}
+.hunt-status,
+.field-kit .hunt-status {
+  margin: 0.25rem 0;
+  font: var(--fk-text-secondary, 0.875rem) / 1.35 var(--fk-font-ui, system-ui, sans-serif);
+  color: var(--fk-text, inherit);
+  overflow-wrap: anywhere;
+}
+.racer-readouts .hunt-status {
+  text-align: center;
+}
+.reaction-live-caption {
+  margin-block: 0.25rem;
+}
+.reaction-result-caption,
+.field-kit .reaction-result-caption {
+  display: block;
+  box-sizing: border-box;
+  max-inline-size: 100%;
+  margin-block: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.4rem;
+  font:
+    var(--reaction-caption-size, 1rem) / 1.45 system-ui,
+    sans-serif;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  color: var(--fk-text, #f1f5fa);
+}
+.reaction-result-caption[data-reaction-background='true'] {
+  background: var(--fk-panel, #172126);
+}
+.reaction-result-caption[data-reaction-background='false'] {
+  background: transparent;
+}
+.reaction-result-caption::before {
+  content: '';
+  display: inline-block;
+  inline-size: var(--reaction-portrait-size, 3rem);
+  block-size: var(--reaction-portrait-size, 3rem);
+  margin-inline-end: 0.65rem;
+  vertical-align: middle;
+  border-radius: 0.4rem;
+  background: var(--reaction-portrait) center / contain no-repeat;
+  image-rendering: pixelated;
+}
+.reaction-result-caption[hidden],
+.reaction-live-caption[hidden],
+.hunt-status[hidden] {
+  display: none !important;
+}
+#race-hud > #hunt-feedback {
+  flex: 1 0 100%;
+}
+.coop-mission-feedback > .live-objective {
+  margin-block-end: 0.25rem;
+}
+.coop-mission-feedback > :is(#coop-hunt-attempt-status, #coop-bonus-live) {
+  margin-block: 0.25rem;
+}
+@media (max-width: 400px) {
+  :is(.reaction-live-caption, .reaction-result-caption) {
+    --reaction-portrait-size: 2rem;
+  }
+}
+/* Solo's ordinary short landscape rail and first-flight rail have named rows. */
+@media (min-width: 681px) and (max-height: 600px) {
+  .arena-panel > #hunt-feedback {
+    grid-area: hunt;
+  }
+}
+/* Branded editions already measure notices before fitting the complete board. */
+body.game-shell[data-edition-layout='active'] #hunt-feedback {
+  position: fixed;
+  top: auto;
+  bottom: var(--edition-notice-bottom, 8px);
+  left: max(8px, var(--safe-left));
+  right: max(8px, var(--safe-right));
+  inline-size: auto;
+  margin: 0;
+  z-index: 7;
+  background: var(--fk-bg, #070b12);
+}
+/* The optional row is measured at viewport width, avoiding a width/height loop. */
+@media (max-width: 680px) and (orientation: portrait) {
+  body.field-kit.game-shell:is([data-flight-state='running'], [data-flight-layout='preparing']):not(
+      .first-flight-session
+    ):not([data-edition-layout='active'])
+    .arena-panel:has(> #hunt-feedback) {
+    grid-template-rows: minmax(0, 1fr) auto auto;
+  }
+  body.field-kit.game-shell:is([data-flight-state='running'], [data-flight-layout='preparing']):not(
+      .first-flight-session
+    ):not([data-edition-layout='active'])
+    .arena-panel
+    > #hunt-feedback {
+    grid-area: auto;
+    grid-row: 2;
+  }
+  body.field-kit.game-shell:is([data-flight-state='running'], [data-flight-layout='preparing']):not(
+      .first-flight-session
+    ):not([data-edition-layout='active'])
+    #run-message {
+    grid-row: 3;
+  }
+  body.field-kit.game-shell.first-flight-session:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    )
+    .arena-panel:has(> #hunt-feedback) {
+    grid-template-areas: 'task' 'arena' 'hunt' 'message';
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+  }
+  body.field-kit.game-shell.first-flight-session:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    )
+    #hunt-feedback {
+    grid-area: hunt;
+  }
+  body.field-kit.game-shell.first-flight-session:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    )
+    #run-message {
+    grid-area: message;
+  }
+  body.field-kit.game-shell[data-arena-chrome='full']:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    ):not(.first-flight-session):not([data-edition-layout='active']):has(#hunt-feedback) {
+    --solo-field-space: calc(
+      100dvh - 56px - var(--handheld-music-space, 0px) - var(--solo-warning-space) -
+        var(--hunt-feedback-height, 0px) - var(--safe-top) - var(--safe-bottom)
+    );
+  }
+  body.field-kit.game-shell[data-arena-chrome='full']:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    ):not(.first-flight-session):not([data-edition-layout='active'])
+    #hunt-feedback {
+    position: fixed;
+    top: calc(var(--safe-top) + 56px + var(--handheld-music-space, 0px));
+    left: max(8px, var(--safe-left));
+    right: max(8px, var(--safe-right));
+    z-index: 5;
+  }
+  body.field-kit.game-shell[data-arena-chrome='full']:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    ):not(.first-flight-session):not([data-edition-layout='active']):has(#hunt-feedback)
+    .arena-shell {
+    top: calc(
+      var(--safe-top) + 56px + var(--handheld-music-space, 0px) + var(--hunt-feedback-height, 0px) +
+        var(--solo-field-space) / 2
+    );
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+  body.field-kit.game-shell:is([data-flight-state='running'], [data-flight-layout='preparing']):not(
+      [data-edition-layout='active']
+    ):has(#hunt-feedback) {
+    --hunt-feedback-top: 56px;
+    --fk-flight-header: calc(var(--hunt-feedback-top) + var(--hunt-feedback-height, 0px));
+  }
+  body.field-kit.game-shell.first-flight-session:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    ):has(#hunt-feedback) {
+    --hunt-feedback-top: 104px;
+  }
+  body.field-kit.game-shell:is([data-flight-state='running'], [data-flight-layout='preparing']):not(
+      [data-edition-layout='active']
+    )
+    #hunt-feedback {
+    position: fixed;
+    top: calc(var(--safe-top) + var(--hunt-feedback-top));
+    left: max(8px, var(--safe-left));
+    right: max(8px, var(--safe-right));
+    z-index: 5;
+  }
+}
+@media (min-width: 681px) and (min-height: 601px) and (not (any-pointer: coarse)) {
+  :root:not([data-game-fullscreen='true'])
+    body.field-kit.game-shell[data-arena-chrome='full']:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    ):not(.first-flight-session):not([data-edition-layout='active']):has(#hunt-feedback) {
+    --flight-top-space: calc(184px + var(--hunt-feedback-height, 0px));
+  }
+  :root:not([data-game-fullscreen='true'])
+    body.field-kit.game-shell[data-arena-chrome='full']:is(
+      [data-flight-state='running'],
+      [data-flight-layout='preparing']
+    ):not(.first-flight-session):not([data-edition-layout='active'])
+    #hunt-feedback {
+    position: fixed;
+    top: calc(var(--safe-top) + 184px);
+    left: max(12px, var(--safe-left));
+    right: max(12px, var(--safe-right));
+    z-index: 5;
+  }
+}
+/* Versus keeps the feedback inside the HUD, whose height now follows its text. */
+@media (max-width: 680px) and (orientation: portrait),
+  (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+  body.field-kit.race-focus.candidate-journey #couch-app:has(#hunt-feedback) {
+    grid-template-rows: auto auto minmax(0, 1fr);
+  }
+  body.field-kit.race-focus .race-hud:has(#hunt-feedback) {
+    height: auto;
+    min-height: 44px;
+  }
+  body.field-kit.race-focus .racer[data-player] .racer-readouts {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+/* Team's objective, Hunt counters and captions share one explicit feedback row. */
+@media (orientation: landscape) {
+  body.field-kit.playing:has(#coop-overlay[hidden]) .coop-mission-feedback {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+@media (max-width: 680px) and (max-height: 700px) and (orientation: portrait) {
+  body.field-kit.playing:has(#coop-overlay[hidden]) #coop-app:has(.coop-mission-feedback) {
+    grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+  }
+  body.field-kit.playing:has(#coop-overlay[hidden]) .coop-mission-feedback {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  body.field-kit.playing:has(#coop-overlay[hidden])
+    #coop-app:has(.coop-mission-feedback)
+    .coop-board-slot {
+    grid-row: 3;
+  }
+  body.field-kit.playing:has(#coop-overlay[hidden])
+    #coop-app:has(.coop-mission-feedback)
+    .board-footer {
+    grid-row: 4;
+  }
+  body.field-kit.playing:has(#coop-overlay[hidden])
+    #coop-app:has(.coop-mission-feedback)
+    #coop-controls {
+    grid-row: 5;
+  }
+}

@@ -3,6 +3,9 @@ import { createJourneyCatalog } from '../journey/catalog.mjs';
 import { createCandidateSequence } from './sequence.mjs';
 import { createMissionCard } from './mission-card.mjs';
 import { freezeDesign } from './catalogs.mjs';
+import { deriveEncounterLevel } from '../hunt/variants.mjs';
+import { encounterVariantManifest } from '../hunt/variant-guidance.mjs';
+import { ENCOUNTER_VARIANTS } from '../hunt/preferences.mjs';
 
 /** Navigation adapter for an explicitly selected Team candidate library. Packs
  * remain homogeneous immutable runtime editions; crossing a campaign selects
@@ -55,6 +58,7 @@ export function createCandidateTeamHost(source, { corePackIds } = {}) {
   );
   const owned = new Set(rows),
     byKey = new Map(rows.map((row) => [row.key, row]));
+  const presentations = new WeakMap();
   const rowFor = (mission, difficulty = 'standard') =>
     mission && catalog.find(mission.id) === mission
       ? (byKey.get(`${mission.id}/${difficulty}`) ?? null)
@@ -68,6 +72,39 @@ export function createCandidateTeamHost(source, { corePackIds } = {}) {
     manifest(mission, difficulty = 'standard') {
       const row = rowFor(mission, difficulty);
       return row ? manifests.get(row) : null;
+    },
+    presentation(mission, difficulty = 'standard', { encounterVariant = 'authored' } = {}) {
+      const row = rowFor(mission, difficulty);
+      if (!row) return null;
+      if (!ENCOUNTER_VARIANTS.includes(encounterVariant)) encounterVariant = 'authored';
+      const authored = manifests.get(row);
+      let editions = presentations.get(row);
+      if (!editions) presentations.set(row, (editions = new Map()));
+      if (!editions.has(encounterVariant)) {
+        let level = row.level;
+        try {
+          level = deriveEncounterLevel(row.level, encounterVariant, { mode: 'team' }) ?? level;
+        } catch {
+          // Match freshRecipe's authored fallback for an unavailable preference.
+        }
+        editions.set(
+          encounterVariant,
+          level === row.level ? authored : Object.freeze({ ...authored, level }),
+        );
+      }
+      const selected = editions.get(encounterVariant),
+        display = encounterVariantManifest(
+          selected,
+          selected === authored ? 'authored' : encounterVariant,
+        );
+      // This display-only view never replaces the canonical manifest, row,
+      // simulation identity, artwork owner or journal source.
+      return Object.freeze({
+        get card() {
+          return createMissionCard(display);
+        },
+        design: display.design,
+      });
     },
     card(mission, difficulty = 'standard') {
       const row = rowFor(mission, difficulty);

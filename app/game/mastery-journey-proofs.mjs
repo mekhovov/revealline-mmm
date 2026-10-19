@@ -21,6 +21,7 @@ export function createJourneyMasteryProofStore({
   bindings,
   acceptClear,
   acceptOwnedClear = acceptClear,
+  scheduleChunk,
 }) {
   required(
     typeof acceptClear === 'function' && typeof acceptOwnedClear === 'function',
@@ -71,7 +72,10 @@ export function createJourneyMasteryProofStore({
       }),
       inspect,
       async verify(source, { signal }) {
-        const result = await verifyJourneyMasteryRun({ ...source, bindings }, { signal });
+        const result = await verifyJourneyMasteryRun(
+          { ...source, bindings },
+          { signal, scheduleChunk },
+        );
         if (!verifiedJourneyMasteryEvidence(result)) {
           const error = new Error(
             'That accepted win lost a life; optional mastery remains available for another attempt.',

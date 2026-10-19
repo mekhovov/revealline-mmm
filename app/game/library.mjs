@@ -54,6 +54,7 @@ export const LIBRARY_VERSION = 'xonix-library.v2';
 export const PRESENTATION_LIBRARY_VERSION = 'xonix-library.v3';
 export const STORY_LIBRARY_VERSION = 'xonix-library.v4';
 export const DEFAULT_CINEMATIC_VOLUME = 0.75;
+export const MAX_COLLECTION_TIME_SECONDS = 7200;
 const LEGACY_LIBRARY_VERSION = 'xonix-library.v1';
 export const LIBRARY_LIMITS = Object.freeze({
   maxBytes: 4 * 1024 * 1024,
@@ -189,7 +190,7 @@ function stats(value, withVariants = false) {
   );
   required(
     finite(value.score, 0, 1e9) &&
-      finite(value.time, 0, 7200) &&
+      finite(value.time, 0, MAX_COLLECTION_TIME_SECONDS) &&
       Number.isInteger(value.medals) &&
       finite(value.medals, 1, 3) &&
       typeof value.clean === 'boolean',
@@ -387,7 +388,7 @@ function checkLibrary(candidate, { campaigns = [] } = {}) {
         text(item.levelName, 280) &&
         text(item.runId, 159) &&
         finite(item.score, 0, 1e9) &&
-        finite(item.time, 0, 7200) &&
+        finite(item.time, 0, MAX_COLLECTION_TIME_SECONDS) &&
         medalValid(item.medal) &&
         stamp(item.completedAt),
       libraryError('galleryMetadata'),
@@ -453,7 +454,7 @@ function checkLibrary(candidate, { campaigns = [] } = {}) {
     );
     required(
       finite(item.score, 0, 1e9) &&
-        finite(item.time, 0, 7200) &&
+        finite(item.time, 0, MAX_COLLECTION_TIME_SECONDS) &&
         medalValid(item.medal) &&
         stamp(item.completedAt) &&
         text(item.runId, 159),

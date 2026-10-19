@@ -1,0 +1,769 @@
+{
+  "assets": [
+    {
+      "approved": true,
+      "bytes": 58489,
+      "dependencies": [],
+      "id": "coupa-flower",
+      "path": "game/editions/assets/coupa/flower-blue.png",
+      "publication": "public",
+      "sha256": "17fd8f43ad6d9c471badf9c3363d27fa646b1ec369d104fc8de4d8e006ac0a43"
+    },
+    {
+      "approved": true,
+      "bytes": 160316,
+      "dependencies": [],
+      "id": "poppins-regular",
+      "path": "game/editions/assets/shared/Poppins-Regular.ttf",
+      "publication": "public",
+      "sha256": "7e65201e9b79159e2300267cc885e16c8dcef2424cdfa09a29bfb0980a94a7ba"
+    },
+    {
+      "approved": true,
+      "bytes": 4384,
+      "dependencies": [],
+      "id": "poppins-license",
+      "path": "game/editions/assets/shared/Poppins-OFL.txt",
+      "publication": "public",
+      "sha256": "8503c30a4d7e09c4c09015fee42f829f18acbe6330755e9930ba50ea44eaa157"
+    },
+    {
+      "approved": true,
+      "bytes": 1997148,
+      "dependencies": [],
+      "id": "coupa-inside-village-key",
+      "path": "game/editions/assets/coupa/coupa-inside-village-key.png",
+      "publication": "public",
+      "sha256": "50cf52f3ff6faeef17171a44acb83bf8b80e7090dcfa5fad512496676c18eb0f"
+    },
+    {
+      "approved": true,
+      "bytes": 2021650,
+      "dependencies": [],
+      "id": "coupa-source-to-pay-key",
+      "path": "game/editions/assets/coupa/coupa-source-to-pay-key.png",
+      "publication": "public",
+      "sha256": "bbfb32e28c42863a2c444de4c42d5843f107ae8573d8f773817abe9488801f3b"
+    },
+    {
+      "approved": true,
+      "bytes": 2105228,
+      "dependencies": [],
+      "id": "coupa-product-operations-key",
+      "path": "game/editions/assets/coupa/coupa-product-operations-key.png",
+      "publication": "public",
+      "sha256": "371ab48050bb585c118346bcbbf97e8cdec3234415c3f41b16859874bda83604"
+    },
+    {
+      "approved": true,
+      "bytes": 15807,
+      "dependencies": [
+        "coupa-flower"
+      ],
+      "derivative": {
+        "background": "#FFFFFF",
+        "height": 192,
+        "implementation": "pillow-12.0.0",
+        "kind": "square-install-icon",
+        "paddingRatio": 0.12,
+        "resampling": "lanczos",
+        "sourceAssetId": "coupa-flower",
+        "sourceHeight": 469,
+        "sourceSha256": "17fd8f43ad6d9c471badf9c3363d27fa646b1ec369d104fc8de4d8e006ac0a43",
+        "sourceWidth": 512,
+        "width": 192
+      },
+      "id": "coupa-icon-192",
+      "path": "game/editions/assets/coupa/icon-192.png",
+      "publication": "public",
+      "sha256": "68af331acfc75aa497e7c7576fd6c1ccc7daadc4e29a871e18aa3ccfe028332f"
+    },
+    {
+      "approved": true,
+      "bytes": 47962,
+      "dependencies": [
+        "coupa-flower",
+        "coupa-icon-192"
+      ],
+      "derivative": {
+        "background": "#FFFFFF",
+        "height": 512,
+        "implementation": "pillow-12.0.0",
+        "kind": "square-install-icon",
+        "paddingRatio": 0.12,
+        "resampling": "lanczos",
+        "sourceAssetId": "coupa-flower",
+        "sourceHeight": 469,
+        "sourceSha256": "17fd8f43ad6d9c471badf9c3363d27fa646b1ec369d104fc8de4d8e006ac0a43",
+        "sourceWidth": 512,
+        "width": 512
+      },
+      "id": "coupa-icon-512",
+      "path": "game/editions/assets/coupa/icon-512.png",
+      "publication": "public",
+      "sha256": "360d780522b6a81f0e83be086c52e962e0dfce7f0e1d4ee4e3559eb9391cd7b0"
+    },
+    {
+      "approved": true,
+      "bytes": 3134778,
+      "dependencies": [],
+      "id": "coupa-spend-city-v2",
+      "path": "game/editions/assets/coupa/spend-city-v2.png",
+      "publication": "public",
+      "sha256": "fb468b9b308377d0e83517c64c34c6df4492d7909add3f3e700e03cfaf039d18"
+    },
+    {
+      "approved": true,
+      "bytes": 2918671,
+      "dependencies": [],
+      "id": "coupa-network-atlas-v2",
+      "path": "game/editions/assets/coupa/network-atlas-v2.png",
+      "publication": "public",
+      "sha256": "aa6a581b04384b06e730e36399c0c75a03145b501c96dcb1247ec29f24b3d518"
+    },
+    {
+      "approved": true,
+      "bytes": 271090,
+      "dependencies": [],
+      "id": "coupa-wallpaper-network-2024",
+      "path": "game/editions/assets/coupa/wallpaper-network-2024.png",
+      "publication": "public",
+      "sha256": "dc3564fbd91d1bd745f3e3cdbc8a09de56868e846ecae9fbd6598ddebd3f6e3a"
+    },
+    {
+      "approved": true,
+      "bytes": 303927,
+      "dependencies": [],
+      "id": "coupa-wallpaper-center-2024",
+      "path": "game/editions/assets/coupa/wallpaper-center-2024.png",
+      "publication": "public",
+      "sha256": "f4e686a06ac0b4d36b6974797bab06fc5a80b3e69fbcc4ab99f98e3c37af4177"
+    },
+    {
+      "approved": true,
+      "bytes": 3209122,
+      "dependencies": [],
+      "id": "coupa-choose-together-v1",
+      "path": "game/editions/assets/coupa/choose-together-v1.png",
+      "publication": "public",
+      "sha256": "9fc3d2f24f59dc49d7ea72f5ae7e201b511da5a0ab9607f094f782919ebbe7b6"
+    },
+    {
+      "approved": true,
+      "bytes": 2698028,
+      "dependencies": [],
+      "id": "coupa-repair-the-draft-v1",
+      "path": "game/editions/assets/coupa/repair-the-draft-v1.png",
+      "publication": "public",
+      "sha256": "a1edf3bae43ddeb0c1694dea868a0327ccfed038f64162d08839e84585e1e5e0"
+    },
+    {
+      "approved": true,
+      "bytes": 3180834,
+      "dependencies": [],
+      "id": "coupa-scoped-access-v1",
+      "path": "game/editions/assets/coupa/scoped-access-v1.png",
+      "publication": "public",
+      "sha256": "05865bd2f0a028ab582889736574e776876d0735a91c377dff3c89f04ff9b2a0"
+    },
+    {
+      "approved": true,
+      "bytes": 953677,
+      "dependencies": [],
+      "id": "coupa-inside-village-02-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/listen-then-link-v1.png",
+      "publication": "public",
+      "sha256": "66d93ec13abcc1e3095c435278e7a4599ace4618724c93acdfd4ce0277f8b4d5"
+    },
+    {
+      "approved": true,
+      "bytes": 883373,
+      "dependencies": [],
+      "id": "coupa-inside-village-03-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/room-for-everyone-v1.png",
+      "publication": "public",
+      "sha256": "6939aa6f3ed8253504639cbd8db3d3449f160029211be4d30fc3dac6ce97b3b7"
+    },
+    {
+      "approved": true,
+      "bytes": 929184,
+      "dependencies": [],
+      "id": "coupa-inside-village-04-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/own-the-handoff-v1.png",
+      "publication": "public",
+      "sha256": "d8d385fabf56624d69362f0287deb5236f081994b24dbcabe8af7e96e3bc11cd"
+    },
+    {
+      "approved": true,
+      "bytes": 938978,
+      "dependencies": [],
+      "id": "coupa-source-to-pay-03-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/terms-bridge-v1.png",
+      "publication": "public",
+      "sha256": "774f33dfce5bb1c62c3cb5ff46ff64cf8c6624b1d5d0e92feba7faaac3cca998"
+    },
+    {
+      "approved": true,
+      "bytes": 941689,
+      "dependencies": [],
+      "id": "coupa-source-to-pay-04-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/request-to-order-v1.png",
+      "publication": "public",
+      "sha256": "24e38468dc0836f5cd6f189a074f3e4857628b8a613e4b2009e5ab55d05c38d9"
+    },
+    {
+      "approved": true,
+      "bytes": 927662,
+      "dependencies": [],
+      "id": "coupa-source-to-pay-05-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/received-in-part-v1.png",
+      "publication": "public",
+      "sha256": "f60c7a5f9ab780e052cf5c43fe73ca05f4b6e48383c84a3dbf446ca672ddcda3"
+    },
+    {
+      "approved": true,
+      "bytes": 823416,
+      "dependencies": [],
+      "id": "coupa-product-operations-03-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/review-the-request-v1.png",
+      "publication": "public",
+      "sha256": "6815b2caaf6b65230d7efc90e57fd357e72f20eb6c3978164ba03668d943d431"
+    },
+    {
+      "approved": true,
+      "bytes": 792498,
+      "dependencies": [],
+      "id": "coupa-product-operations-04-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/handle-the-change-v1.png",
+      "publication": "public",
+      "sha256": "1dd7123f8cb633625226f096f5c5da7a848fd3532f04e4796ce70aeb7687d2a2"
+    },
+    {
+      "approved": true,
+      "bytes": 829094,
+      "dependencies": [],
+      "id": "coupa-product-operations-05-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/record-the-delivery-v1.png",
+      "publication": "public",
+      "sha256": "b5d544d7eb6c299976bd102b4c7e63e41337cf23b317dd12a09cccc74e2f23f3"
+    },
+    {
+      "approved": true,
+      "bytes": 876039,
+      "dependencies": [],
+      "id": "coupa-developer-integration-03-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/beyond-page-one-v1.png",
+      "publication": "public",
+      "sha256": "783a1086fa752ca083f2239fb424ba8c014436c6a8838a647ec129fe71464f55"
+    },
+    {
+      "approved": true,
+      "bytes": 886581,
+      "dependencies": [],
+      "id": "coupa-developer-integration-04-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/known-references-v1.png",
+      "publication": "public",
+      "sha256": "dc64a854959590085d322a7d9e9f6dab1a477f6c651ad1d6271e39e058c2b0dc"
+    },
+    {
+      "approved": true,
+      "bytes": 925292,
+      "dependencies": [],
+      "id": "coupa-developer-integration-05-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/draft-validate-explain-v1.png",
+      "publication": "public",
+      "sha256": "3b3671602b4bab7cc611d84fd208c7c2b72b62bb97288274599e09d8eda6e2bd"
+    },
+    {
+      "approved": true,
+      "bytes": 994506,
+      "dependencies": [],
+      "id": "coupa-source-to-pay-06-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/close-the-loop-v1.png",
+      "publication": "public",
+      "sha256": "176b93f6ec0c0ba5bd34e85cc733e8c918e8eb3087604f600f7bd542b6ba8f51"
+    },
+    {
+      "approved": true,
+      "bytes": 896391,
+      "dependencies": [],
+      "id": "coupa-product-operations-06-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/clear-the-exception-v1.png",
+      "publication": "public",
+      "sha256": "54555dc7657f068e77b902f2f474baff16f344bc3b7e933bc40a07a9c2fa38a2"
+    },
+    {
+      "approved": true,
+      "bytes": 969855,
+      "dependencies": [],
+      "id": "coupa-developer-integration-06-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/run-ledger-v1.png",
+      "publication": "public",
+      "sha256": "7a9f66fb74c22ce6cdcc435e2f03dd85bfa4592e79ed53c33b03283edd780752"
+    },
+    {
+      "approved": true,
+      "bytes": 914825,
+      "dependencies": [],
+      "id": "coupa-inside-village-05-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/build-tomorrow-v1.png",
+      "publication": "public",
+      "sha256": "f44ca426cec434334b31cadddab96a036c365f2a0492a39d935c73fe2475c14f"
+    },
+    {
+      "approved": true,
+      "bytes": 997763,
+      "dependencies": [],
+      "id": "coupa-inside-village-06-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/all-of-us-v1.png",
+      "publication": "public",
+      "sha256": "556af50d368e0912547dc03f9b6854b43b13cea825fe5d3d0ad0979ab8e00f3b"
+    },
+    {
+      "approved": true,
+      "bytes": 1008350,
+      "dependencies": [],
+      "id": "coupa-spend-in-motion-02-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/supplier-square-v1.png",
+      "publication": "public",
+      "sha256": "0d539a4f1fc673b5c28622eb29aab7c124f29dc947646829cd00e839f246bd81"
+    },
+    {
+      "approved": true,
+      "bytes": 934944,
+      "dependencies": [],
+      "id": "coupa-spend-in-motion-03-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/paper-jam-v1.png",
+      "publication": "public",
+      "sha256": "27ce16100d34d2c9675dda83ba044413e949324e5fa2aaf5ab895142419f11b8"
+    },
+    {
+      "approved": true,
+      "bytes": 911169,
+      "dependencies": [],
+      "id": "coupa-spend-in-motion-04-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/shared-routes-v1.png",
+      "publication": "public",
+      "sha256": "17ac9b2b0ddbe1810eba1940080b346b7840bd97ac01c18cdf9783039e7b3a64"
+    },
+    {
+      "approved": true,
+      "bytes": 940778,
+      "dependencies": [],
+      "id": "coupa-spend-in-motion-05-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/quarter-end-weather-v1.png",
+      "publication": "public",
+      "sha256": "1cf77eb26a6b2347e95fc5e65e59ecd8391cefd7af1f703dcf7122e84f393f3d"
+    },
+    {
+      "approved": true,
+      "bytes": 987441,
+      "dependencies": [],
+      "id": "coupa-spend-in-motion-06-reveal-v1",
+      "path": "game/editions/assets/coupa/bulk-02/make-room-for-tomorrow-v1.png",
+      "publication": "public",
+      "sha256": "83d2875d09e4c0685980c5be1e1a147f1325ab8eff44b7097f054c2e17e64296"
+    }
+  ],
+  "brands": [
+    {
+      "actorSetId": "coupa-flower",
+      "assetIds": [
+        "coupa-flower",
+        "coupa-wallpaper-network-2024",
+        "coupa-wallpaper-center-2024",
+        "poppins-regular",
+        "poppins-license",
+        "coupa-icon-512"
+      ],
+      "description": "Make room for tomorrow. An illustrated world of connected work.",
+      "fontAssetId": "poppins-regular",
+      "format": "revealline-brand-pack.v1",
+      "heroAssetId": "coupa-wallpaper-network-2024",
+      "iconAssetId": "coupa-icon-512",
+      "id": "coupa",
+      "logoAssetId": "coupa-flower",
+      "name": "Coupa",
+      "publication": "public",
+      "revision": 2,
+      "sources": [
+        {
+          "kind": "official",
+          "title": "Coupa brand library \u2014 official flower identity",
+          "url": "https://drive.google.com/drive/folders/1Bhq6KoBjES--iHt3gWZA2rhjo456Q9j6"
+        },
+        {
+          "kind": "official",
+          "title": "Life at Coupa \u2014 current company values",
+          "url": "https://careers.coupa.com/en/life-at-coupa/"
+        },
+        {
+          "kind": "license",
+          "title": "Poppins \u2014 SIL Open Font License",
+          "url": "https://github.com/google/fonts/tree/main/ofl/poppins"
+        }
+      ],
+      "themeId": "coupa-village",
+      "themeIds": [
+        "coupa-village",
+        "coupa-spend-in-motion-theme",
+        "coupa-inside-village-theme",
+        "coupa-source-to-pay-theme",
+        "coupa-product-operations-theme",
+        "coupa-developer-integration-theme"
+      ]
+    }
+  ],
+  "campaigns": [
+    {
+      "assetIds": [
+        "coupa-spend-city-v2",
+        "coupa-spend-in-motion-02-reveal-v1",
+        "coupa-spend-in-motion-03-reveal-v1",
+        "coupa-spend-in-motion-04-reveal-v1",
+        "coupa-spend-in-motion-05-reveal-v1",
+        "coupa-spend-in-motion-06-reveal-v1"
+      ],
+      "brandId": "coupa",
+      "id": "coupa-spend-in-motion",
+      "modes": [
+        "solo"
+      ],
+      "name": "Spend in Motion",
+      "publication": "public",
+      "revision": "4",
+      "rewardPath": "game/content/company-campaigns/coupa-spend-in-motion.rewards.json",
+      "sourcePath": "game/content/company-campaigns/coupa-spend-in-motion.json"
+    },
+    {
+      "assetIds": [
+        "coupa-inside-village-key",
+        "coupa-inside-village-02-reveal-v1",
+        "coupa-inside-village-03-reveal-v1",
+        "coupa-inside-village-04-reveal-v1",
+        "coupa-inside-village-05-reveal-v1",
+        "coupa-inside-village-06-reveal-v1"
+      ],
+      "brandId": "coupa",
+      "id": "coupa-inside-village",
+      "lessonPath": "game/content/company-campaigns/coupa-inside-village.lessons.json",
+      "modes": [
+        "solo"
+      ],
+      "name": "Inside the Village",
+      "publication": "public",
+      "revision": "4",
+      "sourcePath": "game/content/company-campaigns/coupa-inside-village.json"
+    },
+    {
+      "assetIds": [
+        "coupa-source-to-pay-key",
+        "coupa-choose-together-v1",
+        "coupa-source-to-pay-03-reveal-v1",
+        "coupa-source-to-pay-04-reveal-v1",
+        "coupa-source-to-pay-05-reveal-v1",
+        "coupa-source-to-pay-06-reveal-v1"
+      ],
+      "brandId": "coupa",
+      "id": "coupa-source-to-pay",
+      "lessonPath": "game/content/company-campaigns/coupa-source-to-pay.lessons.json",
+      "modes": [
+        "solo"
+      ],
+      "name": "From Need to Value",
+      "publication": "public",
+      "revision": "4",
+      "rewardPath": "game/content/company-campaigns/coupa-source-to-pay.rewards.json",
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.json"
+    },
+    {
+      "assetIds": [
+        "coupa-product-operations-key",
+        "coupa-repair-the-draft-v1",
+        "coupa-product-operations-03-reveal-v1",
+        "coupa-product-operations-04-reveal-v1",
+        "coupa-product-operations-05-reveal-v1",
+        "coupa-product-operations-06-reveal-v1"
+      ],
+      "brandId": "coupa",
+      "id": "coupa-product-operations",
+      "lessonPath": "game/content/company-campaigns/coupa-product-operations.lessons.json",
+      "modes": [
+        "solo"
+      ],
+      "name": "A Day in Coupa",
+      "publication": "public",
+      "revision": "4",
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.json"
+    },
+    {
+      "assetIds": [
+        "coupa-network-atlas-v2",
+        "coupa-scoped-access-v1",
+        "coupa-developer-integration-03-reveal-v1",
+        "coupa-developer-integration-04-reveal-v1",
+        "coupa-developer-integration-05-reveal-v1",
+        "coupa-developer-integration-06-reveal-v1"
+      ],
+      "brandId": "coupa",
+      "id": "coupa-developer-integration",
+      "lessonPath": "game/content/company-campaigns/coupa-developer-integration.lessons.json",
+      "modes": [
+        "solo"
+      ],
+      "name": "Connect the Network",
+      "publication": "public",
+      "revision": "4",
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.json"
+    }
+  ],
+  "defaultEditionId": "coupa-all",
+  "editions": [
+    {
+      "audience": "everyone",
+      "boot": {
+        "archives": "game/content/company-boot/coupa-all/archives.json",
+        "campaign": "game/content/company-boot/coupa-all/campaign.json",
+        "classes": "game/content/company-boot/coupa-all/classes.json",
+        "packs": "game/content/company-boot/coupa-all/packs.json",
+        "presets": "game/content/company-boot/coupa-all/presets.json",
+        "themes": "game/content/company-boot/coupa-all/themes.json"
+      },
+      "brandId": "coupa",
+      "campaignIds": [
+        "coupa-spend-in-motion",
+        "coupa-inside-village",
+        "coupa-source-to-pay",
+        "coupa-product-operations",
+        "coupa-developer-integration"
+      ],
+      "entryCampaignId": "coupa-spend-in-motion",
+      "format": "revealline-edition.v1",
+      "id": "coupa-all",
+      "modes": [
+        "solo"
+      ],
+      "name": "Coupa Village / LINE",
+      "presentationHistory": [
+        {
+          "bytes": 191970,
+          "id": "13e5c4ff2313ebd3714e6d6461e2468857be6e4997fede8da24542880951df13",
+          "path": "game/editions/retained/coupa-all-before-learning-bonus.json",
+          "sha256": "de8370665d5c99e953326e1861f0817afb3dfc511f0629cdec6f50c6d4b5c709"
+        },
+        {
+          "bytes": 146284,
+          "id": "ecb87b6208f6f55322188ab34d8d9aa63b94064dd346f400bbe2bbbcc9d7870b",
+          "path": "game/editions/retained/coupa-all.json",
+          "sha256": "a48dc47e3e788046de0094c7d34bd74eda0c8776f271131254e26f5ec12e5706"
+        },
+        {
+          "bytes": 148510,
+          "id": "d9deabcadfd9bdc7622da65ebbcc91bdd752db02234009edc3fe09f85812f842",
+          "path": "game/editions/retained/coupa-all-fb207466c.json",
+          "sha256": "680c7f4fdb23619aed0627ea47444c7040a7f208104e4c2abc1a3d486adbe636"
+        },
+        {
+          "bytes": 165206,
+          "id": "c55614c27b1c70e0ac9d0701d3defbfbb03262ecfe3e8458d436958bdaf96561",
+          "path": "game/editions/retained/coupa-all-before-discovery-rewards.json",
+          "sha256": "4d79d4b009d3496712fe6919bb02730dc6fbe4c3d7191908bf75db75a989865b"
+        }
+      ],
+      "publication": "public",
+      "revision": 8
+    },
+    {
+      "audience": "public",
+      "boot": {
+        "archives": "game/content/company-boot/coupa-adventure/archives.json",
+        "campaign": "game/content/company-boot/coupa-adventure/campaign.json",
+        "classes": "game/content/company-boot/coupa-adventure/classes.json",
+        "packs": "game/content/company-boot/coupa-adventure/packs.json",
+        "presets": "game/content/company-boot/coupa-adventure/presets.json",
+        "themes": "game/content/company-boot/coupa-adventure/themes.json"
+      },
+      "brandId": "coupa",
+      "campaignIds": [
+        "coupa-spend-in-motion"
+      ],
+      "entryCampaignId": "coupa-spend-in-motion",
+      "format": "revealline-edition.v1",
+      "id": "coupa-adventure",
+      "modes": [
+        "solo"
+      ],
+      "name": "Spend in Motion / LINE",
+      "presentationHistory": [
+        {
+          "bytes": 29600,
+          "id": "82527f475e9cb0ddbc6bf9701e495e49e08dd635a0e89578c107268373426a05",
+          "path": "game/editions/retained/coupa-adventure-fb207466c.json",
+          "sha256": "ef9a0bf6562fa74ab643d9b214bf1deb1338a1694337cdd822d9cb3cd3c26937"
+        },
+        {
+          "bytes": 33391,
+          "id": "77db1de24b49c04417f38b32002177590c92b353c17e5e9f580f44207e5fccf1",
+          "path": "game/editions/retained/coupa-adventure-before-discovery-rewards.json",
+          "sha256": "e251352b441ac1352802030be0bd6e9e2aed6a48e38dff8eee572c1d26221902"
+        }
+      ],
+      "publication": "public",
+      "revision": 6
+    },
+    {
+      "audience": "culture",
+      "boot": {
+        "archives": "game/content/company-boot/coupa-culture/archives.json",
+        "campaign": "game/content/company-boot/coupa-culture/campaign.json",
+        "classes": "game/content/company-boot/coupa-culture/classes.json",
+        "packs": "game/content/company-boot/coupa-culture/packs.json",
+        "presets": "game/content/company-boot/coupa-culture/presets.json",
+        "themes": "game/content/company-boot/coupa-culture/themes.json"
+      },
+      "brandId": "coupa",
+      "campaignIds": [
+        "coupa-inside-village"
+      ],
+      "entryCampaignId": "coupa-inside-village",
+      "format": "revealline-edition.v1",
+      "id": "coupa-culture",
+      "modes": [
+        "solo"
+      ],
+      "name": "Inside the Village / LINE",
+      "presentationHistory": [
+        {
+          "bytes": 44733,
+          "id": "ed8d7747ad136a06243a2cf8c90dacdc5cf42dc71f5c6448174bde48ea241ae8",
+          "path": "game/editions/retained/coupa-culture-fb207466c.json",
+          "sha256": "12dbf430730aff337133b19e1140efc2c107cc18351b07048eef59c19593bcba"
+        }
+      ],
+      "publication": "public",
+      "revision": 5
+    },
+    {
+      "audience": "learners",
+      "boot": {
+        "archives": "game/content/company-boot/coupa-foundations/archives.json",
+        "campaign": "game/content/company-boot/coupa-foundations/campaign.json",
+        "classes": "game/content/company-boot/coupa-foundations/classes.json",
+        "packs": "game/content/company-boot/coupa-foundations/packs.json",
+        "presets": "game/content/company-boot/coupa-foundations/presets.json",
+        "themes": "game/content/company-boot/coupa-foundations/themes.json"
+      },
+      "brandId": "coupa",
+      "campaignIds": [
+        "coupa-source-to-pay"
+      ],
+      "entryCampaignId": "coupa-source-to-pay",
+      "format": "revealline-edition.v1",
+      "id": "coupa-foundations",
+      "modes": [
+        "solo"
+      ],
+      "name": "From Need to Value / LINE",
+      "presentationHistory": [
+        {
+          "bytes": 50235,
+          "id": "bb5393ff4a73f30346496334ac6004d84766dfbd958dbdfb62d2b3554e20d429",
+          "path": "game/editions/retained/coupa-foundations-before-learning-bonus.json",
+          "sha256": "0ee0079828321ec31cfc6f0683f76ec5a8e90d7065008626793e33195f6a1187"
+        },
+        {
+          "bytes": 46542,
+          "id": "57dd4d5b7e0f8c27662349a8af870862657d700682ac758ad51721a61fdd59aa",
+          "path": "game/editions/retained/coupa-foundations.json",
+          "sha256": "98d2a026fc89b48cbd76c2d2c2d74d491f666583ae819324f855ebd7f309dd90"
+        },
+        {
+          "bytes": 47276,
+          "id": "176ab6d261ed0e4366b570dd14df270d6b27a761404baf17921dc1f974898bd6",
+          "path": "game/editions/retained/coupa-foundations-fb207466c.json",
+          "sha256": "e6694057707e69a8a134836d91bc1879f3555b39f6fc58622a15073454bf7432"
+        }
+      ],
+      "publication": "public",
+      "revision": 7
+    },
+    {
+      "audience": "operators",
+      "boot": {
+        "archives": "game/content/company-boot/coupa-operations/archives.json",
+        "campaign": "game/content/company-boot/coupa-operations/campaign.json",
+        "classes": "game/content/company-boot/coupa-operations/classes.json",
+        "packs": "game/content/company-boot/coupa-operations/packs.json",
+        "presets": "game/content/company-boot/coupa-operations/presets.json",
+        "themes": "game/content/company-boot/coupa-operations/themes.json"
+      },
+      "brandId": "coupa",
+      "campaignIds": [
+        "coupa-product-operations"
+      ],
+      "entryCampaignId": "coupa-product-operations",
+      "format": "revealline-edition.v1",
+      "id": "coupa-operations",
+      "modes": [
+        "solo"
+      ],
+      "name": "A Day in Coupa / LINE",
+      "presentationHistory": [
+        {
+          "bytes": 47693,
+          "id": "99254aaf116f5b68881ef51f36c7b5b9ebfbcf6cce371de90c8234c07862a43d",
+          "path": "game/editions/retained/coupa-operations.json",
+          "sha256": "716bcbd296e6053ca6628b8b55dada9c0489a8893c1044cbc24854899caf6e20"
+        },
+        {
+          "bytes": 48443,
+          "id": "681f63d8afef4e5a89e3d62ac1a2ddaa775cf6d03ad2c3897c64bc2dfb84b922",
+          "path": "game/editions/retained/coupa-operations-fb207466c.json",
+          "sha256": "b00276030dd4642756c75e15120f2d415e07e85dc90b0eacf99cf0ee71574c3d"
+        }
+      ],
+      "publication": "public",
+      "revision": 6
+    },
+    {
+      "audience": "developers",
+      "boot": {
+        "archives": "game/content/company-boot/coupa-developers/archives.json",
+        "campaign": "game/content/company-boot/coupa-developers/campaign.json",
+        "classes": "game/content/company-boot/coupa-developers/classes.json",
+        "packs": "game/content/company-boot/coupa-developers/packs.json",
+        "presets": "game/content/company-boot/coupa-developers/presets.json",
+        "themes": "game/content/company-boot/coupa-developers/themes.json"
+      },
+      "brandId": "coupa",
+      "campaignIds": [
+        "coupa-developer-integration"
+      ],
+      "entryCampaignId": "coupa-developer-integration",
+      "format": "revealline-edition.v1",
+      "id": "coupa-developers",
+      "modes": [
+        "solo"
+      ],
+      "name": "Connect the Network / LINE",
+      "presentationHistory": [
+        {
+          "bytes": 50046,
+          "id": "72ede618c25678c324d39389b9789130c66bb05f461e900d367e9c3f2a878224",
+          "path": "game/editions/retained/coupa-developers.json",
+          "sha256": "ee4d10212133066658ae5543883a5e1def3602a5bc840874223b90bdccac9c06"
+        },
+        {
+          "bytes": 50786,
+          "id": "ab769c5bd0c8e9cfeb09c20c9363a6012d482b911aec1577c6665d264490127a",
+          "path": "game/editions/retained/coupa-developers-fb207466c.json",
+          "sha256": "d4bc46ff2c873a07325b9efec577e1df854b85479f3ba10a89ceb2a0db019d9a"
+        }
+      ],
+      "publication": "public",
+      "revision": 6
+    }
+  ],
+  "format": "revealline-edition-catalog.v1",
+  "publication": "public"
+}

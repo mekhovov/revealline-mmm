@@ -12,6 +12,9 @@ const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 // edition cannot enter. They are intentionally omitted, never fetched assets.
 // Keep this list explicit so a new missing resource still fails the build.
 const conditionalReferences = new Map([
+  // The shared manifest decoder remains for retained edition saves; the locally
+  // owned page and theme hosts never mount the original global compiled skin.
+  ['game/presentation/host.mjs', new Set(['./compiled/'])],
   // Offline navigation is disabled for compiled editions and blocked by the URL guard.
   ['game/app.mjs', new Set(['./downloads.html'])],
   ['game/couch/couch.mjs', new Set(['../downloads.html'])],
@@ -27,6 +30,9 @@ const conditionalReferences = new Map([
   ['game/ui/edition-solo.mjs', new Set(['./art/menu-scenes/droneaid-wordmark-light.svg'])],
 ]);
 const excludedPaths = [
+  /^game\/(?:ui\/art|audio)\/reactions\//,
+  /^game\/presentation\/compiled\/assets\//,
+  /^game\/(?:survivals|overflight|fpv-sim)\//,
   /(?:^|\/)(?:optional-practice|practice|fpv-sim|fpv-simulator|communities|test|node_modules)(?:\/|$)/,
   // The enemy guide shares this small lifecycle observer with the upstream studio.
   /^game\/studio\/(?!preview-readiness\.mjs$)/,
@@ -79,7 +85,7 @@ export async function verifyApp(appRoot = path.join(repository, 'app')) {
     assert.ok(!excludedPaths.some((rule) => rule.test(name)), `Unrelated content is published: ${name}`);
   assert.deepEqual(names.filter((name) => name.endsWith('.html')).sort(),
     ['game/company.html', 'game/couch/index.html', 'game/couch/relay-rescue.html',
-      'game/index.html', 'index.html'], 'Only the branded game entry points may be published');
+      'game/collections/index.html', 'game/index.html', 'game/snake/index.html', 'game/snake/play.html', 'index.html'].sort(), 'Only the branded game entry points may be published');
 
   const catalog = await json('edition-catalog.json');
   assert.equal(catalog.defaultEditionId, 'coupa-all');
@@ -166,13 +172,31 @@ export async function verifyApp(appRoot = path.join(repository, 'app')) {
   assert.deepEqual(new Set(lock.projectionInputs.map(({ path: name }) => name)),
     new Set(['brand.config.json', 'scripts/isolate-brand.mjs', 'scripts/sync-upstream.mjs',
       'branding/access-gate.css', 'branding/access-gate.mjs',
-      'branding/coupa-landing.css', 'branding/coupa-landing.html']));
+      'branding/coupa-landing.css', 'branding/coupa-landing.html', 'scripts/presentation-policy.mjs', 'content/supplemental-files.json', 'content/menu-scenes.json']));
   for (const record of lock.projectionInputs) {
     const bytes = await readFile(path.join(repository, record.path));
     assert.equal(bytes.length, record.bytes, `${record.path} changed; regenerate app/ before publishing`);
     assert.equal(digest(bytes), record.sha256, `${record.path} changed; regenerate app/ before publishing`);
   }
 
+  const config = JSON.parse(await readFile(path.join(repository, 'brand.config.json'), 'utf8'));
+  assert.equal(lock.schemaVersion, 2);
+  assert.deepEqual(lock.enabledModes, config.enabledModes);
+  for (const [directory, records] of [[config.content.files, lock.localContent.files], [config.presentation.files, lock.presentationInputs]]) {
+    assert.deepEqual(await fileNames(path.join(repository, directory)), records.map(row => row.path).sort(), 'Local input inventory must be complete');
+    for (const record of records) {
+      const bytes = await readFile(path.join(repository, directory, record.path));
+      assert.equal(bytes.length, record.bytes, record.path);
+      assert.equal(digest(bytes), record.sha256, `Local input changed; regenerate app/: ${record.path}`);
+    }
+  }
+  const catalogBytes = await readFile(path.join(repository, config.content.catalog));
+  assert.equal(digest(catalogBytes), lock.localContent.catalog.sha256);
+  const supplemental = JSON.parse(await readFile(path.join(repository, config.content.supplemental), 'utf8'));
+  for (const pin of supplemental.files) {
+    const bytes = await readFile(path.join(appRoot, pin.path));
+    assert.equal(bytes.length, pin.bytes); assert.equal(digest(bytes), pin.sha256, pin.path);
+  }
   const runtime = await json('runtime-dependencies.json');
   for (const name of [runtime.entry, runtime.canonicalEntry, ...runtime.resources])
     assertPresent(name, 'runtime-dependencies.json');
@@ -237,6 +261,8 @@ export async function verifyApp(appRoot = path.join(repository, 'app')) {
   const totalBytes = (await Promise.all(names.map((name) => stat(path.join(appRoot, name)))))
     .reduce((sum, entry) => sum + entry.size, 0);
   return { files: names.length, bytes: totalBytes, references, campaigns: 5, missions: missionIds.size,
+    snake: { missions: (await import(pathToFileURL(path.join(appRoot, 'game/snake/classic-catalogue.mjs')).href)).CLASSIC_SNAKE_LEVELS.length, modes: config.enabledModes.snake },
+    collections: { collections: (await json('game/collections/catalog.json')).collections.length, missions: (await json('game/collections/catalog.json')).collections.reduce((sum, item) => sum + item.missions, 0) },
     sourceRevision: inventory.sourceRevision };
 }
 

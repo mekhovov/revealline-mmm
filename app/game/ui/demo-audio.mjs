@@ -1,22 +1,7 @@
 import { SOUNDTRACK_MODES } from '../soundtrack.mjs';
-import { onLocaleChange, t } from '../i18n/index.mjs';
+import { getLocale, onLocaleChange, t } from '../i18n/index.mjs';
 import { musicStatusLabel } from './music-credit.mjs';
-
-function sourceWebsite(track) {
-  for (const value of [
-    ...(Array.isArray(track?.websites) ? track.websites.map((site) => site?.url) : []),
-    track?.rights?.source,
-  ]) {
-    try {
-      const url = new URL(value);
-      if (['https:', 'http:'].includes(url.protocol) && !url.username && !url.password)
-        return url.href;
-    } catch {
-      // Older credits can contain plain text instead of a website.
-    }
-  }
-  return null;
-}
+import { musicCreatorLinks, renderMusicCreatorLinks } from './music-credits.mjs';
 
 /** A view over the host's shared audio transport; owns no shortcuts, player or settings. */
 export function attachDemoAudio({
@@ -41,7 +26,7 @@ export function attachDemoAudio({
     credit = node('div', 'credit', 'demo-audio-credit'),
     title = node('span', 'title'),
     artist = node('span', 'artist'),
-    source = node('a', 'source'),
+    source = node('span', 'source'),
     settings = node('details', 'settings', 'demo-audio-settings'),
     summary = node('summary', 'options'),
     status = node('p', 'status', 'demo-audio-status');
@@ -81,8 +66,6 @@ export function attachDemoAudio({
     musicOnly = option(sounds.control, 'music'),
     musicAndGame = option(sounds.control, 'game');
   settings.insertBefore(playStyle, sounds.control.parentElement);
-  source.setAttribute('target', '_blank');
-  source.setAttribute('rel', 'noopener noreferrer');
   root.setAttribute('data-demo-ui', '');
   root.setAttribute('role', 'group');
   status.setAttribute('role', 'status');
@@ -95,17 +78,57 @@ export function attachDemoAudio({
     operation = 0,
     warning = false,
     draftStyle = null,
-    observedStyle = null;
+    observedStyle = null,
+    displayed = null,
+    displayedLinks = [];
   const state = () => audio?.snapshot?.() ?? null;
   const pausable = (snapshot) =>
     snapshot?.desired && !['blocked', 'error', 'ended'].includes(snapshot.status);
-  function render() {
-    if (disposed) return;
+  function render(force = true) {
+    if (disposed || !active() || doc.hidden) return;
     const snapshot = state(),
       playbackAvailable = !!snapshot && snapshot.playbackAvailable !== false,
       currentStyle = SOUNDTRACK_MODES.includes(snapshot?.style) ? snapshot.style : 'auto';
     if (draftStyle === null || currentStyle !== observedStyle) draftStyle = currentStyle;
     observedStyle = currentStyle;
+    // Position/progress belongs to the shared transport, not this view.
+    const gameSounds = getGameSounds(),
+      links = musicCreatorLinks(snapshot?.track),
+      fields = [
+        getLocale(),
+        !!snapshot,
+        playbackAvailable,
+        !!snapshot?.muted,
+        !!pausable(snapshot),
+        draftStyle,
+        !!gameSounds,
+        Math.max(0, Math.min(1, snapshot?.volume ?? 0)),
+        !!snapshot?.queue?.length,
+        !!audio?.setMuted,
+        !!audio?.play,
+        !!audio?.pause,
+        !!audio?.next,
+        !!audio?.setVolume,
+        !!audio?.selectStyle,
+        snapshot?.track?.title || '',
+        snapshot?.track?.artist || '',
+        snapshot?.notice,
+        snapshot?.status,
+        warning,
+      ];
+    if (
+      !force &&
+      displayed &&
+      fields.every((value, index) => Object.is(value, displayed[index])) &&
+      links.length === displayedLinks.length &&
+      links.every(
+        (link, index) =>
+          link.url === displayedLinks[index].url && link.label === displayedLinks[index].label,
+      )
+    )
+      return;
+    displayed = fields;
+    displayedLinks = links;
     root.setAttribute('aria-label', t('demo:audio.controls'));
     mute.textContent = t(snapshot?.muted ? 'demo:audio.soundOn' : 'demo:audio.soundOff');
     mute.setAttribute('aria-pressed', String(!!snapshot?.muted));
@@ -129,7 +152,7 @@ export function attachDemoAudio({
     style.control.value = draftStyle;
     musicOnly.textContent = t('demo:audio.musicOnly');
     musicAndGame.textContent = t('demo:audio.musicAndGame');
-    sounds.control.value = getGameSounds() ? 'game' : 'music';
+    sounds.control.value = gameSounds ? 'game' : 'music';
     volume.control.value = String(Math.max(0, Math.min(1, snapshot?.volume ?? 0)));
     volume.control.setAttribute(
       'aria-valuetext',
@@ -142,11 +165,8 @@ export function attachDemoAudio({
     style.control.disabled = playStyle.disabled = !playbackAvailable || !audio?.selectStyle;
     title.textContent = snapshot?.track?.title || t('interface:noTrackSelected');
     artist.textContent = snapshot?.track?.artist || t('interface:artistNotRecorded');
-    const url = sourceWebsite(snapshot?.track);
-    source.textContent = t('demo:audio.source');
-    source.hidden = !url;
-    if (url) source.setAttribute('href', url);
-    else source.removeAttribute('href');
+    renderMusicCreatorLinks(source, snapshot?.track, { document: doc });
+    source.hidden = links.length === 0;
     status.textContent = !playbackAvailable
       ? t('demo:audio.unavailable')
       : warning
@@ -200,8 +220,12 @@ export function attachDemoAudio({
   };
   playStyle.onclick = () => run(() => withWake(() => audio?.selectStyle?.(draftStyle)));
   sounds.control.onchange = () => run(() => onGameSoundsChange(sounds.control.value === 'game'));
-  const unsubscribe = audio?.subscribe?.(render),
-    unsubscribeLocale = onLocaleChange(render);
+  const unsubscribe = audio?.subscribe?.(() => render(false)),
+    unsubscribeLocale = onLocaleChange(() => render());
+  const visibilityChanged = () => {
+    if (!doc.hidden) render();
+  };
+  doc.addEventListener('visibilitychange', visibilityChanged);
   render();
   return {
     render,
@@ -209,6 +233,7 @@ export function attachDemoAudio({
       operation++;
       warning = false;
       draftStyle = null;
+      displayed = null;
     },
     contains: (target) => !disposed && !!target && root.contains(target),
     dispose() {
@@ -217,6 +242,7 @@ export function attachDemoAudio({
       operation++;
       unsubscribe?.();
       unsubscribeLocale();
+      doc.removeEventListener('visibilitychange', visibilityChanged);
       for (const element of [mute, toggle, next, playStyle]) element.onclick = null;
       volume.control.oninput = style.control.onchange = sounds.control.onchange = null;
       main.remove();

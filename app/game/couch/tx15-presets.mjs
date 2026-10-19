@@ -35,3 +35,21 @@ export function tx15StickProfile(pad, side = 'right') {
   }
   return validateProfile(p);
 }
+
+// Explicit Solo opt-in: the whole radio belongs to one player. Shared-stick
+// recipes stay movement-only, because their yaw channel belongs to player 1.
+// These centres/endpoints match the tested TX15 USB Mode 2 profile; other radio
+// models or transmitter mixes still require measured channel configuration.
+export function tx15SoloMenuProfile(pad) {
+  const profile = tx15StickProfile(pad);
+  profile.id = 'tx15-full-radio-menus';
+  profile.name = 'TX15 full radio menus';
+  for (const [action, end] of [
+    ['confirm', 1],
+    ['back', -0.996],
+  ])
+    profile.menu[action] = [
+      { kind: 'axis', index: 3, center: 0.004, end, press: 0.75, release: 0.25 },
+    ];
+  return validateProfile(profile);
+}

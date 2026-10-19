@@ -15,6 +15,20 @@ export function settingsPanelBack(root) {
     return false;
   return panelOwners.get(settings)?.back() === true;
 }
+
+/** A nested tool may close after its Settings parent changed responsive layout. */
+export function restoreSettingsPanelFocus(root, opener) {
+  const settings = root?.classList?.contains('native-settings')
+    ? root
+    : root?.querySelector?.('.native-settings');
+  if (
+    !settings ||
+    settings.closest('[hidden],[inert],[aria-hidden="true"]') ||
+    !settings.getClientRects().length
+  )
+    return false;
+  return panelOwners.get(settings)?.restoreFocus(opener) === true;
+}
 const owns = (root, doc, list, { tab, panel }) =>
   root?.ownerDocument === doc &&
   doc?.contains(root) &&
@@ -125,7 +139,37 @@ export function attachSettingsPanels({
     }
     return false;
   };
-  if (root) panelOwners.set(root, { back });
+  const focusable = (element) =>
+    element?.isConnected &&
+    !element.disabled &&
+    element.getAttribute('aria-disabled') !== 'true' &&
+    element.tabIndex >= 0 &&
+    !element.closest('[hidden],[inert],[aria-hidden="true"]') &&
+    element.getClientRects().length &&
+    doc.defaultView?.getComputedStyle(element)?.visibility !== 'hidden';
+  const restoreFocus = (opener) => {
+    if (!current || !owned(current) || !enabled(current)) return false;
+    // Reveal only the still-selected category. A retired/hidden control must
+    // not change categories or be made available by closing a child tool.
+    if (
+      current.panel.contains(opener) &&
+      !opener.disabled &&
+      !opener.closest('[hidden],[inert],[aria-hidden="true"]')
+    ) {
+      if (compact()) view('panel');
+      if (focusable(opener)) {
+        opener.focus({ preventScroll: true });
+        if (compact()) opener.scrollIntoView?.({ block: 'nearest', inline: 'nearest' });
+        return true;
+      }
+    }
+    view('categories');
+    if (!focusable(current.tab)) return false;
+    current.tab.focus({ preventScroll: true });
+    if (compact()) current.tab.scrollIntoView?.({ block: 'nearest', inline: 'nearest' });
+    return true;
+  };
+  if (root) panelOwners.set(root, { back, restoreFocus });
   const cancel = (event) => {
     if (back()) {
       event.preventDefault();

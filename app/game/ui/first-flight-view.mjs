@@ -15,6 +15,7 @@ export function attachFirstFlightView({
 } = {}) {
   const ids = [
     'first-flight-enter',
+    'first-flight-home-enter',
     'first-flight-help-enter',
     'first-flight-entry-status',
     'first-flight-entry-cancel',
@@ -52,6 +53,7 @@ export function attachFirstFlightView({
     listeners.push(() => node.removeEventListener(type, listener));
   }
   listen('enter', 'click', onEnter);
+  listen('home-enter', 'click', onEnter);
   listen('help-enter', 'click', onEnter);
   listen('entry-cancel', 'click', onCancelEnter);
   listen('next', 'click', onNext);
@@ -112,8 +114,9 @@ export function attachFirstFlightView({
         : null;
     current = { request: lesson ? request : null };
     $('enter').hidden = !!lesson || !entry.available;
+    $('home-enter').hidden = !!lesson || !entry.homeAvailable;
     $('help-enter').hidden = !!lesson || !entry.helpAvailable;
-    $('enter').disabled = $('help-enter').disabled = !!entry.pending;
+    $('enter').disabled = $('home-enter').disabled = $('help-enter').disabled = !!entry.pending;
     $('entry-cancel').hidden = !entry.pending;
     const entryMessage = typeof entry.message === 'string' ? entry.message : '';
     text('entry-status', entryMessage);

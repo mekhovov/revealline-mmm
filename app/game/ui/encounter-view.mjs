@@ -3,10 +3,21 @@ import { geometryForRun } from '../core/geometry.mjs';
 import { CELL, FIXED_DT } from '../core/registry.mjs';
 import { encounterCutCells, encounterShieldIds } from '../core/encounter.mjs';
 import { classicEffectActive } from '../core/classic-state.mjs';
-import { isClassicRuleset } from '../core/versions.mjs';
+import {
+  baseLevelVersion,
+  isClassicRuleset,
+  isRunningEnemyRuleset,
+  resolveVersions,
+} from '../core/versions.mjs';
 
-const frozenActors = (state) =>
-  isClassicRuleset(state.ruleset) && classicEffectActive(state, 'enemy-freeze');
+const classicRun = (state) =>
+  isClassicRuleset(
+    isRunningEnemyRuleset(state.ruleset)
+      ? resolveVersions({ levelVersion: baseLevelVersion(state.level) }).ruleset
+      : state.ruleset,
+  );
+
+const frozenActors = (state) => classicRun(state) && classicEffectActive(state, 'enemy-freeze');
 
 /** Read-only cues shared by live play and replay rendering. No presentation clock owns a phase. */
 export function encounterView(state) {
@@ -30,7 +41,7 @@ export function encounterView(state) {
   const remaining = state.cells.reduce((sum, cell) => sum + Number(cell === CELL.FIELD), 0);
   const cutCells = encounterCutCells(state);
   const ended = state.status === 'lost';
-  const clock = isClassicRuleset(state.ruleset) ? state.classic.actorTick : state.tick;
+  const clock = classicRun(state) ? state.classic.actorTick : state.tick;
   const seconds = ended ? 0 : Math.max(0, ((e.phaseEndTick ?? clock) - clock) * FIXED_DT);
   const enemy = state.enemies.find((item) => item.id === recipe.enemyId);
   const frozen = frozenActors(state);
@@ -126,7 +137,7 @@ export function drawEncounterCore(ctx, state, enemy, palette, reduced) {
   if (!e || enemy.id !== state.level.encounter.enemyId || e.defeated) return;
   const open = e.phase === 'open';
   const spread = open ? 24 : e.stage === 'transition' ? 21 : 18;
-  const time = isClassicRuleset(state.ruleset) ? state.classic.actorTime : state.time;
+  const time = classicRun(state) ? state.classic.actorTime : state.time;
   const offset = spread + (open && !reduced ? Math.round(Math.sin(time * 3) * 2) : 0);
   const x = enemy.x * 16,
     y = enemy.y * 16;

@@ -34,7 +34,8 @@ function configFromPage(documentRef = globalThis.document, locationRef = globalT
   if (
     config.optionalPacks !== undefined &&
     (!Array.isArray(config.optionalPacks) ||
-      config.optionalPacks.length > 12 ||
+      // These are descriptive published entries, not imported-pack slots.
+      // New official packs must not make a valid release lose offline support.
       config.optionalPacks.some(
         (p) => !p || typeof p.name !== 'string' || !p.name.length || p.name.length > 120,
       ))

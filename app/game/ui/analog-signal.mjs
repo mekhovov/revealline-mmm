@@ -57,30 +57,128 @@ export function applyAnalogSignalNoise(
     randomState ^= randomState << 5;
     return (randomState >>> 0) / 4294967296;
   };
-  const clusters = [random() * height, random() * height, random() * height];
+  const cluster0 = random() * height,
+    cluster1 = random() * height,
+    cluster2 = random() * height,
+    radius = Math.max(2, height * 0.065),
+    streakLimit = Math.max(2, width * 0.045);
   for (let y = 0; y < height; y++) {
     const envelope = Math.max(
-      ...clusters.map((center) =>
-        Math.max(0, 1 - Math.abs(y - center) / Math.max(2, height * 0.065)),
-      ),
+      Math.max(0, 1 - Math.abs(y - cluster0) / radius),
+      Math.max(0, 1 - Math.abs(y - cluster1) / radius),
+      Math.max(0, 1 - Math.abs(y - cluster2) / radius),
     );
-    const rowBias = (random() - 0.5) * (3 + envelope * 10);
+    const rowBias = (random() - 0.5) * (3 + envelope * 10),
+      grainScale = 28 + envelope * 18,
+      streakChance = 0.0015 + envelope * 0.025;
     let tail = 0,
       streak = 0,
       length = 0;
     for (let x = 0; x < width; x++) {
       const index = (y * width + x) * 4;
       tail = tail * 0.35 + (random() - 0.5) * 28;
-      const grain = (random() + random() - 1) * (28 + envelope * 18) + tail;
-      if (length <= 0 && random() < 0.0015 + envelope * 0.025) {
-        length = 1 + Math.floor(random() * Math.max(2, width * 0.045));
+      const grain = (random() + random() - 1) * grainScale + tail;
+      if (length <= 0 && random() < streakChance) {
+        length = 1 + Math.floor(random() * streakLimit);
         streak = (random() < 0.5 ? -1 : 1) * (32 + random() * 48);
       }
       const impulse = length-- > 0 ? streak : 0;
-      for (let channel = 0; channel < 3; channel++)
-        output[index + channel] = base[index + channel] + (grain + rowBias + impulse) * strength;
+      const noise = (grain + rowBias + impulse) * strength;
+      output[index] = base[index] + noise;
+      output[index + 1] = base[index + 1] + noise;
+      output[index + 2] = base[index + 2] + noise;
       output[index + 3] = 255;
     }
   }
   return output;
+}
+
+/** A small prepared monochrome atlas. Animation only composites existing pixels;
+ * it never reads the displayed picture or loops over full-size image pixels. */
+export function createSignalNoiseAtlas({
+  canvasFactory = () => document.createElement('canvas'),
+  onContextLoss = () => {},
+  onContextRestored = () => {},
+} = {}) {
+  let canvas = null,
+    failed = false,
+    lost = false;
+  const contextLost = () => {
+    lost = true;
+    onContextLoss({ source: 'signal-noise', owner: canvas });
+  };
+  const contextRestored = () => {
+    const owner = canvas;
+    lost = false;
+    clear();
+    onContextRestored({ source: 'signal-noise', owner });
+  };
+  const size = 64,
+    frames = 4;
+  function clear() {
+    const wasLost = lost,
+      owner = canvas;
+    lost = false;
+    canvas?.removeEventListener?.('contextlost', contextLost);
+    canvas?.removeEventListener?.('contextrestored', contextRestored);
+    if (canvas) canvas.width = canvas.height = 0;
+    canvas = null;
+    failed = lost = false;
+    if (wasLost) onContextRestored({ source: 'signal-noise', owner, retired: true });
+  }
+  function prepare() {
+    if (lost) return null;
+    if (canvas || failed) return canvas;
+    try {
+      canvas = canvasFactory();
+      canvas.width = size * frames;
+      canvas.height = size;
+      canvas.addEventListener?.('contextlost', contextLost);
+      canvas.addEventListener?.('contextrestored', contextRestored);
+      const ctx = canvas.getContext('2d');
+      const base = new Uint8ClampedArray(size * size * 4).fill(128);
+      for (let i = 3; i < base.length; i += 4) base[i] = 255;
+      const pixels = ctx.createImageData(size, size);
+      for (let frame = 0; frame < frames; frame++) {
+        applyAnalogSignalNoise(base, size, size, frame, pixels.data, { seed: 0x9137bcad });
+        ctx.putImageData(pixels, frame * size, 0);
+      }
+      return canvas;
+    } catch {
+      clear();
+      failed = true;
+      return null;
+    }
+  }
+  return Object.freeze({
+    resourceSnapshot() {
+      const pixels = (canvas?.width ?? 0) * (canvas?.height ?? 0);
+      return { canvases: Number(pixels > 0), pixels, rgbaBytesEstimate: pixels * 4, lost };
+    },
+    prepare,
+    clear,
+    draw(ctx, width, height, frame, strength) {
+      const atlas = prepare();
+      if (!atlas || !(strength > 0)) return;
+      ctx.save();
+      try {
+        ctx.globalCompositeOperation = 'soft-light';
+        ctx.globalAlpha *= strength;
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(
+          atlas,
+          (Math.max(0, frame) % frames) * size,
+          0,
+          size,
+          size,
+          0,
+          0,
+          width,
+          height,
+        );
+      } finally {
+        ctx.restore();
+      }
+    },
+  });
 }

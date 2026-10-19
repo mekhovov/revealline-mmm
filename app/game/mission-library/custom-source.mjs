@@ -32,6 +32,7 @@ export async function customLibrarySources(
   owners,
   {
     isOfficial = () => false,
+    assertCurrent = () => {},
     compatibility,
     describe,
     availability,
@@ -45,7 +46,7 @@ export async function customLibrarySources(
   if (
     !Array.isArray(owners) ||
     owners.length > 12 ||
-    [isOfficial, compatibility, describe, availability, launch].some(
+    [isOfficial, compatibility, describe, availability, launch, assertCurrent].some(
       (fn) => typeof fn !== 'function',
     ) ||
     [prepare, progress, progressState, card].some(
@@ -53,9 +54,11 @@ export async function customLibrarySources(
     )
   )
     throw new TypeError('Custom browsing needs bounded owners and explicit host adapters.');
+  assertCurrent();
   const sources = [],
     packIds = new Set();
   for (const owner of owners) {
+    assertCurrent();
     const { pack, entries } = owner ?? {};
     if (
       !pack ||
@@ -79,6 +82,7 @@ export async function customLibrarySources(
       byCampaign.set(entry.campaign.id, entry);
     }
     for (const reference of resolved) {
+      assertCurrent();
       const entry = byCampaign.get(reference.campaign.id);
       if (!entry || canonicalJSON(entry.campaign) !== canonicalJSON(reference.campaign))
         throw new TypeError('Custom campaign differs from its prepared installed pack.');
@@ -98,10 +102,12 @@ export async function customLibrarySources(
       }
     }
     const official = await isOfficial(pack);
+    assertCurrent();
     if (typeof official !== 'boolean')
       throw new TypeError('Official verification must return an explicit boolean.');
     if (official) continue;
     const { sha256: editionId } = await preparedPackIdentity(pack);
+    assertCurrent();
     const rows = [],
       descriptions = new WeakMap(),
       originals = new WeakMap();
@@ -114,6 +120,7 @@ export async function customLibrarySources(
       assertEntryCurrent(binding.entry, original);
     }
     for (const reference of resolved) {
+      assertCurrent();
       const entry = byCampaign.get(reference.campaign.id);
       assertEntryCurrent(entry, reference); // Async verification cannot adopt mutated clones.
       const key = campaignKey(reference.campaign);
@@ -131,6 +138,7 @@ export async function customLibrarySources(
         const binding = Object.freeze({ pack, entry, level, levelIndex, selection });
         originals.set(binding, reference);
         const modes = compatibility(binding);
+        assertCurrent();
         if (
           !Array.isArray(modes) ||
           new Set(modes).size !== modes.length ||
@@ -139,6 +147,7 @@ export async function customLibrarySources(
           throw new TypeError('Custom mode compatibility must be an explicit supported-mode list.');
         if (!modes.length) continue;
         const info = describe(binding);
+        assertCurrent();
         if (
           !info ||
           typeof info.rules !== 'string' ||
@@ -200,5 +209,6 @@ export async function customLibrarySources(
       card,
     });
   }
+  assertCurrent();
   return sources;
 }

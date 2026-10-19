@@ -1,9 +1,18 @@
+import { isSnakePursuitLevel, isPursuitLevel, isRunningEnemyLevel } from './versions.mjs';
+import { validatePursuitGoals } from '../hunt/pursuit-goals.mjs';
+import {
+  runningEnemyBaseLevel,
+  runningEnemyGeometry,
+  runningEnemyCopy,
+  validateRunningEnemyDefinition,
+} from '../hunt/running-enemy-definition.mjs';
 import { DEFAULT_RULES } from './registry.mjs';
 import { boundedJSON, exactKeys } from '../data-json.mjs';
 import { resolveEncounterDescriptor } from './encounter.mjs';
 import { resolveClassicDefinition } from './classic-definition.mjs';
 import { foundationGeometry, validateFoundationOccupants } from './foundations.mjs';
 import { validFieldCourse } from './field-course.mjs';
+import { SNAKE_LEVEL_VERSION, snakeBaseLevel, validateSnakeDefinition } from '../snake/rules.mjs';
 
 const number = (v, lo, hi) => Number.isFinite(v) && v >= lo && v <= hi;
 const integer = (v, lo, hi) => Number.isInteger(v) && v >= lo && v <= hi;
@@ -269,7 +278,33 @@ export function validateLevel(level) {
       level && typeof level === 'object' ? Object.getOwnPropertyDescriptor(level, 'version') : null;
     if (version && !Object.hasOwn(version, 'value'))
       return { valid: false, errors: ['level version must be own data'] };
-    const sentinel = version?.value === 'xonix-level.v8';
+    if (version?.value === SNAKE_LEVEL_VERSION) {
+      const base = normalizedLevel(snakeBaseLevel(level));
+      validateSnakeDefinition(level.snake, base.classic.hunt);
+      return { valid: true, errors: [] };
+    }
+    if (level && Object.hasOwn(level, 'snake') && !isSnakePursuitLevel(level))
+      return { valid: false, errors: ['Snake requires its explicit successor edition.'] };
+    if (isRunningEnemyLevel(level)) {
+      const owned = runningEnemyCopy(level);
+      const base = normalizedLevel(runningEnemyBaseLevel(owned));
+      validateRunningEnemyDefinition(owned, base);
+      if (isPursuitLevel(owned))
+        validatePursuitGoals(
+          owned.pursuit,
+          owned.runningEnemies.combatPatrols.actors.slice(
+            -owned.runningEnemies.hunt.targets.length,
+          ),
+          runningEnemyGeometry(base),
+        );
+      else if (Object.hasOwn(owned, 'pursuit'))
+        throw new TypeError('Pursuit requires its explicit successor edition.');
+      return { valid: true, errors: [] };
+    }
+    if (level && Object.hasOwn(level, 'runningEnemies'))
+      return { valid: false, errors: ['Running enemies requires its explicit successor edition.'] };
+    const hunt = version?.value === 'xonix-level.v9';
+    const sentinel = version?.value === 'xonix-level.v8' || hunt;
     const directional = version?.value === 'xonix-level.v7' || sentinel;
     const relays = version?.value === 'xonix-level.v6' || directional;
     const foundations = version?.value === 'xonix-level.v5' || relays;
@@ -294,7 +329,7 @@ export function validateLevel(level) {
       maxBytes: 128 * 1024,
       maxNodes: 10000,
       maxDepth: 12,
-      maxArray: 100,
+      maxArray: 512,
     });
     exactKeys(
       owned,
@@ -381,6 +416,34 @@ export function validateLevel(level) {
 }
 
 export function normalizedLevel(level) {
+  if (Object.getOwnPropertyDescriptor(level ?? {}, 'version')?.value === SNAKE_LEVEL_VERSION) {
+    const base = normalizedLevel(snakeBaseLevel(level));
+    const snake = validateSnakeDefinition(level.snake, base.classic.hunt);
+    return { ...base, version: SNAKE_LEVEL_VERSION, snake };
+  }
+  if (isRunningEnemyLevel(level)) {
+    const owned = runningEnemyCopy(level);
+    const base = normalizedLevel(runningEnemyBaseLevel(owned));
+    validateRunningEnemyDefinition(owned, base);
+    const pursuit = isPursuitLevel(owned)
+      ? validatePursuitGoals(
+          owned.pursuit,
+          owned.runningEnemies.combatPatrols.actors.slice(
+            -owned.runningEnemies.hunt.targets.length,
+          ),
+          runningEnemyGeometry(base),
+        )
+      : null;
+    if (!pursuit && Object.hasOwn(owned, 'pursuit'))
+      throw new TypeError('Pursuit requires its explicit successor edition.');
+    return {
+      ...base,
+      version: owned.version,
+      runningEnemies: owned.runningEnemies,
+      ...(pursuit ? { pursuit } : {}),
+    };
+  }
+
   if (
     [
       'xonix-level.v4',
@@ -388,13 +451,14 @@ export function normalizedLevel(level) {
       'xonix-level.v6',
       'xonix-level.v7',
       'xonix-level.v8',
+      'xonix-level.v9',
     ].includes(Object.getOwnPropertyDescriptor(level ?? {}, 'version')?.value)
   )
     level = boundedJSON(level, {
       maxBytes: 128 * 1024,
       maxNodes: 10000,
       maxDepth: 12,
-      maxArray: 100,
+      maxArray: 512,
     });
   const result = validateLevel(level);
   if (!result.valid) throw new TypeError(`Invalid level: ${result.errors.join('; ')}`);
@@ -410,6 +474,7 @@ export function normalizedLevel(level) {
       'xonix-level.v6',
       'xonix-level.v7',
       'xonix-level.v8',
+      'xonix-level.v9',
     ].includes(level.version)
   )
     for (const item of [

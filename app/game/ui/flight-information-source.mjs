@@ -1,6 +1,11 @@
 import { t } from '../i18n/index.mjs';
 import { EPS } from '../core/geometry.mjs';
-import { isClassicRuleset } from '../core/versions.mjs';
+import {
+  baseLevelVersion,
+  isClassicRuleset,
+  isRunningEnemyRuleset,
+  resolveVersions,
+} from '../core/versions.mjs';
 import { classicEffectActive } from '../core/classic-state.mjs';
 import { foundationCompatibleView as classicView } from './foundation-view.mjs';
 import { encounterView } from './encounter-view.mjs';
@@ -69,11 +74,14 @@ const rulesets = new Set([
   'xonix-core.v7',
   'xonix-core.v8',
   'xonix-core.v9',
+  'xonix-core.v10',
+  'xonix-core.v11',
+  'xonix-core.v12',
 ]);
 const finite = (value) => Number.isFinite(value) && value >= 0;
 const integer = (value) => Number.isSafeInteger(value) && value >= 0;
-const check = (condition, message) => {
-  if (!condition) throw new TypeError(message);
+const check = (condition, key) => {
+  if (!condition) throw new TypeError(t(key));
 };
 const freeze = (value) => {
   if (value && typeof value === 'object' && !Object.isFrozen(value)) {
@@ -94,13 +102,17 @@ export function flightEventKind(type) {
  * No DOM, wall clock, simulation mutation, arbitration or layout qualification.
  */
 export function flightInformationSnapshot(run, { started, paused }) {
-  check(run && typeof run === 'object', t('interface:anAcceptedRunIsRequired'));
+  check(run && typeof run === 'object', 'interface:anAcceptedRunIsRequired');
   check(
     typeof started === 'boolean' && typeof paused === 'boolean',
-    t('interface:hostStateIsRequired'),
+    'interface:hostStateIsRequired',
   );
   const issues = [];
-  const classicExpected = isClassicRuleset(run.ruleset);
+  const classicExpected = isClassicRuleset(
+    isRunningEnemyRuleset(run.ruleset)
+      ? resolveVersions({ levelVersion: baseLevelVersion(run.level) }).ruleset
+      : run.ruleset,
+  );
   const encounterExpected = Boolean(run.level?.encounter);
   const classic = classicView(run);
   // This richer geometry projection belongs to paused reading. Live event
@@ -235,12 +247,12 @@ export function flightInformationSnapshot(run, { started, paused }) {
 export function flightInformationBatch({ owner, sequence, events, messages }) {
   check(
     typeof owner?.attempt === 'string' && owner.attempt.length > 0 && integer(owner.generation),
-    t('interface:anAcceptedAttemptAndPresentationGenerationAreRequired'),
+    'interface:anAcceptedAttemptAndPresentationGenerationAreRequired',
   );
-  check(integer(sequence), t('interface:aHostFeedbackSequenceIsRequired'));
+  check(integer(sequence), 'interface:aHostFeedbackSequenceIsRequired');
   check(
     Array.isArray(events) && Array.isArray(messages),
-    t('interface:aCompleteEventBatchIsRequired'),
+    'interface:aCompleteEventBatchIsRequired',
   );
   const facts = events.map((event, index) => {
     check(
@@ -249,7 +261,7 @@ export function flightInformationBatch({ owner, sequence, events, messages }) {
         event.type.length > 0 &&
         integer(event.tick) &&
         finite(event.time),
-      t('interface:typedEngineEventIdentityAndClockAreRequired'),
+      'interface:typedEngineEventIdentityAndClockAreRequired',
     );
     return {
       index,
@@ -272,13 +284,13 @@ export function flightInformationBatch({ owner, sequence, events, messages }) {
       integer(message.eventIndex) &&
         message.eventIndex < facts.length &&
         message.eventIndex >= previous,
-      t('interface:warningObservationsMustFollowTheirSourceEventOrder'),
+      'interface:warningObservationsMustFollowTheirSourceEventOrder',
     );
     check(
       typeof message.fullText === 'string' &&
         (message.cue === null || typeof message.cue === 'string') &&
         finite(message.expiresAt),
-      t('interface:retainTheCompleteWarningTextCueAndSimulationExpiry'),
+      'interface:retainTheCompleteWarningTextCueAndSimulationExpiry',
     );
     previous = message.eventIndex;
     const fact = facts[message.eventIndex];

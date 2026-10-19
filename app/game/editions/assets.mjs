@@ -1,5 +1,6 @@
 import { required } from '../data-json.mjs';
 import { resolveEditionAssets } from './model.mjs';
+import { COMPANY_PRESENTATION_MAX_BYTES } from './package-budget.mjs';
 
 /** Verify selected dependency bytes before activating a presentation. Sequential
  * streaming bounds peak memory and never loads another edition's artwork. */
@@ -21,7 +22,8 @@ export async function verifyEditionAssets(
     for (const dependency of asset.dependencies) requested.add(dependency);
   }
   required(
-    [...requested].reduce((sum, id) => sum + assets.get(id).bytes, 0) <= 64 * 1024 * 1024,
+    [...requested].reduce((sum, id) => sum + assets.get(id).bytes, 0) <=
+      COMPANY_PRESENTATION_MAX_BYTES,
     'Presentation exceeds its offline budget.',
   );
   const verified = [];

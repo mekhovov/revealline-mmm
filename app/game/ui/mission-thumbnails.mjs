@@ -15,29 +15,37 @@ export function createMissionPictureThumbnails({
   readMedia,
   render,
   acquire = acquireEarnedPicture,
+  isActive = () => true,
   onUpdate = () => {},
 } = {}) {
   let active = null,
     closed = false,
     pendingButtons = [];
+  const notify = () => {
+    if (!closed && isActive()) onUpdate();
+  };
   function cancel() {
     active?.abort();
     active = null;
     for (const button of pendingButtons)
       if (button.dataset.pictureState === 'loading') button.dataset.pictureState = 'unavailable';
-    if (pendingButtons.length) onUpdate();
+    if (pendingButtons.length) notify();
     pendingButtons = [];
   }
   return Object.freeze({
     async refresh({ library, entries, entry, themeId, targets }) {
       cancel();
-      if (closed) return;
+      if (closed || !isActive()) return;
       const controller = new AbortController();
       active = controller;
       const signal = controller.signal,
         catalog = createPictureIdentityCatalog({ entries }),
         executionKey = campaignKey(entry.campaign),
         receipts = new Map((library.pictureReceipts ?? []).map((row) => [row.galleryKey, row]));
+      const current = () => {
+        if (closed || active !== controller || !isActive()) controller.abort();
+        cancelled(signal);
+      };
       const jobs = [];
       for (const { button, level, earned } of targets) {
         delete button.dataset.missionArtwork;
@@ -65,8 +73,9 @@ export function createMissionPictureThumbnails({
       }
       pendingButtons = jobs.map((job) => job.button);
       for (const button of pendingButtons) button.dataset.pictureState = 'loading';
-      onUpdate();
+      notify();
       try {
+        current();
         const needsMedia = jobs.some((job) => job.receipt?.presentationPin.kind === 'still');
         let media = null,
           mediaError = null;
@@ -77,10 +86,11 @@ export function createMissionPictureThumbnails({
             mediaError = error;
           }
         }
-        cancelled(signal);
+        current();
         for (const job of jobs) {
           let result = null;
           try {
+            current();
             if (job.receipt?.presentationPin.kind === 'still' && mediaError) throw mediaError;
             result = await acquire(
               {
@@ -92,16 +102,16 @@ export function createMissionPictureThumbnails({
               },
               { signal },
             );
-            cancelled(signal);
+            current();
             if (!result.picture) continue;
             const image = await render(result.picture, result.backdrop, { signal });
-            cancelled(signal);
+            current();
             if (active !== controller || !job.button.isConnected) continue;
             if (!/^data:image\/(?:png|jpeg|webp);base64,/u.test(image ?? ''))
               throw new Error(t('interface:aMissionThumbnailNeedsAnOwnedImage'));
             job.button.dataset.missionArtwork = image;
             job.button.dataset.pictureState = 'earned';
-            onUpdate();
+            notify();
           } catch (error) {
             if (signal.aborted || error.name === 'AbortError') return;
             // The concealed/unavailable state is honest. Never show a different
@@ -114,7 +124,7 @@ export function createMissionPictureThumbnails({
               job.button.dataset.pictureState === 'loading'
             ) {
               job.button.dataset.pictureState = 'unavailable';
-              onUpdate();
+              notify();
             }
           }
         }
@@ -125,7 +135,7 @@ export function createMissionPictureThumbnails({
           for (const button of pendingButtons)
             if (button.dataset.pictureState === 'loading')
               button.dataset.pictureState = 'unavailable';
-          if (pendingButtons.length) onUpdate();
+          if (pendingButtons.length) notify();
           active = null;
           pendingButtons = [];
         }

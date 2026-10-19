@@ -1,0 +1,172 @@
+/* Shared theme paint overrides these original layout defaults. */
+@layer legacy {
+  /* An earned picture owns the stage during its short celebration hold.
+   Preserve the board's aspect ratio, including portrait and ultrawide artwork. */
+  body.field-kit.game-shell:is([data-win-picture='celebrating'], [data-win-picture='settled']) {
+    overflow: hidden;
+  }
+  body.field-kit.game-shell:is([data-win-picture='celebrating'], [data-win-picture='settled'])
+    .arena-panel
+    > .arena-shell {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 8;
+    display: grid !important;
+    place-items: center;
+    width: 100% !important;
+    height: 100dvh !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0;
+    transform: none !important;
+    aspect-ratio: auto !important;
+    background: #080e16;
+    box-shadow: none;
+  }
+  body.field-kit.game-shell:is([data-win-picture='celebrating'], [data-win-picture='settled'])
+    #game-canvas {
+    position: relative !important;
+    inset: auto !important;
+    width: min(100vw, calc(100dvh * var(--board-aspect, 2))) !important;
+    height: auto !important;
+    max-height: 100dvh !important;
+    aspect-ratio: var(--board-ratio, 2 / 1);
+  }
+  body.field-kit.game-shell:is([data-win-picture='celebrating'], [data-win-picture='settled'])
+    .shell-bar {
+    position: fixed !important;
+    inset: max(12px, env(safe-area-inset-top, 0px)) auto auto
+      max(12px, env(safe-area-inset-left, 0px)) !important;
+    z-index: 9;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-color: transparent !important;
+    pointer-events: none;
+  }
+  body.field-kit.game-shell:is([data-win-picture='celebrating'], [data-win-picture='settled'])
+    .shell-bar
+    > * {
+    visibility: hidden;
+  }
+  body.field-kit.game-shell:is([data-win-picture='celebrating'], [data-win-picture='settled'])
+    .shell-bar
+    > #shell-menu {
+    visibility: visible;
+    pointer-events: auto;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    background: #111c2acc;
+    border: 1px solid #fff0c347;
+    border-radius: 8px;
+  }
+  body:is([data-win-picture='celebrating'], [data-win-picture='settled']) #shell-menu > *,
+  body:is([data-win-picture='celebrating'], [data-win-picture='settled']) #shell-menu::after {
+    display: none;
+  }
+  body:is([data-win-picture='celebrating'], [data-win-picture='settled']) #shell-menu::before {
+    content: '☰';
+    display: block;
+    color: #fff4d4;
+    font: 22px / 1 sans-serif;
+  }
+  .win-picture-caption {
+    position: absolute;
+    z-index: 3;
+    inset: max(64px, env(safe-area-inset-top, 0px)) 16px auto;
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+    text-align: center;
+    pointer-events: none;
+    color: #fff9e9;
+    text-shadow:
+      0 2px 16px #000c,
+      0 1px 3px #000;
+    animation: win-caption-arrive 650ms ease-out both;
+  }
+  .win-picture-caption[hidden] {
+    display: none;
+  }
+  .win-picture-mark {
+    color: #ffe4a1;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .win-picture-caption strong {
+    font-family: var(--fk-font-display);
+    font-size: clamp(30px, 5vw, 58px);
+    font-weight: 600;
+    line-height: 1;
+  }
+  .win-picture-caption > span:last-child {
+    font: 500 var(--fk-text-secondary, 14px) / 1.5 var(--fk-font-ui);
+  }
+  body[data-win-picture='settled'] .win-picture-caption {
+    opacity: 0;
+    animation: none;
+    transition: opacity 700ms ease-out;
+  }
+  body.field-kit.game-shell:is([data-win-picture='celebrating'], [data-win-picture='settled'])
+    .picture-return {
+    position: fixed;
+    inset: auto max(22px, env(safe-area-inset-right, 0px))
+      max(22px, env(safe-area-inset-bottom, 0px)) auto;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 1px solid #fff0c36b;
+    border-radius: 999px;
+    background: #111c2aeb;
+    color: #fff4d4;
+    font: 600 var(--fk-text-body, 16px) / 1.3 var(--fk-font-ui);
+    box-shadow: 0 4px 24px #0004;
+    backdrop-filter: blur(12px);
+    transition:
+      background 160ms,
+      border-color 160ms;
+  }
+  body[data-win-picture] .picture-return:hover {
+    background: #273443;
+    border-color: #ffe4a1;
+  }
+  body[data-win-picture] .picture-return:focus-visible {
+    outline: 2px solid #ffe4a1;
+    outline-offset: 4px;
+  }
+  @keyframes win-caption-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-height: 420px) {
+    .win-picture-caption {
+      top: max(18px, env(safe-area-inset-top, 0px));
+    }
+    .win-picture-mark {
+      display: none;
+    }
+  }
+  body[data-effects='reduced'] .win-picture-caption {
+    animation: none;
+    transition: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .win-picture-caption {
+      animation: none;
+      transition: none;
+    }
+  }
+}

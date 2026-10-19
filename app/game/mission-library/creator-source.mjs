@@ -16,19 +16,25 @@ export async function installedCreatorLibrarySources({
   profileForEdition,
   launchVersus,
   loadOptions = {},
+  assertCurrent = () => {},
   launch = (href) => {
     location.href = href;
   },
 } = {}) {
+  if (typeof assertCurrent !== 'function')
+    throw new TypeError('Creator browsing needs a synchronous current-owner guard.');
+  assertCurrent();
   const store = suppliedStore ?? createCreatorStore();
   const sources = [];
   let manifests;
   try {
-    manifests = await installedCreatorManifests(store);
+    manifests = await installedCreatorManifests(store, { assertCurrent });
   } finally {
     if (!suppliedStore) store.close();
   }
+  assertCurrent();
   for (const manifest of manifests) {
+    assertCurrent();
     const catalog = createContentExecutionCatalog(manifest.content.project, { mode: 'solo' });
     const entries = catalog.journey().missions;
     let progress = null;
@@ -37,10 +43,16 @@ export async function installedCreatorLibrarySources({
         ? await profileForEdition(manifest.editionId)
         : await createJourneyBackend({
             profileKey: creatorProfileKey(manifest.editionId),
+            canRunProgressWork() {
+              assertCurrent();
+              return true;
+            },
           }).readState();
     } catch {
       /* Browsing remains available when progress storage is unavailable. */
     }
+    // A storage fallback must never swallow a retired browsing owner.
+    assertCurrent();
     const snapshot = () =>
       typeof progress?.snapshot === 'function'
         ? progress.snapshot()
@@ -133,5 +145,6 @@ export async function installedCreatorLibrarySources({
       },
     });
   }
+  assertCurrent();
   return sources;
 }

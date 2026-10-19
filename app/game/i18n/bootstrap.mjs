@@ -39,12 +39,27 @@
   }
   explicit = savedLocale();
   let activeLocale = explicit || detectLocale();
+  const numberFormats = new Map();
+  const dateFormats = new Map();
+  function formatter(cache, Type, locale, options) {
+    const key = `${locale}:${JSON.stringify(options ?? {})}`;
+    let value = cache.get(key);
+    if (!value) {
+      value = new Type(locale, options);
+      // Callers may provide arbitrary display options. Retain only a small set.
+      if (cache.size >= 64) cache.delete(cache.keys().next().value);
+      cache.set(key, value);
+    }
+    return value;
+  }
   engine.use({
     type: 'formatter',
     init() {},
     format: (value, _format, locale) =>
       typeof value === 'number' && Number.isFinite(value)
-        ? new Intl.NumberFormat(locale, { maximumFractionDigits: 20 }).format(value)
+        ? formatter(numberFormats, Intl.NumberFormat, locale, { maximumFractionDigits: 20 }).format(
+            value,
+          )
         : value,
   });
   engine.init({
@@ -326,8 +341,10 @@
     localizedOption,
     translateDOM,
     attachLanguageControls,
-    formatNumber: (value, options) => new Intl.NumberFormat(getLocale(), options).format(value),
-    formatDate: (value, options) => new Intl.DateTimeFormat(getLocale(), options).format(value),
+    formatNumber: (value, options) =>
+      formatter(numberFormats, Intl.NumberFormat, getLocale(), options).format(value),
+    formatDate: (value, options) =>
+      formatter(dateFormats, Intl.DateTimeFormat, getLocale(), options).format(value),
   });
   const mount = () => {
     translateDOM();

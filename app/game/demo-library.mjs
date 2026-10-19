@@ -1,5 +1,11 @@
 import { boundedJSON, required, stableId } from './data-json.mjs';
-import { snapshotReplay, verifyReplayAsync, MAX_REPLAY_BYTES } from './replay.mjs';
+import {
+  snapshotReplay,
+  verifyReplayAsync,
+  exportReplay,
+  exportReplayAsync,
+  MAX_REPLAY_BYTES,
+} from './replay.mjs';
 import { demoDescriptor, demoReplayMatchesEntry } from './demo-catalog.mjs';
 import { campaignKey } from './library.mjs';
 import { CLASSES } from './core/registry.mjs';
@@ -81,12 +87,33 @@ export function demoRecordingQuality(replay) {
 export function createDemoLibrary({
   storage,
   enabled = false,
+  scheduleChunk,
+  canRunOptionalWork = () => true,
+  ownsEntry = () => false,
   now = () => new Date().toISOString(),
 } = {}) {
   let active = enabled === true,
     closed = false,
     generation = 0,
     adapter = storage;
+  const operations = new Set();
+  const cancelOperations = () => {
+    for (const controller of [...operations]) controller.abort();
+  };
+  const operation = (signal) => {
+    const controller = new AbortController();
+    const cancel = () => controller.abort();
+    operations.add(controller);
+    if (signal?.aborted) cancel();
+    else signal?.addEventListener('abort', cancel, { once: true });
+    return {
+      signal: controller.signal,
+      finish() {
+        signal?.removeEventListener('abort', cancel);
+        operations.delete(controller);
+      },
+    };
+  };
   const getStorage = () => {
     if (closed) throw new Error('Demo library is closed.');
     return (adapter ??= createDemoIndexedDBStorage());
@@ -96,6 +123,165 @@ export function createDemoLibrary({
     if (closed || (requireEnabled && !active) || generation !== ticket)
       throw new DOMException('Demo library selection changed.', 'AbortError');
   };
+  const ready = (ticket, signal, manual) => {
+    current(ticket, signal, !manual);
+    if (canRunOptionalWork() !== true)
+      throw new DOMException('Demo retention is no longer admitted.', 'AbortError');
+  };
+  async function admitted(work, ticket, signal, manual) {
+    let called = false,
+      retired = false,
+      result,
+      failure;
+    const invoke = () => {
+      try {
+        if (called || retired) throw new Error('Demo admission must invoke work exactly once.');
+        called = true;
+        ready(ticket, signal, manual);
+        result = work();
+      } catch (error) {
+        failure = error;
+        throw error;
+      }
+    };
+    try {
+      if (scheduleChunk) await scheduleChunk(invoke, { signal });
+      else invoke();
+      if (failure) throw failure;
+      if (!called) throw new Error('Demo admission did not invoke work.');
+      current(ticket, signal, !manual);
+      return result;
+    } finally {
+      retired = true;
+    }
+  }
+  const begin = ({ practice, manual = false } = {}) => {
+    required(typeof manual === 'boolean', 'Manual demo retention needs an explicit boolean.');
+    if ((!active && !manual) || closed) return { saved: false, reason: 'disabled' };
+    if (practice !== false) return { saved: false, reason: 'practice' };
+    return null;
+  };
+  async function retain(
+    replay,
+    ticket,
+    { entry, signal, manual = false },
+    initialDescriptor = null,
+  ) {
+    let descriptor = initialDescriptor,
+      verification,
+      retired = false;
+    const check = () => {
+      if (retired) throw new DOMException('Demo retention finished.', 'AbortError');
+      ready(ticket, signal, manual);
+    };
+    try {
+      const rejected = await admitted(
+        () => {
+          if (!descriptor) {
+            if (!demoReplayMatchesEntry(replay, entry))
+              return { saved: false, reason: 'incompatible' };
+            const quality = demoRecordingQuality(replay);
+            if (!quality.eligible) return { saved: false, reason: quality.reason };
+            descriptor = demoDescriptor(replay, entry);
+          }
+          // Its synchronous snapshot is admitted too. Do not return this promise
+          // to the main-work owner: verification needs later slots from that owner.
+          verification = verifyReplayAsync(replay, {
+            signal,
+            ...(scheduleChunk
+              ? {
+                  scheduleChunk: (work, options) =>
+                    scheduleChunk(() => {
+                      check();
+                      work();
+                    }, options),
+                }
+              : {}),
+          });
+          verification.catch(() => {});
+          return null;
+        },
+        ticket,
+        signal,
+        manual,
+      );
+      if (rejected) return rejected;
+      const verified = await verification;
+      const result = await admitted(
+        () => {
+          if (!verified.match) return { rejected: { saved: false, reason: 'verification' } };
+          if (
+            !demoReplayMatchesEntry(replay, entry) ||
+            demoDescriptor(replay, entry).campaignKey !== descriptor.campaignKey
+          )
+            return { rejected: { saved: false, reason: 'incompatible' } };
+          const item = {
+            id: descriptor.id,
+            descriptor,
+            replayText: JSON.stringify(replay),
+            createdAt: now(),
+          };
+          if (byteLength({ format: FORMAT, items: [item] }) > DEMO_LIBRARY_LIMITS.bytes)
+            return { rejected: { saved: false, reason: 'size' } };
+          // The transaction may finish opening/reading after Start. Its callback
+          // checks admission synchronously before copying up to 32 MiB. Aborting
+          // this optional write leaves the prior cache intact, without awaiting
+          // inside a transaction or moving atomic eviction outside it.
+          const pending = Promise.resolve(
+            getStorage().update(
+              (sourceLibrary) => {
+                check();
+                const document = snapshotLibrary(sourceLibrary);
+                document.items = [
+                  item,
+                  ...document.items.filter((old) => old.id !== item.id),
+                ].slice(0, DEMO_LIBRARY_LIMITS.recordings);
+                while (byteLength(document) > DEMO_LIBRARY_LIMITS.bytes) document.items.pop();
+                return document;
+              },
+              { signal, beforeWork: check },
+            ),
+          );
+          pending.catch(() => {});
+          return { pending };
+        },
+        ticket,
+        signal,
+        manual,
+      );
+      if (result.rejected) return result.rejected;
+      const saved = await result.pending;
+      return { saved: true, count: saved.items.length };
+    } finally {
+      retired = true;
+    }
+  }
+  const captureOptions = ({ entry, practice, signal, manual = false } = {}) => ({
+    entry,
+    practice,
+    signal,
+    manual,
+  });
+  async function keepSource(source, options = {}) {
+    const captured = captureOptions(options),
+      rejected = begin(captured);
+    if (rejected) return rejected;
+    const ticket = generation,
+      job = operation(captured.signal);
+    captured.signal = job.signal;
+    try {
+      current(ticket, job.signal, !captured.manual);
+      const replay = snapshotReplay(source);
+      if (!demoReplayMatchesEntry(replay, captured.entry))
+        return { saved: false, reason: 'incompatible' };
+      const quality = demoRecordingQuality(replay);
+      if (!quality.eligible) return { saved: false, reason: quality.reason };
+      const descriptor = demoDescriptor(replay, captured.entry);
+      return await retain(replay, ticket, captured, descriptor);
+    } finally {
+      job.finish();
+    }
+  }
   return Object.freeze({
     get enabled() {
       return active && !closed;
@@ -103,8 +289,11 @@ export function createDemoLibrary({
     setEnabled(value) {
       required(typeof value === 'boolean', 'Demo retention needs an explicit boolean.');
       if (closed) throw new Error('Demo library is closed.');
-      if (active !== value) generation++;
-      active = value;
+      if (active !== value) {
+        active = value;
+        generation++;
+        cancelOperations();
+      }
     },
     async list(installedEntries, { signal } = {}) {
       if (closed) return [];
@@ -142,54 +331,49 @@ export function createDemoLibrary({
       }
       return result;
     },
-    async keep(source, { entry, practice, signal, manual = false } = {}) {
-      required(typeof manual === 'boolean', 'Manual demo retention needs an explicit boolean.');
-      if ((!active && !manual) || closed) return { saved: false, reason: 'disabled' };
-      if (practice !== false) return { saved: false, reason: 'practice' };
+    // Public callers retain the immediate defensive snapshot and initial
+    // descriptor, including rejection of later in-place entry mutation.
+    keep: keepSource,
+    async keepRecording(recorder, state, options = {}) {
+      const captured = captureOptions(options),
+        rejected = begin(captured);
+      if (rejected) return rejected;
+      // Only the installed catalog/host's exact immutable publication permits
+      // deferred descriptor work. Arbitrary wrappers retain public semantics.
+      if (ownsEntry(captured.entry) !== true)
+        return keepSource(exportReplay(recorder, state), captured);
       const ticket = generation,
-        replay = snapshotReplay(source);
-      if (!demoReplayMatchesEntry(replay, entry)) return { saved: false, reason: 'incompatible' };
-      const quality = demoRecordingQuality(replay);
-      if (!quality.eligible) return { saved: false, reason: quality.reason };
-      const descriptor = demoDescriptor(replay, entry),
-        verified = await verifyReplayAsync(replay, { signal });
-      current(ticket, signal, !manual);
-      if (!verified.match) return { saved: false, reason: 'verification' };
-      if (
-        !demoReplayMatchesEntry(replay, entry) ||
-        demoDescriptor(replay, entry).campaignKey !== descriptor.campaignKey
-      )
-        return { saved: false, reason: 'incompatible' };
-      const item = {
-        id: descriptor.id,
-        descriptor,
-        replayText: JSON.stringify(replay),
-        createdAt: now(),
-      };
-      if (byteLength({ format: FORMAT, items: [item] }) > DEMO_LIBRARY_LIMITS.bytes)
-        return { saved: false, reason: 'size' };
-      const saved = await getStorage().update(
-        (sourceLibrary) => {
-          current(ticket, signal, !manual);
-          const document = snapshotLibrary(sourceLibrary);
-          document.items = [item, ...document.items.filter((old) => old.id !== item.id)].slice(
-            0,
-            DEMO_LIBRARY_LIMITS.recordings,
-          );
-          while (byteLength(document) > DEMO_LIBRARY_LIMITS.bytes) document.items.pop();
-          return document;
-        },
-        { signal },
-      );
-      return { saved: true, count: saved.items.length };
+        job = operation(captured.signal);
+      const ownedOptions = { ...captured, signal: job.signal },
+        { signal, manual } = ownedOptions;
+      try {
+        const replay = await exportReplayAsync(recorder, state, {
+          signal,
+          ...(scheduleChunk
+            ? {
+                scheduleChunk: (work, chunkOptions) =>
+                  scheduleChunk(() => {
+                    ready(ticket, signal, manual);
+                    work();
+                  }, chunkOptions),
+              }
+            : {}),
+        });
+        current(ticket, signal, !manual);
+        return await retain(replay, ticket, ownedOptions);
+      } finally {
+        job.finish();
+      }
     },
     async clear({ signal } = {}) {
       generation++;
+      cancelOperations();
       await getStorage().update(() => empty(), { signal });
     },
     dispose() {
       closed = true;
       generation++;
+      cancelOperations();
       adapter?.close?.();
     },
   });
@@ -236,10 +420,12 @@ export function createDemoIndexedDBStorage({
     });
     return opening;
   }
-  async function transaction(transform, { signal } = {}) {
+  async function transaction(transform, { signal, beforeWork } = {}) {
     abort(signal);
+    beforeWork?.();
     const db = await open();
     abort(signal);
+    beforeWork?.();
     return new Promise((resolve, reject) => {
       const tx = db.transaction('library', transform ? 'readwrite' : 'readonly'),
         store = tx.objectStore('library'),
@@ -257,6 +443,7 @@ export function createDemoIndexedDBStorage({
       request.onsuccess = () => {
         try {
           abort(signal);
+          beforeWork?.();
           result = transform
             ? snapshotLibrary(transform(request.result ?? empty()))
             : snapshotLibrary(request.result);

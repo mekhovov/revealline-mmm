@@ -1,4 +1,8 @@
 import { denyBrandedImport } from '../branded-isolation.mjs';
+import {
+  CAPTURE_PRESENTATION_SESSION_FORMAT,
+  nativeCaptureSession,
+} from '../capture-presentation-session.mjs';
 import { contentText } from '../i18n/content.mjs';
 import { t, localizedText } from '../i18n/index.mjs';
 import { captureOperationFocus } from './operation-focus.mjs';
@@ -211,6 +215,12 @@ export function attachLibraryPanel(api) {
   }
   const pictureDifficultyLabel = (picture) =>
     picture?.labelKey ? galleryDifficultyLabel(picture) : contentText(picture, 'label');
+  const savedDifficultyLabel = (session) => {
+    const entry = api.resolveSavedExecution?.(session);
+    return entry
+      ? createGalleryDifficultyResolver([entry]).label(session.campaignKey)
+      : contentText(difficulties(), 'label')(session.campaignKey);
+  };
   const pictureMeta = (picture) =>
     `${contentText(picture.theme, 'name')} · ${pictureDifficultyLabel(picture)} · ${collectionResultLabels(picture.item, api.get().library).detail}`;
   const storyButton = document.createElement('button');
@@ -527,12 +537,12 @@ export function attachLibraryPanel(api) {
         value7: usage.percent.toFixed(1),
       }),
     );
-    const saved = api.saved();
+    const saved = nativeCaptureSession(api.saved());
     localizedText($('suspended-status'), () =>
       saved
         ? t('gameplay:savedFlight', {
             value1: contentText(saved.replay?.level, 'name') || t('interface:unknown'),
-            value2: contentText(difficulties(), 'label')(saved.campaignKey),
+            value2: savedDifficultyLabel(saved),
             value3:
               typeof saved.savedAt === 'string'
                 ? saved.savedAt.replace('T', ' ').slice(0, 19)
@@ -808,13 +818,13 @@ export function attachLibraryPanel(api) {
       status('save-status', t('interface:preparingTheVerifiedAttemptDownload'), 'busy');
       const exported = await downloadJSON(prepared.session, 'revealline-suspended-flight.json');
       if (!currentAttemptExport(operation)) return;
-      const session = prepared.session;
+      const session = nativeCaptureSession(prepared.session);
       status(
         'save-status',
         t('gameplay:attemptPrepared', {
           value1: prepared.source === 'stored' ? t('interface:saved') : t('interface:current'),
           value2: contentText(session.replay.level, 'name'),
-          value3: contentText(difficulties(), 'label')(session.campaignKey),
+          value3: savedDifficultyLabel(session),
           value4: session.savedAt.replace('T', ' ').slice(0, 19),
           value5:
             prepared.context === 'replay-only'
@@ -854,7 +864,12 @@ export function attachLibraryPanel(api) {
   async function backupContents() {
     if (api.backupSnapshot) return api.backupSnapshot();
     const { library, packs } = api.get();
-    return { library, packs, session: api.currentSession() };
+    return {
+      library,
+      packs,
+      session: api.currentSession(),
+      ...(api.enemyStats ? { enemyStats: await api.enemyStats() } : {}),
+    };
   }
   function releaseTask(owner, restoreFocus = true) {
     if (libraryTask !== owner) return;
@@ -1076,7 +1091,7 @@ export function attachLibraryPanel(api) {
       )
         throw new Error(t('interface:thisBackupExceedsTheImportBudget'));
       const parsed = typeof candidate === 'string' ? JSON.parse(candidate) : candidate;
-      if (['xonix-backup.v1', 'xonix-backup.v2'].includes(parsed.format)) {
+      if (['xonix-backup.v1', 'xonix-backup.v2', 'xonix-backup.v3'].includes(parsed.format)) {
         const options = await backupOptions();
         operation.check();
         const prepared = await prepareBackup(parsed, { ...options, signal: operation.signal });
@@ -1106,6 +1121,8 @@ export function attachLibraryPanel(api) {
           'xonix-session.v4',
           'xonix-session.v5',
           'xonix-session.v6',
+          'xonix-session.v7',
+          CAPTURE_PRESENTATION_SESSION_FORMAT,
         ].includes(parsed.format)
       ) {
         operation.commit(t('interface:restoringTheVerifiedSavedFlight'));
@@ -1156,9 +1173,11 @@ export function attachLibraryPanel(api) {
         const contents = await backupContents();
         old = await prepareBackup(
           {
-            format: Object.hasOwn(contents, 'externalChapters')
-              ? 'xonix-backup.v2'
-              : 'xonix-backup.v1',
+            format: Object.hasOwn(contents, 'enemyStats')
+              ? 'xonix-backup.v3'
+              : Object.hasOwn(contents, 'externalChapters')
+                ? 'xonix-backup.v2'
+                : 'xonix-backup.v1',
             ...contents,
           },
           options,

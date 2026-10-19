@@ -210,6 +210,10 @@ export function createFlightInformationBridge() {
       pending = null;
       return true;
     },
+    // Completed observations are already immutable and scoped to the accepted
+    // owner. Retaining them must not project the current board on every tick.
+    readLastWarning: () => lastWarning,
+    readLastBatch: () => lastBatch,
     read(host) {
       if (!owner || disposed) return null;
       let snapshot = null;

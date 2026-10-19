@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { parse } from "acorn";
+import { projectBrandSource } from "./presentation-policy.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
@@ -178,12 +179,17 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     await fs.readFile(path.join(root, "brand.config.json"), "utf8"),
   );
   if (
-    config.schemaVersion !== 1 ||
+    config.schemaVersion !== 2 ||
     !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(config.upstream?.repository) ||
     !/^[a-z][a-z0-9-]*$/.test(config.editionId) ||
     !/^[a-z][a-z0-9-]*$/.test(config.brandId)
   )
     throw new Error("Invalid brand.config.json.");
+  for (const name of [config.content?.catalog, config.content?.files, config.content?.supplemental,
+    config.presentation?.files, config.presentation?.menuScenes])
+    if (!safePath(name)) throw new Error('Unsafe branded input path.');
+  if (JSON.stringify(config.enabledModes) !== JSON.stringify({capture:['solo','versus','team'],snake:['solo','versus','team']}) || config.presentation.policy !== 'coupa-clean-v1')
+    throw new Error('Unsupported branded mode or presentation contract. Review the projection before changing it.');
   const revision = ref ?? config.upstream.branch;
   if (
     typeof revision !== "string" ||
@@ -198,15 +204,29 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     ? JSON.parse(await fs.readFile(lockPath, "utf8"))
     : null;
   await assertGeneratedClean(target, oldLock);
+  const localContent = new Map();
+  const presentationFiles = new Map();
+  for (const [directory, target] of [[config.content.files, localContent], [config.presentation.files, presentationFiles]]) {
+    if (!safePath(directory)) throw new Error('Unsafe local content root.');
+    if (await exists(path.join(root, directory)))
+      for (const name of await fileList(path.join(root, directory))) {
+        if (!safePath(name)) throw new Error('Unsafe local content path.');
+        target.set(name, await fs.readFile(path.join(root, directory, name)));
+      }
+  }
+  const localCatalogBytes = await fs.readFile(path.join(root, config.content.catalog));
   const projectionFiles = new Map();
   for (const name of [
     "brand.config.json",
     "scripts/isolate-brand.mjs",
+    "scripts/presentation-policy.mjs",
     "scripts/sync-upstream.mjs",
     "branding/access-gate.css",
     "branding/access-gate.mjs",
     "branding/coupa-landing.css",
     "branding/coupa-landing.html",
+    config.content.supplemental,
+    config.presentation.menuScenes,
   ])
     projectionFiles.set(name, await fs.readFile(path.join(root, name)));
   await fs.mkdir(path.join(root, ".cache"), { recursive: true });
@@ -264,11 +284,12 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
           return [name, id];
         }),
     );
+    const localFiles = new Map([...localContent, ...presentationFiles]);
     const hydrated = new Set();
     const sourceFiles = new Map();
     const prefetch = (requestedNames) => {
       const names = [...new Set(requestedNames)].filter(
-        (name) => !sourceFiles.has(name),
+        (name) => !sourceFiles.has(name) && !localFiles.has(name),
       );
       const ids = [
         ...new Set(
@@ -328,13 +349,14 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     };
     const read = (name) => {
       if (!safePath(name)) throw new Error(`Unsafe upstream path: ${name}`);
+      if (localFiles.has(name)) return localFiles.get(name);
       if (!objectIds.get(name))
         throw new Error(
           `Upstream source must be a regular committed file: ${name}`,
         );
       if (!sourceFiles.has(name))
         sourceFiles.set(name, git(repository, ["show", `${commit}:${name}`]));
-      return sourceFiles.get(name);
+      return projectBrandSource(name, sourceFiles.get(name));
     };
     console.log(
       `Extracting ${config.editionId} from ${config.upstream.repository}@${commit}`,
@@ -342,18 +364,24 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     const compilerDirectory = path.join(work, "compiler");
     const compilerInputs = await compilerTree(
       compilerDirectory,
-      read,
+      name => {
+        if (!safePath(name) || !objectIds.get(name)) throw new Error(`Missing pinned compiler input: ${name}`);
+        if (!sourceFiles.has(name)) sourceFiles.set(name, git(repository, ["show", `${commit}:${name}`]));
+        return sourceFiles.get(name);
+      },
       prefetch,
     );
     const compiler = await import(
       pathToFileURL(path.join(compilerDirectory, "scripts/compile-edition.mjs"))
         .href
     );
+    if (compiler.EDITION_LOCAL_CONTENT_API_VERSION !== 1)
+      throw new Error('Pinned engine does not support the reviewed local-content compiler interface.');
     const runtime = await import(
       pathToFileURL(path.join(compilerDirectory, "scripts/edition-runtime.mjs"))
         .href
     );
-    const catalog = JSON.parse(read("game/editions/catalog.json"));
+    const catalog = JSON.parse(localCatalogBytes);
     const selected = compiler.selectEditionClosure(catalog, [config.editionId]);
     if (
       selected.brands.length !== 1 ||
@@ -369,10 +397,15 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
     // The dedicated edition exposes the same local two-player hosts as the
     // shared game. Their code still receives only the selected edition data;
     // no default-game campaign catalogs are added to the extraction.
+    const menuScenes = JSON.parse(await fs.readFile(path.join(root, config.presentation.menuScenes), "utf8"));
     const pending = [
       "game/company.html",
+      "game/mp3-inspection-worker.mjs",
+      "game/ui/global-settings-tools.css",
       "game/couch/index.html",
       "game/couch/relay-rescue.html",
+      "game/snake/index.html",
+      "game/collections/index.html",
     ];
     while (pending.length) {
       const batch = [
@@ -387,10 +420,10 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
         const bytes = read(name);
         runtime.validateEditionHostRequests(name, bytes);
         engine.set(name, bytes);
-        let resources = runtime.EDITION_RUNTIME_RESOURCES[name] ?? [];
+        let resources = presentationFiles.has(name) ? [] : runtime.EDITION_RUNTIME_RESOURCES[name] ?? [];
         // Avoid downloading unrelated scene originals even into the temporary object cache.
         if (name === "game/ui/menu-scene-catalog.mjs")
-          resources = runtime.editionMenuSceneResources([config.editionId]);
+          resources = menuScenes.resources;
         pending.push(
           ...compiler.editionCodeDependencies(
             name,
@@ -432,6 +465,14 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
       read,
     }))
       inputs.set(name, bytes);
+    const supplemental = JSON.parse(await fs.readFile(path.join(root, config.content.supplemental), 'utf8'));
+    if (supplemental.format !== 'branded-content-files.v1') throw new Error('Unsupported local collection manifest.');
+    for (const pin of [...supplemental.files, ...menuScenes.files]) {
+      const bytes = localContent.get(pin.path);
+      if (!safePath(pin.path) || !bytes || bytes.length !== pin.bytes || sha256(bytes) !== pin.sha256)
+        throw new Error(`Local collection receipt mismatch: ${pin.path}`);
+      inputs.set(pin.path, bytes); engine.set(pin.path, bytes);
+    }
     const upstreamPackage = JSON.parse(read("package.json"));
     const compiled = await compiler.compileEdition({
       catalog,
@@ -441,6 +482,13 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
       version: `v${upstreamPackage.version}`,
       sourceRevision: commit,
       offline: null,
+      // Intermediate upstream pages still contain destinations removed by the
+      // presentation projection. The final artifact below always receives the
+      // complete code-closure validation, before staging or publishing bytes.
+      validateCode: false,
+      compactCode: false,
+      contentPackages: [{id: `${config.brandId}-collections`, files: supplemental.files.map(pin => ({...pin, approved:true, publication:"public"}))}, {id: `${config.brandId}-menu-scenes`, files: menuScenes.files.map(pin=>({...pin, approved:true, publication:"public"}))}],
+      menuSceneResources: menuScenes.resources,
     });
     const projection = await import(
       pathToFileURL(path.join(root, "scripts/isolate-brand.mjs")).href
@@ -471,8 +519,17 @@ export async function syncUpstream({ source, ref, check = false } = {}) {
           `Projection input changed during extraction: ${name}. Run sync again after edits finish.`,
         );
     }
+    for (const [directory, expected] of [[config.content.files, localContent], [config.presentation.files, presentationFiles]]) {
+      const current = new Map();
+      for (const name of await fileList(path.join(root,directory))) current.set(name,await fs.readFile(path.join(root,directory,name)));
+      if (JSON.stringify(inventory(current)) !== JSON.stringify(inventory(expected))) throw new Error('Local branded inputs changed during extraction. Run sync again after edits finish.');
+    }
+    if (sha256(await fs.readFile(path.join(root,config.content.catalog))) !== sha256(localCatalogBytes)) throw new Error('Local catalog changed during extraction.');
     const lock = {
-      schemaVersion: 1,
+      schemaVersion: 2,
+      localContent: { catalog: { path: config.content.catalog, bytes: localCatalogBytes.length, sha256: sha256(localCatalogBytes) }, files: inventory(localContent) },
+      presentationInputs: inventory(presentationFiles),
+      enabledModes: config.enabledModes,
       repository: config.upstream.repository,
       requestedRef: revision,
       commit,

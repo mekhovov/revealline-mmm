@@ -120,17 +120,19 @@ export async function installPreparedCreatorBundle(
   });
   return Object.freeze({ editionId: prepared.editionId });
 }
-async function readManifest(store, reference, signal) {
+async function readManifest(store, reference, signal, assertCurrent = () => {}) {
+  assertCurrent();
   const blob = await store.readSelectedBlob(reference.sha256, {
     signal,
     maxBytes: CREATOR_BUNDLE_LIMITS.manifestBytes,
   });
+  assertCurrent();
   required(blob, 'Installed content manifest is missing. Reinstall its exact .rlpack file.');
   const bytes = await blob.arrayBuffer();
-  required(
-    (await creatorSHA256(bytes)) === reference.sha256,
-    'Installed content manifest failed its integrity check.',
-  );
+  assertCurrent();
+  const digest = await creatorSHA256(bytes);
+  assertCurrent();
+  required(digest === reference.sha256, 'Installed content manifest failed its integrity check.');
   creatorAbort(signal);
   const manifest = boundedJSON(new TextDecoder('utf-8', { fatal: true }).decode(bytes), {
     maxBytes: CREATOR_BUNDLE_LIMITS.manifestBytes,
@@ -163,8 +165,12 @@ async function manifestFromSnapshot(reference, assets, signal) {
   );
   return inspectCreatorManifest(manifest);
 }
-export async function installedCreatorManifests(store, { signal } = {}) {
+export async function installedCreatorManifests(store, { signal, assertCurrent = () => {} } = {}) {
+  if (typeof assertCurrent !== 'function')
+    throw new TypeError('Creator browsing needs a synchronous current-owner guard.');
+  assertCurrent();
   const snapshot = await store.readDomainMetadata('media', { signal });
+  assertCurrent();
   const items = hydrateStoredStillMedia(snapshot.library).legacy.items;
   const offloaded = new Set(
     items
@@ -175,7 +181,10 @@ export async function installedCreatorManifests(store, { signal } = {}) {
     (item) => item.id.startsWith(PREFIX) && !offloaded.has(item.id.slice(PREFIX.length)),
   );
   const manifests = [];
-  for (const reference of references) manifests.push(await readManifest(store, reference, signal));
+  for (const reference of references) {
+    manifests.push(await readManifest(store, reference, signal, assertCurrent));
+    assertCurrent();
+  }
   return manifests;
 }
 export async function loadInstalledCreatorBundle(

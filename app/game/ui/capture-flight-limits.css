@@ -1,0 +1,38 @@
+/* Capture-only save guidance; no change to shared mode pause layouts. */
+body .game-overlay .capture-flight-limits {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin: 0;
+  padding: 0 8px;
+  border: 1px solid var(--fk-line, #46504f);
+  text-align: left;
+}
+body .game-overlay .capture-flight-limits[hidden] {
+  display: none !important;
+}
+body .game-overlay .capture-flight-limits > summary {
+  min-height: 44px;
+  padding-block: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+body .game-overlay .capture-flight-limits > p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: normal;
+}
+body .game-overlay .capture-flight-limit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+body .game-overlay .capture-flight-limit-actions > button {
+  flex: 1 1 160px;
+  min-height: 44px;
+  white-space: normal;
+}
+body[data-text-size='large'] .game-overlay .capture-flight-limits > :is(summary, p) {
+  font-size: 20px;
+}

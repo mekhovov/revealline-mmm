@@ -4,7 +4,7 @@ import { prepareStillAsset } from '../media-still.mjs';
 import { openVideoPosterSource, VIDEO_POSTER_LIMITS } from '../video-poster.mjs';
 import { creatorAbort, creatorSHA256, ownCreatorBlob } from './bytes.mjs';
 import {
-  CREATOR_TEAM_PORTABLE_FORMAT,
+  CREATOR_TEAM_PORTABLE_FORMATS,
   CREATOR_TEAM_PORTABLE_MIME,
   exportCreatorTeamCampaign,
   importCreatorTeamCampaign,
@@ -33,7 +33,7 @@ const copy = (value) =>
   boundedJSON(value, {
     maxBytes: CREATOR_TEAM_MEDIA_LIMITS.manifestBytes,
     maxNodes: 100000,
-    maxDepth: 24,
+    maxDepth: 32,
     maxArray: 4096,
     maxString: 8192,
   });
@@ -184,7 +184,10 @@ function gameplayDocument(prepared) {
   );
   return portable.text().then((value) => {
     const document = copy(value);
-    required(document.format === CREATOR_TEAM_PORTABLE_FORMAT, 'Invalid Team gameplay payload.');
+    required(
+      CREATOR_TEAM_PORTABLE_FORMATS.includes(document.format),
+      'Invalid Team gameplay payload.',
+    );
     return document;
   });
 }
@@ -417,9 +420,10 @@ export function creatorTeamMediaForLevel(prepared, levelId) {
 /** Runtime picture lease for an already verified Team media owner. It reads no
  * global media catalogue and grants no reward; the host records a reward only
  * after its normal exact completion replay succeeds. */
-export function createCreatorTeamMediaPictureLease(prepared, { decodeImage } = {}) {
+export function createCreatorTeamMediaPictureLease(prepared, { decodeImage, getSnapshot } = {}) {
   mediaRecord(prepared);
   required(typeof decodeImage === 'function', 'Team media playback needs an image decoder.');
+  required(typeof getSnapshot === 'function', 'Team media playback needs a presentation reader.');
   let closed = false,
     pending = null,
     accepted = null;
@@ -437,6 +441,9 @@ export function createCreatorTeamMediaPictureLease(prepared, { decodeImage } = {
     );
     const level = prepared.pack.levels.find((candidate) => candidate.id === request.levelId);
     required(level, 'Choose a level from this Team media campaign.');
+    // Pin the host's prepared look beside the authenticated media and arena.
+    const snapshot = getSnapshot();
+    required(snapshot && typeof snapshot === 'object', 'Prepare the Team presentation first.');
     const controller = new AbortController(),
       abort = () => controller.abort(),
       operation = { controller, requestKey: canonicalJSON([request.pack, request.levelId]) };
@@ -469,11 +476,13 @@ export function createCreatorTeamMediaPictureLease(prepared, { decodeImage } = {
       );
       const descriptor = media.picture.descriptor,
         binding = Object.freeze({
-          snapshot: null,
+          snapshot,
           image: decoded.image,
           choice: Object.freeze({
             kind: 'image',
             sourceKind: 'creator-team-media',
+            levelId: level.id,
+            levelRevision: level.revision,
             picture: Object.freeze({
               sha256: descriptor.sha256,
               bytes: descriptor.bytes,

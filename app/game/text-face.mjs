@@ -15,11 +15,11 @@ export function resolveTextFace(value) {
   return value;
 }
 
-export function canvasTextFonts(face, themeFonts) {
+export function canvasTextFonts(face, themeFonts, { useThemeFont = false } = {}) {
   if (resolveTextFace(face) === 'plain') return PLAIN_CANVAS_FONTS;
   return Object.freeze({
     ...themeFonts,
-    ui: PIXEL_CANVAS_UI,
+    ui: useThemeFont && themeFonts?.ui ? themeFonts.ui : PIXEL_CANVAS_UI,
     numeric: themeFonts?.numeric ?? "'Field Kit Mono', ui-monospace, monospace",
   });
 }

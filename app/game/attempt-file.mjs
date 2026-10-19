@@ -1,6 +1,10 @@
 import { canonicalJSON, plainObject, required } from './data-json.mjs';
 import { exportReplay } from './replay.mjs';
-import { snapshotSession, SESSION_STORAGE_BYTES } from './sessions.mjs';
+import { SESSION_STORAGE_BYTES } from './sessions.mjs';
+import {
+  snapshotCaptureSession as snapshotSession,
+  nativeCaptureSession,
+} from './capture-presentation-session.mjs';
 import { prepareAttemptExport } from './attempt-export.mjs';
 
 const adapters = [
@@ -91,7 +95,7 @@ function selection(state) {
 export function createAttemptFilePreparer(config) {
   const host = ownOptions(
     config,
-    [...adapters, 'resolveMediaIdentityCatalog'],
+    [...adapters, 'resolveMediaIdentityCatalog', 'resolveAttemptAppearance'],
     'Attempt export adapters',
   );
   for (const key of adapters)
@@ -100,6 +104,11 @@ export function createAttemptFilePreparer(config) {
     host.resolveMediaIdentityCatalog === undefined ||
       typeof host.resolveMediaIdentityCatalog === 'function',
     'The picture identity resolver must be a trusted function.',
+  );
+  required(
+    host.resolveAttemptAppearance === undefined ||
+      typeof host.resolveAttemptAppearance === 'function',
+    'The attempt artwork resolver must be a trusted function.',
   );
   let generation = 0,
     active = null;
@@ -274,12 +283,12 @@ export function createAttemptFilePreparer(config) {
         if (['run', 'recorder', 'runId'].some((key) => baseline[key] !== before[key]))
           throw cancelled();
         required(
-          session.runId === baseline.runId &&
-            session.themeId === baseline.themeId &&
-            session.bodyId === baseline.bodyId,
+          nativeCaptureSession(session).runId === baseline.runId &&
+            nativeCaptureSession(session).themeId === baseline.themeId &&
+            nativeCaptureSession(session).bodyId === baseline.bodyId,
           'Current attempt snapshot identity differs.',
         );
-        replayText = canonicalJSON(session.replay);
+        replayText = canonicalJSON(nativeCaptureSession(session).replay);
       } else {
         raw = await storedSnapshot(ticket, baseline);
         session = snapshotSession(raw);
@@ -299,15 +308,17 @@ export function createAttemptFilePreparer(config) {
         check(ticket);
       };
       assertCurrent();
-      const campaign = host.resolveCampaign(session.campaignKey);
+      const nativeSession = nativeCaptureSession(session);
+      const campaign = host.resolveCampaign(nativeSession.campaignKey, nativeSession.pictureSource);
       stateCurrent(ticket, baseline, selected.source);
       // Context resolution is synchronous; missing content is explicit. Any
       // other value is supplied to the strict verifier and must not downgrade.
       const prepared = await prepareAttemptExport(session, {
         ...(campaign === null || campaign === undefined ? {} : { campaign }),
-        ...(session.presentationPins
+        ...(nativeCaptureSession(session).presentationPins
           ? { mediaIdentityCatalog: host.resolveMediaIdentityCatalog?.() }
           : {}),
+        resolveAttemptAppearance: host.resolveAttemptAppearance,
         signal: controller.signal,
         onProgress: (progress) => {
           stateCurrent(ticket, baseline, selected.source);

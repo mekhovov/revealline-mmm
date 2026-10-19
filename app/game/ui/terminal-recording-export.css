@@ -1,0 +1,47 @@
+@layer legacy {
+  .recording-copy {
+    grid-column: 1 / -1;
+    flex-basis: 100%;
+    min-width: 0;
+  }
+  .terminal-recording-export {
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid var(--fk-muted);
+  }
+  .terminal-recording-export summary {
+    min-height: 44px;
+    align-content: center;
+    cursor: pointer;
+  }
+  .terminal-recording-export label {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+  }
+  .terminal-recording-export textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    resize: vertical;
+    overflow-wrap: anywhere;
+    font: 0.8rem / 1.4 monospace;
+    color: var(--fk-text);
+    background: var(--fk-bg);
+  }
+  .terminal-recording-export > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-block-start: 8px;
+  }
+  .terminal-recording-export button {
+    min-height: 44px;
+    flex: 1 1 160px;
+  }
+  .terminal-recording-export p {
+    overflow-wrap: anywhere;
+    font-size: 0.875em;
+  }
+}

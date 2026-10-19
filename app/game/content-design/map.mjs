@@ -12,7 +12,7 @@ const freeze = (value) => {
   return value;
 };
 const copy = (source) =>
-  boundedJSON(source, { maxBytes: 128 * 1024, maxNodes: 10000, maxDepth: 8, maxArray: 128 });
+  boundedJSON(source, { maxBytes: 128 * 1024, maxNodes: 10000, maxDepth: 8, maxArray: 512 });
 
 /** Compile once at an authoring/runtime boundary, never in the render loop.
  * Immutable plain arrays let every consumer inspect the same geometry without
@@ -51,7 +51,11 @@ function compileGeometry(source, relays, directional = false) {
       }
   function list(key) {
     const value = map[key] ?? [];
-    required(Array.isArray(value) && value.length <= 128, `${key} must contain at most 128 items.`);
+    const limit = key === 'terrain' ? 512 : 128;
+    required(
+      Array.isArray(value) && value.length <= limit,
+      `${key} must contain at most ${limit} items.`,
+    );
     return value;
   }
   function rectangle(rect, label, extra = []) {

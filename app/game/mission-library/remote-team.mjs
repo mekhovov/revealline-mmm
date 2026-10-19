@@ -1,8 +1,10 @@
+import { supplementalTeamSources } from './supplemental-hunt.mjs';
 import { createCandidateTeamHost } from '../content-design/team-host.mjs';
 import { createTeamCulturalSpecialistV2OriginalCandidates } from '../content-design/team-cultural-specialist-v2-originals.mjs';
 import { COOP_STARTER_PACK, coopGoalText } from '../coop/library.mjs';
 import { validateCoopPack } from '../coop/recipes.mjs';
 import { teamJourneyLibrarySource, teamArenaLibrarySource } from './team-source.mjs';
+import { teamExpeditionLibrarySource } from './multiplayer-expeditions.mjs';
 
 /** Trusted Team browsing for another gameplay host. This creates no Team run,
  * loads no image, and delegates every launch to an exact receiving-host handoff.
@@ -28,6 +30,8 @@ export function createRemoteTeamLibrarySources({ launch, difficulty = () => 'sta
     }),
   );
   return Object.freeze([
+    teamExpeditionLibrarySource({ launch, difficulty }),
+    ...supplementalTeamSources({ launch, difficulty }),
     teamJourneyLibrarySource({
       journey,
       difficulty,

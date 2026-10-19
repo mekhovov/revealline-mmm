@@ -63,6 +63,7 @@ export function attachEnemyGuide({
     time = 0,
     pageVisible = true,
     previewPose = null,
+    previewReleased = false,
     previewSettings = { paused: false, reduced: false };
   const poses = createActorPresentation();
   const node = (tag, id, text = '') => {
@@ -510,6 +511,8 @@ export function attachEnemyGuide({
     );
   }
   function releasePreview() {
+    if (previewReleased) return;
+    previewReleased = true;
     bodyAssets.clear();
     previewPose = null;
     localizedText(artworkStatus, () => '');
@@ -605,6 +608,8 @@ export function attachEnemyGuide({
       paintPreview();
       return;
     }
+    // A visible actor sample owns the next release, including pending catalog/decode work.
+    previewReleased = false;
     const actor = {
       id: 'guide-preview',
       type: topic.el.value,

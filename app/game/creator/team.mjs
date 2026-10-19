@@ -1,3 +1,10 @@
+import {
+  CREATOR_TEAM_SOURCE_PROVENANCE,
+  CREATOR_TEAM_SOURCE_PORTABLE,
+  creatorTeamSourceSelection,
+  validateCreatorTeamSource,
+  creatorTeamSourceEvidence,
+} from './team-source.mjs';
 import { boundedJSON, canonicalJSON, dataIdentity, exactKeys, required } from '../data-json.mjs';
 import { freezeDesign } from '../content-design/catalogs.mjs';
 import { createCoop, getCoopSummary, startCoop, stepCoop } from '../coop/core.mjs';
@@ -15,6 +22,10 @@ export const CREATOR_TEAM_PROVENANCE_FORMAT = 'revealline-creator-team-provenanc
 export const CREATOR_TEAM_EVIDENCE_FORMAT = 'revealline-creator-team-evidence.v1';
 export const CREATOR_TEAM_PORTABLE_FORMAT = 'revealline-creator-team-portable.v1';
 export const CREATOR_TEAM_PORTABLE_MIME = 'application/vnd.revealline.team+json';
+export const CREATOR_TEAM_PORTABLE_FORMATS = Object.freeze([
+  CREATOR_TEAM_PORTABLE_FORMAT,
+  CREATOR_TEAM_SOURCE_PORTABLE,
+]);
 export const CREATOR_TEAM_INPUT_POLICY = 'direction-boost-support-v1';
 
 export const CREATOR_TEAM_TEMPLATES = freezeDesign([
@@ -109,6 +120,14 @@ export function generateCreatorTeamCampaign({ id, name, seed = 0 } = {}) {
 }
 
 export function validateCreatorTeamCampaign(packSource, provenanceSource) {
+  const ownedProvenance = boundedJSON(provenanceSource, {
+    maxBytes: 768 * 1024,
+    maxNodes: 50000,
+    maxDepth: 24,
+    maxArray: 4096,
+  });
+  if (ownedProvenance.format === CREATOR_TEAM_SOURCE_PROVENANCE)
+    return validateCreatorTeamSource(packSource, ownedProvenance);
   const pack = boundedJSON(packSource, {
     maxBytes: COOP_PACK_MAX_BYTES,
     maxNodes: 50000,
@@ -351,11 +370,14 @@ function qualificationResult(level, templateId, difficulty, preset) {
   });
 }
 
-/** Verify every level against every difficulty and every advertised generated
- * Team preset. Each result requires legal cuts from both seats. */
+/** Historical generated templates retain route verification for every difficulty
+ * and preset. Source-backed editions receive explicit structural admission;
+ * their native constructor does not invent play-qualification evidence. */
 export async function verifyCreatorTeamCampaign(packSource, provenanceSource, { signal } = {}) {
   abort(signal);
   const { pack, provenance } = validateCreatorTeamCampaign(packSource, provenanceSource);
+  if (provenance.format === CREATOR_TEAM_SOURCE_PROVENANCE)
+    return creatorTeamSourceEvidence(pack, provenance);
   const results = [];
   for (const [index, level] of pack.levels.entries())
     for (const difficulty of difficulties)
@@ -397,10 +419,18 @@ export async function prepareCreatorTeamCampaign(pack, provenance, options = {})
   return prepared;
 }
 
+export async function prepareCreatorTeamSourceCampaign(source, selection, options = {}) {
+  const { pack, provenance } = creatorTeamSourceSelection(source, selection);
+  return prepareCreatorTeamCampaign(pack, provenance, options);
+}
+
 export function exportCreatorTeamCampaign(prepared) {
   required(preparedCampaigns.has(prepared), 'Prepare this exact Team campaign before export.');
   const text = canonicalJSON({
-    format: CREATOR_TEAM_PORTABLE_FORMAT,
+    format:
+      prepared.provenance.format === CREATOR_TEAM_SOURCE_PROVENANCE
+        ? CREATOR_TEAM_SOURCE_PORTABLE
+        : CREATOR_TEAM_PORTABLE_FORMAT,
     pack: prepared.pack,
     provenance: prepared.provenance,
     evidence: prepared.evidence,
@@ -421,11 +451,16 @@ export async function importCreatorTeamCampaign(source, options = {}) {
   const document = boundedJSON(await blob.text(), {
     maxBytes: COOP_PACK_MAX_BYTES,
     maxNodes: 50000,
-    maxDepth: 20,
-    maxArray: 1024,
+    maxDepth: 28,
+    maxArray: 4096,
   });
   exactKeys(document, ['format', 'pack', 'provenance', 'evidence'], 'portable Team campaign');
-  required(document.format === CREATOR_TEAM_PORTABLE_FORMAT, 'Unsupported Team campaign format.');
+  required(
+    CREATOR_TEAM_PORTABLE_FORMATS.includes(document.format) &&
+      (document.format === CREATOR_TEAM_SOURCE_PORTABLE) ===
+        (document.provenance?.format === CREATOR_TEAM_SOURCE_PROVENANCE),
+    'Unsupported Team campaign format.',
+  );
   // Reuse the public pack reader so transfer cannot bypass its strict parser.
   const pack = readCoopPack(canonicalJSON(document.pack));
   const prepared = await prepareCreatorTeamCampaign(pack, document.provenance, options);

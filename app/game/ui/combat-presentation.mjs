@@ -1,3 +1,7 @@
+import { sharedActorAppearance, runtimeActorArtRevision } from '../hunt/preferences.mjs';
+import { actorFacingRadians } from '../hunt/actor-facing.mjs';
+import { HUNT_PRESENTATION_CATALOG } from '../hunt/presentation-catalog.mjs';
+import { drawHumanoidPixelBody, drawHuntRemains } from '../hunt/destruction.mjs';
 import { t } from '../i18n/index.mjs';
 import {
   actorDiameter,
@@ -7,6 +11,7 @@ import {
 } from './actor-presentation.mjs';
 
 const CELL = 16;
+const HEADING_ANGLES = { up: 0, right: Math.PI / 2, down: Math.PI, left: -Math.PI / 2 };
 const live = (view) => view?.valid === true && ['running', 'respawning'].includes(view.status);
 const unitFor = (options) => 1 / actorScreenScale(options.screenScale);
 const diameterFor = (options) => actorDiameter({ ...options, role: 'enemy', style: 'microtile' });
@@ -59,27 +64,57 @@ export function drawCombatPixelBody(ctx, { role, pose = 0 }, palette = {}) {
 /** Bounded per-painter sprite cache, never a cache of runs or actor references. */
 export function createCombatPresentation({
   createCanvas = () => document.createElement('canvas'),
+  artRevision = runtimeActorArtRevision(),
 } = {}) {
   let paletteKey = '',
     sprites = new Map();
-  function sprite(role, pose, palette) {
+  function sprite(role, pose, palette, kind, actor) {
     const key = JSON.stringify(colors(palette));
     if (paletteKey !== key) {
       paletteKey = key;
       sprites = new Map();
     }
-    const id = `${role}:${pose}`;
+    const cast = sharedActorAppearance().snapshot().cast;
+    const id = JSON.stringify([
+      kind ?? role,
+      artRevision,
+      pose,
+      cast,
+      actor?.pursuit?.behavior,
+      actor?.pursuit?.phase ?? actor?.phase,
+      actor?.pursuit?.heading,
+      actor?.pursuit?.nextHeading,
+      actor?.intentFacingRadians,
+      actor?.state,
+      actor?.frozen,
+      actor?.reducedEffects,
+      !!actor?.pursuit?.goal,
+      actor?.pursuit?.partnerId,
+    ]);
     if (!sprites.has(id)) {
       const canvas = createCanvas();
       canvas.width = canvas.height = 16;
       const ctx = canvas.getContext('2d');
       if (!ctx) throw new Error(t('interface:combatPixelPresentationRequiresA2dCanvas'));
-      drawCombatPixelBody(ctx, { role, pose }, palette);
+      if (kind)
+        drawHumanoidPixelBody(
+          ctx,
+          { ...actor, kind, pose, cast, artRevision, armed: role === 'sentry' },
+          palette,
+        );
+      else drawCombatPixelBody(ctx, { role, pose }, palette);
+      if (sprites.size >= 192) sprites.delete(sprites.keys().next().value);
       sprites.set(id, canvas);
     }
     return sprites.get(id);
   }
   return Object.freeze({
+    setArtRevision(value) {
+      if (value === artRevision) return false;
+      artRevision = value;
+      this.reset();
+      return true;
+    },
     reset() {
       paletteKey = '';
       sprites = new Map();
@@ -98,10 +133,73 @@ export function createCombatPresentation({
           !view.frozen &&
           actor.phase === 'cooldown' &&
           Math.hypot(actor.vx, actor.vy) > 0;
-        const pose = moving ? 1 + (Math.floor(view.actorTick / 24) % 2) : 0;
+        const phase = actor.pursuit?.phase ?? actor.phase;
+        const state =
+          phase === 'warning' || phase === 'turning'
+            ? 'warning'
+            : phase === 'blocked'
+              ? 'blocked'
+              : ['recovering', 'rest', 'recovery'].includes(phase)
+                ? 'recover'
+                : moving
+                  ? actor.kind === 'runner'
+                    ? 'flee'
+                    : 'walk'
+                  : 'idle';
+        const specialist = ['shield', 'brace'].includes(actor.pursuit?.behavior);
+        const facingRadians = actor.facingRadians ?? actorFacingRadians(actor);
+        const still = options.reduced || view.frozen;
+        const cycleTicks = Math.max(36, Math.min(120, 360 / (Math.hypot(actor.vx, actor.vy) || 3)));
+        const pose = actor.kind
+          ? still
+            ? 0
+            : moving
+              ? Math.floor((view.actorTick / cycleTicks) * 6) % 6
+              : Math.floor(view.actorTick / 24) % 4
+          : moving
+            ? 1 + (Math.floor(view.actorTick / 24) % 2)
+            : 0;
+        const drawing = actor.kind
+          ? {
+              ...actor,
+              // Ordinary prey rotates once at its world position below. Keep
+              // its cached body north-facing even when successor pursuit state
+              // carries a heading; only specialists bake their armored front.
+              pursuit:
+                actor.pursuit && !specialist ? { ...actor.pursuit, heading: 'up' } : actor.pursuit,
+              // The body's outer transform supplies world facing. Counter that
+              // transform for the separate accepted upcoming-direction cue.
+              intentFacingRadians:
+                !specialist && Object.hasOwn(HEADING_ANGLES, actor.pursuit?.nextHeading)
+                  ? HEADING_ANGLES[actor.pursuit.nextHeading] - facingRadians
+                  : undefined,
+              state,
+              frozen: view.frozen,
+              reducedEffects: !!options.reduced,
+              locomotionPhase: pose / 6,
+              // Movement descriptors contain six 100 ms stride frames. Using
+              // idle's 300 ms cadence here aliases every step to a neutral pose.
+              timeMs: pose * (moving ? 100 : 300),
+              facingRadians: specialist ? facingRadians : 0,
+              heading: specialist ? actor.pursuit.heading : 'up',
+            }
+          : actor;
         const x = actor.x * CELL,
           y = actor.y * CELL;
-        ctx.drawImage(sprite(actor.role, pose, palette), x - size / 2, y - size / 2, size, size);
+        const body = sprite(actor.role, pose, palette, actor.kind, drawing);
+        if (actor.kind && !specialist) {
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.rotate(facingRadians);
+          ctx.drawImage(body, -size / 2, -size / 2, size, size);
+          ctx.restore();
+        } else ctx.drawImage(body, x - size / 2, y - size / 2, size, size);
+      }
+      // Draw every functional footprint after every enlarged body. Dense groups
+      // must not let a later sprite paint over an earlier target's exact center.
+      for (const actor of view.actors) {
+        const x = actor.x * CELL,
+          y = actor.y * CELL;
         // This exact collision footprint is separate from enlarged body artwork.
         ctx.setLineDash([]);
         for (const [ink, width] of [
@@ -236,16 +334,28 @@ export function drawCombatScrap(ctx, view, palette, options = {}) {
     c = colors(palette);
   ctx.save();
   ctx.globalAlpha = 1;
-  for (const mark of view.eliminations) {
+  const firstSettled = Math.max(
+    0,
+    view.eliminations.length - HUNT_PRESENTATION_CATALOG.budgets.settledClustersPerBoard,
+  );
+  for (const [index, mark] of view.eliminations.entries()) {
     const x = mark.x * CELL,
       y = mark.y * CELL;
-    if (options.showScrap !== false) {
+    if (index >= firstSettled && options.showScrap !== false && (mark.kind || options.brutal)) {
+      drawHuntRemains(ctx, mark, {
+        unit: u,
+        brutal: options.brutal,
+        blood: options.blood,
+        color: c.body,
+        ...(Object.hasOwn(options, 'artRevision') ? { artRevision: options.artRevision } : {}),
+      });
+    } else if (index >= firstSettled && options.showScrap !== false) {
       pixel(ctx, c.plate, x - 4 * u, y - 2 * u, 8 * u, 4 * u);
       pixel(ctx, c.ink, x - 3 * u, y - u, 3 * u, u);
       pixel(ctx, c.body, x + u, y, 2 * u, u);
     }
     const age = view.tick - mark.tick;
-    if (!options.reduced && live(view) && age >= 0 && age < 30) {
+    if (!options.brutal && !options.reduced && live(view) && age >= 0 && age < 30) {
       const offset = (3 + Math.floor(age / 10)) * u;
       const points =
         mark.cause === 'ram'

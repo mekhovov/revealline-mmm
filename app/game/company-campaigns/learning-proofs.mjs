@@ -7,7 +7,13 @@ export const LEARNING_PROOF_FORMAT = 'revealline-learning-proof.v1';
 
 /** Preserve the original lesson proof keys, JSON and public API while sharing
  * bounded replay retention and durable/session adoption with other evidence. */
-export function createCompanyLearningProofStore({ editionId, storage, lessons, acceptSimulation }) {
+export function createCompanyLearningProofStore({
+  editionId,
+  storage,
+  lessons,
+  acceptSimulation,
+  scheduleChunk,
+}) {
   required(stableId(editionId), 'Invalid learning proof edition.');
   required(typeof acceptSimulation === 'function', 'Selected simulation identities are required.');
   const catalog = validateCompanyLessons(lessons);
@@ -53,6 +59,7 @@ export function createCompanyLearningProofStore({ editionId, storage, lessons, a
           attempt: source.attempt,
           replay: source.replay,
           signal,
+          scheduleChunk,
         }),
     },
   });

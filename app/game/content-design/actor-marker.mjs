@@ -73,12 +73,18 @@ export function contentActorMarkerType(level, actor) {
 
 /** Initial authored positions are also shown when the gameplay modifier is off. */
 export function contentCombatMarkers(level) {
-  return (level.classic?.combatPatrols?.actors ?? []).map(({ id, role, x, y }) => ({
+  const patrols =
+    level.runningEnemies?.combatPatrols ?? level.classic?.combatPatrols ?? level.combatPatrols;
+  const hunt = level.runningEnemies?.hunt ?? level.classic?.hunt ?? level.hunt;
+  return (patrols?.actors ?? []).map(({ id, role, x, y }) => ({
     id,
     type: `optional-${role}`,
     x,
     y,
-    inactive: !level.classic.combatPatrols.enabled,
+    inactive: !patrols.enabled,
+    ...(hunt?.targets.some((target) => target.id === id)
+      ? { huntKind: hunt.targets.find((target) => target.id === id).kind }
+      : {}),
   }));
 }
 
@@ -94,8 +100,18 @@ const actorTypeKeys = {
 };
 export function contentActorDescription(level, actor) {
   if (['optional-scout', 'optional-sentry'].includes(actor.type)) {
-    const recipe = level.classic.combatPatrols.actors.find((entry) => entry.id === actor.id);
-    const active = level.classic.combatPatrols.enabled;
+    const patrols =
+      level.runningEnemies?.combatPatrols ?? level.classic?.combatPatrols ?? level.combatPatrols;
+    const recipe = patrols.actors.find((entry) => entry.id === actor.id);
+    const active = patrols.enabled;
+    if (actor.huntKind)
+      return t(`tools:studio.hunt.${actor.huntKind}`, {
+        speed: recipe.speed,
+        opening: recipe.openingTicks / 120,
+        warning: recipe.warningTicks / 120,
+        recovery: recipe.recoveryTicks / 120,
+        rest: recipe.restTicks / 120,
+      });
     const key =
       recipe.role === 'sentry'
         ? active

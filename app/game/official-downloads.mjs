@@ -4,7 +4,8 @@ export const DOWNLOAD_STATE_CACHE = 'revealline-mmm-official-downloads-v1';
 export const OFFICIAL_ORIGINAL_INDEX = 'revealline-mmm-official-original-index-v1';
 export const OFFICIAL_REFERENCE_MIME = 'application/x-revealline-official-reference';
 const hashPattern = /^[a-f0-9]{64}$/;
-const limit = 32 * 1024 * 1024;
+export const MAX_OFFICIAL_FILE_BYTES = 32 * 1024 * 1024;
+const limit = MAX_OFFICIAL_FILE_BYTES;
 export const officialAssetURL = (hash, origin = globalThis.location?.origin) => {
   if (!hashPattern.test(hash)) throw new Error('Invalid official asset identity.');
   return new URL(`/.revealline-mmm-official/sha256/${hash}`, origin).href;
@@ -14,7 +15,7 @@ export async function assetDigest(bytes, cryptoRef = globalThis.crypto) {
     .map((byte) => byte.toString(16).padStart(2, '0'))
     .join('');
 }
-function checkFile(file) {
+export function validateOfficialDownloadFile(file) {
   if (
     !hashPattern.test(file?.sha256) ||
     !Number.isSafeInteger(file.bytes) ||
@@ -24,6 +25,7 @@ function checkFile(file) {
     throw new Error('Invalid official download descriptor.');
   return file;
 }
+const checkFile = validateOfficialDownloadFile;
 function aborted(signal) {
   signal?.throwIfAborted();
 }
@@ -422,11 +424,28 @@ export async function readOfficialOriginal(hash, { pin = false } = {}) {
 
 export async function localOfficialRecordingIds(catalogue) {
   try {
+    const tracks = [...catalogue.tracks];
+    if (!tracks.length) return [];
     const store = createOfficialDownloads(),
-      ids = [];
-    for (const track of catalogue.tracks)
-      if ((await store.inspect([track.asset])).ready) ids.push(track.id);
-    return ids;
+      assets = tracks.map((track) => track.asset),
+      sizes = new Map();
+    const conflictingSizes = assets.some((asset) => {
+      checkFile(asset);
+      const previous = sizes.get(asset.sha256);
+      sizes.set(asset.sha256, asset.bytes);
+      return previous !== undefined && previous !== asset.bytes;
+    });
+    // inspect deduplicates by hash. Preserve per-track readiness if descriptors
+    // disagree about the same asset's size instead of letting the last one win.
+    if (conflictingSizes) {
+      const ids = [];
+      for (const track of tracks)
+        if ((await store.inspect([track.asset])).ready) ids.push(track.id);
+      return ids;
+    }
+    const report = await store.inspect(assets),
+      unavailable = new Set([...report.missing, ...report.corrupt].map((file) => file.sha256));
+    return tracks.filter((track) => !unavailable.has(track.asset.sha256)).map((track) => track.id);
   } catch {
     return [];
   }

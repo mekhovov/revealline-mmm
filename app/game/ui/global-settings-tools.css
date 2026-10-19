@@ -1,0 +1,42 @@
+.global-settings-tool-dialog {
+  box-sizing: border-box;
+  width: min(1100px, calc(100vw - 16px));
+  height: calc(100dvh - 16px);
+  max-height: calc(100dvh - 16px);
+  padding: 12px;
+  color: var(--fk-ink, #edf2ff);
+  background: var(--fk-panel, #101820);
+}
+.global-settings-tool-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.global-settings-tool-dialog > header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.global-settings-tool-dialog h2 {
+  flex: 1;
+  font-size: 18px;
+  margin: 0;
+}
+.global-settings-tool-dialog :is(button, a) {
+  min-height: 44px;
+}
+.global-settings-tool-dialog iframe {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  border: 0;
+  background: #070914;
+}
+[data-global-tool-row] {
+  display: grid;
+  gap: 8px;
+}
+[data-global-tool-row] > p:empty {
+  display: none;
+}

@@ -12,6 +12,31 @@ export function inspectMissionTopology(level, geometry) {
 /** Shared spatial diagnostics, supplied with each mode's real initial engine.
  * Reachability is the union of explicit seats, not an assumed Solo start. */
 export function inspectRuntimeTopology(run, level, geometry, spawns, objectives = []) {
+  if (run.ruleset === 'revealline-coop.v17' && run.environment) {
+    const env = run.environment;
+    objectives = [
+      ...env.relays.map((relay) => ({ id: relay.id, ...relay.objective, required: true })),
+      ...env.stages.map((stage) => ({ ...stage, required: true })),
+    ];
+    run = {
+      ...run,
+      objectives,
+      relay: {
+        gates: env.relays.map((relay) => ({
+          id: relay.id,
+          objectiveId: relay.id,
+          openedTick: null,
+          cells: Array.from(
+            { length: relay.gate.w * relay.gate.h },
+            (_, index) =>
+              (relay.gate.y + Math.floor(index / relay.gate.w)) * run.width +
+              relay.gate.x +
+              (index % relay.gate.w),
+          ),
+        })),
+      },
+    };
+  }
   const capture = inspectCaptureSnapshot(run);
   const queue = spawns.map((spawn) => Math.floor(spawn.y) * run.width + Math.floor(spawn.x));
   const reachable = new Set(queue);

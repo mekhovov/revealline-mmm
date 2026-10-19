@@ -1,0 +1,73 @@
+{
+  "format": "branded-menu-scenes.v1",
+  "resources": [
+    "game/ui/art/menu-scenes/coupa.webp",
+    "game/ui/art/menu-scenes/coupa-village.webp",
+    "game/ui/art/menu-scenes/coupa-spend-in-motion-theme.webp",
+    "game/ui/art/menu-scenes/coupa-inside-village-theme.webp",
+    "game/ui/art/menu-scenes/coupa-source-to-pay-theme.webp",
+    "game/ui/art/menu-scenes/coupa-product-operations-theme.webp",
+    "game/ui/art/menu-scenes/coupa-developer-integration-theme.webp",
+    "game/ui/art/menu-scenes/coupa-versus.webp",
+    "game/ui/art/menu-scenes/coupa-versus-portrait.webp",
+    "game/ui/art/menu-scenes/coupa-team.webp",
+    "game/ui/art/menu-scenes/coupa-team-portrait.webp"
+  ],
+  "files": [
+    {
+      "path": "game/ui/art/menu-scenes/coupa.webp",
+      "bytes": 389078,
+      "sha256": "393ebd9f3cf395598a79a43cd1277adfe4381cee177549be38fc027ec76afdc1"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-village.webp",
+      "bytes": 540732,
+      "sha256": "b7a4113a200a956e207188e5e66a472539bbe5d29b7009039bc79e90ca551192"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-spend-in-motion-theme.webp",
+      "bytes": 700570,
+      "sha256": "22a53a8e40d2b7c8788d89d264ac946b0465895eb8e407b7b0745f5efdc0eff8"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-inside-village-theme.webp",
+      "bytes": 356686,
+      "sha256": "01b291d818f0839722c02c5b72592ee752e0fda4d605a4cd048be43c7a21b34a"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-source-to-pay-theme.webp",
+      "bytes": 375148,
+      "sha256": "fd4b66a8df11db0504aa05fb6000511c307e46b8bac68e461e3ad396bb8a6066"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-product-operations-theme.webp",
+      "bytes": 405702,
+      "sha256": "2a58390914ff3bba6b21d68026a6cd21c5505de37d443f3e6760caba29deb401"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-developer-integration-theme.webp",
+      "bytes": 612326,
+      "sha256": "1da45a8b55412741155b8d10bb85e6a339cd95304eb253276669c2f8e707cadb"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-versus.webp",
+      "bytes": 1620118,
+      "sha256": "7c10b3469f5bbabd6a704abb0900f9c9afd1d8755b830f2f0229c3370cf051dd"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-versus-portrait.webp",
+      "bytes": 1669344,
+      "sha256": "5e5aa3c392527b45757f4175639919544be598ad4140959f8c7297297e0af8e6"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-team.webp",
+      "bytes": 1580074,
+      "sha256": "be7f79098d17957e598e7fd4a96004f2656a7459a08980b0bcd8ac757c30f136"
+    },
+    {
+      "path": "game/ui/art/menu-scenes/coupa-team-portrait.webp",
+      "bytes": 1744888,
+      "sha256": "41c42fefb39048fd1dadd790ef14225275ca99333c8b6383e8fc09f9763d0de7"
+    }
+  ]
+}

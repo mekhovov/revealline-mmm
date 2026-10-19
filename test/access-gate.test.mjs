@@ -28,3 +28,15 @@ test('every Coupa entry waits for the remembered access gate', async () => {
   assert.match(teamEntry, /await globalThis\.RevealLineAccess\?\.ready/);
   assert.match(gate, /localStorage\?\.setItem/);
 });
+
+
+test('Snake and native collections retain one gate and await access before starting', async () => {
+  for (const file of ['snake/index.html','snake/play.html','collections/index.html','couch/index.html','couch/relay-rescue.html']) {
+    const source=await read('../app/game/'+file);
+    assert.equal((source.match(/data-access-state="locked"/g)??[]).length,1,file);
+    assert.equal((source.match(/name="revealline-access-id"/g)??[]).length,1,file);
+    assert.match(source,/revealline-mmm/);
+  }
+  for (const file of ['snake/coupa-snake.mjs','collections/coupa-collections.mjs'])
+    assert.match(await read('../app/game/'+file),/await globalThis\.RevealLineAccess\?\.ready/);
+});

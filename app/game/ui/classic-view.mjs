@@ -1,5 +1,5 @@
 import { contentText } from '../i18n/content.mjs';
-import { t } from '../i18n/index.mjs';
+import { getLocale, t } from '../i18n/index.mjs';
 import { CELL, FIXED_DT } from '../core/registry.mjs';
 import { TIMED_BONUS_VERSIONS } from '../core/timed-bonuses.mjs';
 import {
@@ -14,20 +14,30 @@ import { enemyCatalogRecord } from '../enemy-catalog.mjs';
 
 const SIZE = 16;
 const KINDS = ['extra-life', 'player-speed', 'enemy-slow', 'enemy-freeze'];
-const LABELS = {
-  get 'extra-life'() {
-    return t('interface:life');
-  },
-  get 'player-speed'() {
-    return t('interface:speed');
-  },
-  get 'enemy-slow'() {
-    return t('interface:enemiesSlow');
-  },
-  get 'enemy-freeze'() {
-    return t('interface:enemiesFrozen');
-  },
+// Each fixed label retains one translation for the accepted locale. Dynamic
+// countdowns and the bounded presentation validation still run for every view.
+const localizedLabel = (translate) => {
+  let locale, value;
+  return () => {
+    const current = getLocale();
+    if (locale !== current) {
+      value = translate();
+      locale = current;
+    }
+    return value;
+  };
 };
+const LABELS = Object.freeze({
+  'extra-life': localizedLabel(() => t('interface:life')),
+  'player-speed': localizedLabel(() => t('interface:speed')),
+  'enemy-slow': localizedLabel(() => t('interface:enemiesSlow')),
+  'enemy-freeze': localizedLabel(() => t('interface:enemiesFrozen')),
+});
+const SHORT_LABELS = Object.freeze({
+  'player-speed': localizedLabel(() => t('interface:speed2')),
+  'enemy-slow': localizedLabel(() => t('interface:slow')),
+  'enemy-freeze': localizedLabel(() => t('interface:freeze')),
+});
 const TYPES = [
   'bouncer',
   'border-patrol',
@@ -122,7 +132,7 @@ export function classicView(run) {
       if (until <= tick || status === 'won' || status === 'lost') continue;
       effects.push({
         kind,
-        label: LABELS[kind],
+        label: LABELS[kind](),
         phase: tick < from ? 'pending' : 'active',
         ticks: until - Math.max(tick, from),
         seconds: (until - Math.max(tick, from)) * FIXED_DT,
@@ -151,7 +161,7 @@ export function classicView(run) {
           point.y >= 0.5 &&
           point.y <= 35.5,
       );
-      if (collectedTick === null) powerups.push({ id, kind, label: LABELS[kind], ...point });
+      if (collectedTick === null) powerups.push({ id, kind, label: LABELS[kind](), ...point });
     }
     const lineImpacts = [];
     const impact = own(state, 'lineImpact');
@@ -206,7 +216,7 @@ export function classicView(run) {
         const visual = {
           id,
           kind,
-          label: LABELS[kind],
+          label: LABELS[kind](),
           ...point,
           timed: true,
           phase,
@@ -736,13 +746,7 @@ export function drawClassicStatus(
     ctx.font = `500 14px ${fonts?.ui || '"Field Kit UI", "Field Kit Mono", sans-serif'}`;
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'left';
-    const label = compact
-      ? {
-          'player-speed': t('interface:speed2'),
-          'enemy-slow': t('interface:slow'),
-          'enemy-freeze': t('interface:freeze'),
-        }[effect.kind]
-      : effect.label;
+    const label = compact ? SHORT_LABELS[effect.kind]?.() : effect.label;
     ctx.fillText(
       `${label} ${effect.phase === 'pending' ? 'next' : `${effect.seconds.toFixed(1)}s`}`,
       10,

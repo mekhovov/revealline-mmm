@@ -1,4 +1,20 @@
+import { createActorDefeatPresentation } from './actor-defeat-presentation.mjs';
+import {
+  sharedBattlefieldGround,
+  createBattlefieldGroundSurface,
+  battlefieldGroundAllowed,
+  paintBattlefieldGroundSpan,
+} from '../presentation/battlefield-ground.mjs';
+import { requireAcceptedAttemptAppearance } from '../presentation/attempt-appearance.mjs';
+import { canvasInterfaceFonts } from '../presentation/theme-system.mjs';
+import { createHuntDestruction } from '../hunt/destruction.mjs';
+import { runtimeActorArtRevision } from '../hunt/preferences.mjs';
 import { preparedRotorRecipe } from './rotor-presentation.mjs';
+import {
+  createArcadeAdapter,
+  getArcadeCollection,
+  selectedArcadeCollection,
+} from '../presentation/industrial-arcade.mjs';
 import { contactCueUnderstroke } from './contact-cue.mjs';
 import { t } from '../i18n/index.mjs';
 import { canvasTextFonts } from '../text-face.mjs';
@@ -19,6 +35,7 @@ import {
   drawEnemyPressure,
 } from './classic-view.mjs';
 import { combatView } from './combat-view.mjs';
+import { drawSnakeBody, drawSnakeTargetOrder } from './snake-view.mjs';
 import {
   createCombatPresentation,
   drawCombatScrap,
@@ -111,13 +128,110 @@ const colorMix = (a, b, t) =>
         .padStart(2, '0'),
     )
     .join('');
-const imageLoad = (src) =>
-  new Promise((resolve, reject) => {
-    const image = new Image();
-    image.onload = () => resolve(image);
-    image.onerror = () => reject(new Error(t('interface:artworkCouldNotBeLoaded')));
-    image.src = src;
+const painterImages = {
+  queue: [],
+  pending: 0,
+  active: 0,
+  reservedPixels: 0,
+  retainedPixels: 0,
+};
+const imageOwnership = new WeakMap();
+const releaseImage = (image) => {
+  const pixels = imageOwnership.get(image);
+  if (pixels === undefined) return;
+  imageOwnership.delete(image);
+  painterImages.retainedPixels -= pixels;
+  image.removeAttribute?.('src');
+};
+const runNextPainterImage = () => {
+  if (painterImages.active || !painterImages.queue.length) return;
+  const work = painterImages.queue.shift();
+  painterImages.pending--;
+  void work();
+};
+const imageLoad = (src, signal) => {
+  let resolve,
+    reject,
+    settled = false,
+    timer = null,
+    rejectLoad = null,
+    image = null;
+  const result = new Promise((yes, no) => {
+    resolve = yes;
+    reject = no;
   });
+  const finish = (error) => {
+    if (settled) return;
+    settled = true;
+    clearTimeout(timer);
+    signal?.removeEventListener('abort', abort);
+    const queued = painterImages.queue.indexOf(work);
+    if (queued !== -1) {
+      painterImages.queue.splice(queued, 1);
+      painterImages.pending--;
+    }
+    if (image) image.onload = image.onerror = null;
+    if (error) {
+      image?.removeAttribute?.('src');
+      rejectLoad?.(error);
+      reject(error);
+    } else resolve(image);
+  };
+  const abort = () => finish(new DOMException('Painter image cancelled.', 'AbortError'));
+  const work = async () => {
+    if (settled) return;
+    painterImages.active++;
+    let pixels = 0;
+    try {
+      image = new Image();
+      image.decoding = 'async';
+      await new Promise((yes, no) => {
+        rejectLoad = no;
+        image.onload = yes;
+        image.onerror = () => no(new Error(t('interface:artworkCouldNotBeLoaded')));
+        image.src = src;
+      });
+      if (settled) return;
+      pixels =
+        (image.naturalWidth || image.width || 0) * (image.naturalHeight || image.height || 0);
+      if (pixels + painterImages.retainedPixels > 16 * 1024 * 1024)
+        throw new Error('Painter image pixel budget exceeded.');
+      painterImages.reservedPixels = pixels;
+      // Cancellation settles the caller promptly but keeps this reservation
+      // until the browser decoder actually finishes. Queued canceled work is removed.
+      await image.decode?.();
+      if (settled) return;
+      imageOwnership.set(image, pixels);
+      painterImages.retainedPixels += pixels;
+      finish();
+    } catch (error) {
+      finish(error);
+    } finally {
+      painterImages.reservedPixels = 0;
+      painterImages.active--;
+      runNextPainterImage();
+    }
+  };
+  signal?.addEventListener('abort', abort, { once: true });
+  timer = setTimeout(() => finish(new Error(t('interface:artworkCouldNotBeLoaded'))), 15000);
+  if (signal?.aborted) abort();
+  if (!settled) {
+    painterImages.pending++;
+    painterImages.queue.push(work);
+    runNextPainterImage();
+  }
+  return result;
+};
+const cancelledPreparation = () => new DOMException('Painter preparation cancelled.', 'AbortError');
+const waitForPreparation = (promise, signal) => {
+  if (!signal) return promise;
+  if (signal.aborted) return Promise.reject(cancelledPreparation());
+  return new Promise((resolve, reject) => {
+    const abort = () => reject(cancelledPreparation());
+    signal.addEventListener('abort', abort, { once: true });
+    promise.then(resolve, reject).finally(() => signal.removeEventListener('abort', abort));
+  });
+};
 
 export class BoardPainter {
   constructor(
@@ -125,19 +239,40 @@ export class BoardPainter {
     {
       onAsset = () => {},
       onAssetStatus = () => {},
+      onContextLoss = () => {},
+      onContextRestored = () => {},
+      layerCanvasFactory = makeCanvas,
       pictureCanvasFactory,
       jammerCanvasFactory,
       signalCanvasFactory,
     } = {},
   ) {
     this.presets = presets;
+    this.onContextLoss = onContextLoss;
+    this.onContextRestored = onContextRestored;
+    const contextCallbacks = {
+      onContextLoss: (event) => this.onContextLoss(event),
+      onContextRestored: (event) => this.onContextRestored(event),
+    };
+    this.layerCanvasFactory = layerCanvasFactory;
+    this.layers = new Map();
+    this.preparationGeneration = 0;
+    this.paintRevision = 0;
+    this.lookReady = Promise.resolve();
+    this.battlefieldGround = createBattlefieldGroundSurface({
+      onContextLoss: (event) => this.onContextLoss(event),
+      onContextRestored: (event) => this.onContextRestored(event),
+    });
     this.onAsset = onAsset;
     this.onAssetStatus = onAssetStatus;
     this.lookWarning = '';
     this.enemyBodies = createEnemyBodyAssets({ changed: () => this.reportAssets() });
     this.animation = createAnimationState();
     this.actorPresentation = createActorPresentation();
+    this.actorDefeats = createActorDefeatPresentation({ kind: 'capture' });
+    this.actorFinishBodies = new Map();
     this.combatPresentation = createCombatPresentation();
+    this.huntDestruction = createHuntDestruction();
     this.heading = 0;
     this.time = 0;
     this.effects = [];
@@ -151,17 +286,45 @@ export class BoardPainter {
     this._winState = null;
     this._celebrationPrepared = false;
     this.presentation = null;
-    this.pictureFilter = createDemoPictureFilter({ canvasFactory: pictureCanvasFactory });
-    this.jammerPictureFilter = createJammerPictureFilter({ canvasFactory: jammerCanvasFactory });
-    this.signalReception = createSignalReception({ canvasFactory: signalCanvasFactory });
+    this.artRevision = runtimeActorArtRevision();
+    this.arcadeAdapter = createArcadeAdapter({
+      reviewRevision: this.artRevision,
+      ...contextCallbacks,
+    });
+    this.arcadeProvider = () => null;
+    this.interfaceProvider = () => null;
+    this.arcadeCollection = null;
+    this.pictureFilter = createDemoPictureFilter({
+      canvasFactory: pictureCanvasFactory,
+      ...contextCallbacks,
+    });
+    this.jammerPictureFilter = createJammerPictureFilter({
+      canvasFactory: jammerCanvasFactory,
+      ...contextCallbacks,
+    });
+    this.signalReception = createSignalReception({
+      canvasFactory: signalCanvasFactory,
+      ...contextCallbacks,
+    });
   }
   dispose() {
+    if (this.disposed) return;
+    this.disposed = true;
+    this.invalidate();
+    ++this.preparationGeneration;
+    this.battlefieldGround.clear();
+    this.releaseBackgroundArt();
+    this.arcadeAdapter.clear();
     // Retired scenes cannot adopt a late decode or retain shared enemy leases.
     ++this.loadToken;
+    this.lookController?.abort();
+    for (const image of new Set(Object.values(this.images))) releaseImage(image);
     this.enemyBodies.clear();
     this.pictureFilter.clear();
     this.jammerPictureFilter.clear();
     this.signalReception.dispose();
+    this.huntDestruction.reset();
+    this.combatPresentation.reset();
     this.images = {};
     this.overrides = {};
     this.image = null;
@@ -172,26 +335,56 @@ export class BoardPainter {
     this.celebration = null;
     this._winState = null;
     this.actorPresentation.reset();
+    this.actorDefeats.reset();
+    this.actorFinishBodies.clear();
   }
   // A read-only compiled release snapshot is cosmetic. It never replaces the
   // source theme, picture, body preset or any simulation-owned reference.
   setPresentation(snapshot = null) {
+    if (snapshot !== this.presentation) {
+      ++this.paintRevision;
+      this.arcadeAdapter.clear();
+      this.actorDefeats.reset();
+      this.actorFinishBodies.clear();
+    }
     this.presentation = snapshot;
   }
-  async setLook(theme, bodyId, overrides = {}) {
+  setInterfaceProvider(provider) {
+    this.interfaceProvider = typeof provider === 'function' ? provider : () => null;
+  }
+  setArcadeProvider(provider) {
+    this.arcadeProvider = typeof provider === 'function' ? provider : () => null;
+  }
+  get artSnapshot() {
+    return this.arcadeAdapter.resolve(this.presentation, this.arcadeCollection);
+  }
+  setLook(theme, bodyId, overrides = {}) {
+    this.lookReady = this.loadLook(theme, bodyId, overrides);
+    return this.lookReady;
+  }
+  async loadLook(theme, bodyId, overrides = {}) {
+    this.invalidate();
+    ++this.preparationGeneration;
     this.pictureFilter.clear();
     this.jammerPictureFilter.clear();
     const token = ++this.loadToken;
+    this.lookController?.abort();
+    this.lookController = new AbortController();
+    const signal = this.lookController.signal;
+    for (const image of new Set(Object.values(this.images))) releaseImage(image);
     this.enemyBodies.clear();
     this.lookWarning = '';
     this.theme = theme;
     this.bodyId = bodyId;
     this.overrides = overrides;
     this.images = {};
-    this.background = this.makeArt(theme);
+    this.setBackgroundArt(theme);
     this.animation = createAnimationState();
     this.actorPresentation.reset();
+    this.actorDefeats.reset();
+    this.actorFinishBodies.clear();
     this.combatPresentation.reset();
+    this.huntDestruction.reset();
     const knownBody = Object.hasOwn(this.presets.characters, bodyId)
         ? this.presets.characters[bodyId]
         : null,
@@ -228,9 +421,12 @@ export class BoardPainter {
     };
     if (requested.length) report('preparing', t('interface:loadingCraftAndSceneArtwork'));
     const settled = await Promise.allSettled(
-      requested.map(async ([role, src]) => [role, await imageLoad(src)]),
+      requested.map(async ([role, src]) => [role, await imageLoad(src, signal)]),
     );
-    if (token !== this.loadToken) return;
+    if (token !== this.loadToken) {
+      for (const item of settled) if (item.status === 'fulfilled') releaseImage(item.value[1]);
+      return;
+    }
     for (const item of settled)
       if (item.status === 'fulfilled') {
         const [role, img] = item.value;
@@ -252,7 +448,236 @@ export class BoardPainter {
       this.lookWarning || t('interface:craftAndSceneArtworkAreReady'),
     );
   }
+  async whenReady({ signal } = {}) {
+    const generation = this.preparationGeneration;
+    await waitForPreparation(this.lookReady, signal);
+    await this.enemyBodies.ready({ signal });
+    if (signal?.aborted || generation !== this.preparationGeneration) throw cancelledPreparation();
+  }
+  async prepare(ctx, state, options = {}, { signal } = {}) {
+    const generation = this.preparationGeneration;
+    await waitForPreparation(this.lookReady, signal);
+    if (signal?.aborted || generation !== this.preparationGeneration) throw cancelledPreparation();
+    this.signalReception.prepare();
+    this.jammerPictureFilter.prepare();
+    const preparedOptions = {
+      ...options,
+      paused: true,
+      signalReception: options.signalReception === 'off' ? 'off' : 'ready',
+      signalEffectsRunning: false,
+    };
+    this.draw(ctx, state, 0, preparedOptions);
+    this.jammerPictureFilter.prepare(this.preparedPicture);
+    await this.whenReady({ signal });
+    if (signal?.aborted || generation !== this.preparationGeneration) throw cancelledPreparation();
+    this.draw(ctx, state, 0, preparedOptions);
+  }
+  retireLayer(name, layer) {
+    const wasLost = layer.lostContext;
+    layer.lostContext = false;
+    layer.canvas?.removeEventListener?.('contextlost', layer.lost);
+    layer.canvas?.removeEventListener?.('contextrestored', layer.restored);
+    if (layer.canvas) layer.canvas.width = layer.canvas.height = 0;
+    if (wasLost) this.onContextRestored({ source: name, owner: layer, retired: true });
+  }
+  invalidate() {
+    ++this.paintRevision;
+    const retired = [...this.layers.entries()];
+    this.layers.clear();
+    for (const [name, layer] of retired) this.retireLayer(name, layer);
+    this.cellSnapshot = null;
+    this.cellRuns = null;
+    this.preparedPicture = null;
+    this.arcadeAdapter?.clear();
+    this.battlefieldGround?.clear();
+    this.pictureFilter?.clear();
+    this.jammerPictureFilter?.clear();
+    this.signalReception?.invalidate();
+  }
+  resourceSnapshot() {
+    const layers = this.cacheStats,
+      sourcePixels =
+        (this.backgroundArt?.canvas.width ?? 0) * (this.backgroundArt?.canvas.height ?? 0),
+      jammer = this.jammerPictureFilter.resourceSnapshot(),
+      demo = this.pictureFilter.resourceSnapshot();
+    const categories = {
+      staticLayers: {
+        canvases: [...this.layers.values()].filter(
+          (layer) => layer.canvas?.width && layer.canvas?.height,
+        ).length,
+        pixels: layers.pixels,
+        rgbaBytesEstimate: layers.pixels * 4,
+      },
+      sourceArt: {
+        canvases: Number(sourcePixels > 0),
+        pixels: sourcePixels,
+        rgbaBytesEstimate: sourcePixels * 4,
+      },
+      battlefieldGround: this.battlefieldGround.resourceSnapshot(),
+      adaptedSprites: this.arcadeAdapter.resourceSnapshot(),
+      signalNoise: this.signalReception.resourceSnapshot(),
+      jammerSurface: jammer.surface,
+      jammerNoise: jammer.noise,
+      demoConcealment: demo,
+    };
+    const ownedCanvases = {
+      scope: 'Unique canvases owned by this painter; excludes Phaser and shared source images.',
+      categories,
+      canvases: 0,
+      pixels: 0,
+      rgbaBytesEstimate: 0,
+      retainedPixelBufferBytes: demo.pixelBufferBytes,
+      estimate:
+        'RGBA8 dimensions at four bytes per pixel; browser/GPU allocation, copies and overhead are unobservable.',
+    };
+    for (const category of Object.values(categories)) {
+      ownedCanvases.canvases += category.canvases;
+      ownedCanvases.pixels += category.pixels;
+      ownedCanvases.rgbaBytesEstimate += category.rgbaBytesEstimate;
+    }
+    return {
+      layers,
+      ownedCanvases,
+      enemyImages: this.enemyBodies.resourceSnapshot(),
+      legacyImages: {
+        scope: 'page',
+        pending: painterImages.pending,
+        active: painterImages.active,
+        reservedPixels: painterImages.reservedPixels,
+        retainedPixels: painterImages.retainedPixels,
+        pixelLimit: 16 * 1024 * 1024,
+      },
+    };
+  }
+  get cacheStats() {
+    let pixels = 0;
+    for (const layer of this.layers.values())
+      pixels += (layer.canvas?.width ?? 0) * (layer.canvas?.height ?? 0);
+    return { layers: this.layers.size, pixels };
+  }
+  paintLayer(name, ctx, width, height, keys, paint) {
+    let layer = this.layers.get(name);
+    if (layer && (layer.width !== width || layer.height !== height)) {
+      this.layers.delete(name);
+      this.retireLayer(name, layer);
+      layer = null;
+    }
+    if (!layer) {
+      layer = { width, height, canvas: null, context: null, keys: null, lostContext: false };
+      this.layers.set(name, layer);
+      try {
+        // Four ordinary board layers fit below this presentation-only bound.
+        // Large custom boards retain the direct painter instead of multiplying memory.
+        if (this.cacheStats.pixels + width * height > 4 * 1024 * 1024)
+          throw new Error('Layer budget');
+        const canvas = this.layerCanvasFactory(width, height);
+        canvas.width = width;
+        canvas.height = height;
+        layer.canvas = canvas;
+        const context = canvas.getContext('2d');
+        if (!context) throw new Error('Layer context unavailable');
+        layer.canvas = canvas;
+        layer.context = context;
+        layer.lost = () => {
+          layer.lostContext = true;
+          layer.keys = null;
+          this.onContextLoss({ source: name, owner: layer });
+        };
+        layer.restored = () => {
+          layer.lostContext = false;
+          layer.keys = null;
+          this.onContextRestored({ source: name, owner: layer });
+        };
+        canvas.addEventListener?.('contextlost', layer.lost);
+        canvas.addEventListener?.('contextrestored', layer.restored);
+      } catch {
+        if (layer.canvas) layer.canvas.width = layer.canvas.height = 0;
+        layer.canvas = null;
+        // A failed allocation stays quarantined until invalidation.
+      }
+    }
+    if (!layer.context || layer.lostContext) return paint(ctx);
+    if (
+      !layer.keys ||
+      layer.keys.length !== keys.length ||
+      keys.some((value, i) => value !== layer.keys[i])
+    ) {
+      const target = layer.context;
+      target.save();
+      try {
+        target.setTransform(1, 0, 0, 1, 0, 0);
+        target.globalAlpha = 1;
+        target.globalCompositeOperation = 'source-over';
+        target.imageSmoothingEnabled = false;
+        target.clearRect(0, 0, width, height);
+        paint(target);
+        layer.keys = keys;
+      } finally {
+        target.restore();
+      }
+    }
+    ctx.drawImage(layer.canvas, 0, 0);
+  }
+  boardCells(cells, columns, rows) {
+    let changed =
+      !this.cellSnapshot ||
+      this.cellColumns !== columns ||
+      this.cellRows !== rows ||
+      this.cellSnapshot.length !== cells.length;
+    if (!changed)
+      for (let i = 0; i < cells.length; i++)
+        if (cells[i] !== this.cellSnapshot[i]) {
+          changed = true;
+          break;
+        }
+    if (!changed) return this.cellRuns;
+    this.cellSnapshot = Uint8Array.from(cells);
+    this.cellColumns = columns;
+    this.cellRows = rows;
+    this.cellRevision = (this.cellRevision ?? 0) + 1;
+    const covered = [],
+      walls = [],
+      boundary = [],
+      boundaryGroups = [];
+    for (let y = 0; y < rows; y++) {
+      let start = -1;
+      for (let x = 0; x <= columns; x++) {
+        const value = x < columns ? cells[y * columns + x] : -1;
+        if (value === 0 && start < 0) start = x;
+        if (value !== 0 && start >= 0) {
+          covered.push([start * CELL, y * CELL, (x - start) * CELL, CELL]);
+          start = -1;
+        }
+        if (value === 2) walls.push([x * CELL, y * CELL]);
+        if (value !== 1) continue;
+        const groupStart = boundary.length;
+        const xx = x * CELL,
+          yy = y * CELL;
+        if (y > 0 && cells[(y - 1) * columns + x] === 0) boundary.push([xx, yy, xx + CELL, yy]);
+        if (y < rows - 1 && cells[(y + 1) * columns + x] === 0)
+          boundary.push([xx, yy + CELL, xx + CELL, yy + CELL]);
+        if (x > 0 && cells[y * columns + x - 1] === 0) boundary.push([xx, yy, xx, yy + CELL]);
+        if (x < columns - 1 && cells[y * columns + x + 1] === 0)
+          boundary.push([xx + CELL, yy, xx + CELL, yy + CELL]);
+        if (boundary.length > groupStart) boundaryGroups.push(boundary.slice(groupStart));
+      }
+    }
+    const paths =
+      typeof Path2D === 'function'
+        ? boundaryGroups.map((segments) => {
+            const path = new Path2D();
+            for (const [x1, y1, x2, y2] of segments) {
+              path.moveTo(x1, y1);
+              path.lineTo(x2, y2);
+            }
+            return path;
+          })
+        : null;
+    return (this.cellRuns = { covered, walls, boundary, boundaryGroups, paths });
+  }
+
   reportAssets() {
+    ++this.paintRevision;
     this.onAsset([this.lookWarning, this.enemyBodies.status()].filter(Boolean).join(' '));
   }
   enemyBody(frame, compiled = null) {
@@ -267,15 +692,79 @@ export class BoardPainter {
         }
       : this.enemyBodies.current(frame);
   }
+  releaseBackgroundArt() {
+    const owner = this.backgroundArt;
+    if (!owner) return;
+    this.backgroundArt = null;
+    const wasLost = owner.lost;
+    owner.lost = false;
+    owner.canvas.removeEventListener?.('contextlost', owner.onLost);
+    owner.canvas.removeEventListener?.('contextrestored', owner.onRestored);
+    owner.canvas.width = owner.canvas.height = 0;
+    if (wasLost) this.onContextRestored({ source: 'scene-art', owner, retired: true });
+  }
+  setBackgroundArt(theme, level = this.levelInfo, seed = this.artSeed) {
+    this.releaseBackgroundArt();
+    this.background = this.makeArt(theme, level, seed);
+    if (typeof this.background?.getContext !== 'function') return;
+    const owner = { canvas: this.background, lost: false };
+    this.backgroundArt = owner;
+    owner.onLost = () => {
+      owner.lost = true;
+      this.onContextLoss({ source: 'scene-art', owner });
+    };
+    owner.onRestored = () => {
+      owner.lost = false;
+      // Restored canvas storage is empty; regenerate the exact accepted art.
+      this.setBackgroundArt(theme, level, seed);
+      ++this.paintRevision;
+      this.onContextRestored({ source: 'scene-art', owner });
+    };
+    owner.canvas.addEventListener?.('contextlost', owner.onLost);
+    owner.canvas.addEventListener?.('contextrestored', owner.onRestored);
+  }
   makeArt(theme, level = this.levelInfo, seed = this.artSeed) {
     return createSceneArt(theme, level, seed, () => makeCanvas(384, 288));
   }
-  setLevel(level = {}, { seed = 0 } = {}) {
+  // Only the host's first activation or new-attempt preparation calls this.
+  // Resume never rereads the menu choices for an already accepted attempt.
+  setAttemptAppearance(appearance) {
+    if (this.acceptedAttemptAppearance === appearance) return;
+    const accepted = requireAcceptedAttemptAppearance(appearance);
+    this.acceptEnemyArtwork({
+      artRevision: accepted?.artRevision ?? null,
+      arcadeCollection: accepted?.collection
+        ? getArcadeCollection(accepted.collection.id, accepted.collection.revision)
+        : null,
+    });
+    this.arcadeAdapter.setEnvironment(accepted?.environmentPin ?? null);
+    this.acceptedAttemptAppearance = appearance;
+  }
+  acceptEnemyArtwork({ artRevision = runtimeActorArtRevision(), arcadeCollection } = {}) {
+    ++this.paintRevision;
+    this.acceptedAttemptAppearance = undefined;
+    this.arcadeAdapter.setEnvironment(null);
+    this.artRevision = artRevision;
+    this.arcadeAdapter.setReviewRevision(artRevision);
+    this.combatPresentation.setArtRevision(artRevision);
+    this.huntDestruction.setArtRevision(artRevision);
+    this.arcadeCollection =
+      arcadeCollection === undefined
+        ? selectedArcadeCollection(this.arcadeProvider())
+        : arcadeCollection;
+  }
+  setLevel(
+    level = {},
+    { seed = 0, arcadeCollection = undefined, artRevision = runtimeActorArtRevision() } = {},
+  ) {
+    this.invalidate();
+    ++this.preparationGeneration;
+    this.acceptEnemyArtwork({ artRevision, arcadeCollection });
     this.pictureFilter.clear();
     this.jammerPictureFilter.clear();
     this.levelInfo = { id: level.id || 'gallery', revision: level.revision || '1' };
     this.artSeed = seed;
-    if (this.theme) this.background = this.makeArt(this.theme);
+    if (this.theme) this.setBackgroundArt(this.theme);
     this.celebration = null;
     this._winState = null;
     this._celebrationPrepared = false;
@@ -285,7 +774,10 @@ export class BoardPainter {
     this.speedRatio = 0;
     this.time = 0;
     this.actorPresentation.reset();
+    this.actorDefeats.reset();
+    this.actorFinishBodies.clear();
     this.combatPresentation.reset();
+    this.huntDestruction.reset();
   }
   startCelebration({
     levelId = this.levelInfo.id || '',
@@ -346,6 +838,7 @@ export class BoardPainter {
     ctx.restore();
   }
   effectsFor(events = [], run = null) {
+    this.actorDefeats.observe(run, events, (id) => this.actorFinishBodies.get(id));
     for (const event of events) {
       const effect = presentationEvent(event, run);
       if (effect) this.effects.push(effect);
@@ -360,10 +853,13 @@ export class BoardPainter {
     {
       paused = false,
       reduced = false,
+      quality = 'full',
       showGrid = false,
       debug = false,
       fullReveal = false,
       showCombatScrap = true,
+      brutal = false,
+      blood = true,
       celebrationPaused = false,
       defeatEffectsRunning = false,
       actorScale = 1,
@@ -382,16 +878,22 @@ export class BoardPainter {
     } = {},
   ) {
     if (!this.theme || !state) return;
+    brutal = false; blood = false; showCombatScrap = false;
+    actorAppearance = null; actorSkins = {};
     const combat = combatView(state);
     if (combat && !combat.valid) {
       throw new Error(`Cannot render optional combat: ${combat.error}`);
     }
     // Developer comparison only: omit these flags for the accepted presentation.
     // Hide only additive decoration; functional cues and all effect clocks stay.
-    const captureAccent = feedbackComparison?.captureAccent !== false,
-      eventAccents = feedbackComparison?.eventAccents !== false;
+    const captureAccent = quality !== 'minimal' && feedbackComparison?.captureAccent !== false,
+      eventAccents = quality !== 'minimal' && feedbackComparison?.eventAccents !== false;
     const presentation =
-      this.theme.id === 'fpv' || this.theme.family === 'fpv' ? this.presentation : null;
+      this.theme.id === 'fpv' ||
+      this.theme.family === 'fpv' ||
+      this.arcadeCollection?.id === 'military-field'
+        ? this.artSnapshot
+        : null;
     if (
       actorAppearance !== null &&
       (!['fpv', 'campaign'].includes(actorAppearance?.style) ||
@@ -403,9 +905,14 @@ export class BoardPainter {
     // The host owns and verifies this separate lease. Its canvas, fonts and
     // theme are deliberately ignored: changing actors must not change a world.
     const fpvActors = actorAppearance?.style === 'fpv';
-    const actorPresentation = fpvActors ? actorAppearance.snapshot : presentation;
-    const fonts = canvasTextFonts(textFace, presentation?.fonts);
-    reduced = reduced || presentation?.canvas.motionScale === 0;
+    const actorPresentation = fpvActors
+      ? this.arcadeAdapter.resolve(actorAppearance.snapshot, this.arcadeCollection)
+      : presentation;
+    const interfaceFonts = canvasInterfaceFonts(this.interfaceProvider());
+    const fonts = canvasTextFonts(textFace, interfaceFonts ?? presentation?.fonts, {
+      useThemeFont: !!interfaceFonts || !!presentation?.appearance,
+    });
+    reduced = reduced || quality !== 'full' || presentation?.canvas.motionScale === 0;
     const motionDt = dt * (presentation?.canvas.motionScale ?? 1);
     const { width: columns, height: rows } = geometryForRun(state);
     const W = columns * CELL,
@@ -442,11 +949,14 @@ export class BoardPainter {
           ? ctx.canvas.clientWidth
           : W;
     const combatOptions = {
+      artRevision: this.artRevision,
       reduced,
       screenScale: canvasCSSWidth / W,
       canvasCSSWidth,
       scale: actorScale,
       showScrap: showCombatScrap,
+      brutal,
+      blood,
     };
     const images = { ...this.images, presentationSprites: {} };
     const enemySprites = {};
@@ -536,6 +1046,24 @@ export class BoardPainter {
       actorSkins,
       bodyRecipes: this.theme.actorRecipes ?? {},
     });
+    if (this.actorFinishSource !== actorPresentation || !this.actorDefeats.bind(state)) {
+      this.actorDefeats.reset();
+      this.actorDefeats.bind(state);
+      this.actorFinishBodies.clear();
+      this.actorFinishSource = actorPresentation;
+    }
+    const actorFinishes = this.actorDefeats.advance(state, {
+      dt,
+      paused: state.status === 'won' ? celebrationPaused : paused,
+      reduced,
+      concealed: fullReveal,
+    });
+    for (const enemy of state.enemies) {
+      if (enemy.type !== 'relay-sentinel' || state.encounter?.defeated) continue;
+      const frame = actorFrames.get(enemy.id),
+        sprite = this.enemyBody(frame, enemySprites[enemy.type]);
+      if (sprite?.geometry?.animation) this.actorFinishBodies.set(enemy.id, { frame, sprite });
+    }
     // A compiled default owns its bitmap; do not acquire the old full original too.
     // Keep every frame in the metadata request so the compiled bitmap can still
     // use the catalog's bounded surface-motion accents.
@@ -558,11 +1086,12 @@ export class BoardPainter {
     // authored fallback. Sampling remains nearest throughout this pixel painter.
     // Filter only the picture before masks, terrain and actors are composited.
     // Pending or unreadable artwork paints the neutral field until protected.
-    const protectedPicture = this.pictureFilter.select(
-      backdrop?.image || this.images.background || this.background,
-      pictureVisibility,
-      { time: this.time, animate: !reduced },
-    );
+    const pictureSource = backdrop?.image || this.images.background || this.background;
+    const protectedPicture = this.pictureFilter.select(pictureSource, pictureVisibility, {
+      time: this.time,
+      animate: !reduced,
+    });
+    this.preparedPicture = protectedPicture;
     // Reception affects only the picture. The covered-cell mask and every
     // terrain, trail, enemy and player cue are painted sharply afterward.
     // Demo transitions receive only the protected picture. Their 300ms clock
@@ -572,126 +1101,198 @@ export class BoardPainter {
         ? Math.max(0, Math.min(1, demoTransition)) * 0.35
         : 0;
     const picture = this.jammerPictureFilter.select(protectedPicture, {
-      // A demo can explicitly preview its validated artwork without reception
-      // noise. Gameplay signals, territory masks and actors remain unchanged.
-      strength: pictureInterference
-        ? Math.max(
-            transitionStrength,
-            pictureVisibility === 'clear'
-              ? jammerPictureStrength(state, { fullReveal }) * (reduced ? 0.65 : 1)
-              : 0,
-          )
-        : 0,
+      // Picture-preview preferences control concealment/decorative reception,
+      // never the authoritative jammer mechanic. Apply it to protected pixels
+      // too, so hiding artwork cannot disable the level's warning feedback.
+      strength: Math.max(
+        pictureInterference ? transitionStrength : 0,
+        jammerPictureStrength(state, { fullReveal }) * (reduced ? 0.65 : 1),
+      ),
       time: this.time,
       animate: !reduced,
     });
     const fit = backdrop?.image ? backdrop.fit : this.overrides.background?.fit || 'cover';
     ctx.fillStyle = p.field;
     ctx.fillRect(0, 0, W, H);
-    if (picture && fit === 'contain') {
-      const r = Math.min(W / picture.width, H / picture.height);
-      ctx.drawImage(
-        picture,
-        (W - picture.width * r) / 2,
-        (H - picture.height * r) / 2,
-        picture.width * r,
-        picture.height * r,
-      );
-    } else if (picture) {
-      const r = Math.max(W / picture.width, H / picture.height);
-      ctx.drawImage(
-        picture,
-        (W - picture.width * r) / 2,
-        (H - picture.height * r) / 2,
-        picture.width * r,
-        picture.height * r,
-      );
+    // A tiny arrival ease gives the earned artwork a gentle landing. It ends
+    // at its exact original fit; reduced effects and the settled picture never zoom.
+    const pictureScale = fullReveal && !reduced ? finale.pictureScale || 1 : 1;
+    ctx.save();
+    if (pictureScale !== 1) {
+      ctx.translate(W / 2, H / 2);
+      ctx.scale(pictureScale, pictureScale);
+      ctx.translate(-W / 2, -H / 2);
     }
+    const paintPicture = (target) => {
+      if (!picture) return;
+      const ratio =
+        fit === 'contain'
+          ? Math.min(W / picture.width, H / picture.height)
+          : Math.max(W / picture.width, H / picture.height);
+      target.drawImage(
+        picture,
+        (W - picture.width * ratio) / 2,
+        (H - picture.height * ratio) / 2,
+        picture.width * ratio,
+        picture.height * ratio,
+      );
+    };
+    if (
+      picture === pictureSource &&
+      pictureScale === 1 &&
+      (typeof picture?.getContext !== 'function' || picture === this.background)
+    )
+      this.paintLayer(
+        'picture',
+        ctx,
+        W,
+        H,
+        [picture, picture?.width, picture?.height, fit],
+        paintPicture,
+      );
+    else paintPicture(ctx);
+    ctx.restore();
+    const cells = this.boardCells(state.cells, columns, rows);
     if (!fullReveal || revealAlpha > 0) {
-      ctx.fillStyle = this.theme.coverColor ?? '#000000';
+      const ground = this.battlefieldGround.prepare(
+        sharedBattlefieldGround().snapshot().world,
+        W,
+        H,
+        battlefieldGroundAllowed({
+          environmentPin: this.acceptedAttemptAppearance?.environmentPin,
+          presentation: this.presentation,
+          overrides: this.overrides,
+        }),
+      );
       ctx.globalAlpha = revealAlpha;
-      // Horizontal runs keep the reveal mask cheap and deterministic.
-      for (let y = 0; y < rows; y++) {
-        let start = -1;
-        for (let x = 0; x <= columns; x++) {
-          const covered = x < columns && state.cells[y * columns + x] === 0;
-          if (covered && start < 0) start = x;
-          if (!covered && start >= 0) {
-            ctx.fillRect(start * CELL, y * CELL, (x - start) * CELL, CELL);
-            start = -1;
-          }
-        }
-      }
+      this.paintLayer(
+        'concealment',
+        ctx,
+        W,
+        H,
+        [this.cellRevision, ground, this.theme.coverColor],
+        (target) => {
+          target.fillStyle = this.theme.coverColor ?? '#000000';
+          for (const [x, y, width, height] of cells.covered)
+            if (!paintBattlefieldGroundSpan(target, ground, x, y, width, height, W, H))
+              target.fillRect(x, y, width, height);
+        },
+      );
       ctx.globalAlpha = 1;
     }
     // Degrade only the already-masked feed. Covered pixels stay secret;
     // terrain, live cuts and actors below remain sharp from the first tick.
     if (reception.kind === 'acquire') this.signalReception.draw(ctx, W, H, reception);
-    drawClassicTerrain(ctx, classic, p, images);
-    if (combat) drawCombatScrap(ctx, combat, p, combatOptions);
+    const terrain = classic?.terrain ?? [];
+    if (
+      !this.terrainSnapshot ||
+      this.terrainSnapshot.length !== terrain.length ||
+      terrain.some((cell, i) => {
+        const prior = this.terrainSnapshot[i];
+        return cell.x !== prior.x || cell.y !== prior.y || cell.kind !== prior.kind;
+      })
+    ) {
+      this.terrainSnapshot = terrain.map(({ x, y, kind }) => ({ x, y, kind }));
+      this.terrainRevision = (this.terrainRevision ?? 0) + 1;
+    }
+    const terrainKey = this.terrainRevision;
+    this.paintLayer(
+      'terrain',
+      ctx,
+      W,
+      H,
+      [
+        terrainKey,
+        p.safe,
+        p.danger,
+        images.slowTerrain,
+        images.lethalTerrain,
+        images.presentationSprites.slowTerrain,
+        images.presentationSprites.lethalTerrain,
+      ],
+      (target) => drawClassicTerrain(target, classic, p, images),
+    );
+    this.huntDestruction.advance(combat, dt, {
+      key: state,
+      sources: [state.player],
+      paused: state.status === 'won' ? celebrationPaused : paused,
+      brutal,
+      blood,
+      reduced,
+      concealed: fullReveal,
+    });
+    if (combat && !fullReveal) drawCombatScrap(ctx, combat, p, combatOptions);
+    this.huntDestruction.draw(ctx, { unit: 1 / (canvasCSSWidth / W), color: p.accent });
+    this.actorDefeats.draw(ctx, actorFinishes, (count) =>
+      this.huntDestruction.reserveTransientPieces(count),
+    );
     // Reveal decoration belongs below current hazards, actors and live cuts.
     // An old capture pulse must never wash over a newly opened live line.
     if (!fullReveal && captureAccent)
       for (const effect of this.effects)
         if (['cells.claimed', 'relay.opened'].includes(effect.type))
           drawCapturePulse(ctx, effect, columns, state.cells, p, reduced, this.theme.family);
-    for (let y = 0; y < rows; y++)
-      for (let x = 0; x < columns; x++) {
-        const v = state.cells[y * columns + x],
-          xx = x * CELL,
-          yy = y * CELL;
-        if (v === 2 && (!fullReveal || revealAlpha > 0)) {
-          ctx.save();
-          ctx.globalAlpha = revealAlpha;
-          ctx.fillStyle = colorMix(p.muted, p.ink, 0.5);
-          ctx.fillRect(xx, yy, CELL, CELL);
-          if (images.wall)
-            drawPresentationImage(
-              ctx,
-              images.wall,
-              xx + CELL / 2,
-              yy + CELL / 2,
-              CELL,
-              CELL,
-              images.presentationSprites.wall,
-            );
-          else if (this.style === 'microtile') {
-            ctx.fillStyle = p.muted;
-            ctx.fillRect(xx + 2, yy + 2, 4, 4);
-            ctx.fillRect(xx + 10, yy + 10, 4, 4);
-          } else if (this.style === 'hybrid') {
-            ctx.fillStyle = p.muted;
-            ctx.fillRect(xx + 2, yy + 2, 12, 2);
-            ctx.fillStyle = p.ink;
-            ctx.fillRect(xx + 3, yy + 9, 10, 3);
+    if (!fullReveal || revealAlpha > 0) {
+      ctx.globalAlpha = revealAlpha;
+      this.paintLayer(
+        'walls',
+        ctx,
+        W,
+        H,
+        [
+          this.cellRevision,
+          p.muted,
+          p.ink,
+          this.style,
+          images.wall,
+          images.presentationSprites.wall,
+        ],
+        (target) => {
+          for (const [xx, yy] of cells.walls) {
+            target.fillStyle = colorMix(p.muted, p.ink, 0.5);
+            target.fillRect(xx, yy, CELL, CELL);
+            if (images.wall)
+              drawPresentationImage(
+                target,
+                images.wall,
+                xx + CELL / 2,
+                yy + CELL / 2,
+                CELL,
+                CELL,
+                images.presentationSprites.wall,
+              );
+            else if (this.style === 'microtile') {
+              target.fillStyle = p.muted;
+              target.fillRect(xx + 2, yy + 2, 4, 4);
+              target.fillRect(xx + 10, yy + 10, 4, 4);
+            } else if (this.style === 'hybrid') {
+              target.fillStyle = p.muted;
+              target.fillRect(xx + 2, yy + 2, 12, 2);
+              target.fillStyle = p.ink;
+              target.fillRect(xx + 3, yy + 9, 10, 3);
+            }
           }
-          ctx.restore();
-        }
-        if (v === 1 && !fullReveal) {
-          ctx.strokeStyle = p.safe;
-          ctx.globalAlpha = 0.7;
-          ctx.lineWidth = 1.5;
+        },
+      );
+      ctx.globalAlpha = 1;
+    }
+    if (!fullReveal) {
+      ctx.strokeStyle = p.safe;
+      ctx.globalAlpha = 0.7;
+      ctx.lineWidth = 1.5;
+      // Preserve separate cell strokes: joining them changes alpha at corners.
+      if (cells.paths) for (const path of cells.paths) ctx.stroke(path);
+      else
+        for (const segments of cells.boundaryGroups) {
           ctx.beginPath();
-          if (y > 0 && state.cells[(y - 1) * columns + x] === 0) {
-            ctx.moveTo(xx, yy);
-            ctx.lineTo(xx + CELL, yy);
-          }
-          if (y < rows - 1 && state.cells[(y + 1) * columns + x] === 0) {
-            ctx.moveTo(xx, yy + CELL);
-            ctx.lineTo(xx + CELL, yy + CELL);
-          }
-          if (x > 0 && state.cells[y * columns + x - 1] === 0) {
-            ctx.moveTo(xx, yy);
-            ctx.lineTo(xx, yy + CELL);
-          }
-          if (x < columns - 1 && state.cells[y * columns + x + 1] === 0) {
-            ctx.moveTo(xx + CELL, yy);
-            ctx.lineTo(xx + CELL, yy + CELL);
+          for (const [x1, y1, x2, y2] of segments) {
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
           }
           ctx.stroke();
-          ctx.globalAlpha = 1;
         }
-      }
+      ctx.globalAlpha = 1;
+    }
     const relays = fullReveal ? null : relayView(state);
     if (!fullReveal) drawDirectionalFields(ctx, directionalView(state), CELL);
     drawRelayGates(ctx, relays, p, CELL);
@@ -782,6 +1383,7 @@ export class BoardPainter {
           boardHeight: H,
         });
       }
+      drawSnakeBody(ctx, state, { palette: p });
       drawEncounterLane(ctx, state, p);
       drawClassicPickups(ctx, classic, p, images, {
         screenScale: canvasCSSWidth / W,
@@ -886,6 +1488,7 @@ export class BoardPainter {
         frames: actorFrames,
         fonts,
       });
+      drawSnakeTargetOrder(ctx, state, combat?.actors, { palette: p, font: fonts.numeric });
       if (combat) drawCombatWarnings(ctx, combat, p, combatOptions);
       drawActiveTrail(ctx, state.trailSegments, state.trail, state.player, p, {
         time: this.time,

@@ -7,6 +7,9 @@ import {
   isCandidatePictureFor,
 } from '../content-design/picture.mjs';
 
+const matchesPicture = (row, picture) =>
+  row.asset === null ? picture === null : isCandidatePictureFor(row.asset, picture);
+
 /** One verified display owner shared by both boards. Stage/confirm/commit keeps
  * the previous picture alive until the real race host publishes its next duel. */
 export function createCandidateCouchPictures({ owns, acquire = acquireCandidatePicture } = {}) {
@@ -56,36 +59,38 @@ export function createCandidateCouchPictures({ owns, acquire = acquireCandidateP
     staged = item;
     options.signal?.addEventListener('abort', item.cancel, { once: true });
     try {
-      options.onStatus?.({
-        status: 'preparing',
-        stage: 'verifying',
-        message: t('interface:checkingTheAuthoredOriginalForBothBoards'),
-        progress: null,
-      });
-      current();
-      const loaded = await acquire(row.asset, { signal: controller.signal });
-      try {
+      if (row.asset !== null) {
+        options.onStatus?.({
+          status: 'preparing',
+          stage: 'verifying',
+          message: t('interface:checkingTheAuthoredOriginalForBothBoards'),
+          progress: null,
+        });
         current();
-        picture = claimCandidatePicture(row.asset, loaded);
-      } catch (error) {
-        discardUnclaimedCandidatePicture(loaded);
-        throw error;
+        const loaded = await acquire(row.asset, { signal: controller.signal });
+        try {
+          current();
+          picture = claimCandidatePicture(row.asset, loaded);
+        } catch (error) {
+          discardUnclaimedCandidatePicture(loaded);
+          throw error;
+        }
       }
+      // Explicit greyboxes participate in the same transactional identity and
+      // cancellation protocol, but have no asset to acquire or decode.
+      current();
       return Object.freeze({
         picture,
         cancel: item.cancel,
         async confirm() {
           current();
-          required(
-            isCandidatePictureFor(row.asset, picture),
-            t('interface:authoredRacePictureIsUnavailable'),
-          );
+          required(matchesPicture(row, picture), t('interface:authoredRacePictureIsUnavailable'));
           confirmed = true;
         },
         commit() {
           current();
           required(
-            confirmed && isCandidatePictureFor(row.asset, picture),
+            confirmed && matchesPicture(row, picture),
             t('interface:confirmTheAuthoredRacePictureBeforeAdoption'),
           );
           const previous = accepted;
@@ -95,7 +100,7 @@ export function createCandidateCouchPictures({ owns, acquire = acquireCandidateP
           options.signal?.removeEventListener('abort', item.cancel);
           const retire = () => {
             if (!retirements.delete(retire)) return;
-            previous?.picture.release();
+            previous?.picture?.release();
           };
           retirements.add(retire);
           return retire;
@@ -124,7 +129,7 @@ export function createCandidateCouchPictures({ owns, acquire = acquireCandidateP
       required(
         accepted?.row === row &&
           accepted.raceId === options.raceId &&
-          isCandidatePictureFor(row.asset, accepted.picture),
+          matchesPicture(row, accepted.picture),
         t('interface:thisRaceDoesNotOwnThePreparedAuthoredPicture'),
       );
     },
@@ -138,7 +143,7 @@ export function createCandidateCouchPictures({ owns, acquire = acquireCandidateP
       for (const retire of [...retirements]) retire();
       const old = accepted;
       accepted = null;
-      old?.picture.release();
+      old?.picture?.release();
     },
   });
 }

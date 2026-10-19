@@ -29,13 +29,21 @@ export async function createInstalledMissionLibrary({
   availabilityExternal,
   unavailableClassic,
   getProjectSources = async () => [],
+  assertCurrent = () => {},
 }) {
   if (
     !LIBRARY_MODES.includes(mode) ||
     !Array.isArray(journeySources) ||
-    [getPacks, compatibility, describe, prepareClassic, launchClassic, launchCustom].some(
-      (fn) => typeof fn !== 'function',
-    ) ||
+    [
+      getPacks,
+      compatibility,
+      describe,
+      prepareClassic,
+      launchClassic,
+      launchCustom,
+      assertCurrent,
+      getProjectSources,
+    ].some((fn) => typeof fn !== 'function') ||
     [
       progressClassic,
       progressStateClassic,
@@ -48,6 +56,7 @@ export async function createInstalledMissionLibrary({
     throw new TypeError(
       'Installed mission browsing needs explicit host adapters and a valid mode.',
     );
+  assertCurrent();
   const verified = new WeakMap(),
     customCache = new WeakMap();
   let accepted = null,
@@ -68,22 +77,20 @@ export async function createInstalledMissionLibrary({
     if (getPacks() !== value)
       throw new Error('Installed content changed. Refresh the mission library and try again.');
   }
-  function verify(pack, row) {
+  async function verify(pack, row, assertVisit = () => {}) {
+    assertVisit();
     if (!verified.has(pack)) verified.set(pack, new Map());
     const rows = verified.get(pack);
-    if (!rows.has(row)) {
-      const pending = verifyIndexedInstalledPack(pack, row);
-      rows.set(row, { pending, value: null });
-      pending.then(
-        (value) => {
-          rows.get(row).value = value;
-        },
-        () => {
-          rows.delete(row);
-        },
-      );
-    }
-    return rows.get(row).pending;
+    if (rows.has(row)) return rows.get(row).value;
+    const value = await verifyIndexedInstalledPack(pack, row, {
+      isCurrent() {
+        assertVisit();
+        return true;
+      },
+    });
+    assertVisit();
+    rows.set(row, { value });
+    return value;
   }
   function exactBase(row) {
     if (!baseEntry?.campaign) return false;
@@ -154,7 +161,12 @@ export async function createInstalledMissionLibrary({
       await prepareClassic(row, context);
       if (context.signal?.aborted)
         throw new DOMException('Mission preparation cancelled.', 'AbortError');
-      await refreshInstalled();
+      await refreshInstalled({
+        assertCurrent() {
+          if (context.signal?.aborted || context.isCurrent?.() === false)
+            throw new DOMException('Mission preparation cancelled.', 'AbortError');
+        },
+      });
       if (context.signal?.aborted)
         throw new DOMException('Mission preparation cancelled.', 'AbortError');
       const state = classicAvailability(row, context.mode);
@@ -184,17 +196,31 @@ export async function createInstalledMissionLibrary({
   const classicRows = classicSources.flatMap((source) => source.entries);
   const library = createMissionLibrary([...journeySources, ...classicSources]);
 
-  async function refreshInstalled() {
+  async function refreshInstalled({ assertCurrent: assertVisit = () => {} } = {}) {
+    if (typeof assertVisit !== 'function')
+      throw new TypeError('Installed refresh needs a synchronous current-owner guard.');
+    assertVisit();
     const ticket = ++generation,
       packs = snapshot();
+    function assertRefreshCurrent() {
+      assertVisit();
+      current(packs);
+      if (ticket !== generation)
+        throw new Error('Installed content refresh was superseded. Try again.');
+    }
     const nextCustom = [];
     for (const pack of packs.packs) {
+      assertRefreshCurrent();
       await preparedPackIdentity(pack); // Reject unprepared owner lookalikes, including unknown IDs.
+      assertRefreshCurrent();
       const matching = classicRows.filter((row) => row.packId === pack.id);
-      const matches = await Promise.all(matching.map((row) => verify(pack, row)));
+      const matches = await Promise.all(
+        matching.map((row) => verify(pack, row, assertRefreshCurrent)),
+      );
+      assertRefreshCurrent();
       if (matches.some(Boolean)) continue;
       if (!customCache.has(pack)) {
-        const pending = customLibrarySources(
+        const sources = await customLibrarySources(
           [
             {
               pack,
@@ -202,6 +228,7 @@ export async function createInstalledMissionLibrary({
             },
           ],
           {
+            assertCurrent: assertRefreshCurrent,
             compatibility,
             describe,
             availability(binding) {
@@ -222,35 +249,42 @@ export async function createInstalledMissionLibrary({
             progressState: progressStateCustom,
           },
         );
-        customCache.set(pack, pending);
-        pending.catch(() => {
-          if (customCache.get(pack) === pending) customCache.delete(pack);
-        });
+        assertRefreshCurrent();
+        // Only completed sources survive a visit. A pending promise must not keep
+        // a retired visit's guard or reject a later visit that owns fresh work.
+        customCache.set(pack, sources);
       }
-      nextCustom.push(...(await customCache.get(pack)));
+      nextCustom.push(...customCache.get(pack));
     }
-    current(packs);
-    const projects = await getProjectSources();
+    assertRefreshCurrent();
+    const projects = await getProjectSources({ assertCurrent: assertRefreshCurrent });
+    assertRefreshCurrent();
     if (!Array.isArray(projects) || projects.some((source) => source.collection !== 'Custom'))
       throw new TypeError('Installed project sources must belong to Custom.');
     nextCustom.push(...projects);
-    current(packs);
-    if (ticket !== generation)
-      throw new Error('Installed content refresh was superseded. Try again.');
+    assertRefreshCurrent();
     accepted = packs;
     const nextIds = new Set(nextCustom.map((source) => source.id));
     for (const [id] of customOwners)
       if (!nextIds.has(id)) {
+        assertRefreshCurrent();
         library.remove(id);
         customOwners.delete(id);
       }
     for (const source of nextCustom)
       if (customOwners.get(source.id) !== source) {
+        assertRefreshCurrent();
         library.register(source);
         customOwners.set(source.id, source);
       }
+    assertRefreshCurrent();
     return library;
   }
-  await refreshInstalled();
+  try {
+    await refreshInstalled({ assertCurrent });
+  } catch (error) {
+    library.dispose();
+    throw error;
+  }
   return Object.freeze({ library, refreshInstalled });
 }

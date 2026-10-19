@@ -1,6 +1,6 @@
 // Small, reusable fictional-friction silhouettes. These recipes own only pixels;
 // movement, pressure badges and collision-centre cues remain engine-owned.
-import { FPV_BODY_RECIPES, drawFpvBodyRecipe } from './fpv-body-recipes.mjs';
+
 const sheet = (ctx, x, y, rotation, colors) => {
   ctx.save();
   ctx.translate(x, y);
@@ -74,13 +74,11 @@ const recipes = Object.freeze({
 });
 export const ACTOR_RECIPE_IDS = Object.freeze([
   ...Object.keys(recipes),
-  ...Object.keys(FPV_BODY_RECIPES),
 ]);
 export function resolveActorRecipe(value) {
-  return Object.hasOwn(recipes, value) || Object.hasOwn(FPV_BODY_RECIPES, value) ? value : null;
+  return Object.hasOwn(recipes, value) ? value : null;
 }
 export function drawActorRecipe(ctx, frame, colors) {
-  if (drawFpvBodyRecipe(ctx, frame, colors)) return true;
   const recipe = recipes[resolveActorRecipe(frame.bodyRecipe)];
   if (!recipe) return false;
   recipe(ctx, frame, colors);

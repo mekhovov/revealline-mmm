@@ -1,50 +1,334 @@
-.field-kit .game-mode-choice {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--fk-space-2, 8px);
-  margin: 0 0 var(--fk-space-6, 24px);
+
+
+@layer legacy {
+  .game-mode-destinations {
+    min-width: 0;
+    font-size: var(--fk-text-secondary, 14px);
+  }
+  .game-mode-destinations > summary {
+    min-height: 44px;
+    align-content: center;
+    cursor: pointer;
+    color: var(--fk-muted, #a5b2bb);
+  }
+  .game-mode-destinations a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    color: var(--fk-accent, #f4bf62);
+  }
+  .game-mode-destinations > summary:focus-visible {
+    outline: 2px solid var(--fk-focus, #78dce8);
+    outline-offset: 2px;
+  }
+  .game-mode-choice[hidden] {
+    display: none;
+  }
 }
 
-.field-kit .game-mode-choice > :is(a, [aria-current]),
-.field-kit #couch-app .game-mode-choice > :is(a, [aria-current]) {
-  display: flex;
+/* Layout belongs to the shared mode chooser, including theme-styled hosts. */
+.game-mode-choice {
+  display: grid;
+  grid-template-columns: repeat(var(--game-mode-count, 4), minmax(0, 1fr));
+  gap: clamp(4px, 1vw, 8px);
+  margin: 0 0 20px;
   min-width: 0;
-  min-height: var(--fk-target-size, 44px);
+}
+body.field-kit .game-mode-choice > :is(a, button),
+body.field-kit #couch-app .game-mode-choice > :is(a, button) {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 15px 3px 7px;
+  margin: 0;
+  font: 600 clamp(11px, 2.6vw, 16px) / 1.2 var(--fk-font-ui, sans-serif);
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.game-mode-choice strong {
+  font: inherit;
+}
+.game-mode-choice .game-mode-badge {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  font: 600 9px/1 var(--fk-font-ui, sans-serif);
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+.game-mode-choice [data-menu-icon]::before {
+  content: '';
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask: var(--native-menu-icon) center/contain no-repeat;
+  -webkit-mask: var(--native-menu-icon) center/contain no-repeat;
+}
+.game-mode-choice > [aria-current='page'] {
+  box-shadow: inset 0 -3px var(--fk-accent, #f4bf62);
+}
+.game-mode-choice > :is(:focus-visible, .controller-focus) {
+  outline: 3px solid var(--fk-focus, #78dce8);
+  outline-offset: 3px;
+}
+@media (max-width: 360px) {
+  body.field-kit .game-mode-choice > :is(a, button),
+  body.field-kit #couch-app .game-mode-choice > :is(a, button) {
+    font-size: 11px;
+  }
+}
+@media (max-width: 299px) {
+  .game-mode-choice {
+    grid-template-columns: repeat(3, minmax(44px, 1fr));
+  }
+}
+
+/* Hidden destinations must also stay hidden under host button themes. */
+body.field-kit .game-mode-choice > [hidden],
+body.field-kit #couch-app .game-mode-choice > [hidden] {
+  display: none !important;
+}
+body.field-kit .game-mode-choice[data-modes-expanded='true'] > [data-mode-more],
+body.field-kit #couch-app .game-mode-choice[data-modes-expanded='true'] > [data-mode-more] {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  min-height: 44px;
+  padding: 6px;
+  gap: 8px;
+}
+.game-mode-choice [data-mode-more]::after {
+  content: '⌄';
+}
+.game-mode-choice [data-mode-more][aria-expanded='true']::after {
+  content: '⌃';
+}
+
+/* Hover/focus indicate navigation; only the current mode uses selected paint. */
+.game-mode-choice > :is(a, button):not([aria-current='page']) {
+  --ui-action-hover-fill: var(--ui-action-fill);
+  --ui-action-hover-ink: var(--ui-action-ink);
+  --ui-action-hover-frame: var(--ui-action-frame);
+}
+.game-mode-choice > :is(a, button):hover:not([aria-current='page']) {
+  outline: 2px solid var(--fk-focus, #78dce8);
+  outline-offset: 1px;
+}
+
+/* Shared landing geometry for Solo, Team, Duel, Snake, Survival and SIM.
+   Real identity/command boxes keep WebKit painting, focus scrolling and safe
+   areas consistent; no absolute controls or display:contents ancestors. */
+html body :is(.native-landing, .mode-play-home):has(.landing-layout) {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: 100dvh;
+  min-height: 0;
+  max-height: 100dvh;
+  margin: 0;
+  padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  overflow: auto;
+  scroll-padding: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+html body .mode-play-home:has(.landing-layout) .mode-play-content {
+  display: block;
+  flex: none;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  overflow: visible;
+  margin-top: auto;
+}
+html body .landing-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  flex: none;
+  width: min(100%, 510px);
+  margin: 0 auto;
+}
+/* Auto margins use spare height for the animated scene above the menu.
+   When the menu is taller than the viewport they collapse to zero, preserving
+   top-reachable scrolling instead of clipping controls with end alignment. */
+html body .native-landing > .landing-layout {
+  margin-top: auto;
+}
+html body .landing-layout :is(.landing-identity, .landing-commands) {
+  display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
+  min-width: 0;
+  gap: 0;
+}
+html body .landing-layout :is(#shell-title, #race-title, #coop-title, .mode-play-dialog-head) {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0;
+}
+html body .landing-layout :is(.fpv-line-wordmark, .mode-play-wordmark img) {
+  display: block;
+  width: min(100%, 430px);
+  max-height: 100px;
+  aspect-ratio: 5.7;
+  height: auto;
+  object-fit: cover;
+  object-position: center 42%;
+  margin: 0;
+}
+html body .landing-layout :is(.game-mode-choice, .mode-play-modes) {
+  width: 100%;
+  margin: 0;
+}
+html body .landing-layout :is(.native-menu-actions, .mode-play-main-menu) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+html body .landing-layout :is(.native-menu-actions, .mode-play-main-menu) > :is(button, a) {
+  box-sizing: border-box;
+  flex: none;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  height: auto;
+  margin: 0;
   padding: 10px 12px;
-  border: 2px solid var(--fk-control-line, #647786);
-  background: var(--fk-panel, #101923);
-  color: var(--fk-text, #f3f0db);
-  font-family: var(--fk-font-ui, sans-serif);
-  font-size: var(--fk-text-control, 16px);
-  line-height: var(--fk-leading-control, 1.35);
-  text-align: left;
-  text-decoration: none;
-  overflow-wrap: anywhere;
+  gap: 12px;
+  font: 600 16px/1.3 var(--fk-font-ui, sans-serif);
+  justify-content: flex-start;
+  text-align: start;
+  white-space: normal;
 }
-
-.field-kit .game-mode-choice > [aria-current],
-.field-kit #couch-app .game-mode-choice > [aria-current] {
-  border-color: var(--fk-accent, #f4bf62);
-  box-shadow: inset 0 -4px var(--fk-accent, #f4bf62);
+html body .landing-layout :is(.native-menu-utilities, .mode-play-utilities) {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  width: 100%;
+  margin: 12px 0 0;
+  padding: 12px 0 0;
+  gap: 8px;
+  border-top: 1px solid var(--fk-control-line, #788a9859);
 }
-
-.field-kit .game-mode-choice > a:hover,
-.field-kit .game-mode-choice > a:focus-visible,
-.field-kit #couch-app .game-mode-choice > a:hover,
-.field-kit #couch-app .game-mode-choice > a:focus-visible {
-  background: var(--fk-panel-raised, #182531);
-  border-color: var(--fk-focus, #78dce8);
+html body .landing-layout .native-menu-utilities > :is(button, a) {
+  position: static;
+  min-width: 0;
+  min-height: 44px;
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  justify-content: center;
+  font: 600 14px/1.3 var(--fk-font-ui, sans-serif);
 }
-
-.field-kit .game-mode-description {
-  color: var(--fk-muted, #a5b2bb);
-  font-size: var(--fk-text-secondary, 14px);
-  font-weight: normal;
+html body .landing-layout .native-menu-utilities:has(> button[hidden]) {
+  grid-template-columns: minmax(0, 1fr);
 }
-
-.field-kit .game-mode-choice[hidden] {
+html body .native-landing:has(.landing-layout) .native-menu-footer {
+  position: relative;
+  inset: auto;
+  flex: none;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 16px;
+  font-size: 12px;
+}
+/* The legacy containers retain their hidden hooks and ownership, not layout. */
+html body .native-landing:has(.landing-layout) > :is(.home-content, .menu-copy) {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html body .native-landing:has(.landing-layout) > .home-content {
+  order: -1;
+  flex: none;
+}
+body[data-couch-status='paused'] #race-main .landing-layout {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+body[data-couch-status='paused'] #race-main .landing-identity > #race-mode-choices,
+body[data-couch-status='paused'] #race-main .landing-layout .native-menu-utilities {
   display: none;
+}
+@media (orientation: landscape) and (min-width: 560px) {
+  html body .landing-layout {
+    width: min(100%, 1120px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: clamp(20px, 4vw, 56px);
+    align-items: end;
+  }
+  html body .landing-layout :is(.fpv-line-wordmark, .mode-play-wordmark img) {
+    max-height: 72px;
+  }
+  html body .landing-layout .game-mode-choice > :is(a, button) {
+    min-height: 64px;
+  }
+  html body .landing-layout .game-mode-choice > .game-mode-more-toggle[aria-expanded='true'] {
+    min-height: 44px;
+  }
+  html body .landing-layout :is(.native-menu-actions, .mode-play-main-menu) > :is(button, a) {
+    min-height: 44px;
+    padding-block: 8px;
+  }
+}
+
+html body dialog:is(.native-landing, .mode-play-home):not([open]) {
+  display: none;
+}
+html body dialog:is(.native-landing, .mode-play-home)[open] {
+  position: fixed;
+  inset: 0;
+}
+html body[data-text-size='large'] .landing-layout :is(button, a) {
+  font-size: 20px;
+}
+
+html body #coop-menu.native-landing:has(.landing-layout) > .menu-copy {
+  display: none;
+}
+
+html body .landing-layout .game-mode-choice > :is(a, button) {
+  font-size: clamp(12px, 3.5vw, 16px);
+}
+html body .landing-layout :is(.home-status, #race-preparation) {
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+html body .landing-identity .mode-play-dialog-head {
+  background: transparent;
+  border: 0;
+  border-image: none;
+  box-shadow: none;
+}
+html body[data-text-size='large'] .landing-layout .game-mode-choice > :is(a, button) {
+  font-size: 20px;
+  white-space: normal;
 }

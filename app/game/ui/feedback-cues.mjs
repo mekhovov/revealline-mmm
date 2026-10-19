@@ -26,11 +26,14 @@ export function screenPan(x, width, placement = { left: 0, width: 1 }) {
   );
 }
 export function captureRecipe(event, run) {
-  const count = new Set(
-    (event.indices ?? []).filter(
-      (i) => Number.isInteger(i) && i >= 0 && i < (run?.cells?.length ?? Infinity),
-    ),
-  ).size;
+  const count =
+    Number.isSafeInteger(event.presentationCount) && event.presentationCount >= 0
+      ? Math.min(event.presentationCount, run?.cells?.length ?? 250000)
+      : new Set(
+          (event.indices ?? []).filter(
+            (i) => Number.isInteger(i) && i >= 0 && i < (run?.cells?.length ?? Infinity),
+          ),
+        ).size;
   const fraction = count / Math.max(1, run?.totalClaimable ?? run?.cells?.length ?? 1);
   const tier = fraction < 0.02 ? 'small' : fraction < 0.08 ? 'medium' : 'large';
   return { fraction, tier, duration: { small: 0.2, medium: 0.4, large: 0.65 }[tier] };
@@ -99,6 +102,8 @@ export function eventCue(event) {
       'team.recovery': 'respawn',
       'enemy.commit': 'attack',
       'impact.launched': 'warning',
+      'emitter.warning': 'warning',
+      'environment.eroded': 'erosion',
       'impact.intercepted': 'deploy',
       'impact.cleared': 'neutralized',
       'enemy.recovery': 'cancel',

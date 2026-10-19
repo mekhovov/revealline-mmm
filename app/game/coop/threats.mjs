@@ -1,3 +1,4 @@
+import { supportCoopCombat } from './combat-patrols.mjs';
 import { EPS, movingCirclesTime } from '../core/geometry.mjs';
 import { cellAt, enemyWallContact, positionAt } from './geometry.mjs';
 import { hasTeamLineImpacts } from './foundations.mjs';
@@ -443,6 +444,9 @@ export function useSupport(run, player, emit) {
     });
     return false;
   });
+  const optional = supportCoopCombat(run, player, { canSlow, canIntercept });
+  slowedEnemies.push(...optional.slowedEnemies);
+  interceptedImpacts.push(...optional.interceptedImpacts);
   player.support.uses++;
   player.support.intercepts += interceptedImpacts.length;
   player.support.slows += slowedEnemies.length;

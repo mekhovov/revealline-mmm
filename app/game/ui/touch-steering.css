@@ -1,0 +1,156 @@
+/* Shared touch controls: hosts position the seats, this sheet paints them. */
+@layer legacy {
+  .game-shell,
+  .race-pad,
+  .snake-touch-seat {
+    --touch-size: 156px;
+  }
+  .game-shell {
+    --touch-opacity: 0.55;
+  }
+  .game-shell[data-touch-size='large'],
+  .race-pad[data-touch-size='large'],
+  .snake-touch-seat[data-touch-size='large'] {
+    --touch-size: 192px;
+  }
+  .game-shell #touch-surface,
+  .race-pad .touch-surface,
+  .snake-touch-seat .touch-surface {
+    width: var(--touch-size);
+    height: var(--touch-size);
+    border: 2px solid #a3dfffb3;
+    border-radius: 50%;
+    background: #0b1d3266;
+    color: #d4f6ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    opacity: var(--touch-opacity, 0.55);
+    font: 13px/1.4 var(--fk-font-ui, sans-serif);
+  }
+  .game-shell #touch-surface > span:first-child,
+  .race-pad .touch-surface > span:first-child,
+  .snake-touch-seat .touch-surface > span:first-child {
+    font: 54px/1.3 var(--fk-font-ui, sans-serif);
+  }
+  .game-shell .play-controls .direction-controls,
+  .race-pad .race-cross,
+  .snake-player .snake-touch-seat .direction-controls {
+    display: grid;
+    width: var(--touch-size);
+    height: var(--touch-size);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    border-radius: 30%;
+    background: #122e4355;
+    opacity: var(--touch-opacity, 0.55);
+  }
+  :is(
+      .game-shell .play-controls .direction-controls,
+      .race-pad .race-cross,
+      .snake-touch-seat .direction-controls
+    )
+    :is([data-move='up'], [data-direction='up']) {
+    grid-area: 1 / 2;
+  }
+  :is(
+      .game-shell .play-controls .direction-controls,
+      .race-pad .race-cross,
+      .snake-touch-seat .direction-controls
+    )
+    :is([data-move='left'], [data-direction='left']) {
+    grid-area: 2 / 1;
+  }
+  :is(
+      .game-shell .play-controls .direction-controls,
+      .race-pad .race-cross,
+      .snake-touch-seat .direction-controls
+    )
+    :is([data-move='right'], [data-direction='right']) {
+    grid-area: 2 / 3;
+  }
+  :is(
+      .game-shell .play-controls .direction-controls,
+      .race-pad .race-cross,
+      .snake-touch-seat .direction-controls
+    )
+    :is([data-move='down'], [data-direction='down']) {
+    grid-area: 3 / 2;
+  }
+  .game-shell .play-controls .direction-controls button,
+  .field-kit .race-pad .race-cross button,
+  .snake-player .snake-touch-seat .direction-controls button {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    border: 2px solid #5386a8;
+    border-radius: 18%;
+    box-shadow: none;
+    background: #19364ab3;
+    color: #c4f3ff;
+    font: bold 25px/1 var(--fk-font-ui, sans-serif);
+    touch-action: none;
+  }
+  .game-shell .play-controls .direction-controls button.pressed,
+  .field-kit .race-pad .race-cross button.pressed,
+  .snake-player .snake-touch-seat .direction-controls button.pressed {
+    background: #315d79;
+    border-color: #a4efff;
+    color: white;
+    transform: translateY(1px);
+  }
+  /* Keep replaceable catalogue arrows without repeating their text fallback. */
+  .field-kit .race-pad .race-cross button[data-presentation-control][aria-label] {
+    font-size: 0;
+  }
+  .game-shell .play-controls .direction-controls:active,
+  .game-shell #touch-surface:active,
+  .race-pad :is(.touch-surface, .race-cross):active,
+  .snake-touch-seat :is(.touch-surface, .direction-controls):active {
+    opacity: 0.85;
+  }
+  .game-shell #touch-indicator,
+  .race-pad .touch-indicator,
+  .snake-touch-seat .touch-indicator {
+    position: fixed;
+    z-index: var(--touch-indicator-layer, 20);
+    pointer-events: none;
+    width: 112px;
+    height: 112px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #bdefff99;
+    border-radius: 50%;
+    background: #12354b33;
+  }
+  .game-shell #touch-indicator {
+    --touch-indicator-layer: 8;
+  }
+  .game-shell #touch-indicator i,
+  .race-pad .touch-indicator i,
+  .snake-touch-seat .touch-indicator i {
+    position: absolute;
+    left: 36px;
+    top: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #c4f3ff99;
+    border: 2px solid #ecfcff;
+    transform: translate(var(--stick-x, 0px), var(--stick-y, 0px));
+  }
+  .game-shell :is(#touch-surface, #touch-indicator, .direction-controls)[hidden],
+  .race-pad :is(.touch-surface, .race-cross, .touch-indicator)[hidden],
+  .snake-touch-seat :is(.touch-surface, .direction-controls, .touch-indicator)[hidden] {
+    display: none !important;
+  }
+}

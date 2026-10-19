@@ -1,10 +1,17 @@
+import {
+  MENU_ANIMATION_KEY,
+  MENU_ANIMATION_EVENT,
+  getMenuAnimation,
+} from './menu-animation-preferences.mjs';
+export {
+  MENU_ANIMATION_KEY,
+  getMenuAnimation,
+  setMenuAnimation,
+} from './menu-animation-preferences.mjs';
 import { resolveMenuScene, menuSceneMode } from './menu-scene-catalog.mjs';
 import { attachArtworkMotion, artworkMotionMode } from './menu-scene-motion.mjs';
 import { attachMenuSignalLoss } from './menu-signal-loss.mjs';
 
-export const MENU_ANIMATION_KEY = 'revealline-mmm.menu-animation.v1';
-const PREFERENCE_EVENT = 'revealline-menu-animation';
-const memoryPreferences = new WeakMap();
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
 const ROUTE_PATHS = Object.freeze({
   rise: 'M110 500V270H250V140H515V360H405V500Z',
@@ -51,25 +58,6 @@ function createRouteArtwork(doc) {
   return { route, territory, ghost, trail, player };
 }
 
-export function getMenuAnimation(win = globalThis.window) {
-  try {
-    return win.localStorage.getItem(MENU_ANIMATION_KEY) !== 'off';
-  } catch {
-    return memoryPreferences.get(win) ?? true;
-  }
-}
-
-export function setMenuAnimation(enabled, win = globalThis.window) {
-  try {
-    win.localStorage.setItem(MENU_ANIMATION_KEY, enabled ? 'on' : 'off');
-  } catch {
-    memoryPreferences.set(win, Boolean(enabled));
-  }
-  win.dispatchEvent(
-    new win.CustomEvent(PREFERENCE_EVENT, { detail: { enabled: Boolean(enabled) } }),
-  );
-}
-
 /** Animate the artwork independently of gameplay and stationary menu controls. */
 export function attachMenuScene({
   root,
@@ -87,6 +75,8 @@ export function attachMenuScene({
     manuallyPaused = false,
     pageSuspended = false,
     enabled = getMenuAnimation(win),
+    qualityTier = 'full',
+    qualityOwner = null,
     currentKey = '',
     artworkMotion = null,
     signalLoss = null;
@@ -168,11 +158,21 @@ export function attachMenuScene({
     if (disposed) return;
     const context = sceneContext();
     const profile = resolveMenuScene(context);
+    // The fallback hangar is application decoration. A campaign/edition's
+    // authored scene keeps its source identity when interface appearance changes.
+    const appearance = doc.documentElement?.dataset ?? {};
+    const interfaceBackdrop =
+      profile.id === 'fpv' &&
+      !context.editionId &&
+      appearance.themeStyled === 'true' &&
+      (appearance.interfaceTheme !== 'industrial-workshop' || appearance.themeContrast === 'high');
+    scene.dataset.backdrop = interfaceBackdrop ? 'interface' : 'authored';
     const selectedMode = menuSceneMode(context.mode ?? mode);
     const vertical = portrait?.matches ?? false;
     const key = `${profile.id}:${profile.composition ?? 'solo'}:${selectedMode}:${vertical}`;
     if (key !== currentKey) {
       currentKey = key;
+      qualityOwner = {};
       root.dataset.menuScene = profile.id;
       root.dataset.menuMode = selectedMode;
       scene.dataset.atmosphere = profile.atmosphere;
@@ -221,12 +221,13 @@ export function attachMenuScene({
       fitArtwork();
     }
     const reduced =
+      qualityTier !== 'full' ||
       motion?.matches ||
       context.reduced === true ||
       doc.body?.dataset.effects === 'reduced' ||
       doc.body?.dataset.reducedEffects === 'true' ||
       doc.documentElement?.dataset.reducedMotion === 'true';
-    scene.dataset.motion = reduced || !enabled ? 'off' : 'on';
+    scene.dataset.motion = reduced || !enabled || interfaceBackdrop ? 'off' : 'on';
     scene.dataset.running = String(!manuallyPaused && context.active !== false && visible());
     syncMotion();
   }
@@ -321,7 +322,7 @@ export function attachMenuScene({
   win.addEventListener('pagehide', pageHide);
   win.addEventListener('pageshow', pageShow);
   win.addEventListener('resize', fitArtwork);
-  win.addEventListener(PREFERENCE_EVENT, preference);
+  win.addEventListener(MENU_ANIMATION_EVENT, preference);
   win.addEventListener('storage', storage);
   motion?.addEventListener('change', update);
   portrait?.addEventListener('change', update);
@@ -339,6 +340,9 @@ export function attachMenuScene({
         'aria-hidden',
         'data-effects',
         'data-theme',
+        'data-interface-theme',
+        'data-theme-styled',
+        'data-theme-contrast',
         'data-menu-theme',
         'data-reduced-effects',
         'data-reduced-motion',
@@ -353,6 +357,24 @@ export function attachMenuScene({
   update();
   return {
     update,
+    get qualityObservationOwner() {
+      // Retain this owner after adaptive reduction so cheap title callbacks can
+      // observe headroom. Explicit disabled animation has no decoration owner.
+      return !disposed &&
+        enabled &&
+        !manuallyPaused &&
+        scene.dataset.loaded === 'true' &&
+        scene.dataset.running === 'true' &&
+        scene.dataset.backdrop === 'authored'
+        ? qualityOwner
+        : null;
+    },
+    setQuality(tier) {
+      const next = tier === 'reduced' || tier === 'minimal' ? tier : 'full';
+      if (qualityTier === next) return;
+      qualityTier = next;
+      update();
+    },
     pause() {
       manuallyPaused = true;
       update();
@@ -376,7 +398,7 @@ export function attachMenuScene({
       win.removeEventListener('pagehide', pageHide);
       win.removeEventListener('pageshow', pageShow);
       win.removeEventListener('resize', fitArtwork);
-      win.removeEventListener(PREFERENCE_EVENT, preference);
+      win.removeEventListener(MENU_ANIMATION_EVENT, preference);
       win.removeEventListener('storage', storage);
       motion?.removeEventListener('change', update);
       portrait?.removeEventListener('change', update);

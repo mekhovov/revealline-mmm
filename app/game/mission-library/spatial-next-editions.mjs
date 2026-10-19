@@ -361,7 +361,9 @@ export async function createSpatialNextEditionSources({
   difficulty = () => 'standard',
   launch,
   profile,
+  assertCurrent,
 } = {}) {
+  assertCurrent?.();
   const history = spatialNextPriorEditions(activeRouteId);
   if (!history.length) return Object.freeze({ sources: Object.freeze([]), dispose() {} });
   required(typeof launch === 'function', 'Spatial editions need an exact mission handoff.');
@@ -379,7 +381,12 @@ export async function createSpatialNextEditionSources({
   let disposed = false;
   const sources = [];
   for (const [historyIndex, edition] of history.entries()) {
-    const route = await loadAuthoredJourneyRoute(edition.routeId, { fullSource: true });
+    assertCurrent?.();
+    const route = await loadAuthoredJourneyRoute(edition.routeId, {
+      fullSource: true,
+      assertCurrent,
+    });
+    assertCurrent?.();
     const themes = journeyActorThemeCandidates(originals, {
       includeOriginals: route.preserveOriginalThemes === true,
     });
@@ -394,6 +401,7 @@ export async function createSpatialNextEditionSources({
     );
     const selectedIds = new Set(edition.missionIds);
     const qualified = ['solo', 'versus'].map((mode) => {
+      assertCurrent?.();
       const executions = createContentExecutionCatalog(project, { mode });
       const fullCatalog = createJourneyCatalog(
         executions.journey().campaigns.map(({ packId, runtime, manifests }) => ({
@@ -475,6 +483,7 @@ export async function createSpatialNextEditionSources({
       }),
     );
   }
+  assertCurrent?.();
   return Object.freeze({
     sources: Object.freeze(sources),
     dispose() {

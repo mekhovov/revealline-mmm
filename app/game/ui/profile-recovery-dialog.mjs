@@ -42,6 +42,10 @@ export function attachProfileRecoveryDialog({
   resolveSourceVersion = () => currentVersion,
   unavailable = () => '',
   onOpen = () => {},
+  onClose = () => {},
+  isSettingsOpen = () => doc.getElementById('settings-dialog')?.open === true,
+  getOwner = () => null,
+  isOwnerCurrent = () => true,
   load = loadRuntime,
 } = {}) {
   const dialog = doc.getElementById('profile-recovery-dialog'),
@@ -50,12 +54,18 @@ export function attachProfileRecoveryDialog({
     status = doc.getElementById('profile-recovery-status'),
     entryStatus = doc.getElementById('profile-recovery-entry-status');
   const presenter = createOperationStatus(status);
-  let operation = null,
+  let disposed = false,
+    operation = null,
     closing = null;
-  const current = (value) => operation === value && !value.controller.signal.aborted;
+  const current = (value) =>
+    !disposed &&
+    operation === value &&
+    !value.controller.signal.aborted &&
+    isSettingsOpen() &&
+    isOwnerCurrent(value.owner);
   function refresh() {
     const reason = unavailable();
-    opener.disabled = !!operation || !!closing || !!reason;
+    opener.disabled = disposed || !!operation || !!closing || !!reason;
     localizedText(entryStatus, () => reason);
   }
   function close() {
@@ -84,10 +94,15 @@ export function attachProfileRecoveryDialog({
       closing = null;
       refresh();
       dialog.close();
+      onClose();
       if (
+        !disposed &&
         !doc.hidden &&
         doc.hasFocus?.() !== false &&
-        doc.getElementById('settings-dialog').open &&
+        isSettingsOpen() &&
+        isOwnerCurrent(active.owner) &&
+        opener.isConnected &&
+        !opener.closest('[hidden],[inert],[aria-hidden="true"]') &&
         !opener.disabled
       )
         opener.focus({ preventScroll: true });
@@ -100,10 +115,17 @@ export function attachProfileRecoveryDialog({
   }
   function open() {
     refresh();
-    if (opener.disabled || !doc.getElementById('settings-dialog').open)
-      return Promise.resolve(false);
+    if (opener.disabled || !isSettingsOpen()) return Promise.resolve(false);
+    const owner = getOwner();
     onOpen();
-    const active = { controller: new AbortController(), view: null, reader: null, ready: null };
+    if (disposed || !isSettingsOpen() || !isOwnerCurrent(owner)) return Promise.resolve(false);
+    const active = {
+      owner,
+      controller: new AbortController(),
+      view: null,
+      reader: null,
+      ready: null,
+    };
     operation = active;
     // Prior view handlers remain closed until a fresh reader is ready.
     back.onclick = close;
@@ -199,11 +221,36 @@ export function attachProfileRecoveryDialog({
     event.preventDefault();
     void close();
   };
+  const childClosed = (event) => {
+    // A tool can make entry unavailable while the paused HUD stays unchanged.
+    // Native dialog close does not bubble; capture the return to Settings and
+    // re-evaluate the existing restrictions instead of forcing entry enabled.
+    if (!disposed && event.target?.tagName === 'DIALOG' && !event.target.open && isSettingsOpen())
+      refresh();
+  };
   opener.onclick = open;
   back.onclick = close;
   dialog.addEventListener('cancel', escape);
+  doc.addEventListener('close', childClosed, true);
   win.addEventListener('blur', cancel);
   win.addEventListener('pagehide', close);
   refresh();
-  return { open, close, cancel, refresh };
+  return {
+    open,
+    close,
+    cancel,
+    refresh,
+    async dispose() {
+      if (disposed) return;
+      disposed = true;
+      dialog.removeEventListener('cancel', escape);
+      doc.removeEventListener('close', childClosed, true);
+      win.removeEventListener('blur', cancel);
+      win.removeEventListener('pagehide', close);
+      if (opener.onclick === open) opener.onclick = null;
+      if (back.onclick === close) back.onclick = null;
+      await close();
+      presenter.dispose();
+    },
+  };
 }

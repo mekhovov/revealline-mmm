@@ -1,3 +1,12 @@
+import { initializePursuitSpecialist } from '../hunt/pursuit-specialists.mjs';
+import { pursuitPolicy, updatePursuitHeading } from '../hunt/pursuit-goals.mjs';
+import {
+  combatOwner,
+  combatDefinition,
+  huntDefinition,
+} from '../hunt/running-enemy-definition.mjs';
+import { huntTargetKind, recordHuntElimination, chooseHuntRunnerHeading } from '../hunt/rules.mjs';
+import { recordSnakeCatch } from '../snake/rules.mjs';
 import { CELL } from './registry.mjs';
 import { EPS } from './geometry.mjs';
 import { classicEffectActive } from './classic-state.mjs';
@@ -15,8 +24,8 @@ const directions = [
   [-1, 0],
   [-1, -1],
 ];
-export const combatActors = (state) => state.classic?.combatPatrols?.actors ?? [];
-const definitions = (state) => state.level.classic.combatPatrols.actors;
+export const combatActors = (state) => combatOwner(state)?.combatPatrols?.actors ?? [];
+const definitions = (state) => combatDefinition(state.level).actors;
 const definition = (state, actor) => definitions(state).find((item) => item.id === actor.id);
 const live = (actor) => actor.alive;
 const emit = (state, type, data) =>
@@ -48,9 +57,9 @@ function velocity(actor, x, y, speed) {
 
 /** No new authority at all for absent/disabled historical extensions. */
 export function initializeCombatPatrols(state) {
-  const descriptor = state.level.classic?.combatPatrols;
+  const descriptor = combatDefinition(state.level);
   if (!descriptor?.enabled) return;
-  state.classic.combatPatrols = {
+  combatOwner(state).combatPatrols = {
     version: 'combat-patrol-state.v1',
     nextShotId: 1,
     actors: descriptor.actors
@@ -75,6 +84,7 @@ export function initializeCombatPatrols(state) {
             : {}),
         };
         velocity(actor, item.headingX, item.headingY, item.speed);
+        initializePursuitSpecialist(actor, pursuitPolicy(state.level, actor.id));
         return actor;
       })
       .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0)),
@@ -84,7 +94,7 @@ export function initializeCombatPatrols(state) {
 }
 
 function removeShots(state, predicate, reason) {
-  const combat = state.classic?.combatPatrols;
+  const combat = combatOwner(state)?.combatPatrols;
   if (!combat) return;
   combat.projectiles = combat.projectiles.filter((shot) => {
     if (!predicate(shot)) return true;
@@ -116,7 +126,9 @@ export function eliminateCombatPatrol(state, actor, cause) {
     tick: state.tick,
     time: state.time,
   };
-  state.classic.combatPatrols.eliminations.push(record);
+  combatOwner(state).combatPatrols.eliminations.push(record);
+  if (recordHuntElimination(combatOwner(state).hunt, huntDefinition(state.level), actor.id, cause))
+    recordSnakeCatch(state, actor.id);
   emit(state, 'eliminated', record);
   removeShots(state, (shot) => shot.actorId === actor.id, 'owner-eliminated');
 }
@@ -124,7 +136,7 @@ export function eliminateCombatPatrol(state, actor, cause) {
 function cancelWarning(state, actor, reason) {
   if (actor.phase !== 'warning') return;
   actor.phase = 'cooldown';
-  actor.nextScanTick = state.classic.actorTick + definition(state, actor).restTicks;
+  actor.nextScanTick = combatOwner(state).actorTick + definition(state, actor).restTicks;
   actor.aim = null;
   actor.warningUntil = null;
   emit(state, 'cancelled', { id: actor.id, reason });
@@ -132,7 +144,7 @@ function cancelWarning(state, actor, reason) {
 
 /** Event-driven cleanup is mandatory even while AI and projectiles are frozen. */
 export function clearCombatPatrols(state, reason) {
-  const combat = state.classic?.combatPatrols;
+  const combat = combatOwner(state)?.combatPatrols;
   if (!combat) return;
   removeShots(state, () => true, reason);
   for (const actor of combat.actors.filter(live)) {
@@ -140,7 +152,7 @@ export function clearCombatPatrols(state, reason) {
     if (reason === 'recovery' && actor.role === 'sentry') {
       actor.phase = 'cooldown';
       actor.recoveryUntil = null;
-      actor.nextScanTick = state.classic.actorTick + definition(state, actor).restTicks;
+      actor.nextScanTick = combatOwner(state).actorTick + definition(state, actor).restTicks;
     }
   }
 }
@@ -160,7 +172,7 @@ function warningValid(state, actor) {
 /** Capture never treats these actors as region seeds. Shared radius envelopes
  * match classic domain motion, including corners, so no actor is left embedded. */
 export function captureCombatPatrols(state) {
-  const combat = state.classic?.combatPatrols;
+  const combat = combatOwner(state)?.combatPatrols;
   if (!combat) return;
   for (const actor of combat.actors.filter(live)) {
     if (!fitsClassicDomain(state, actor, actor.radius, CELL.FIELD))
@@ -177,20 +189,20 @@ export function captureCombatPatrols(state) {
 
 export function expireCombatProjectiles(state) {
   if (classicEffectActive(state, 'enemy-freeze')) return;
-  removeShots(state, (shot) => state.classic.actorTick >= shot.expiresAtTick, 'expiry');
+  removeShots(state, (shot) => combatOwner(state).actorTick >= shot.expiresAtTick, 'expiry');
 }
 
 /** Exactly one AI pass after the world and release/capture transaction. Descriptor
  * speed and rest are resolved values; preset factors never run in the core. */
 export function updateCombatPatrols(state) {
-  const combat = state.classic?.combatPatrols;
+  const combat = combatOwner(state)?.combatPatrols;
   if (
     !combat ||
     !['running', 'respawning'].includes(state.status) ||
     classicEffectActive(state, 'enemy-freeze')
   )
     return;
-  const tick = state.classic.actorTick;
+  const tick = combatOwner(state).actorTick;
   for (const actor of combat.actors.filter(live)) {
     const def = definition(state, actor);
     if (actor.role === 'sentry') {
@@ -249,8 +261,35 @@ export function updateCombatPatrols(state) {
         } else actor.nextScanTick = tick + def.scanTicks;
       }
     }
+    if (
+      actor.phase === 'cooldown' &&
+      updatePursuitHeading({
+        version: state.level.pursuit?.version,
+        actor,
+        policy: pursuitPolicy(state.level, actor.id),
+        actors: combat.actors,
+        players: state.status === 'running' ? [state.player] : [],
+        geometry: state,
+        tick,
+        speed: def.speed,
+        clearance: (from, to) =>
+          classicDomainHit(state, from, to, actor.radius, CELL.FIELD)?.t ?? 1,
+      })
+    )
+      continue;
     if (actor.phase === 'cooldown' && tick >= actor.nextTurnTick) {
-      const [x, y] = directions[nextRandom(actor) % directions.length];
+      const rotation = nextRandom(actor);
+      const [x, y] =
+        huntTargetKind(huntDefinition(state.level), actor.id) === 'runner'
+          ? chooseHuntRunnerHeading({
+              actor,
+              players: state.status === 'running' ? [state.player] : [],
+              speed: def.speed * (classicEffectActive(state, 'enemy-slow') ? 0.5 : 1),
+              rotation,
+              clearance: (from, to) =>
+                classicDomainHit(state, from, to, actor.radius, CELL.FIELD)?.t ?? 1,
+            })
+          : directions[rotation % directions.length];
       velocity(actor, x, y, def.speed);
       actor.nextTurnTick = tick + def.turnTicks;
     }

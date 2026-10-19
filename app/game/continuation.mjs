@@ -1,3 +1,4 @@
+import { nativeCaptureSession } from './capture-presentation-session.mjs';
 import { canPlay } from './progress.mjs';
 
 /** Navigation only. A clear never grants another clear, and optional mastery
@@ -45,6 +46,7 @@ export function campaignSelection(progress, campaign, { levelId } = {}) {
  */
 export function savedFlightPreview(candidate, entries = []) {
   if (candidate === null || candidate === undefined) return null;
+  candidate = nativeCaptureSession(candidate);
   const text = (value, max = 100) =>
     typeof value === 'string' && value.trim() && value.length <= max ? value : null;
   const key = text(candidate?.campaignKey, 300);

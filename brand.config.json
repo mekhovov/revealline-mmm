@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "repo": "revealline-mmm",
   "brandId": "coupa",
   "editionId": "coupa-all",
@@ -8,5 +8,27 @@
   "upstream": {
     "repository": "mekhovov/revealline",
     "branch": "main"
+  },
+  "enabledModes": {
+    "capture": [
+      "solo",
+      "versus",
+      "team"
+    ],
+    "snake": [
+      "solo",
+      "versus",
+      "team"
+    ]
+  },
+  "content": {
+    "catalog": "content/catalog.json",
+    "files": "content/files",
+    "supplemental": "content/supplemental-files.json"
+  },
+  "presentation": {
+    "files": "branding/runtime",
+    "policy": "coupa-clean-v1",
+    "menuScenes": "content/menu-scenes.json"
   }
 }

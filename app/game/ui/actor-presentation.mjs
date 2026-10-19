@@ -1,8 +1,12 @@
+const drawMilitaryVehicleMotion = () => false;
+import { drawBrandActor } from '../presentation/brand-actors.mjs';
+import { sampleActorAnimation } from '../presentation/actor-animation.mjs';
 import { aliasSafePhase } from '../../authoring/motion-lab/animation.mjs';
 import { paintRotor } from './rotor-presentation.mjs';
 import { enemyCatalogRecord, resolveEnemySkin } from '../enemy-catalog.mjs';
 import { advanceEnemySurfacePhase, drawEnemyBodyMotion } from './enemy-body-motion.mjs';
 import { drawActorRecipe, resolveActorRecipe } from './actor-recipes.mjs';
+
 import {
   journeyActorThemeMaterial,
   drawJourneyActorMaterial,
@@ -32,6 +36,26 @@ export const ACTOR_PRESENTATION_LIMITS = Object.freeze({
 });
 const ROTOR_SWEEP_FACTOR = Math.sqrt(32) / 5;
 const imagePaintMetrics = new WeakMap();
+
+/** Native visual projections own these states. Missing phases never imply a
+ * shot, defeat or vulnerability change; ordinary motion keeps the idle/move fallback. */
+export function nativeActorAnimationClip(actor, detail, speed = 0) {
+  if (detail?.stunned) return 'idle';
+  const phase =
+    actor.type === 'bouncer'
+      ? detail?.pressure?.phase
+      : actor.type === 'hunter'
+        ? detail?.phase
+        : null;
+  if (phase === 'warning') return 'anticipation';
+  if (phase === 'cooldown' || phase === 'recovery') return 'recovery';
+  if (phase === 'committed' || phase === 'commit') return 'move';
+  if (actor.type === 'claimed-rover' && detail?.mode === 'dormant') return 'idle';
+  if (['claimed-rover', 'eroder'].includes(actor.type) && detail?.mode === 'warning')
+    return 'anticipation';
+  if (actor.type === 'contour-patrol' && detail?.mode === 'idle') return 'blocked';
+  return speed > 0.05 ? 'move' : 'idle';
+}
 
 // Presentation scale is bounded independently of simulation/world geometry.
 export const actorScreenScale = (value) => clamp(finite(value, 1), 0.1, 4);
@@ -251,6 +275,14 @@ export function createActorPresentation() {
             ? []
             : tail.filter((p) => Math.hypot(p.x - actor.x, p.y - actor.y) < 1.15).slice(0, 3);
         const bank = reduced ? 0 : locked ? (old?.bank ?? 0) : clamp(delta * 0.12, -0.15, 0.15);
+        const animationState = nativeActorAnimationClip(actor, detail, stunned ? 0 : speed);
+        // A named clip begins at its first pose instead of inheriting the tread
+        // clock. Pause/freeze retain its exact sample; reduced effects uses pose 0.
+        const animationTimeMs =
+          old?.animationState !== animationState
+            ? 0
+            : (old.animationTimeMs ?? 0) +
+              (paused || detail?.frozen || stunned || reduced ? 0 : elapsed * 1000);
         const record = {
           x: actor.x,
           y: actor.y,
@@ -266,6 +298,8 @@ export function createActorPresentation() {
           speed,
           tail: keptTail,
           bank,
+          animationState,
+          animationTimeMs,
         };
         next.set(actor.id, record);
         frames.set(
@@ -280,7 +314,7 @@ export function createActorPresentation() {
               ? { bodyRecipe: bodyRecipes[actor.type] }
               : {}),
             themeId:
-              resolveEnemySkin(actor.type, actorSkins[actor.type]) ?? family(themeId, themeFamily),
+              'coupa',
             ...(journeyMaterial && !resolveEnemySkin(actor.type, actorSkins[actor.type])
               ? { journeyMaterial: journeyMaterial.id }
               : {}),
@@ -293,6 +327,8 @@ export function createActorPresentation() {
             rotorPhase,
             speed: locked ? 0 : speed,
             bank,
+            animationState,
+            animationTimeMs,
             locked,
             reduced,
             stunned,
@@ -699,6 +735,7 @@ function distinctBody(c, f, k) {
 
 /** Original body-only skin; caller owns placement/size and functional badges. */
 export function drawEnemySilhouette(ctx, frame, colors) {
+  if (drawBrandActor(ctx, frame, colors)) return;
   if (drawActorRecipe(ctx, frame, colors)) return;
   if (drawJourneyActorMaterial(ctx, frame, colors)) return;
   if (!distinctBody(ctx, frame, colors))
@@ -754,7 +791,31 @@ export function drawPresentedActor(
     bodyPaintDiameter = Math.max(width, height);
     // The release host already cropped the declared source frame. Pivot and
     // motor anchors remain normalized to that entire frame, including alpha.
-    ctx.drawImage(image, -geometry.pivot.x * width, -geometry.pivot.y * height, width, height);
+    if (
+      geometry.material === 'military-vehicle' &&
+      geometry.machineryRevision === 'industrial-roster-v3'
+    ) {
+      // This revision paints its complete sampled silhouette below. A static
+      // bitmap underneath would leave stale pixels when the radar folds.
+    } else if (geometry.animation) {
+      const region = sampleActorAnimation(geometry.animation, {
+        clip: frame.animationState ?? (frame.dormant || frame.stunned ? 'idle' : 'move'),
+        timeMs: frame.animationTimeMs ?? (frame.phase ?? 0) * 1000,
+        reducedEffects: frame.reduced,
+      }).region;
+      ctx.drawImage(
+        image,
+        region.x,
+        region.y,
+        region.width,
+        region.height,
+        -geometry.pivot.x * width,
+        -geometry.pivot.y * height,
+        width,
+        height,
+      );
+    } else
+      ctx.drawImage(image, -geometry.pivot.x * width, -geometry.pivot.y * height, width, height);
     for (const anchor of showRotors ? geometry.rotors : []) {
       ctx.save();
       ctx.translate(anchor.x * width, anchor.y * height);
@@ -775,7 +836,16 @@ export function drawPresentedActor(
     ctx.scale(d / 28, d / 28);
     drawEnemySilhouette(ctx, frame, colors);
   }
-  if (image && bodyRecord) drawEnemyBodyMotion(ctx, frame, bodyRecord, bodyPaintDiameter);
+  if (image && geometry?.material === 'military-vehicle')
+    drawMilitaryVehicleMotion(
+      ctx,
+      frame,
+      geometry.vehicleRole,
+      bodyPaintDiameter,
+      geometry.machineryRevision,
+    );
+  else if (image && bodyRecord && !geometry?.animation)
+    drawEnemyBodyMotion(ctx, frame, bodyRecord, bodyPaintDiameter);
   if (image) ctx.scale(d / 28, d / 28);
   // Two small nose pixels give rounded/compact and uploaded bodies a stable
   // heading cue. They remain within the body envelope, never a targeting ray.

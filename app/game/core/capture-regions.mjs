@@ -10,9 +10,22 @@ export function captureSeedEnemies(state, releaseBoss = false) {
       // Registered roamer-capable Team editions explicitly exclude reclaimed
       // roamers as field seeds. Earlier snapshots keep their historical contract.
       !(
-        ['revealline-coop.v6', 'revealline-coop.v7', 'revealline-coop.v8'].includes(
-          state.ruleset,
-        ) && enemy.type === 'claimed-rover'
+        ([
+          'revealline-coop.v6',
+          'revealline-coop.v7',
+          'revealline-coop.v8',
+          'revealline-coop.v9',
+          'revealline-coop.v10',
+          'revealline-coop.v12',
+          'revealline-coop.v14',
+          'revealline-coop.v16',
+          'revealline-coop.v17',
+        ].includes(state.ruleset) ||
+          (['revealline-coop.v11', 'revealline-coop.v13', 'revealline-coop.v15'].includes(
+            state.ruleset,
+          ) &&
+            /^revealline-coop-level\.v[4-8]$/.test(state.level?.runningEnemies?.baseVersion))) &&
+        enemy.type === 'claimed-rover'
       ) &&
       !(enemy.type === 'relay-sentinel' && (releaseBoss || state.encounter?.defeated)),
   );
@@ -42,6 +55,23 @@ export function retainedCaptureCells(state, releaseBoss = false) {
       queue[tail++] = index;
     }
   }
+  // The Team expedition edition also retains stationary threat sources and
+  // future numbered stages. Studio snapshots must use the runtime's same seeds.
+  if (state.ruleset === 'revealline-coop.v17' && state.environment) {
+    const env = state.environment;
+    const points = [
+      ...env.emitters.filter((source) => !source.disabled),
+      ...env.erosion.filter((source) => !source.disabled),
+      ...env.stages.slice(env.stage + 1),
+    ];
+    for (const point of points) {
+      const index = cellIndex(point.x, point.y, state);
+      if (state.cells[index] === CELL.FIELD && !retained[index]) {
+        retained[index] = 1;
+        queue[tail++] = index;
+      }
+    }
+  }
   while (head < tail) {
     const index = queue[head++];
     for (const next of fieldNeighbors(index, state.width, state.height)) {
@@ -59,11 +89,18 @@ export function retainedCaptureCells(state, releaseBoss = false) {
 export function inspectCaptureSnapshot(state, { trailCells = [], releaseBoss = false } = {}) {
   const cells = Uint8Array.from(state.cells),
     securedTrail = [];
+  const lockedStages = new Set(
+    state.ruleset === 'revealline-coop.v17'
+      ? (state.environment?.stages ?? [])
+          .slice(state.environment.stage + 1)
+          .map((point) => cellIndex(point.x, point.y, state))
+      : [],
+  );
   for (const index of trailCells) {
     if (!Number.isInteger(index) || index < 0 || index >= cells.length)
       throw new TypeError('Preview trail cell is outside the map.');
     if (cells[index] === CELL.WALL) throw new TypeError('A wall cannot be a capture trail.');
-    if (cells[index] === CELL.FIELD) {
+    if (cells[index] === CELL.FIELD && !lockedStages.has(index)) {
       cells[index] = CELL.SAFE;
       securedTrail.push(index);
     }
@@ -106,12 +143,19 @@ export function inspectCaptureSnapshot(state, { trailCells = [], releaseBoss = f
     )
     .map((objective) => objective.id);
   let combat = {};
-  if (state.level?.classic?.combatPatrols) {
+  if (
+    state.level?.runningEnemies?.combatPatrols ||
+    state.level?.classic?.combatPatrols ||
+    state.level?.combatPatrols
+  ) {
     const reclaimed = Uint8Array.from(cells);
     for (const index of filledCells) reclaimed[index] = CELL.SAFE;
     const after = { ...snapshot, cells: reclaimed };
     combat = {
-      affectedCombatIds: (state.classic?.combatPatrols?.actors ?? [])
+      affectedCombatIds: (
+        (state.classic?.combatPatrols ?? state.runningEnemies?.combatPatrols ?? state.combatPatrols)
+          ?.actors ?? []
+      )
         .filter(
           (actor) => actor.alive && !fitsClassicDomain(after, actor, actor.radius, CELL.FIELD),
         )

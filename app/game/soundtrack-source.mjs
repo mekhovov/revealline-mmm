@@ -4,7 +4,7 @@ import { canonicalJSON, required } from './data-json.mjs';
 import { resolveSoundtrackCatalogue, soundtrackRights, SOUNDTRACK_LIMITS } from './soundtrack.mjs';
 import { createSoundtrackArchiveResolver } from './soundtrack-archive.mjs';
 import { resolveBundledSoundtrackAssets } from './soundtrack-bundled.mjs';
-import { inspectMP3, throwIfSoundtrackAborted } from './mp3.mjs';
+import { inspectMP3, ownSoundtrackBlob, throwIfSoundtrackAborted } from './mp3.mjs';
 import {
   soundtrackDownloadURL,
   readSoundtrackDownload,
@@ -44,9 +44,11 @@ export function createSoundtrackSource({
         download = false,
         purpose = download ? 'offline' : 'playback',
         localOnly = false,
+        inspect = inspectMP3,
       } = {},
     ) {
       required(typeof localOnly === 'boolean', 'Invalid local soundtrack acquisition policy.');
+      required(typeof inspect === 'function', 'Invalid soundtrack inspection operation.');
       required(
         ['playback', 'offline', 'export'].includes(purpose),
         'Unknown soundtrack byte purpose.',
@@ -92,12 +94,16 @@ export function createSoundtrackSource({
             cleanupTimeoutMs,
             ...(track.archiveId && !core ? { credentials: 'omit', mode: 'cors' } : {}),
           });
-          const actual = await inspectMP3(blob, { signal: current });
+          // Playback supplies its existing worker-backed inspector. Other byte consumers
+          // retain complete default validation, and every path checks the pinned facts.
+          const original = ownSoundtrackBlob(blob);
+          const actual = await inspect(original, { signal: current });
+          throwIfSoundtrackAborted(current);
           required(
             canonicalJSON(actual) === canonicalJSON(track.asset),
             'Downloaded recording differs from its pinned catalogue original.',
           );
-          return blob.slice(0, blob.size, 'audio/mpeg');
+          return original;
         },
         { signal, timeoutMs: 60000 },
       );

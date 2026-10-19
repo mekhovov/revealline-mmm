@@ -1,6 +1,12 @@
 import { createRun, stepRun, releaseInputs, getSummary, FIXED_DT, CLASSES } from './core/index.mjs';
 import {
   LEGACY_VERSIONS,
+  isRunningEnemyRuleset,
+  SNAKE_VERSIONS,
+  SNAKE_PURSUIT_VERSIONS,
+  SNAKE_PURSUIT_V2_VERSIONS,
+  isPursuitRuleset,
+  baseLevelVersion,
   ENCOUNTER_VERSIONS,
   WIDE_VERSIONS,
   CLASSIC_VERSIONS,
@@ -50,22 +56,40 @@ const SECTIONS = [
 ];
 const encoder = new TextEncoder();
 const sectionNames = (versions) =>
-  isRelayRuleset(versions.ruleset)
-    ? [
-        ...SECTIONS,
-        'encounter',
-        'classic',
-        'foundations',
-        'relays',
-        ...(isDirectionalRuleset(versions.ruleset) ? ['directionalFields'] : []),
-      ]
-    : versions.ruleset === FOUNDATION_VERSIONS.ruleset
-      ? [...SECTIONS, 'encounter', 'classic', 'foundations']
-      : versions.ruleset === CLASSIC_VERSIONS.ruleset
-        ? [...SECTIONS, 'encounter', 'classic']
-        : versions.ruleset !== LEGACY_VERSIONS.ruleset
-          ? [...SECTIONS, 'encounter']
-          : SECTIONS;
+  versions.ruleset === SNAKE_VERSIONS.ruleset
+    ? [...SECTIONS, 'encounter', 'classic', 'foundations', 'relays', 'directionalFields', 'snake']
+    : isRunningEnemyRuleset(versions.ruleset)
+      ? [
+          ...SECTIONS,
+          'encounter',
+          'classic',
+          'foundations',
+          'relays',
+          'directionalFields',
+          'runningEnemies',
+          ...(isPursuitRuleset(versions.ruleset) ? ['pursuit'] : []),
+          ...([SNAKE_PURSUIT_VERSIONS.ruleset, SNAKE_PURSUIT_V2_VERSIONS.ruleset].includes(
+            versions.ruleset,
+          )
+            ? ['snake']
+            : []),
+        ]
+      : isRelayRuleset(versions.ruleset)
+        ? [
+            ...SECTIONS,
+            'encounter',
+            'classic',
+            'foundations',
+            'relays',
+            ...(isDirectionalRuleset(versions.ruleset) ? ['directionalFields'] : []),
+          ]
+        : versions.ruleset === FOUNDATION_VERSIONS.ruleset
+          ? [...SECTIONS, 'encounter', 'classic', 'foundations']
+          : versions.ruleset === CLASSIC_VERSIONS.ruleset
+            ? [...SECTIONS, 'encounter', 'classic']
+            : versions.ruleset !== LEGACY_VERSIONS.ruleset
+              ? [...SECTIONS, 'encounter']
+              : SECTIONS;
 function replayVersions(value) {
   try {
     return resolveVersions({
@@ -233,7 +257,32 @@ const physicsRecipe = (recipe) =>
     'moveSpeedMultiplier',
   ]);
 function authoritativeSections(state, versions) {
+  const pursuit = isPursuitRuleset(versions.ruleset);
+  const supplemental = isRunningEnemyRuleset(versions.ruleset);
+  if (supplemental) versions = resolveVersions({ levelVersion: baseLevelVersion(state.level) });
   return {
+    ...(pursuit ? { pursuit: structuredClone(state.level.pursuit) } : {}),
+    ...(state.snake
+      ? {
+          snake: {
+            definition: structuredClone(state.level.snake),
+            state: structuredClone(state.snake),
+          },
+        }
+      : {}),
+    ...(supplemental
+      ? {
+          encounter: null,
+          classic: null,
+          foundations: null,
+          relays: null,
+          directionalFields: null,
+          runningEnemies: {
+            definition: structuredClone(state.level.runningEnemies),
+            state: structuredClone(state.runningEnemies ?? null),
+          },
+        }
+      : {}),
     identity: pick(state, [
       'ruleset',
       'levelId',
@@ -379,10 +428,80 @@ function authoritativeSections(state, versions) {
 /** Covers future-affecting simulation state, including action latches. */
 export function authoritativeCheckpoint(state) {
   const versions = resolveVersions({ levelVersion: state.level.version, ruleset: state.ruleset });
-  const projected = authoritativeSections(state, versions),
-    sections = {};
+  return checkpointForProjection(authoritativeSections(state, versions), versions);
+}
+function checkpointForProjection(projected, versions) {
+  const sections = {};
   for (const name of sectionNames(versions)) sections[name] = checksum(projected[name]);
   return { algorithm: versions.checkpointAlgorithm, hash: checksum(sections), sections };
+}
+
+// Only this module can reach the append-only recording behind these handles.
+// Public/default recorders deliberately remain ordinary, defensively copied data.
+const ownedRecorders = new WeakMap();
+function recorderData(recorder) {
+  return ownedRecorders.get(recorder) ?? recorder;
+}
+function ownedRecorder(data) {
+  const handle = Object.freeze({
+    get ticks() {
+      return data.ticks;
+    },
+    get segmentCount() {
+      return data.segments.length;
+    },
+  });
+  ownedRecorders.set(handle, data);
+  return handle;
+}
+
+/** Create an internal recording whose backing arrays never escape. */
+export function createOwnedRecorder(level, options = {}, build = 'unknown') {
+  return ownedRecorder(createRecorder(level, options, build));
+}
+
+/** Adopt a completed restoration during preparation, never on the first input.
+ * This is ownership, not replay verification; ordinary restore admission still applies.
+ */
+export function adoptOwnedRecorder(recorder) {
+  if (ownedRecorders.has(recorder)) return recorder;
+  const data = boundedCopy(recorder);
+  if (
+    !keysExactly(data, [
+      'version',
+      'build',
+      'ruleset',
+      'level',
+      'options',
+      'segments',
+      'ticks',
+      'releaseAfter',
+      '_identity',
+    ]) ||
+    !Array.isArray(data.segments) ||
+    !Number.isInteger(data.ticks) ||
+    data.ticks < 0 ||
+    data.ticks > MAX_REPLAY_TICKS ||
+    data.segments.length > MAX_REPLAY_TICKS ||
+    typeof data.releaseAfter !== 'boolean'
+  )
+    reject('Invalid owned recorder.');
+  let ticks = 0;
+  for (const segment of data.segments) {
+    if (
+      !keysExactly(segment, ['ticks', 'input', 'releaseBefore']) ||
+      !Number.isInteger(segment.ticks) ||
+      segment.ticks < 1 ||
+      typeof segment.releaseBefore !== 'boolean' ||
+      !keysExactly(segment.input, INPUT_KEYS)
+    )
+      reject('Invalid owned recording segment.');
+    // Validate the explicit scalar command without normalizing restored bytes.
+    inputCopy(segment.input);
+    ticks += segment.ticks;
+  }
+  if (ticks !== data.ticks) reject('Owned recorder tick total differs from its segments.');
+  return ownedRecorder(data);
 }
 
 /** Recorder owns copies; recordInput never steps the simulation itself. */
@@ -421,6 +540,8 @@ export function createRecorder(level, options = {}, build = 'unknown') {
 }
 
 export function recordInput(recorder, input) {
+  const handle = recorder;
+  recorder = recorderData(recorder);
   if (recorder.ticks >= MAX_REPLAY_TICKS)
     reject('Replay exceeds the 30-minute recording budget.', 'tick-budget');
   const command = inputCopy(input),
@@ -429,16 +550,17 @@ export function recordInput(recorder, input) {
   else recorder.segments.push({ ticks: 1, input: command, releaseBefore: recorder.releaseAfter });
   recorder.ticks++;
   recorder.releaseAfter = false;
-  return recorder;
+  return handle;
 }
 
 /** Mirror each official releaseInputs(state) call, including a trailing pause. */
 export function recordRelease(recorder) {
-  recorder.releaseAfter = true;
+  recorderData(recorder).releaseAfter = true;
   return recorder;
 }
 
-export function exportReplay(recorder, state) {
+function replayExportSource(recorder, state) {
+  recorder = recorderData(recorder);
   const versions = resolveVersions({
     levelVersion: recorder.level.version,
     replayVersion: recorder.version,
@@ -458,21 +580,84 @@ export function exportReplay(recorder, state) {
     );
   if (canonical(pick(state, Object.keys(recorder._identity))) !== canonical(recorder._identity))
     reject('Recorder and run identities differ.', 'recording-mismatch');
-  return boundedCopy({
-    version: versions.replayVersion,
-    build: recorder.build,
-    ruleset: versions.ruleset,
-    level: recorder.level,
-    options: recorder.options,
-    segments: recorder.segments,
-    releaseAfter: recorder.releaseAfter,
-    ticks: recorder.ticks,
-    summary: getSummary(state),
-    checkpoint: authoritativeCheckpoint(state),
-  });
+  return {
+    versions,
+    record: {
+      version: versions.replayVersion,
+      build: recorder.build,
+      ruleset: versions.ruleset,
+      level: recorder.level,
+      options: recorder.options,
+      segments: recorder.segments,
+      releaseAfter: recorder.releaseAfter,
+      ticks: recorder.ticks,
+      summary: getSummary(state),
+    },
+  };
+}
+export function exportReplay(recorder, state) {
+  const { record } = replayExportSource(recorder, state);
+  return boundedCopy({ ...record, checkpoint: authoritativeCheckpoint(state) });
 }
 
-function prepareReplay(source) {
+/** Optional collection owns the exact terminal inputs before yielding. Required
+ * public/save exports keep the synchronous exportReplay contract above. */
+export async function exportReplayAsync(recorder, state, { signal, scheduleChunk } = {}) {
+  checkAbort(signal);
+  if (scheduleChunk === undefined) return exportReplay(recorder, state);
+  if (typeof scheduleChunk !== 'function') reject('scheduleChunk must be a function.');
+  const source = replayExportSource(recorder, state),
+    privateSource = ownedRecorders.has(recorder),
+    record = privateSource ? source.record : boundedCopy(source.record),
+    count = privateSource ? record.segments.length : 0,
+    tail = count
+      ? { ...record.segments[count - 1], input: { ...record.segments[count - 1].input } }
+      : null,
+    names = sectionNames(source.versions),
+    projected = authoritativeSections(state, source.versions),
+    owned = boundedCopy(Object.fromEntries(names.map((name) => [name, projected[name]])));
+  // This captures only the authoritative projection, not the entire mutable run.
+  // Canonical checkpoint hashing and final export serialization wait for the
+  // existing owner; no later mutation or replacement can alter this snapshot.
+  let result,
+    called = false,
+    retired = false,
+    failure;
+  try {
+    await scheduleChunk(
+      () => {
+        try {
+          if (called || retired) reject('Replay export admission must invoke work exactly once.');
+          called = true;
+          checkAbort(signal);
+          // The prefix before the captured tail can never change: recordInput
+          // only appends or extends the current tail. Capture owns that tail,
+          // so neither later input nor multiple pending captures need array COW.
+          const segments = privateSource
+            ? [...record.segments.slice(0, Math.max(0, count - 1)), ...(tail ? [tail] : [])]
+            : record.segments;
+          result = boundedCopy({
+            ...record,
+            segments,
+            checkpoint: checkpointForProjection(owned, source.versions),
+          });
+        } catch (error) {
+          failure = error;
+          throw error;
+        }
+      },
+      { signal },
+    );
+    if (failure) throw failure;
+    if (!called) reject('Replay export admission did not invoke work.');
+    checkAbort(signal);
+    return result;
+  } finally {
+    retired = true;
+  }
+}
+
+function snapshotReplaySource(source) {
   if (typeof source === 'string') {
     if (encoder.encode(source).length > MAX_REPLAY_BYTES)
       reject('Replay exceeds 32 MiB.', 'json-budget');
@@ -482,7 +667,15 @@ function prepareReplay(source) {
       reject('Replay is not valid JSON.');
     }
   }
-  const data = boundedCopy(source);
+  return boundedCopy(source);
+}
+
+function prepareReplay(source) {
+  return prepareReplayData(snapshotReplaySource(source));
+}
+
+// Accept only the owned source snapshot produced inside this module.
+function prepareReplayData(data) {
   if (['xonix-replay.v1', 'xonix-replay.v2'].includes(data?.version))
     reject(
       'Legacy replay version: use its archived game build. Current runs use replay v3 with class switches and signal challenges.',
@@ -675,51 +868,95 @@ function checkAbort(signal) {
 /** Browser verification yields before work and every bounded simulation chunk. */
 export async function verifyReplayAsync(
   data,
-  { chunkTicks = 600, onProgress, signal, mastery } = {},
+  { chunkTicks = 600, onProgress, signal, mastery, scheduleChunk } = {},
 ) {
   if (!Number.isInteger(chunkTicks) || chunkTicks < 1 || chunkTicks > 1200)
     reject('chunkTicks must be an integer in 1..1200.');
   if (onProgress !== undefined && typeof onProgress !== 'function')
     reject('onProgress must be a function.');
+  if (scheduleChunk !== undefined && typeof scheduleChunk !== 'function')
+    reject('scheduleChunk must be a function.');
   // Snapshot optional data before yielding. No caller callback receives core
   // state, and the ordinary verifier path retains its exact result contract.
   const requestedMastery = masteryRequest(mastery);
   checkAbort(signal);
-  const prepared = prepareReplay(data);
+  const snapshot = scheduleChunk ? snapshotReplaySource(data) : null;
+  let prepared = scheduleChunk ? null : prepareReplay(data);
   await yieldToHost();
   checkAbort(signal);
+  if (scheduleChunk)
+    await admittedChunk(() => {
+      prepared = prepareReplayData(snapshot);
+    });
   if (requestedMastery) {
-    if (prepared.versions.ruleset !== LEGACY_VERSIONS.ruleset)
-      reject('Optional mastery observation is supported only for legacy core v2 maps.');
-    const { definition, ...identity } = requestedMastery;
-    prepared.mastery = {
-      runId: identity.runId,
-      definition,
-      observer: createMasteryObserver({
+    const setup = () => {
+      if (prepared.versions.ruleset !== LEGACY_VERSIONS.ruleset)
+        reject('Optional mastery observation is supported only for legacy core v2 maps.');
+      const { definition, ...identity } = requestedMastery;
+      prepared.mastery = {
+        runId: identity.runId,
         definition,
-        setup: captureMasterySetup(prepared.state, { ...identity, definition }),
-        initial: captureMasteryFacts(prepared.state, { ...identity, definition }),
-      }),
+        observer: createMasteryObserver({
+          definition,
+          setup: captureMasterySetup(prepared.state, { ...identity, definition }),
+          initial: captureMasteryFacts(prepared.state, { ...identity, definition }),
+        }),
+      };
     };
+    if (scheduleChunk) await admittedChunk(setup);
+    else setup();
   }
   const iterator = replaySteps(prepared),
     total = prepared.data.ticks;
   const now = () => globalThis.performance?.now?.() ?? Date.now();
+  // The owner admits a synchronous closure, never core state. Once its promise
+  // settles, a delayed/double invocation cannot continue this verifier.
+  async function admittedChunk(work) {
+    let called = false,
+      retired = false,
+      failure;
+    try {
+      await scheduleChunk(
+        () => {
+          try {
+            if (retired || called) reject('Replay chunk admission must invoke work exactly once.');
+            called = true;
+            checkAbort(signal);
+            work();
+          } catch (error) {
+            failure = error;
+            throw error;
+          }
+        },
+        { signal },
+      );
+      if (failure) throw failure;
+      if (!called) reject('Replay chunk admission did not run work.');
+      checkAbort(signal);
+    } finally {
+      retired = true;
+    }
+  }
   let processed = 0,
     done = false;
   onProgress?.({ ticks: 0, total, fraction: total ? 0 : 1 });
   while (!done) {
     checkAbort(signal);
-    const started = now();
-    for (let count = 0; count < chunkTicks; count++) {
-      const next = iterator.next();
-      if (next.done) {
-        done = true;
-        break;
+    const work = () => {
+      checkAbort(signal);
+      const started = now();
+      for (let count = 0; count < chunkTicks; count++) {
+        const next = iterator.next();
+        if (next.done) {
+          done = true;
+          break;
+        }
+        processed = next.value;
+        if (count % 8 === 7 && now() - started >= 8) break;
       }
-      processed = next.value;
-      if (count % 8 === 7 && now() - started >= 8) break;
-    }
+    };
+    if (scheduleChunk) await admittedChunk(work);
+    else work();
     onProgress?.({ ticks: processed, total, fraction: total ? processed / total : 1 });
     if (!done) {
       await yieldToHost();
@@ -727,5 +964,10 @@ export async function verifyReplayAsync(
     }
   }
   checkAbort(signal);
-  return finishVerification(prepared);
+  if (!scheduleChunk) return finishVerification(prepared);
+  let result;
+  await admittedChunk(() => {
+    result = finishVerification(prepared);
+  });
+  return result;
 }

@@ -52,6 +52,7 @@ export function createRequiredOfflineDownloadAccess({
             credentials: 'same-origin',
             signal: controller.signal,
           });
+          controller.signal.throwIfAborted();
           if (!response.ok || response.redirected)
             throw new Error(t('interface:downloads.catalogueUnavailable'));
           const value = await response.json();
@@ -200,9 +201,15 @@ export function createOfflineDownloadAccess({
   const local = createRequiredOfflineDownloadAccess({
     availability,
     store,
-    fetch: async (url) => {
-      for (const name of (await cacheStorage?.keys()) ?? []) {
-        const hit = await (await cacheStorage.open(name)).match(url.href);
+    fetch: async (url, { signal }) => {
+      signal.throwIfAborted();
+      const names = (await cacheStorage?.keys()) ?? [];
+      signal.throwIfAborted();
+      for (const name of names) {
+        const cache = await cacheStorage.open(name);
+        signal.throwIfAborted();
+        const hit = await cache.match(url.href);
+        signal.throwIfAborted();
         if (hit) return hit;
       }
       throw new Error('No locally prepared catalogue.');

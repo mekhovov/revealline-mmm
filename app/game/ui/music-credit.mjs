@@ -1,3 +1,4 @@
+import { musicCreatorLinks, renderMusicCreatorLinks } from './music-credits.mjs';
 import { t, getLocale, onLocaleChange, localizedText, localizedAttribute } from '../i18n/index.mjs';
 const statusKeys = {
   idle: 'common:music.status.idle',
@@ -21,11 +22,7 @@ export function attachMusicCredit({ document: doc, root, pauseButton, prefix }) 
   const title = doc.createElement('p'),
     artist = doc.createElement('p'),
     file = doc.createElement('p'),
-    source = doc.createElement('p'),
-    link = doc.createElement('a');
-  link.setAttribute('target', '_blank');
-  link.setAttribute('rel', 'noopener noreferrer');
-  source.append(link);
+    source = doc.createElement('p');
   details.append(title, artist, file, source);
   root.append(details);
   const previousDescription = pauseButton?.getAttribute('aria-description');
@@ -37,21 +34,6 @@ export function attachMusicCredit({ document: doc, root, pauseButton, prefix }) 
     lastMaster = {};
   const text = (value, fallback) =>
     typeof value === 'string' && value.trim() ? value.trim() : fallback;
-  function website(track) {
-    for (const value of [
-      ...(track?.websites ?? []).map((site) => site.url),
-      track?.rights?.source,
-    ]) {
-      try {
-        const url = new URL(value);
-        if (['http:', 'https:'].includes(url.protocol) && !url.username && !url.password)
-          return url;
-      } catch {
-        /* Legacy sources may be plain text. */
-      }
-    }
-    return null;
-  }
   function render(playback = {}, master = {}) {
     if (disposed) return;
     lastPlayback = playback;
@@ -65,7 +47,7 @@ export function attachMusicCredit({ document: doc, root, pauseButton, prefix }) 
           ? t('interface:builtInSynthesizedMusic')
           : t('interface:originalFilenameNotRecorded'),
       ),
-      url = website(track),
+      creatorLinks = musicCreatorLinks(track),
       muted = master.muted || master.volume === 0 || playback.volume === 0,
       caption = !track
         ? t('interface:musicOff')
@@ -74,19 +56,16 @@ export function attachMusicCredit({ document: doc, root, pauseButton, prefix }) 
           : playback.playing
             ? `♪ ${name}`
             : t('common:music.paused', { title: name }),
-      key = JSON.stringify([getLocale(), name, performer, filename, url?.href, caption]);
+      key = JSON.stringify([getLocale(), name, performer, filename, creatorLinks, caption]);
     if (key === identity) return;
     identity = key;
     localizedText(title, () => t('common:music.track', { title: name }));
     localizedText(artist, () => t('common:music.artist', { artist: performer }));
     localizedText(file, () => t('common:music.file', { filename }));
-    localizedText(link, () =>
-      url
-        ? t('common:music.source', { hostname: url.hostname })
-        : t('interface:sourceWebsiteNotRecorded'),
-    );
-    if (url) link.setAttribute('href', url.href);
-    else link.removeAttribute('href');
+    renderMusicCreatorLinks(source, track, {
+      document: doc,
+      fallbackText: t('interface:sourceWebsiteNotRecorded'),
+    });
     if (pauseButton) {
       pauseButton.setAttribute('data-track-caption', caption);
       description = t('common:music.pauseDescription', { caption });

@@ -16,6 +16,9 @@ export function attachDemoClock({
   advance,
   paint = () => {},
   updateAudio = () => {},
+  observeFrame = null,
+  getFrameOwner = () => null,
+  frameBoundary = () => {},
   now = () => (win?.performance ?? globalThis.performance).now(),
   requestFrame = win?.requestAnimationFrame?.bind(win) ??
     globalThis.requestAnimationFrame?.bind(globalThis),
@@ -35,7 +38,14 @@ export function attachDemoClock({
     lastPhase = null,
     debt = 0,
     burstSlices = 0,
-    channel = null;
+    channel = null,
+    observedOwner = null,
+    observedAt = null;
+
+  function resetObservation() {
+    if (observedOwner !== null) frameBoundary();
+    observedOwner = observedAt = null;
+  }
 
   function cancelTicket(ticket) {
     if (ticket?.kind === 'frame') {
@@ -49,6 +59,7 @@ export function attachDemoClock({
     scheduled = null;
   }
   function rebase() {
+    resetObservation();
     debt = 0;
     burstSlices = 0;
     lastTime = now();
@@ -92,6 +103,24 @@ export function attachDemoClock({
         : 0;
     lastTime = Number.isFinite(stamp) ? stamp : lastTime;
     const state = getPlaybackState();
+    // Cost and cadence belong only to ordinary focused native frames. Timer
+    // recovery and MessageChannel catch-up retain their existing transport.
+    const frameOwner =
+      observeFrame &&
+      ticket.kind === 'frame' &&
+      !recovered &&
+      !ticket.catchUp &&
+      !doc?.hidden &&
+      doc?.hasFocus?.() &&
+      advancing(state.phase)
+        ? getFrameOwner()
+        : null;
+    if (frameOwner === null || frameOwner !== observedOwner) resetObservation();
+    const priorObservedAt = observedAt;
+    if (frameOwner !== null) {
+      observedOwner = frameOwner;
+      observedAt = stamp;
+    }
     if (!ticket.catchUp) burstSlices = 0;
     // Catch-up drains only this wake's admitted budget. Its own work cannot
     // create an endless chain of new catch-up tasks.
@@ -120,6 +149,17 @@ export function attachDemoClock({
     if (!doc?.hidden && !ticket.catchUp) paint(Math.min(elapsed, MAX_SLICE_SECONDS));
     if (generation !== ticket.generation || !running || frozen || disposed) return;
     const after = getPlaybackState();
+    if (frameOwner !== null) {
+      if (
+        getFrameOwner() !== frameOwner ||
+        after.phase !== state.phase ||
+        doc?.hidden ||
+        !doc?.hasFocus?.()
+      )
+        resetObservation();
+      else if (priorObservedAt !== null)
+        observeFrame(stamp, stamp - priorObservedAt, Math.max(0, now() - stamp));
+    }
     if (!advancing(after.phase) || burstSlices >= MAX_BURST_SLICES) debt = 0;
     lastPhase = after.phase;
     const canCatchUp =
@@ -141,6 +181,7 @@ export function attachDemoClock({
     reset();
   }
   function stop() {
+    resetObservation();
     running = false;
     cancel();
     debt = 0;
@@ -149,6 +190,7 @@ export function attachDemoClock({
   function freeze() {
     if (disposed || frozen) return;
     frozen = true;
+    resetObservation();
     cancel();
     debt = 0;
     lastTime = null;

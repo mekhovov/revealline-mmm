@@ -1,16 +1,21 @@
 import { boundedJSON, exactKeys, required, stableId } from '../data-json.mjs';
 import { editionIdentityId } from '../edition-context.mjs';
+import { validateCuratedAppearanceInventory } from '../presentation/theme-system.mjs';
 
 export const EDITION_FORMATS = Object.freeze({
   brand: 'revealline-brand-pack.v1',
+  appearanceBrand: 'revealline-brand-pack.v2',
   edition: 'revealline-edition.v1',
   catalog: 'revealline-edition-catalog.v1',
+  appearanceCatalog: 'revealline-edition-catalog.v2',
+  curatedAppearanceCatalog: 'revealline-edition-catalog.v3',
 });
 export const EDITION_LIMITS = Object.freeze({
   brands: 32,
   editions: 128,
   campaigns: 512,
   assets: 4096,
+  appearanceThemes: 64,
 });
 export const EDITION_BOOT_KEYS = Object.freeze([
   'campaign',
@@ -84,6 +89,25 @@ function modeList(value) {
 }
 
 /** Data only. A registered brand never supplies CSS, scripts or fetch URLs. */
+export function validateAppearanceDefault(source) {
+  const value = own(source);
+  fields(value, ['familyId', 'revision'], 'Appearance default');
+  required(
+    typeof value.familyId === 'string' &&
+      /^[a-z][a-z0-9-]{0,63}$/.test(value.familyId) &&
+      typeof value.revision === 'string' &&
+      /^r[1-9][0-9]{0,8}$/.test(value.revision),
+    'Invalid appearance default pin.',
+  );
+  // Availability is a renderer concern. Preserve an unavailable immutable pin
+  // so an older installed player can fall back without rewriting author intent.
+  return freezeEdition(value);
+}
+
+export function resolveEditionAppearanceDefault(selection) {
+  return selection?.campaign?.appearanceDefault ?? selection?.brand?.appearanceDefault ?? null;
+}
+
 export function validateBrandPack(source) {
   const value = own(source);
   fields(
@@ -102,9 +126,18 @@ export function validateBrandPack(source) {
       'assetIds',
     ],
     'Brand pack',
-    ['sources', 'iconAssetId', 'fontAssetId', 'themeIds'],
+    ['sources', 'iconAssetId', 'fontAssetId', 'themeIds', 'appearanceDefault'],
   );
-  identity(value, EDITION_FORMATS.brand);
+  required(
+    [EDITION_FORMATS.brand, EDITION_FORMATS.appearanceBrand].includes(value.format),
+    'Unknown brand pack.',
+  );
+  identity(value, value.format);
+  required(
+    value.appearanceDefault === undefined || value.format === EDITION_FORMATS.appearanceBrand,
+    'Appearance defaults require brand pack v2.',
+  );
+  if (value.appearanceDefault !== undefined) validateAppearanceDefault(value.appearanceDefault);
   publication(value.publication);
   required(
     text(value.description, 2048) && stableId(value.themeId) && stableId(value.actorSetId),
@@ -160,7 +193,14 @@ export function validateCampaignDescriptor(source) {
     value,
     ['id', 'revision', 'name', 'brandId', 'publication', 'sourcePath', 'assetIds', 'modes'],
     'Campaign descriptor',
-    ['lessonPath', 'rewardPath', 'localizationPath', 'localizationSha256', 'heroAssetId'],
+    [
+      'lessonPath',
+      'rewardPath',
+      'localizationPath',
+      'localizationSha256',
+      'heroAssetId',
+      'appearanceDefault',
+    ],
   );
   required(
     stableId(value.id) &&
@@ -170,6 +210,7 @@ export function validateCampaignDescriptor(source) {
     'Invalid campaign identity.',
   );
   publication(value.publication);
+  if (value.appearanceDefault !== undefined) validateAppearanceDefault(value.appearanceDefault);
   required(
     editionRelativePath(value.sourcePath) && value.sourcePath.endsWith('.json'),
     'Campaigns require individual project JSON paths.',
@@ -356,6 +397,8 @@ export function createEditionRuntimeCatalog(source) {
   fields(value, ['brands', 'editions', 'campaigns', 'defaultEditionId'], 'Edition registry', [
     'assets',
     'publication',
+    'format',
+    'appearanceThemes',
   ]);
   const {
     brands,
@@ -380,6 +423,33 @@ export function createEditionRuntimeCatalog(source) {
     ),
     assets: records(assets, 'assets', EDITION_LIMITS.assets, validateEditionAsset),
   };
+  const appearance =
+    result.brands.some((brand) => brand.format === EDITION_FORMATS.appearanceBrand) ||
+    result.campaigns.some((campaign) => campaign.appearanceDefault !== undefined);
+  result.format =
+    value.format ??
+    (value.appearanceThemes
+      ? EDITION_FORMATS.curatedAppearanceCatalog
+      : appearance
+        ? EDITION_FORMATS.appearanceCatalog
+        : EDITION_FORMATS.catalog);
+  required(
+    [
+      EDITION_FORMATS.catalog,
+      EDITION_FORMATS.appearanceCatalog,
+      EDITION_FORMATS.curatedAppearanceCatalog,
+    ].includes(result.format),
+    'Unknown edition catalog.',
+  );
+  required(
+    !appearance || result.format !== EDITION_FORMATS.catalog,
+    'Appearance defaults require edition catalog v2.',
+  );
+  if (value.appearanceThemes !== undefined)
+    result.appearanceThemes = validateCuratedAppearanceInventory({
+      ...result,
+      appearanceThemes: value.appearanceThemes,
+    });
   const byBrand = new Map(result.brands.map((item) => [item.id, item]));
   const byCampaign = new Map(result.campaigns.map((item) => [item.id, item]));
   const byAsset = new Map(result.assets.map((item) => [item.id, item]));
@@ -504,10 +574,39 @@ export function validateEditionRuntimeCatalog(source) {
     value,
     ['format', 'publication', 'defaultEditionId', 'brands', 'editions', 'campaigns', 'assets'],
     'Edition catalog',
+    ['appearanceThemes'],
   );
-  required(value.format === EDITION_FORMATS.catalog, 'Unknown edition catalog.');
-  const { format: _format, ...options } = value;
-  return createEditionRuntimeCatalog(options);
+  required(
+    [
+      EDITION_FORMATS.catalog,
+      EDITION_FORMATS.appearanceCatalog,
+      EDITION_FORMATS.curatedAppearanceCatalog,
+    ].includes(value.format),
+    'Unknown edition catalog.',
+  );
+  return createEditionRuntimeCatalog(value);
+}
+
+/** Select only cosmetic records referenced by this admitted audience. An unused
+ * private authoring candidate must not leak into another community's package. */
+export function resolveEditionAppearanceThemes(source, { editionIds } = {}) {
+  const catalog = validateEditionRuntimeCatalog(source);
+  const editions = editionIds
+    ? editionIds.map((id) => resolveEditionSelection(catalog, { editionId: id }).edition)
+    : catalog.editions;
+  const brands = new Set(editions.map((row) => row.brandId));
+  const campaigns = new Set(editions.flatMap((row) => row.campaignIds));
+  const pins = [
+    ...catalog.brands.filter((row) => brands.has(row.id)),
+    ...catalog.campaigns.filter((row) => campaigns.has(row.id)),
+  ]
+    .map((row) => row.appearanceDefault)
+    .filter(Boolean);
+  return Object.freeze(
+    (catalog.appearanceThemes ?? []).filter((row) =>
+      pins.some((pin) => pin.familyId === row.family.id && pin.revision === row.family.revision),
+    ),
+  );
 }
 
 /** The compiled allowlist is authoritative; a URL or preference cannot extend it. */

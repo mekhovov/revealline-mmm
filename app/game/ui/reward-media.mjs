@@ -27,6 +27,9 @@ export function mountRewardMedia({
   timeoutMs = 20000,
   createMedia = (type) => document.createElement(type),
   readLocalAsset,
+  cinematic = false,
+  reducedMotion = false,
+  onEnded = () => {},
 }) {
   const payload = validateCompletionRewardPayload(input);
   required(['audio', 'video'].includes(payload.type), 'Reward media requires audio or video.');
@@ -55,6 +58,7 @@ export function mountRewardMedia({
     mediaListeners = [],
     mediaURLs = new Set();
   root.setAttribute('data-reward-media', payload.type);
+  if (cinematic) root.classList.add('reward-media-cinematic');
   status.setAttribute('role', 'status');
   transcript.append(node('summary', tr('transcript')), transcriptText);
   transcriptText.style.whiteSpace = 'pre-wrap';
@@ -65,7 +69,7 @@ export function mountRewardMedia({
   if (poster) {
     poster.alt = payload.locales[locale].title;
     poster.style.width = '100%';
-    poster.style.maxHeight = '50vh';
+    poster.style.maxHeight = cinematic ? '100%' : '50vh';
     poster.style.objectFit = 'contain';
     poster.hidden = true;
     root.append(poster);
@@ -82,7 +86,8 @@ export function mountRewardMedia({
     sourceURL = null,
     captionsEnd = 0,
     blurred = false,
-    posterReady = payload.type === 'audio';
+    posterReady = payload.type === 'audio',
+    silentPlayback = false;
   const alive = () => !disposed && !controller.signal.aborted;
   const available = () =>
     alive() && !blurred && document.visibilityState !== 'hidden' && document.hidden !== true;
@@ -121,6 +126,7 @@ export function mountRewardMedia({
   }
   function pause() {
     desired = false;
+    silentPlayback = false;
     binding?.setLocal({ muted: true });
     media?.pause();
     releaseGain?.();
@@ -130,7 +136,7 @@ export function mountRewardMedia({
     if (alive()) status.textContent = tr('paused');
   }
   const owner = { pause };
-  function claim() {
+  function claim({ muted = silentPlayback } = {}) {
     if (!available() || !desired) {
       pause();
       return false;
@@ -138,8 +144,11 @@ export function mountRewardMedia({
     const previous = foregroundOwners.get(audioMaster);
     if (previous !== owner) previous?.pause();
     foregroundOwners.set(audioMaster, owner);
-    releaseGain ??= musicDucker.acquire(0);
-    binding.setLocal({ muted: false });
+    if (muted) {
+      releaseGain?.();
+      releaseGain = null;
+    } else releaseGain ??= musicDucker.acquire(0);
+    binding.setLocal({ muted });
     return true;
   }
   async function acquire(reference, role) {
@@ -196,7 +205,14 @@ export function mountRewardMedia({
             onVerifiedAsset({ asset: verified, bytes }) {
               if (verified.id !== asset.id) return;
               const facts = inspectRewardMediaBytes(verified, role, bytes);
-              result = { ...facts, blob: new Blob([bytes], { type: facts.mime }) };
+              // Keep the verified bytes for the primary path, while retaining the
+              // original same-origin URL for browsers whose native decoder cannot
+              // attach an MP4 from an in-memory Blob (notably some iOS WebKit builds).
+              result = {
+                ...facts,
+                blob: new Blob([bytes], { type: facts.mime }),
+                directURL: new URL(asset.path, provider.rootURL).href,
+              };
             },
           });
           deadline.signal.throwIfAborted();
@@ -270,9 +286,10 @@ export function mountRewardMedia({
     clearMedia();
     media = createMedia(payload.type);
     const currentMedia = media;
-    let rejectMetadata = null;
+    let rejectMetadata = null,
+      loadingMetadata = false;
     const failCurrent = () => {
-      if (media !== currentMedia) return;
+      if (media !== currentMedia || loadingMetadata) return;
       fail();
       // A track error does not bubble to its video. Reject a pending decode
       // before clearing it so later metadata cannot revive failed captions.
@@ -285,10 +302,15 @@ export function mountRewardMedia({
     media.preload = 'metadata';
     media.muted = true;
     media.playsInline = true;
+    media.setAttribute('playsinline', '');
+    media.setAttribute('webkit-playsinline', '');
     media.setAttribute('aria-label', payload.locales[locale].title);
     media.style.width = '100%';
-    media.style.maxHeight = '60vh';
-    media.hidden = true;
+    media.style.maxHeight = cinematic ? '100%' : '60vh';
+    // Keep the native element laid out behind its poster while metadata loads.
+    // WebKit can refuse to decode a video kept at display:none, which made an
+    // otherwise valid reward look unavailable on iPhone.
+    media.hidden = false;
     binding = bindAudioMasterMedia({ audioMaster, element: media, muted: true });
     if (poster?.src) media.poster = poster.src;
     if (captions) {
@@ -299,10 +321,19 @@ export function mountRewardMedia({
       track.default = true;
       track.src = objectURL(new Blob([captions.text], { type: 'text/vtt' }));
       mediaURLs.add(track.src);
-      listenMedia(track, 'error', failCurrent);
+      listenMedia(track, 'error', () => {
+        if (!prepared) rejectMetadata?.(new Error('Reward captions are unavailable.'));
+        else failCurrent();
+      });
       media.append(track);
     }
     root.append(media);
+    listenMedia(media, 'playing', () => {
+      if (!cinematic || !desired || !available()) return;
+      media.hidden = false;
+      if (!reducedMotion)
+        media.animate?.([{ opacity: 0 }, { opacity: 1 }], { duration: 650, easing: 'ease-out' });
+    });
     listenMedia(media, 'play', () => {
       // Native controls are explicit gestures too; hidden/old owners cannot resume.
       if (!prepared || !available()) {
@@ -310,13 +341,16 @@ export function mountRewardMedia({
         return;
       }
       desired = true;
-      if (foregroundOwners.get(audioMaster) !== owner) claim();
-      status.textContent = tr('playing');
+      claim();
+      status.textContent = tr(silentPlayback ? 'playingMuted' : 'playing');
     });
     listenMedia(media, 'pause', () => {
       if (desired) pause();
     });
-    listenMedia(media, 'ended', pause);
+    listenMedia(media, 'ended', () => {
+      pause();
+      onEnded();
+    });
     listenMedia(media, 'error', failCurrent);
     listenMedia(media, 'durationchange', () => {
       if (prepared) {
@@ -327,51 +361,76 @@ export function mountRewardMedia({
         }
       }
     });
-    await new Promise((resolve, reject) => {
-      let timer;
-      const cleanup = () => {
-        clearTimeout(timer);
-        currentMedia.removeEventListener('loadedmetadata', ready);
-        currentMedia.removeEventListener('error', error);
-        controller.signal.removeEventListener('abort', cancel);
-        rejectMetadata = null;
-      };
-      const ready = () => {
-        try {
-          metadata(currentMedia);
-          cleanup();
-          resolve();
-        } catch (reason) {
+    const loadMetadata = (url) =>
+      new Promise((resolve, reject) => {
+        let timer, unavailable;
+        const cleanup = () => {
+          loadingMetadata = false;
+          clearTimeout(timer);
+          currentMedia.removeEventListener('loadedmetadata', ready);
+          currentMedia.removeEventListener('error', unavailable);
+          controller.signal.removeEventListener('abort', cancel);
+          rejectMetadata = null;
+        };
+        const ready = () => {
+          try {
+            metadata(currentMedia);
+            cleanup();
+            resolve();
+          } catch (reason) {
+            cleanup();
+            reject(reason);
+          }
+        };
+        const error = (reason = new Error('Native media decoder is unavailable.')) => {
           cleanup();
           reject(reason);
-        }
-      };
-      const error = () => {
-        cleanup();
-        reject(new Error('Native media decoder is unavailable.'));
-      };
-      const cancel = () => {
-        cleanup();
-        reject(new DOMException('Reward media cancelled.', 'AbortError'));
-      };
-      rejectMetadata = error;
-      currentMedia.addEventListener('loadedmetadata', ready);
-      currentMedia.addEventListener('error', error);
-      controller.signal.addEventListener('abort', cancel, { once: true });
-      timer = setTimeout(error, timeoutMs);
-      sourceURL = objectURL(source.blob);
-      media.src = sourceURL;
-      media.load();
-    }).catch((error) => {
-      if (media === currentMedia) clearMedia();
-      throw error;
-    });
+        };
+        const cancel = () => {
+          cleanup();
+          reject(new DOMException('Reward media cancelled.', 'AbortError'));
+        };
+        loadingMetadata = true;
+        rejectMetadata = error;
+        unavailable = () => error();
+        currentMedia.addEventListener('loadedmetadata', ready);
+        currentMedia.addEventListener('error', unavailable);
+        controller.signal.addEventListener('abort', cancel, { once: true });
+        timer = setTimeout(error, timeoutMs);
+        sourceURL = url;
+        media.src = sourceURL;
+        media.load();
+      });
+    try {
+      await loadMetadata(objectURL(source.blob));
+    } catch (error) {
+      // The exact bytes have already passed the asset verifier. Retry only videos
+      // from their registered same-origin path so iPhone can use its own range
+      // loader and hardware decoder without weakening the authored asset binding.
+      if (
+        payload.type !== 'video' ||
+        !source.directURL ||
+        !alive() ||
+        error?.message !== 'Native media decoder is unavailable.'
+      ) {
+        if (media === currentMedia) clearMedia();
+        throw error;
+      }
+      revoke(sourceURL);
+      sourceURL = null;
+      try {
+        await loadMetadata(source.directURL);
+      } catch (reason) {
+        if (media === currentMedia) clearMedia();
+        throw reason;
+      }
+    }
     if (!alive() || media !== currentMedia) return;
     prepared = true;
     media.controls = true;
     media.hidden = false;
   }
-  async function start() {
+  async function start({ allowMutedFallback = false } = {}) {
     if (!available() || (desired && preparation)) return;
     desired = true;
     // Claim early so another pending reward cannot begin after this gesture.
@@ -389,15 +448,26 @@ export function mountRewardMedia({
         await preparation;
       }
       if (!desired || !available() || !prepared) return;
+      silentPlayback = false;
       if (!claim()) return;
-      const started = media.play();
-      await started;
+      try {
+        await media.play();
+      } catch (error) {
+        if (!allowMutedFallback || !desired || !available() || !prepared) throw error;
+        // iOS rejects audible autoplay after the asynchronous integrity and
+        // decoder checks. Keep the earned recording moving, then let an
+        // explicit Play gesture enable its audio through the shared master.
+        silentPlayback = true;
+        if (!claim({ muted: true })) return;
+        await media.play();
+      }
       if (!desired || !available()) {
         pause();
         return;
       }
-      if (poster) poster.hidden = true;
-      status.textContent = tr('playing');
+      media.hidden = false;
+      if (poster && !cinematic) poster.hidden = true;
+      status.textContent = tr(silentPlayback ? 'playingMuted' : 'playing');
     } catch {
       // Browsers can require a second explicit gesture after asynchronous decode.
       pause();
@@ -433,5 +503,5 @@ export function mountRewardMedia({
     root.remove();
   }
   if (signal?.aborted) dispose();
-  return Object.freeze({ pause, dispose });
+  return Object.freeze({ start, pause, dispose });
 }

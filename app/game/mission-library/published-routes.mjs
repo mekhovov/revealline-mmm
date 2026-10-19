@@ -37,6 +37,8 @@ export function publishedJourneyLibrarySources({
       source: source(route, views.solo, {
         catalog: soloHost?.catalog || views.solo.catalog,
         profile,
+        details: (mission) =>
+          soloHost?.details?.(mission, difficulty()) ?? views.solo.details(mission, difficulty()),
         card: (mission) => (soloHost || views.solo).card(mission, difficulty()),
         launch: launchSolo,
       }),

@@ -26,12 +26,16 @@ function modeId(value) {
 const journeyForMode = (journey, mode) =>
   journey === 'legacy' ||
   (mode === 'team'
-    ? journey === 'team-cultural-specialist-originals-2'
+    ? ['team-cultural-specialist-originals-2', 'team-expedition-v1', 'humanoid-hunt-v1'].includes(
+        journey,
+      )
     : isAuthoredJourneyRouteId(journey));
 // These finite historical Team routes are retained by relay-rescue's entry
 // factory. Source navigation may return to them; this does not qualify any new
 // destination mission for the unified library or fabricate a Team edition.
 const TEAM_SOURCE_ROUTES = Object.freeze([
+  'humanoid-hunt-v1',
+  'team-expedition-v1',
   'team-greybox',
   'team-originals',
   'team-pressure-originals-1',

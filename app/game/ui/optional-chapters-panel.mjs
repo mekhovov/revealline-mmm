@@ -830,7 +830,20 @@ export function attachOptionalChaptersPanel({
     refresh();
   }
   const movedFocus = (event) => {
-    if (pendingFocus && ![pendingFocus.origin, cancel, doc.body, dialog].includes(event.target))
+    if (!pendingFocus) return;
+    if (
+      event.target === cancel &&
+      busy &&
+      dialog.open &&
+      !cancel.disabled &&
+      !cancel.closest('[hidden],[inert],[aria-hidden="true"]') &&
+      !doc.hidden &&
+      doc.hasFocus?.() !== false
+    ) {
+      // Returning from a child tool (or deliberately refocusing Cancel) renews
+      // only this operation's focus lease. Its retired Play intent stays retired.
+      pendingFocus.moved = false;
+    } else if (![pendingFocus.origin, cancel, doc.body, dialog].includes(event.target))
       pendingFocus.moved = true;
   };
   doc.addEventListener('focusin', movedFocus);
