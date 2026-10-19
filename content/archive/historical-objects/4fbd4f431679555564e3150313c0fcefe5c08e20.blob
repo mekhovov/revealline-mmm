@@ -1,0 +1,39 @@
+Browser tab: 24, Title: "Coupa Village / LINE", URL: "http://127.0.0.1:8779/game/index.html?edition=coupa-all".
+1 AXWebArea Coupa Village / LINE, URL: 127.0.0.1:8779/game/index.html?edition=coupa-all
+	2 container Налаштування, ID: settings-dialog
+		3 button Назад
+		4 heading Налаштування, Value: 2, ID: settings-title
+			5 text Налаштування
+		6 tab group Категорії налаштувань
+			7 tab (selectable, settable, boolean) Гра, Value: 0, ID: settings-tab-gameplay
+			8 tab (selectable, settable, boolean) Керування, Value: 0, ID: settings-tab-controls
+			9 tab (selectable, settable, boolean) Звук, Value: 0, ID: settings-tab-audio
+			10 tab (selectable, settable, boolean) Екран і мова, Value: 0, ID: settings-tab-display
+			11 tab (selectable, settable, boolean) Доступність, Value: 0, ID: settings-tab-accessibility
+			12 tab (selectable, settable, boolean) Прогрес і колекція, Value: 0, ID: settings-tab-data
+			13 tab (selected, settable, boolean) Вміст і офлайн, Value: 1, ID: settings-tab-content
+			14 tab (selectable, settable, boolean) Довідка й додаткове, Value: 0, ID: settings-tab-extras
+		15 container Description: Вміст і офлайн, ID: settings-panel-content
+			16 heading Вміст і офлайн, Value: 3
+				17 text Вміст і офлайн
+			18 link Description: Усі місії, Value: 127.0.0.1:8779/game/index.html?edition=coupa-all, ID: shell-catalogue
+			19 button Установлені розділи, ID: settings-packs
+			20 button (collapsed) Подробиці перевірки роботи без мережі, Secondary Actions: Expand
+				21 text Подробиці перевірки роботи без мережі
+			22 container Збереження завантажень
+				23 button Зберігати завантаження на цьому пристрої, ID: storage-retention-button
+				24 text Попросити браузер захистити дані цього сайту від автоматичного видалення. Це не завантажує файли й не замінює резервні копії.
+				25 text Захист не ввімкнено. Браузер може видалити завантаження.
+			26 button Більше розділів, ID: shell-worlds
+			27 container
+				28 text Видання компанії та кампанії
+				29 pop up button (collapsed, settable) Видання компанії та кампанії, Value: Coupa Village / LINE, ID: edition-select, Secondary Actions: Expand
+					30 menu
+						31 (selected) Coupa Village / LINE
+						32 Spend in Motion / LINE
+						33 Inside the Village / LINE
+						34 From Need to Value / LINE
+						35 A Day in Coupa / LINE
+						36 Connect the Network / LINE
+
+The focused UI element is 13 tab (selected, settable, boolean) Вміст і офлайн, Value: 1, ID: settings-tab-content

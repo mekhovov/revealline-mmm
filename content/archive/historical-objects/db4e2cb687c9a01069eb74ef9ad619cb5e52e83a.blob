@@ -1,0 +1,602 @@
+{
+  "format": "xonix-playground.v6",
+  "level": {
+    "version": "xonix-level.v5",
+    "id": "neon-coupa-reference",
+    "revision": "1",
+    "name": "Neon COUPA",
+    "width": 72,
+    "height": 36,
+    "encounter": null,
+    "spawn": {
+      "x": 36.5,
+      "y": 35.5
+    },
+    "goal": {
+      "coverage": 0.75
+    },
+    "walls": [],
+    "foundations": [
+      {
+        "x": 3,
+        "y": 9,
+        "w": 2,
+        "h": 2
+      },
+      {
+        "x": 27,
+        "y": 28,
+        "w": 5,
+        "h": 1
+      },
+      {
+        "x": 10,
+        "y": 29,
+        "w": 5,
+        "h": 1
+      },
+      {
+        "x": 28,
+        "y": 29,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "x": 44,
+        "y": 29,
+        "w": 5,
+        "h": 1
+      },
+      {
+        "x": 11,
+        "y": 30,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "x": 29,
+        "y": 30,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "x": 45,
+        "y": 30,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "x": 12,
+        "y": 31,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "x": 28,
+        "y": 31,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "x": 46,
+        "y": 31,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "x": 11,
+        "y": 32,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "x": 27,
+        "y": 32,
+        "w": 5,
+        "h": 1
+      },
+      {
+        "x": 45,
+        "y": 32,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "x": 10,
+        "y": 33,
+        "w": 5,
+        "h": 1
+      },
+      {
+        "x": 44,
+        "y": 33,
+        "w": 5,
+        "h": 1
+      }
+    ],
+    "objectives": [],
+    "supplies": [],
+    "signalZones": [],
+    "hangars": [],
+    "classic": {
+      "version": "classic.v1",
+      "terrain": [
+        {
+          "id": "mosaic-1",
+          "kind": "slow",
+          "x": 55,
+          "y": 6,
+          "w": 3,
+          "h": 2
+        },
+        {
+          "id": "mosaic-2",
+          "kind": "slow",
+          "x": 7,
+          "y": 8,
+          "w": 1,
+          "h": 3
+        },
+        {
+          "id": "mosaic-3",
+          "kind": "slow",
+          "x": 10,
+          "y": 8,
+          "w": 2,
+          "h": 3
+        },
+        {
+          "id": "mosaic-4",
+          "kind": "slow",
+          "x": 31,
+          "y": 8,
+          "w": 1,
+          "h": 3
+        },
+        {
+          "id": "mosaic-5",
+          "kind": "slow",
+          "x": 34,
+          "y": 8,
+          "w": 2,
+          "h": 3
+        },
+        {
+          "id": "mosaic-6",
+          "kind": "slow",
+          "x": 55,
+          "y": 8,
+          "w": 1,
+          "h": 3
+        },
+        {
+          "id": "mosaic-7",
+          "kind": "slow",
+          "x": 58,
+          "y": 8,
+          "w": 2,
+          "h": 3
+        },
+        {
+          "id": "mosaic-8",
+          "kind": "slow",
+          "x": 15,
+          "y": 10,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "id": "mosaic-9",
+          "kind": "slow",
+          "x": 23,
+          "y": 11,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "id": "mosaic-10",
+          "kind": "slow",
+          "x": 47,
+          "y": 11,
+          "w": 5,
+          "h": 1
+        },
+        {
+          "id": "mosaic-11",
+          "kind": "slow",
+          "x": 47,
+          "y": 14,
+          "w": 5,
+          "h": 1
+        },
+        {
+          "id": "mosaic-12",
+          "kind": "slow",
+          "x": 39,
+          "y": 15,
+          "w": 1,
+          "h": 3
+        },
+        {
+          "id": "mosaic-13",
+          "kind": "slow",
+          "x": 42,
+          "y": 15,
+          "w": 2,
+          "h": 3
+        },
+        {
+          "id": "mosaic-14",
+          "kind": "slow",
+          "x": 40,
+          "y": 18,
+          "w": 4,
+          "h": 1
+        },
+        {
+          "id": "mosaic-15",
+          "kind": "lethal",
+          "x": 8,
+          "y": 8,
+          "w": 2,
+          "h": 10
+        },
+        {
+          "id": "mosaic-16",
+          "kind": "lethal",
+          "x": 8,
+          "y": 33,
+          "w": 1,
+          "h": 1
+        },
+        {
+          "id": "mosaic-17",
+          "kind": "lethal",
+          "x": 10,
+          "y": 6,
+          "w": 8,
+          "h": 2
+        },
+        {
+          "id": "mosaic-18",
+          "kind": "lethal",
+          "x": 10,
+          "y": 18,
+          "w": 8,
+          "h": 2
+        },
+        {
+          "id": "mosaic-19",
+          "kind": "lethal",
+          "x": 20,
+          "y": 8,
+          "w": 2,
+          "h": 10
+        },
+        {
+          "id": "mosaic-20",
+          "kind": "lethal",
+          "x": 22,
+          "y": 6,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "mosaic-21",
+          "kind": "lethal",
+          "x": 22,
+          "y": 18,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "mosaic-22",
+          "kind": "lethal",
+          "x": 28,
+          "y": 8,
+          "w": 2,
+          "h": 10
+        },
+        {
+          "id": "mosaic-23",
+          "kind": "lethal",
+          "x": 32,
+          "y": 6,
+          "w": 2,
+          "h": 12
+        },
+        {
+          "id": "mosaic-24",
+          "kind": "lethal",
+          "x": 34,
+          "y": 18,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "mosaic-25",
+          "kind": "lethal",
+          "x": 40,
+          "y": 6,
+          "w": 2,
+          "h": 12
+        },
+        {
+          "id": "mosaic-26",
+          "kind": "lethal",
+          "x": 42,
+          "y": 33,
+          "w": 1,
+          "h": 1
+        },
+        {
+          "id": "mosaic-27",
+          "kind": "lethal",
+          "x": 44,
+          "y": 6,
+          "w": 2,
+          "h": 14
+        },
+        {
+          "id": "mosaic-28",
+          "kind": "lethal",
+          "x": 46,
+          "y": 6,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "mosaic-29",
+          "kind": "lethal",
+          "x": 46,
+          "y": 12,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "mosaic-30",
+          "kind": "lethal",
+          "x": 52,
+          "y": 8,
+          "w": 2,
+          "h": 4
+        },
+        {
+          "id": "mosaic-31",
+          "kind": "lethal",
+          "x": 56,
+          "y": 8,
+          "w": 2,
+          "h": 12
+        },
+        {
+          "id": "mosaic-32",
+          "kind": "lethal",
+          "x": 58,
+          "y": 6,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "mosaic-33",
+          "kind": "lethal",
+          "x": 58,
+          "y": 12,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "mosaic-34",
+          "kind": "lethal",
+          "x": 64,
+          "y": 8,
+          "w": 2,
+          "h": 12
+        }
+      ],
+      "powerups": [],
+      "arcadeActions": {
+        "version": "arcade-actions.v1"
+      }
+    },
+    "enemies": [
+      {
+        "id": "yellow-1",
+        "type": "bouncer",
+        "x": 21.5,
+        "y": 19.5,
+        "vx": 2.9615612703139815,
+        "vy": -2.5849514092036316,
+        "radius": 0.3
+      },
+      {
+        "id": "yellow-2",
+        "type": "bouncer",
+        "x": 12.5,
+        "y": 23.5,
+        "vx": 4.074561512706891,
+        "vy": -1.892763824417257,
+        "radius": 0.3
+      },
+      {
+        "id": "yellow-3",
+        "type": "bouncer",
+        "x": 11.5,
+        "y": 18.5,
+        "vx": 2.3236544951894906,
+        "vy": 2.6702442865799974,
+        "radius": 0.3
+      },
+      {
+        "id": "cyan-top",
+        "type": "border-patrol",
+        "x": 13.5,
+        "y": 0.5,
+        "speed": 4.5,
+        "clockwise": true,
+        "radius": 0.35
+      },
+      {
+        "id": "cyan-right",
+        "type": "border-patrol",
+        "x": 71.5,
+        "y": 6.5,
+        "speed": 4.5,
+        "clockwise": false,
+        "radius": 0.35
+      },
+      {
+        "id": "cyan-island-1",
+        "type": "contour-patrol",
+        "edge": {
+          "x": 11,
+          "y": 31,
+          "side": "north"
+        },
+        "clockwise": false,
+        "speed": 3,
+        "radius": 0.3
+      },
+      {
+        "id": "cyan-island-2",
+        "type": "contour-patrol",
+        "edge": {
+          "x": 28,
+          "y": 30,
+          "side": "north"
+        },
+        "clockwise": true,
+        "speed": 3,
+        "radius": 0.3
+      },
+      {
+        "id": "cyan-island-3",
+        "type": "contour-patrol",
+        "edge": {
+          "x": 45,
+          "y": 31,
+          "side": "north"
+        },
+        "clockwise": false,
+        "speed": 3,
+        "radius": 0.3
+      },
+      {
+        "id": "cyan-island-4",
+        "type": "contour-patrol",
+        "edge": {
+          "x": 3,
+          "y": 8,
+          "side": "south"
+        },
+        "clockwise": true,
+        "speed": 3,
+        "radius": 0.3
+      }
+    ],
+    "rules": {
+      "lives": 3,
+      "moveSpeed": 10,
+      "respawnSeconds": 0.7,
+      "graceSeconds": 0.8,
+      "timeLimitSeconds": 0,
+      "stopOnCapture": true
+    },
+    "metadata": {
+      "description": "Red pixel lettering spells COUPA. Blue ground slows the craft; red ground is lethal until captured. Open constellation surround the motif, with stepping stones along the lower route. 3 yellow bouncers, two outer patrols and 4 island-contour patrols guard the field. No horizontal barrier bars. Start at bottom center and reveal 75%."
+    }
+  },
+  "theme": {
+    "id": "retro",
+    "name": "1994 Forever",
+    "subtitle": "One more credit",
+    "family": "retro",
+    "player": "retro-craft",
+    "enemyShape": "orb",
+    "patrolShape": "spark",
+    "bossShape": "core",
+    "scene": "arcade",
+    "labels": {
+      "objective": "Cartridge",
+      "supply": "Dock",
+      "enemy": "Glitch",
+      "boss": "Mainframe",
+      "currency": "Score",
+      "ability": "Power-up"
+    },
+    "palette": {
+      "ink": "#242a41",
+      "paper": "#eee8df",
+      "muted": "#aaa1b1",
+      "accent": "#ffe654",
+      "safe": "#39c7e8",
+      "danger": "#ff548b",
+      "field": "#000000",
+      "grid": "#101020",
+      "sky": "#e49c95",
+      "land": "#565270"
+    },
+    "classBodies": {
+      "scout": "retro-craft",
+      "bomber": "retro-craft",
+      "carrier": "retro-craft",
+      "interceptor": "retro-craft",
+      "fiber": "retro-craft",
+      "impact": "retro-craft",
+      "trapper": "retro-craft"
+    }
+  },
+  "classRecipes": [
+    {
+      "id": "scout",
+      "label": "FPV Scout",
+      "description": "A nimble FPV quad. Scan shows enemy direction hints for four seconds; it never captures territory or slows an enemy.",
+      "primitive": "scan",
+      "capacity": 0,
+      "cooldown": 6,
+      "duration": 4,
+      "radius": 48,
+      "revision": "1"
+    }
+  ],
+  "settings": {
+    "classId": "scout",
+    "turnPolicy": "immediate",
+    "seed": 1
+  },
+  "visualOverrides": {
+    "enemy": {
+      "name": "Mosaic enemy",
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAbElEQVR42u3WOxIAEAwEUEdzMkdzCtfQamkpEP81szuTel+VRCmG+S3Bm5iPs7qYa8U1wBFIrbwF2IZolfcAy4heuQQwjZCUSwFTiKcAafkIYAhBAAEEPAdwE0IcI4hzDPGQQLxkEE8pw5xKAoM4vcHzH54kAAAAAElFTkSuQmCC"
+    },
+    "patrol": {
+      "name": "Mosaic patrol",
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAbklEQVR42mNgIBG4P3n/Hx9moDUYdcCoA+jmAFwGkuoAsh2Gy1BSHEBxyGAzgFgHUC1a0A0ixgFUTxOELKVLjqCZ5eT6jlp41AGjDhh1wMA7YMALokFfFA9oZTSg1fGAN0gGvEk22ioedcCIcQAA6l0yW47rJ5YAAAAASUVORK5CYII="
+    },
+    "player": {
+      "name": "Mosaic player",
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAYklEQVR42u2WWwoAEBQFrdP+yxp8kV8lj/s66kz5nilcUiKE/EwtuY0VKg+JmOWuESu5S8RObhpxKjeJuJWrRrzKVSKkcnFEeED4FkAcQohrCDGIIEYxxGME8RxDfEgIIVp0LrhEMwepglQAAAAASUVORK5CYII="
+    },
+    "wall": {
+      "name": "Mosaic wall",
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVR42mMQia7+P5CYAURob7qOE9NaftQBow4YdQDDaDkw6oBRB4w6YLQcGHXAqANGHTBaDow6YNQBI94BAJ5cDzcS0yPLAAAAAElFTkSuQmCC"
+    },
+    "contour": {
+      "name": "Mosaic contour",
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAbklEQVR42mNgIBG4P3n/Hx9moDUYdcCoA+jmAFwGkuoAsh2Gy1BSHEBxyGAzgFgHUC1a0A0ixgFUTxOELKVLjqCZ5eT6jlp41AGjDhh1wMA7YMALokFfFA9oZTSg1fGAN0gGvEk22ioedcCIcQAA6l0yW47rJ5YAAAAASUVORK5CYII="
+    },
+    "slowTerrain": {
+      "name": "Mosaic slowTerrain",
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAANklEQVR42mNgGAWjYBSMgsEMnBLu/KcGHnXA0HUAKY4b8AQ66oBRB4w6YLTiGgWjYBSMgiELAMa7Atjf3Ar7AAAAAElFTkSuQmCC"
+    },
+    "lethalTerrain": {
+      "name": "Mosaic lethalTerrain",
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAbUlEQVR42u2WQQ4AEAwEPce7vNxPiIsTgra6kZ17dyqiFQIhZEGOqbhmtGJJgLS+B9yESGrFQWrym0B1+UmwmXxHYC5fiZ7JR8Ln8lkTLlMS5vRu9w/xAiBmAMQUhNgDEJtQtQmIDwnCt46Qv6lSX/qpet2+5AAAAABJRU5ErkJggg=="
+    }
+  },
+  "masteryDefinition": null,
+  "presentation": {
+    "style": "microtile",
+    "showGrid": false
+  }
+}

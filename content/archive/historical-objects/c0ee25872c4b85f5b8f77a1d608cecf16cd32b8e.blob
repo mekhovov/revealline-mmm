@@ -1,0 +1,487 @@
+{
+  "actorCatalogId": "journey-actors-v1",
+  "assets": [
+    {
+      "alt": "An illustrated welcoming village courtyard with shared workspaces.",
+      "bytes": 1997148,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-inside-village-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/coupa-inside-village-key.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "50cf52f3ff6faeef17171a44acb83bf8b80e7090dcfa5fad512496676c18eb0f",
+      "width": 1280
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 1,
+      "format": "CampaignDesignV1",
+      "id": "coupa-inside-village",
+      "missionIds": [
+        "coupa-inside-village-01",
+        "coupa-inside-village-02",
+        "coupa-inside-village-03",
+        "coupa-inside-village-04",
+        "coupa-inside-village-05",
+        "coupa-inside-village-06"
+      ],
+      "name": "Inside the Village",
+      "revision": "1"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v1",
+  "format": "ContentProjectV1",
+  "id": "coupa-inside-village",
+  "maps": [
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 12, "x": 12, "y": 16 },
+        { "h": 4, "w": 12, "x": 40, "y": 15 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-01-map",
+      "name": "Hello, Village",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 17.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 8, "w": 2, "x": 25, "y": 9 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 8, "x": 17, "y": 13 },
+        { "h": 5, "w": 8, "x": 43, "y": 18 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-02-map",
+      "name": "Listen, Then Link",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 20.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 7, "w": 3, "x": 32, "y": 8 },
+        { "h": 7, "w": 3, "x": 32, "y": 22 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 7, "x": 11, "y": 9 },
+        { "h": 5, "w": 10, "x": 31, "y": 15 },
+        { "h": 4, "w": 7, "x": 54, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-03-map",
+      "name": "Room for Everyone",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 13, "w": 3, "x": 22, "y": 10 },
+        { "h": 13, "w": 3, "x": 47, "y": 12 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 6, "x": 31, "y": 11 },
+        { "h": 5, "w": 6, "x": 33, "y": 22 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-04-map",
+      "name": "Own the Handoff",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 34.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 16, "x": 13, "y": 9 },
+        { "h": 2, "w": 16, "x": 42, "y": 25 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 31, "y": 7 },
+        { "h": 4, "w": 9, "x": 31, "y": 24 },
+        { "h": 3, "w": 7, "x": 8, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-05-map",
+      "name": "Build Tomorrow",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [{ "h": 6, "id": "slow-1", "kind": "slow", "w": 11, "x": 30, "y": 14 }],
+      "walls": [
+        { "h": 2, "w": 8, "x": 19, "y": 15 },
+        { "h": 2, "w": 8, "x": 45, "y": 15 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 8, "x": 10, "y": 14 },
+        { "h": 5, "w": 11, "x": 30, "y": 14 },
+        { "h": 5, "w": 8, "x": 54, "y": 14 }
+      ],
+      "height": 36,
+      "id": "coupa-inside-village-06-map",
+      "name": "All of Us",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 7, "w": 3, "x": 24, "y": 9 },
+        { "h": 7, "w": 3, "x": 45, "y": 21 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.48,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["foundations"],
+        "lesson": "Meet the people and roles that make a shared outcome possible.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "An illustrated welcome square frames fictional reflections inspired by Coupa’s public culture page.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Connect the welcome desk and the distant meeting nook in the order you prefer."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-01",
+      "map": { "id": "coupa-inside-village-01-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Hello, Village",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-inside-village-01-picture",
+        "themeId": "coupa-village"
+      },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.53,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Discover two teams’ needs before completing their shared handoff.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Two listening spaces connect through a bright collaboration garden.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Read both sides of the courtyard before choosing your linking route."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-02",
+      "map": { "id": "coupa-inside-village-02-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Listen, Then Link",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.56,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Make every participation point part of the finished picture.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Different workspaces contribute to one welcoming community room.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Connect the small side rooms as well as the large central gathering space."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-03",
+      "map": { "id": "coupa-inside-village-03-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Room for Everyone",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 31.5, "y": 11.5 }],
+      "coverage": 0.58,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["perimeter-patrol"],
+        "lesson": "Bring evidence, an owner and a next step to a shared task.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A visible handoff travels between friendly workshop stations.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Build an interior return before crossing the exposed handoff lane."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-04",
+      "map": { "id": "coupa-inside-village-04-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Own the Handoff",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 31.5, "y": 7.5 }],
+      "coverage": 0.6,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Combine contributions into a shared prototype.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "An inventive workshop displays sketches, models and a finished collaboration.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Link the separated benches through the central prototype island."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-05",
+      "map": { "id": "coupa-inside-village-05-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Build Tomorrow",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 10.5, "y": 14.5 }],
+      "coverage": 0.64,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Celebrate what the community has built together.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A six-part festival mosaic reunites the people and places of the journey.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Choose a tour through familiar spaces without leaving the small corners isolated."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-inside-village-06",
+      "map": { "id": "coupa-inside-village-06-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "All of Us",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "Inside the Village",
+  "packs": [
+    {
+      "campaignIds": ["coupa-inside-village"],
+      "format": "PackDesignV1",
+      "id": "coupa-inside-village-pack",
+      "name": "Inside the Village",
+      "revision": "1"
+    }
+  ],
+  "policyId": "journey-arcade-v2",
+  "revision": "1"
+}

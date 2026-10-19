@@ -1,0 +1,42 @@
+Browser tab: 26, Title: "Coupa Village · Coupa", URL: "http://127.0.0.1:8817/game/index.html?edition=coupa-all".
+0 AXWebArea Coupa Village · Coupa, URL: 127.0.0.1:8817/game/index.html?edition=coupa-all
+	1 container Coupa Village, ID: shell-home
+		2 container
+			3 image Coupa
+			4 text Coupa
+			5 heading Coupa Village, Value: 1, ID: shell-title
+				6 text Coupa Village
+			7 text Language
+			8 pop up button (collapsed, settable) Language, Value: English, Secondary Actions: Expand
+				9 menu
+					10 (selected) English
+					11 Українська
+			12 container Main menu
+				13 button Start, ID: shell-featured
+				14 container Description: Music controls, ID: solo-quick-music-0
+					15 text Carol of the Bells (Metal Version) · Alexander Nakarada · Sound muted
+					16 button Play music, Help: Play / pause music (B), ID: solo-quick-music-0-toggle
+					17 button Next song, Help: Next song (N), ID: solo-quick-music-0-next
+				18 button Missions, ID: shell-play
+				19 button Collection, ID: shell-gallery
+				20 button Settings, ID: shell-options
+				21 button More, ID: shell-workshop
+				22 checkbox Sound: off, Value: 0, ID: shell-sound
+			23 text Start · First Connection
+			24 button (collapsed) Difficulty & appearance, Secondary Actions: Expand
+				25 text Difficulty & appearance
+			26 text Company & campaign edition
+			27 pop up button (collapsed, settable) Company & campaign edition, Value: Coupa Village, ID: edition-select, Secondary Actions: Expand
+				28 menu
+					29 (selected) Coupa Village
+					30 Spend in Motion
+					31 Inside the Village
+					32 From Need to Value
+					33 A Day in Coupa
+					34 Connect the Network
+			35 button (collapsed) Original artwork & saved-flight recovery, Secondary Actions: Expand
+				36 text Original artwork & saved-flight recovery
+			37 button (collapsed) About this edition & artwork, Secondary Actions: Expand
+				38 text About this edition & artwork
+
+The focused UI element is 13 button Start, ID: shell-featured

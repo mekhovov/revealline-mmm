@@ -1031,6 +1031,69 @@
       "sha256": "91876d315417252a65a36b1a46f3f3e03737ec26ccc08224f52e9c376f76ea1a",
       "bytes": 18389,
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": ".gitattributes",
+      "destination": "content/archive/owned-source/.gitattributes",
+      "sourceRevision": "2b950ca52654f478fc3276992a592b7b03a68c6d",
+      "sourceGitBlob": "62eda6f3b6635ffa58befeae7ab7cba8083c9639",
+      "sha256": "78b5707144f50b73ec148cd27cfa25959a74991f26c326ed9532010b16ab3a28",
+      "bytes": 1966,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": ".github/workflows/company-edition-candidate.yml",
+      "destination": "content/archive/owned-source/.github/workflows/company-edition-candidate.yml",
+      "sourceRevision": "2b950ca52654f478fc3276992a592b7b03a68c6d",
+      "sourceGitBlob": "c71551d8eac8cfb27428398f3f6c858c0b2b32ff",
+      "sha256": "eafa2c8366cb07a6f3417fb6a6a0dbfa4c8f10ee3f38b4bdf3ac200c55f864c5",
+      "bytes": 19174,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/fpv-development-preservation/pack.py",
+      "destination": "content/archive/owned-source/authoring/fpv-development-preservation/pack.py",
+      "sourceRevision": "2b950ca52654f478fc3276992a592b7b03a68c6d",
+      "sourceGitBlob": "633b816611a05d6212ecafed9e045adf77640760",
+      "sha256": "40bc7831941d1d882b54b2b23a9925e19db944b2dd1f34cb92f8d65a1bda439d",
+      "bytes": 10895,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/fpv-development-preservation/test_preservation.py",
+      "destination": "content/archive/owned-source/authoring/fpv-development-preservation/test_preservation.py",
+      "sourceRevision": "2b950ca52654f478fc3276992a592b7b03a68c6d",
+      "sourceGitBlob": "72faa8e48d5ca9cc2f8251cb850d9ea1d81f76b0",
+      "sha256": "af289e8b695bd274c65b64b585018548ca0568a962d881137233bd81d438def8",
+      "bytes": 17175,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/prompts/round-08-character-collections.md",
+      "destination": "content/archive/owned-source/authoring/prompts/round-08-character-collections.md",
+      "sourceRevision": "2b950ca52654f478fc3276992a592b7b03a68c6d",
+      "sourceGitBlob": "c82f55f7a64c852c1ade5eece89809cd7a6e14cb",
+      "sha256": "3e05232addc628b3f67e03a62b6d470d8e33bf79211b2152ffb2c113373b3845",
+      "bytes": 11095,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/motion-lab-parts-editor.test.mjs",
+      "destination": "content/archive/owned-source/game/test/motion-lab-parts-editor.test.mjs",
+      "sourceRevision": "2b950ca52654f478fc3276992a592b7b03a68c6d",
+      "sourceGitBlob": "d1848e94ca00470192740bd4ce2aa076f0f42765",
+      "sha256": "3b69dd2267bd2d970fa0c843d9f5a11481015e6f7d61de2d13dc10931d773ccb",
+      "bytes": 8939,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/verification.json",
+      "destination": "content/archive/owned-source/authoring/library/sentinel-theme-art/verification.json",
+      "sourceRevision": "2b950ca52654f478fc3276992a592b7b03a68c6d",
+      "sourceGitBlob": "30ba0b2677f166547de66763bae6aa9110e18e83",
+      "sha256": "7f7a3a66487eba9d5abd124f1daabb988e6443e97ff8a2674e3dc2b12963f24f",
+      "bytes": 7480,
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }

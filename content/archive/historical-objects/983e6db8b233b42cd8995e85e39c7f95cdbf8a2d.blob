@@ -1,0 +1,15 @@
+{
+  "output": "/Volumes/alex/.codex-shared-demo-scratch-37e0669ba44c4107b26c7f054b5a2412/canonical-packaging-native-refresh-20261019T102558Z-2499fa25/company-coupa-all",
+  "version": "v0.151.1",
+  "sourceRevision": "9dcff05887ed573a9fef4037c8d451c8043653a9",
+  "sourceTree": "73d06a4f8878c9b79271d454e87c1547b7aacfca",
+  "editionIds": [
+    "coupa-all"
+  ],
+  "zipMembersVerified": true,
+  "reproducibleBuilds": 2,
+  "verifiedPresentationReceipts": 1,
+  "capacityMetadataFiles": 5,
+  "capacityMetadataBytes": 197838,
+  "publicEligible": false
+}

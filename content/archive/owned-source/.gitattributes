@@ -1,0 +1,29 @@
+# Embedded-image packs are compiled from inspected originals and provenance.
+authoring/library/four-worlds-chapters/packs/original-fpv-pressure.json linguist-generated=true -diff
+authoring/library/four-worlds-chapters/packs/original-ukraine-atlas.json linguist-generated=true -diff
+authoring/library/four-worlds-chapters/packs/original-retro-1994.json linguist-generated=true -diff
+authoring/library/four-worlds-chapters/packs/original-spend-network.json linguist-generated=true -diff
+
+# Preserve exact raw failure output; whitespace is part of the retained evidence.
+docs/verification/quick-music-controls-2026-09-24/unmuted-retry-red-r3.txt -whitespace
+docs/verification/touch-capture-fallback-20260928/red.tap -whitespace
+
+# Preserve pinned upstream encoder bytes; the sole appended export is documented.
+game/vendor/qrcodegen-1.8.0.mjs -whitespace
+
+# Exact native accessibility/TAP failure evidence for the actor contact review.
+docs/verification/actor-batch-6/raster-calibration-failure.txt -whitespace
+docs/verification/actor-batch-6/raster-team-geometry-failure.txt -whitespace
+docs/verification/actor-batch-6/raster-team-width-failure.txt -whitespace
+docs/verification/actor-batch-6/team-overlay-original-failure.tap -whitespace
+
+# Retain exact batch-7 tuning/controller failure TAP rather than trimming evidence.
+docs/verification/actor-batch-7/initial-tuning-regressions.tap -whitespace
+docs/verification/actor-batch-7/pressure-details-baseline-controller-fail.tap -whitespace
+docs/verification/actor-batch-7/pressure-details-current-controller-fail.tap -whitespace
+docs/verification/actor-batch-7/lint.txt -whitespace
+
+# Exact upstream license evidence and generated Overflight qualification output.
+authoring/audio/human-reactions-v1/source-page.html linguist-vendored=true -whitespace
+qualification/overflight-variety-20261005/*.tap linguist-generated=true -whitespace
+qualification/overflight-variety-20261005/route-matrix.json linguist-generated=true

@@ -1,0 +1,55 @@
+{
+  "format": "revealline-external-chapter.v1",
+  "id": "route-worlds-coupa",
+  "revision": 1,
+  "source": {
+    "id": "fpv-route-choices",
+    "bytes": 11949780,
+    "sha256": "589543f693e650355216aa702844a7726b7cd6e318900b8583702fd0650ae989"
+  },
+  "pack": {
+    "bytes": 8526,
+    "sha256": "ab535097b32996805a9eb36df32f22647a6a3a3e8b0d10e9526667519afef49f"
+  },
+  "media": {
+    "bytes": 8281102,
+    "sha256": "22a4201d6bff063e8c4704323e0605cc20626d949e8c265264d4f4c4f7d0bb03"
+  },
+  "campaignKey": "route-worlds-coupa/1/57042d08e1681c86",
+  "themeId": "coupa",
+  "originals": [
+    {
+      "assetId": "route-worlds-coupa-poster-1",
+      "presentationId": "route-worlds-coupa-poster-1-presentation",
+      "levelId": "route-worlds-coupa-foundry",
+      "levelRevision": "1",
+      "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518",
+      "bytes": 2725160,
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "assetId": "route-worlds-coupa-poster-2",
+      "presentationId": "route-worlds-coupa-poster-2-presentation",
+      "levelId": "route-worlds-coupa-depot",
+      "levelRevision": "1",
+      "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d",
+      "bytes": 2686912,
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "assetId": "route-worlds-coupa-poster-3",
+      "presentationId": "route-worlds-coupa-poster-3-presentation",
+      "levelId": "route-worlds-coupa-switchback",
+      "levelRevision": "1",
+      "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0",
+      "bytes": 2858095,
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    }
+  ]
+}

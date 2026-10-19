@@ -1,0 +1,375 @@
+[
+  {
+    "brief": "Work from a fictional task board. Select the request assigned to your role instead of acting on another team’s notification.",
+    "campaignId": "coupa-product-operations",
+    "fields": [
+      {
+        "expected": "R-301",
+        "explanation": "Select the task assigned to you.",
+        "id": "record",
+        "label": "Open record",
+        "options": [
+          { "label": "R-301", "value": "R-301" },
+          { "label": "INV-77", "value": "INV-77" },
+          { "label": "R-405", "value": "R-405" }
+        ]
+      },
+      {
+        "expected": "Complete delivery address",
+        "explanation": "A notification does not necessarily require an action.",
+        "id": "action",
+        "label": "Work to perform",
+        "options": [
+          { "label": "Complete delivery address", "value": "Complete delivery address" },
+          { "label": "Approve invoice", "value": "Approve invoice" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-product-operations-01-lesson",
+    "kind": "practice",
+    "missionId": "coupa-product-operations-01",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "role",
+        "lines": [
+          "You are the requester for R-301.",
+          "Your task is to complete a missing delivery address."
+        ],
+        "title": "Your current role"
+      },
+      {
+        "id": "tasks",
+        "lines": [
+          "R-301: delivery address missing; assigned to you.",
+          "INV-77: approved notification; no requester action.",
+          "R-405: review pending; assigned to a department approver."
+        ],
+        "title": "Task board"
+      }
+    ],
+    "revision": "2",
+    "role": "Requester",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Requisitions",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/requisitions-api-requisitions"
+      },
+      {
+        "title": "Coupa glossary — Approval",
+        "url": "https://docs.coupa.com/en/coupa-glossary/overview/a"
+      }
+    ],
+    "success": "R-301 opened with the requester’s delivery-address task selected.",
+    "title": "Choose the actionable task"
+  },
+  {
+    "brief": "Correct the fictional draft’s missing information and save it. Saving is deliberately separate from submitting.",
+    "campaignId": "coupa-product-operations",
+    "fields": [
+      {
+        "expected": "4",
+        "explanation": "The request note specifies four lamps.",
+        "id": "quantity",
+        "label": "Quantity",
+        "options": [
+          { "label": "1", "value": "1" },
+          { "label": "4", "value": "4" }
+        ]
+      },
+      {
+        "expected": "Save draft",
+        "explanation": "The requester has asked to save first.",
+        "id": "operation",
+        "label": "Draft action",
+        "options": [
+          { "label": "Save draft", "value": "Save draft" },
+          { "label": "Submit for approval", "value": "Submit for approval" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-product-operations-02-lesson",
+    "kind": "practice",
+    "missionId": "coupa-product-operations-02",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "draft",
+        "lines": [
+          "Item: desk lamp. Quantity: empty. Currency: EUR.",
+          "Delivery address is now Workshop North."
+        ],
+        "title": "Draft R-301"
+      },
+      {
+        "id": "brief",
+        "lines": [
+          "The team needs 4 desk lamps.",
+          "The requester wants to save the draft for review before submission."
+        ],
+        "title": "Request note"
+      }
+    ],
+    "revision": "2",
+    "role": "Requester",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Requisitions",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/requisitions-api-requisitions"
+      }
+    ],
+    "success": "R-301 saved as a complete draft. It has not been submitted.",
+    "title": "Repair and save the draft"
+  },
+  {
+    "brief": "Apply the stated policy to a fictional request. The training screen is illustrative, not a replica of a customer instance.",
+    "campaignId": "coupa-product-operations",
+    "fields": [
+      {
+        "expected": "Return for clarification",
+        "explanation": "The required quote is missing.",
+        "id": "decision",
+        "label": "Review action",
+        "options": [
+          { "label": "Return for clarification", "value": "Return for clarification" },
+          { "label": "Approve", "value": "Approve" }
+        ]
+      },
+      {
+        "expected": "Attach supporting quote",
+        "explanation": "Identify the specific missing evidence.",
+        "id": "reason",
+        "label": "Handoff reason",
+        "options": [
+          { "label": "Attach supporting quote", "value": "Attach supporting quote" },
+          { "label": "Request is too old", "value": "Request is too old" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-product-operations-03-lesson",
+    "kind": "practice",
+    "missionId": "coupa-product-operations-03",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "request",
+        "lines": [
+          "Total: 780 credits. Business purpose: workshop equipment.",
+          "Supporting quote: missing."
+        ],
+        "title": "Request R-302"
+      },
+      {
+        "id": "policy",
+        "lines": [
+          "Requests above 500 credits require an attached quote.",
+          "Incomplete requests are returned to the requester for clarification."
+        ],
+        "title": "Review policy for this case"
+      }
+    ],
+    "revision": "2",
+    "role": "Department approver",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa glossary — Approval",
+        "url": "https://docs.coupa.com/en/coupa-glossary/overview/a"
+      }
+    ],
+    "success": "R-302 returned with a request for the supporting quote.",
+    "title": "Review the evidence"
+  },
+  {
+    "brief": "Track a fictional supplier change without confusing a request with the currently accepted order.",
+    "campaignId": "coupa-product-operations",
+    "fields": [
+      {
+        "expected": "Buyer",
+        "explanation": "Use the owner specified by the scenario.",
+        "id": "owner",
+        "label": "Review owner",
+        "options": [
+          { "label": "Buyer", "value": "Buyer" },
+          { "label": "Requester automatically", "value": "Requester automatically" }
+        ]
+      },
+      {
+        "expected": "18 October",
+        "explanation": "A pending proposal has not replaced the accepted order.",
+        "id": "acceptedDate",
+        "label": "Current accepted delivery date",
+        "options": [
+          { "label": "18 October", "value": "18 October" },
+          { "label": "21 October", "value": "21 October" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-product-operations-04-lesson",
+    "kind": "practice",
+    "missionId": "coupa-product-operations-04",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "order",
+        "lines": ["Accepted delivery date: 18 October.", "Accepted quantity: 10 kits."],
+        "title": "Issued PO-303"
+      },
+      {
+        "id": "change",
+        "lines": [
+          "Proposed delivery date: 21 October. Status: Pending review.",
+          "The scenario routes delivery changes to the buyer for review."
+        ],
+        "title": "Supplier change request C-303"
+      }
+    ],
+    "revision": "2",
+    "role": "Buyer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Supplier Portal — View and manage purchase orders",
+        "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/purchase-orders/view-and-manage-pos"
+      }
+    ],
+    "success": "Change C-303 routed to the buyer. The accepted date remains 18 October.",
+    "title": "Handle a pending change"
+  },
+  {
+    "brief": "Record the delivery against the correct fictional order line, leaving undelivered goods open.",
+    "campaignId": "coupa-product-operations",
+    "fields": [
+      {
+        "expected": "Line 1: monitors",
+        "explanation": "The packing slip names monitors.",
+        "id": "line",
+        "label": "Receiving line",
+        "options": [
+          { "label": "Line 1: monitors", "value": "Line 1: monitors" },
+          { "label": "Line 2: keyboards", "value": "Line 2: keyboards" }
+        ]
+      },
+      {
+        "expected": "4",
+        "explanation": "Do not receive the remaining two monitors early.",
+        "id": "quantity",
+        "label": "Quantity received",
+        "options": [
+          { "label": "4", "value": "4" },
+          { "label": "6", "value": "6" },
+          { "label": "10", "value": "10" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-product-operations-05-lesson",
+    "kind": "practice",
+    "missionId": "coupa-product-operations-05",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "lines",
+        "lines": [
+          "Line 1: 6 monitors. Line 2: 10 keyboards.",
+          "Neither line has a previous receipt."
+        ],
+        "title": "Order PO-304"
+      },
+      {
+        "id": "delivery",
+        "lines": [
+          "4 monitors delivered. No keyboards delivered.",
+          "Record only the goods physically received in this case."
+        ],
+        "title": "Packing slip"
+      }
+    ],
+    "revision": "2",
+    "role": "Receiver",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Receipts",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/receipts-api"
+      }
+    ],
+    "success": "Four monitors received on line 1; two monitors and ten keyboards remain open.",
+    "title": "Receive the correct line"
+  },
+  {
+    "brief": "Trace a fictional discrepancy using linked records. This exercise does not prescribe country-specific tax or credit-note rules.",
+    "campaignId": "coupa-product-operations",
+    "fields": [
+      {
+        "expected": "Invoice quantity",
+        "explanation": "Order and actual receipt agree; the invoice differs.",
+        "id": "issue",
+        "label": "Discrepancy",
+        "options": [
+          { "label": "Invoice quantity", "value": "Invoice quantity" },
+          { "label": "Receipt quantity", "value": "Receipt quantity" }
+        ]
+      },
+      {
+        "expected": "AP requests supplier clarification",
+        "explanation": "Preserve correct records while resolving the discrepancy.",
+        "id": "handoff",
+        "label": "Next action",
+        "options": [
+          {
+            "label": "AP requests supplier clarification",
+            "value": "AP requests supplier clarification"
+          },
+          { "label": "Increase receipt to ten", "value": "Increase receipt to ten" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-product-operations-06-lesson",
+    "kind": "practice",
+    "missionId": "coupa-product-operations-06",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "records",
+        "lines": [
+          "PO-305: 8 lamps. Receipt: 8 lamps. Invoice: 10 lamps.",
+          "The invoice has not been paid."
+        ],
+        "title": "Linked records"
+      },
+      {
+        "id": "policy",
+        "lines": [
+          "Send a quantity clarification to the supplier through the AP owner.",
+          "Do not alter a correct receipt to make the invoice match."
+        ],
+        "title": "Exception handling for this case"
+      }
+    ],
+    "revision": "2",
+    "role": "Accounts payable",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Supplier Portal — View and manage invoices",
+        "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/view-and-manage-invoices"
+      }
+    ],
+    "success": "Quantity exception documented and handed to AP for supplier clarification.",
+    "title": "Resolve the quantity exception"
+  }
+]

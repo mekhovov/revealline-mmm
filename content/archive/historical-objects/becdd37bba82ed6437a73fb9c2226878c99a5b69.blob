@@ -1,0 +1,386 @@
+{
+  "id": "coupa-source-to-pay",
+  "levels": [
+    {
+      "classic": {
+        "arcadeActions": { "version": "arcade-actions.v1" },
+        "powerups": [],
+        "terrain": [],
+        "version": "classic.v1"
+      },
+      "encounter": null,
+      "enemies": [
+        {
+          "id": "paper-drifter",
+          "type": "bouncer",
+          "vx": -1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "foundations": [{ "h": 4, "w": 10, "x": 17, "y": 12 }],
+      "goal": { "coverage": 0.48 },
+      "hangars": [{ "id": "home-hangar", "radius": 2, "x": 22.5, "y": 0.5 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-01",
+      "name": "Find the Need",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "revision": "1",
+      "rules": {
+        "boostMultiplier": 1.5,
+        "cutTimeLimitSeconds": 0,
+        "graceSeconds": 1,
+        "lives": 3,
+        "maxTrailCells": 0,
+        "moveSpeed": 10,
+        "objectivePoints": 500,
+        "playerRadius": 0.18,
+        "pointsPerCell": 10,
+        "respawnSeconds": 0.65,
+        "stopOnCapture": true,
+        "switchCooldownSeconds": 2,
+        "timeLimitSeconds": 0,
+        "timeMedals": [90, 150]
+      },
+      "signalZones": [],
+      "spawn": { "x": 22.5, "y": 0.5 },
+      "supplies": [],
+      "version": "xonix-level.v5",
+      "walls": [{ "h": 10, "w": 2, "x": 42, "y": 13 }],
+      "width": 72
+    },
+    {
+      "classic": {
+        "arcadeActions": { "version": "arcade-actions.v1" },
+        "powerups": [],
+        "terrain": [],
+        "version": "classic.v1"
+      },
+      "encounter": null,
+      "enemies": [
+        {
+          "id": "paper-drifter",
+          "type": "bouncer",
+          "vx": -1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "foundations": [
+        { "h": 4, "w": 12, "x": 29, "y": 10 },
+        { "h": 4, "w": 12, "x": 29, "y": 23 }
+      ],
+      "goal": { "coverage": 0.53 },
+      "hangars": [{ "id": "home-hangar", "radius": 2, "x": 35.5, "y": 0.5 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-02",
+      "name": "Choose Together",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "revision": "1",
+      "rules": {
+        "boostMultiplier": 1.5,
+        "cutTimeLimitSeconds": 0,
+        "graceSeconds": 1,
+        "lives": 3,
+        "maxTrailCells": 0,
+        "moveSpeed": 10,
+        "objectivePoints": 500,
+        "playerRadius": 0.18,
+        "pointsPerCell": 10,
+        "respawnSeconds": 0.65,
+        "stopOnCapture": true,
+        "switchCooldownSeconds": 2,
+        "timeLimitSeconds": 0,
+        "timeMedals": [90, 150]
+      },
+      "signalZones": [],
+      "spawn": { "x": 35.5, "y": 0.5 },
+      "supplies": [],
+      "version": "xonix-level.v5",
+      "walls": [
+        { "h": 15, "w": 2, "x": 17, "y": 10 },
+        { "h": 15, "w": 2, "x": 49, "y": 10 }
+      ],
+      "width": 72
+    },
+    {
+      "classic": {
+        "arcadeActions": { "version": "arcade-actions.v1" },
+        "powerups": [],
+        "terrain": [],
+        "version": "classic.v1"
+      },
+      "encounter": null,
+      "enemies": [
+        {
+          "id": "paper-drifter",
+          "type": "bouncer",
+          "vx": -1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "id": "second-drifter",
+          "type": "bouncer",
+          "vx": 1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 12.5,
+          "y": 27.5
+        }
+      ],
+      "foundations": [
+        { "h": 4, "w": 15, "x": 30, "y": 14 },
+        { "h": 4, "w": 7, "x": 11, "y": 22 }
+      ],
+      "goal": { "coverage": 0.56 },
+      "hangars": [{ "id": "home-hangar", "radius": 2, "x": 35.5, "y": 0.5 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-03",
+      "name": "Terms Bridge",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "revision": "1",
+      "rules": {
+        "boostMultiplier": 1.5,
+        "cutTimeLimitSeconds": 0,
+        "graceSeconds": 1,
+        "lives": 3,
+        "maxTrailCells": 0,
+        "moveSpeed": 10,
+        "objectivePoints": 500,
+        "playerRadius": 0.18,
+        "pointsPerCell": 10,
+        "respawnSeconds": 0.65,
+        "stopOnCapture": true,
+        "switchCooldownSeconds": 2,
+        "timeLimitSeconds": 0,
+        "timeMedals": [90, 150]
+      },
+      "signalZones": [],
+      "spawn": { "x": 35.5, "y": 0.5 },
+      "supplies": [],
+      "version": "xonix-level.v5",
+      "walls": [
+        { "h": 2, "w": 10, "x": 20, "y": 8 },
+        { "h": 2, "w": 10, "x": 43, "y": 25 }
+      ],
+      "width": 72
+    },
+    {
+      "classic": {
+        "arcadeActions": { "version": "arcade-actions.v1" },
+        "powerups": [{ "id": "steady-return", "kind": "extra-life", "x": 11.5, "y": 11.5 }],
+        "terrain": [],
+        "version": "classic.v1"
+      },
+      "encounter": null,
+      "enemies": [
+        {
+          "id": "paper-drifter",
+          "type": "bouncer",
+          "vx": -1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "speed": 1.8,
+          "type": "border-patrol",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "foundations": [
+        { "h": 4, "w": 8, "x": 11, "y": 11 },
+        { "h": 4, "w": 8, "x": 31, "y": 17 },
+        { "h": 4, "w": 8, "x": 53, "y": 22 }
+      ],
+      "goal": { "coverage": 0.58 },
+      "hangars": [{ "id": "home-hangar", "radius": 2, "x": 15.5, "y": 0.5 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-04",
+      "name": "Request to Order",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "revision": "1",
+      "rules": {
+        "boostMultiplier": 1.5,
+        "cutTimeLimitSeconds": 0,
+        "graceSeconds": 1,
+        "lives": 3,
+        "maxTrailCells": 0,
+        "moveSpeed": 10,
+        "objectivePoints": 500,
+        "playerRadius": 0.18,
+        "pointsPerCell": 10,
+        "respawnSeconds": 0.65,
+        "stopOnCapture": true,
+        "switchCooldownSeconds": 2,
+        "timeLimitSeconds": 0,
+        "timeMedals": [90, 150]
+      },
+      "signalZones": [],
+      "spawn": { "x": 15.5, "y": 0.5 },
+      "supplies": [],
+      "version": "xonix-level.v5",
+      "walls": [
+        { "h": 10, "w": 3, "x": 22, "y": 16 },
+        { "h": 10, "w": 3, "x": 48, "y": 8 }
+      ],
+      "width": 72
+    },
+    {
+      "classic": {
+        "arcadeActions": { "version": "arcade-actions.v1" },
+        "powerups": [{ "id": "steady-return", "kind": "extra-life", "x": 13.5, "y": 17.5 }],
+        "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 9, "x": 30, "y": 23 }],
+        "version": "classic.v1"
+      },
+      "encounter": null,
+      "enemies": [
+        {
+          "id": "paper-drifter",
+          "type": "bouncer",
+          "vx": -1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "speed": 1.8,
+          "type": "border-patrol",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "foundations": [
+        { "h": 4, "w": 10, "x": 13, "y": 17 },
+        { "h": 4, "w": 10, "x": 49, "y": 12 }
+      ],
+      "goal": { "coverage": 0.6 },
+      "hangars": [{ "id": "home-hangar", "radius": 2, "x": 18.5, "y": 0.5 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-05",
+      "name": "Received in Part",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "revision": "1",
+      "rules": {
+        "boostMultiplier": 1.5,
+        "cutTimeLimitSeconds": 0,
+        "graceSeconds": 1,
+        "lives": 3,
+        "maxTrailCells": 0,
+        "moveSpeed": 10,
+        "objectivePoints": 500,
+        "playerRadius": 0.18,
+        "pointsPerCell": 10,
+        "respawnSeconds": 0.65,
+        "stopOnCapture": true,
+        "switchCooldownSeconds": 2,
+        "timeLimitSeconds": 0,
+        "timeMedals": [90, 150]
+      },
+      "signalZones": [],
+      "spawn": { "x": 18.5, "y": 0.5 },
+      "supplies": [],
+      "version": "xonix-level.v5",
+      "walls": [
+        { "h": 10, "w": 2, "x": 28, "y": 8 },
+        { "h": 10, "w": 2, "x": 42, "y": 19 }
+      ],
+      "width": 72
+    },
+    {
+      "classic": {
+        "arcadeActions": { "version": "arcade-actions.v1" },
+        "powerups": [{ "id": "steady-return", "kind": "extra-life", "x": 29.5, "y": 8.5 }],
+        "terrain": [],
+        "version": "classic.v1"
+      },
+      "encounter": null,
+      "enemies": [
+        {
+          "id": "paper-drifter",
+          "type": "bouncer",
+          "vx": -1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "id": "second-drifter",
+          "type": "bouncer",
+          "vx": 1.6970562748477138,
+          "vy": -1.6970562748477138,
+          "x": 12.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "speed": 1.8,
+          "type": "border-patrol",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "foundations": [
+        { "h": 4, "w": 12, "x": 29, "y": 8 },
+        { "h": 4, "w": 12, "x": 29, "y": 24 },
+        { "h": 3, "w": 6, "x": 32, "y": 16 }
+      ],
+      "goal": { "coverage": 0.64 },
+      "hangars": [{ "id": "home-hangar", "radius": 2, "x": 35.5, "y": 0.5 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-06",
+      "name": "Close the Loop",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "revision": "1",
+      "rules": {
+        "boostMultiplier": 1.5,
+        "cutTimeLimitSeconds": 0,
+        "graceSeconds": 1,
+        "lives": 3,
+        "maxTrailCells": 0,
+        "moveSpeed": 10,
+        "objectivePoints": 500,
+        "playerRadius": 0.18,
+        "pointsPerCell": 10,
+        "respawnSeconds": 0.65,
+        "stopOnCapture": true,
+        "switchCooldownSeconds": 2,
+        "timeLimitSeconds": 0,
+        "timeMedals": [90, 150]
+      },
+      "signalZones": [],
+      "spawn": { "x": 35.5, "y": 0.5 },
+      "supplies": [],
+      "version": "xonix-level.v5",
+      "walls": [
+        { "h": 2, "w": 8, "x": 17, "y": 16 },
+        { "h": 2, "w": 8, "x": 46, "y": 16 }
+      ],
+      "width": 72
+    }
+  ],
+  "revision": "1",
+  "title": "From Need to Value",
+  "version": "xonix-campaign.v1"
+}

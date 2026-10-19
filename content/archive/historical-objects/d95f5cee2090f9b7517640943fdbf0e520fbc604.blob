@@ -1,0 +1,489 @@
+{
+  "actorCatalogId": "journey-actors-v1",
+  "assets": [
+    {
+      "alt": "A fictional illustrated Coupa Village district, with shared workspaces and connected routes.",
+      "bytes": 1972536,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-developer-integration-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/coupa-developer-integration-key.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "66c68f803aeb5d8590dcb29e05863d9147c12dbe7a5afebe6522a97b82b508ce",
+      "width": 1280
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 1,
+      "format": "CampaignDesignV1",
+      "id": "coupa-developer-integration",
+      "missionIds": [
+        "coupa-developer-integration-01",
+        "coupa-developer-integration-02",
+        "coupa-developer-integration-03",
+        "coupa-developer-integration-04",
+        "coupa-developer-integration-05",
+        "coupa-developer-integration-06"
+      ],
+      "name": "Connect the Network",
+      "revision": "1"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v1",
+  "format": "ContentProjectV1",
+  "id": "coupa-developer-integration",
+  "maps": [
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 10, "x": 12, "y": 14 },
+        { "h": 4, "w": 10, "x": 44, "y": 20 }
+      ],
+      "height": 36,
+      "id": "coupa-developer-integration-01-map",
+      "name": "Resource Atlas",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 16.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 14, "w": 2, "x": 30, "y": 10 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 7, "x": 32, "y": 8 },
+        { "h": 5, "w": 7, "x": 32, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-developer-integration-02-map",
+      "name": "Scoped Access",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 12, "x": 17, "y": 12 },
+        { "h": 2, "w": 12, "x": 43, "y": 22 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 10, "y": 19 },
+        { "h": 4, "w": 9, "x": 31, "y": 13 },
+        { "h": 4, "w": 8, "x": 54, "y": 13 }
+      ],
+      "height": 36,
+      "id": "coupa-developer-integration-03-map",
+      "name": "Beyond Page One",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 8, "w": 2, "x": 24, "y": 8 },
+        { "h": 8, "w": 2, "x": 47, "y": 20 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 11, "x": 30, "y": 8 },
+        { "h": 4, "w": 11, "x": 30, "y": 24 },
+        { "h": 3, "w": 7, "x": 32, "y": 16 }
+      ],
+      "height": 36,
+      "id": "coupa-developer-integration-04-map",
+      "name": "Known References",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 14, "w": 3, "x": 17, "y": 9 },
+        { "h": 14, "w": 3, "x": 51, "y": 12 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 11, "x": 30, "y": 14 },
+        { "h": 4, "w": 7, "x": 13, "y": 24 }
+      ],
+      "height": 36,
+      "id": "coupa-developer-integration-05-map",
+      "name": "Draft, Validate, Explain",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 15, "x": 28, "y": 7 }],
+      "walls": [
+        { "h": 2, "w": 14, "x": 12, "y": 12 },
+        { "h": 2, "w": 14, "x": 45, "y": 12 },
+        { "h": 2, "w": 7, "x": 32, "y": 24 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 10, "y": 23 },
+        { "h": 4, "w": 10, "x": 31, "y": 12 },
+        { "h": 4, "w": 10, "x": 31, "y": 23 },
+        { "h": 4, "w": 7, "x": 54, "y": 7 }
+      ],
+      "height": 36,
+      "id": "coupa-developer-integration-06-map",
+      "name": "Run Ledger",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 8, "w": 3, "x": 20, "y": 10 },
+        { "h": 8, "w": 3, "x": 48, "y": 18 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.48,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["foundations"],
+        "lesson": "Map a fictional integration requirement to its resources.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A blueprint of the village exposes labelled resource districts and data routes.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Link the input and output hubs through the smallest useful resource loop."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-developer-integration-01",
+      "map": { "id": "coupa-developer-integration-01-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Resource Atlas",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-developer-integration-01-picture",
+        "themeId": "coupa-village"
+      },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.53,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Select only the fictional permissions the task needs.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Clearly labelled access stations protect distinct data districts.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Take the narrow authorized route or inspect the broader perimeter first."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-developer-integration-02",
+      "map": { "id": "coupa-developer-integration-02-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Scoped Access",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.56,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Read every page of a filtered fictional record set.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Three numbered data shelves fill a complete local response ledger.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Use the page landings in sequence without mistaking the first for the whole collection."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-developer-integration-03",
+      "map": { "id": "coupa-developer-integration-03-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Beyond Page One",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 30.5, "y": 8.5 }],
+      "coverage": 0.58,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["perimeter-patrol"],
+        "lesson": "Resolve valid references before preparing a transaction.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Supplier, requester and accounting nodes connect to one draft hub.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Connect the reference islands before making the long return through the hub."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-developer-integration-04",
+      "map": { "id": "coupa-developer-integration-04-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Known References",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 30.5, "y": 14.5 }],
+      "coverage": 0.6,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Inspect an error and correct a fictional draft request.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A transparent validation workshop shows inputs, feedback and a corrected draft.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Use the validation landing to recover before crossing the second input lane."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-developer-integration-05",
+      "map": { "id": "coupa-developer-integration-05-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Draft, Validate, Explain",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 10.5, "y": 23.5 }],
+      "coverage": 0.64,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Reconcile processed records and recover one failed item.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A complete network lights up while one recoverable record is clearly identified.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Connect all ledger stations without revisiting the long outside route."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-developer-integration-06",
+      "map": { "id": "coupa-developer-integration-06-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Run Ledger",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "Connect the Network",
+  "packs": [
+    {
+      "campaignIds": ["coupa-developer-integration"],
+      "format": "PackDesignV1",
+      "id": "coupa-developer-integration-pack",
+      "name": "Connect the Network",
+      "revision": "1"
+    }
+  ],
+  "policyId": "journey-arcade-v2",
+  "revision": "1"
+}
