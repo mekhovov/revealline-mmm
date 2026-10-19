@@ -1,0 +1,27 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-2/manifest.json",
+  "sourceGitBlob": "6a15f2c2f508004e67035bd39ffb217d588ce614",
+  "sourceSHA256": "13a2bd888b7a3168c4b43834ade947246b846edcc0ffbb8f0f5f830a1cab25d3",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-cloud-cart-exchange",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Cloud Cart Exchange",
+        "file": "originals/spend-cloud-cart-exchange-clean.png",
+        "bytes": 2549711,
+        "sha256": "560949cad2ee1031dd5f5edd9c5115db576db5d8133ae3712faa11243cee0971",
+        "width": 1774,
+        "height": 887,
+        "prompt": "prompts/spend-cloud-cart-exchange.txt",
+        "cleanupPrompt": "prompts/spend-cloud-cart-exchange-cleanup.txt",
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

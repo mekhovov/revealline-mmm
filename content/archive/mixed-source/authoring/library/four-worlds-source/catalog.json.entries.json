@@ -1,0 +1,61 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/four-worlds-source/catalog.json",
+  "sourceGitBlob": "945b269ae7596cc510280197cb912ea588661d31",
+  "sourceSHA256": "dcc82dfcf403ad86e83e1d985e8c9ecd530fbfad1c7bf9d556eaff9ba0530d29",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/images/9",
+      "value": {
+        "id": "shared-value-harbor",
+        "theme": "coupa",
+        "source": "authoring/library/spend-network-art/originals/shared-value-harbor.png",
+        "bytes": 2577915,
+        "sha256": "d80e371a2bc008ce1b893268725add92a5b9a18bc8589e7b5145cbb4a75b46fa",
+        "width": 1774,
+        "height": 887,
+        "prompt": "authoring/library/spend-network-art/prompts/shared-value-harbor.txt",
+        "promptSha256": "34a21f7b4e3f84c63eb30c0f2467db93cec95c96bd408e4115da072a355fc124",
+        "provenance": "authoring/library/spend-network-art/provenance.json",
+        "stage": "source art; runtime integration pending",
+        "inspection": "Wide dusk harbor with foreground reusable supplies, small freight vessel, short rail connection, warehouses and crane. Broad blue water separates detailed dock clusters. Repeated generic leaf emblems were generated on cargo despite the no-logo brief; no Coupa or other identified brand likeness is claimed. Raw is preserved and the emblem deviation is explicitly pending artistic decision."
+      }
+    },
+    {
+      "pointer": "/images/10",
+      "value": {
+        "id": "city-savings-observatory",
+        "theme": "coupa",
+        "source": "authoring/library/spend-network-art/originals/city-savings-observatory.png",
+        "bytes": 2702090,
+        "sha256": "71e39606ce0283c0bb6fe120f22e2429415aba1d9dac0d412f629b686ba82175",
+        "width": 1774,
+        "height": 887,
+        "prompt": "authoring/library/spend-network-art/prompts/city-savings-observatory.txt",
+        "promptSha256": "5fea4a3a2396fab0e8cf4b9275f751b304ec495adefaf7f26cd1c82122da6ef1",
+        "provenance": "authoring/library/spend-network-art/provenance.json",
+        "stage": "source art; runtime integration pending",
+        "inspection": "Brass/cyan-glass physical planning instrument with miniature businesses and railway before a warm city, greenhouse, bridges and water. Stored material samples suggest conserved resources. The apparatus and city are fictional metaphors,not actual software or equipment. Small schematic paper linework appears in foreground; no legible wording or dashboard observed."
+      }
+    },
+    {
+      "pointer": "/images/11",
+      "value": {
+        "id": "thoughtful-market-workshop",
+        "theme": "coupa",
+        "source": "authoring/library/spend-network-art/originals/thoughtful-market-workshop.png",
+        "bytes": 3005071,
+        "sha256": "4f64115023245871c5ae126ddc8f711e9b0b48d130316045a1ba3baf08934fa0",
+        "width": 1774,
+        "height": 887,
+        "prompt": "authoring/library/spend-network-art/prompts/thoughtful-market-workshop.txt",
+        "promptSha256": "670f880aae5703032aaffbff5984cdf0a7864d8a1d77879cfe83f79e45aacbd1",
+        "provenance": "authoring/library/spend-network-art/provenance.json",
+        "stage": "source art; runtime integration pending",
+        "inspection": "Sunlit covered craft-market arcade with a foreground balance, materials,plainboxes and repair tools; ceramics, textile and woodworking bays share a loading cart. Clear cyan structures and warm materials; no readable labels,logo or UI observed. Savings/procurement meaning depends on accompanying fictional-game context,not a measurable economic result."
+      }
+    }
+  ]
+}

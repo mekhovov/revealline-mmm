@@ -1,0 +1,11 @@
+{
+  "sourcePath": "game/presentation/compiled/studio.json",
+  "destination": "content/archive/presentation-source.entries.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "c905cab9ce4519379d57bdecf3ef02146b44d5a2ad82430a3939b2d2fc00f617",
+  "sha256": "3d52dbff601752f8a21afcdb7994367511da3ac8a006fc7aec5fc745dca8b2d9",
+  "bytes": 156812,
+  "slots": 33,
+  "assets": 33,
+  "entries": 165
+}

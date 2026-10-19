@@ -1,0 +1,31 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/prompts/round-07-animation-variants.json",
+  "sourceGitBlob": "bd14cfa70eb6553dc74f7e36b10ddcedd2e3c009",
+  "sourceSHA256": "0c784b5cf286c3b2443917128828e2a7f7f11ff4fcf447fba2779b948cc3f1c4",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/prompts/7",
+      "value": {
+        "id": "animation-08-navi-motion",
+        "family": "navi-network",
+        "asset_type": "family_animation_plan",
+        "mode": "text_generate",
+        "intent": "Create clear business-world motion with modular brand art.",
+        "status": "template_not_executed",
+        "reference_requirements": [
+          "Approved character/brand reference or explicit placeholder status, assets and fixed state trace."
+        ],
+        "variables": [
+          "APPROVED_IDENTITY_REFERENCE",
+          "ASSET_SET",
+          "STATE_TRACE"
+        ],
+        "prompt": "Direct NAVI NETWORK motion from {{APPROVED_IDENTITY_REFERENCE}}, {{ASSET_SET}} and {{STATE_TRACE}}. If the identity reference is only a C-token placeholder, retain that status rather than claiming an exact official Navi mascot. Separate hero body/accent parts, connection trail, local savings-token effects, terrain/process materials, UI and sound cues. Use friendly restrained material motion and the approved palette; introduce no military imagery or nationality-coded enemies. Obstacles represent process friction, not customers or employees. Plan state-driven idle/move/turn, supported slow/boost, hit/respawn, capture and victory with clear priorities, cancellation, looping and reduced-motion fallbacks. Keep fictional game points separate from real customer claims. Provide microtile, detailed-object and hybrid variants using the same board geometry and trace. Cosmetic replacement never alters network objectives or collider data. Deliver a component/state plan and actual playback acceptance scenarios; no storyboard or generated clip proves a game runtime implements them.",
+        "example_request": "Animate Navi’s connections and process obstacles without making it look like a military reskin."
+      }
+    }
+  ]
+}

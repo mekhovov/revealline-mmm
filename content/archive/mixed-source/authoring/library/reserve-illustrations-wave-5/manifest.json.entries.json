@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-5/manifest.json",
+  "sourceGitBlob": "4793eae86073d1663b95c6b818272faa4589be81",
+  "sourceSHA256": "f927be97fd2ffe5eedcfa82a3a34ff8bc3fe081ceb69274598183ea4e021e19d",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-raincatcher-rooftops",
+        "file": "originals/spend-raincatcher-rooftops.png",
+        "bytes": 2520491,
+        "sha256": "f94b2fef94700d10a68d770e4b2ea89ec97905e4c992cf26c5901ef983dafaaf",
+        "prompt": "prompts/spend-raincatcher-rooftops.txt",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Raincatcher Rooftops",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

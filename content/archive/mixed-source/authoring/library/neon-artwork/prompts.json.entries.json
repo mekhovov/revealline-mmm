@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/neon-artwork/prompts.json",
+  "sourceGitBlob": "a83ff918341871a16387300b12ac41dffb62da17",
+  "sourceSHA256": "aa16beeb7fa2522fcd57d81c16b1f90f39b286c3a307bc83a2ec6d01e768d7de",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/19",
+      "value": {
+        "id": "coupa",
+        "title": "Neon COUPA",
+        "packId": "neon-mosaic-pack",
+        "file": "backgrounds/coupa.jpg",
+        "generator": "Built-in image generation",
+        "generationSource": "exec-37ae3e4e-a787-42ce-a60c-6aeafdd99b7a.png",
+        "width": 1024,
+        "height": 512,
+        "bytes": 315948,
+        "sha256": "e1d6aea7e2c9d2ffeb1f48e79ab82a901a981963851ed6ae381757d3fd7bf98d",
+        "prompt": "Use case: stylized-concept. Asset: original finished reveal painting for FPV / LINE neon arcade game. Panoramic landscape exactly 2:1, ideally 1536x768. Premium retro-futurist digital illustration: deep midnight indigo, electric cyan, raspberry magenta, small amber-gold highlights, restrained bloom, tactile materials, rich depth, crisp large readable forms and subtle analog grain. A beautiful scene to uncover, never a game screenshot or abstract placeholder. Edge-to-edge opaque image. No additional text beyond the exact requested wording; no logos, UI, frame, grid, tilemap or watermarks. Scene and level motif: A sophisticated abstract architectural plaza of connected luminous arches and glass pathways, evoking collaboration and shared ideas. Centered monumental letters spelling exactly 'COUPA', pale cyan enamel and polished gold, magenta reflections on the plaza. No extra logos or brand claims."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1174 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/production/register-sentinel-themes.json",
+  "sourceGitBlob": "5ced82e59cf68a04f010ddb1235fec275cc98c6d",
+  "sourceSHA256": "caa03d95a74ac9c037095c89c5fd1f06edd681293b1d4bc53285d578f01fa0f2",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/basis/themes/3",
+      "value": "coupa"
+    },
+    {
+      "pointer": "/layouts/0/owners/4",
+      "value": {
+        "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelId": "original-spend-shared-harbor",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/1/owners/4",
+      "value": {
+        "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelId": "original-spend-city-wins",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/2/owners/4",
+      "value": {
+        "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelId": "original-spend-market-workshop",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/3/owners/3",
+      "value": {
+        "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+        "levelId": "route-worlds-coupa-foundry",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/4/owners/3",
+      "value": {
+        "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+        "levelId": "route-worlds-coupa-depot",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/5/owners/3",
+      "value": {
+        "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+        "levelId": "route-worlds-coupa-switchback",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/9/owners/3",
+      "value": {
+        "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "levelId": "sentinel-circuit-coupa-listening-court",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/10/owners/3",
+      "value": {
+        "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "levelId": "sentinel-circuit-coupa-switchyard-gates",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/layouts/11/owners/3",
+      "value": {
+        "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "levelId": "sentinel-circuit-coupa-open-circuit",
+        "levelRevision": "1",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/works/9",
+      "value": {
+        "id": "picture-shared-value-harbor",
+        "revision": 1,
+        "kind": "picture",
+        "title": "Shared Value Harbor",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/four-worlds-source/catalog.json",
+          "bytes": 12360,
+          "sha256": "dcc82dfcf403ad86e83e1d985e8c9ecd530fbfad1c7bf9d556eaff9ba0530d29"
+        },
+        "sourceId": "shared-value-harbor",
+        "adapter": "pressure",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/spend-network-art/originals/shared-value-harbor.png",
+              "bytes": 2577915,
+              "sha256": "d80e371a2bc008ce1b893268725add92a5b9a18bc8589e7b5145cbb4a75b46fa"
+            },
+            "width": 1774,
+            "height": 887,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+            "levelId": "original-spend-shared-harbor",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/four-worlds-chapters/distribution.json",
+            "bytes": 4255,
+            "sha256": "11ad3664a02f7efdef01b601adadf62b4b275f7db6d03c37ae8d9e78f9e9bcb6"
+          },
+          {
+            "path": "authoring/library/spend-network-art/provenance.json",
+            "bytes": 8373,
+            "sha256": "e9210678ac08512c8962a15b11f01bd98ea3a626379c246d442e35d2cc8d3cf6"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/10",
+      "value": {
+        "id": "picture-city-savings-observatory",
+        "revision": 1,
+        "kind": "picture",
+        "title": "City Savings Observatory",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/four-worlds-source/catalog.json",
+          "bytes": 12360,
+          "sha256": "dcc82dfcf403ad86e83e1d985e8c9ecd530fbfad1c7bf9d556eaff9ba0530d29"
+        },
+        "sourceId": "city-savings-observatory",
+        "adapter": "pressure",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/spend-network-art/originals/city-savings-observatory.png",
+              "bytes": 2702090,
+              "sha256": "71e39606ce0283c0bb6fe120f22e2429415aba1d9dac0d412f629b686ba82175"
+            },
+            "width": 1774,
+            "height": 887,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+            "levelId": "original-spend-city-wins",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/four-worlds-chapters/distribution.json",
+            "bytes": 4255,
+            "sha256": "11ad3664a02f7efdef01b601adadf62b4b275f7db6d03c37ae8d9e78f9e9bcb6"
+          },
+          {
+            "path": "authoring/library/spend-network-art/provenance.json",
+            "bytes": 8373,
+            "sha256": "e9210678ac08512c8962a15b11f01bd98ea3a626379c246d442e35d2cc8d3cf6"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/11",
+      "value": {
+        "id": "picture-thoughtful-market-workshop",
+        "revision": 1,
+        "kind": "picture",
+        "title": "Thoughtful Market Workshop",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/four-worlds-source/catalog.json",
+          "bytes": 12360,
+          "sha256": "dcc82dfcf403ad86e83e1d985e8c9ecd530fbfad1c7bf9d556eaff9ba0530d29"
+        },
+        "sourceId": "thoughtful-market-workshop",
+        "adapter": "pressure",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/spend-network-art/originals/thoughtful-market-workshop.png",
+              "bytes": 3005071,
+              "sha256": "4f64115023245871c5ae126ddc8f711e9b0b48d130316045a1ba3baf08934fa0"
+            },
+            "width": 1774,
+            "height": 887,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+            "levelId": "original-spend-market-workshop",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/four-worlds-chapters/distribution.json",
+            "bytes": 4255,
+            "sha256": "11ad3664a02f7efdef01b601adadf62b4b275f7db6d03c37ae8d9e78f9e9bcb6"
+          },
+          {
+            "path": "authoring/library/spend-network-art/provenance.json",
+            "bytes": 8373,
+            "sha256": "e9210678ac08512c8962a15b11f01bd98ea3a626379c246d442e35d2cc8d3cf6"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/21",
+      "value": {
+        "id": "picture-coupa-value-foundry",
+        "revision": 1,
+        "kind": "picture",
+        "title": "Value Foundry",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/route-worlds/editions.json",
+          "bytes": 2049,
+          "sha256": "f1cf474b1f02b48bcbafb60fbab080416afc9c2c135c68a2def2ae90865300fc"
+        },
+        "sourceId": "value-foundry",
+        "adapter": "world",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/spend-route-art/originals/value-foundry.png",
+              "bytes": 2725160,
+              "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518"
+            },
+            "width": 1672,
+            "height": 941,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+            "levelId": "route-worlds-coupa-foundry",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/route-worlds/descriptors/coupa.json",
+            "bytes": 1730,
+            "sha256": "38849fc20068802638304d14b2df6fbcefdca1a6f76fdeb6a2520464b5612503"
+          },
+          {
+            "path": "authoring/library/spend-route-art/provenance.json",
+            "bytes": 5024,
+            "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+          },
+          {
+            "path": "authoring/library/route-worlds/build.mjs",
+            "bytes": 13370,
+            "sha256": "8cb7ec2e3bf6cf334517ad056568110af4f7bc70a0143ad37bc33b10ff733d43"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/22",
+      "value": {
+        "id": "picture-coupa-shared-harbor",
+        "revision": 1,
+        "kind": "picture",
+        "title": "Shared Harbor",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/route-worlds/editions.json",
+          "bytes": 2049,
+          "sha256": "f1cf474b1f02b48bcbafb60fbab080416afc9c2c135c68a2def2ae90865300fc"
+        },
+        "sourceId": "shared-harbor",
+        "adapter": "world",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/spend-route-art/originals/shared-harbor.png",
+              "bytes": 2686912,
+              "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d"
+            },
+            "width": 1672,
+            "height": 941,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+            "levelId": "route-worlds-coupa-depot",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/route-worlds/descriptors/coupa.json",
+            "bytes": 1730,
+            "sha256": "38849fc20068802638304d14b2df6fbcefdca1a6f76fdeb6a2520464b5612503"
+          },
+          {
+            "path": "authoring/library/spend-route-art/provenance.json",
+            "bytes": 5024,
+            "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+          },
+          {
+            "path": "authoring/library/route-worlds/build.mjs",
+            "bytes": 13370,
+            "sha256": "8cb7ec2e3bf6cf334517ad056568110af4f7bc70a0143ad37bc33b10ff733d43"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/23",
+      "value": {
+        "id": "picture-coupa-network-garden",
+        "revision": 1,
+        "kind": "picture",
+        "title": "Network Garden",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/route-worlds/editions.json",
+          "bytes": 2049,
+          "sha256": "f1cf474b1f02b48bcbafb60fbab080416afc9c2c135c68a2def2ae90865300fc"
+        },
+        "sourceId": "network-garden",
+        "adapter": "world",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/spend-route-art/originals/network-garden.png",
+              "bytes": 2858095,
+              "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0"
+            },
+            "width": 1672,
+            "height": 941,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+            "levelId": "route-worlds-coupa-switchback",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/route-worlds/descriptors/coupa.json",
+            "bytes": 1730,
+            "sha256": "38849fc20068802638304d14b2df6fbcefdca1a6f76fdeb6a2520464b5612503"
+          },
+          {
+            "path": "authoring/library/spend-route-art/provenance.json",
+            "bytes": 5024,
+            "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+          },
+          {
+            "path": "authoring/library/route-worlds/build.mjs",
+            "bytes": 13370,
+            "sha256": "8cb7ec2e3bf6cf334517ad056568110af4f7bc70a0143ad37bc33b10ff733d43"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/29",
+      "value": {
+        "id": "rig-navi-avatar",
+        "revision": 1,
+        "kind": "presentation",
+        "title": "Navi Avatar",
+        "themeId": null,
+        "source": {
+          "path": "game/content/themes.json",
+          "bytes": 4266,
+          "sha256": "93582f7d9ba53753106df7b63928f086820fc0f68357d3c08f26c0b89fb84774"
+        },
+        "sourceId": "navi-avatar",
+        "adapter": "body",
+        "files": [
+          {
+            "role": "concept",
+            "file": {
+              "path": "authoring/motion-lab/assets/navi-avatar.png",
+              "bytes": 384917,
+              "sha256": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69"
+            },
+            "width": 1254,
+            "height": 1254,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/motion-lab/presets.json",
+            "bytes": 23077,
+            "sha256": "edbb5c4e73e03b7e516825575bf2fed6d234745cecc514241667097a3d3f8eca"
+          },
+          {
+            "path": "authoring/motion-lab/animation.mjs",
+            "bytes": 8068,
+            "sha256": "e739040d96daea57fd782f13991d96241e11022803038af8d4d184be15981c40"
+          },
+          {
+            "path": "authoring/motion-lab/render-character.mjs",
+            "bytes": 6489,
+            "sha256": "1ae56eb2b059b910cb3f1960eca0c4786f828d669b6f6c7615b5527850030e9a"
+          },
+          {
+            "path": "game/ui/actor-presentation.mjs",
+            "bytes": 25033,
+            "sha256": "4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/45",
+      "value": {
+        "id": "picture-sentinel-circuit-coupa-poster-1",
+        "revision": 1,
+        "kind": "picture",
+        "title": "The shared inventory court",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/sentinel-theme-chapters/editions.json",
+          "bytes": 8414,
+          "sha256": "1e14923784d75f59f2537cf9a14fa2c127b92ad77b3feaebfb80658e88136b88"
+        },
+        "sourceId": "sentinel-circuit-coupa-poster-1",
+        "adapter": "sentinel-world",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/sentinel-theme-art/coupa/originals/listening-court.png",
+              "bytes": 2767187,
+              "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+            },
+            "width": 1774,
+            "height": 887,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+            "levelId": "sentinel-circuit-coupa-listening-court",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/sentinel-theme-chapters/descriptors/coupa.json",
+            "bytes": 1790,
+            "sha256": "7642e1a75ed6a1956a280c37a4602ab5d9a3f88c566f9a4740d2313514dd7c37"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-art/provenance.json",
+            "bytes": 16174,
+            "sha256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/46",
+      "value": {
+        "id": "picture-sentinel-circuit-coupa-poster-2",
+        "revision": 1,
+        "kind": "picture",
+        "title": "The inland exchange yard",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/sentinel-theme-chapters/editions.json",
+          "bytes": 8414,
+          "sha256": "1e14923784d75f59f2537cf9a14fa2c127b92ad77b3feaebfb80658e88136b88"
+        },
+        "sourceId": "sentinel-circuit-coupa-poster-2",
+        "adapter": "sentinel-world",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/sentinel-theme-art/coupa/originals/switchyard-gates.png",
+              "bytes": 2187660,
+              "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+            },
+            "width": 1774,
+            "height": 887,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+            "levelId": "sentinel-circuit-coupa-switchyard-gates",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/sentinel-theme-chapters/descriptors/coupa.json",
+            "bytes": 1790,
+            "sha256": "7642e1a75ed6a1956a280c37a4602ab5d9a3f88c566f9a4740d2313514dd7c37"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-art/provenance.json",
+            "bytes": 16174,
+            "sha256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/works/47",
+      "value": {
+        "id": "picture-sentinel-circuit-coupa-poster-3",
+        "revision": 1,
+        "kind": "picture",
+        "title": "The illuminated exchange hall",
+        "themeId": "coupa",
+        "source": {
+          "path": "authoring/library/sentinel-theme-chapters/editions.json",
+          "bytes": 8414,
+          "sha256": "1e14923784d75f59f2537cf9a14fa2c127b92ad77b3feaebfb80658e88136b88"
+        },
+        "sourceId": "sentinel-circuit-coupa-poster-3",
+        "adapter": "sentinel-world",
+        "files": [
+          {
+            "role": "original",
+            "file": {
+              "path": "authoring/library/sentinel-theme-art/coupa/originals/open-the-circuit.png",
+              "bytes": 2449288,
+              "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+            },
+            "width": 1774,
+            "height": 887,
+            "durationSeconds": null
+          }
+        ],
+        "owners": [
+          {
+            "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+            "levelId": "sentinel-circuit-coupa-open-circuit",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        ],
+        "derivedFrom": null,
+        "dependencies": [
+          {
+            "path": "authoring/library/sentinel-theme-chapters/descriptors/coupa.json",
+            "bytes": 1790,
+            "sha256": "7642e1a75ed6a1956a280c37a4602ab5d9a3f88c566f9a4740d2313514dd7c37"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-art/provenance.json",
+            "bytes": 16174,
+            "sha256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/enemies/3",
+      "value": {
+        "typeId": "bouncer",
+        "themeId": "coupa",
+        "skinId": "bouncer.coupa.v1",
+        "source": {
+          "path": "game/enemy-catalog.mjs",
+          "bytes": 5966,
+          "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447"
+        }
+      }
+    },
+    {
+      "pointer": "/enemies/7",
+      "value": {
+        "typeId": "border-patrol",
+        "themeId": "coupa",
+        "skinId": "border-patrol.coupa.v1",
+        "source": {
+          "path": "game/enemy-catalog.mjs",
+          "bytes": 5966,
+          "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447"
+        }
+      }
+    },
+    {
+      "pointer": "/enemies/11",
+      "value": {
+        "typeId": "contour-patrol",
+        "themeId": "coupa",
+        "skinId": "contour-patrol.coupa.v1",
+        "source": {
+          "path": "game/enemy-catalog.mjs",
+          "bytes": 5966,
+          "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447"
+        }
+      }
+    },
+    {
+      "pointer": "/enemies/15",
+      "value": {
+        "typeId": "claimed-rover",
+        "themeId": "coupa",
+        "skinId": "claimed-rover.coupa.v1",
+        "source": {
+          "path": "game/enemy-catalog.mjs",
+          "bytes": 5966,
+          "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447"
+        }
+      }
+    },
+    {
+      "pointer": "/enemies/19",
+      "value": {
+        "typeId": "eroder",
+        "themeId": "coupa",
+        "skinId": "eroder.coupa.v1",
+        "source": {
+          "path": "game/enemy-catalog.mjs",
+          "bytes": 5966,
+          "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447"
+        }
+      }
+    },
+    {
+      "pointer": "/enemies/23",
+      "value": {
+        "typeId": "lane-boss",
+        "themeId": "coupa",
+        "skinId": "lane-boss.coupa.v1",
+        "source": {
+          "path": "game/enemy-catalog.mjs",
+          "bytes": 5966,
+          "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447"
+        }
+      }
+    },
+    {
+      "pointer": "/enemies/27",
+      "value": {
+        "typeId": "relay-sentinel",
+        "themeId": "coupa",
+        "skinId": "relay-sentinel.coupa.v1",
+        "source": {
+          "path": "game/enemy-catalog.mjs",
+          "bytes": 5966,
+          "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447"
+        }
+      }
+    },
+    {
+      "pointer": "/authorities/4",
+      "value": {
+        "path": "authoring/library/route-worlds/descriptors/coupa.json",
+        "bytes": 1730,
+        "sha256": "38849fc20068802638304d14b2df6fbcefdca1a6f76fdeb6a2520464b5612503"
+      }
+    },
+    {
+      "pointer": "/authorities/17",
+      "value": {
+        "path": "authoring/library/sentinel-theme-chapters/descriptors/coupa.json",
+        "bytes": 1790,
+        "sha256": "7642e1a75ed6a1956a280c37a4602ab5d9a3f88c566f9a4740d2313514dd7c37"
+      }
+    },
+    {
+      "pointer": "/bindings/9",
+      "value": {
+        "slotId": "picture.pressure-orchard.coupa",
+        "revision": 1,
+        "workId": "picture-shared-value-harbor",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+            "levelId": "original-spend-shared-harbor",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/10",
+      "value": {
+        "slotId": "picture.pressure-courtyard.coupa",
+        "revision": 1,
+        "workId": "picture-city-savings-observatory",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+            "levelId": "original-spend-city-wins",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/11",
+      "value": {
+        "slotId": "picture.pressure-crossfire.coupa",
+        "revision": 1,
+        "workId": "picture-thoughtful-market-workshop",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+            "levelId": "original-spend-market-workshop",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/21",
+      "value": {
+        "slotId": "picture.route-foundry.coupa",
+        "revision": 1,
+        "workId": "picture-coupa-value-foundry",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+            "levelId": "route-worlds-coupa-foundry",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/22",
+      "value": {
+        "slotId": "picture.route-depot.coupa",
+        "revision": 1,
+        "workId": "picture-coupa-shared-harbor",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+            "levelId": "route-worlds-coupa-depot",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/23",
+      "value": {
+        "slotId": "picture.route-switchback.coupa",
+        "revision": 1,
+        "workId": "picture-coupa-network-garden",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+            "levelId": "route-worlds-coupa-switchback",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/69",
+      "value": {
+        "slotId": "presentation.scout.coupa.compact",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "scout",
+          "themeId": "coupa",
+          "treatmentId": "compact",
+          "bodyId": "navi-avatar",
+          "style": "microtile"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/70",
+      "value": {
+        "slotId": "presentation.scout.coupa.detailed",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "scout",
+          "themeId": "coupa",
+          "treatmentId": "detailed",
+          "bodyId": "navi-avatar",
+          "style": "hybrid"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/71",
+      "value": {
+        "slotId": "presentation.bomber.coupa.compact",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "bomber",
+          "themeId": "coupa",
+          "treatmentId": "compact",
+          "bodyId": "navi-avatar",
+          "style": "microtile"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/72",
+      "value": {
+        "slotId": "presentation.bomber.coupa.detailed",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "bomber",
+          "themeId": "coupa",
+          "treatmentId": "detailed",
+          "bodyId": "navi-avatar",
+          "style": "hybrid"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/73",
+      "value": {
+        "slotId": "presentation.carrier.coupa.compact",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "carrier",
+          "themeId": "coupa",
+          "treatmentId": "compact",
+          "bodyId": "navi-avatar",
+          "style": "microtile"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/74",
+      "value": {
+        "slotId": "presentation.carrier.coupa.detailed",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "carrier",
+          "themeId": "coupa",
+          "treatmentId": "detailed",
+          "bodyId": "navi-avatar",
+          "style": "hybrid"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/75",
+      "value": {
+        "slotId": "presentation.interceptor.coupa.compact",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "interceptor",
+          "themeId": "coupa",
+          "treatmentId": "compact",
+          "bodyId": "navi-avatar",
+          "style": "microtile"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/76",
+      "value": {
+        "slotId": "presentation.interceptor.coupa.detailed",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "interceptor",
+          "themeId": "coupa",
+          "treatmentId": "detailed",
+          "bodyId": "navi-avatar",
+          "style": "hybrid"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/77",
+      "value": {
+        "slotId": "presentation.fiber.coupa.compact",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "fiber",
+          "themeId": "coupa",
+          "treatmentId": "compact",
+          "bodyId": "navi-avatar",
+          "style": "microtile"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/78",
+      "value": {
+        "slotId": "presentation.fiber.coupa.detailed",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "fiber",
+          "themeId": "coupa",
+          "treatmentId": "detailed",
+          "bodyId": "navi-avatar",
+          "style": "hybrid"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/79",
+      "value": {
+        "slotId": "presentation.impact.coupa.compact",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "impact",
+          "themeId": "coupa",
+          "treatmentId": "compact",
+          "bodyId": "navi-avatar",
+          "style": "microtile"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/80",
+      "value": {
+        "slotId": "presentation.impact.coupa.detailed",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "impact",
+          "themeId": "coupa",
+          "treatmentId": "detailed",
+          "bodyId": "navi-avatar",
+          "style": "hybrid"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/81",
+      "value": {
+        "slotId": "presentation.trapper.coupa.compact",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "trapper",
+          "themeId": "coupa",
+          "treatmentId": "compact",
+          "bodyId": "navi-avatar",
+          "style": "microtile"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/82",
+      "value": {
+        "slotId": "presentation.trapper.coupa.detailed",
+        "revision": 1,
+        "workId": "rig-navi-avatar",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "presentation",
+          "classId": "trapper",
+          "themeId": "coupa",
+          "treatmentId": "detailed",
+          "bodyId": "navi-avatar",
+          "style": "hybrid"
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/95",
+      "value": {
+        "slotId": "picture.sentinel-listening.coupa",
+        "revision": 1,
+        "workId": "picture-sentinel-circuit-coupa-poster-1",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+            "levelId": "sentinel-circuit-coupa-listening-court",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/96",
+      "value": {
+        "slotId": "picture.sentinel-switchyard.coupa",
+        "revision": 1,
+        "workId": "picture-sentinel-circuit-coupa-poster-2",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+            "levelId": "sentinel-circuit-coupa-switchyard-gates",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/bindings/97",
+      "value": {
+        "slotId": "picture.sentinel-circuit.coupa",
+        "revision": 1,
+        "workId": "picture-sentinel-circuit-coupa-poster-3",
+        "workRevision": 1,
+        "previous": null,
+        "handle": {
+          "kind": "picture",
+          "owner": {
+            "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+            "levelId": "sentinel-circuit-coupa-open-circuit",
+            "levelRevision": "1",
+            "themeId": "coupa"
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/deliveries/0/works/9",
+      "value": {
+        "workId": "picture-shared-value-harbor",
+        "workRevision": 1
+      }
+    },
+    {
+      "pointer": "/deliveries/0/works/10",
+      "value": {
+        "workId": "picture-city-savings-observatory",
+        "workRevision": 1
+      }
+    },
+    {
+      "pointer": "/deliveries/0/works/11",
+      "value": {
+        "workId": "picture-thoughtful-market-workshop",
+        "workRevision": 1
+      }
+    }
+  ]
+}

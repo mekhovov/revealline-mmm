@@ -1,0 +1,31 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/prompts/round-06-asset-variations.json",
+  "sourceGitBlob": "66e7c94b20d750a643d713af15644fdc1e11424e",
+  "sourceSHA256": "ac867d7ed63a455b08fc1c5ad16776f079a3530afb947cf0fa255ec0d8a2b09c",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/prompts/9",
+      "value": {
+        "id": "asset-variant-10-navi-background",
+        "family": "navi-network",
+        "asset_type": "family_variant",
+        "mode": "image_edit",
+        "intent": "Vary a business-network scene while preserving brand clarity.",
+        "status": "template_not_executed",
+        "reference_requirements": [
+          "Source background, business scene brief and any available approved character reference."
+        ],
+        "variables": [
+          "SOURCE_IMAGE",
+          "BUSINESS_SCENE_DIRECTION",
+          "APPROVED_CHARACTER_REFERENCE"
+        ],
+        "prompt": "Create a separate NAVI NETWORK variant of {{SOURCE_IMAGE}} following {{BUSINESS_SCENE_DIRECTION}}. Preserve the source’s scene structure, subjects and intended workflow meaning. Use {{APPROVED_CHARACTER_REFERENCE}} only for identity details actually supplied; if no official Navi sheet exists, keep a clearly identified concept placeholder rather than claiming an exact mascot. Explore a clean paper-cut, pixel, painterly or photographic background only when that medium change is requested. Keep the family’s friendly business-world vocabulary and clear cobalt/ivory or approved palette; introduce no military motifs or enemy-nationality symbols. Live obstacles represent process friction, not customers, suppliers or employees. Savings tokens and scores are fictional game values, and generated artwork must not contain fabricated customer results or invoice text. Separate the image from colliders, networking objectives, HUD and localized copy. Inspect the supplied reference before use, preserve the original, and save any requested visual changes as separate derivatives linked to their parent asset. Use the built-in image tool for requested image editing; do not upload to public hosting or fall back to a third-party API/CLI automatically. Record the effective prompt, parent/source, tool route, actual output dimensions and manual review. Artwork never changes gameplay geometry, colliders or behavior. A concept is not a production-ready sprite.",
+        "example_request": "Create a Paper Circuit variation of this Coupa scene with the same layout."
+      }
+    }
+  ]
+}

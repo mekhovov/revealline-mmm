@@ -1,0 +1,53 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/sentinel-relay/proposedpack-source.json",
+  "sourceGitBlob": "69544ef1abea85bbc96c8a3fb11e72bad52c22ee",
+  "sourceSHA256": "de523b416fa5a107d8d831061b54277d53b63faf17e58ab828a87e28f0fe48f1",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/themes/3",
+      "value": {
+        "id": "coupa",
+        "name": "Spend Network",
+        "subtitle": "A clearer picture of spend",
+        "family": "navi",
+        "player": "navi-avatar",
+        "enemyShape": "cube",
+        "patrolShape": "spark",
+        "bossShape": "core",
+        "scene": "network",
+        "labels": {
+          "objective": "Opportunity",
+          "supply": "Sync point",
+          "enemy": "Exception",
+          "boss": "Complexity hub",
+          "currency": "Insight",
+          "ability": "AI assist"
+        },
+        "palette": {
+          "ink": "#173747",
+          "paper": "#edf2ed",
+          "muted": "#85a8b6",
+          "accent": "#e2c775",
+          "safe": "#87cbe0",
+          "danger": "#e69477",
+          "field": "#112b3e",
+          "grid": "#1e3d51",
+          "sky": "#bbdadd",
+          "land": "#689bb1"
+        },
+        "classBodies": {
+          "scout": "navi-avatar",
+          "bomber": "navi-avatar",
+          "carrier": "navi-avatar",
+          "interceptor": "navi-avatar",
+          "fiber": "navi-avatar",
+          "impact": "navi-avatar",
+          "trapper": "navi-avatar"
+        }
+      }
+    }
+  ]
+}

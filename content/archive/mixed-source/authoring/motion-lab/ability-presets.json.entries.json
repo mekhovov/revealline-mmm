@@ -1,0 +1,74 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/motion-lab/ability-presets.json",
+  "sourceGitBlob": "674a8eef3a0058d526954a614a943106f98f6b15",
+  "sourceSHA256": "05e956de444eb4ff0ff9867f8438b5dcf18702868d42bf781a98ff7e92d7858a",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/classes/0/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/1/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/2/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/3/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/4/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/5/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/6/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/7/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/8/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/classes/9/preferredBodies/navi-network",
+      "value": "navi-avatar"
+    },
+    {
+      "pointer": "/vocabulary/navi-network",
+      "value": {
+        "classLabels": {
+          "scout": "Insight scout",
+          "light-bomber": "Parcel courier",
+          "heavy-carrier": "Batch courier",
+          "fiber-courier": "Connected courier",
+          "fixedwing-courier": "Express courier",
+          "strike": "Reset sprint",
+          "interceptor": "Exception catcher",
+          "repeater": "Pulse emitter",
+          "net-catcher": "Workflow filter",
+          "relay": "Signal helper"
+        },
+        "equipmentLabels": {
+          "radio": "Wireless link",
+          "fiber": "Budgeted link"
+        },
+        "supplyLabel": "Supply pad",
+        "hazeLabel": "Synthetic signal haze",
+        "budgetLabel": "Link budget"
+      }
+    }
+  ]
+}

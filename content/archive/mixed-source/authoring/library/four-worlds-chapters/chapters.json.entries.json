@@ -1,0 +1,42 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/four-worlds-chapters/chapters.json",
+  "sourceGitBlob": "b25ac9d23adb41d36286e2e73233288f17ffcd11",
+  "sourceSHA256": "8fd00b9607aa8b4dba2bd8151d560938ef705f061ce6d4068b2ce028d7c42920",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/chapters/3",
+      "value": {
+        "id": "original-spend-network",
+        "campaignId": "original-spend-shared-routes",
+        "themeId": "coupa",
+        "sourceTheme": "coupa",
+        "name": "Spend Network · Shared Routes",
+        "subtitle": "Original pictures · Pressure Lines variation",
+        "scoutLabel": "Network Scout",
+        "maps": [
+          {
+            "imageId": "shared-value-harbor",
+            "id": "original-spend-shared-harbor",
+            "name": "Shared Value Harbor",
+            "description": "Reveal a fictional harbor and reusable supplies. Choose between two exits after the hunter locks its target. Decorative leaf emblems are invented; no Coupa logo, product capability or real savings are claimed."
+          },
+          {
+            "imageId": "city-savings-observatory",
+            "id": "original-spend-city-wins",
+            "name": "City of Small Wins",
+            "description": "Reveal a fictional planning instrument overlooking a connected city. Bait the interceptor before changing your route. The apparatus is an illustration, not software or a financial result."
+          },
+          {
+            "imageId": "thoughtful-market-workshop",
+            "id": "original-spend-market-workshop",
+            "name": "The Thoughtful Market",
+            "description": "Reveal a craft market, repair tools and shared materials. Secure your cut between the lane warnings. Score is a fictional arcade measure, not actual procurement savings."
+          }
+        ]
+      }
+    }
+  ]
+}

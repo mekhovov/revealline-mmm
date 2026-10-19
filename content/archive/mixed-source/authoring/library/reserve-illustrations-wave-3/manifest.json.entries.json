@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-3/manifest.json",
+  "sourceGitBlob": "4866b6185f3284c4287f8b0e88c6bbca6e0a5096",
+  "sourceSHA256": "8f6dda0112f7423cbd61c775e9f6285e435edfb2f9c0bce0ef6097af0ae3b527",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-copper-kettle-bazaar",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Copper Kettle Bazaar",
+        "file": "originals/spend-copper-kettle-bazaar.png",
+        "bytes": 2175587,
+        "sha256": "6114aefe292f9c5410ad27cfd4c959fb0054a0374cfb8794eb6144a6ba6f9edb",
+        "width": 1774,
+        "height": 887,
+        "prompt": "prompts/spend-copper-kettle-bazaar.txt",
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

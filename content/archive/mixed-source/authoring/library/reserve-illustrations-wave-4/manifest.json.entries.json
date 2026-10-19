@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-4/manifest.json",
+  "sourceGitBlob": "b2d5ce0bcf9bb067a2eab70948d274a35b807ef3",
+  "sourceSHA256": "5a668a1ed06a050e9e23183903c9f260576564a78cb5115bd0661fff9a3f5eac",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-canal-parcel-crane",
+        "file": "originals/spend-canal-parcel-crane.png",
+        "bytes": 2670342,
+        "sha256": "407561c2a427e24175431c19d970f9581f9a6bab7d1adbcdbd69c87bb0e62f2b",
+        "prompt": "prompts/spend-canal-parcel-crane.txt",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Canal Parcel Crane",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

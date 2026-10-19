@@ -1,0 +1,20 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/menu-scenes/aggregate-prompts.json",
+  "sourceGitBlob": "7af17ede3b9e90ff58921ff7cff0fa8f2b9c95cd",
+  "sourceSHA256": "3710449af6b58745edb00dbb592309c780363cc4959c8e7a868b7b4c88a787cc",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/images/0",
+      "value": {
+        "id": "coupa-village",
+        "file": "coupa-overview-v1.png",
+        "reference": "game/editions/assets/coupa/coupa-inside-village-key.png",
+        "prompt": "Use case: stylized-concept\nAsset type: original aggregate-edition landing background for Reveal Line's Coupa Village, distinct from every individual campaign.\nInput image role: STYLE AND PALETTE REFERENCE ONLY. Create a new overview composition; do not reproduce its close courtyard scene.\nPrimary request: a welcoming elevated panoramic view over an interconnected Mediterranean-inspired blue-and-white learning village by the sea. A central blue glass flower fountain at middle-right anchors five small connected districts: a market and supplier square, a garden of gathering terraces, a delivery bridge and harbor, a practical maker workshop, and a softly glowing network pavilion. These read as one coherent inhabited village, not five panels. Small distant people may provide scale, no close faces.\nStyle: refined warm painterly game illustration matching the reference's cobalt blue, white plaster, climbing greenery and amber sunlight; crisp clear shapes and gentle atmospheric depth. Landscape 1536x1024.\nComposition: quiet very dark navy shaded tree canopy/stone foreground occupying left 40 percent for overlaid text; wide village vista in right 60 percent. Main flower fountain near 62 percent horizontally, other districts recede toward the right; focal area near 62 percent must remain legible in a narrow portrait crop. Keep menu space free of prominent people or bright objects.\nMood: bright hopeful sunrise, warm hospitality, connected community. Static art to receive separate slow petal/light animations.\nConstraints: no text, letters, numbers, labels, logos, UI, border, watermark, collage panels or duplicated reference image; opaque full illustration.",
+        "referenceRole": "Style and palette reference only; new overview composition"
+      }
+    }
+  ]
+}

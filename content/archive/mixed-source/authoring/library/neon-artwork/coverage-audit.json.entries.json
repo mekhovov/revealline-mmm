@@ -1,0 +1,21 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/neon-artwork/coverage-audit.json",
+  "sourceGitBlob": "b6c6d21b7686e5d53acfe97e96069cd84d1d041e",
+  "sourceSHA256": "ca409fbc42ff81e828bb67930a0fbdaf694970261f56a0d3ef6e1e889b656a68",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/levels/19",
+      "value": {
+        "id": "neon-coupa-pack",
+        "reachableCells": 1907,
+        "bonusCells": 418,
+        "cutsToGoal": 1427,
+        "longestCut": 2,
+        "geometryGoalReached": true
+      }
+    }
+  ]
+}

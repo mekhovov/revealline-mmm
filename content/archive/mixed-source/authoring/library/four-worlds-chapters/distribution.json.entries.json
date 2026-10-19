@@ -1,0 +1,41 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/four-worlds-chapters/distribution.json",
+  "sourceGitBlob": "9832f254195f067aecada3df321bb55b85413c1a",
+  "sourceSHA256": "11ad3664a02f7efdef01b601adadf62b4b275f7db6d03c37ae8d9e78f9e9bcb6",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/packs/3",
+      "value": {
+        "id": "original-spend-network",
+        "version": "1.0.0",
+        "path": "authoring/library/four-worlds-chapters/packs/original-spend-network.json",
+        "bytes": 11067202,
+        "sha256": "5ab9a0c7362ca8e05819ff3d68c0a7246ab5057b4d796a063d3d69af115504ac",
+        "normalizedBytes": 11058349,
+        "campaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "themeId": "coupa",
+        "sourceTheme": "coupa",
+        "maps": [
+          {
+            "id": "original-spend-shared-harbor",
+            "sourceGeometryId": "orchard-crossing",
+            "sourceImageId": "shared-value-harbor"
+          },
+          {
+            "id": "original-spend-city-wins",
+            "sourceGeometryId": "courtyard-exits",
+            "sourceImageId": "city-savings-observatory"
+          },
+          {
+            "id": "original-spend-market-workshop",
+            "sourceGeometryId": "night-crossfire",
+            "sourceImageId": "thoughtful-market-workshop"
+          }
+        ]
+      }
+    }
+  ]
+}
