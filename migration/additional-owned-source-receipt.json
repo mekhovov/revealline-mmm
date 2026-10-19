@@ -1409,6 +1409,618 @@
       "sha256": "ad66965af506f95b33f778e07e46ce0c5260422e9b4430dd46d1db4d86ac3430",
       "bytes": 779661,
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/chapter-rewards.md",
+      "destination": "content/archive/owned-source/docs/chapter-rewards.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "448ac04db75460608bf94d98a6638fbcc9e7a136",
+      "sha256": "eecd7e333288d46996be58588d746e9b14a4eebacd64ab2d1220ce169186dfd4",
+      "bytes": 7321,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-editions-phase-status-2026-09-28.md",
+      "destination": "content/archive/owned-source/docs/company-editions-phase-status-2026-09-28.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "18ff359db30d2b26ea065d70883c3647ce0deb1a",
+      "sha256": "1937f364571f9044a828a0a89011888b292b57aa347165c9bc0f6261b3d1030b",
+      "bytes": 6685,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-editions-validation.md",
+      "destination": "content/archive/owned-source/docs/company-editions-validation.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "3e6a92541589f8bb04220bcdebd492f2b4dd7310",
+      "sha256": "59a16ab352f6288b926a8b46fb974e4a72e574afb62fda97fe05169f5c721a6c",
+      "bytes": 42162,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/concepts/round-01-image-prompt.md",
+      "destination": "content/archive/owned-source/docs/concepts/round-01-image-prompt.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "e0739646c4dbfcfa48f2c72958da005c4ff5dd3b",
+      "sha256": "bf98592364e23e91752c328a274bea4a5f7df1cacfc022d5f8f43e2d9bb61683",
+      "bytes": 5047,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/concepts/round-03-prompts.md",
+      "destination": "content/archive/owned-source/docs/concepts/round-03-prompts.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "274fef32682a363b3b2b1873425cf0073d7fccba",
+      "sha256": "7307f22bd8703a946186c1d24509d2bcd9d584b4cf5488f038d587e03f08d215",
+      "bytes": 12340,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/concepts/round-04-theme-system-prompt.md",
+      "destination": "content/archive/owned-source/docs/concepts/round-04-theme-system-prompt.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "c343522c85dcabc1bb91ea83e4229eee290b3e9c",
+      "sha256": "a6e96d74d05794bbb3e0e1dadce9e12e05653779a2b635c45b02802aeae11aec",
+      "bytes": 4352,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/concepts/round-08-review.md",
+      "destination": "content/archive/owned-source/docs/concepts/round-08-review.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "8a470e276703b96d426abf3f4a6a6ce170af1dbc",
+      "sha256": "16e6c167425749d8139a23b577fd22d31eb492aec88bcb355fcb95253b0e224f",
+      "bytes": 4351,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/cross-mode-execution.md",
+      "destination": "content/archive/owned-source/docs/cross-mode-execution.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "c3f1c2305f115cc3e077cd35e8162592917cd841",
+      "sha256": "6286c4bc70403e1b9a4fca3d32a01be15356ad2a2ab4407fe71bd5ada354c392",
+      "bytes": 232574,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/default-journey-release.md",
+      "destination": "content/archive/owned-source/docs/default-journey-release.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "7b4c49295e5ecdd293c6e95417e0c49c52dc1933",
+      "sha256": "0cac7a00c266aa0c4b0929968f1a8b6658e2ab49eb878a3226fd87d0a0bdd766",
+      "bytes": 9930,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/delivery-priorities.md",
+      "destination": "content/archive/owned-source/docs/delivery-priorities.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "f57ed490fb66389cf9fd26737d2d53896f7eb357",
+      "sha256": "c85738924a48d24bb3e00678485ba100e24ddb068500cdc48fd61b53c8f0b881",
+      "bytes": 50083,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/delivery-status.md",
+      "destination": "content/archive/owned-source/docs/delivery-status.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "4dec205aef8ea2b6132e87244d6f560a6b29240c",
+      "sha256": "294d75e12ac6e5da1aeaeed5bb11801811558783f91613ae731cb9859d014110",
+      "bytes": 36564,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/discovery-desktop-observations.md",
+      "destination": "content/archive/owned-source/docs/discovery-desktop-observations.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "8bbe93c3330776a92006966f63e182177214a176",
+      "sha256": "fd6a8f6f2ca2f9013c72c02c52c55b9811fc56ed1d5f588006e3f28225fdd3e9",
+      "bytes": 38421,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/discovery-learning-rewards.md",
+      "destination": "content/archive/owned-source/docs/discovery-learning-rewards.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "cee47541d557a21db71b1a9de6b829ae724676c5",
+      "sha256": "cca54a79980731762507bf33849e8dd078d3b7ac4d29ecac3e04b59da0ab8a91",
+      "bytes": 9898,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/discovery-rewards-author-guide.md",
+      "destination": "content/archive/owned-source/docs/discovery-rewards-author-guide.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "dd06ce5529122253809a9099c8a06f85d9890101",
+      "sha256": "5fd1d4d1a6bdb088a0e91bcc8e280c38eafb067fc9b2146bf13423c6ebf49129",
+      "bytes": 24982,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/discovery-rewards-phase-status.md",
+      "destination": "content/archive/owned-source/docs/discovery-rewards-phase-status.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "4377f6961202520c1f396d6cae76879131817865",
+      "sha256": "abf4afa08e9ccbed5ae39b0982b5ecf7400fc278cbbf3cb3389a8c5560e34d8e",
+      "bytes": 63978,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/edition-token-capacity.md",
+      "destination": "content/archive/owned-source/docs/edition-token-capacity.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "aa486ead415d8f440d75b960b92293f667948308",
+      "sha256": "5f7b79ddf310d9b54a87522d987d492efff5884c7eabebbb00364173d1d999c6",
+      "bytes": 4545,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/enemy-catalog.md",
+      "destination": "content/archive/owned-source/docs/enemy-catalog.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "07a8a57aa3116a77a1d231e37cea4745743fa453",
+      "sha256": "dbff5a49ffa8afcb72db99a87b72910057fde24ced3321f9a21a9683af4414c6",
+      "bytes": 15460,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/equipment-workshop.md",
+      "destination": "content/archive/owned-source/docs/equipment-workshop.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "261f0c01afc3bb57e8dc4cee47f48c5af51ad6ad",
+      "sha256": "4311bae339f6cc2c5bc955ab2182b6507c812f598f0fc57f1102d1516d6e0e05",
+      "bytes": 9927,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/external-chapter-delivery.md",
+      "destination": "content/archive/owned-source/docs/external-chapter-delivery.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "d82bf6e2c3f0dcb666b27ba3c1d5819e69ccfce7",
+      "sha256": "549252c825dd54cd0882e1d14410f7e866a8d6ba4a47e2276e76fcc8dda98f50",
+      "bytes": 13427,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/flight-details-localization-2026-09-28.md",
+      "destination": "content/archive/owned-source/docs/flight-details-localization-2026-09-28.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "eecea4345a9b6c645544c544160af84537add0b8",
+      "sha256": "d930dba153f74c4696c5621e54ddba4419daedc7d737440dd86459ba5665d5a2",
+      "bytes": 8465,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/flight-practice-capacity-review-2026-10-14.md",
+      "destination": "content/archive/owned-source/docs/flight-practice-capacity-review-2026-10-14.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "936b173309920b235c799b03053a52d6040c158c",
+      "sha256": "d49d79fa1278697a26047071f566f528c298f1efae10ba727a52b5984f8397ff",
+      "bytes": 17956,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/implementation-roadmap.md",
+      "destination": "content/archive/owned-source/docs/implementation-roadmap.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "1f8b3b5799f0b541339e040f2f330b740a1b6315",
+      "sha256": "35f02029d54cd75501eacf95533aa64dc94b1e05510d4820290cc7bb1234fe55",
+      "bytes": 69058,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/menu-scenes.md",
+      "destination": "content/archive/owned-source/docs/menu-scenes.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "a3e6a958407ac188b50f1a7df03ae0583355333b",
+      "sha256": "034136185ae639ae2c01fe65d339430d61146de922342ec16e9a9e62d1fa0483",
+      "bytes": 27928,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/native-menu-plan-status.md",
+      "destination": "content/archive/owned-source/docs/native-menu-plan-status.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "011c1dd8f347333e73e06d91a54090c6c19bdf3d",
+      "sha256": "88683a85e2d04d50205ce102249a720e2dadbf185754deab5f035f6973f438f5",
+      "bytes": 75196,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/offline-pwa/sim-and-community-downloads.md",
+      "destination": "content/archive/owned-source/docs/offline-pwa/sim-and-community-downloads.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "38629c4877b5f12fd5797819c156efc51450abab",
+      "sha256": "1d9f04cce9ddfd1e8eabc1c1db4e509a92b513bbbadd0f329df5608886804837",
+      "bytes": 7825,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/optional-worlds.md",
+      "destination": "content/archive/owned-source/docs/optional-worlds.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "6f2782080336d52baa416ae470f10cf230bd4ce5",
+      "sha256": "85331301f76e150352a98cb109e18b988187e367a96b1908735cb7ee146d2764",
+      "bytes": 9166,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/performance/solo-performance-followup-plan.md",
+      "destination": "content/archive/owned-source/docs/performance/solo-performance-followup-plan.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "1e48b98479a97a8338f74a0db4dfb7745cdcd592",
+      "sha256": "b1e4ec3dc3e6efb8164d4c1ce52d64a9eb50adbc97425f07599efd1565d1608e",
+      "bytes": 177290,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/plan-priorities-2026-10-01.md",
+      "destination": "content/archive/owned-source/docs/plan-priorities-2026-10-01.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "8db8094006da2bf3861100a12d026f6021102a1d",
+      "sha256": "d615dc65ccc83308bea5b5124656f3cff9b420d78544680e9be1fab302508aba",
+      "bytes": 25079,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/plan-review-2026-09-30.md",
+      "destination": "content/archive/owned-source/docs/plan-review-2026-09-30.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "808c8698577faba77a172c950a151458ccd3468c",
+      "sha256": "0b1822e1306a216ac298580611fceafeedea0fadb8fc6a60402ddad92ec47925",
+      "bytes": 23981,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/plan-status-2026-09-25.md",
+      "destination": "content/archive/owned-source/docs/plan-status-2026-09-25.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "aedbcb07d0a8e02937ff3ab4cda1328342b9714e",
+      "sha256": "32f268415ddf762852e1067dc0ba74d2360219d9bda2322a18c5dfbdb22d5712",
+      "bytes": 34388,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/polished-flight-delivery.md",
+      "destination": "content/archive/owned-source/docs/polished-flight-delivery.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "e63dc764d293e90b28349603ef629024a499d35a",
+      "sha256": "63b4fb81e1816d6db81911c1af6b138a698050d6bfb16df8a805dffee074bc72",
+      "bytes": 70443,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/polished-journeys-current-plan.md",
+      "destination": "content/archive/owned-source/docs/polished-journeys-current-plan.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "929db9fe351478e78580c5af3404b5ba2ab4f90e",
+      "sha256": "41d7ec034a8cf88fa41bbedf3f524b8de8fd85a4c33dcfce55e1c66889545435",
+      "bytes": 27085,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/production-plan.md",
+      "destination": "content/archive/owned-source/docs/production-plan.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "528c0f3267a54d52fffa92783e704a4cf9f09593",
+      "sha256": "010900cbbeba545a3b2d3b1e0abc9b5898f07911a06c81061761209b81bb2a77",
+      "bytes": 45076,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/release-history.md",
+      "destination": "content/archive/owned-source/docs/release-history.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "3c641edbc090b8b3681ebb9f9c9a82ba6bd27810",
+      "sha256": "7abe05ea7358a3f95b3af0f5ba91d72d7491def6b3eeea7e8c5b01680d9d8af6",
+      "bytes": 10781,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/engine-and-framework.md",
+      "destination": "content/archive/owned-source/docs/research/engine-and-framework.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "6f5d7bd6608b5d214c761e64567f5c96422bb11c",
+      "sha256": "9080a5e9e685e4ddbdcb19c416ecdb5c5bde3953d1c93b59a9c8dc4646e1033b",
+      "bytes": 18570,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/pixel-art-and-cultural-direction.md",
+      "destination": "content/archive/owned-source/docs/research/pixel-art-and-cultural-direction.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "4e543074b5bed12906919b7f798da077f12dce3b",
+      "sha256": "70e8fcb5ccc12058a7d5ae11c08a3b51d1fc9c4f4df04a8dcf353fd7ef0450e2",
+      "bytes": 18703,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-02-aesthetics.md",
+      "destination": "content/archive/owned-source/docs/research/round-02-aesthetics.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "a522946079d885cfcb4d29b16288c5b867458317",
+      "sha256": "492097005979cb35dfa52e192fcf94905b9bafb20d8ed52b069daf5edc32837a",
+      "bytes": 24566,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-02-devices.md",
+      "destination": "content/archive/owned-source/docs/research/round-02-devices.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "abcb7d1186dc8c922dc341380d6e0255b6c12dac",
+      "sha256": "bc78eee5ad76952321694c2322a60b09c9f420f39be26008108eff811cd9dbe1",
+      "bytes": 16168,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-02-gameplay.md",
+      "destination": "content/archive/owned-source/docs/research/round-02-gameplay.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "d146f6bd95b08d1d0ab5c800630fc7e9050de40a",
+      "sha256": "95e2269d0e4c3cdfba8d95f11b2f767e4e1ebe02e1024d4ae1aaa3cf0a160f85",
+      "bytes": 18488,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-03-devices-focused.md",
+      "destination": "content/archive/owned-source/docs/research/round-03-devices-focused.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "e138e96323925971cd1541dd7573cb8ee5a9e3f1",
+      "sha256": "889b9c458b0d8528f8b4782675b4ace017974bc61c66a19881134c69377ae0a7",
+      "bytes": 9670,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-03-four-families.md",
+      "destination": "content/archive/owned-source/docs/research/round-03-four-families.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "04c71eb1287c352138045b2d6afbd5b17a1b9281",
+      "sha256": "c1721aebdcc2918577e2eb3ace382a3a3ac8ab4def956869a61fbdfdad97a477",
+      "bytes": 15400,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-04-asset-workflow.md",
+      "destination": "content/archive/owned-source/docs/research/round-04-asset-workflow.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "46ed69fe11a1394d63483f24fafe3ff445f2152a",
+      "sha256": "c842676ca1a7c58a6cf40a5b03ff194b2f5cbf305e3381ac16f888cf1b1d2865",
+      "bytes": 14217,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-04-framework-recommendations.md",
+      "destination": "content/archive/owned-source/docs/research/round-04-framework-recommendations.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "8ca57fba78e574ba02fa79a48b5ae1884a709823",
+      "sha256": "e06edc28351502005e017f14c4d3405afe93690d025f4c5169e4abb32099f557",
+      "bytes": 23027,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-05-legacy-observations.md",
+      "destination": "content/archive/owned-source/docs/research/round-05-legacy-observations.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "b4fdf4bf6b5651208eed6d76c0efa70f55a4c840",
+      "sha256": "219a04d14d4b4920e0ca3b0ba396c33e2fab653d57f5fbeb92f838ab3205f4cf",
+      "bytes": 12676,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-05-modern-observations.md",
+      "destination": "content/archive/owned-source/docs/research/round-05-modern-observations.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "74d0222bae983b0bc037d7d9393dc98c559a88a5",
+      "sha256": "78a5a123d2197221e33e0187e676a7128fd48dcda892100963b6ba0533b82988",
+      "bytes": 20855,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-05-xposed-source-inventory.md",
+      "destination": "content/archive/owned-source/docs/research/round-05-xposed-source-inventory.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "38b1a3de470c2c33ef1930e7e365f99a483caeee",
+      "sha256": "aeb102314f0731de363e1198bd97144ec931170ce506571077be01727fa7aaaa",
+      "bytes": 16698,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-07-reloaded-ui-motion.md",
+      "destination": "content/archive/owned-source/docs/research/round-07-reloaded-ui-motion.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "545fc4e8fba88fc29455fa6840d0d950d02bec4f",
+      "sha256": "5b01ddab7e14f7c5e6647cab5f2adf2146b657d1ab73854bfa7f9623f0415231",
+      "bytes": 16408,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-08-progression-and-propellers.md",
+      "destination": "content/archive/owned-source/docs/research/round-08-progression-and-propellers.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "abc39d2ea3e941f1b0c2e161febf3cf0cb89a829",
+      "sha256": "13f8d49b11a7079b707ef29410ea022aee448c05d0c934c4346eb321ddb11001",
+      "bytes": 10538,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-09-drone-reference.md",
+      "destination": "content/archive/owned-source/docs/research/round-09-drone-reference.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "19f4380a19aa35373d9b42958d816ebd4da7800d",
+      "sha256": "53bd4b1214c696ba68a944061ad35a2016b4aef7b463070c8a030a3efe394cd6",
+      "bytes": 18901,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-14-player-continuity.md",
+      "destination": "content/archive/owned-source/docs/research/round-14-player-continuity.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "2bdcaeb5d6744f941d3d7d53fafe0054b8365553",
+      "sha256": "e2b62162928e641e3f58e0fe967737f86382e685f693e2266ec21a29173421f6",
+      "bytes": 18428,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-42-native-media.md",
+      "destination": "content/archive/owned-source/docs/research/round-42-native-media.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "1be98825c933ac9b537434c26028a5301e72e9af",
+      "sha256": "40c9bcbb0d5181d2a4acd310dc1283e75dd6b201719d268c44d0416dcdb7c696",
+      "bytes": 9502,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-46-campaign-input-and-reward.md",
+      "destination": "content/archive/owned-source/docs/research/round-46-campaign-input-and-reward.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "2cc7e56ffeb2888e05f1e36f63bfe5a0a56bd305",
+      "sha256": "7614a7037c35e758f2f84ce36d28e0a1437babdaae46b8a375757563cf1821b4",
+      "bytes": 5051,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/round-47-collection-and-production.md",
+      "destination": "content/archive/owned-source/docs/research/round-47-collection-and-production.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "bdc9e9d772b3ecdf4e6746e9de710560a553e0cb",
+      "sha256": "274a3a0d6082021fc9c8eb944dd01a5c8117d40f1ae031f617b7063500b4ae8e",
+      "bytes": 7259,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/research/xonix-and-xposed.md",
+      "destination": "content/archive/owned-source/docs/research/xonix-and-xposed.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "5d0a2476fd1f260320d8b8cdeedb7178d1c4aee8",
+      "sha256": "20b89299af8de7877c77cf6c585c627bb715094bf75ba874a043fcac5a7c0639",
+      "bytes": 18996,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-01-direction.md",
+      "destination": "content/archive/owned-source/docs/round-01-direction.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "eb3d3b5b20444279b1ab7cf27a827ff64c7ff32a",
+      "sha256": "9c764f5bb0fea93862c0adbce0795f1c30f9c705548e676c6c57b8a5e28d386c",
+      "bytes": 17915,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-03-focused-direction.md",
+      "destination": "content/archive/owned-source/docs/round-03-focused-direction.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "83d6debc1c589554710108e5bb9e4a19903b7ce6",
+      "sha256": "52f483e23a029e112c297dcae7df37636c2172823522e9152dc0bc991fa82c29",
+      "bytes": 13857,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-04-authoring-system.md",
+      "destination": "content/archive/owned-source/docs/round-04-authoring-system.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "f4828386d74f5299f2f9c93684872b012c6bf697",
+      "sha256": "c960a851c457721b5945cdfd6c458734bfece90a2ae7b3eff377c72be087bb28",
+      "bytes": 8034,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-05-gameplay-direction.md",
+      "destination": "content/archive/owned-source/docs/round-05-gameplay-direction.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "0b3325de116cc717975178b189f8c6309f526188",
+      "sha256": "c9fa5c24e37fdc13aacc522df757386e201bf22c1bc64ca70364b335d2714ffd",
+      "bytes": 10806,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-06-assets-and-gameplay.md",
+      "destination": "content/archive/owned-source/docs/round-06-assets-and-gameplay.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "ce6087ace33947a2c35b684f4320fc30572b061d",
+      "sha256": "07d6aff70b95716005be9e9f28e9fbb2c701d6be25c5e781a26ceb7a21e6a61d",
+      "bytes": 11939,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-07-motion-and-balance.md",
+      "destination": "content/archive/owned-source/docs/round-07-motion-and-balance.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "8c821ec698b292f1587006c1d66237fa2ae8f759",
+      "sha256": "ad39bb82efe586e059c5faa7fb605bae2aa1c32ae24c6496b290ce618b697e6e",
+      "bytes": 12900,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-08-character-collection.md",
+      "destination": "content/archive/owned-source/docs/round-08-character-collection.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "78db1b89c37abbd0c064f3848cfac528c9fd93a5",
+      "sha256": "f2c7e60bf80c05d26211fe896c3940dd5abbf1b810ca5d4c83b1865bb6028aa4",
+      "bytes": 10063,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-08-gameplay-plan.md",
+      "destination": "content/archive/owned-source/docs/round-08-gameplay-plan.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "5b94f3ae28ec3903b81ee51ca2abaee66b4a8e69",
+      "sha256": "4ce8129619a3f55e92f26a46281b39f83448cba045245e1fc9e188c52eaf860c",
+      "bytes": 26682,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-14-fulfillment-audit.md",
+      "destination": "content/archive/owned-source/docs/round-14-fulfillment-audit.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "cab5f334f05e20510cef655c2c9ffba77870def4",
+      "sha256": "c8ad724c5476c88ee7eb423087a33399ad61fd25caa5cec8ea5c35952ba5dd70",
+      "bytes": 24836,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-20-player-polish-plan.md",
+      "destination": "content/archive/owned-source/docs/round-20-player-polish-plan.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "37ebcd8c552177b458e0f03e3e43bd4b001b9fdb",
+      "sha256": "c7439db9d22dfc0e4a2c075ab047eaa7a66da4d6b1771a3ffac2d665599c2c6b",
+      "bytes": 17810,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-21-boss-encounter-plan.md",
+      "destination": "content/archive/owned-source/docs/round-21-boss-encounter-plan.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "1e21d6e0bfcd16a7d60ca8d89cd085360eaa5a47",
+      "sha256": "24e22c654d819ff9024302962865a8ab3d85d230e8f097bc8d2c19157800ba01",
+      "bytes": 38085,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-27-candidate-backlog.md",
+      "destination": "content/archive/owned-source/docs/round-27-candidate-backlog.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "5f2211a5625579223d93a77b0321afdbb455d4dd",
+      "sha256": "c6651d032eca9a364094147902f03f81fb3d8947c496508f653cf9836512c39d",
+      "bytes": 16412,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/round-27-illustrated-workshop-plan.md",
+      "destination": "content/archive/owned-source/docs/round-27-illustrated-workshop-plan.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "3756e546cff984422abd3082fcf43256f78aa611",
+      "sha256": "0db4c1bda276e2f1d12b99f403d9b4985aec18bf0f0286deaa701cd8e0dd09e6",
+      "bytes": 20739,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/sentinel-relay.md",
+      "destination": "content/archive/owned-source/docs/sentinel-relay.md",
+      "sourceRevision": "f05b90d3ad58ee4a6f6d4277be8a73dbf34fdbd4",
+      "sourceGitBlob": "64fee5e14f4a9cfafc6bcdc1eb9589d95dfdbfde",
+      "sha256": "38fa2b1b99ec0a0ebb26966daf5f4b08fd52ab72f82210b09dcd0e9b48a3701f",
+      "bytes": 10525,
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }

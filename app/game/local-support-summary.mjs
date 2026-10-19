@@ -18,7 +18,9 @@ const controllerStates = [
   'waiting-neutral',
   'joined',
   'connected',
+  'observed',
 ];
+const snakeHosts = ['snake-solo', 'snake-versus', 'snake-team'];
 
 /** A fixed projection of current owners. No raw URL, identity, input history,
  * game data, storage key or exception text is accepted into this document. */
@@ -46,7 +48,7 @@ export function supportSnapshot(host = {}, env = globalThis, clock = {}) {
       Number.isSafeInteger(capturedAt) && capturedAt >= 1e12 && capturedAt < 1e13
         ? new Date(capturedAt).toISOString()
         : null,
-    scope: 'primary-game-shell',
+    scope: snakeHosts.includes(host.kind) ? 'snake-game-shell' : 'primary-game-shell',
     build: {
       version: version(host.version),
       sourceRevision:
@@ -56,12 +58,18 @@ export function supportSnapshot(host = {}, env = globalThis, clock = {}) {
       packaged: boolean(host.packaged),
     },
     game: {
-      host: oneOf(host.kind, ['solo', 'journey', 'installed-edition', 'practice']),
-      state: oneOf(host.state, ['idle', 'running', 'paused', 'won', 'lost']),
+      host: oneOf(host.kind, ['solo', 'journey', 'installed-edition', 'practice', ...snakeHosts]),
+      state: oneOf(host.state, ['idle', 'running', 'paused', 'won', 'lost', 'finished']),
       locale: oneOf(host.locale, ['en', 'uk']),
       saving: {
         writable: boolean(host.writable),
-        reason: oneOf(host.writerReason, ['owned', 'occupied', 'unavailable', 'practice']),
+        reason: oneOf(host.writerReason, [
+          'owned',
+          'occupied',
+          'unavailable',
+          'practice',
+          'released',
+        ]),
       },
     },
     environment: {

@@ -296,8 +296,8 @@
     "coupa-all"
   ],
   "version": "v0.151.1",
-  "sourceRevision": "596b93b24412a3b1cccd10f5eb81bff2ab7a151b",
-  "catalogSha256": "b73eed02564b9ba58ccdd46036d5c95e72d8411f68d10ca56052e3e77f3d5cea",
+  "sourceRevision": "74ba0be35cb989032794facba01e5a81b5718bf7",
+  "catalogSha256": "50c96b78e95cf5ba27238fc25e1b0c1609145c2bae958f10a6c6868802df0730",
   "files": [
     {
       "path": "authoring/motion-lab/animation.mjs",
@@ -316,8 +316,8 @@
     },
     {
       "path": "edition-catalog.json",
-      "bytes": 21660,
-      "sha256": "b73eed02564b9ba58ccdd46036d5c95e72d8411f68d10ca56052e3e77f3d5cea"
+      "bytes": 18262,
+      "sha256": "50c96b78e95cf5ba27238fc25e1b0c1609145c2bae958f10a6c6868802df0730"
     },
     {
       "path": "game/access-gate.css",
@@ -336,8 +336,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 626088,
-      "sha256": "b5d982166d49698fe0dd81d3f14841a8c356940974e467aa04c227ab0bc8f4bd"
+      "bytes": 626820,
+      "sha256": "4d297727906249ba5e96e5fc9c2530e52dce081f65e8e6828f3e28d6cdc725a4"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -417,7 +417,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "944adecc29b33124640f1d34754615c1e2dec3dc3f70a1ecddd67aef74cc43f2"
+      "sha256": "7166eca154ee5f3751a74a9a26e3a0accb86da2cea6b32c2c90d414a90957d66"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -1626,8 +1626,8 @@
     },
     {
       "path": "game/couch/coop-picture-bindings.mjs",
-      "bytes": 4089,
-      "sha256": "8d95e8ded7e557b5e19c780d8b63c60d55453808d2574f717434e517c6fb9fb3"
+      "bytes": 4094,
+      "sha256": "1aa94e8ca0d608def693f9116cf61a22398400f3b181a2a201c86878166d6a49"
     },
     {
       "path": "game/couch/coop-picture-image.mjs",
@@ -1647,7 +1647,7 @@
     {
       "path": "game/couch/coop-presentation.mjs",
       "bytes": 24050,
-      "sha256": "c5d652e650709a8aa75d985baaa6c1c565e86369dd34674268fe92aec32726d0"
+      "sha256": "fa2b0c861d3a0092accf8c4b48b66976037b54aef646b31fef917bed5ace8012"
     },
     {
       "path": "game/couch/coop-rescue-presentation.mjs",
@@ -1657,7 +1657,7 @@
     {
       "path": "game/couch/coop-retained-presentation.mjs",
       "bytes": 3584,
-      "sha256": "6914c387d5f39ee6c581b34d3fa7cfb25bdf3d86b77304b30a445be7891a31c5"
+      "sha256": "de2ba7ec642d8ce4e8fdfa1fe2a2fb8759f37efa5978992df9a5ba77fb6fd0cf"
     },
     {
       "path": "game/couch/coop-support-presentation.mjs",
@@ -1686,8 +1686,8 @@
     },
     {
       "path": "game/couch/couch-input.mjs",
-      "bytes": 21050,
-      "sha256": "0918591cff1b25dcaec5b4a27ac0d6cd37f33f122f78256e5d197feec16d9ab2"
+      "bytes": 21473,
+      "sha256": "828818edc9b03a35e33c7588efb28ce6aa2487d66ccf7315cc2e590ec3fafd3e"
     },
     {
       "path": "game/couch/couch-installed-chapters.mjs",
@@ -1736,8 +1736,8 @@
     },
     {
       "path": "game/couch/couch.mjs",
-      "bytes": 211353,
-      "sha256": "e9c12915c5f919ac70342bf061975180e99e6b0d5fcca45a0615d03688f6931e"
+      "bytes": 211440,
+      "sha256": "cb374fce7cc9ed958aa95594d79faa20d750811e3de2382f03af93202aa622ff"
     },
     {
       "path": "game/couch/creator-team-import.mjs",
@@ -1786,8 +1786,8 @@
     },
     {
       "path": "game/couch/relay-rescue.mjs",
-      "bytes": 297898,
-      "sha256": "f5247675dd9f2b473b87b1aa25bae92e61212325bc1d470f8542e64c041a3c94"
+      "bytes": 297995,
+      "sha256": "13b466c80737579c8be8a37c483041a18e9f66c62fcf0beac9699377895fa5e6"
     },
     {
       "path": "game/couch/start-cue.mjs",
@@ -2286,8 +2286,8 @@
     },
     {
       "path": "game/enemy-catalog.mjs",
-      "bytes": 5965,
-      "sha256": "0c64df28a25ac55c55d1890ec9521b5f8284a0a85d76a42163e84d564ad9478a"
+      "bytes": 5836,
+      "sha256": "a76e535e31aeea83fa0e5652ea96aea00d638cd94157f5cfc0a079ad26e8b20a"
     },
     {
       "path": "game/enemy-guide.mjs",
@@ -2501,8 +2501,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 944539,
-      "sha256": "3051e1a4ec80f84f026cfcd55e6d9890de4bdd543aa09817fd5558f06d29acc6"
+      "bytes": 943947,
+      "sha256": "81ba113f163271f11682b820e0d43a0fea7d1dc36140ccf11e49cf372b66780b"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -2626,13 +2626,13 @@
     },
     {
       "path": "game/library.mjs",
-      "bytes": 36080,
-      "sha256": "a82251dafa5c8d3dfa1e6596f300720af0e112d6e6f66061697ea7b41f1be4a0"
+      "bytes": 36387,
+      "sha256": "f8426e3e96b7b9eac3c2d0ef819d97b9a03712bc16af62bcf85628411ebde555"
     },
     {
       "path": "game/local-support-summary.mjs",
-      "bytes": 6973,
-      "sha256": "f0ed443cfcec9dfb2a8ddea22fe6d4c65f186d731d0ded6df242c2da62ea9e82"
+      "bytes": 7206,
+      "sha256": "02c16ba91ce54be2b5cbf7c8bb33b6a37219f0e5993d3e72d2b8520a7925dbea"
     },
     {
       "path": "game/managed-media-store.mjs",
@@ -2987,12 +2987,12 @@
     {
       "path": "game/presentation/actor-appearance-lease.mjs",
       "bytes": 10212,
-      "sha256": "2c463020ee2c09296dc0fef1821afbbd74fbee7f855e809404df922379f3923d"
+      "sha256": "3f14f0b186a830dedf1457b4a80d583c2b9bb620bef36e7e96e9f0e19661df02"
     },
     {
       "path": "game/presentation/actor-appearance-pin.mjs",
-      "bytes": 3705,
-      "sha256": "394d548b8fd72db71b42db72b4dd8fe38f64f662330764ed49d71c05487fff0d"
+      "bytes": 3858,
+      "sha256": "847313a1d9a91cd39a83360a8ed0043292249e3c5fd9a37e735250634d47555f"
     },
     {
       "path": "game/presentation/actor-art-pool.mjs",
@@ -3026,8 +3026,8 @@
     },
     {
       "path": "game/presentation/catalog.mjs",
-      "bytes": 28484,
-      "sha256": "67187bbb17cdd94827c3c4badc628816e862598d36c0fd85919d81da8ee7e6eb"
+      "bytes": 28494,
+      "sha256": "0f0f7728d7b98a0659defbbb1cb28738c098d670a4c6a626667b2e61df9432fc"
     },
     {
       "path": "game/presentation/current-picture-baselines.mjs",
@@ -3120,6 +3120,11 @@
       "sha256": "6b94780233545f044bc00d0ce13eb335d82828a333ae9fd8f6c5afc23a33442c"
     },
     {
+      "path": "game/presentation/retained-migrations.mjs",
+      "bytes": 2159,
+      "sha256": "e97c5022c8653dcd6b218447643d859909065e5428adce333d4bea700901dd71"
+    },
+    {
       "path": "game/presentation/runtime.mjs",
       "bytes": 7011,
       "sha256": "d42fbbd4d190f5b44d68575bfebf3b4b08f7c113eea21e9909b323b29a648f85"
@@ -3161,8 +3166,8 @@
     },
     {
       "path": "game/presentation/visual-theme-catalogue.mjs",
-      "bytes": 8792,
-      "sha256": "df4c6e1f50023d1a61620587c37f543bd9cfeebd22d474d7ccf46bc5cfd21543"
+      "bytes": 8917,
+      "sha256": "c16ca23882c3b7ab9bd1c43338783a4046549b7e41cfc9290e46a5fd0221173d"
     },
     {
       "path": "game/presentation/visual-theme-identities.mjs",
@@ -3176,8 +3181,8 @@
     },
     {
       "path": "game/presentation/visual-theme-pin.mjs",
-      "bytes": 2558,
-      "sha256": "1f322a40be7352fca49fd850fb613fc5c0593ccb6a017593f3dd817a0944b8b9"
+      "bytes": 2709,
+      "sha256": "7dc860ac621dae32f9fe6d549523fd080840ce93a5de9cd8b92384e86a109f82"
     },
     {
       "path": "game/profile-channel-assets.mjs",
@@ -3236,8 +3241,8 @@
     },
     {
       "path": "game/progress.mjs",
-      "bytes": 14628,
-      "sha256": "4dd5c9c895c9e7861e09652f8253866364e93cda53e257bcf66306cb9dd570cd"
+      "bytes": 14589,
+      "sha256": "af9413f0bceef5eb5f840eaa764c62752275abfd2b0c5a833244927fb04f1a8d"
     },
     {
       "path": "game/published-cue-inspection.mjs",
@@ -3273,6 +3278,11 @@
       "path": "game/replay.mjs",
       "bytes": 33108,
       "sha256": "04bbd4426dfe4528f7ae7028a61da65a318895bd318d26bb8d2ad1503c341a41"
+    },
+    {
+      "path": "game/retained-campaign-progress.mjs",
+      "bytes": 1180,
+      "sha256": "8a8a1479004c864618866b933bc194e3ea93357641ab3b7644730e25a986b5c4"
     },
     {
       "path": "game/rewards/audio-groups.mjs",
@@ -3736,8 +3746,8 @@
     },
     {
       "path": "game/ui/actor-presentation.mjs",
-      "bytes": 39460,
-      "sha256": "2d55873b7dfa70a44b2ac141cfb64939fd2900bf2a2765b2ad8c808957bb4498"
+      "bytes": 37856,
+      "sha256": "a3f9a01c47775339b06425004e71e8eb076d920722e3de36e174db9dec1e365a"
     },
     {
       "path": "game/ui/actor-recipes.mjs",
@@ -3815,11 +3825,6 @@
       "sha256": "393ebd9f3cf395598a79a43cd1277adfe4381cee177549be38fc027ec76afdc1"
     },
     {
-      "path": "game/ui/art/menu-scenes/provenance.json",
-      "bytes": 21201,
-      "sha256": "92bd0e5a43f92dbc4bab270a86332b16b26e638b5935a956e6d7788f3b514cfc"
-    },
-    {
       "path": "game/ui/asset-studio-return.mjs",
       "bytes": 2528,
       "sha256": "595142bb977332f179f61d26e8e82b1ce8b8116352748f75b436c9e1869b27af"
@@ -3836,8 +3841,8 @@
     },
     {
       "path": "game/ui/audio.mjs",
-      "bytes": 44604,
-      "sha256": "dbc7b744e1dfcddcca4a2a79f84b7bc965bb21d323f20434616e7346a14efec7"
+      "bytes": 44523,
+      "sha256": "e243fe42ecbcdd0452810c967a1219c56c8a45f5b42e50565460bfd8621d9f9b"
     },
     {
       "path": "game/ui/authored-mode-routes.mjs",
@@ -3901,8 +3906,8 @@
     },
     {
       "path": "game/ui/celebration.mjs",
-      "bytes": 7556,
-      "sha256": "5411cc0c37530c6d78aaadc5fdd500050d6160c84c4f5760b06e52ecb6566652"
+      "bytes": 7391,
+      "sha256": "d0e19f5a3cf89e8c087476084d3c4a0e318a7da957b4030d280d5feb35bdcca5"
     },
     {
       "path": "game/ui/chapter-focus-clearance.mjs",
@@ -4301,8 +4306,8 @@
     },
     {
       "path": "game/ui/event-feedback.mjs",
-      "bytes": 6772,
-      "sha256": "c19162c5db09c577094758b9785e279a2b900d92bf8e881c5da316db366ad827"
+      "bytes": 6386,
+      "sha256": "b498a3c64d52c3673ba594ec83a47bda9164694e6c06a49f30417835b3e4214a"
     },
     {
       "path": "game/ui/export-copy.mjs",
@@ -4311,8 +4316,8 @@
     },
     {
       "path": "game/ui/feedback-cues.mjs",
-      "bytes": 6121,
-      "sha256": "80a7f9c1ac51e35ac2bb25de2611dbac515be84c818497ae617ecc694473b633"
+      "bytes": 6104,
+      "sha256": "366d8cdb2a4f89edb2c4a8e1ac9ffb2cfdc30c1e88fff42b6816b796f7846b01"
     },
     {
       "path": "game/ui/feedback-director.mjs",
@@ -4756,8 +4761,8 @@
     },
     {
       "path": "game/ui/mission-library-browser.mjs",
-      "bytes": 53564,
-      "sha256": "c829e4a0b2f3247648ac084e1f8395a628681b40ef137638d4547d7158b5ffee"
+      "bytes": 53754,
+      "sha256": "62eb409b6d220cd0cd04f003fd038f03ecd22fbbef4c7a3254c1c8a4672b5f1f"
     },
     {
       "path": "game/ui/mission-library-chooser.mjs",
@@ -4806,8 +4811,8 @@
     },
     {
       "path": "game/ui/mode-play-shell.mjs",
-      "bytes": 28358,
-      "sha256": "ff04ae4fb7a1d65c0fd834e4813ed4cdbc199f2fe63ec438bc0f2a1a8952c45d"
+      "bytes": 28731,
+      "sha256": "838dd343b749b3400f6d4f21267565a1684a595f293c8bfea244457b45c84fd7"
     },
     {
       "path": "game/ui/mode-settings-view.mjs",
@@ -4821,8 +4826,8 @@
     },
     {
       "path": "game/ui/movement-profiles.mjs",
-      "bytes": 4848,
-      "sha256": "687c5770264af29bdddc5444019c40b457765bd570f6ac8c435cb0a38af6c96c"
+      "bytes": 4499,
+      "sha256": "0fc1a7ec2b984b35d8fb2acc166f101e25ebec846ddb19fee022cde7ce0522f0"
     },
     {
       "path": "game/ui/mp3-inspector.mjs",
@@ -4901,13 +4906,13 @@
     },
     {
       "path": "game/ui/optional-chapter-presentation.mjs",
-      "bytes": 1201,
-      "sha256": "c6f2a270bb43d2c09b001e62815d30df9b16e4727c3cacf835e97307755c72dc"
+      "bytes": 1166,
+      "sha256": "96e645c6b4f2929f379af363a5e657b107c4e3a84c0aa7426070c5073063048b"
     },
     {
       "path": "game/ui/optional-chapters-panel.css",
-      "bytes": 3788,
-      "sha256": "222c2b965e52fb080e855d422ea196eecd98acc51465fa539aa2605dc60f6d35"
+      "bytes": 3716,
+      "sha256": "0c98c6ba357e785e41d17a9bc2e0a6dbd62dceca972319536140df4996597290"
     },
     {
       "path": "game/ui/optional-chapters-panel.mjs",
@@ -5301,8 +5306,8 @@
     },
     {
       "path": "game/ui/worlds-browser.mjs",
-      "bytes": 2477,
-      "sha256": "d6b4bf4866e3ba679c13eebf7a4583dcc35bd179537d8ace085d6b87ddebe3f0"
+      "bytes": 2407,
+      "sha256": "c96ee9ac7d08bf8e4f05bc9409926c5eb4dd769550ae7f2f38dcdd6b0a76aa98"
     },
     {
       "path": "game/vendor/i18next-26.4.2.min.js",
@@ -5346,8 +5351,8 @@
     },
     {
       "path": "runtime-dependencies.json",
-      "bytes": 8479,
-      "sha256": "0cc6f06ed8f2361003bf559902234fa7ffba5338b2e2a0080fa120de3c2bae3d"
+      "bytes": 8432,
+      "sha256": "07ebd9f1b00ce3910e1ee81c7275928e790e076d64772580a7e87145c12271f0"
     }
   ]
 }

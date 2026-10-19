@@ -514,19 +514,28 @@ export function attachCouchInput({
       if (freshDirections[i] || freshButtons[i]) accepted(i, 'controller');
     return commands;
   }
-  function consume() {
+  function consume(options) {
     if (destroyed || !active()) return players.map(neutralCommand);
     const commands = players.map((player, i) => {
       const command = commandFor(i);
-      for (const kind of ['action', 'pickup']) {
-        // Two quick distinct clicks still get a release tick between their pulses.
-        const continuouslyHeld =
-          heldEquipment.has(kind) &&
-          [...held.values()].some((entry) => entry.player === i && entry.kind === kind);
-        if (player.pending[kind] && player.last[kind] && !player.pad[kind] && !continuouslyHeld)
-          command[kind] = false;
-        else player.pending[kind] = false;
-      }
+      if (options?.neutralActions) {
+        // The host owes a release tick after Resume. Keep newly admitted
+        // requests, including a short sampled pad press, until the next tick.
+        player.pending.action ||= command.action;
+        player.pending.pickup ||= command.pickup;
+        command.boost = false;
+        command.action = false;
+        command.pickup = false;
+      } else
+        for (const kind of ['action', 'pickup']) {
+          // Two quick distinct clicks still get a release tick between their pulses.
+          const continuouslyHeld =
+            heldEquipment.has(kind) &&
+            [...held.values()].some((entry) => entry.player === i && entry.kind === kind);
+          if (player.pending[kind] && player.last[kind] && !player.pad[kind] && !continuouslyHeld)
+            command[kind] = false;
+          else player.pending[kind] = false;
+        }
       player.last = { ...command };
       player.pendingSteer = false;
       return command;

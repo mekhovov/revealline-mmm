@@ -7,12 +7,10 @@ export const PLAYER_MOVEMENT = Object.freeze({
   'neutral-marker': 'motor',
   'ukrainian-bird': 'wings',
   'retro-craft': 'motor',
-  'navi-avatar': 'grain',
   'fpv-racer': 'rotor',
   'fpv-night': 'rotor',
   'ukrainian-falcon': 'wings',
   'retro-vector': 'motor',
-  'navi-auditor': 'grain',
   'scout-quad': 'rotor',
   'heavy-lift': 'rotor',
   'fixedwing-body': 'motor',
@@ -62,20 +60,11 @@ export const ENEMY_MOVEMENT = Object.freeze(
         'lane-boss': 'motor',
         'relay-sentinel': 'motor',
       },
-      coupa: {
-        bouncer: 'grain',
-        'border-patrol': 'grain',
-        'contour-patrol': 'grain',
-        'claimed-rover': 'wheels',
-        eroder: 'motor',
-        'lane-boss': 'grain',
-        'relay-sentinel': 'grain',
-      },
     }).map(([family, roles]) => [family, Object.freeze(roles)]),
   ),
 );
 const familyFor = (theme) =>
-  ({ atlas: 'ukraine', navi: 'coupa', arcade: 'retro' })[theme.family] ?? theme.family ?? theme.id;
+  ({ atlas: 'ukraine', arcade: 'retro' })[theme.family] ?? theme.family ?? theme.id;
 const explicitBody = (body) =>
   (body === 'humanoid'
     ? 'grain'
@@ -87,7 +76,7 @@ const explicitBody = (body) =>
   PLAYER_MOVEMENT[body] ??
   (/bird|falcon|swallow|sail|moth/.test(body)
     ? 'wings'
-    : /pottery|chest|weaver|bell|basket|navi|auditor|invoice|cursor|paper|document|card/.test(body)
+    : /pottery|chest|weaver|bell|basket|cursor|paper|document|card/.test(body)
       ? 'grain'
       : /fpv|quad|rotor|propeller|heavy-lift/.test(body)
         ? 'rotor'
@@ -126,7 +115,7 @@ export function recordedMovement(body = '', theme = {}, type = '', skinId = '') 
   if (role === 'eroder' && ['fpv', 'retro'].includes(family)) return 'ratchet';
   if (role && ENEMY_MOVEMENT[family]?.[role]) return ENEMY_MOVEMENT[family][role];
   if (role === 'claimed-rover' || role === 'eroder') return 'wheels';
-  return { fpv: 'rotor', ukraine: 'wings', coupa: 'grain' }[family] ?? 'motor';
+  return { fpv: 'rotor', ukraine: 'wings' }[family] ?? 'motor';
 }
 export function playerMovementBody(player, run, theme, options = {}) {
   if (options.actorStyle === 'fpv') return `fpv-${player.classId ?? run.activeClassId ?? 'scout'}`;

@@ -1,3 +1,4 @@
+import { retainedCampaignProgress } from './retained-campaign-progress.mjs';
 import {
   DEFAULT_SCREEN_STEERING_HAND,
   resolveScreenControls,
@@ -514,10 +515,12 @@ export function exportLibrary(library) {
   return JSON.stringify(checkLibrary(library));
 }
 export function progressFor(library, campaign) {
-  const progress = library.campaigns[campaignKey(campaign)];
-  return progress && validateProgress(progress, campaign)
-    ? structuredClone(progress)
-    : emptyProgress(campaign);
+  const key = campaignKey(campaign);
+  const progress = library.campaigns[key];
+  if (progress && validateProgress(progress, campaign)) return structuredClone(progress);
+  // Never conceal a malformed current record by substituting historical data.
+  if (Object.hasOwn(library.campaigns, key)) return emptyProgress(campaign);
+  return retainedCampaignProgress(library, campaign, key) ?? emptyProgress(campaign);
 }
 export function setCampaignProgress(library, campaign, progress) {
   const next = checkLibrary(library);

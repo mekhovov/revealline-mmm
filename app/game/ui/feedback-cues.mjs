@@ -42,7 +42,7 @@ export function materialFor(theme = {}) {
   const id = `${theme.sourceThemeId ?? ''} ${theme.id ?? ''} ${theme.family ?? ''}`;
   if (/seedpod|sail|atlas|ukrain|wood|lacquer/.test(id)) return 'wood';
   if (/porcelain|glass|prism|ice/.test(id)) return 'glass';
-  if (/navi|coupa|spend|paper/.test(id)) return 'soft';
+  if (/paper/.test(id)) return 'soft';
   return 'metal';
 }
 export { recordedMovement as movementFor } from './movement-profiles.mjs';

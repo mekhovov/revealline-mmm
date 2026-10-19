@@ -1041,9 +1041,7 @@ export class Soundscape {
           campaignVictoryMotif(resultContext) ??
           (this.themeFamily === 'atlas'
             ? [0, 5, 7, 12, 14, 12]
-            : this.themeFamily === 'navi'
-              ? [0, 4, 9, 7, 12, 16]
-              : [0, 4, 7, 12, 7, 12]);
+            : [0, 4, 7, 12, 7, 12]);
         // A small hand-played rise opens into the finished picture. Quiet octave
         // partials give the sine bells a glassy edge without a sharp square/saw
         // fanfare, percussion, downloaded assets or a second audio context.

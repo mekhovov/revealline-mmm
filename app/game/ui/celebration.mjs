@@ -17,7 +17,6 @@ const GLINT_COUNT = 16;
 const CONFETTI_TONES = {
   'signal-clear': ['accent', 'safe', 'paper', 'danger', 'accent', 'safe'],
   'stitch-bloom': ['accent', 'danger', 'paper', 'safe', 'danger', 'accent'],
-  'savings-nodes': ['safe', 'accent', 'paper', 'safe', 'danger', 'accent'],
   'neon-fireworks': ['danger', 'safe', 'paper', 'accent', 'safe', 'danger'],
 };
 // Stateless presentation randomness: sampling a frame never consumes gameplay
@@ -33,9 +32,7 @@ export function finaleKind(theme = {}) {
     ? 'signal-clear'
     : theme.family === 'atlas' || theme.scene === 'heritage'
       ? 'stitch-bloom'
-      : theme.family === 'navi' || theme.scene === 'network'
-        ? 'savings-nodes'
-        : 'neon-fireworks';
+      : 'neon-fireworks';
 }
 export function createCelebration({ theme = {}, levelId = '', seed = 0, reduced = false } = {}) {
   return {
