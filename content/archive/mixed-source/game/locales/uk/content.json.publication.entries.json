@@ -69,6 +69,10 @@
     {
       "pointer": "/motionLab.spendSpriteFictionalSpendReview",
       "value": "Дух витрат · вигадана перевірка витрат"
+    },
+    {
+      "pointer": "/clearLedger",
+      "value": "Чистий реєстр"
     }
   ]
 }

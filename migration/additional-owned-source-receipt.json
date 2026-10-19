@@ -2021,6 +2021,33 @@
       "sha256": "38fa2b1b99ec0a0ebb26966daf5f4b08fd52ab72f82210b09dcd0e9b48a3701f",
       "bytes": 10525,
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/README.md",
+      "destination": "content/archive/owned-source/game/README.md",
+      "sourceRevision": "74ba0be35cb989032794facba01e5a81b5718bf7",
+      "sourceGitBlob": "415d4db9c7d6e172705684785c3f6c86be3517cd",
+      "sha256": "11683d58436e8322ed2307b975fd95accccabbf9745b5ab6839709bf4b0918ce",
+      "bytes": 30658,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "scripts/fixtures/actor-effects20-predecessors.json",
+      "sourceGitBlob": "1c2ceef7ad5cd9c9515e77d0fe6cb9fbc85e7bb9",
+      "sourceRevision": "a5a76eadc408d3b4a2aa019f34d26234725e2e05",
+      "destination": "content/archive/owned-source/scripts/fixtures/actor-effects20-predecessors.json",
+      "bytes": 60303,
+      "sha256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/qualification/neon-level-completion/winning-routes.json",
+      "sourceGitBlob": "f1231aa3e8c525941a56d598dc7b72b5e5c3d60c",
+      "sourceRevision": "a5a76eadc408d3b4a2aa019f34d26234725e2e05",
+      "destination": "content/archive/owned-source/docs/qualification/neon-level-completion/winning-routes.json",
+      "bytes": 348745,
+      "sha256": "96a814ff2856080a4efb58f3c0cb87c60f216df072712d6ed25385592f1700f7",
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }
