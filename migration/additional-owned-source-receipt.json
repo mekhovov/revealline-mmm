@@ -2228,6 +2228,51 @@
       "bytes": 25867,
       "sha256": "25026da0563b459d60194187957ed7190adc45184a95c8e029a405d3601c6e7e",
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/verification/company-qualification.mjs",
+      "sourceGitBlob": "e318f8b2dd4eeb38e3ed9501d050e67a5a6f5c80",
+      "sourceRevision": "df4f5717bb4ad1324f00ec88a45cfd99bcefdfd0",
+      "destination": "content/archive/owned-source/docs/verification/company-qualification.mjs",
+      "bytes": 8680,
+      "sha256": "ddbfe7ec6c4ba3e8948b320f6bc5889c8a81221141d2654c2d5e8532bac6dea3",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/verification/menu-scenes/measure.mjs",
+      "sourceGitBlob": "552c4b5d92d98ece54679a04eea08b8ddd65622a",
+      "sourceRevision": "df4f5717bb4ad1324f00ec88a45cfd99bcefdfd0",
+      "destination": "content/archive/owned-source/docs/verification/menu-scenes/measure.mjs",
+      "bytes": 4335,
+      "sha256": "038bd31b9ea5e35c467e74861877ebcf9a1fa0e1144c8119ee174e675f50be66",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/evidence/verify-compact-soundtrack-metadata.mjs",
+      "sourceGitBlob": "ad098a2458004b8308b4df38ae30165e1458504b",
+      "sourceRevision": "df4f5717bb4ad1324f00ec88a45cfd99bcefdfd0",
+      "destination": "content/archive/owned-source/docs/evidence/verify-compact-soundtrack-metadata.mjs",
+      "bytes": 6399,
+      "sha256": "3dfcead51458e919b15efeb790fa698216f6db10360ef0430aa0237b014b6307",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/history/c4c2adbc3f787e0f7db52859b98d9bc54239fdb7e8e44af02a0f4cefcf5bda73.json",
+      "sourceGitBlob": "749178bac586b0860844b50c05344cfd8878ab30",
+      "sourceRevision": "df4f5717bb4ad1324f00ec88a45cfd99bcefdfd0",
+      "destination": "content/archive/owned-source/authoring/production/history/c4c2adbc3f787e0f7db52859b98d9bc54239fdb7e8e44af02a0f4cefcf5bda73.json",
+      "bytes": 20699,
+      "sha256": "c4c2adbc3f787e0f7db52859b98d9bc54239fdb7e8e44af02a0f4cefcf5bda73",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/history/f28b92cdfe4e9ccd402d6e3a625cf9d23c804a5a0b82fb1a3fc25065e7c0d9aa.json",
+      "sourceGitBlob": "6b4d7478d037b52fed9ac3aaf5aa5bb36e0cf745",
+      "sourceRevision": "df4f5717bb4ad1324f00ec88a45cfd99bcefdfd0",
+      "destination": "content/archive/owned-source/authoring/production/history/f28b92cdfe4e9ccd402d6e3a625cf9d23c804a5a0b82fb1a3fc25065e7c0d9aa.json",
+      "bytes": 35307,
+      "sha256": "f28b92cdfe4e9ccd402d6e3a625cf9d23c804a5a0b82fb1a3fc25065e7c0d9aa",
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }
