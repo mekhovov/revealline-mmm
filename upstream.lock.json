@@ -877,8 +877,8 @@
     },
     {
       "path": "game/ui/field-kit-compiled.css",
-      "bytes": 996,
-      "sha256": "05f92b12ebbb125f7842821d82b67b826f35570a396a373c21e6dc4a3209c9d9"
+      "bytes": 1312,
+      "sha256": "d0661fd74b8556dcc8226dd69ee1da861fb717912dcef9223e7b5db88ef3a475"
     },
     {
       "path": "game/ui/menu-scene-catalog.mjs",
@@ -919,7 +919,7 @@
     ]
   },
   "repository": "mekhovov/revealline",
-  "requestedRef": "codex/brand-content-extraction-20261019",
+  "requestedRef": "407572093c45f180122fd863950722fe8f01ad95",
   "commit": "407572093c45f180122fd863950722fe8f01ad95",
   "tree": "44c3d533be9e909abd7217f13b14d4025bb38506",
   "upstreamVersion": "0.151.1",
@@ -6025,8 +6025,8 @@
     },
     {
       "path": "game/ui/field-kit-compiled.css",
-      "bytes": 996,
-      "sha256": "05f92b12ebbb125f7842821d82b67b826f35570a396a373c21e6dc4a3209c9d9"
+      "bytes": 1312,
+      "sha256": "d0661fd74b8556dcc8226dd69ee1da861fb717912dcef9223e7b5db88ef3a475"
     },
     {
       "path": "game/ui/field-kit-components.css",
@@ -7134,8 +7134,8 @@
     },
     {
       "path": "edition-build.json",
-      "bytes": 178717,
-      "sha256": "9366ff4fe66d2162a7449209936080e6b729701d735403a5bd509dd5041d155b"
+      "bytes": 178718,
+      "sha256": "59e1804414fc8a65e4d0039fd1779bb5266dc0bf6ed95a7a27822ca999e4f503"
     },
     {
       "path": "edition-catalog.json",
@@ -11114,8 +11114,8 @@
     },
     {
       "path": "game/ui/field-kit-compiled.css",
-      "bytes": 996,
-      "sha256": "05f92b12ebbb125f7842821d82b67b826f35570a396a373c21e6dc4a3209c9d9"
+      "bytes": 1312,
+      "sha256": "d0661fd74b8556dcc8226dd69ee1da861fb717912dcef9223e7b5db88ef3a475"
     },
     {
       "path": "game/ui/field-kit-components.css",
