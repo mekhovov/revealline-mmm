@@ -1,0 +1,1005 @@
+{
+  "version": "1.0.0",
+  "board": {
+    "columns": 48,
+    "rows": 36
+  },
+  "defaults": {
+    "theme": "fpv-front",
+    "terrainLayer": "fpv-materials",
+    "terrainStyle": "hybrid",
+    "character": "fpv-body",
+    "characterScale": 1,
+    "autoplay": true
+  },
+  "motion": {
+    "cruiseSpeed": 9,
+    "boostMultiplier": 1.7,
+    "slowMultiplier": 0.38,
+    "turnRateDegrees": 540,
+    "maxStepSeconds": 0.04,
+    "rotorIdleRps": 2,
+    "rotorTravelRps": 15,
+    "visualResponseRise": 21,
+    "visualResponseFall": 29,
+    "turnPolicy": "immediate"
+  },
+  "route": [
+    {
+      "x": 6,
+      "y": 6
+    },
+    {
+      "x": 42,
+      "y": 6
+    },
+    {
+      "x": 42,
+      "y": 30
+    },
+    {
+      "x": 6,
+      "y": 30
+    },
+    {
+      "x": 6,
+      "y": 6
+    },
+    {
+      "x": 24,
+      "y": 6
+    },
+    {
+      "x": 24,
+      "y": 30
+    },
+    {
+      "x": 42,
+      "y": 30
+    },
+    {
+      "x": 42,
+      "y": 6
+    }
+  ],
+  "terrain": [
+    {
+      "role": "wall",
+      "x": 9,
+      "y": 8,
+      "width": 10,
+      "height": 2
+    },
+    {
+      "role": "wall",
+      "x": 28,
+      "y": 8,
+      "width": 2,
+      "height": 8
+    },
+    {
+      "role": "wall",
+      "x": 9,
+      "y": 23,
+      "width": 8,
+      "height": 2
+    },
+    {
+      "role": "wall",
+      "x": 30,
+      "y": 24,
+      "width": 8,
+      "height": 2
+    },
+    {
+      "role": "slow",
+      "x": 8,
+      "y": 14,
+      "width": 6,
+      "height": 4
+    },
+    {
+      "role": "slow",
+      "x": 20,
+      "y": 24,
+      "width": 6,
+      "height": 3
+    },
+    {
+      "role": "slow",
+      "x": 34,
+      "y": 8,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "role": "danger",
+      "x": 20,
+      "y": 9,
+      "width": 5,
+      "height": 3
+    },
+    {
+      "role": "danger",
+      "x": 20,
+      "y": 17,
+      "width": 8,
+      "height": 2
+    },
+    {
+      "role": "danger",
+      "x": 34,
+      "y": 17,
+      "width": 4,
+      "height": 3
+    },
+    {
+      "role": "danger",
+      "x": 8,
+      "y": 29,
+      "width": 7,
+      "height": 2
+    }
+  ],
+  "terrainStyles": {
+    "microtile": {
+      "microOpacity": 0.85,
+      "propOpacity": 0,
+      "propPitch": 2
+    },
+    "props": {
+      "microOpacity": 0,
+      "propOpacity": 0.9,
+      "propPitch": 2
+    },
+    "hybrid": {
+      "microOpacity": 0.38,
+      "propOpacity": 0.9,
+      "propPitch": 4
+    }
+  },
+  "characters": {
+    "fpv-body": {
+      "label": "Daybreak FPV",
+      "src": "assets/fpv-body.png",
+      "sourceStatus": "single image-generated concept body, not a production atlas",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [
+        {
+          "x": -0.31,
+          "y": -0.3,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 0
+        },
+        {
+          "x": 0.31,
+          "y": -0.3,
+          "radiusScale": 1,
+          "direction": -1,
+          "phaseDegrees": 25
+        },
+        {
+          "x": -0.31,
+          "y": 0.27,
+          "radiusScale": 1,
+          "direction": -1,
+          "phaseDegrees": 50
+        },
+        {
+          "x": 0.31,
+          "y": 0.27,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 75
+        }
+      ],
+      "centerMark": {
+        "widthCells": 0.18,
+        "heightCells": 0.24,
+        "topColor": "#4a98c8",
+        "bottomColor": "#f0ce60"
+      },
+      "animationRecipe": "fpv-tri"
+    },
+    "neutral-marker": {
+      "label": "Neutral marker",
+      "src": null,
+      "sourceStatus": "diagram marker, not production artwork",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [],
+      "animationRecipe": "still"
+    },
+    "ukrainian-bird": {
+      "label": "Atlas bird",
+      "src": "assets/ukrainian-bird.png",
+      "sourceStatus": "image-generated swallow body with separate procedural wing attachment",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [],
+      "animationRecipe": "swallow-flight"
+    },
+    "retro-craft": {
+      "label": "Tape runner",
+      "src": "assets/retro-craft.png",
+      "sourceStatus": "separate image-generated craft body; independent thruster",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [],
+      "animationRecipe": "retro-thruster"
+    },
+    "navi-avatar": {
+      "label": "Spend Sprite",
+      "src": "assets/navi-avatar.png",
+      "sourceStatus": "original image-generated helper; not verified official Coupa Navi artwork",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [],
+      "animationRecipe": "helper-guidance"
+    },
+    "fpv-racer": {
+      "label": "Skyline FPV",
+      "src": "assets/fpv-racer.png",
+      "sourceStatus": "Generated transparent body; approximate manually inspected anchors, not a production atlas",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [
+        {
+          "x": -0.261,
+          "y": -0.247,
+          "radiusScale": 0.8125,
+          "direction": 1,
+          "phaseDegrees": 0
+        },
+        {
+          "x": 0.262,
+          "y": -0.247,
+          "radiusScale": 0.8125,
+          "direction": -1,
+          "phaseDegrees": 25
+        },
+        {
+          "x": -0.261,
+          "y": 0.242,
+          "radiusScale": 0.8125,
+          "direction": -1,
+          "phaseDegrees": 50
+        },
+        {
+          "x": 0.262,
+          "y": 0.242,
+          "radiusScale": 0.8125,
+          "direction": 1,
+          "phaseDegrees": 75
+        }
+      ],
+      "animationRecipe": "fpv-tri"
+    },
+    "fpv-night": {
+      "label": "Night signal FPV",
+      "src": "assets/fpv-night.png",
+      "sourceStatus": "Generated transparent body; approximate manually inspected anchors, not a production atlas",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [
+        {
+          "x": -0.346,
+          "y": -0.326,
+          "radiusScale": 0.9,
+          "direction": 1,
+          "phaseDegrees": 0
+        },
+        {
+          "x": 0.347,
+          "y": -0.326,
+          "radiusScale": 0.9,
+          "direction": -1,
+          "phaseDegrees": 25
+        },
+        {
+          "x": -0.346,
+          "y": 0.323,
+          "radiusScale": 0.9,
+          "direction": -1,
+          "phaseDegrees": 50
+        },
+        {
+          "x": 0.347,
+          "y": 0.323,
+          "radiusScale": 0.9,
+          "direction": 1,
+          "phaseDegrees": 75
+        }
+      ],
+      "animationRecipe": "night-tri"
+    },
+    "ukrainian-falcon": {
+      "label": "Falcon trim",
+      "src": "assets/ukrainian-bird.png",
+      "sourceStatus": "shared swallow image; cosmetic wing/effect variant, not a separate falcon illustration",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [],
+      "animationRecipe": "falcon-trim"
+    },
+    "retro-vector": {
+      "label": "Vector trail",
+      "src": "assets/retro-craft.png",
+      "sourceStatus": "shared craft image; cosmetic thruster variant",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [],
+      "animationRecipe": "vector-thruster"
+    },
+    "navi-auditor": {
+      "label": "Audit pulse",
+      "src": "assets/navi-avatar.png",
+      "sourceStatus": "shared original helper image; cosmetic pulse variant, not official Navi",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "rotors": [],
+      "animationRecipe": "audit-guidance"
+    },
+    "scout-quad": {
+      "label": "Scout quad",
+      "src": "assets/scout-quad.png",
+      "sourceStatus": "Original generated concept; approximate inspected rig, no real model identity or production atlas",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "animationRecipe": "scout-props",
+      "rotors": [
+        {
+          "x": -0.3602,
+          "y": -0.2752,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 0
+        },
+        {
+          "x": 0.3603,
+          "y": -0.2756,
+          "radiusScale": 1,
+          "direction": -1,
+          "phaseDegrees": 23
+        },
+        {
+          "x": -0.3602,
+          "y": 0.2784,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 46
+        },
+        {
+          "x": 0.3601,
+          "y": 0.2785,
+          "radiusScale": 1,
+          "direction": -1,
+          "phaseDegrees": 69
+        }
+      ]
+    },
+    "heavy-lift": {
+      "label": "Heavy lift",
+      "src": "assets/heavy-lift.png",
+      "sourceStatus": "Original generated concept; approximate inspected rig, no real model identity or production atlas",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "animationRecipe": "heavy-props",
+      "rotors": [
+        {
+          "x": -0.2583,
+          "y": -0.3517,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 0
+        },
+        {
+          "x": 0.2578,
+          "y": -0.3514,
+          "radiusScale": 1,
+          "direction": -1,
+          "phaseDegrees": 23
+        },
+        {
+          "x": -0.4063,
+          "y": -0.0297,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 46
+        },
+        {
+          "x": 0.4052,
+          "y": -0.0302,
+          "radiusScale": 1,
+          "direction": -1,
+          "phaseDegrees": 69
+        },
+        {
+          "x": -0.2634,
+          "y": 0.3001,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 92
+        },
+        {
+          "x": 0.2614,
+          "y": 0.3001,
+          "radiusScale": 1,
+          "direction": -1,
+          "phaseDegrees": 115
+        }
+      ]
+    },
+    "fixedwing-body": {
+      "label": "Fixed-wing body",
+      "src": "assets/fixedwing-body.png",
+      "sourceStatus": "Original generated concept; approximate inspected rig, no real model identity or production atlas",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "animationRecipe": "wing-pusher",
+      "rotors": [
+        {
+          "x": 0.0,
+          "y": 0.268,
+          "radiusScale": 1,
+          "direction": 1,
+          "phaseDegrees": 0
+        }
+      ]
+    },
+    "delta-interceptor": {
+      "label": "Delta interceptor",
+      "src": "assets/delta-interceptor.png",
+      "sourceStatus": "Original generated concept; approximate inspected rig, no real model identity or production atlas",
+      "widthCells": 1.25,
+      "heightCells": 1.25,
+      "headingOffsetDegrees": 0,
+      "sampling": "nearest",
+      "animationRecipe": "delta-wake",
+      "rotors": []
+    }
+  },
+  "terrainLayers": {
+    "fpv-materials": {
+      "label": "FPV \u00b7 concrete / mud / wire",
+      "roles": {
+        "wall": {
+          "kind": "concrete",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "slow": {
+          "kind": "mud",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "danger": {
+          "kind": "wire",
+          "microSrc": null,
+          "propSrc": null
+        }
+      }
+    },
+    "ukraine-materials": {
+      "label": "Ukraine \u00b7 stone / reeds / thorns",
+      "roles": {
+        "wall": {
+          "kind": "stone",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "slow": {
+          "kind": "reeds",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "danger": {
+          "kind": "thorns",
+          "microSrc": null,
+          "propSrc": null
+        }
+      }
+    },
+    "retro-materials": {
+      "label": "1994 \u00b7 circuit / static / plasma",
+      "roles": {
+        "wall": {
+          "kind": "circuit",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "slow": {
+          "kind": "static",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "danger": {
+          "kind": "plasma",
+          "microSrc": null,
+          "propSrc": null
+        }
+      }
+    },
+    "navi-materials": {
+      "label": "Navi \u00b7 archive / queue / alerts",
+      "roles": {
+        "wall": {
+          "kind": "archive",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "slow": {
+          "kind": "queue",
+          "microSrc": null,
+          "propSrc": null
+        },
+        "danger": {
+          "kind": "alert",
+          "microSrc": null,
+          "propSrc": null
+        }
+      }
+    }
+  },
+  "themes": {
+    "fpv-front": {
+      "label": "FPV Front / daybreak",
+      "colors": {
+        "arena": "#101c24",
+        "grid": "#263945",
+        "accent": "#f4d465",
+        "body": "#e9e9cf",
+        "wall": "#83a8b6",
+        "slow": "#93a572",
+        "danger": "#ce7663",
+        "dim": "#566d75"
+      }
+    },
+    "ukraine-atlas": {
+      "label": "Ukraine Atlas / indigo linen",
+      "colors": {
+        "arena": "#152530",
+        "grid": "#2b4350",
+        "accent": "#eac791",
+        "body": "#f2ead8",
+        "wall": "#a6b4ad",
+        "slow": "#83a394",
+        "danger": "#cf766e",
+        "dim": "#667d86"
+      }
+    },
+    "retro-1994": {
+      "label": "1994 Forever / after hours",
+      "colors": {
+        "arena": "#141827",
+        "grid": "#28324a",
+        "accent": "#f0b65c",
+        "body": "#e5f4ed",
+        "wall": "#72b5c4",
+        "slow": "#9691c6",
+        "danger": "#d97591",
+        "dim": "#646a8d"
+      }
+    },
+    "navi-network": {
+      "label": "Navi Network / blue hours",
+      "colors": {
+        "arena": "#0d2535",
+        "grid": "#234253",
+        "accent": "#86daf2",
+        "body": "#eef9fb",
+        "wall": "#74b7cf",
+        "slow": "#a6b89d",
+        "danger": "#e4a065",
+        "dim": "#5d8598"
+      }
+    }
+  },
+  "animationRecipes": {
+    "fpv-tri": {
+      "label": "FPV / three-blade swept",
+      "components": [
+        {
+          "id": "propellers",
+          "type": "rotors",
+          "bladeCount": 3,
+          "bladeShape": "swept",
+          "radius": 0.16,
+          "bladeWidth": 0.28,
+          "fillColor": "#d7e1d5",
+          "tipColor": "#efd166",
+          "hubColor": "#f0f4e2",
+          "direction": 1,
+          "phaseDegrees": 0,
+          "idleRps": 2,
+          "travelRps": 15,
+          "maxVisualRps": 2.6,
+          "blurOpacity": 0.17
+        }
+      ]
+    },
+    "fpv-two": {
+      "label": "FPV / two-blade tapered",
+      "components": [
+        {
+          "id": "propellers",
+          "type": "rotors",
+          "bladeCount": 2,
+          "bladeShape": "tapered",
+          "radius": 0.16,
+          "bladeWidth": 0.28,
+          "fillColor": "#d7e1e9",
+          "tipColor": "#74c4e4",
+          "hubColor": "#f0f4e2",
+          "direction": 1,
+          "phaseDegrees": 0,
+          "idleRps": 2,
+          "travelRps": 15,
+          "maxVisualRps": 2.6,
+          "blurOpacity": 0.17
+        }
+      ]
+    },
+    "fpv-four": {
+      "label": "FPV / four-blade paddle",
+      "components": [
+        {
+          "id": "propellers",
+          "type": "rotors",
+          "bladeCount": 4,
+          "bladeShape": "paddle",
+          "radius": 0.145,
+          "bladeWidth": 0.28,
+          "fillColor": "#b6d0dc",
+          "tipColor": "#efb781",
+          "hubColor": "#f0f4e2",
+          "direction": 1,
+          "phaseDegrees": 0,
+          "idleRps": 2,
+          "travelRps": 15,
+          "maxVisualRps": 2.6,
+          "blurOpacity": 0.17
+        }
+      ]
+    },
+    "night-tri": {
+      "label": "Night trim / three-blade",
+      "components": [
+        {
+          "id": "propellers",
+          "type": "rotors",
+          "bladeCount": 3,
+          "bladeShape": "swept",
+          "radius": 0.145,
+          "bladeWidth": 0.28,
+          "fillColor": "#8caac6",
+          "tipColor": "#8edde6",
+          "hubColor": "#f0f4e2",
+          "direction": 1,
+          "phaseDegrees": 0,
+          "idleRps": 2,
+          "travelRps": 15,
+          "maxVisualRps": 2.6,
+          "blurOpacity": 0.17
+        }
+      ]
+    },
+    "swallow-flight": {
+      "label": "Swallow / pixel wing flap",
+      "components": [
+        {
+          "id": "wings",
+          "type": "wings",
+          "anchors": [
+            [
+              -0.13,
+              -0.08,
+              -1
+            ],
+            [
+              0.13,
+              -0.08,
+              1
+            ]
+          ],
+          "span": 0.43,
+          "chord": 0.2,
+          "frequencyHz": 2.1,
+          "speedFrequencyGain": 0.65,
+          "amplitudeDegrees": 18,
+          "foldFraction": 0.34,
+          "color": "#e9e3cb",
+          "tipColor": "#729bbd"
+        }
+      ]
+    },
+    "falcon-trim": {
+      "label": "Falcon trim / shared bird body",
+      "components": [
+        {
+          "id": "wings",
+          "type": "wings",
+          "anchors": [
+            [
+              -0.13,
+              -0.08,
+              -1
+            ],
+            [
+              0.13,
+              -0.08,
+              1
+            ]
+          ],
+          "span": 0.43,
+          "chord": 0.2,
+          "frequencyHz": 2.1,
+          "speedFrequencyGain": 0.65,
+          "amplitudeDegrees": 18,
+          "foldFraction": 0.34,
+          "color": "#d7bc87",
+          "tipColor": "#8eacbd"
+        }
+      ]
+    },
+    "retro-thruster": {
+      "label": "1994 / coral thruster",
+      "components": [
+        {
+          "id": "exhaust",
+          "type": "thruster",
+          "anchors": [
+            [
+              -0.08,
+              0.355
+            ],
+            [
+              0.08,
+              0.355
+            ]
+          ],
+          "length": 0.23,
+          "width": 0.08,
+          "speedGain": 0.8,
+          "flickerHz": 7,
+          "color": "#e68169",
+          "innerColor": "#fff0bc"
+        }
+      ]
+    },
+    "vector-thruster": {
+      "label": "Vector trail / mint thruster",
+      "components": [
+        {
+          "id": "exhaust",
+          "type": "thruster",
+          "anchors": [
+            [
+              -0.08,
+              0.355
+            ],
+            [
+              0.08,
+              0.355
+            ]
+          ],
+          "length": 0.23,
+          "width": 0.08,
+          "speedGain": 0.8,
+          "flickerHz": 7,
+          "color": "#75dec8",
+          "innerColor": "#e3f8ce"
+        }
+      ]
+    },
+    "helper-guidance": {
+      "label": "Spend Sprite / pulse + blink",
+      "components": [
+        {
+          "id": "guidance",
+          "type": "pulse",
+          "anchors": [
+            [
+              0,
+              0.14
+            ]
+          ],
+          "radius": 0.38,
+          "amplitude": 0.05,
+          "frequencyHz": 0.8,
+          "opacity": 0.2,
+          "color": "#8bd4e4"
+        },
+        {
+          "id": "eyes",
+          "type": "blink",
+          "anchors": [
+            [
+              -0.085,
+              -0.005
+            ],
+            [
+              0.085,
+              -0.005
+            ]
+          ],
+          "frequencyHz": 0.8,
+          "dutyCycle": 0.18,
+          "size": 0.035,
+          "color": "#f0d66a"
+        }
+      ]
+    },
+    "audit-guidance": {
+      "label": "Audit trim / gold pulse + blink",
+      "components": [
+        {
+          "id": "guidance",
+          "type": "pulse",
+          "anchors": [
+            [
+              0,
+              0.14
+            ]
+          ],
+          "radius": 0.38,
+          "amplitude": 0.05,
+          "frequencyHz": 0.8,
+          "opacity": 0.2,
+          "color": "#dfc56c"
+        },
+        {
+          "id": "eyes",
+          "type": "blink",
+          "anchors": [
+            [
+              -0.085,
+              -0.005
+            ],
+            [
+              0.085,
+              -0.005
+            ]
+          ],
+          "frequencyHz": 0.8,
+          "dutyCycle": 0.18,
+          "size": 0.035,
+          "color": "#a8e8ee"
+        }
+      ]
+    },
+    "still": {
+      "label": "Still body / no attachment",
+      "components": []
+    },
+    "scout-props": {
+      "label": "Scout quad / three blades",
+      "components": [
+        {
+          "id": "propellers",
+          "type": "rotors",
+          "bladeCount": 3,
+          "bladeShape": "swept",
+          "radius": 0.11,
+          "bladeWidth": 0.28,
+          "fillColor": "#d7e1d5",
+          "tipColor": "#efd166",
+          "hubColor": "#f0f4e2",
+          "direction": 1,
+          "phaseDegrees": 0,
+          "idleRps": 2,
+          "travelRps": 15,
+          "maxVisualRps": 2.6,
+          "blurOpacity": 0.17
+        }
+      ]
+    },
+    "heavy-props": {
+      "label": "Heavy lift / six rotors",
+      "components": [
+        {
+          "id": "propellers",
+          "type": "rotors",
+          "bladeCount": 3,
+          "bladeShape": "swept",
+          "radius": 0.08,
+          "bladeWidth": 0.28,
+          "fillColor": "#d7e1d5",
+          "tipColor": "#efd166",
+          "hubColor": "#f0f4e2",
+          "direction": 1,
+          "phaseDegrees": 0,
+          "idleRps": 2,
+          "travelRps": 15,
+          "maxVisualRps": 2.6,
+          "blurOpacity": 0.17
+        }
+      ]
+    },
+    "wing-pusher": {
+      "label": "Fixed-wing / two-blade pusher",
+      "components": [
+        {
+          "id": "propellers",
+          "type": "rotors",
+          "bladeCount": 2,
+          "bladeShape": "swept",
+          "radius": 0.07,
+          "bladeWidth": 0.28,
+          "fillColor": "#d7e1d5",
+          "tipColor": "#efd166",
+          "hubColor": "#f0f4e2",
+          "direction": 1,
+          "phaseDegrees": 0,
+          "idleRps": 2,
+          "travelRps": 15,
+          "maxVisualRps": 2.6,
+          "blurOpacity": 0.17
+        }
+      ]
+    },
+    "delta-wake": {
+      "label": "Delta / abstract rear glow",
+      "components": [
+        {
+          "id": "exhaust",
+          "type": "thruster",
+          "anchors": [
+            [
+              -0.01,
+              0.34
+            ]
+          ],
+          "length": 0.18,
+          "width": 0.1,
+          "speedGain": 0.8,
+          "flickerHz": 7,
+          "color": "#e68169",
+          "innerColor": "#fff0bc"
+        }
+      ]
+    }
+  },
+  "familyLooks": {
+    "fpv-front": {
+      "terrainLayer": "fpv-materials"
+    },
+    "ukraine-atlas": {
+      "terrainLayer": "ukraine-materials"
+    },
+    "retro-1994": {
+      "terrainLayer": "retro-materials"
+    },
+    "navi-network": {
+      "terrainLayer": "navi-materials"
+    }
+  }
+}
