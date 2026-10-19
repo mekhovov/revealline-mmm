@@ -1,0 +1,56 @@
+{
+  "note": "Recorded actual CSS dimensions; browser DPR 1.2 required scaled capability requests. First266px diagnostic retained.",
+  "samples": [
+    {
+      "buttons": [
+        {
+          "height": 43.99739456176758,
+          "text": "Start mission ↗"
+        }
+      ],
+      "documentWidth": 266,
+      "height": 533,
+      "mission": "Clear Ledger",
+      "width": 266
+    },
+    {
+      "buttons": [
+        {
+          "height": 43.99739456176758,
+          "text": "Start mission ↗"
+        }
+      ],
+      "documentWidth": 320,
+      "dpr": 1.2000000476837158,
+      "height": 640,
+      "mission": "Clear Ledger",
+      "width": 320
+    },
+    {
+      "buttons": [
+        {
+          "height": 43.99739456176758,
+          "text": "Start mission ↗"
+        }
+      ],
+      "documentWidth": 844,
+      "dpr": 1.2000000476837158,
+      "height": 390,
+      "mission": "Clear Ledger",
+      "width": 844
+    },
+    {
+      "buttons": [
+        {
+          "height": 44.65494537353515,
+          "text": "Start mission ↗"
+        }
+      ],
+      "documentWidth": 1440,
+      "dpr": 1.2000000476837158,
+      "height": 900,
+      "mission": "Clear Ledger",
+      "width": 1440
+    }
+  ]
+}

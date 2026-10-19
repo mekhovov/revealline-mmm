@@ -1,0 +1,273 @@
+{
+  "status": "PUBLIC_CORRECTIVE_TESTS_COMPLETE_WITH_REQUIRED_FOLLOWUP",
+  "at": "2026-09-15T17:58:15.481561+00:00",
+  "phase": "P01",
+  "phaseAccepted": false,
+  "release": {
+    "version": "v0.57.2",
+    "url": "https://mekhovov.github.io/revealline/releases/v0.57.2/site/game/",
+    "sourceRevision": "cc9f8ffcc3be246f53ca0df7f068476d8401d040",
+    "sourceTree": "f6ff808b2d7cf60c4295f99e24e65fa9a26d9ed4",
+    "controllerCommit": "d0288c502620bfa7a4a0861fbdbce1a60be183c5",
+    "controllerTree": "668e2326435f1d620821f35588cd7a2ece844d16",
+    "deploymentId": 6464364805,
+    "publicationRunId": 34999859343
+  },
+  "coldRestore": [
+    {
+      "path": "refused-1-51-cold-continue.json",
+      "at": "2026-09-15T17:52:00.651Z",
+      "runId": "4ce9f795-518d-4c7b-b521-0b3fc0c07dfe",
+      "ticks": 196,
+      "checkpoint": "4ac535eca3faa27e"
+    },
+    {
+      "path": "refused-1-52-cold-paused-stable.json",
+      "at": "2026-09-15T17:52:09.485Z",
+      "runId": "4ce9f795-518d-4c7b-b521-0b3fc0c07dfe",
+      "ticks": 196,
+      "checkpoint": "4ac535eca3faa27e"
+    }
+  ],
+  "offline": [
+    {
+      "path": "online-2-31-offline-large-landscape.json",
+      "details": {
+        "status": "ready",
+        "version": "v0.57.2",
+        "buildId": "6efb45e582f66e73936ba1370a352e7238bca13d7e7f84631a1b2c582103c809",
+        "count": 609,
+        "verified": 609,
+        "bytes": 55440584,
+        "missing": [],
+        "corrupt": [],
+        "format": "revealline.offline-progress.v1",
+        "requestId": "offline-2",
+        "kind": "terminal",
+        "scope": "https://mekhovov.github.io/revealline/releases/v0.57.2/site/",
+        "summary": "Core offline files verified.",
+        "message": "Core offline files verified. FPV Front \u00b7 First Light R2, FPV Front \u00b7 First Light R3, FPV Front \u00b7 First Light Arcade R4, FPV Front \u00b7 Pressure Lines, FPV Front \u00b7 First Light, FPV Front \u00b7 Frontier Lines, FPV Front \u00b7 Illustrated Pressure, Ukraine Atlas \u00b7 Woven Lines, 1994 Forever \u00b7 After Hours, Spend Network \u00b7 Shared Routes, FPV Front \u00b7 Route Choices \u2014 Tactical are optional: install once while online for offline play. Already-installed packs remain in device storage; keep a complete backup."
+      }
+    },
+    {
+      "path": "refused-1-55-offline-verified.json",
+      "details": {
+        "status": "ready",
+        "version": "v0.57.2",
+        "buildId": "6efb45e582f66e73936ba1370a352e7238bca13d7e7f84631a1b2c582103c809",
+        "count": 609,
+        "verified": 609,
+        "bytes": 55440584,
+        "missing": [],
+        "corrupt": [],
+        "format": "revealline.offline-progress.v1",
+        "requestId": "offline-1",
+        "kind": "terminal",
+        "scope": "https://mekhovov.github.io/revealline/releases/v0.57.2/site/",
+        "summary": "Offline files verified. This version can open without a connection while the browser retains its storage.",
+        "message": "Offline files verified. This version can open without a connection while the browser retains its storage. FPV Front \u00b7 First Light R2, FPV Front \u00b7 First Light R3, FPV Front \u00b7 First Light Arcade R4, FPV Front \u00b7 Pressure Lines, FPV Front \u00b7 First Light, FPV Front \u00b7 Frontier Lines, FPV Front \u00b7 Illustrated Pressure, Ukraine Atlas \u00b7 Woven Lines, 1994 Forever \u00b7 After Hours, Spend Network \u00b7 Shared Routes, FPV Front \u00b7 Route Choices \u2014 Tactical are optional: install once while online for offline play. Already-installed packs remain in device storage; keep a complete backup."
+      }
+    }
+  ],
+  "offlineResume": {
+    "ticksBefore": 196,
+    "ticksAfter": 329,
+    "checkpoint": "76edfec285393298",
+    "coverage": "0.0%",
+    "note": "Real unfinished cut/continuation, no offline completed capture claimed."
+  },
+  "css": [
+    {
+      "sequence": 2215,
+      "time": "2026-09-15T17:49:51.986Z",
+      "event": "catalog-css-original-body",
+      "sessionId": "F451C3BD9B533FD48CE7FD67C3F4AB07",
+      "requestId": "66796.1041",
+      "status": 200,
+      "mimeType": "text/css",
+      "url": "https://mekhovov.github.io/revealline/catalog-ui/game/ui/operation-status.css",
+      "path": "run/online-2-events.jsonl.catalog-css-1.css",
+      "bytes": 1889,
+      "sha256": "7e9131637045630f440ed82782bf73c8077397b35fd12c23c64665894ad59f5e",
+      "expectedBytes": 1889,
+      "expectedSha256": "7e9131637045630f440ed82782bf73c8077397b35fd12c23c64665894ad59f5e",
+      "matchesExpected": true
+    }
+  ],
+  "collectors": [
+    {
+      "attempt": "online-1",
+      "count": 661,
+      "capped": false,
+      "exceptions": [],
+      "transportErrors": [
+        {
+          "sequence": 659,
+          "time": "2026-09-15T17:35:04.981Z",
+          "event": "websocket-error",
+          "message": "Max decompressed message size exceeded"
+        }
+      ],
+      "failedRequests": [],
+      "workerResponses": 0,
+      "lastEvent": {
+        "sequence": 661,
+        "time": "2026-09-15T17:35:04.982Z",
+        "event": "collector-stopped",
+        "reason": "browser-connection-closed"
+      }
+    },
+    {
+      "attempt": "online-2",
+      "count": 2411,
+      "capped": false,
+      "exceptions": [],
+      "transportErrors": [],
+      "failedRequests": [],
+      "workerResponses": 6,
+      "lastEvent": {
+        "sequence": 2411,
+        "time": "2026-09-15T17:50:32.557Z",
+        "event": "collector-stopped",
+        "reason": "observed-page-detached"
+      }
+    },
+    {
+      "attempt": "refused-1",
+      "count": 758,
+      "capped": false,
+      "exceptions": [],
+      "transportErrors": [],
+      "failedRequests": [
+        {
+          "sequence": 16,
+          "time": "2026-09-15T17:51:25.732Z",
+          "event": "request-failed",
+          "targetId": "6913C4D8BE931D00163F8B734C3C33F0",
+          "requestId": "0F1C322F5F58EA84821D1F6BC31B9CDB",
+          "type": "Document",
+          "errorText": "net::ERR_TUNNEL_CONNECTION_FAILED",
+          "canceled": false,
+          "blockedReason": null
+        },
+        {
+          "sequence": 387,
+          "time": "2026-09-15T17:51:42.322Z",
+          "event": "request-failed",
+          "targetId": "6913C4D8BE931D00163F8B734C3C33F0",
+          "requestId": "81280.199",
+          "type": "Other",
+          "errorText": "net::ERR_TUNNEL_CONNECTION_FAILED",
+          "canceled": false,
+          "blockedReason": null
+        },
+        {
+          "sequence": 723,
+          "time": "2026-09-15T17:52:33.481Z",
+          "event": "request-failed",
+          "targetId": "6913C4D8BE931D00163F8B734C3C33F0",
+          "requestId": "81280.338",
+          "type": "Fetch",
+          "errorText": "net::ERR_TUNNEL_CONNECTION_FAILED",
+          "canceled": false,
+          "blockedReason": null
+        }
+      ],
+      "workerResponses": 303,
+      "lastEvent": {
+        "sequence": 758,
+        "time": "2026-09-15T17:53:09.183Z",
+        "event": "collector-stopped",
+        "reason": "observed-page-detached"
+      }
+    },
+    {
+      "attempt": "restored-1",
+      "count": 668,
+      "capped": false,
+      "exceptions": [],
+      "transportErrors": [],
+      "failedRequests": [],
+      "workerResponses": 296,
+      "lastEvent": {
+        "sequence": 668,
+        "time": "2026-09-15T17:54:53.608Z",
+        "event": "collector-stopped",
+        "reason": "observed-page-detached"
+      }
+    }
+  ],
+  "downloads": [
+    {
+      "path": "run/downloads/revealline-complete-backup.json",
+      "bytes": 11708229,
+      "sha256": "61404c7ca2b4883b72b088e0c40651648c7c477154b479793e915483bc270421",
+      "scope": "Final bytes retained after native downloads; earlier same-name exports are not separately preserved."
+    },
+    {
+      "path": "run/downloads/revealline-suspended-flight.json",
+      "bytes": 5436,
+      "sha256": "0a004d83d66c37957e710097a1caa60d4e2a9e6ddeb281c2714465f0aff9db2b",
+      "scope": "Final bytes retained after native downloads; earlier same-name exports are not separately preserved."
+    }
+  ],
+  "requiredFinding": {
+    "id": "history-picture-prewarm-writer-release",
+    "observation": "online-2-41-explorer-return-save.json",
+    "text": "Picture unavailable: The profile writer no longer owns picture storage. Your flight remains paused. Retry after restoring its original media.",
+    "saveCheckpointUnchanged": true,
+    "resolution": "Pending next source patch; frozen v0.57.2 remains unchanged."
+  },
+  "limits": [
+    "online-1 stopped after unexplained storage-query stall; subsequent same-profile fresh Chrome exported successfully. No source cause inferred.",
+    "online-1 collector ended17:35:04 with decompressed-message error. Native geometry/actions remain but network coverage gap is explicit.",
+    "Early captures01\u201306 use actual500x701 inner viewport; explicit390x844 starts07.",
+    "Arrow-based select attempts unchanged; native printable type-ahead later selected actual Large/Plain and glyph values.",
+    "Capture labels terminal/completed are not assertions; original status measurements distinguish busy and final.",
+    "Manual-wheel capture was unchanged; it does not prove unsnapped scrolling. Portrait long message was not paged to its end.",
+    "Keyboard activations include programmatic driver focus. No exhaustive keyboard/touch/controller traversal or physical-device qualification.",
+    "No forced delay/response/cache/simulation injection. Fast busy frames not seen in screenshots are not claimed painted.",
+    "Ordinary online restoration returned fresh out-of-scope404 response; blocked canaries and uncached probe are preserved separately.",
+    "Passive mutation collectors capped online-2 at17:45:53 and refused-1 at17:52:54. Later direct measurements/screenshots and native action records remain valid; no continuous post-cap mutation or post-frame proof is claimed.",
+    "Retained run evidence50,870,193B exceeds the launcher\u2019s32MiB evidence reservation; profile/free-space floor remained enforced, but total evidence cap was not. Preserve this tooling limitation and use smaller scoped observation records in follow-up runs."
+  ],
+  "closure": "All four exact owned Chrome processes, three successful collectors plus failed first collector, mutation observers and refusal proxy exited. Original profile retained.",
+  "futureWork": [
+    "Finish file-cancel/Still focus/replay layout and history-return corrections; release next patch after gates.",
+    "Complete bounded transfer/recovery and authoring families before P01 acceptance."
+  ],
+  "mutationObservers": [
+    {
+      "path": "run/online-1-correction-1-native-events.jsonl",
+      "records": 102,
+      "bytes": 3992114,
+      "lastRecord": {
+        "at": "2026-09-15T17:43:00.403Z",
+        "type": "owned-browser-connection-closed"
+      },
+      "capped": false
+    },
+    {
+      "path": "run/online-2-correction-2-native-events.jsonl",
+      "records": 330,
+      "bytes": 12575639,
+      "lastRecord": {
+        "at": "2026-09-15T17:45:53.706Z",
+        "type": "observer-capped",
+        "maxBytes": 12582912
+      },
+      "capped": true
+    },
+    {
+      "path": "run/refused-1-cold-1-native-events.jsonl",
+      "records": 332,
+      "bytes": 12565665,
+      "lastRecord": {
+        "at": "2026-09-15T17:52:54.606Z",
+        "type": "observer-capped",
+        "maxBytes": 12582912
+      },
+      "capped": true
+    }
+  ]
+}

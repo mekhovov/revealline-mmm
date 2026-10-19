@@ -1,0 +1,536 @@
+{
+  "sourceHold": "e92141bfea272954915778b99386ce9f4567f4eb937c201519afdefe45579687",
+  "binding": "f9d92707a05e75cc9ee45dcf22c8c792f6c98b9490f9518b69ae938d6cd77cf1",
+  "events": [
+    {
+      "number": 1,
+      "label": "Actual Solo Start launches First Signal with complete 768 by 576 canvas",
+      "at": "2026-09-15T20:49:43.891Z",
+      "dom": "- button \"Game menu\": ◩ REVEAL / LINE\n- button \"Enter fullscreen\": ⛶\n- button \"Pause or resume\": Ⅱ\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 0.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:12\n    - generic: SCORE\n    - strong: \"00000\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\" [active]\n    - strong: Safe ground\n    - generic: Close a line to reveal the picture\n    - status: \"Your first route: fly down from the marked start to the opposite border.\"\n    - status",
+      "visible": {
+        "active": {
+          "id": "game-canvas",
+          "tag": "DIV",
+          "text": ""
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1101.2421875,\"height\":961.75,\"left\":13,\"right\":1296,\"top\":139.4921875,\"width\":1283,\"x\":13,\"y\":139.4921875}",
+            "width": 768
+          },
+          {
+            "height": 0,
+            "id": "result-picture",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 0
+          },
+          {
+            "height": 576,
+            "id": "gallery-canvas",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 112,
+            "id": "enemy-guide-preview",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 192
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/",
+        "width": 1309
+      }
+    },
+    {
+      "number": 2,
+      "label": "Solo direction tap and released movement result, paused for inspection",
+      "at": "2026-09-15T20:49:58.922Z",
+      "dom": "- button \"Game menu\": ◩ REVEAL / LINE\n- generic: TACTICAL EDITION\n- button \"Enter fullscreen\": ⛶\n- button \"Missions\"\n- button \"Collection\"\n- button \"Game settings\": Settings\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 50.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:16\n    - generic: SCORE\n    - strong: \"07820\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\"\n    - region \"Mission details\":\n      - img \"The picture revealed in this flight\"\n      - paragraph: MISSION 01 / FIRST SIGNAL\n      - heading \"A little more light.\" [level=1]\n      - paragraph: 50.0% captured · 7,820 points · 0:16. Full picture added to your collection.\n      - paragraph: Standard difficulty.\n      - generic: ★★★\n    - button \"Next uncleared mission →\" [active]\n    - button \"View picture ⤢\"\n    - button \"Try again\"\n    - button \"Choose appearance\"\n    - button \"Main menu\"\n    - paragraph: \"Gold: fast and no lives lost.\"\n    - strong: Mission complete\n    - generic: Target reached\n    - status: Picture unlocked. A whole world, from one brave line.\n    - status",
+      "visible": {
+        "active": {
+          "id": "next-button",
+          "tag": "BUTTON",
+          "text": "Next uncleared mission →"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1101.2421875,\"height\":961.75,\"left\":13,\"right\":1296,\"top\":139.4921875,\"width\":1283,\"x\":13,\"y\":139.4921875}",
+            "width": 768
+          },
+          {
+            "height": 480,
+            "id": "result-picture",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":812.25,\"height\":300,\"left\":174.5,\"right\":620.2109375,\"top\":512.25,\"width\":445.7109375,\"x\":174.5,\"y\":512.25}",
+            "width": 640
+          },
+          {
+            "height": 576,
+            "id": "gallery-canvas",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 112,
+            "id": "enemy-guide-preview",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 192
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/",
+        "width": 1309
+      }
+    },
+    {
+      "number": 3,
+      "label": "Correction to event2 label: Solo had already WON after one down cut, 50.0%, 7820 points, 0:16; Escape did not create a pause",
+      "at": "2026-09-15T20:50:23.243Z",
+      "dom": "- button \"Game menu\": ◩ REVEAL / LINE\n- generic: TACTICAL EDITION\n- button \"Enter fullscreen\": ⛶\n- button \"Missions\"\n- button \"Collection\"\n- button \"Game settings\": Settings\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 50.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:16\n    - generic: SCORE\n    - strong: \"07820\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\"\n    - region \"Mission details\":\n      - img \"The picture revealed in this flight\"\n      - paragraph: MISSION 01 / FIRST SIGNAL\n      - heading \"A little more light.\" [level=1]\n      - paragraph: 50.0% captured · 7,820 points · 0:16. Full picture added to your collection.\n      - paragraph: Standard difficulty.\n      - generic: ★★★\n    - button \"Next uncleared mission →\" [active]\n    - button \"View picture ⤢\"\n    - button \"Try again\"\n    - button \"Choose appearance\"\n    - button \"Main menu\"\n    - paragraph: \"Gold: fast and no lives lost.\"\n    - strong: Mission complete\n    - generic: Target reached\n    - status: Picture unlocked. A whole world, from one brave line.\n    - status",
+      "visible": {
+        "active": {
+          "id": "next-button",
+          "tag": "BUTTON",
+          "text": "Next uncleared mission →"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1101.2421875,\"height\":961.75,\"left\":13,\"right\":1296,\"top\":139.4921875,\"width\":1283,\"x\":13,\"y\":139.4921875}",
+            "width": 768
+          },
+          {
+            "height": 480,
+            "id": "result-picture",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":812.25,\"height\":300,\"left\":174.5,\"right\":620.2109375,\"top\":512.25,\"width\":445.7109375,\"x\":174.5,\"y\":512.25}",
+            "width": 640
+          },
+          {
+            "height": 576,
+            "id": "gallery-canvas",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 112,
+            "id": "enemy-guide-preview",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 192
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/",
+        "width": 1309
+      }
+    },
+    {
+      "number": 4,
+      "label": "Earned Solo full picture visibly contains hut, mountain sunset and meadow at original 4:3; scored coverage stays50%",
+      "at": "2026-09-15T20:50:33.406Z",
+      "dom": "- button \"Game menu\": ◩ REVEAL / LINE\n- generic: TACTICAL EDITION\n- button \"Enter fullscreen\": ⛶\n- button \"Missions\"\n- button \"Collection\"\n- button \"Game settings\": Settings\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 50.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:16\n    - generic: SCORE\n    - strong: \"07820\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\"\n    - button \"Results ↗\" [active]\n    - strong: Mission complete\n    - generic: Target reached\n    - status: Picture unlocked. A whole world, from one brave line.\n    - status",
+      "visible": {
+        "active": {
+          "id": "show-result",
+          "tag": "BUTTON",
+          "text": "Results ↗"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1101.2421875,\"height\":961.75,\"left\":13,\"right\":1296,\"top\":139.4921875,\"width\":1283,\"x\":13,\"y\":139.4921875}",
+            "width": 768
+          },
+          {
+            "height": 480,
+            "id": "result-picture",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 640
+          },
+          {
+            "height": 576,
+            "id": "gallery-canvas",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 112,
+            "id": "enemy-guide-preview",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 192
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/",
+        "width": 1309
+      }
+    },
+    {
+      "number": 5,
+      "label": "Returned via focused header Game menu after Tab traversal; not a Results Main menu button claim",
+      "at": "2026-09-15T20:50:42.597Z",
+      "dom": "- button \"Game menu\": ◩ REVEAL / LINE\n- generic: TACTICAL EDITION\n- button \"Enter fullscreen\": ⛶\n- button \"Missions\"\n- button \"Collection\"\n- button \"Game settings\": Settings\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 50.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:16\n    - generic: SCORE\n    - strong: \"07820\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\"\n    - region \"Mission details\":\n      - img \"The picture revealed in this flight\"\n      - paragraph: MISSION 01 / FIRST SIGNAL\n      - heading \"A little more light.\" [level=1]\n      - paragraph: 50.0% captured · 7,820 points · 0:16. Full picture added to your collection.\n      - paragraph: Standard difficulty.\n      - generic: ★★★\n    - button \"Next uncleared mission →\"\n    - button \"View picture ⤢\"\n    - button \"Try again\"\n    - button \"Choose appearance\"\n    - button \"Main menu\"\n    - paragraph: \"Gold: fast and no lives lost.\"\n    - strong: Mission complete\n    - generic: Target reached\n    - status: Picture unlocked. A whole world, from one brave line.\n    - status\n- dialog \"REVEAL / LINE\":\n  - paragraph: FPV FIELD KIT / FLIGHT READY\n  - heading \"REVEAL / LINE\" [level=1]:\n    - text: REVEAL\n    - generic: / LINE\n  - paragraph:\n    - text: Find your line.\n    - text: Bring the picture home.\n  - navigation \"Game mode\":\n    - strong: Solo\n    - generic: One player\n    - link \"Versus Two rival boards\":\n      - /url: couch/?return=solo\n      - strong: Versus\n      - generic: Two rival boards\n    - link \"Team One shared arena\":\n      - /url: couch/relay-rescue.html?return=solo\n      - strong: Team\n      - generic: One shared arena\n  - navigation \"Main menu\":\n    - button \"Start\" [active]:\n      - generic: Start\n      - generic: →\n    - button \"Missions\"\n    - button \"Collection\"\n    - button \"Settings\"\n    - button \"Workshop\"\n    - link \"Release explorer Play another edition\":\n      - /url: http://127.0.0.1:64092/releases/\n      - text: Release explorer\n      - generic: Play another edition\n  - paragraph: Start · First Signal\n  - paragraph: Choose a flight. Trace a path. Close the line.\n  - paragraph: Version DEV\n  - paragraph:\n    - text: HANGAR 01\n    - generic: FIRST LIGHT",
+      "visible": {
+        "active": {
+          "id": "shell-featured",
+          "tag": "BUTTON",
+          "text": "Start\n            →"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1101.2421875,\"height\":961.75,\"left\":13,\"right\":1296,\"top\":139.4921875,\"width\":1283,\"x\":13,\"y\":139.4921875}",
+            "width": 768
+          },
+          {
+            "height": 480,
+            "id": "result-picture",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":812.25,\"height\":300,\"left\":174.5,\"right\":620.2109375,\"top\":512.25,\"width\":445.7109375,\"x\":174.5,\"y\":512.25}",
+            "width": 640
+          },
+          {
+            "height": 576,
+            "id": "gallery-canvas",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 112,
+            "id": "enemy-guide-preview",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 192
+          }
+        ],
+        "dialogs": [
+          "shell-home"
+        ],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/",
+        "width": 1309
+      }
+    },
+    {
+      "number": 6,
+      "label": "Versus selects matching First Signal FPV Scout through native map control",
+      "at": "2026-09-15T20:51:15.182Z",
+      "dom": "- main:\n  - region \"Race setup\":\n    - paragraph: SAME CONDITIONS / TWO ROUTES\n    - heading \"Race setup\" [level=1]\n    - paragraph: Choose together. Each player starts with the same map, craft and time.\n    - text: Map\n    - combobox \"Map\" [active]:\n      - option \"FPV Front · Pressure Lines · Orchard Crossing · Arcade\"\n      - option \"FPV Front · Pressure Lines · Courtyard Exits · Arcade\"\n      - option \"FPV Front · Pressure Lines · Night Crossfire · Arcade\"\n      - option \"First Signal · First Signal · Tactical\" [selected]\n      - option \"First Signal · Relay Orchard · Tactical\"\n      - option \"First Signal · Crosswind · Tactical\"\n      - option \"First Signal · Stone Lanes · Tactical\"\n      - option \"First Signal · Night Patrol · Tactical\"\n      - option \"First Signal · Hidden Frequency · Tactical\"\n      - option \"First Signal · The Crossing · Tactical\"\n      - option \"First Signal · Last Light · Tactical\"\n      - option \"First Signal · Signal Garden · Tactical\"\n      - option \"First Signal · Supply Circuit · Tactical\"\n      - option \"First Signal · Short Fuse · Tactical\"\n      - option \"First Signal · Relay Storm · Tactical\"\n    - text: World\n    - combobox \"World\":\n      - option \"FPV Front\" [selected]\n      - option \"Ukraine Atlas\"\n      - option \"1994 Forever\"\n      - option \"Spend Network\"\n    - text: Craft\n    - combobox \"Craft\":\n      - option \"Scout\" [selected]\n      - option \"Light carrier\"\n      - option \"Heavy carrier\"\n      - option \"Interceptor\"\n      - option \"Fiber relay\"\n      - option \"Impact craft\"\n      - option \"Trapper\"\n    - text: Steering\n    - combobox \"Steering\":\n      - option \"Immediate turns\" [selected]\n      - option \"Grid-center turns\"\n    - text: Round time\n    - combobox \"Round time\":\n      - option \"90 seconds\" [selected]\n      - option \"3 minutes\"\n      - option \"30 seconds\"\n    - paragraph: Mark hidden objectives permanently; show enemy direction hints for four seconds. No slowing.\n    - status: No installed chapters in this profile. Install chapters in solo More worlds, then refresh.\n    - button \"Refresh installed chapters\"\n    - button \"Done · back to lobby\"\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+      "visible": {
+        "active": {
+          "id": "race-level",
+          "tag": "SELECT",
+          "text": "FPV Front · Pressure Lines · Orchard Crossing · ArcadeFPV Front · Pressure Lines · Courtyard Exits · ArcadeFPV Front · P"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "race-canvas-0",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 576,
+            "id": "race-canvas-1",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/couch/?return=solo",
+        "width": 1309
+      }
+    },
+    {
+      "number": 7,
+      "label": "Both players tapped Down; actual pause records their current cuts and same prepared picture",
+      "at": "2026-09-15T20:51:43.670Z",
+      "dom": "- main:\n  - region \"Round complete.\":\n    - navigation \"Game mode\":\n      - link \"Solo One player\":\n        - /url: ../\n        - strong: Solo\n        - generic: One player\n      - strong: Versus\n      - generic: Two rival boards\n      - link \"Team One shared arena\":\n        - /url: relay-rescue.html?return=versus\n        - strong: Team\n        - generic: One shared arena\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Round complete.\" [level=1]\n    - status: Sunflower wins the round. First clear.\n    - paragraph: First Signal · First Signal · Tactical · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n      - paragraph: 52.2% · 3 lives · 8160 points · 1 round wins\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n      - paragraph: 0.0% · 3 lives · 0 points · 0 round wins\n    - button \"Next round ↗\" [active]\n    - button \"New match · setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - button \"View both boards\"\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+      "visible": {
+        "active": {
+          "id": "race-start",
+          "tag": "BUTTON",
+          "text": "Next round ↗"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "race-canvas-0",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 576,
+            "id": "race-canvas-1",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/couch/?return=solo",
+        "width": 1309
+      }
+    },
+    {
+      "number": 8,
+      "label": "Correction to event7 label: round already completed before Escape; Sunflower52.2%,3lives,8160points wins, Skyline0%; no paused-cut claim",
+      "at": "2026-09-15T20:51:53.209Z",
+      "dom": "- main:\n  - region \"Round complete.\":\n    - navigation \"Game mode\":\n      - link \"Solo One player\":\n        - /url: ../\n        - strong: Solo\n        - generic: One player\n      - strong: Versus\n      - generic: Two rival boards\n      - link \"Team One shared arena\":\n        - /url: relay-rescue.html?return=versus\n        - strong: Team\n        - generic: One shared arena\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Round complete.\" [level=1]\n    - status: Sunflower wins the round. First clear.\n    - paragraph: First Signal · First Signal · Tactical · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n      - paragraph: 52.2% · 3 lives · 8160 points · 1 round wins\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n      - paragraph: 0.0% · 3 lives · 0 points · 0 round wins\n    - button \"Next round ↗\" [active]\n    - button \"New match · setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - button \"View both boards\"\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+      "visible": {
+        "active": {
+          "id": "race-start",
+          "tag": "BUTTON",
+          "text": "Next round ↗"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "race-canvas-0",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 576,
+            "id": "race-canvas-1",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/couch/?return=solo",
+        "width": 1309
+      }
+    },
+    {
+      "number": 9,
+      "label": "View both boards shows matching Solo hut/sunset picture fully on Sunflower; Skyline retains unfinished gold cut and concealment. Both complete4:3arenas fit with side pillars",
+      "at": "2026-09-15T20:52:35.126Z",
+      "dom": "- main:\n  - button \"Results\" [active]\n  - generic: SUNFLOWER\n  - strong: \"1 : 0\"\n  - generic: SKYLINE\n  - strong: 1:22\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: finished\n      - img \"Player 1 race board\"\n      - paragraph: 52.2% · 3 lives · 8160 points\n      - paragraph: W A S D · Results for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: finished\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Results for options",
+      "visible": {
+        "active": {
+          "id": "race-pause",
+          "tag": "BUTTON",
+          "text": "Results"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "race-canvas-0",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":619.796875,\"height\":522.609375,\"left\":13,\"right\":1296,\"top\":97.1875,\"width\":1283,\"x\":13,\"y\":97.1875}",
+            "width": 768
+          },
+          {
+            "height": 576,
+            "id": "race-canvas-1",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1259,\"height\":522.609375,\"left\":13,\"right\":1296,\"top\":736.390625,\"width\":1283,\"x\":13,\"y\":736.390625}",
+            "width": 768
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/couch/?return=solo",
+        "width": 1309
+      }
+    },
+    {
+      "number": 10,
+      "label": "Plain/Large and Reduced effects selected; intermediate on-screen Boost toggle was restored Off before leaving",
+      "at": "2026-09-15T20:53:04.060Z",
+      "dom": "- main:\n  - region \"Flight settings\":\n    - paragraph: MAKE YOURSELF AT HOME\n    - heading \"Flight settings\" [level=1]\n    - text: Text style\n    - combobox \"Text style\":\n      - option \"Theme font\"\n      - option \"Plain\" [selected]\n    - generic: Text size\n    - combobox \"Text size\":\n      - option \"Standard\"\n      - option \"Large\" [selected]\n    - text: Player 1 touch controls\n    - combobox \"Player 1 touch controls\":\n      - option \"Auto\" [selected]\n      - option \"Always\"\n      - option \"Off\"\n    - text: Player 2 touch controls\n    - combobox \"Player 2 touch controls\":\n      - option \"Auto\" [selected]\n      - option \"Always\"\n      - option \"Off\"\n    - paragraph: Auto shows a player's controls after a touch on their board. Keyboard or controller use hides them at the next pause. Choose Always to play with a mouse.\n    - checkbox \"Toggle on-screen Boost\"\n    - text: Toggle on-screen Boost\n    - checkbox \"Reduced effects\" [checked] [active]\n    - text: Reduced effects\n    - paragraph\n    - status\n    - button \"Unmute sound\"\n    - text: Master sound volume\n    - slider \"Master sound volume\": \"0.65\"\n    - status\n    - paragraph: \"0 standard controllers assigned · Player 1: keyboard/touch · Player 2: keyboard/touch. Keyboard and touch remain available. Escape pauses both boards.\"\n    - button \"Back\"\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+      "visible": {
+        "active": {
+          "id": "race-reduced",
+          "tag": "INPUT",
+          "text": ""
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "race-canvas-0",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          },
+          {
+            "height": 576,
+            "id": "race-canvas-1",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 768
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/couch/?return=solo",
+        "width": 1309
+      }
+    },
+    {
+      "number": 11,
+      "label": "Finished boards remain unchanged after Plain/Large/reduced preferences",
+      "at": "2026-09-15T20:53:04.312Z",
+      "dom": "- main:\n  - button \"Results\" [active]\n  - generic: SUNFLOWER\n  - strong: \"1 : 0\"\n  - generic: SKYLINE\n  - strong: 1:22\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: finished\n      - img \"Player 1 race board\"\n      - paragraph: 52.2% · 3 lives · 8160 points\n      - paragraph: W A S D · Results for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: finished\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Results for options",
+      "visible": {
+        "active": {
+          "id": "race-pause",
+          "tag": "BUTTON",
+          "text": "Results"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "race-canvas-0",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":608.5,\"height\":504.703125,\"left\":13,\"right\":1296,\"top\":103.796875,\"width\":1283,\"x\":13,\"y\":103.796875}",
+            "width": 768
+          },
+          {
+            "height": 576,
+            "id": "race-canvas-1",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1247,\"height\":504.703125,\"left\":13,\"right\":1296,\"top\":742.296875,\"width\":1283,\"x\":13,\"y\":742.296875}",
+            "width": 768
+          }
+        ],
+        "dialogs": [],
+        "dpr": 2,
+        "height": 1348,
+        "images": [],
+        "url": "http://127.0.0.1:64092/game/couch/?return=solo",
+        "width": 1309
+      }
+    },
+    {
+      "number": 12,
+      "label": "After Versus, Solo Collection reopens First Signal original and retains7820point GOLD16.14s score; no Versus score replaces it",
+      "at": "2026-09-15T20:54:07.872Z",
+      "dom": "- button \"Game menu\": ◩ REVEAL / LINE\n- generic: TACTICAL EDITION\n- button \"Enter fullscreen\": ⛶\n- button \"Missions\"\n- button \"Collection\"\n- button \"Game settings\": Settings\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 0.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:00\n    - generic: SCORE\n    - strong: \"00000\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\"\n    - region \"Mission details\":\n      - paragraph: MISSION 01\n      - heading \"Clear a path. Reveal a world.\" [level=1]\n      - paragraph: Leave safe ground, draw a line and return. Reveal 45% by enclosing regions without a field enemy.\n      - paragraph: Standard difficulty.\n    - button \"Start mission ↗\"\n    - button \"Learn by playing\"\n    - button \"Mission brief\"\n    - button \"Main menu\"\n    - paragraph: Tap a direction to fly. Equipment controls are in How to play. Esc / P pauses.\n    - strong: Ready for launch\n    - generic: Close a line to reveal the picture\n    - status: \"Your first route: fly down from the marked start to the opposite border.\"\n    - status\n- dialog \"Your collection.\":\n  - button \"Close collection\": ×\n  - paragraph: YOUR FLIGHT LOG\n  - heading \"Your collection.\" [level=2]\n  - paragraph: Completed pictures stay here. Open one to enjoy it again, or replay its mission for a new best.\n  - text: Find a picture\n  - searchbox \"Find a picture\"\n  - button \"First Signal FPV Front · Standard · Picture best 7,820 points · Level best GOLD\":\n    - strong: First Signal\n    - generic: FPV Front · Standard · Picture best 7,820 points · Level best GOLD\n  - generic \"Achievements and appearances\"\n  - option \"First Signal · Standard\" [selected]\n  - button \"Flight records\"\n  - button \"Back to menu →\"\n- dialog \"First Signal\":\n  - button \"Close picture\" [active]: ×\n  - paragraph:\n    - status: \"FPV Front · Standard · Best picture score: 7,820 points · GOLD · 16.14s · Level best medal: GOLD\"\n  - heading \"First Signal\" [level=2]\n  - img \"Completed level picture\"\n  - button \"Play celebration ↗\"\n  - button \"Replay mission\"\n  - button \"Back to collection\"\n- dialog \"REVEAL / LINE\":\n  - paragraph: FPV FIELD KIT / FLIGHT READY\n  - heading \"REVEAL / LINE\" [level=1]:\n    - text: REVEAL\n    - generic: / LINE\n  - paragraph:\n    - text: Find your line.\n    - text: Bring the picture home.\n  - navigation \"Game mode\":\n    - strong: Solo\n    - generic: One player\n    - link \"Versus Two rival boards\":\n      - /url: couch/?return=solo\n      - strong: Versus\n      - generic: Two rival boards\n    - link \"Team One shared arena\":\n      - /url: couch/relay-rescue.html?return=solo\n      - strong: Team\n      - generic: One shared arena\n  - navigation \"Main menu\":\n    - button \"Start\":\n      - generic: Start\n      - generic: →\n    - button \"Missions\"\n    - button \"Collection\"\n    - button \"Settings\"\n    - button \"Workshop\"\n    - link \"Release explorer Play another edition\":\n      - /url: http://127.0.0.1:64092/releases/\n      - text: Release explorer\n      - generic: Play another edition\n  - paragraph: Start · First Signal\n  - paragraph: Choose a flight. Trace a path. Close the line.\n  - paragraph: Version DEV\n  - paragraph:\n    - text: HANGAR 01\n    - generic: FIRST LIGHT",
+      "visible": {
+        "active": {
+          "id": "",
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        "canvases": [
+          {
+            "height": 576,
+            "id": "",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":1117.8038482666016,\"height\":962.560791015625,\"left\":12.552083969116211,\"right\":1296.3368740081787,\"top\":155.24305725097656,\"width\":1283.7847900390625,\"x\":12.552083969116211,\"y\":155.24305725097656}",
+            "width": 768
+          },
+          {
+            "height": 0,
+            "id": "result-picture",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 0
+          },
+          {
+            "height": 240,
+            "id": "",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":541.9097595214844,\"height\":228.6632080078125,\"left\":177.7777862548828,\"right\":482.6649627685547,\"top\":313.2465515136719,\"width\":304.8871765136719,\"x\":177.7777862548828,\"y\":313.2465515136719}",
+            "width": 320
+          },
+          {
+            "height": 576,
+            "id": "gallery-canvas",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":735.3125305175781,\"height\":576.8229370117188,\"left\":269.8958435058594,\"right\":1038.9930725097656,\"top\":158.48959350585938,\"width\":769.0972290039062,\"x\":269.8958435058594,\"y\":158.48959350585938}",
+            "width": 768
+          },
+          {
+            "height": 112,
+            "id": "enemy-guide-preview",
+            "imageRendering": "pixelated",
+            "rect": "{\"bottom\":0,\"height\":0,\"left\":0,\"right\":0,\"top\":0,\"width\":0,\"x\":0,\"y\":0}",
+            "width": 192
+          }
+        ],
+        "dialogs": [
+          "collection-dialog",
+          "gallery-view-dialog",
+          "shell-home"
+        ],
+        "dpr": 1.7999999523162842,
+        "height": 1348,
+        "images": [
+          {
+            "alt": "",
+            "height": 1199,
+            "src": "http://127.0.0.1:64092/authoring/motion-lab/assets/fpv-racer.png",
+            "width": 1312
+          },
+          {
+            "alt": "",
+            "height": 1254,
+            "src": "http://127.0.0.1:64092/authoring/motion-lab/assets/fpv-night.png",
+            "width": 1254
+          }
+        ],
+        "url": "http://127.0.0.1:64092/game/",
+        "width": 1309
+      }
+    }
+  ]
+}
