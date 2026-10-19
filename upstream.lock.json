@@ -924,9 +924,9 @@
     ]
   },
   "repository": "mekhovov/revealline",
-  "requestedRef": "74ba0be35cb989032794facba01e5a81b5718bf7",
-  "commit": "74ba0be35cb989032794facba01e5a81b5718bf7",
-  "tree": "0024230a6c688ef3f8aa93e787913c59be867e57",
+  "requestedRef": "HEAD",
+  "commit": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+  "tree": "9717c8fbec151fe745f0a40d0b6e8fb902b94b25",
   "upstreamVersion": "0.151.1",
   "editionId": "coupa-all",
   "brandId": "coupa",
@@ -1418,8 +1418,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1275667,
-      "sha256": "a665f5ccb043e64f80a134277aa2e387ef2af9525ce592159488d78df3da0a60"
+      "bytes": 1275559,
+      "sha256": "23603e864c2f5dbd29188cf8c3c959733ae9d17ec393d8ac999c0531f5735116"
     },
     {
       "path": "game/i18n/index.mjs",
@@ -1855,8 +1855,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 626236,
-      "sha256": "2a9461a415c6aeeb083c7cb89ccf1ad0c6e77509e5a23c63f89ef4eb3f27f94c"
+      "bytes": 626792,
+      "sha256": "88053ffcf0b88d4ab37727927f69111952ba3dc5bda6afc87f44994e950849e3"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -4115,8 +4115,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1275875,
-      "sha256": "d2763af45af0b6fa9f008cf77ad24373e854cb94c5c40ea30a607c39115923c5"
+      "bytes": 1275399,
+      "sha256": "9edeca1c9de48e3420ae54d829e3ad72745fef6ca54f52c0fe862644270b7a7c"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -6949,6 +6949,11 @@
       "sha256": "954263e24919588630432818c3209e1c60c8fcfc0dab795cb9bb1918922c7d78"
     },
     {
+      "path": "game/ui/soundtrack-authoring-view.mjs",
+      "bytes": 14191,
+      "sha256": "ef43e662230d3a588fedbded2b09425f54c16f9d40b0462063172ff5effdb0ad"
+    },
+    {
       "path": "game/ui/soundtrack-error-copy.mjs",
       "bytes": 6305,
       "sha256": "1c7d1b7f070e30e7033d70bb87bf606451e61c9ef7f89190eb51faffbfc3b938"
@@ -6960,8 +6965,8 @@
     },
     {
       "path": "game/ui/soundtrack-panel.mjs",
-      "bytes": 152649,
-      "sha256": "ddd840fed85b18ebe55c73c97f30bca9f408aa645c5d33e022e33a0353203dc2"
+      "bytes": 150465,
+      "sha256": "5e9caf6659a2d44deb51772c3b5d1c04d2fe3ffc8d833ef91c67785be02c77c0"
     },
     {
       "path": "game/ui/soundtrack-player.mjs",
@@ -7205,7 +7210,7 @@
     {
       "path": "edition-build.json",
       "bytes": 180741,
-      "sha256": "5bb86b8e22c1b30c8c8ca6e85361565f90b376c001396b86f43727cd0a8eba93"
+      "sha256": "04fcf3f0e6c199d889cf53a8543ee55ff7a92d38e919f9aacb8c117b7415047b"
     },
     {
       "path": "edition-catalog.json",
@@ -7229,8 +7234,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 626820,
-      "sha256": "4d297727906249ba5e96e5fc9c2530e52dce081f65e8e6828f3e28d6cdc725a4"
+      "bytes": 627376,
+      "sha256": "8a0fe512f177627116a487e2472ee4094e607b9d37883bf7e7949fd29db6d41e"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -7310,7 +7315,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "7166eca154ee5f3751a74a9a26e3a0accb86da2cea6b32c2c90d414a90957d66"
+      "sha256": "797a0aa0318949dbda01131f75ea8539bd1bc9f5971659bd2c4639ddddd46a27"
     },
     {
       "path": "game/campaign-contexts.mjs",

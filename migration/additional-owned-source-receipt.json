@@ -2048,6 +2048,24 @@
       "bytes": 348745,
       "sha256": "96a814ff2856080a4efb58f3c0cb87c60f216df072712d6ed25385592f1700f7",
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/current-art.test.mjs",
+      "sourceGitBlob": "f747c8e2084dab3fe83f0483d7eb44a777c9efd6",
+      "sourceRevision": "a5a76eadc408d3b4a2aa019f34d26234725e2e05",
+      "destination": "content/archive/owned-source/game/test/current-art.test.mjs",
+      "bytes": 10022,
+      "sha256": "cfa71986e8280d1952891940beb3e59a975a6b9cfe3cc8b491943ccd45f8965c",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/ui/soundtrack-authoring-view.mjs",
+      "sourceGitBlob": "ffa796251fce11736a195232431607740883220b",
+      "sourceRevision": "b3d0004e9716a9dbcc14c6a95f20760458f690ee",
+      "destination": "content/archive/owned-source/game/ui/soundtrack-authoring-view.mjs",
+      "bytes": 14219,
+      "sha256": "b33ec2c9c5bd6f27b9f38dfe7b8920acb31812ef01a7902f968a43d2d95f1ef0",
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }

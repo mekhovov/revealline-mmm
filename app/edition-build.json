@@ -296,7 +296,7 @@
     "coupa-all"
   ],
   "version": "v0.151.1",
-  "sourceRevision": "74ba0be35cb989032794facba01e5a81b5718bf7",
+  "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
   "catalogSha256": "50c96b78e95cf5ba27238fc25e1b0c1609145c2bae958f10a6c6868802df0730",
   "files": [
     {
@@ -336,8 +336,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 626820,
-      "sha256": "4d297727906249ba5e96e5fc9c2530e52dce081f65e8e6828f3e28d6cdc725a4"
+      "bytes": 627376,
+      "sha256": "8a0fe512f177627116a487e2472ee4094e607b9d37883bf7e7949fd29db6d41e"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -417,7 +417,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "7166eca154ee5f3751a74a9a26e3a0accb86da2cea6b32c2c90d414a90957d66"
+      "sha256": "797a0aa0318949dbda01131f75ea8539bd1bc9f5971659bd2c4639ddddd46a27"
     },
     {
       "path": "game/campaign-contexts.mjs",
