@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/uk/tools.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "af170667273921e5e676e9b3978f760c39dee149",
+  "sourceSHA256": "dfecb435f860827c31f17dfbb3cf450461509cdb6f5435987aaa24e98e6e18cf",
+  "scope": "Additional retired publication and localization records; pointers refer to the original source revision.",
+  "entries": [
+    {
+      "pointer": "/fpvIsTheCompleteFirstProductionThemeUkrainianRetroAnd",
+      "value": "FPV — перша повна тема для випуску. Українська, Ретро й Coupa — майбутні колекції оформлення; правила гри залишаються окремими."
+    }
+  ]
+}

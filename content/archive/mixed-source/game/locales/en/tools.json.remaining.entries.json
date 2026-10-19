@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/en/tools.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "1902a579468d104e9b66d3d3f303ebef0bad3a0e",
+  "sourceSHA256": "a74a159f1377bb84796c6abbde77901099363930aff821811be39e619580c010",
+  "scope": "Additional retired publication and localization records; pointers refer to the original source revision.",
+  "entries": [
+    {
+      "pointer": "/fpvIsTheCompleteFirstProductionThemeUkrainianRetroAnd",
+      "value": "FPV is the complete first production theme. Ukrainian, Retro and Coupa are future presentation collections; gameplay rules stay separate."
+    }
+  ]
+}

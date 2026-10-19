@@ -1,0 +1,38 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/uk/content.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "4c82f2e9c4abc3393da8fba1f89cd591a215546d",
+  "sourceSHA256": "1e8b32b2eb9ed103d4f646eaffdb5a15b497da22d3be55e23832cedc3d025f2c",
+  "scope": "Additional retired publication and localization records; pointers refer to the original source revision.",
+  "entries": [
+    {
+      "pointer": "/motionLab.originalImageGeneratedHelperNotVerifiedOfficialCoupaNavi",
+      "value": "Оригінальний згенерований помічник; не підтверджена офіційна графіка Coupa Navi"
+    },
+    {
+      "pointer": "/motionLab.sharedOriginalHelperImageCosmeticPulseVariantNotOfficial",
+      "value": "Спільне оригінальне зображення помічника; варіант декоративного імпульсу, не офіційний Navi"
+    },
+    {
+      "pointer": "/motionLab.starterOriginalBusinessHelperConceptThisIsNotAn",
+      "value": "Початкова оригінальна концепція ділового помічника. Це не офіційний персонаж Coupa або Navi."
+    },
+    {
+      "pointer": "/naviArchiveQueueAlerts",
+      "value": "Navi · архів / черга / сповіщення"
+    },
+    {
+      "pointer": "/naviNetworkBlueHours",
+      "value": "Мережа Navi / синя година"
+    },
+    {
+      "pointer": "/neonMosaicCoupa",
+      "value": "Neon COUPA"
+    },
+    {
+      "pointer": "/neonMosaicCoupaDescription",
+      "value": "Red pixel lettering spells COUPA. Blue ground slows the craft; red ground is lethal until captured. Open constellation surround the motif, with stepping stones along the lower route. 3 yellow bouncers, two outer patrols and 4 island-contour patrols guard the field. No horizontal barrier bars. Start at bottom center and reveal 75%."
+    }
+  ]
+}

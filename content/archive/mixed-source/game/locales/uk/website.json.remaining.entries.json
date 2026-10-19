@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/uk/website.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "ca0707995a14f588b2740a71b3a79a0bf803fad2",
+  "sourceSHA256": "2a22c9f31d8365208c7e1f5616f6a560d0cd8839087e0de0e57f0611d6c98ef9",
+  "scope": "Additional retired publication and localization records; pointers refer to the original source revision.",
+  "entries": [
+    {
+      "pointer": "/theWorldsBackgroundsAndCharacterRigsAreChangeableFpvGameplay",
+      "value": "Світи, тла й моделі персонажів можна змінювати. FPV-ігролад — вигадана аркадна абстракція. Тема бізнес-витрат є дизайнерською концепцією й не заявляє про схвалення або реальну функціональність бізнес-продукту."
+    }
+  ]
+}

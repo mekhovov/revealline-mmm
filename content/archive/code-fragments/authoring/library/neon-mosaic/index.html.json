@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/library/neon-mosaic/index.html",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "42a69fccfca655bdc4742e771ef68782214db625",
+  "sourceSHA256": "b6882813949e317a617487ceb9ca9d1b87ebab8948db0d20fd1ef27c79af56a5",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 4625,
+      "end": 5301,
+      "source": "<article data-ui-surface=\"panel\"><a href=\"../../../game/?journey=legacy&amp;library-mission=%5B%22%5B%5C%22classic%5C%22%2C%5C%22bundled%5C%22%2C%5C%22neon-mosaic-pack%5C%22%2C%5C%22current-line-impact.v1%5C%22%5D%22%2C%22b7835f71ad45e7a8fcaae4b81f30fe91cf7c3e7e0e215a8a675f521b8f438ef6%3Acurrent-line-impact.v1%22%2C%22neon-mosaic%2F2%2F68f10772f1871b8b%3A%3Acurrent-line-impact.v1%22%2C%22neon-coupa-pack%22%2C%222%22%5D\"><img src=\"coupa/preview.svg\" alt=\"COUPA level layout\"/><span>4. COUPA</span>Play in the main game</a><button type=\"button\" data-level=\"coupa\">Try editable copy</button><a class=\"download\" href=\"coupa/scenario.json\" download>Editable level</a></article>"
+    }
+  ]
+}

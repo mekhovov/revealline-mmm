@@ -1,0 +1,14 @@
+{
+  "sourcePath": "scripts/game-cli.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "d9dc5a44d76133b98ae74219f7746380f889dc53",
+  "sourceSHA256": "05b65b8cd9b9c4018daa3a81b031cd3d7b27f002aa72b7e70d1619067c8e98fa",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 27645,
+      "end": 27763,
+      "source": " The business-spend theme is a design concept and does not claim endorsement or actual business-product functionality."
+    }
+  ]
+}
