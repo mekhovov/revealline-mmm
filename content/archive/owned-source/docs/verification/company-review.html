@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Company edition review</title>
+    <style>
+      body {
+        margin: 0;
+        background: #081d4d;
+        color: white;
+        font: 15px/1.6 system-ui;
+      }
+      header,
+      details {
+        padding: 16px 24px;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+      label {
+        display: inline-grid;
+        gap: 4px;
+        margin: 8px 16px 8px 0;
+      }
+      input,
+      select,
+      button {
+        font: inherit;
+        padding: 8px;
+        min-height: 44px;
+        border: 1px solid #9cbad9;
+        border-radius: 6px;
+        background: #fff;
+        color: #081d4d;
+      }
+      #target {
+        width: min(620px, 75vw);
+      }
+      button {
+        margin: 6px;
+      }
+      :focus-visible {
+        outline: 3px solid #a9edc0;
+        outline-offset: 3px;
+      }
+      #viewport {
+        overflow: auto;
+        border-block: 1px solid #9cbad9;
+        max-width: 100%;
+      }
+      iframe {
+        display: block;
+        margin: auto;
+        height: 800px;
+        border: 0;
+        background: #081d4d;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        font-size: 12px;
+        max-height: 440px;
+        overflow: auto;
+      }
+      #status {
+        font-weight: 600;
+      }
+      p {
+        max-width: 1100px;
+        margin: 8px 0;
+      }
+      a {
+        color: #a5def5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Company edition review</h1>
+      <p>
+        Observe a real company game on this server. Compare a frozen baseline with the candidate on
+        the same device and browser. This tool never drives the game, changes its state or sends
+        telemetry. The game uses its normal saves.
+      </p>
+      <label>Sample label<input id="label" value="Candidate" /></label>
+      <label>Player URL<input id="target" value="../../game/index.html?edition=coupa-all" /></label>
+      <label
+        >Observed scenario<select id="scenario">
+          <option value="opening-play">Opening play</option>
+          <option value="advanced-encounter">Advanced encounter</option>
+          <option value="picture-reveal">Picture reveal</option>
+          <option value="edition-switch">Edition switch</option>
+        </select></label
+      >
+      <label
+        >Viewport width<select id="width">
+          <option value="1280">1280 px</option>
+          <option value="844">844 px</option>
+          <option value="390">390 px</option>
+          <option value="320">320 px</option>
+        </select></label
+      >
+      <label
+        >Viewport height<select id="height">
+          <option value="720">720 px</option>
+          <option value="844">844 px</option>
+          <option value="800">800 px</option>
+          <option value="390">390 px</option>
+        </select></label
+      >
+      <div>
+        <button id="load">Load sample</button
+        ><button id="frames" disabled>Measure 20 seconds of play</button
+        ><button id="layout" disabled>Check visible layout</button
+        ><button id="summary">Record session summary</button
+        ><button id="export">Export observations</button>
+      </div>
+      <p id="status" role="status">Choose a baseline or candidate, then load it.</p>
+      <p>
+        Intervals measure browser animation callbacks, including observer overhead, rather than game
+        render duration. Resource totals include only buffered Resource Timing entries; zero
+        transfer may reflect caching or unavailable timing details. Hidden, paused or interrupted
+        samples are discarded. Heap size is reported only where the browser exposes its approximate,
+        process-shared metric; it is not proof of a memory leak or its absence. No result
+        automatically approves a release. Current Solo builds measure activation until a running
+        flight is observed; historical company builds measure until their explicit start is ready.
+        Those two preparation endpoints must not be compared as the same metric. Choose the scenario
+        that is actually visible before starting a sample. The session summary counts ready target
+        transitions; it does not prove installed-app isolation, preserved storage or physical-device
+        performance.
+      </p>
+    </header>
+    <div id="viewport">
+      <iframe id="game" title="Company game under review" width="1280"></iframe>
+    </div>
+    <details open>
+      <summary>Observation log</summary>
+      <pre id="log">[]</pre>
+    </details>
+    <script type="module" src="company-review.mjs"></script>
+  </body>
+</html>

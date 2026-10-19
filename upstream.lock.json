@@ -924,7 +924,7 @@
     ]
   },
   "repository": "mekhovov/revealline",
-  "requestedRef": "HEAD",
+  "requestedRef": "2a9717d2849e111da6a69c57f1f5fad793c15908",
   "commit": "2a9717d2849e111da6a69c57f1f5fad793c15908",
   "tree": "9717c8fbec151fe745f0a40d0b6e8fb902b94b25",
   "upstreamVersion": "0.151.1",
@@ -7177,8 +7177,8 @@
     },
     {
       "path": "scripts/isolate-brand.mjs",
-      "bytes": 52199,
-      "sha256": "816b315269720785da4efddc93ee61e0623d14e0f749949571649cd8416478cc"
+      "bytes": 55126,
+      "sha256": "b610b78965e1d571432eecf3ac59fd68699534fa97d8815ebf4cbe61318cfdb8"
     },
     {
       "path": "scripts/presentation-policy.mjs",
@@ -7210,7 +7210,7 @@
     {
       "path": "edition-build.json",
       "bytes": 180741,
-      "sha256": "04fcf3f0e6c199d889cf53a8543ee55ff7a92d38e919f9aacb8c117b7415047b"
+      "sha256": "c02cdabf51e74bf25801f929030ed12d3b20c09adeac4d8357bc3fde4fbe02bc"
     },
     {
       "path": "edition-catalog.json",
@@ -7299,8 +7299,8 @@
     },
     {
       "path": "game/boot.mjs",
-      "bytes": 11013,
-      "sha256": "b9bf7c9405fbc56e23043f3368402c53471b88f7ac06c69bd5633ee8ac6bd522"
+      "bytes": 10996,
+      "sha256": "e8bb966af0e9ee3aa7c344f06912de1f4b625799d2741f48ebffacc37c692926"
     },
     {
       "path": "game/branded-isolation.mjs",
@@ -9394,8 +9394,8 @@
     },
     {
       "path": "game/i18n/bootstrap.mjs",
-      "bytes": 13697,
-      "sha256": "9216a0dba52651dd8afe8b854d398a0bad4911b689500667fd7866457266fd9f"
+      "bytes": 15549,
+      "sha256": "d302019dc8375335f362173f1d74f5e221ae43c21a85e4408eae15e65afc5688"
     },
     {
       "path": "game/i18n/catalogs.mjs",
