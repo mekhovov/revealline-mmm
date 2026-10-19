@@ -1,0 +1,247 @@
+/** Future releases stay in the main repository; accepted legacy routes are read-only. */
+import { createHash } from 'node:crypto';
+import { validateArchivePlan, canonicalArchiveSite } from '../../scripts/pages-archive.mjs';
+
+export const MAIN_REPOSITORY_POLICY = 'main-repository-only';
+// Accepted registry at a5fd666c1cb1ba772336c41bfc1edd5a3e41e91c.
+// Preserve its repositories/evidence; no new allocation or admission is a release prerequisite.
+const ALLOCATION_SHA256 = '13e7c63e9e54db8c19f250fe4ed22d577ca8d821b302094c7c332d176975c750';
+const ADMISSIONS_SHA256 = '6a3b94671430bf0e2c5a0ecc10b9c5d6e7a85569fda8f59d440e44a499abc991';
+const LEGACY_RECORDS = Object.freeze({
+  'v0.1.0': '925a801c9b3c40e8387a5fb1dc19a7e2ea239a35f16fef417cfbda734eb08475',
+  'v0.1.1': '5e95e126cb2675a55b01fdcb96d62a9ea2a54715ebce7cda89e028742ea6c8c2',
+  'v0.1.2': '1dde23cc6f61fa53968ea634ced9c0b1fd475336a75bd9971aa1a2aaeb7b35df',
+  'v0.2.0': '42c3acb07bfe22d7fc2c54cfb1f0c9962a5df7fc09c72fb20698cbb385f33fc5',
+  'v0.2.1': 'ea4de01ad93b7223d6004814c3255684214b0df7b0267bc91c4b7fc9c0ec261e',
+  'v0.3.0': '5d070a0d5433cb2d7e8472e6501c949f7136015eb1f880c4d5ad75dd1d3fb8c4',
+  'v0.4.0': '49e27cbf0bccd2bf592de21d297ba488c4b7cd7e7d27798c82f48ac426b240b0',
+  'v0.4.1': '5db1e5a783c9dcc54485ea2ed1f57dd807ce02ddf4e28dba020b21333c7dd666',
+  'v0.5.0': '163f31378db67ae32796010446710dff26d2c1a2048fe588033be510e7045e5c',
+  'v0.6.0': '99508fbe8d4a906bcccb1bf2aa918fbebfa008c42232d6e998a5cd5fbe7e4c35',
+  'v0.7.0': 'ca81850e2d7e3ad6cb39d5918d0b1037339073703a3d4d8b5a26c504fed89b72',
+  'v0.8.0': '0e93042818f08f26d0e8ab5fa8497b6acad7a1ff843dd0d206edf03961665aaf',
+  'v0.9.0': 'a1c973cf44dcb99bec0941f7e80d5a300f4ce2cacc2cb7db911b77c2f677e604',
+  'v0.10.0': '62b6e71bc72495c583ca6816ad5cff9dc72a422e5e30802b3e5d28e527f482b1',
+  'v0.11.0': '4596634a172517f40e55aa8a4e4eadbe01f81587f5e574de2b5a3b76623756e5',
+  'v0.12.0': '072e78efb6e80ab5ee682090a9a2801ab4b723b2dc40b4301a2ded2abc039a11',
+  'v0.13.0': 'd6c4bf5f306ea5a40556e5af50383d5ad4abbae0720711f65538672c031c5dfd',
+  'v0.14.0': 'ce98cbd507856592718e5398cd0506c70076e5b1cafda618af3bc56a24a70c0e',
+  'v0.15.0': 'e9ad9541352186555f666752f2b718a713dd7beabcb5f9d0b3aedeacdaef43a9',
+  'v0.16.0': 'ed8b43e49a1e49f8306dfd7ac337ae0fcc045abb193ced963700ff947d4439a7',
+  'v0.17.0': '6749c4b6465bd22ca0448b613b6a8b905917f0d8be31b63006c24dd2bb9574f7',
+  'v0.17.1': '3667c1123ec5b2f47859a8b8cec2944bf2be8cb1782cae7678927c1d868c709f',
+  'v0.18.0': '2de5123bf5bc7983b660547698085c1cf6381f48f8b6b20b6c665c53af4d1c29',
+  'v0.19.0': '30827acb016d3d90e6cf2c51415e73872bf4b424cfc37f3cceec2bf6bd6e4b2e',
+  'v0.20.0': '907a6bd52d08a89254e2c0425c3a62e49c8b90793de24e66cdf7c01732673098',
+  'v0.21.0': '878c2dac774f37cc5bcb93fd70e45ab4bd02eae19747501ef47736c2b01465b0',
+  'v0.22.0': '244aab0c55ff56a216f227fc6ded3a980ae1ce8a3d257575834d475a75b803c5',
+  'v0.23.0': '717e9e02152d37b29570c7620101c01a2a773c3f9bbb0c368697ba4ce7aa2580',
+  'v0.24.0': 'd347fcb387c15dbdc36b55db9403b12a6e20f548427c61631f38c43541adb281',
+  'v0.25.0': '80aa8b5abb110e732a3d44d39d0028fd93504d49d4a85a3d5d10024e832f3f45',
+  'v0.26.0': 'dbf8caffa17970edc0ed4973d615de2a3a7bfdcb3e555efbd160d69297172126',
+  'v0.27.0': 'ed2fd25bb999a7d287aab9e3f5468a9a7c629d8de8e4dd2afbc2fc9a8aa7632b',
+  'v0.28.0': '4417949f570f9dd8c70181bd843baad7b9724f840a1377904ff20dd92e9fbb4c',
+  'v0.29.0': '4e4bc8117658704051552d240bf0d05a265ec840e6ca3654539c70964471623c',
+  'v0.29.1': 'ac8f794f0319b334c3c118747bd8ede8d6ae18f2fe7f557dd0e259d95fd64d2b',
+  'v0.29.2': '87626d5382d2908be266aeb41503b2fbbc8299e672a7d6da67a3a5295f42be4f',
+  'v0.30.0': '8ce82a41a22447609c4a91be0174e71a41d95b4423e391f0b36f78bff7b030e2',
+  'v0.31.0': '58cfcb7e8d8bf18eb87bb3f69f9adb9c8f8fb53f76cea3c24de34628d41dfa7c',
+  'v0.32.0': '9b13e89f54f89b5f5bdeb4ea9e36ff7a7f5226edda99a89c2830e8f8f39f19f6',
+  'v0.33.0': 'e1e6b04205653ba1ffd2798d571dab73f624d0938f5127ca224a303069d17379',
+  'v0.34.0': '19899e6ad66b9d69759da47035e6d3357c955d5c47b4a0cb18fb2af0aa61ed33',
+  'v0.35.0': 'c4361b42bb2dc6e0a3b35db4a4ce5b9c01b2385d0ab62b9a4e8f179ec824a3ad',
+  'v0.36.0': '56be447c771be5b73ece2961a7fc79b897f7218f15b0094e92b07afa5c414265',
+  'v0.37.0': 'caad64c3889d23d01f16f882f6fc28fb9f7193f0b967ad7d999a9cfaa9a15d4b',
+  'v0.38.0': '4d1ccf47c7afbff3e3cbc7f3c625e84564c49bdb5f6d78541bb058f25f4e83e4',
+  'v0.39.0': 'ddcff0ce7a466f805e00fa2ea628567ad8036d16a85754c8841175fea7d78d5a',
+  'v0.40.0': '0a09d165a721db6650c6ac6985ebf27b757e5bea880d3cb72906386dffd00566',
+  'v0.41.0': '6eccbdb21912245a9ace5e9686efb166fd7c8f2ca8ec7c24df1c18cab04c1121',
+  'v0.42.0': 'e1c3bba8875c27bb36403ab79ec6dd28879c3029f1f98b4af77f1a0abbaf0f46',
+  'v0.44.0': 'f63bf0193c5dc6b3aeecbe25d56e512c0a39d4acb15c776a8b1aee218a59a335',
+  'v0.45.0': '2799e380137a7d7ef7fa29e210d9d6ed2439537c4fca15ea29e0cfd640e5202d',
+  'v0.46.0': 'f993e0cbd741fb39a28f9b955caebf6edb8c48a9914aad1f8186848308f71e24',
+  'v0.47.0': 'ccc46be460907100eaf811dbfb6b32682d2fd68198eb4f29ed18427c2f10f97d',
+  'v0.48.0': '068eebe4fb9c33b4e07d776fb61650f86561f0cad26376cca18bff94e9445079',
+  'v0.49.0': 'd2f487a1069ebf4ea820dfd303416ce04669dc136166f2421bdcc8a742b6ccf0',
+  'v0.50.0': 'c1998c48972c2392c1b6012a6c8cdf22630ae1d6f9f502449cd7dd2408cbf2cf',
+  'v0.51.0': 'c7cbd9192b9326cdd3541a24736ed91dadcb42a2666c372ab4475da02a93c541',
+  'v0.52.0': '17faf7598c4e7a165f4bd51b28bafcc36699a7b308e23994bb3c932c72512b95',
+  'v0.54.0': 'd487958dfe487643a4afd0b0e238aec7c4b521f469b62fe58d3e6f3122ddd24b',
+  'v0.55.0': 'fc79b9ce3974276a6aa3c5e7a81925fe484387b12e0472f54f81ceea01927d17',
+  'v0.56.0': 'a3d3f7c09a1c464629c7bc40349fecd0a7536b90e017ba6256e1902657f434b3',
+  'v0.57.0': 'e03f57b85893dd27d9bb122c2d3cea6795660658a8caf59368b935c77b343f6d',
+  'v0.57.1': '1687fe1846f7f6cec588d24085a422fa0d9e75a1555f8c0e9a7aefcfe796ac66',
+  'v0.57.2': '8b5a376673ae2beee6118c8d7c3c2cd1101c678efec3405e7056181146aaa1dd',
+  'v0.57.3': '5188176eed50fae83a3650f744e96f82c44c69abcde0ea5b85bb5d9aba45121a',
+  'v0.57.4': '5b5220f707a5e319e79d597e0e0a64df3c2c72001b8a686eaf8f741ac4af7090',
+  'v0.58.0': '9e92a481201a2aec7ff034ed40240152542b168ba793d60f6d74943760620033',
+  'v0.58.1': 'fbee114b84af6fe9e7f45d2f34d328c6ee44a04366492fafa5011f448f690740',
+  'v0.59.0': '2dbd1647375c2421456b68b438d8a9f8a7387275c149e1f32f7b32b31b9a0ab5',
+  'v0.59.1': '8ebd8c10897fb0b7c2f0dacdbb604c8a57330fb945a5da4c6a26d5ae6f46b961',
+  'v0.60.0': '88bbe7e5d39fbd2a9b54e78baafeed5e545e140e0ce30df1ef5630fb99b8d9e7',
+  'v0.60.1': '143d208aaac625eae686cfc2fb1a4e86f72b516b731f11be4b3d3e702f85f0e1',
+  'v0.60.2': '470e735c920e85d7b531d5e2c33e983ca16694bbf2c0043fbcbafeb0b6989a8c',
+  'v0.60.3': 'bff9fa6c8900b2dece92db2a9773555a5a7fb636e5e9e81b66141b25b757a89d',
+  'v0.60.4': 'df6832fcf0c94809b36e4d01cfe32252d9fbe634cf938feb0f3ec394efb4afb6',
+  'v0.60.5': '9507c0fc7c99e6a1687cd54c89af1bbcc851bfdab32fe04c19cb007ea75ffe8d',
+  'v0.60.6': '2be06a680cb31d0d557e65ebb747582b3cb39c99e162244bbe40957a1943a338',
+  'v0.60.7': 'eeaf525f7b95cbc9d0044aeff702bf3ee365b3632bcb68ead88be8d41089bf15',
+  'v0.60.8': '5af6f759e8d7f7c367d3c879986f2e3fdfa4ca514d539a4858df401c149c095d',
+  'v0.60.9': '629b09175d48ee333dbe265fdbdce58d07fe3a7d3bb024ec9f9c6fba53138013',
+  'v0.61.0': '771334f1c965a2781a86b99958a245271a1eb706d0bcda983c37d48ee008f232',
+  'v0.61.1': '20860cf37691cc789bc66b4726ef9aaf6985c338a7e1eacc7e92baf20dc09942',
+  'v0.61.2': 'e21c7b215281f99761d48016792528b3a66a4244985282cf01eb80572d5be9df',
+  'v0.61.3': '9d72bc565c6fa520a5e2cb123d4a1f5b3b6572a561543099777c388b58cfd97e',
+  'v0.61.4': '4e8c3892ef93c56f9ab57dc0248e264bc554060df3dc0ea795c458fe23fd2d9a',
+  'v0.61.5': '7677f7727725f100de68d438111f80c279026704c9bb0eaed1516d8fcea6231c',
+  'v0.61.6': '1127a05dea1f3f24a74bc40f476d9089e9c5b5cfaf5192c2581c0a5c3ec53826',
+  'v0.61.7': 'f1b2088c9d8d384b602af5b491b3c31aa4f057381de69ec09f7532f1fd56029d',
+  'v0.61.8': '142e6394e7b4c6b159a40e3b06ba18db06bc60637e7756000350e0c874f5ad5e',
+  'v0.61.9': '84d3834ec22b67328c19b15f36f914c541afa402ea87410a20c1ad2b4f853132',
+  'v0.61.20': '51da93d11ee53dcff10e09bc4d5c50814d6fc7229ceb99edd025247bb954ce3c',
+  'v0.61.21': 'c45e4df9bfb799a938a0522a03dd70c3a4a0694106104671f1485faf4ce46d2d',
+  'v0.61.22': '5ea0ab97d5672674a4100b726ccd6f6165dc302d5cda9fa502e4b7c562e632a4',
+  'v0.61.23': 'c9256dbd7a48180eea09fc42028fa8e2d7d405fde2d9e578a9582c9ecc0977d6',
+  'v0.61.24': '108a3d04dd0008273db67001fad2f2d90fb0d429c8920af037c3782bbbcb3d05',
+  'v0.62.0': 'b3da46baafed0f52afda9a5a39b27ca49e56b91118f81ef1508a783410e6085e',
+  'v0.62.1': '093398475870375a97707fc3775c9c5a414587b7a0de16afb4f7ad518c8bfaa3',
+  'v0.63.0': 'a6b2a42db22acec03434820db0c9e663b2bd809affd2b1669a38f1dafb3369dc',
+  'v0.64.0': '1a1adc4d3f76aa111dde766d7c87c3de374f0b108d9f0c23e21ae1ac5521d1c3',
+  'v0.64.1': 'ece6695fbdde8df26b53437c5d16d3690c890beeb355d7b0ac8fc669b1a11b00',
+  'v0.64.2': '3a216fb6e8a87bb1bcf972a4d5172486f7fe906dad0ef6769f30829bd7ff877c',
+  'v0.64.3': '0de0c6d4a3ebd4bbdcb5ef9ad71824b6d72f08fcdb6e0e4de9c5d530a0a190cb',
+  'v0.65.0': '56dd4a05e4d9efb5b7597f03defb334d0be0ce97d5b595c7facd008bd5238690',
+  'v0.66.0': 'f8c445ac2e99de9fbec85d7a47f887e4b88d99b85ecbab42763e2a5bcb0e17ad',
+  'v0.67.0': '529a47bb392634fcfe95ece2751b116265993d48e8a62ac3b67b4de49d837344',
+  'v0.68.0': '8e922b679b9d640fab3dc292c29f9d7ed2162f8919d0515e17db5914e9559424',
+  'v0.68.1': '0ab7cc6e17ae401892215098f1a947a9210b956c79089c285f3cce0c14b81039',
+  'v0.68.2': '8ce738a05247624621f5e9b523afe3427621cdbf81222f2d97a0f30a303765c5',
+  'v0.69.0': 'b8dc6c94bef128a90faaea6d3451044ada57864300cbe79aa972e4f9dbd0f60e',
+  'v0.69.1': '9f9f97a5686951ec19110292e0c045d2ec64752fd084e40f3755a7783cd61464',
+  'v0.69.2': '8dd97dd1bac15211e1210a7ebe87a9fdfd13619cc9dd28ac1ed241138898f916',
+  'v0.69.3': 'd605977a118c6172655943c33c7f6545680b39385dccc0fb983dc196edcf27a6',
+  'v0.70.0': '8921fd70167cd02dcc8add777f71e4a5efa71fd5c2492a9548c7ce5cc321e788',
+  'v0.76.0': '216c95ea6f97a751e303b455456b428f0bfa2e4dd1dc1bfc66fbb2ec6a63d29e',
+  'v0.76.1': 'c2d2ed9511230cba1bc6946428e65d9125f6f390173f76023b3c9187956c697d',
+  'v0.77.0': '3b34c0fc4624a4034f229933ada8c1628c6ae018ba844a5e81df17ca1a2fb2ba',
+  'v0.78.0': 'de6d46027183580084939257dd075abde6be45556ff3c297253e16ca17e75256',
+  'v0.79.0': 'bcb80d79e9cb2ca545d5872e0b1dcf286711d7d6541bd3eb9bed90f69daa13da',
+  'v0.79.1': '1954ff10359e97130c34388ed4506366fb84e6bb93e65e8be4a22db15f8da614',
+  'v0.80.0': '9093935aa9abe83b0a19349f60236f768d0ba1190b6e5bc35ed0a13511830732',
+  'v0.80.1': '3dfa60f6d74b846a397300c21faea95363fe4fa8196ad0db165d1702988e4c8e',
+  'v0.80.2': 'e48eb1ac0fa8d02d6fcf8ae1f1b71dd94a751fd6f520b6d38051ca58f178ed4f',
+  'v0.80.3': '46d128bdefe747997eee276628b5071e8723051121860ed9ee5fb4faea7235ad',
+  'v0.81.0': 'f16f71f84c698ff65c6630fd0449bea901e65c378d19fdde2aaa8567ccebb4fa',
+  'v0.82.0': '64ec33344baafc27806a59e66aebd46dae5305186c5fc84e9793198003e0075b',
+  'v0.82.1': 'bba2db9c5ed2c0d136224472dde33117cae6c8518c6d162f279f1cb5ed27bb5e',
+  'v0.83.0': '3365ee9461e69f721198ae0592a48535958b07155bbd2e2ec235069a0b812993',
+  'v0.84.0': '0658641d601e612ba01a31b000a676c3b91222b5eb77f75190ca942b25778022',
+  'v0.85.0': 'eefe1495aa5f43178e1e92c25a3ffe104aeeb0528a9775f6fcc9d7ef87f0fc80',
+  'v0.86.0': 'd293975b37dbd2ab7f9ff14e565438a618839678b2d10c31ad598bfa9fac6963',
+  'v0.87.0': 'ad366aab66d571a7fe0e21e72d038241e1ffd19bec9ace9db679c3dc27033794',
+  'v0.88.0': 'b5d286fa2cac21cfc90ee579b36eda21454a41cc227a76687058a71f4f3b8a38',
+  'v0.89.0': '4d6896382e916edf3b5cf73fde8f59cabc7e3ecd0d93bd77708e904e780543c8',
+  'v0.90.0': '51d0adb91be86fef06f306d3072b72b651d9893ed7e32e5e6cbaa74bf615e78e',
+  'v0.91.0': '8f6dbacd602d705d7a0c4ec3f87bb7f081fa081780e3824c2116a4edcb96a213',
+  'v0.92.0': 'd2a8fcb94c2cffcd8e175d03959c452a3bed9b1f08cfad461ccf9873c2b33fb3',
+  'v0.93.0': '3b2456cbb3e70ffc816428232ce573ca640d6d804b78ecb26613468acf90fdb0',
+  'v0.94.0': 'f261d8b84677072dda0f2c66acfb40ccd3060e01050b97a6751bd6b873f5eb9a',
+  'v0.95.0': '5c06eba581241954443ae3c41cb22acadb0f2aa8982fd901a6bc2244070b039f',
+  'v0.96.0': '864063a14659e586594ff70794061834d76490c1f712593115c0685e4ac2f19a',
+  'v0.97.0': '04496b2fb369194f4d34a9d089a458a61c3e5c85896b88354ea05c23c8be7c84',
+  'v0.98.0': 'b3e6df49aa735aaf3a96f95506c4111fea35890ba3907839425ff28d9b4bfb87',
+  'v0.101.0': '95a7f59d7bb1b271f9dc3d065c1f3814ae607d930eb2b23d1d51cb5574840864',
+  'v0.104.0': 'e297c1d019574ee5379bd363052381837fb7cd79e7665a2541fb97c68867dd85',
+  'v0.105.0': '7b867637570754c1c23c090f63dc2a0ae17c5435745c8c7fd9e11ee87712fee2',
+  'v0.106.0': '454c01484a53bfed07a599549eb00391b992a5c7af2593e3ecb8c689ddb80457',
+  'v0.107.0': 'c3548c9043952c6165f71d269361697453f4042ade098bfb01806bf2e5e06830',
+  'v0.108.0': '038e3680ab9ff660c9192582e02f274c38ff5e1e11659932cc2828121f9563f0',
+  'v0.109.0': 'f5a780dd717d8e9e02669e0887e59c606cc14dc8bb129b9c9a71cdabf6ecb873',
+  'v0.110.1': '5479a433355fc02949357b53dd0861165884ce1b86ea8d54d7e9a2574e209d30',
+  'v0.111.0': '1e5c4e4eaa500575deeda73e213bc8f36ce3d6942b71ddca24b1a6e494ad2bd3',
+  'v0.111.1': '7c598769cc4d3e7b5da722c596c223dc915390aa70e13100bc9cfd9ef1b89bca',
+  'v0.112.0': '8ec2b1d471bcd98bd178952a8069990b616c5e3fb1dce9910107e8cb9ec5d5b7',
+  'v0.113.0': '6cbc0097c26c7f138426137f715414881bd131871bdcecbf926ffcd26165a21b',
+  'v0.113.1': '2aef36dc7e25bf088a504105de1ddf955e8ef92c3eeac2a0bcecefec641fc684',
+  'v0.114.0': 'fa93c32c4cfc376f04989f7ea539d34cba825e23abf9bcfc734d70cc606d1a7e',
+  'v0.114.1': '0e879cfdb4bbd83ad6e04ae58d94bc898bb9366f0c90c0c36d70e75f6bcbce80',
+  'v0.115.0': '2baf76538019fc3a40870159bbc1ba09f00b3ff54f9d31a7da5c380451f88d5f',
+  'v0.115.1': '4c43e02dc853076f75ea37c062601acb16aed7dcb79076b3ac324252b80d8ef1',
+  'v0.116.0': '35e1d4e4404826c4ba0bc0f8e03631f1329af6c96578d31c017f3c740541db4e',
+  'v0.116.1': '1780206a1f94e0037395a919c3455dbd4a03eca18a80ec41df883fce7f5af9a8',
+  'v0.130.0': '61c1958e98fd328461ff54b2b529ac4faa9c9c4edc2aacfce155136c1e4dbd36',
+  'v0.131.0': 'f08bed1c11b76eb1568abf6d2cdf23cef13393bfb8953d49c963b39045552aca',
+  'v0.132.0': '87f609f1d37ef9cda6b31bb464a1fccde2ba94979b81b4bb282e480a06fe7609',
+  'v0.132.1': 'f7ecd867ede15b054b49dcb00a08da77d3f10e20be3d939f8f87e3fb11d542ae',
+  'v0.132.2': '7f97bc33adfffb80cc63afac64dab171c30c887b0fb0a67801678ba8b8462100',
+  'v0.132.3': 'c09a952f940ab8dbfb79d570f43d85126fd15e9250b8fff5f0a248a578648b94',
+  'v0.132.4': 'a1c07601c03187bc8212fa0789fdc2dfcb7f3eab84c81917f5de278599fe1260',
+  'v0.132.5': '7ff0cc68792e6e0dfd920764d5fda5397ca62b10d47926d11bb332b296120f19',
+  'v0.141.0': '420697c64aed9a0f064dd37ef216a53640780747a31a076ba5ba5f85e7ca4551',
+  'v0.141.2': '3849505e3aed3c53db74efbf4c0c4c256f56e5c5727aa1a17c9e7bccd95cb1ff',
+  'v0.141.3': '342838929d88da0ce17e2210ffa828e679b7a8f3703528ad0bbce7bd8f60aaa4',
+  'v0.141.4': '41c0cfd3e42009affe7b017ac4ad7542aa9b1f596df3b0061ca9488db8286c08',
+  'v0.141.5': 'bd834058217daab1c59c016b3eb6d689cb2df0316dc68f6cc3d0f0aa48b41e81',
+  'v0.141.6': '2e9190e9ad555cfd57a345c44b774b7a37279abfc139c7b6c607ce57ede8d3dd',
+});
+const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
+
+export function requireMainRepositoryPolicy(configuration) {
+  if (configuration.hostingPolicy !== MAIN_REPOSITORY_POLICY)
+    throw new Error('Publication requires the main-repository-only hosting policy.');
+}
+
+export function mainRepositoryRoutes(configuration, allocationBytes, metadata) {
+  requireMainRepositoryPolicy(configuration);
+  if (
+    configuration.allocationSha256 !== ALLOCATION_SHA256 ||
+    digest(allocationBytes) !== ALLOCATION_SHA256 ||
+    digest(JSON.stringify(configuration.admissions)) !== ADMISSIONS_SHA256
+  )
+    throw new Error(
+      'Legacy archive registry is frozen; do not create, append or admit an archive.',
+    );
+  const allocation = JSON.parse(Buffer.from(allocationBytes).toString('utf8'));
+  const admitted = new Set(configuration.admissions.map((row) => row.id));
+  const plan = {
+    formatVersion: 1,
+    shards: allocation.shards
+      .filter((shard) => admitted.has(shard.id))
+      .map((shard) => ({
+        ...shard,
+        versions: shard.versions.filter(
+          (version) => metadata.has(version) && version !== configuration.currentVersion,
+        ),
+      }))
+      .filter((shard) => shard.versions.length),
+  };
+  const shards = validateArchivePlan(
+    plan,
+    [...metadata.values()].map((item) => item.record),
+    'mekhovov/revealline',
+    configuration.currentVersion,
+  );
+  const canonicalSites = Object.fromEntries(
+    shards.flatMap((shard) =>
+      shard.versions.map((version) => [version, canonicalArchiveSite(shard, version)]),
+    ),
+  );
+  for (const version of Object.keys(canonicalSites)) {
+    if (
+      !metadata.get(version).recordBytes ||
+      digest(metadata.get(version).recordBytes) !== LEGACY_RECORDS[version]
+    )
+      throw new Error('Legacy archive metadata no longer matches its accepted record: ' + version);
+  }
+  for (const [version, site] of Object.entries(configuration.testingRoutes))
+    if (canonicalSites[version] !== site)
+      throw new Error('Testing routes may only retain an already accepted legacy archive.');
+  return {
+    plan,
+    canonicalSites,
+    admissions: [],
+    downloadOnlyVersions: [...metadata.keys()].filter(
+      (version) => version !== configuration.currentVersion && !canonicalSites[version],
+    ),
+  };
+}

@@ -1,0 +1,1099 @@
+{
+  "format": "revealline-neon-route-variety-review.v1",
+  "scope": "Authored structural variety plus recorded legal-route decisions. No route search, geometry change, human enjoyment or every-seed guarantee.",
+  "levels": 54,
+  "distinctSafeWallStructures": 51,
+  "distinctLowerSafeWallStructures": 51,
+  "sharedStructures": [
+    ["neon-spirals-pack", "neon-pinwheels-pack", "neon-wavebands-pack", "neon-prism-pack"]
+  ],
+  "sharedLowerStructures": [
+    ["neon-spirals-pack", "neon-pinwheels-pack", "neon-wavebands-pack", "neon-prism-pack"]
+  ],
+  "range": {
+    "directionChanges": [7, 348],
+    "routeSeconds": [12.949999999999905, 165.15000000001413]
+  },
+  "rows": [
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-channels-pack",
+      "name": "Neon Channels",
+      "description": "",
+      "structureSHA256": "23d3e36b9d90bd9c75102eacc7a4cffbd7fc2495e01b8045074df18ed06a86eb",
+      "lowerStructureSHA256": "f5bdd30f162a2e0cf98c833a4c5be5ab70a570a79cd27dba9bd5640ea1ab75f1",
+      "geometry": {
+        "safe": 290,
+        "wall": 0,
+        "field": 2302,
+        "slow": 492,
+        "lethal": 188
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "eroder"],
+      "directionChanges": 17,
+      "firstDirection": "up",
+      "routeSeconds": 33.14999999999876,
+      "routeCheckpoint": "856e2563b02ee04e"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-crossroads-pack",
+      "name": "Neon Crossroads",
+      "description": "",
+      "structureSHA256": "1182cf544b44a9e58f2826d2d80854b27504fff5d4f0f70eb577bfb27940143f",
+      "lowerStructureSHA256": "b0d79bf7ea3d9eb454d9d18a12c97a35215470d82472f99b5be328375dcc292b",
+      "geometry": {
+        "safe": 212,
+        "wall": 204,
+        "field": 2176,
+        "slow": 0,
+        "lethal": 0
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "eroder"],
+      "directionChanges": 52,
+      "firstDirection": "right",
+      "routeSeconds": 61.64999999999714,
+      "routeCheckpoint": "6632c50b9bb70b41"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-hearts-pack",
+      "name": "Neon Hearts",
+      "description": "",
+      "structureSHA256": "04a1bf6fdbb4a19be788271c98010aab914b320285f3b952a2518f0e1a4c572d",
+      "lowerStructureSHA256": "bc1094c6de2d5b5a213d40189918cba4319dc4e4869761d96618a737b126e4dc",
+      "geometry": {
+        "safe": 324,
+        "wall": 87,
+        "field": 2181,
+        "slow": 0,
+        "lethal": 274
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 40,
+      "firstDirection": "left",
+      "routeSeconds": 61.84999999999713,
+      "routeCheckpoint": "90d5d72a6b916cc8"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-labyrinth-pack",
+      "name": "Neon Labyrinth",
+      "description": "",
+      "structureSHA256": "a282c83265bb2663e7bd8800bcd0edf716fc2839525b36b0a3f8903310a6ed40",
+      "lowerStructureSHA256": "a9736638cbd9bb7420f476aaafb75c992de50af6798c7d6cb8e08a15214f02ba",
+      "geometry": {
+        "safe": 212,
+        "wall": 286,
+        "field": 2094,
+        "slow": 0,
+        "lethal": 741
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 221,
+      "firstDirection": "up",
+      "routeSeconds": 107.25000000003142,
+      "routeCheckpoint": "89ed9b1b279d7c79"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-arrows-pack",
+      "name": "Neon Arrows",
+      "description": "",
+      "structureSHA256": "ee593780ff30e4917fd18b2238616e5994cb58f86c41173c691ed1110c75a40c",
+      "lowerStructureSHA256": "12de11b504c57f53199c714c8cf157299fc200a9e22974ae7ac221884042bdcc",
+      "geometry": {
+        "safe": 212,
+        "wall": 57,
+        "field": 2323,
+        "slow": 0,
+        "lethal": 556
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 194,
+      "firstDirection": "left",
+      "routeSeconds": 112.7500000000358,
+      "routeCheckpoint": "180a6b552019eef7"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-chambers-pack",
+      "name": "Neon Chambers",
+      "description": "",
+      "structureSHA256": "6ac1284cf5e1fd4ac0d78ae46070e01b3146709c0cd1803bc21e3dee8d86d37d",
+      "lowerStructureSHA256": "96804364341a6e67b1851361efa8ba6705739d823228408102a3a086dafe7272",
+      "geometry": {
+        "safe": 212,
+        "wall": 477,
+        "field": 1903,
+        "slow": 0,
+        "lethal": 0
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 218,
+      "firstDirection": "left",
+      "routeSeconds": 133.12500000004326,
+      "routeCheckpoint": "56fa00bbd1cb766d"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-crossgrid-pack",
+      "name": "Neon Crossgrid",
+      "description": "",
+      "structureSHA256": "b5b202dec760b9e218ce7e909a734d70db7be732235870d0ca27fcfdd9ec2939",
+      "lowerStructureSHA256": "0e8c791f127f99970422da224d40b24246722f484ecbb9f94c469276e7eb9c42",
+      "geometry": {
+        "safe": 212,
+        "wall": 417,
+        "field": 1963,
+        "slow": 0,
+        "lethal": 504
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 80,
+      "firstDirection": "left",
+      "routeSeconds": 49.649999999997824,
+      "routeCheckpoint": "5641950084cc100b"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-switchback-pack",
+      "name": "Neon Switchback",
+      "description": "",
+      "structureSHA256": "fc9e34a7c1e9f55d982e479b403ac6066afc4dc3d2e49b8b2ff35584019554ab",
+      "lowerStructureSHA256": "e132b6840ca420a9ad9971fbfb652a3a28e9049acb08eac20195bab720476220",
+      "geometry": {
+        "safe": 220,
+        "wall": 116,
+        "field": 2256,
+        "slow": 0,
+        "lethal": 668
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 89,
+      "firstDirection": "left",
+      "routeSeconds": 74.85000000000564,
+      "routeCheckpoint": "70838781d7fff49d"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-spirals-pack",
+      "name": "Neon Spirals",
+      "description": "",
+      "structureSHA256": "e4b0befefd2e3652782b75c57cdd90660ae1159ee83a160e9650739e0436a154",
+      "lowerStructureSHA256": "af661e8c3415d0ef6c88a8983b39712142907dae5b7b3e3df3df13c1095d0102",
+      "geometry": {
+        "safe": 212,
+        "wall": 0,
+        "field": 2380,
+        "slow": 0,
+        "lethal": 1164
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 106,
+      "firstDirection": "right",
+      "routeSeconds": 117.25000000003938,
+      "routeCheckpoint": "971d3f97755415e7"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-crossfire-pack",
+      "name": "Neon Crossfire",
+      "description": "",
+      "structureSHA256": "1a3284979ff3965df53b46202372ea7ca71333fe13417e3a4c16cdbf033be4f8",
+      "lowerStructureSHA256": "41111f59ee804bf584a1601a2231f15a8e73f1ebb22e4325fbd761ea4c06cfa1",
+      "geometry": {
+        "safe": 212,
+        "wall": 340,
+        "field": 2040,
+        "slow": 0,
+        "lethal": 723
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 227,
+      "firstDirection": "right",
+      "routeSeconds": 122.75000000004376,
+      "routeCheckpoint": "a569d44d4796c6f7"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-pinwheels-pack",
+      "name": "Neon Pinwheels",
+      "description": "",
+      "structureSHA256": "e4b0befefd2e3652782b75c57cdd90660ae1159ee83a160e9650739e0436a154",
+      "lowerStructureSHA256": "af661e8c3415d0ef6c88a8983b39712142907dae5b7b3e3df3df13c1095d0102",
+      "geometry": {
+        "safe": 212,
+        "wall": 0,
+        "field": 2380,
+        "slow": 0,
+        "lethal": 720
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 238,
+      "firstDirection": "right",
+      "routeSeconds": 104.67500000002937,
+      "routeCheckpoint": "017ad15d30a63ed8"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-wavebands-pack",
+      "name": "Neon Wavebands",
+      "description": "",
+      "structureSHA256": "e4b0befefd2e3652782b75c57cdd90660ae1159ee83a160e9650739e0436a154",
+      "lowerStructureSHA256": "af661e8c3415d0ef6c88a8983b39712142907dae5b7b3e3df3df13c1095d0102",
+      "geometry": {
+        "safe": 212,
+        "wall": 0,
+        "field": 2380,
+        "slow": 484,
+        "lethal": 755
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "eroder"],
+      "directionChanges": 92,
+      "firstDirection": "right",
+      "routeSeconds": 73.45000000000452,
+      "routeCheckpoint": "2e15347160382df4"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-conduit-pack",
+      "name": "Neon Conduit",
+      "description": "",
+      "structureSHA256": "3740cf58d1251bfd7fd0f34f64552a298fac66c19ff2afc1840d760dcbc0c6b5",
+      "lowerStructureSHA256": "95b729dcf8405e8829c2bd206a0b6b7758618fda296fbfcf41a4f43fe85b6302",
+      "geometry": {
+        "safe": 212,
+        "wall": 180,
+        "field": 2200,
+        "slow": 476,
+        "lethal": 432
+      },
+      "enemyTypes": ["bouncer", "eroder"],
+      "directionChanges": 32,
+      "firstDirection": "right",
+      "routeSeconds": 62.54999999999709,
+      "routeCheckpoint": "1e9bebf09891947d"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-switchyards-pack",
+      "name": "Neon Switchyards",
+      "description": "",
+      "structureSHA256": "31fd7799585b1d05f094adba0a5e805105e45f682ca2905a1ac7b6a929d7c7d8",
+      "lowerStructureSHA256": "37ee6741c9dddc6cc4e9d7c80cbb11d82d246615d8067fab9a5dee945fa995f1",
+      "geometry": {
+        "safe": 212,
+        "wall": 470,
+        "field": 1910,
+        "slow": 508,
+        "lethal": 392
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 56,
+      "firstDirection": "left",
+      "routeSeconds": 42.049999999998256,
+      "routeCheckpoint": "1e2db4a460b43a4e"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-spines-pack",
+      "name": "Neon Spines",
+      "description": "",
+      "structureSHA256": "7e122fc4ec72406fa48f195515a747e4fe497533d6cc3af0670e7c93bda59948",
+      "lowerStructureSHA256": "9addcddcc547419bb3d5ea6091090a1ba31b97f882692dc661b106ca7b7ab057",
+      "geometry": {
+        "safe": 212,
+        "wall": 148,
+        "field": 2232,
+        "slow": 692,
+        "lethal": 304
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 51,
+      "firstDirection": "right",
+      "routeSeconds": 62.4499999999971,
+      "routeCheckpoint": "1da88a64b50d40cb"
+    },
+    {
+      "packId": "neon-reference-pack",
+      "id": "neon-prism-pack",
+      "name": "Neon Prism",
+      "description": "",
+      "structureSHA256": "e4b0befefd2e3652782b75c57cdd90660ae1159ee83a160e9650739e0436a154",
+      "lowerStructureSHA256": "af661e8c3415d0ef6c88a8983b39712142907dae5b7b3e3df3df13c1095d0102",
+      "geometry": {
+        "safe": 212,
+        "wall": 0,
+        "field": 2380,
+        "slow": 536,
+        "lethal": 620
+      },
+      "enemyTypes": ["border-patrol", "bouncer"],
+      "directionChanges": 348,
+      "firstDirection": "right",
+      "routeSeconds": 165.15000000001413,
+      "routeCheckpoint": "0b79c431a1857505"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-fpv-pack",
+      "name": "Neon FPV",
+      "description": "",
+      "structureSHA256": "d2acab490b0ca701a8e56afc027efd9b9f1ccc2ec0ac591adb6f32d2510cc79f",
+      "lowerStructureSHA256": "d3ad1dd4231ee7e4ddab2414667dbf44fc34457ce34d4c9a8fbfc67d49a302f4",
+      "geometry": {
+        "safe": 282,
+        "wall": 2,
+        "field": 2308,
+        "slow": 720,
+        "lethal": 171
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 35,
+      "firstDirection": "left",
+      "routeSeconds": 58.64999999999731,
+      "routeCheckpoint": "658e3328294ef66c"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-ukraine-pack",
+      "name": "Neon UKRAINE",
+      "description": "",
+      "structureSHA256": "ba531a8f32bb198424a5f65f4b0da662ce7c0f9858076619b1c90c4eead92eda",
+      "lowerStructureSHA256": "7ae62923c772e8c7705d46387adaeddbbdcb573f089bb22c8083f67b9bd2c053",
+      "geometry": {
+        "safe": 262,
+        "wall": 2,
+        "field": 2328,
+        "slow": 649,
+        "lethal": 285
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 13,
+      "firstDirection": "right",
+      "routeSeconds": 39.449999999998404,
+      "routeCheckpoint": "4ab80f87f95e66de"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-drone-aid-pack",
+      "name": "Neon DRONE AID",
+      "description": "",
+      "structureSHA256": "3404c508e1ed96e9789ff137645f3cbfffaf96a2f7ec80779916f4a1547f30d6",
+      "lowerStructureSHA256": "f25d2840dd58efc3e3ba3c2b7fb88179e1e762d2643e38533500d0b59543691a",
+      "geometry": {
+        "safe": 248,
+        "wall": 0,
+        "field": 2344,
+        "slow": 192,
+        "lethal": 282
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 22,
+      "firstDirection": "left",
+      "routeSeconds": 39.14999999999842,
+      "routeCheckpoint": "66d8dbc81bf9bccc"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-coupa-pack",
+      "name": "Neon COUPA",
+      "description": "",
+      "structureSHA256": "3a2480ab5fd33131becbb39296fc185e6827f5a18898162a114fa9dfd6aaf607",
+      "lowerStructureSHA256": "622e1a51505cd3a2ff59152858ebd9dbbeaa46e96967c69d152908955dbe1348",
+      "geometry": {
+        "safe": 267,
+        "wall": 0,
+        "field": 2325,
+        "slow": 96,
+        "lethal": 310
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 28,
+      "firstDirection": "left",
+      "routeSeconds": 44.04999999999814,
+      "routeCheckpoint": "2666e5ae4a5a5a6b"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-social-drone-pack",
+      "name": "Neon SOCIAL DRONE",
+      "description": "",
+      "structureSHA256": "afdfcd2fecf318a7768bbc0c184a9fecdad76df79b32063f290c5c200c37abd4",
+      "lowerStructureSHA256": "362675bc11985a7793c930418e744d007ed3ff955e7244b245995b85fd7ec0d1",
+      "geometry": {
+        "safe": 258,
+        "wall": 10,
+        "field": 2324,
+        "slow": 359,
+        "lethal": 266
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 13,
+      "firstDirection": "left",
+      "routeSeconds": 30.14999999999893,
+      "routeCheckpoint": "0c39e2c91e405d79"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-sdua-pack",
+      "name": "Neon SDUA",
+      "description": "",
+      "structureSHA256": "1a7965023283e1bf77d67af55e1ac8eeb47f61a68e55fee9257bdb4f33e6d904",
+      "lowerStructureSHA256": "efa0f28c22cc7880c6f3d152448f953dac60541d3aaca87bf3914207f1add15f",
+      "geometry": {
+        "safe": 259,
+        "wall": 2,
+        "field": 2331,
+        "slow": 688,
+        "lethal": 266
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 27,
+      "firstDirection": "right",
+      "routeSeconds": 44.14999999999814,
+      "routeCheckpoint": "be7a369cc7e9ed08"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-victory-drones-pack",
+      "name": "Neon VICTORY DRONES",
+      "description": "",
+      "structureSHA256": "dc580eeb59f06333406e75c1c7240a682ce1fa0ede90499a01855aa0daed66ad",
+      "lowerStructureSHA256": "ceb7e0d33a757854e6c3847d84ad4f2f8bd04cbbde48b32f5e3cc0a3d9975fcc",
+      "geometry": {
+        "safe": 265,
+        "wall": 2,
+        "field": 2325,
+        "slow": 376,
+        "lethal": 306
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 16,
+      "firstDirection": "right",
+      "routeSeconds": 35.64999999999862,
+      "routeCheckpoint": "e461562e46792f01"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-vd-pack",
+      "name": "Neon VD",
+      "description": "",
+      "structureSHA256": "4e70804ebaea7008dca418210a03548e271fadd74bf2c44fc15f63a4d664426a",
+      "lowerStructureSHA256": "637a111b6761e883f7cb7232bc893485355e97a5d31cf6a7bb20adea85f708e9",
+      "geometry": {
+        "safe": 274,
+        "wall": 2,
+        "field": 2316,
+        "slow": 628,
+        "lethal": 127
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 47,
+      "firstDirection": "right",
+      "routeSeconds": 55.3499999999975,
+      "routeCheckpoint": "c9fad88b2605a22b"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-fpv-line-pack",
+      "name": "Neon FPV LINE",
+      "description": "",
+      "structureSHA256": "5817d5f0665ad029f13adadec54d8428a4413870977f46b0ff190769d195b0fb",
+      "lowerStructureSHA256": "3f8c6f20f45e23ea45974fa72950376a9536ed3903e70340814b47e92996faf9",
+      "geometry": {
+        "safe": 321,
+        "wall": 2,
+        "field": 2269,
+        "slow": 396,
+        "lethal": 213
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 31,
+      "firstDirection": "right",
+      "routeSeconds": 58.04999999999735,
+      "routeCheckpoint": "acfcde99c254b4aa"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-reveal-pack",
+      "name": "Neon REVEAL",
+      "description": "",
+      "structureSHA256": "e05a5c4aa7b1ffb4385db5a8d8062598629cb0d5498f0d69e005d11bdb69ba0d",
+      "lowerStructureSHA256": "6c1645c783231501cb8c7e27fb50fcf39b4c1fc81c467dbc7acffce3f49a7df3",
+      "geometry": {
+        "safe": 254,
+        "wall": 10,
+        "field": 2328,
+        "slow": 768,
+        "lethal": 236
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 18,
+      "firstDirection": "right",
+      "routeSeconds": 46.14999999999802,
+      "routeCheckpoint": "c40e108d19799116"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-fly-free-pack",
+      "name": "Neon FLY FREE",
+      "description": "",
+      "structureSHA256": "a573367c4616301e13374dac4534a89fa0424a642b59cb1ab02d3c98837036b2",
+      "lowerStructureSHA256": "d97c7b9a2d7dff7957db9ef67ad8b0ebd7ec28722cebe37cf532f23084b292e0",
+      "geometry": {
+        "safe": 281,
+        "wall": 2,
+        "field": 2309,
+        "slow": 566,
+        "lethal": 209
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 7,
+      "firstDirection": "right",
+      "routeSeconds": 29.149999999998986,
+      "routeCheckpoint": "8cb9a5a29feb7e40"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-fpv-drone-pack",
+      "name": "Neon FPV Drone",
+      "description": "",
+      "structureSHA256": "19321b3c7238c70a72cb6e90b4dab815e63508c0cfa700591ac6943731ac0f69",
+      "lowerStructureSHA256": "8656d1a1b819484247fcb25b9853138936d911ded41202f701898f4fbae3a4bf",
+      "geometry": {
+        "safe": 261,
+        "wall": 2,
+        "field": 2329,
+        "slow": 179,
+        "lethal": 307
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 20,
+      "firstDirection": "right",
+      "routeSeconds": 36.84999999999855,
+      "routeCheckpoint": "daa8b0a0d4878092"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-tryzub-pack",
+      "name": "Neon Ukrainian Trident",
+      "description": "",
+      "structureSHA256": "56925f7ae3220e0c204877995fb17ba1db9422bfcca16974880681b4e30d70bf",
+      "lowerStructureSHA256": "141d23de68609606ac70cf92761243782b82280abd3d2666a4161ad941057f9d",
+      "geometry": {
+        "safe": 252,
+        "wall": 2,
+        "field": 2338,
+        "slow": 393,
+        "lethal": 112
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 14,
+      "firstDirection": "right",
+      "routeSeconds": 40.44999999999835,
+      "routeCheckpoint": "531b3d1069e4e9ed"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-vyshyvanka-pack",
+      "name": "Neon Vyshyvanka Diamonds",
+      "description": "",
+      "structureSHA256": "e094a0038e013657cf2ad444fcb6276bf974ea82e20c9e6cdd48e6baffc10893",
+      "lowerStructureSHA256": "1f914e4ba510a6b90a0cbaad5e2337485de5ca3d587a6454aa63ccc7c05969fd",
+      "geometry": {
+        "safe": 268,
+        "wall": 0,
+        "field": 2324,
+        "slow": 772,
+        "lethal": 126
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 31,
+      "firstDirection": "right",
+      "routeSeconds": 58.249999999997335,
+      "routeCheckpoint": "d792a3a8ef126296"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-ruzha-pack",
+      "name": "Neon Eight-Point Ruzha",
+      "description": "",
+      "structureSHA256": "699ca3b6ff83812298dc79c72b96161320ded65ddd0429f7b7d96b512fb3bc56",
+      "lowerStructureSHA256": "31b5555717ad2aca49cfb399c0e434b48276588858e351c2829187bdc04c1a20",
+      "geometry": {
+        "safe": 280,
+        "wall": 2,
+        "field": 2310,
+        "slow": 361,
+        "lethal": 138
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 11,
+      "firstDirection": "left",
+      "routeSeconds": 27.1499999999991,
+      "routeCheckpoint": "a89cc8fffefb45f1"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-kalyna-pack",
+      "name": "Neon Kalyna",
+      "description": "",
+      "structureSHA256": "cf3aea0ecab1e86dcf0da8750d68aa32bc4e7bbae284e92db6b0eaa158d858da",
+      "lowerStructureSHA256": "e4aaa86e35018d38a2922bb59fcaa3c5415f7d7134b223b54e710a79924d557e",
+      "geometry": {
+        "safe": 252,
+        "wall": 2,
+        "field": 2338,
+        "slow": 589,
+        "lethal": 205
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 15,
+      "firstDirection": "right",
+      "routeSeconds": 31.54999999999885,
+      "routeCheckpoint": "6955438a87ff2042"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-tree-of-life-pack",
+      "name": "Neon Tree of Life",
+      "description": "",
+      "structureSHA256": "7600b329b54f5972dffd51d592971d01338cfd1c3efad016081e78d910dd3533",
+      "lowerStructureSHA256": "ccd001cf78117f02ef4cdc6d47ac8e5bb2728bc56604a5bf69d762d4f825f3b7",
+      "geometry": {
+        "safe": 275,
+        "wall": 2,
+        "field": 2315,
+        "slow": 448,
+        "lethal": 331
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 42,
+      "firstDirection": "left",
+      "routeSeconds": 52.94999999999764,
+      "routeCheckpoint": "b1881cf40d54d0fb"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-pysanka-pack",
+      "name": "Neon Pysanka",
+      "description": "",
+      "structureSHA256": "2daf7f9307c1c6d2453fe7d93631c3de8c059d8ffcb759f16589bb56f6ed147a",
+      "lowerStructureSHA256": "c7ccfa3a2a44192709cb8fd68f4e1a0b33c065d40ca28ae033e8ecb60461fba9",
+      "geometry": {
+        "safe": 278,
+        "wall": 2,
+        "field": 2312,
+        "slow": 831,
+        "lethal": 92
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 7,
+      "firstDirection": "left",
+      "routeSeconds": 23.549999999999304,
+      "routeCheckpoint": "f3eefec832a3356a"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-barvinok-pack",
+      "name": "Neon Barvinok",
+      "description": "",
+      "structureSHA256": "828ead471dc40ff4323ebe3fda672662a330a6b5a7e92c7f0d315228b55a0b46",
+      "lowerStructureSHA256": "b4327571a1484a98e503ce26365d116640736c72a98af37d58a8590ea62eae9a",
+      "geometry": {
+        "safe": 288,
+        "wall": 2,
+        "field": 2302,
+        "slow": 563,
+        "lethal": 190
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 15,
+      "firstDirection": "right",
+      "routeSeconds": 34.64999999999868,
+      "routeCheckpoint": "3476b942480e1780"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-wheat-pack",
+      "name": "Neon Wheat Sheaf",
+      "description": "",
+      "structureSHA256": "6b011ecce2de9eb929eb42b649f1bbc985eb840e9a7cb92da91f88fd4546fd15",
+      "lowerStructureSHA256": "4ef5ce138773adf5ca13656656278a6779ee3d6618ee484c5b4ed864a281e609",
+      "geometry": {
+        "safe": 300,
+        "wall": 2,
+        "field": 2290,
+        "slow": 209,
+        "lethal": 107
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 65,
+      "firstDirection": "right",
+      "routeSeconds": 80.75000000001033,
+      "routeCheckpoint": "63504fa38e4fcdbc"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-vinok-pack",
+      "name": "Neon Vinok",
+      "description": "",
+      "structureSHA256": "cb3fa44fcbfdad60a74b6d17c09d24d8ca97e704e579e7ac59945e59572781f3",
+      "lowerStructureSHA256": "9a5d551bff5ab9c15a3d75bcfcf506046a7be4144a96a202cf5539f58e865b68",
+      "geometry": {
+        "safe": 254,
+        "wall": 2,
+        "field": 2336,
+        "slow": 362,
+        "lethal": 234
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 31,
+      "firstDirection": "left",
+      "routeSeconds": 52.54999999999766,
+      "routeCheckpoint": "f2d690e4af113d80"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-didukh-pack",
+      "name": "Neon Didukh",
+      "description": "",
+      "structureSHA256": "d0cdaeb655cc42645d5f2f90e2b17901bcfe4efbb576b4a1c9102fcc373bf1c5",
+      "lowerStructureSHA256": "52ec6d1f5176f164cca3fd4b33c1d0cf4ecd1f915ded4f4568770ee28a6eabb5",
+      "geometry": {
+        "safe": 309,
+        "wall": 2,
+        "field": 2281,
+        "slow": 510,
+        "lethal": 179
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 41,
+      "firstDirection": "left",
+      "routeSeconds": 65.94999999999855,
+      "routeCheckpoint": "193b3ea5ea27e48f"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-rushnyk-pack",
+      "name": "Neon Rushnyk",
+      "description": "",
+      "structureSHA256": "6fab40d5571e101e057463cad5856d5c5d10d449b9bda359ca06a914bb4e7b28",
+      "lowerStructureSHA256": "570cd643aa4709e59a4717d7046e5e92295c704d82d557f420dbcb5ea9bbeef2",
+      "geometry": {
+        "safe": 260,
+        "wall": 10,
+        "field": 2322,
+        "slow": 391,
+        "lethal": 170
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 29,
+      "firstDirection": "right",
+      "routeSeconds": 39.84999999999838,
+      "routeCheckpoint": "c8bae8ac246690cf"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-bandura-pack",
+      "name": "Neon Bandura",
+      "description": "",
+      "structureSHA256": "f6b9f587694c29cab4113f656021fcb2c75a52ece5d8354a3ab44edc45cd12fb",
+      "lowerStructureSHA256": "f83827461470acc8027928094e1c10f7a676aa31d927d9b9bd44668cebc8295a",
+      "geometry": {
+        "safe": 288,
+        "wall": 2,
+        "field": 2302,
+        "slow": 962,
+        "lethal": 195
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 20,
+      "firstDirection": "left",
+      "routeSeconds": 41.44999999999829,
+      "routeCheckpoint": "b15a129b16464bb7"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-trembita-pack",
+      "name": "Neon Trembita",
+      "description": "",
+      "structureSHA256": "9c2ddc546d31012659f1bda5aa4afee7d9b59e8ca5e8b3b9ed706887257e5588",
+      "lowerStructureSHA256": "80fa42a4e5215cbc57dcbf89f105fde11db863f17fed3848d802f3c915e2e28e",
+      "geometry": {
+        "safe": 266,
+        "wall": 2,
+        "field": 2324,
+        "slow": 498,
+        "lethal": 98
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 8,
+      "firstDirection": "left",
+      "routeSeconds": 12.949999999999905,
+      "routeCheckpoint": "766b01adb6b35d6a"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-tsymbaly-pack",
+      "name": "Neon Tsymbaly",
+      "description": "",
+      "structureSHA256": "0be9181ad07f63723522fdc1db17a8356c54210ff11565de6757149e12cd2c51",
+      "lowerStructureSHA256": "328d75649b725a8042394116108ac31c9a7b17be2d463aad67fbfe2b8b736e24",
+      "geometry": {
+        "safe": 258,
+        "wall": 2,
+        "field": 2332,
+        "slow": 678,
+        "lethal": 278
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 36,
+      "firstDirection": "right",
+      "routeSeconds": 54.24999999999756,
+      "routeCheckpoint": "70d3be2d63adcb48"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-kosiv-pitcher-pack",
+      "name": "Neon Kosiv Pitcher",
+      "description": "",
+      "structureSHA256": "4da3ba9ff5679dcabc8c94d3062e30de8c7d38133491dbb9cfbdfc3cd2c8bad8",
+      "lowerStructureSHA256": "e77bc60107850f64b39869b587974c29aa6a60839069417b55eed071fc0b5f7e",
+      "geometry": {
+        "safe": 317,
+        "wall": 2,
+        "field": 2273,
+        "slow": 248,
+        "lethal": 142
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 44,
+      "firstDirection": "right",
+      "routeSeconds": 61.84999999999713,
+      "routeCheckpoint": "72e802313dbc24a9"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-opishnia-ram-pack",
+      "name": "Neon Opishnia Ram",
+      "description": "",
+      "structureSHA256": "d39365a631901bf099a52ed5998d0f94b3eb295d2a89829105106ce492e68694",
+      "lowerStructureSHA256": "39636600596d49083784d7175534fb28e3cf521999b5293bb24fd326b2266736",
+      "geometry": {
+        "safe": 252,
+        "wall": 10,
+        "field": 2330,
+        "slow": 203,
+        "lethal": 181
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 17,
+      "firstDirection": "left",
+      "routeSeconds": 28.04999999999905,
+      "routeCheckpoint": "9ed7091dbdab8b34"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-petrykivka-pack",
+      "name": "Neon Petrykivka Flower",
+      "description": "",
+      "structureSHA256": "bf211132268e1ee1c69554d0cf611667771d8a12a227ef87e5b23fe1bade3e69",
+      "lowerStructureSHA256": "2f5755bd2dfff564365504ee591d774e6d2ed8fec3450ab3ecd6e8a7d674877d",
+      "geometry": {
+        "safe": 256,
+        "wall": 2,
+        "field": 2334,
+        "slow": 572,
+        "lethal": 182
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 44,
+      "firstDirection": "right",
+      "routeSeconds": 57.94999999999735,
+      "routeCheckpoint": "b22a28c72a04e70d"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-oak-pack",
+      "name": "Neon Oak and Acorns",
+      "description": "",
+      "structureSHA256": "771c17f55e1737fc57ff642265d9d3487020c9e21534f1c3e39a5443ded1b70c",
+      "lowerStructureSHA256": "95122dd170b4ed041b70b21131acce51b0c453fdbf3ad618d1b229a5ef4e2d44",
+      "geometry": {
+        "safe": 268,
+        "wall": 2,
+        "field": 2322,
+        "slow": 611,
+        "lethal": 113
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 29,
+      "firstDirection": "left",
+      "routeSeconds": 50.849999999997756,
+      "routeCheckpoint": "925cdc4b3f045bdb"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-stork-pack",
+      "name": "Neon Stork",
+      "description": "",
+      "structureSHA256": "d8d9e7c1d79732d2374d2e829275a8b9fe8f8595a0a6b177574f92b861599072",
+      "lowerStructureSHA256": "8933936fc0dd5c492ed612717b51b0a3a6a74a09cb144753068e0f8fdaafca0d",
+      "geometry": {
+        "safe": 254,
+        "wall": 2,
+        "field": 2336,
+        "slow": 359,
+        "lethal": 105
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 19,
+      "firstDirection": "right",
+      "routeSeconds": 39.449999999998404,
+      "routeCheckpoint": "ae2db4107b17c6cc"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-swallow-pack",
+      "name": "Neon Swallow",
+      "description": "",
+      "structureSHA256": "5a98da3101a3ee743563579f0df4ff32897781078dd332784a80a794e1f21498",
+      "lowerStructureSHA256": "109221a2f290d6ae9dbd84e416e2e77c200b3dd8bf30724478133917f49a69c5",
+      "geometry": {
+        "safe": 280,
+        "wall": 2,
+        "field": 2310,
+        "slow": 925,
+        "lethal": 212
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 22,
+      "firstDirection": "left",
+      "routeSeconds": 42.74999999999822,
+      "routeCheckpoint": "e0aa71a85192ac4b"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-horse-pack",
+      "name": "Neon Pysanka Horse",
+      "description": "",
+      "structureSHA256": "69b1ba4737459e815700c02b00ea617aec3020d175b3622e67d0f3a5064539b2",
+      "lowerStructureSHA256": "ab6128f46d2b9d94444cf22981a39a9e4ea0c0a4a211422c6f8237e46f76ef1a",
+      "geometry": {
+        "safe": 256,
+        "wall": 8,
+        "field": 2328,
+        "slow": 432,
+        "lethal": 206
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 19,
+      "firstDirection": "left",
+      "routeSeconds": 37.7499999999985,
+      "routeCheckpoint": "715a04c19ebfdeba"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-deer-pack",
+      "name": "Neon Pysanka Deer",
+      "description": "",
+      "structureSHA256": "22ad0d0d2ffc02e85a06f21488be41696869bbf77a2a4236d8da6d7c9471f514",
+      "lowerStructureSHA256": "515c947bf1d6263cfc36b816473560cbd6676adb3c552b3e023c1a43b76ecb7a",
+      "geometry": {
+        "safe": 262,
+        "wall": 2,
+        "field": 2328,
+        "slow": 988,
+        "lethal": 219
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 53,
+      "firstDirection": "right",
+      "routeSeconds": 54.84999999999753,
+      "routeCheckpoint": "547c95aa7d2a73fe"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-fish-pack",
+      "name": "Neon Pysanka Fish",
+      "description": "",
+      "structureSHA256": "67b678fa7599e92514c060b8b7ac03235500020dd6161467fabbb86efaf40938",
+      "lowerStructureSHA256": "2df40c0655fba1829f839a52649f7245a5e279f43f7e7a8fd4006b9619e681f7",
+      "geometry": {
+        "safe": 264,
+        "wall": 2,
+        "field": 2326,
+        "slow": 290,
+        "lethal": 218
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 9,
+      "firstDirection": "left",
+      "routeSeconds": 21.34999999999943,
+      "routeCheckpoint": "864fdbf214fb5f61"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-berehynia-pack",
+      "name": "Neon Berehynia Motif",
+      "description": "",
+      "structureSHA256": "de84cedee1b08633b8fd573a32455c189679a5b882f192b7fc0a20c2b98d0515",
+      "lowerStructureSHA256": "61de012162c726bd808e21ed374c441807819ea474f4a3b55fbea0e46c2dd865",
+      "geometry": {
+        "safe": 266,
+        "wall": 2,
+        "field": 2324,
+        "slow": 106,
+        "lethal": 172
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 62,
+      "firstDirection": "left",
+      "routeSeconds": 63.64999999999703,
+      "routeCheckpoint": "a1fb99fc2e0455c9"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-bezkonechnyk-pack",
+      "name": "Neon Bezkonechnyk",
+      "description": "",
+      "structureSHA256": "cccc5eafe83d129ca6518a474c9dbb20e10a4f9c773911baa412e46b5a7343c9",
+      "lowerStructureSHA256": "ce0357e0e3b37c5463568ecd39f5cabf3901605cfb4b5d65cf2f18bb42340936",
+      "geometry": {
+        "safe": 278,
+        "wall": 2,
+        "field": 2312,
+        "slow": 616,
+        "lethal": 279
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 42,
+      "firstDirection": "right",
+      "routeSeconds": 48.54999999999789,
+      "routeCheckpoint": "3ba69c720da830d6"
+    },
+    {
+      "packId": "neon-mosaic-pack",
+      "id": "neon-ornek-tulip-pack",
+      "name": "Neon Crimean Tatar Ornek Tulip",
+      "description": "",
+      "structureSHA256": "2e949d4ed570e65bf2167fb904c1722cb5a2b7a3b105027d6ea55f44330a7ea7",
+      "lowerStructureSHA256": "6215ccc1ad93e841edeaed6a7aff41868ec280cecb2f23bd9b8c862973e7ba26",
+      "geometry": {
+        "safe": 280,
+        "wall": 2,
+        "field": 2310,
+        "slow": 567,
+        "lethal": 110
+      },
+      "enemyTypes": ["border-patrol", "bouncer", "contour-patrol"],
+      "directionChanges": 34,
+      "firstDirection": "left",
+      "routeSeconds": 56.849999999997415,
+      "routeCheckpoint": "8ddb822115097063"
+    }
+  ]
+}

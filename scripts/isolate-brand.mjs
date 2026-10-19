@@ -554,6 +554,50 @@ function projectLanding(files) {
 }
 
 function projectEnglishMultiplayer(files, config, catalog) {
+  // Local presentation copy preserves translation keys and interpolation while
+  // keeping the dedicated game's loading and movement instructions on-brand.
+  const brandedCopy = {
+  "errors": {
+    "loadingFlightSystems": "Loading your game…",
+    "flightOnHold": "Game paused.",
+    "stillPreparingYourArcadeYouCanWaitReloadOrUse": "Still preparing your game. You can wait or reload. Your saved progress is unchanged."
+  },
+  "interface": {
+    "loadingMissionsAndFlightEquipment": "Loading your missions…",
+    "closingACutStopsYourCraftChooseAFreshDirection": "Closing a cut stops your marker; choose a fresh direction.",
+    "closingACutStopsYourCraftTapAFreshDirection": "Closing a cut stops your marker; tap a fresh direction to move again.",
+    "tapADirectionToFlyAgain": "Tap a direction to move again.",
+    "tapADirectionToFlyTapAnotherToTurn": "Tap a direction to move. Tap another to turn.",
+    "enemyGuide.practiceInstructions": "{{advice}} Move with direction taps; Pause when you want to inspect. Closing a cut stops your marker; tap a fresh direction to move again. Retry starts the same lesson."
+  },
+  "gameplay": {
+    "brief.closingACutStopsYourCraftTapAFreshDirection": "Closing a cut stops your marker. Tap a fresh direction to move again.",
+    "tapADirectionToFlyTapAnotherToTurnUp": "Tap a direction to move. Tap another to turn. Up {{value1}}; down {{value2}}; left {{value3}}; right {{value4}}; {{value5}}{{value6}}{{value7}}{{value8}}pause {{value9}}. Releasing a direction keeps you moving.{{value10}}",
+    "tapADirectionToFlyPauses": "Tap a direction to move. {{value1}} {{value2}} pauses.",
+    "lineSecuredRevealedTapADirectionToFlyAgain": "Line secured. {{value1}}% revealed. Tap a direction to move again.",
+    "tuning.motion_one": "{{count}} hazard · {{speed}} cells/s{{admin}}.",
+    "tuning.motion_other": "{{count}} hazards · {{speed}} cells/s{{admin}}."
+  },
+  "demo": {
+    "tipStop": "Closing a cut stops the marker in this chapter. Give a new direction for the next move."
+  }
+};
+  edit(files, "game/i18n/bootstrap.mjs", (source) => once(
+    source,
+    "  const t = (key, values = {}) => engine.t(key, values);",
+    `  for (const [namespace, messages] of Object.entries(${JSON.stringify(brandedCopy)}))
+    engine.addResourceBundle('en', namespace, messages, true, true);
+  const t = (key, values = {}) => engine.t(key, values);`,
+    "dedicated English game instructions",
+  ));
+  edit(files, "game/boot.mjs", (source) => {
+    for (const [before, after] of [
+      ["Loading flight systems…", brandedCopy.errors.loadingFlightSystems],
+      ["Flight on hold.", brandedCopy.errors.flightOnHold],
+      ["Still preparing your arcade. You can wait, reload, or use Play online. No flight has started.", brandedCopy.errors.stillPreparingYourArcadeYouCanWaitReloadOrUse],
+    ]) source = once(source, before, after, "dedicated startup fallback");
+    return source;
+  });
   // The dedicated application has one language contract. Removing the second
   // locale at the bootstrap boundary also overrides an older saved preference.
   edit(files, "game/i18n/bootstrap.mjs", (source) =>

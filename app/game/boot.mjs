@@ -4,7 +4,7 @@
   const host = globalThis;
   const fallback = {
     'errors:stillPreparingYourArcadeYouCanWaitReloadOrUse':
-      'Still preparing your arcade. You can wait, reload, or use Play online. No flight has started.',
+      'Still preparing your game. You can wait or reload. Your saved progress is unchanged.',
     'errors:openYourArcade': 'Open your arcade.',
     'errors:theGameRendererDidNotLoad': 'The game renderer did not load.',
     'errors:theGameDidNotConfirmStartupOpenTheCurrentOnline':
@@ -15,10 +15,10 @@
     'errors:theGameRendererIsUnavailable': 'The game renderer is unavailable.',
     'errors:theGameCouldNotStartReloadToTryAgainOr':
       'The game could not start. Reload to try again, or open the online game. Your saved progress has not been changed by this launch screen.',
-    'errors:flightOnHold': 'Flight on hold.',
+    'errors:flightOnHold': 'Game paused.',
   };
   fallback['errors:loadingGameStyles'] = 'Loading game styles…';
-  fallback['errors:loadingFlightSystems'] = 'Loading flight systems…';
+  fallback['errors:loadingFlightSystems'] = 'Loading your game…';
   const t = (key) => host.RevealLineI18n?.t(key) || fallback[key];
   const doc = host.document;
   if (!doc || host.RevealLineBoot || host.RevealLineSnakeRedirect) return;

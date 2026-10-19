@@ -2066,6 +2066,168 @@
       "bytes": 14219,
       "sha256": "b33ec2c9c5bd6f27b9f38dfe7b8920acb31812ef01a7902f968a43d2d95f1ef0",
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/reports/fpv-development-preservation-20261016/incremental-readback-plans/extra-public-003.json",
+      "sourceGitBlob": "fa923951a877ca202493e87dca6a7ae60ecec5e4",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/reports/fpv-development-preservation-20261016/incremental-readback-plans/extra-public-003.json",
+      "bytes": 7869288,
+      "sha256": "3cd4f997deb2394a0fc91b2906c87c015fd534e1c376a20e5a207503acb1d050",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/reports/fpv-development-preservation-20261016/final-index/preservation-index.json",
+      "sourceGitBlob": "ba3776568571f971f32553cf7486f09019c5ac40",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/reports/fpv-development-preservation-20261016/final-index/preservation-index.json",
+      "bytes": 41343790,
+      "sha256": "630438ac879a40577638e5b21706fea93b637b8a34dbc70ad3266248b2d9509e",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/performance/fixtures/solo-remote-offline/installed-starter.catalogue.fixture",
+      "sourceGitBlob": "46b3bb5e55558a3c7ac1a36029407c54c28babfe",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/performance/fixtures/solo-remote-offline/installed-starter.catalogue.fixture",
+      "bytes": 89705,
+      "sha256": "560fd576e796456413e04719944be48a70b0922f6bf980cc98c9f7edf630e00c",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/verification/company-qualification-model.mjs",
+      "sourceGitBlob": "c0cb1009a668ddcecb84a4100505f93348e67f5a",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/verification/company-qualification-model.mjs",
+      "bytes": 15574,
+      "sha256": "26489f204e04ab0c5b9bc7036c185e90194057c7f6311b57a18c0e8259effbc2",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/verification/company-review.html",
+      "sourceGitBlob": "3c53082266a13e0dbf9c43acfc58dfc61c6f6330",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/verification/company-review.html",
+      "bytes": 4747,
+      "sha256": "65e3e13621d16eab12368466915634addd80d1189457c395ee988c3fbd4831d1",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/native-menu-inventory.json",
+      "sourceGitBlob": "1405c492662bfa97fa3293005872705f56f0a8ec",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/native-menu-inventory.json",
+      "bytes": 74629,
+      "sha256": "9b60b873908a8e36244467b950a725a3a89b142bb50dc29f421247a5dc730c40",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/verification/actor-motion/art-motion-disposition.json",
+      "sourceGitBlob": "f8809599bf64757af036fbd1262c0ca04c20c39b",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/verification/actor-motion/art-motion-disposition.json",
+      "bytes": 456787,
+      "sha256": "c0fdd9e994c299a1210c29963b7553379b0daa0d704b651f5e581227d5a6c01b",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/qualification/neon-level-completion/build-delivery.json",
+      "sourceGitBlob": "d3663e38215b4077b65e2d6ce7ce8ac6827e5807",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/qualification/neon-level-completion/build-delivery.json",
+      "bytes": 10500,
+      "sha256": "f0e369537d8abaada61df9e2c535bd04bc9dfcdab03295762461f4a0ef954634",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/qualification/industrial-art/inventory.json",
+      "sourceGitBlob": "891bafb812ec8d3566d24e37ad90152be091f169",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/qualification/industrial-art/inventory.json",
+      "bytes": 411025,
+      "sha256": "b38f684876749a571d472d820b951ec407f22daaf233f60d941dfd7f23738e2c",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-family-effects-continuation-2026-09-28/review.json",
+      "sourceGitBlob": "750801335ed95f52c0fa803f23d4931830e8e872",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/verification/fpv-family-effects-continuation-2026-09-28/review.json",
+      "bytes": 9012,
+      "sha256": "1a72688bfca58ddd75f18b7719f5021972fb1ed88a1c6e043e63abef2e848ba9",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/qualification/neon-level-completion/route-variety.json",
+      "sourceGitBlob": "95646d78c7f4cf83c4bf55ae6a719b50cf306b0e",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/qualification/neon-level-completion/route-variety.json",
+      "bytes": 37277,
+      "sha256": "2ed45bab7455f128c937a554b1dd9d852bd84dac0a5dd7ed8617e3dca0f1cf31",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/verification/journey-performance.mjs",
+      "sourceGitBlob": "aa56bf70e5abbc47c9f2be885f9efc40afbc14a1",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/docs/verification/journey-performance.mjs",
+      "bytes": 32261,
+      "sha256": "c992e57b14c7d9cd402ec1aa774ae6badd085ddc442f6838f826695bc84dfad4",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "publishing/pages-controller/catalog.json",
+      "sourceGitBlob": "0f13cdddd763a7677efc2fafef654007957dd09d",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/publishing/pages-controller/catalog.json",
+      "bytes": 80688,
+      "sha256": "c34d61935653e03c18997fc3b83c6734b659ab7cf49ac3f5443c39ab579097f6",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "publishing/pages-controller/allocations.json",
+      "sourceGitBlob": "2fd8613d7aa4988f08171f76f668290baac7ae0a",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/publishing/pages-controller/allocations.json",
+      "bytes": 13397,
+      "sha256": "13e7c63e9e54db8c19f250fe4ed22d577ca8d821b302094c7c332d176975c750",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "publishing/pages-controller/publication.json",
+      "sourceGitBlob": "9bf7ddead2b89983c140e1fdf1f4bdff34818199",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/publishing/pages-controller/publication.json",
+      "bytes": 427160,
+      "sha256": "a2defe5789d162daf4b5c0ee58acefefcc80eb57676803725f5b944c92ecd5ed",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "publishing/pages-controller/main-repository-policy.mjs",
+      "sourceGitBlob": "a7a8fdcb70b9c9677219deed2716d7abaed51ebd",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/publishing/pages-controller/main-repository-policy.mjs",
+      "bytes": 17203,
+      "sha256": "c485a68e6b48efd278960b95ad63434715bb37a26b37f11fd9cfbc4208bcafd7",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "publishing/pages-controller/main-repository-policy.test.mjs",
+      "sourceGitBlob": "bde9a53320ca88e84241deef291a69fdddac70cf",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/publishing/pages-controller/main-repository-policy.test.mjs",
+      "bytes": 7161,
+      "sha256": "fdd4a9c656f9563df3bb0dff5e69ea75c1e6d0a66bba99a16b4e8981c53fe893",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "publishing/pages-controller/README.md",
+      "sourceGitBlob": "4a3c21471be9e1c47524247788064f4c1d648672",
+      "sourceRevision": "2a9717d2849e111da6a69c57f1f5fad793c15908",
+      "destination": "content/archive/owned-source/publishing/pages-controller/README.md",
+      "bytes": 25867,
+      "sha256": "25026da0563b459d60194187957ed7190adc45184a95c8e029a405d3601c6e7e",
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }

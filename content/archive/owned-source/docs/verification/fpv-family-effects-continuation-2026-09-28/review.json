@@ -1,0 +1,160 @@
+{
+  "format": "revealline-scoped-fpv-family-effects-continuation.v1",
+  "status": "candidate bounded functional effects continuation; coordinator acceptance, production adoption, frozen, public, physical-device and human review pending",
+  "candidateBase": "6fe52474b5b395a5c416bd388555d488db33f287",
+  "candidateRuntimeHead": "bc8ac63c2cd730235787a9136008bea8256b5283",
+  "scope": "Assess the exact ten existing trail/effect recipes after semantic presentation-family routing gives DroneAid and later FPV-family themes the approved broken-frame craft-loss fragments and CRAFT LOST language. No new recipe, bitmap, simulation rule, collision, score, difficulty, Team binding or authoritative state is introduced.",
+  "priorReview": {
+    "path": "docs/verification/bulk-integration-presentation-continuation-2026-09-27/review.json",
+    "sha256": "ad469766d926795fddca108b77042b226282cc17b3a130429ad2b548b5e2edf5",
+    "fingerprintSHA256": "732ee9b5a46bbfe1bce8ee74f29aace278cd4da67ae59871a2771f0c197b5e3f"
+  },
+  "fingerprint": {
+    "group": "effects",
+    "paths": "game/ui/classic-view.mjs; game/ui/event-feedback.mjs; game/content-design/actor-marker.mjs; game/ui/lane-presentation.mjs; game/ui/render.mjs; game/ui/relay-view.mjs; game/ui/directional-view.mjs; game/ui/enemy-body-assets.mjs; game/ui/enemy-body-motion.mjs; game/enemy-catalog.mjs; game/ui/body-motion.mjs; game/ui/actor-recipes.mjs; game/ui/fpv-body-recipes.mjs; game/ui/body-backing.mjs; authoring/motion-lab/animation.mjs",
+    "inputs": [
+      {
+        "path": "game/ui/classic-view.mjs",
+        "gitBlob": "ece815ee6512f53280b85ddd75b34a74033ec2cc",
+        "bytes": 28109,
+        "sha256": "9cda7f95bcecc7cc4edae05f3aee2bb34615ff5f0cd99984c570574123caae09"
+      },
+      {
+        "path": "game/ui/event-feedback.mjs",
+        "gitBlob": "65090aae50bbbeb5a9547889bff3ba10db2dcdcd",
+        "bytes": 6513,
+        "sha256": "e4d87d5b087b6b56351e583c1569f829363b162a0041d5fef5319870c83842bc"
+      },
+      {
+        "path": "game/content-design/actor-marker.mjs",
+        "gitBlob": "7d01ceb03e8b7c54c9ff8171a2a9544003f8cf0e",
+        "bytes": 5909,
+        "sha256": "f0d6c35d6ca0affb5163707dd62a7512bc2418dba448683d251c3d8ef69d5629"
+      },
+      {
+        "path": "game/ui/lane-presentation.mjs",
+        "gitBlob": "5970ab070f3ab49e29dc87280232983107875f7a",
+        "bytes": 2364,
+        "sha256": "b3b1f6352412edcae37894c522e40b7e439b0e20b4d5ad79d098063173ca1423"
+      },
+      {
+        "path": "game/ui/render.mjs",
+        "gitBlob": "be2a531e53fa58a30b52a989dadbb6ea0369ae6e",
+        "bytes": 37490,
+        "sha256": "179bed62b02781b8a477dc823db77f2caf4fef26650759aeca8627f275d312f7"
+      },
+      {
+        "path": "game/ui/relay-view.mjs",
+        "gitBlob": "2eab5a328c48b5e9dcdc84f4f2a4b7e52dc9005c",
+        "bytes": 6946,
+        "sha256": "edf9904c67f4e63cddb3d745ae0897a5612fffa008320d1c32c14300161d6767"
+      },
+      {
+        "path": "game/ui/directional-view.mjs",
+        "gitBlob": "f9c4f0f28c117e96a6e91321fddc2f78c2417531",
+        "bytes": 3500,
+        "sha256": "5768fc555ee335663f1e715f3824ab824833cfc903387c7ee10690738015c595"
+      },
+      {
+        "path": "game/ui/enemy-body-assets.mjs",
+        "gitBlob": "e4397a99939f8747af3fafe656e7ba2d077fb22a",
+        "bytes": 10497,
+        "sha256": "7bbe62f021d50d5f975635b9ed02e197c2955d37bc046f63ea189e1c2a497a1e"
+      },
+      {
+        "path": "game/ui/enemy-body-motion.mjs",
+        "gitBlob": "c413ae08a186fd447ca903c81547f871205fd227",
+        "bytes": 1179,
+        "sha256": "b23cff03deada23ea77efe8d8834e31f693712775cafcb00aa236b629cb6a554"
+      },
+      {
+        "path": "game/enemy-catalog.mjs",
+        "gitBlob": "d1a4cf09a81bd6466b2931fe6d7d1a9f9630fb70",
+        "bytes": 5965,
+        "sha256": "0c64df28a25ac55c55d1890ec9521b5f8284a0a85d76a42163e84d564ad9478a"
+      },
+      {
+        "path": "game/ui/body-motion.mjs",
+        "gitBlob": "068c8d83f2a8f21cfb11085f5a1895e2f80a04ce",
+        "bytes": 1688,
+        "sha256": "62b1b510d5f18e037ea44f20029996e29f2fa08b2e98bb8153b1a9d5c86fe99a"
+      },
+      {
+        "path": "game/ui/actor-recipes.mjs",
+        "gitBlob": "c5c2b518d9d494c26ec0ec2a1937be4459d07024",
+        "bytes": 2651,
+        "sha256": "5545974b78c29e9c8b0b8cc1d8d2c04704d0918be32eaa206e4d982a13543b53"
+      },
+      {
+        "path": "game/ui/fpv-body-recipes.mjs",
+        "gitBlob": "11f1f7979b9c9f835dfef7ad0ca3c02b5ed37873",
+        "bytes": 5571,
+        "sha256": "7f006da3957810fa81fe9532dda8c70a5c9552da12334f815c99b9e963508852"
+      },
+      {
+        "path": "game/ui/body-backing.mjs",
+        "gitBlob": "c4a8b86b081606b33c65221032002cb09ad52795",
+        "bytes": 2924,
+        "sha256": "e44500ef2099abfee97860a57c577e87034e769184328821d6f6f75950fbccc5"
+      },
+      {
+        "path": "authoring/motion-lab/animation.mjs",
+        "gitBlob": "887cb989d0f849b8c6bad12dee2820eb1a51c584",
+        "bytes": 8068,
+        "sha256": "e739040d96daea57fd782f13991d96241e11022803038af8d4d184be15981c40"
+      }
+    ],
+    "priorSHA256": "732ee9b5a46bbfe1bce8ee74f29aace278cd4da67ae59871a2771f0c197b5e3f",
+    "currentSHA256": "b7aa3a6b9bc2302df0309e90acddf899766a9b9406f93bd266a94b685940a5eb",
+    "algorithm": "SHA256 of the fifteen ordered raw source bodies concatenated, matching fieldKitRecipeSources"
+  },
+  "changedInputs": [
+    {
+      "path": "game/ui/event-feedback.mjs",
+      "priorSHA256": "549eed24bb124214635514c96df9365147e129f2a36ae62ee730ecd954260e01",
+      "currentSHA256": "e4d87d5b087b6b56351e583c1569f829363b162a0041d5fef5319870c83842bc",
+      "assessment": "Resolves the cosmetic feedback family from an explicit semantic family before consulting the unique theme ID. FPV-family editions reuse the existing FPV failure branch and label; Ukrainian/Atlas and Coupa/Navi mappings preserve their existing branches. Event lifetime, position, age, reduced-effects bounds and state inputs are unchanged."
+    },
+    {
+      "path": "game/ui/render.mjs",
+      "priorSHA256": "768f75bbaf3f159850d1ed8aed7620577d5bc05348e92365d1ab2689872d5e5f",
+      "currentSHA256": "179bed62b02781b8a477dc823db77f2caf4fef26650759aeca8627f275d312f7",
+      "assessment": "Passes the already-resolved presentation theme family into the event-feedback painter. It does not mutate the theme, run, replay, collision, score, difficulty, effect queue or timing."
+    }
+  ],
+  "continuedSlots": [
+    "trail.active",
+    "trail.secured",
+    "trail.head",
+    "effect.capture",
+    "effect.failure",
+    "effect.victory",
+    "effect.pickup",
+    "effect.shield",
+    "effect.respawn",
+    "effect.pressure"
+  ],
+  "qualification": {
+    "focusedAutomated": [
+      "Fifty-seven of fifty-seven checks pass across the complete presentation renderer, enemy catalogue/event feedback and actor presentation suites.",
+      "The new direct test proves a unique DroneAid theme ID with family fpv emits the same visible failure calls as the default FPV theme, including reduced effects.",
+      "The integrated BoardPainter test proves the prepared theme family reaches actual event rendering and produces CRAFT LOST · -1 LIFE without changing run authority.",
+      "The renderer suite proves compiled enemy sprites retain image ownership, explicit original skins retain priority, actor geometry remains collision-independent and replay checkpoints stay identical.",
+      "Scoped ESLint, repository formatting, npm run validate, Motion Lab syntax and git diff checks pass on the candidate."
+    ],
+    "sourceComparison": "Thirteen of fifteen effects inputs are byte-identical to the accepted v0.141.7 base. The only changes are family selection in event-feedback.mjs and forwarding the already-owned family in render.mjs.",
+    "longSuite": "Waived by the active temporary fast-release policy and not represented as passed."
+  },
+  "preservation": [
+    "No image, audio, font, production-ledger or compiled presentation payload is added or replaced.",
+    "All ten effect recipe IDs and payload shapes remain unchanged; this assessment concerns their exact source dependency fingerprint.",
+    "Simulation, collisions, scores, mission identities, saves, earned originals, uploaded media and custom content are unchanged.",
+    "Historical presentation revisions and prior review bytes remain immutable."
+  ],
+  "excluded": [
+    "No production-history, producer, compiled-output or Team-binding adoption; the serialized coordinator owns that step.",
+    "No claim of final subjective art, every theme/state, human pacing, physical controller/touch, screen-reader, every viewport, frozen build, offline or public Pages acceptance.",
+    "No new Team recipe approval or broader semantic-family compatibility beyond the mappings exercised by source and focused tests."
+  ],
+  "decision": "Eligible for coordinator review as a continuation of the exact ten existing effects recipes only when this review byte identity and fingerprint match. Any effects input or review-byte change reopens the group."
+}

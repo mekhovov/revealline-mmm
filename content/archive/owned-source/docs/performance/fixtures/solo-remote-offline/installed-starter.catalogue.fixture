@@ -1,0 +1,2297 @@
+{
+  "catalogueAuthority": {
+    "path": "offline-content.json",
+    "bytes": 6188682,
+    "sha256": "b0a1f1c2df1b3f372090aa108f6c4caad5f5301fc024a0ae53a6e15ceb68e321"
+  },
+  "core": {
+    "files": [
+      {
+        "path": "game/content-design/runtime/chapter-journey-opening.json",
+        "bytes": 20912,
+        "sha256": "553239c39f2562b90a71670cd383f65c53dce6e84a6f386af51465c1caadce65"
+      },
+      {
+        "path": "game/content-design/runtime/navigation-whole-spatial-v25.json",
+        "bytes": 1363574,
+        "sha256": "c5fcd45e0335297b0788b87299f63952c2e58dbdd9cb5f6338908a1d9ad7caf8"
+      }
+    ]
+  },
+  "catalogue": {
+    "groups": [
+      {
+        "id": "base",
+        "title": "Solo starter \u00b7 Horizon",
+        "kind": "gameplay",
+        "category": "starter",
+        "current": true,
+        "modes": [
+          "solo"
+        ],
+        "requires": [
+          "shared",
+          "solo:horizon-starter"
+        ],
+        "files": []
+      },
+      {
+        "id": "shared",
+        "title": "Shared runtime support",
+        "kind": "gameplay",
+        "category": "shared",
+        "current": true,
+        "modes": [
+          "solo",
+          "versus",
+          "team"
+        ],
+        "requires": [],
+        "files": [
+          "authoring/library/classic-reveal-artwork/README.md",
+          "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-01.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-02.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-03.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-04.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/living-threads-01.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/living-threads-02.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/living-threads-03.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/night-shift-01.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/night-shift-02.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/night-shift-03.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/sentinel-relay-01.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-01.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-02.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-03.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-04.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-05.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-06.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-07.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-08.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-09.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-10.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-11.jpg",
+          "authoring/library/classic-reveal-artwork/backgrounds/signal-12.jpg",
+          "authoring/library/classic-reveal-artwork/contact-sheet.jpg",
+          "authoring/library/classic-reveal-artwork/index.html",
+          "authoring/library/classic-reveal-artwork/manifest.json",
+          "authoring/library/classic-reveal-artwork/prompts.json",
+          "authoring/library/neon-artwork/README.md",
+          "authoring/library/neon-artwork/backgrounds/arrows.jpg",
+          "authoring/library/neon-artwork/backgrounds/bandura.jpg",
+          "authoring/library/neon-artwork/backgrounds/barvinok.jpg",
+          "authoring/library/neon-artwork/backgrounds/berehynia.jpg",
+          "authoring/library/neon-artwork/backgrounds/bezkonechnyk.jpg",
+          "authoring/library/neon-artwork/backgrounds/chambers.jpg",
+          "authoring/library/neon-artwork/backgrounds/channels.jpg",
+          "authoring/library/neon-artwork/backgrounds/conduit.jpg",
+          "authoring/library/neon-artwork/backgrounds/coupa.jpg",
+          "authoring/library/neon-artwork/backgrounds/crossfire.jpg",
+          "authoring/library/neon-artwork/backgrounds/crossgrid.jpg",
+          "authoring/library/neon-artwork/backgrounds/crossroads.jpg",
+          "authoring/library/neon-artwork/backgrounds/deer.jpg",
+          "authoring/library/neon-artwork/backgrounds/didukh.jpg",
+          "authoring/library/neon-artwork/backgrounds/drone-aid.jpg",
+          "authoring/library/neon-artwork/backgrounds/fish.jpg",
+          "authoring/library/neon-artwork/backgrounds/fly-free.jpg",
+          "authoring/library/neon-artwork/backgrounds/fpv-drone.jpg",
+          "authoring/library/neon-artwork/backgrounds/fpv-line.jpg",
+          "authoring/library/neon-artwork/backgrounds/fpv.jpg",
+          "authoring/library/neon-artwork/backgrounds/hearts.jpg",
+          "authoring/library/neon-artwork/backgrounds/horse.jpg",
+          "authoring/library/neon-artwork/backgrounds/kalyna.jpg",
+          "authoring/library/neon-artwork/backgrounds/kosiv-pitcher.jpg",
+          "authoring/library/neon-artwork/backgrounds/labyrinth.jpg",
+          "authoring/library/neon-artwork/backgrounds/oak.jpg",
+          "authoring/library/neon-artwork/backgrounds/opishnia-ram.jpg",
+          "authoring/library/neon-artwork/backgrounds/ornek-tulip.jpg",
+          "authoring/library/neon-artwork/backgrounds/petrykivka.jpg",
+          "authoring/library/neon-artwork/backgrounds/pinwheels.jpg",
+          "authoring/library/neon-artwork/backgrounds/prism.jpg",
+          "authoring/library/neon-artwork/backgrounds/pysanka.jpg",
+          "authoring/library/neon-artwork/backgrounds/reveal.jpg",
+          "authoring/library/neon-artwork/backgrounds/rushnyk.jpg",
+          "authoring/library/neon-artwork/backgrounds/ruzha.jpg",
+          "authoring/library/neon-artwork/backgrounds/sdua.jpg",
+          "authoring/library/neon-artwork/backgrounds/social-drone.jpg",
+          "authoring/library/neon-artwork/backgrounds/spines.jpg",
+          "authoring/library/neon-artwork/backgrounds/spirals.jpg",
+          "authoring/library/neon-artwork/backgrounds/stork.jpg",
+          "authoring/library/neon-artwork/backgrounds/swallow.jpg",
+          "authoring/library/neon-artwork/backgrounds/switchback.jpg",
+          "authoring/library/neon-artwork/backgrounds/switchyards.jpg",
+          "authoring/library/neon-artwork/backgrounds/tree-of-life.jpg",
+          "authoring/library/neon-artwork/backgrounds/trembita.jpg",
+          "authoring/library/neon-artwork/backgrounds/tryzub.jpg",
+          "authoring/library/neon-artwork/backgrounds/tsymbaly.jpg",
+          "authoring/library/neon-artwork/backgrounds/ukraine.jpg",
+          "authoring/library/neon-artwork/backgrounds/vd.jpg",
+          "authoring/library/neon-artwork/backgrounds/victory-drones.jpg",
+          "authoring/library/neon-artwork/backgrounds/vinok.jpg",
+          "authoring/library/neon-artwork/backgrounds/vyshyvanka.jpg",
+          "authoring/library/neon-artwork/backgrounds/wavebands.jpg",
+          "authoring/library/neon-artwork/backgrounds/wheat.jpg",
+          "authoring/library/neon-artwork/coverage-audit.json",
+          "authoring/library/neon-artwork/index.html",
+          "authoring/library/neon-artwork/prompts.json",
+          "authoring/library/neon-mosaic/README.md",
+          "authoring/library/neon-mosaic/bandura/preview.svg",
+          "authoring/library/neon-mosaic/bandura/scenario.json",
+          "authoring/library/neon-mosaic/barvinok/preview.svg",
+          "authoring/library/neon-mosaic/barvinok/scenario.json",
+          "authoring/library/neon-mosaic/berehynia/preview.svg",
+          "authoring/library/neon-mosaic/berehynia/scenario.json",
+          "authoring/library/neon-mosaic/bezkonechnyk/preview.svg",
+          "authoring/library/neon-mosaic/bezkonechnyk/scenario.json",
+          "authoring/library/neon-mosaic/coupa/preview.svg",
+          "authoring/library/neon-mosaic/coupa/scenario.json",
+          "authoring/library/neon-mosaic/deer/preview.svg",
+          "authoring/library/neon-mosaic/deer/scenario.json",
+          "authoring/library/neon-mosaic/designs.json",
+          "authoring/library/neon-mosaic/didukh/preview.svg",
+          "authoring/library/neon-mosaic/didukh/scenario.json",
+          "authoring/library/neon-mosaic/drone-aid/preview.svg",
+          "authoring/library/neon-mosaic/drone-aid/scenario.json",
+          "authoring/library/neon-mosaic/fish/preview.svg",
+          "authoring/library/neon-mosaic/fish/scenario.json",
+          "authoring/library/neon-mosaic/fly-free/preview.svg",
+          "authoring/library/neon-mosaic/fly-free/scenario.json",
+          "authoring/library/neon-mosaic/fpv-drone/preview.svg",
+          "authoring/library/neon-mosaic/fpv-drone/scenario.json",
+          "authoring/library/neon-mosaic/fpv-line/preview.svg",
+          "authoring/library/neon-mosaic/fpv-line/scenario.json",
+          "authoring/library/neon-mosaic/fpv/preview.svg",
+          "authoring/library/neon-mosaic/fpv/scenario.json",
+          "authoring/library/neon-mosaic/horse/preview.svg",
+          "authoring/library/neon-mosaic/horse/scenario.json",
+          "authoring/library/neon-mosaic/index.html",
+          "authoring/library/neon-mosaic/kalyna/preview.svg",
+          "authoring/library/neon-mosaic/kalyna/scenario.json",
+          "authoring/library/neon-mosaic/kosiv-pitcher/preview.svg",
+          "authoring/library/neon-mosaic/kosiv-pitcher/scenario.json",
+          "authoring/library/neon-mosaic/launch.mjs",
+          "authoring/library/neon-mosaic/oak/preview.svg",
+          "authoring/library/neon-mosaic/oak/scenario.json",
+          "authoring/library/neon-mosaic/opishnia-ram/preview.svg",
+          "authoring/library/neon-mosaic/opishnia-ram/scenario.json",
+          "authoring/library/neon-mosaic/ornek-tulip/preview.svg",
+          "authoring/library/neon-mosaic/ornek-tulip/scenario.json",
+          "authoring/library/neon-mosaic/overview.svg",
+          "authoring/library/neon-mosaic/petrykivka/preview.svg",
+          "authoring/library/neon-mosaic/petrykivka/scenario.json",
+          "authoring/library/neon-mosaic/pysanka/preview.svg",
+          "authoring/library/neon-mosaic/pysanka/scenario.json",
+          "authoring/library/neon-mosaic/references.json",
+          "authoring/library/neon-mosaic/reveal/preview.svg",
+          "authoring/library/neon-mosaic/reveal/scenario.json",
+          "authoring/library/neon-mosaic/rushnyk/preview.svg",
+          "authoring/library/neon-mosaic/rushnyk/scenario.json",
+          "authoring/library/neon-mosaic/ruzha/preview.svg",
+          "authoring/library/neon-mosaic/ruzha/scenario.json",
+          "authoring/library/neon-mosaic/sdua/preview.svg",
+          "authoring/library/neon-mosaic/sdua/scenario.json",
+          "authoring/library/neon-mosaic/social-drone/preview.svg",
+          "authoring/library/neon-mosaic/social-drone/scenario.json",
+          "authoring/library/neon-mosaic/stork/preview.svg",
+          "authoring/library/neon-mosaic/stork/scenario.json",
+          "authoring/library/neon-mosaic/swallow/preview.svg",
+          "authoring/library/neon-mosaic/swallow/scenario.json",
+          "authoring/library/neon-mosaic/tree-of-life/preview.svg",
+          "authoring/library/neon-mosaic/tree-of-life/scenario.json",
+          "authoring/library/neon-mosaic/trembita/preview.svg",
+          "authoring/library/neon-mosaic/trembita/scenario.json",
+          "authoring/library/neon-mosaic/tryzub/preview.svg",
+          "authoring/library/neon-mosaic/tryzub/scenario.json",
+          "authoring/library/neon-mosaic/tsymbaly/preview.svg",
+          "authoring/library/neon-mosaic/tsymbaly/scenario.json",
+          "authoring/library/neon-mosaic/ukraine/preview.svg",
+          "authoring/library/neon-mosaic/ukraine/scenario.json",
+          "authoring/library/neon-mosaic/vd/preview.svg",
+          "authoring/library/neon-mosaic/vd/scenario.json",
+          "authoring/library/neon-mosaic/victory-drones/preview.svg",
+          "authoring/library/neon-mosaic/victory-drones/scenario.json",
+          "authoring/library/neon-mosaic/vinok/preview.svg",
+          "authoring/library/neon-mosaic/vinok/scenario.json",
+          "authoring/library/neon-mosaic/vyshyvanka/preview.svg",
+          "authoring/library/neon-mosaic/vyshyvanka/scenario.json",
+          "authoring/library/neon-mosaic/wheat/preview.svg",
+          "authoring/library/neon-mosaic/wheat/scenario.json",
+          "authoring/library/neon-reference-pack/README.md",
+          "authoring/motion-lab/assets/delta-interceptor.png",
+          "authoring/motion-lab/assets/fixedwing-body.png",
+          "authoring/motion-lab/assets/fpv-body.png",
+          "authoring/motion-lab/assets/fpv-night.png",
+          "authoring/motion-lab/assets/fpv-racer.png",
+          "authoring/motion-lab/assets/heavy-lift.png",
+          "authoring/motion-lab/assets/navi-avatar.png",
+          "authoring/motion-lab/assets/retro-craft.png",
+          "authoring/motion-lab/assets/scout-quad.png",
+          "authoring/motion-lab/assets/ukrainian-bird.png",
+          "game/creator/examples/social-drone-sky-watch.rlpack"
+        ]
+      },
+      {
+        "id": "solo:horizon-starter",
+        "title": "Solo \u00b7 Horizon",
+        "kind": "gameplay",
+        "category": "starter",
+        "classification": "current",
+        "current": true,
+        "modes": [
+          "solo"
+        ],
+        "requires": [
+          "shared"
+        ],
+        "files": [
+          "game/content-design/assets/horizon-r1/first-return.png",
+          "game/content-design/assets/horizon-r1/choose-your-share.png",
+          "game/content-design/assets/horizon-r1/nearby-shore.png",
+          "game/content-design/assets/horizon-r1/two-keepers.png",
+          "game/content-design/assets/horizon-r1/island-outpost.png",
+          "game/content-design/assets/horizon-r1/stepping-stones.png",
+          "game/content-design/assets/horizon-r1/two-bays.png",
+          "game/content-design/assets/horizon-r1/courtyard-return.png",
+          "game/content-design/assets/horizon-r1/long-way-home.png"
+        ]
+      },
+      {
+        "id": "runtime:versus",
+        "title": "Versus mode",
+        "kind": "gameplay",
+        "category": "mode",
+        "current": true,
+        "modes": [
+          "versus"
+        ],
+        "requires": [
+          "shared"
+        ],
+        "files": [
+          "game/couch/index.html",
+          "game/couch/relay-rescue.html",
+          "game/mission-library/remote-team.mjs",
+          "game/mission-library/spatial-next-editions.mjs",
+          "game/ui/mode-boot.css",
+          "game/couch/relay-rescue.css",
+          "game/ui/journey-save-cue.css",
+          "game/couch/team-entry.js",
+          "game/couch/mode-entry.js",
+          "game/couch/relay-rescue.mjs",
+          "game/coop/enemy-stats-ownership.mjs",
+          "game/ui/enemy-stats-events.mjs",
+          "game/ui/continuous-celebration.mjs",
+          "game/ui/pause-menu.mjs",
+          "game/multiplayer-recording.mjs",
+          "game/ui/recording-verification.mjs",
+          "game/ui/terminal-recording-export.mjs",
+          "game/coop/attempt-identity.mjs",
+          "game/coop/hunt-attempts.mjs",
+          "game/ui/team-hunt-save.mjs",
+          "game/ui/couch-touch.mjs",
+          "game/ui/journey-save-cue.mjs",
+          "game/ui/journey-mode-pictures.mjs",
+          "game/couch/couch-music-context.mjs",
+          "game/couch/couch-input.mjs",
+          "game/couch/coop-view.mjs",
+          "game/couch/coop-cue-overflow.mjs",
+          "game/couch/coop-owned-presentation.mjs",
+          "game/couch/candidate-team-pictures.mjs",
+          "game/couch/coop-picture-bindings.mjs",
+          "game/couch/coop-picture-image.mjs",
+          "game/couch/coop-import-source.mjs",
+          "game/couch/creator-team-import.mjs",
+          "game/creator/team-installed.mjs",
+          "game/creator/team-media.mjs",
+          "game/coop/presentation-envelope.mjs",
+          "game/couch/coop-feedback.mjs",
+          "game/couch/coop-briefing.mjs",
+          "game/couch/coop-bonus-view.mjs",
+          "game/couch/coop-ground.mjs",
+          "game/ui/reading-input-prompt.mjs",
+          "game/coop/input-policy.mjs",
+          "game/couch/team-contextual-teaching.mjs",
+          "game/couch/team-arena-preference.mjs",
+          "game/couch/team-library-preview.mjs",
+          "game/mission-library/remote-solo-versus.mjs",
+          "game/content-design/team-entry.mjs",
+          "game/content-design/team-timed-entry.mjs",
+          "game/content-design/team-progress.mjs",
+          "game/content-design/team-mission-card.mjs",
+          "game/content-design/team-capture-teaching.mjs",
+          "game/mission-library/metadata-installed-library.mjs",
+          "game/mission-library/installed-inventory.mjs",
+          "game/couch/couch-chapter-install.mjs",
+          "game/mission-library/metadata-custom-source.mjs",
+          "game/coop/attempt-history.mjs",
+          "game/couch/candidate-pictures.mjs",
+          "game/couch/coop-presentation.mjs",
+          "game/couch/coop-retained-presentation.mjs",
+          "game/coop/picture-source.mjs",
+          "game/couch/coop-outcome-presentation.mjs",
+          "game/couch/coop-rescue-presentation.mjs",
+          "game/couch/coop-support-presentation.mjs",
+          "game/couch/coop-actor-presentation.mjs",
+          "game/couch/coop-pilot-cues.mjs",
+          "game/couch/coop-actor-layout.mjs",
+          "game/couch/coop-terrain-trail.mjs",
+          "game/multiplayer-terminal-observation.mjs",
+          "game/ui/terminal-recording-export.css",
+          "game/couch/couch.css",
+          "game/couch/couch.mjs",
+          "game/couch/couch-shell.mjs",
+          "game/couch/start-cue.mjs",
+          "game/couch/couch-chapter.mjs",
+          "game/couch/couch-installed-chapters.mjs",
+          "game/couch/couch-static-pictures.mjs",
+          "game/mission-library/materialize-pack.mjs",
+          "game/ui/encounter-help.mjs",
+          "game/couch/versus-package-readiness.mjs",
+          "game/couch/couch-release-picture.mjs",
+          "game/content-design/runtime/whole-spatial-v25.json",
+          "game/content-design/runtime/whole-spatial-v24.json",
+          "game/content-design/runtime/whole-spatial-v23.json",
+          "game/content-design/runtime/whole-spatial-v22.json",
+          "game/content-design/runtime/whole-spatial-v21.json",
+          "game/content-design/runtime/whole-spatial-v20.json",
+          "game/content-design/runtime/whole-spatial-v19.json",
+          "game/content-design/runtime/whole-spatial-v18.json",
+          "game/content-design/runtime/whole-spatial-v17.json",
+          "game/content-design/runtime/whole-spatial-v16.json",
+          "game/content-design/runtime/whole-spatial-v15.json",
+          "game/content-design/runtime/whole-spatial-v14.json",
+          "game/content-design/runtime/whole-spatial-v13.json",
+          "game/content-design/runtime/whole-spatial-v12.json",
+          "game/content-design/runtime/whole-spatial-v11.json",
+          "game/content-design/runtime/whole-spatial-v10.json",
+          "game/content-design/runtime/whole-spatial-v9.json"
+        ]
+      },
+      {
+        "id": "archive:journey:opening",
+        "title": "Journey \u00b7 Opening Journey \u00b7 Archive",
+        "kind": "gameplay",
+        "category": "archive",
+        "classification": "archived",
+        "current": false,
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "requires": [
+          "shared",
+          "runtime:versus"
+        ],
+        "files": [
+          "game/content-design/runtime/opening.json",
+          "game/content-design/assets/horizon-r1/first-return.png",
+          "game/content-design/assets/horizon-r1/choose-your-share.png",
+          "game/content-design/assets/horizon-r1/nearby-shore.png",
+          "game/content-design/assets/horizon-r1/two-keepers.png",
+          "game/content-design/assets/horizon-r1/island-outpost.png",
+          "game/content-design/assets/horizon-r1/stepping-stones.png",
+          "game/content-design/assets/horizon-r1/two-bays.png",
+          "game/content-design/assets/horizon-r1/courtyard-return.png",
+          "game/content-design/assets/horizon-r1/long-way-home.png",
+          "game/content-design/assets/horizon-r1/horizon-remix.png"
+        ]
+      }
+    ],
+    "files": [
+      {
+        "path": "authoring/library/classic-reveal-artwork/README.md",
+        "bytes": 2371,
+        "sha256": "9f41568f3f0a835b4ccd10e435d850bd113da7476a9c74c83ee13aee8c16604a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-01.jpg",
+        "bytes": 276824,
+        "sha256": "2b206ab092e51af1b4569c466ec791047aba5cbd605556252d00e6a0e1be3f79",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-02.jpg",
+        "bytes": 240180,
+        "sha256": "2958e511adaf042515f6445f40d739cc46797af3a7378b18477bd3d0efac167b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-03.jpg",
+        "bytes": 226890,
+        "sha256": "e0b5c1100d674dc8038efac33b7813921a8181e26619c19a6428e79db6842802",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/fieldcraft-04.jpg",
+        "bytes": 291750,
+        "sha256": "f7ecf0b53b5cbe1d91aa99a64432d8526953329518922efcd2e46fb38e40fcff",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/living-threads-01.jpg",
+        "bytes": 318191,
+        "sha256": "560d311bed6011e84cc59050f679177f70c701dca4fff81bdf046e94fcf0f432",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/living-threads-02.jpg",
+        "bytes": 277898,
+        "sha256": "f156153d7d696819b40252f1f8be2c56cb5732bd0aaee72bdabbeafd77218774",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/living-threads-03.jpg",
+        "bytes": 299600,
+        "sha256": "0fcefc26e3edca61f3b8b05ca913f60717477bfc83728ea3d23038b770f04bc9",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/night-shift-01.jpg",
+        "bytes": 251170,
+        "sha256": "a2fa65e9126e1402cf8e3dbd4d798b14f1c940adc4a5f981f0eee6f6d1c0c448",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/night-shift-02.jpg",
+        "bytes": 284877,
+        "sha256": "cee4164d7fc5ba2acc26f1abf69f06189ece70bed072e74f97b4e70bb82b2de1",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/night-shift-03.jpg",
+        "bytes": 252851,
+        "sha256": "8ba136b1442f4216af31e2b49c3d1bc019af014f3942fe134b6970e152d761a3",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/sentinel-relay-01.jpg",
+        "bytes": 261421,
+        "sha256": "af0f43097138386e745e361b3d6d7869740f6e15d99333d3bb2c237f48123418",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-01.jpg",
+        "bytes": 268343,
+        "sha256": "b1111a42a118f874a0993abec79fe63a6da88f73ae70eaf7739aecc492115fb3",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-02.jpg",
+        "bytes": 307870,
+        "sha256": "176400881da368a2d827192379617651fb29fd4d44773cbd5a9296e1ee8c0048",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-03.jpg",
+        "bytes": 264548,
+        "sha256": "a5c0112706c147589d19bbd5ed5bb14f046c2d22e8dc802c0b09a59f4712e1e6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-04.jpg",
+        "bytes": 264630,
+        "sha256": "cefa98a6ac605e808fb0e4109405bc08e0f806c1ed3b4a3d22def159d217c5ec",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-05.jpg",
+        "bytes": 207886,
+        "sha256": "003e6285f7c7ee1ed155d508caa67326ad5fe4d3eeed5edc761f349361aef402",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-06.jpg",
+        "bytes": 234219,
+        "sha256": "d3719e11d241388f7d798ee0e4ed78387d56932dc461f1202284c34dea1ab12d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-07.jpg",
+        "bytes": 264337,
+        "sha256": "47d47c206c066181eb78d22f474891538b7a24801aa6118f8cfd53255cb818da",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-08.jpg",
+        "bytes": 276549,
+        "sha256": "935c40840c16732082d0a7cd00fa725300a2b8fd44ffd738be2cbecb2db89581",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-09.jpg",
+        "bytes": 307774,
+        "sha256": "69455e043ab30c3eee430a2a81c8f1c1cd3901203e8b4e5dd38e5377348ebfac",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-10.jpg",
+        "bytes": 266680,
+        "sha256": "417dc519500675498cf4b5e53f5d35592b0564b68ba970e51d0f950e13ff7e9f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-11.jpg",
+        "bytes": 226563,
+        "sha256": "4f56ba1159a737de7580bbe82e4e71e86e2a430f61db35f4d331280fdddb090c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/backgrounds/signal-12.jpg",
+        "bytes": 240769,
+        "sha256": "e70a6191b244d2a32cd535b86f469174f3be935a3b95808bd929b59088e8d70b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/contact-sheet.jpg",
+        "bytes": 534510,
+        "sha256": "2069a51574d42d18224c88c1299c348bc900048c2cd65761d2fe385de2c68086",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/index.html",
+        "bytes": 21748,
+        "sha256": "9e8dd73bb00b703f189bf7489fd3bea41072bb849f2e5f8889c714a5e17820c5",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/manifest.json",
+        "bytes": 12349,
+        "sha256": "847f959335a5897606d3762cc950ec19a5796b2449303c5b416764a2173be93a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/classic-reveal-artwork/prompts.json",
+        "bytes": 36287,
+        "sha256": "b9788abeb0641ddb82d4e0f5342938ac43640092d4375800e064b845a4f2143f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/README.md",
+        "bytes": 2613,
+        "sha256": "747ec28ed3620f8490fb42fa335c4bad3362a369a6b908b20cd30520fa5f4f69",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/arrows.jpg",
+        "bytes": 241946,
+        "sha256": "addb55639de14d17ebd41216baa700046b83fe90b7ac6cbad85fb55c1ab6ac3c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/bandura.jpg",
+        "bytes": 303959,
+        "sha256": "fa61734bd9c5b116a6ffa3e8f98a56bdbc8ccc715b7dcfba3eefa73b827ce43e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/barvinok.jpg",
+        "bytes": 285162,
+        "sha256": "9c90efac2afc5418dff00339e15dce5c1def0cebe98610c90b1e383c020b8af2",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/berehynia.jpg",
+        "bytes": 316235,
+        "sha256": "95f6925cae62569bbeff1eeeba1e7cb983234e83c5c97e5594600efb30e35b70",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/bezkonechnyk.jpg",
+        "bytes": 261566,
+        "sha256": "3d0f0236c719696014280ecaeab35c7c0a83122db8a375b6037b332daf17dc3f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/chambers.jpg",
+        "bytes": 340019,
+        "sha256": "b74519eafe4e2b9a5b50a33f75234f1b422e9810b47a6bb05b522c7345671a8a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/channels.jpg",
+        "bytes": 273241,
+        "sha256": "310a80fa68880ea5e3f2cbc6834d8d85031caf92cfb5e9f6e2a74166b83d9444",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/conduit.jpg",
+        "bytes": 309129,
+        "sha256": "fe2d331734238c2739ee555608716d00badaade6bab36e693b5fecb955c6e060",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/coupa.jpg",
+        "bytes": 315948,
+        "sha256": "e1d6aea7e2c9d2ffeb1f48e79ab82a901a981963851ed6ae381757d3fd7bf98d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/crossfire.jpg",
+        "bytes": 321291,
+        "sha256": "ddc978126e0df0dd503f90fea0dc2e157ef17ee183cc0a0931956e6536fd789d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/crossgrid.jpg",
+        "bytes": 393121,
+        "sha256": "e00d35b7eb878e9398990ab3015442fe7a0679d7b6ff5b985d1e30e6505f1e97",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/crossroads.jpg",
+        "bytes": 355573,
+        "sha256": "bae269ddfdd4300046efb53143331c16e53ec27eb631e5e36feed7406fda7b53",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/deer.jpg",
+        "bytes": 342081,
+        "sha256": "fb167c05ea057ae21f4b22fd26eb9925f7f198f0af9d76f5df84c73c2e85ac00",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/didukh.jpg",
+        "bytes": 303553,
+        "sha256": "e51cddaa0356aed2a4f08b83c5465774b41a056cf94bfbdbbeed8781125cea2f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/drone-aid.jpg",
+        "bytes": 253318,
+        "sha256": "93c6eed0ad1b474e0b246e095ee84d20538a27d85ad849b44b54b3916691bfbf",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/fish.jpg",
+        "bytes": 346475,
+        "sha256": "8780e3986f34435cb51912630962262bb2a0c70a95dc0a5d46d65a90465d9c86",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/fly-free.jpg",
+        "bytes": 253563,
+        "sha256": "e3f4c0fa2fb977d4ad44d41376f6a2e0a4637a54161b6ad4517f532edbffd63e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/fpv-drone.jpg",
+        "bytes": 275465,
+        "sha256": "0dbe3037abac6d1e57cf837fb8010424128b2ced96a37f912be5724d27f9011d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/fpv-line.jpg",
+        "bytes": 258362,
+        "sha256": "84b9541fe5708f2b2222cc66b7c16d97075a534fdb156cc52e4fd62dbbd3e832",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/fpv.jpg",
+        "bytes": 278600,
+        "sha256": "a197cfeb34f1f4af19707eb5a179640f1262a4e999c449b1b9f154ec81991f2c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/hearts.jpg",
+        "bytes": 311175,
+        "sha256": "90344bceb83628fe76ce4e49ce8b4a1ebfbf96b7b49b7113226e1773f41f4205",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/horse.jpg",
+        "bytes": 269977,
+        "sha256": "87b8def81643b371da61e8d08926f0c7c8b7eb56b5c0c087ef1a62c41201f50b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/kalyna.jpg",
+        "bytes": 296474,
+        "sha256": "066db767aae14f01e7106f3b6c936cfe986b59e6a0e58ccde9b9f4baed4a0008",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/kosiv-pitcher.jpg",
+        "bytes": 254037,
+        "sha256": "afce6d5be37d40ce25b809a15607a0d5b2d70f87c533c80c5beb126dbd8f67c4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/labyrinth.jpg",
+        "bytes": 297021,
+        "sha256": "48a450fe0b635b7254244c070b61237314fdb96780f4d227e20f02cc45dcef40",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/oak.jpg",
+        "bytes": 378536,
+        "sha256": "78abd211032a3d9e97812be686f844ac5814c9aad123ac334bdbc8a974034d46",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/opishnia-ram.jpg",
+        "bytes": 231515,
+        "sha256": "75f7f304dff33d90bc5c44e832bac5731ca25649746b8643402387080771cdb4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/ornek-tulip.jpg",
+        "bytes": 380071,
+        "sha256": "46401590fba6abdd6b55197dd7b338424e396db63742e0651241f16225b3d7b9",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/petrykivka.jpg",
+        "bytes": 326843,
+        "sha256": "9f523607de4b11d94566966cfd939d97b3d5a9b2f651c71b65a0e9b6255440fb",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/pinwheels.jpg",
+        "bytes": 296056,
+        "sha256": "57a046035083e28fa28cfa462f6fe6ffdc3b9a3c05578a10372ebaa83710f1fe",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/prism.jpg",
+        "bytes": 296428,
+        "sha256": "1120a1edab648668689a92178c1b864e46f1405b128f3000ed56205713359b76",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/pysanka.jpg",
+        "bytes": 264803,
+        "sha256": "0e86c7a6000e3226417311f63e792d3460a6364dc3831a5063444a09c1ef144b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/reveal.jpg",
+        "bytes": 315207,
+        "sha256": "2d7816ed5fc5d52c17ed98cc6d7eee190e5a37ad5b02b4ddfc3b590337c21064",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/rushnyk.jpg",
+        "bytes": 281187,
+        "sha256": "c903a2c13166b951297ca1c64d7ec77011800746285b273f0d36b428350ff0e5",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/ruzha.jpg",
+        "bytes": 287033,
+        "sha256": "13eb1b98bd382d5e2a1a000a5eada942555d149e9e3f77b6746fd3cf705c8eb9",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/sdua.jpg",
+        "bytes": 289021,
+        "sha256": "900e18967ce3b44e97a1535c8c1fbafa7cfbaf014b90d0c79fdb631e13729646",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/social-drone.jpg",
+        "bytes": 301925,
+        "sha256": "5e9e3e5fea0320d8a43a569e6b375eda826ca32ecfc92c74085bd021f9264dbb",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/spines.jpg",
+        "bytes": 296758,
+        "sha256": "0454a346715ced75fe5b76adbac0a49d043ed2d1b2e428b97b0b305d146511cf",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/spirals.jpg",
+        "bytes": 308094,
+        "sha256": "dc5c43142aa7f64c957f3662ca1d6c18353de5145646b452ecca375db6774379",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/stork.jpg",
+        "bytes": 263569,
+        "sha256": "27b5834da82114a2e364c3b560af7db4dcad0e9965504a21a92896b4b1b7af2c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/swallow.jpg",
+        "bytes": 262690,
+        "sha256": "48c31600fbea15e6ae744f54285cd55fc84dc380d988c4e74e1e10198395c53b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/switchback.jpg",
+        "bytes": 266422,
+        "sha256": "c6dd3f719f74fe7b51c87625e808c29980a4ea74e1c32eb04ed28144a564f3cc",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/switchyards.jpg",
+        "bytes": 333280,
+        "sha256": "762919e0bb6aa935dc8d63f77fbddaa136e91a0aea6257b6a3e96bb9433f9839",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/tree-of-life.jpg",
+        "bytes": 398576,
+        "sha256": "4186fdaed519da02c2c60060481c4485d0b644fa469e2ae8a388fca309d06db8",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/trembita.jpg",
+        "bytes": 273676,
+        "sha256": "122e60eba8e9e0bfadfc327b274f1c585f9536b385253bca53f5455a577329ff",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/tryzub.jpg",
+        "bytes": 300841,
+        "sha256": "cc144a5aee81834d53a1e5d420eea14ea01142e0a4ed26472cbee69b26f4a234",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/tsymbaly.jpg",
+        "bytes": 273836,
+        "sha256": "a2300feb5fd5b02b8d5cc773abf90ff186b1e17ef80b64b084047026fa2a6def",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/ukraine.jpg",
+        "bytes": 307241,
+        "sha256": "a66e43153821f160958de0a3bcd0f8329d4852bc89045e903d2b64e6ca9954b6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/vd.jpg",
+        "bytes": 271978,
+        "sha256": "0f3ecd3ebee106f22a6782514fda83689e83cc0092935136e3aa2aeec1a68a7a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/victory-drones.jpg",
+        "bytes": 350373,
+        "sha256": "2499e71d644946e84c77d56fe7222bf41a971186322181b52ed02d7375dba47e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/vinok.jpg",
+        "bytes": 305925,
+        "sha256": "a0a46324f9e5c1259f5e3323f26fd02d561a3dedaf4de91a594d0da3be17f9c0",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/vyshyvanka.jpg",
+        "bytes": 282004,
+        "sha256": "26ab0e26766a5c5f53fbec7f252ec237b17427aacd988f9ba5fef150e7502ddb",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/wavebands.jpg",
+        "bytes": 355051,
+        "sha256": "70804e191696d5de43555da03868c3530cc245eb4a09e3823c16302de31da107",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/backgrounds/wheat.jpg",
+        "bytes": 302010,
+        "sha256": "6b2021669abc026b083f236b177b7d29a3bf5a811e467b32f679be64a4cff19d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/coverage-audit.json",
+        "bytes": 10156,
+        "sha256": "ca409fbc42ff81e828bb67930a0fbdaf694970261f56a0d3ef6e1e889b656a68",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/index.html",
+        "bytes": 44142,
+        "sha256": "6930bb336e04e4c2a64908ef7656047a95fb938292a31e90f39a8d61e7ef1dc4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-artwork/prompts.json",
+        "bytes": 69562,
+        "sha256": "aa16beeb7fa2522fcd57d81c16b1f90f39b286c3a307bc83a2ec6d01e768d7de",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/README.md",
+        "bytes": 5694,
+        "sha256": "877bfd1a9ad35adcd8e61ee4c485628ecf217559b4cf2451735df0f63d4ef1ed",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/bandura/preview.svg",
+        "bytes": 12115,
+        "sha256": "78c461548fb36f610c45d180c9e4d12ecfc10415d22503f771448b60987e6f5d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/bandura/scenario.json",
+        "bytes": 432160,
+        "sha256": "2afcdbcb814f9f5a5e1848931a2d40e3837d58bbec22152c013efa70db24d73c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/barvinok/preview.svg",
+        "bytes": 13075,
+        "sha256": "90aa99638ff43fd39de4a43f2e6f34a8d516e6ede9d370bc7b7bf0bcca66e51c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/barvinok/scenario.json",
+        "bytes": 408793,
+        "sha256": "916b67fec5e623bb753b302eff20498a457cd07d8a1905309bf91d6d60507956",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/berehynia/preview.svg",
+        "bytes": 5293,
+        "sha256": "b921f01587053a000165664af2da58205fdcd07bc20f0fe7599625299dcc7036",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/berehynia/scenario.json",
+        "bytes": 436786,
+        "sha256": "6e231ae8c1c5935de391b151881900c5ffec5a82417a79f54c1e15e02b08217c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/bezkonechnyk/preview.svg",
+        "bytes": 6752,
+        "sha256": "3aaa11eb0e8afcf21274fc7bb391ba4f89704bdabed7a370f98451ad8045f366",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/bezkonechnyk/scenario.json",
+        "bytes": 366239,
+        "sha256": "074d1cd0d76399454f3005c70440360ed3154c9d213062204010de5a749ae1b5",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/coupa/preview.svg",
+        "bytes": 5038,
+        "sha256": "6a0228ff94bd2e6c9d898faeec6c27d272bc82b99dc4e9a8fa4b52fd7b7c7b8b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/coupa/scenario.json",
+        "bytes": 435057,
+        "sha256": "e182d14f626e4a27466595e78d868e31fa9acd471b0de7113e674baecf8e50f4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/deer/preview.svg",
+        "bytes": 11597,
+        "sha256": "4024baa83785b86db313ae30bc22e15485a037ea7897c22288090a7483228ece",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/deer/scenario.json",
+        "bytes": 481740,
+        "sha256": "fa1a0768d145a19e824a3eb5d35f25c22971d439eeb525f82492b1029ba8ae21",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/designs.json",
+        "bytes": 5354,
+        "sha256": "9a3407dd4dac60c9ab61dee24c8fc865fd21a8d2e0ab80f870e3d09c3310a229",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/didukh/preview.svg",
+        "bytes": 14046,
+        "sha256": "2979680f675d298619a4c8e36bf708e53edf758bb8f89cc389e2c1b439950dcf",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/didukh/scenario.json",
+        "bytes": 433997,
+        "sha256": "f86aab563fa97f752d2f8a598853914365f34ed51ffd9e0f418d53befd1b659f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/drone-aid/preview.svg",
+        "bytes": 6997,
+        "sha256": "72cbeefc25ff1eda280f9c094a6b2624b2ab885dca4dc8eadc68a60ae4fd2b6e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/drone-aid/scenario.json",
+        "bytes": 356029,
+        "sha256": "e10010eddeff6862e14ea36c2a91092c20b6c4a5d982b16a909a9af4e33fbc1e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fish/preview.svg",
+        "bytes": 10829,
+        "sha256": "22d5bb5bed86f19756e0ddd4245b2f8edb9a29ccffd442b4bc0d75fe2d59a3ef",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fish/scenario.json",
+        "bytes": 486492,
+        "sha256": "ee9ee415586fd902b63deb2fb8d7efd9b793907627ee13e3294cf884a3b7cf31",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fly-free/preview.svg",
+        "bytes": 8998,
+        "sha256": "48fb7e392ef54bd361a68c8052da1083757e08c740ce5b9588ab31ecd34fff22",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fly-free/scenario.json",
+        "bytes": 359294,
+        "sha256": "f807c52002e46a1147c8d62e72a9e505d87004c104ceb8ef0a1cab16d526897b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fpv-drone/preview.svg",
+        "bytes": 11296,
+        "sha256": "2f23610771bfc7bc4f19f71d1385bef44a2f746ce8c8b7a9f827585f372bee7b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fpv-drone/scenario.json",
+        "bytes": 392969,
+        "sha256": "93084e240ba37c58220c9b8c371d44ec7045b73f9a4a2606f0ce47be321172cf",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fpv-line/preview.svg",
+        "bytes": 8324,
+        "sha256": "18e607df638be0e342fd24891c62d6e145a3c024f14ba07f9bbd6fedf81596e5",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fpv-line/scenario.json",
+        "bytes": 364055,
+        "sha256": "6608ed6d894bb851098b0419f2dfe2b4e964f265dac29b6763fd8838461afae3",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fpv/preview.svg",
+        "bytes": 6832,
+        "sha256": "c60f05b0d97ebc709c9c1a27c81b2ee3f30b18c286f981303c970a6ba4b22fd8",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/fpv/scenario.json",
+        "bytes": 389005,
+        "sha256": "da709a363021ba7cf7c0c1f5b32f9311668490a283c44a4921993359b898c209",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/horse/preview.svg",
+        "bytes": 8480,
+        "sha256": "ff62abe4f8a51c2b0863c1a54208c9b4b01e5668b1ab380f8671c2bd7300784d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/horse/scenario.json",
+        "bytes": 380840,
+        "sha256": "beab983711fbec17c0d3becdd3b088efaf8468d46095588c814a05f558836a9f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/index.html",
+        "bytes": 29192,
+        "sha256": "b6882813949e317a617487ceb9ca9d1b87ebab8948db0d20fd1ef27c79af56a5",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/kalyna/preview.svg",
+        "bytes": 10172,
+        "sha256": "cefa97a9ae2ae5605205e28313986edbf6991894bd03ae2915d76a4891d07df0",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/kalyna/scenario.json",
+        "bytes": 418787,
+        "sha256": "02235442fcc2a6d7b59ae09ba1e8c12412ce1a89b62a1c8aee61f98f4a227743",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/kosiv-pitcher/preview.svg",
+        "bytes": 9359,
+        "sha256": "7656ca727e0ca30a3662184a21a520584d3e9305139fc0a3368698de4c777f45",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/kosiv-pitcher/scenario.json",
+        "bytes": 360171,
+        "sha256": "b95b6c44ac36134c5b3ea5239064310cd51bfa2cdb71ab85d78892f1cc87e97e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/launch.mjs",
+        "bytes": 1203,
+        "sha256": "a844038f3efd68e5f6bd49705a8525b4fb688b6cf27c9aefb9cb8402a4d1d426",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/oak/preview.svg",
+        "bytes": 11711,
+        "sha256": "74be014cd07a51e0decd59a220904a025456e2b90688c5783f7f73617949a7e0",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/oak/scenario.json",
+        "bytes": 530969,
+        "sha256": "79cb3809c4f283a03fcba42f4011376e5ff2ecd4b72d2c6810aea02ef4367b23",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/opishnia-ram/preview.svg",
+        "bytes": 6768,
+        "sha256": "aeabb3d32ca5ac3e0ff755399dadcb3bbadbbbac9b8faff22375bea5f18cb70e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/opishnia-ram/scenario.json",
+        "bytes": 326240,
+        "sha256": "271cd38bd34335b96a566ba3eaacdfc04f979ba495dd860c66432ec80a36beb6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/ornek-tulip/preview.svg",
+        "bytes": 11087,
+        "sha256": "ecf9e9f30ba449ff595dbc54bf1e54774eaf7e4fb4220339a4fb6e96924a7f7e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/ornek-tulip/scenario.json",
+        "bytes": 531801,
+        "sha256": "089074c7c4f42e274a17a54e7aa879003bee6504326f77d19e2fd4ee25182c9b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/overview.svg",
+        "bytes": 371658,
+        "sha256": "16691ddf8060ef10f4b30f884b8a5cdaeeba73770c8c0e66b2ffed0105ace343",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/petrykivka/preview.svg",
+        "bytes": 9390,
+        "sha256": "19d83ad9ebf88ef87aa0d54c1e1283a24a9163c664102fc40f93a235693cea87",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/petrykivka/scenario.json",
+        "bytes": 457880,
+        "sha256": "a0943e2b3fee99982e50b73775635e22946ad5532a04b55c818d6266a7b633a6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/pysanka/preview.svg",
+        "bytes": 12702,
+        "sha256": "0fa142a39f837a7c0b56a025acc2b287bae29f23e3b8f92530282d6c6888ab5a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/pysanka/scenario.json",
+        "bytes": 381039,
+        "sha256": "b111de545d9c9ccb9c471698050ec2e0888183dd18f3ec8d65a5729fd220c746",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/references.json",
+        "bytes": 4349,
+        "sha256": "7d2c40fd278ca5557cee5575e7a95012aec8a8a5c9d96656f5b6d1ba9d8ca55e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/reveal/preview.svg",
+        "bytes": 7895,
+        "sha256": "eff026b89526d56ac72a85082fb86299164b0471bbdc0c8c60efbc3bca69e055",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/reveal/scenario.json",
+        "bytes": 439674,
+        "sha256": "68e820567fa11609d8b083725c2aea4493423f5b944010d1b47ac0fed0850e17",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/rushnyk/preview.svg",
+        "bytes": 8685,
+        "sha256": "2ad04eba33842afa1ed627d5818095e3f73153fb58aea7090538d6036ae1d82a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/rushnyk/scenario.json",
+        "bytes": 395969,
+        "sha256": "727577bca5b762747e61bdf233754a7adfe6f5872902a7810a3873be2fecca16",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/ruzha/preview.svg",
+        "bytes": 7786,
+        "sha256": "f0ba4254a4e043c96914bf7c42a843d65b1772460a0896def34d2c70dfd0d567",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/ruzha/scenario.json",
+        "bytes": 402212,
+        "sha256": "1b287dcbd5425d58a87057b0dda79f286bb722723027999d7b76b4151770adde",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/sdua/preview.svg",
+        "bytes": 7014,
+        "sha256": "57b09c4687b151e70e59e6d7f6ed78b2e47e5c87554b6343466ba0488178c746",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/sdua/scenario.json",
+        "bytes": 403392,
+        "sha256": "f9c3e24b5301845c0b3a6c90871ed3318f88dfbfecb1efd90547b4fc95f65375",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/social-drone/preview.svg",
+        "bytes": 10039,
+        "sha256": "8949766ba9e5151dc661b983807bfd40c262d7fe30cb1e7df1f1fb3bd6838fd2",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/social-drone/scenario.json",
+        "bytes": 425967,
+        "sha256": "2e2897a3f4cfb3dadce119181a2923355b3f8d623c73fec26fbba02f15b63745",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/stork/preview.svg",
+        "bytes": 7369,
+        "sha256": "604811314f940135bd10a0801e0af8213d346064128a0c79e67252fce07b8cfc",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/stork/scenario.json",
+        "bytes": 369724,
+        "sha256": "5cccc548bac3c846bb41e34afe78f2bfe0ebf1248b9894395be4c2c24ecd8a90",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/swallow/preview.svg",
+        "bytes": 10804,
+        "sha256": "9f462972f7c619e8de2bd87f2a040a8618abdb3bae26d69908123cdcbf3bf10b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/swallow/scenario.json",
+        "bytes": 374990,
+        "sha256": "93d21a1d456bb621fdbc658e5ab00541ad8cac9450bcee5c287a7bb9e248477b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/tree-of-life/preview.svg",
+        "bytes": 14650,
+        "sha256": "7116e029569793616928c9b2bf983f8def9ebad9ce567db92fd1deefda3a6f1b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/tree-of-life/scenario.json",
+        "bytes": 562628,
+        "sha256": "7a2a57caf7bc77f0d6da98b96b60a594542d4c51208ebe3c21bc6d2d77df8445",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/trembita/preview.svg",
+        "bytes": 8318,
+        "sha256": "5434259b57bd3ef99c968ed35948b5b1d2742763f188ebe2c134e2d4d4eeb5ea",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/trembita/scenario.json",
+        "bytes": 384838,
+        "sha256": "9aae5234c72230d91e6ad8b88acdbeff7b37ffe312ab6b3a084f3cdd78ce498e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/tryzub/preview.svg",
+        "bytes": 7543,
+        "sha256": "471f511a17474aa55d25c2abc6c09058e79eaab143c3ae8cc025f94eb6d950e6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/tryzub/scenario.json",
+        "bytes": 419765,
+        "sha256": "fdd5b267a3a2bef2d8a0fd58b51d1e0a77ae7a819e54f58a7eaf77b89a3dee21",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/tsymbaly/preview.svg",
+        "bytes": 9684,
+        "sha256": "2c1d28c622d477619e47760ed867b97185a606b3e82dc1bc2c213f4a49552ac2",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/tsymbaly/scenario.json",
+        "bytes": 387907,
+        "sha256": "5e03cd32b934bcc9c511876ee087b96c7d01c6d85f70f3c3d6af869f9b81303b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/ukraine/preview.svg",
+        "bytes": 9528,
+        "sha256": "168a972886735ae2abbb8ec1a79747caeba4f757b648d2ded5cf9c8b28e0bc32",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/ukraine/scenario.json",
+        "bytes": 431802,
+        "sha256": "e41356b26e006df4fb3760bbfffebdc7fe431f9d1dd3eddef38bdff7c7c84cb0",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/vd/preview.svg",
+        "bytes": 4622,
+        "sha256": "4bdd4d1a61f31016f638d367f7b88c3e34ac14f73569ffe4dd786fe8851297ef",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/vd/scenario.json",
+        "bytes": 376198,
+        "sha256": "ffe9b834d4565bc72b3ab465379f6ed9dc79e06b7d0b09166b27e4a7ec03ff28",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/victory-drones/preview.svg",
+        "bytes": 13505,
+        "sha256": "5dbdc80c7ff473a97268c1ec9ce40cc119b8716dcfada62b0131be1e308b66e4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/victory-drones/scenario.json",
+        "bytes": 496147,
+        "sha256": "371bed6b28866e5e7925401b822ac16ea5a56ef1f91c927702e4b6e44636917b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/vinok/preview.svg",
+        "bytes": 9202,
+        "sha256": "0ee760e6cc32e697d5025ebdda9c6bae17700d061c08261afe8ecaea45efdd86",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/vinok/scenario.json",
+        "bytes": 430034,
+        "sha256": "366c9e7800e22b2f96e774a3ffc9436558cc8c5a3397edb1535ebd44bf1676a3",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/vyshyvanka/preview.svg",
+        "bytes": 18398,
+        "sha256": "427fd73b27ad2721b983e64170e9482510f8386f02c090b575b898f947a5a079",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/vyshyvanka/scenario.json",
+        "bytes": 414150,
+        "sha256": "0af36fb5762d17ec9b073fa5fd93e54f501597002d7ef7e519d371c0c50123df",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/wheat/preview.svg",
+        "bytes": 9328,
+        "sha256": "71393a899399bae320ca680b4e69f77618d549a8972d168c81567eb1b7872a27",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-mosaic/wheat/scenario.json",
+        "bytes": 424551,
+        "sha256": "9409c3970f76dc671aa9b8ad3b2f4f60cf11f19d11c28033d1c03f970659ae64",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/library/neon-reference-pack/README.md",
+        "bytes": 5142,
+        "sha256": "73702aa0a15518fef6319efca0f1331efb2a0180fa7987234915aac816b84f10",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/delta-interceptor.png",
+        "bytes": 468947,
+        "sha256": "00357545f135aa3bc2ed98fa32baf46b3b0a3cd3c596054571746bae153eef9e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/fixedwing-body.png",
+        "bytes": 373537,
+        "sha256": "bec5073f36946b3060aa42835ed8486e36c1c155e8b57c5c3058fa4630bf1663",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/fpv-body.png",
+        "bytes": 644588,
+        "sha256": "31a742f952415fb9dd2742eb9ba7ef1dc7a5aedca4593d817713c61932fe68c4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/fpv-night.png",
+        "bytes": 581776,
+        "sha256": "e7df9c8f1ffb7a5ceb883e2130f0f245d208d24aae5d3527f39227ea4c589847",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/fpv-racer.png",
+        "bytes": 879038,
+        "sha256": "bc77fb42b3fd233a3d4391bc23e093d6d93d202d0482934f79091a310f8c01e6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/heavy-lift.png",
+        "bytes": 795459,
+        "sha256": "2e1b871f2336fe2dc6434ed83afb46572f5afffd17803733914a567d39c517ec",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/navi-avatar.png",
+        "bytes": 384917,
+        "sha256": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/retro-craft.png",
+        "bytes": 477364,
+        "sha256": "1d0340673c2cf19ab9b88fed271219da5003f82bcd1bd45da4477c774708551b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/scout-quad.png",
+        "bytes": 641545,
+        "sha256": "14b18895b5b1c457b8db47a5c7a0485b502ad6b8fccb91697ae6b46397e73c99",
+        "kind": "gameplay"
+      },
+      {
+        "path": "authoring/motion-lab/assets/ukrainian-bird.png",
+        "bytes": 290701,
+        "sha256": "fb43fb88833c5a161937097ac74e5588868c82f3b8c896c28139a77c9dffafad",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/choose-your-share.png",
+        "bytes": 2828010,
+        "sha256": "d2d9d57da0c25d1e264387d24d2ecad2e88ad43b77db3934039f1291edd017ae",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/courtyard-return.png",
+        "bytes": 2701528,
+        "sha256": "7c4ed0ae6f76c49b5dbe1361b5ff0b2c17dce08aeb2c0f6aece08890c373123a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/first-return.png",
+        "bytes": 2366738,
+        "sha256": "3acf496d9a6bc9db2f83ac01d8255223b3913e7ae0a157e48559ac981c80b95d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/horizon-remix.png",
+        "bytes": 2437716,
+        "sha256": "b05e43014efa5556eca311328af4dba5111f08f98eb738790898f83babfbcf35",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/island-outpost.png",
+        "bytes": 2484871,
+        "sha256": "3fb163cde27b9496290a07a106e11737c369dd77b527e5985a1e3c48d9476b46",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/long-way-home.png",
+        "bytes": 2584488,
+        "sha256": "0219e5fbe164647cd1ba0cd2dff019df8d0b9fc334780b06b53693564c1aaadf",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/nearby-shore.png",
+        "bytes": 2618614,
+        "sha256": "f24ba2aac769b952f0ad8de13193627c76e6a39bcd8db9a5ddb3e16ded0f26d5",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/stepping-stones.png",
+        "bytes": 2597944,
+        "sha256": "aa9eadbc166df2bf78030ecec8e24e920d6a254d7e66143f380c1d263005cc36",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/two-bays.png",
+        "bytes": 2669903,
+        "sha256": "589632c9b912ba2b07648c9c0de7c0768e61d5938a1993414d7b36ac650b5118",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/assets/horizon-r1/two-keepers.png",
+        "bytes": 2572761,
+        "sha256": "ba9c3c428fbd44e1fd0b7e5ba70bae0abdd11faa65ae219042a7a6d196bce5f6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/team-capture-teaching.mjs",
+        "bytes": 1759,
+        "sha256": "8c150d81c97faca432b870a32798dac01e21c96b1b5197ba7eb90a3753d5615a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/team-entry.mjs",
+        "bytes": 8487,
+        "sha256": "a61d9c9f57df0e99df65867df0f3918ce8ad42faf2a31d9181e1f73a06391903",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/team-mission-card.mjs",
+        "bytes": 4139,
+        "sha256": "84163d4197e04c8e20ec51ae5813e343c5f5fd3517e78cc25237b7842acab95b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/team-progress.mjs",
+        "bytes": 9253,
+        "sha256": "466df3c64fe372e09d76159637c93decab26244a58fb34359e6d8edcb02fc205",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/team-timed-entry.mjs",
+        "bytes": 2199,
+        "sha256": "74f97d93ca131e4a669ecfe552e49405881687303724e154cc0bd7cb6b9b6d11",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/coop/attempt-history.mjs",
+        "bytes": 641,
+        "sha256": "108e50d1e474c39b6c7fc0f2935e548b769e03fc27a1495cd22f008d62244196",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/coop/attempt-identity.mjs",
+        "bytes": 1053,
+        "sha256": "2d86606f8712fe268ed94fabb7c600759eb9af5c6a6aab339d0c2b2297fa593c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/coop/enemy-stats-ownership.mjs",
+        "bytes": 1533,
+        "sha256": "672bbb09b94206ff57bbcb93b8e14dd3591b24157114a479bf6a93116cdfdcfc",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/coop/hunt-attempts.mjs",
+        "bytes": 19444,
+        "sha256": "d3af0dbdf0037f24ad4b9851f19dd8ac027324d70b0481b379af667367b51fe6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/coop/input-policy.mjs",
+        "bytes": 1519,
+        "sha256": "89e0a28cf383d79ca3c56a3faf6dc3caf9bf6b5c129764fbcdc03612d6220528",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/coop/picture-source.mjs",
+        "bytes": 2880,
+        "sha256": "9e029a452492febc6e2b7d2caddb17c6e14b8bdfb07f141d9fdf6df7a89b97b3",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/coop/presentation-envelope.mjs",
+        "bytes": 11760,
+        "sha256": "a214530dfc2d54682fbd31b9c1f73dd07d508fd5c5b5e2b938c03b3cfd405065",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/candidate-pictures.mjs",
+        "bytes": 4739,
+        "sha256": "852830714b3b1be251a1d6038761f2c150b2d9e834d6831c524cf6e6603c9c66",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/candidate-team-pictures.mjs",
+        "bytes": 6605,
+        "sha256": "e020a7c89ca328bea0520089e7c0977ef531041f01b49148884f14308f608cfa",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-actor-layout.mjs",
+        "bytes": 11782,
+        "sha256": "230bbd56731a9fc9f682c92158acca83b133dfb2a9ec4a2bc0f40bcfc855dd78",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-actor-presentation.mjs",
+        "bytes": 16422,
+        "sha256": "52bca09367189c20f2c79ffb4e88c809b598b03bc79aa1d150b38bfa974a6884",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-bonus-view.mjs",
+        "bytes": 11177,
+        "sha256": "016195f594a4a5dfae8b31354ea875a11ae5c894d7339781b9bbf55f2f368308",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-briefing.mjs",
+        "bytes": 6290,
+        "sha256": "7fd97bb74819a29064a1b8b89969442aa23d6f9d167606d6f6d6f837c714e8bd",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-cue-overflow.mjs",
+        "bytes": 4194,
+        "sha256": "0acb23d31aafe1ec9c4a2313bb598064be2d0eaf8ec1062b11751b3589440e23",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-feedback.mjs",
+        "bytes": 5264,
+        "sha256": "b9d3d873de65a372cac00f7e7d5adc6c4b41bbb20de8fb83fa957af1c61f6fee",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-ground.mjs",
+        "bytes": 672,
+        "sha256": "24278efd114d4c954e3ea41d9d18884c13bb53c3601f9789fbfa7a52ca70f0d1",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-import-source.mjs",
+        "bytes": 3798,
+        "sha256": "620e3d56cc6fb674d57bbc93ab34132a046a292e88ec7b615976258518a0c80a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-outcome-presentation.mjs",
+        "bytes": 4738,
+        "sha256": "36621833ada91639d262913a5957a8404de4817f7ed4b03c2b8dd5e7040c74e4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-owned-presentation.mjs",
+        "bytes": 7290,
+        "sha256": "16f7f0f750803bdd4089e3b8df424a1b0e65f7c56d84b3981648a9ffca53609b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-picture-bindings.mjs",
+        "bytes": 4089,
+        "sha256": "8d95e8ded7e557b5e19c780d8b63c60d55453808d2574f717434e517c6fb9fb3",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-picture-image.mjs",
+        "bytes": 1979,
+        "sha256": "18f050b740502abe6ad547ca5cfb3ecd90a75b7e179da65e38921fd057305dbe",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-pilot-cues.mjs",
+        "bytes": 671,
+        "sha256": "80835d801b96941728f449a84f52c6be36ccf27523bfa9d4437d50a42b26fe9a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-presentation.mjs",
+        "bytes": 24050,
+        "sha256": "c5d652e650709a8aa75d985baaa6c1c565e86369dd34674268fe92aec32726d0",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-rescue-presentation.mjs",
+        "bytes": 2553,
+        "sha256": "f8513ddb03b2479d8f7ee5e115eb53682a5283d42caea9ccfd4279560a7c76e3",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-retained-presentation.mjs",
+        "bytes": 3584,
+        "sha256": "6914c387d5f39ee6c581b34d3fa7cfb25bdf3d86b77304b30a445be7891a31c5",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-support-presentation.mjs",
+        "bytes": 4237,
+        "sha256": "fa15bcfc3ad0268815f30c93521af8c165997f94eef271f53ac8555c08004335",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-terrain-trail.mjs",
+        "bytes": 5713,
+        "sha256": "88f5705ee785b688e1f49ce5147d43c12ac43a31af3b8715ce7da1cd233e2d40",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/coop-view.mjs",
+        "bytes": 47114,
+        "sha256": "3f25d92f4c7c86859493c041017ca63ac4812d62d1b69d4f98fd3f1f9b5bb837",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-chapter-install.mjs",
+        "bytes": 25111,
+        "sha256": "4dccb0e41fc2bbdf7f18fee6087c65643a722b53519c3be425711688fd00cc75",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-chapter.mjs",
+        "bytes": 4283,
+        "sha256": "0e8a3ea7925496aa0b6998a601ca66fffe843d6b37a903815407795f957c502f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-input.mjs",
+        "bytes": 20771,
+        "sha256": "116205f58186ae494001021853455290062b7964f4b16143622e463b07d96321",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-installed-chapters.mjs",
+        "bytes": 26645,
+        "sha256": "0e287f5eb03e7b1f3d021ca77a566a3a1c1183c88b0a3c64605b209b4b3918fd",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-music-context.mjs",
+        "bytes": 2693,
+        "sha256": "2a05abaa10c7314868807a8df91703b01e6c25524f3cf51aedff391f7b0fd4b6",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-release-picture.mjs",
+        "bytes": 2824,
+        "sha256": "27e54ffa312e8ed0fdd7d65f47035ca61d7c965cdb172ed7dbf835061f1fe65f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-shell.mjs",
+        "bytes": 28662,
+        "sha256": "16757c8a9fbf8b63e67b422c905c27724d2204b67031327be74a97218f79d416",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch-static-pictures.mjs",
+        "bytes": 17515,
+        "sha256": "33eeece8a711088ae326f92ae43484450612f491ebe5b809efdef868ae1c57db",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch.css",
+        "bytes": 17855,
+        "sha256": "bb704c15d641afc2fe0a160eac07de8ccb38996532566f1bc5b27832e9d6f579",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/couch.mjs",
+        "bytes": 207154,
+        "sha256": "468d4c3e224de29440cfcfec167dd0067530dc44b25f306d4181229130845eb8",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/creator-team-import.mjs",
+        "bytes": 2806,
+        "sha256": "7024fb6e7060bbdc3f7603e03ef8521535474f3fa6e95f7b7c25afa224665689",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/index.html",
+        "bytes": 51459,
+        "sha256": "c759dad592651c5731ecd6b01df7825151310dcde39be96aca3c7044c0086159",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/mode-entry.js",
+        "bytes": 4912,
+        "sha256": "a725083fb8c03d0aacd9661c41abac1b0cee2137f3f9b6d075251c7afb833556",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/relay-rescue.css",
+        "bytes": 42404,
+        "sha256": "e0ea579d1cd850a3497782abb6a0a07bdbd583be5fbe5eccc19c3bf5f194dc1f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/relay-rescue.html",
+        "bytes": 61982,
+        "sha256": "4ee33b3e01109b985f16d8950eb379e7126607d492776d823c768e8e2e24e707",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/relay-rescue.mjs",
+        "bytes": 289250,
+        "sha256": "e974ebd1ca83790ab7a8028e4ca5bc477e6ccf3c33cb19457d0b864e7b270342",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/start-cue.mjs",
+        "bytes": 1840,
+        "sha256": "20ce2d79f60de3e4a93acea36a165546495f75baad22a422a65c829e1f860c6c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/team-arena-preference.mjs",
+        "bytes": 3358,
+        "sha256": "30fe0e7c62d54e2a1f7a535a126246fcb880a0145970569df0669d2a992d787c",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/team-contextual-teaching.mjs",
+        "bytes": 5068,
+        "sha256": "fc6e453d5d9531ae61d3f1da10bdf4db31309976813759ab37d1da6018bbdbbe",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/team-entry.js",
+        "bytes": 2583,
+        "sha256": "b1b0ea4f66d35b0aa876be4c2d5fb8ea5f24ce32813ee4a3972ac1354e107a0e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/team-library-preview.mjs",
+        "bytes": 5143,
+        "sha256": "0e745ce11446d6e4576c93873a4ff583dd7c41dd2acf5dcbd32efb825d91b527",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/couch/versus-package-readiness.mjs",
+        "bytes": 1269,
+        "sha256": "6126d4218ed006162966daafa896ea533a67a9c280053c158eec75eb66fce03b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/creator/examples/social-drone-sky-watch.rlpack",
+        "bytes": 2988970,
+        "sha256": "bbbfa9ce8530e17903c10cb044167e298736a372ea2a490a84a6dec4c805dc6b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/creator/team-installed.mjs",
+        "bytes": 51053,
+        "sha256": "73f3898dab2889fcd32565e0efc1739f6f8c72b522ab2131041edce6e1499ba7",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/creator/team-media.mjs",
+        "bytes": 19621,
+        "sha256": "fffc1cb2ca52e050a52649a5d58b95895a16e821cb8c883d9386e89fdb606c37",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/mission-library/installed-inventory.mjs",
+        "bytes": 6565,
+        "sha256": "6df3297f48c1c84f3eac21620a803ccdad4e62660d9a9e146359761a83ef5c07",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/mission-library/materialize-pack.mjs",
+        "bytes": 1946,
+        "sha256": "4c1275e540f3afbd3b567e8191daf010fb49b4b40efedc55444ecb81efbb753f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/mission-library/metadata-custom-source.mjs",
+        "bytes": 5223,
+        "sha256": "575cbdac7747930272b5573f721070ba8562dce9970e14240d7b4e68a7bacdab",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/mission-library/metadata-installed-library.mjs",
+        "bytes": 7602,
+        "sha256": "a3b41acd1ea04e46b65ccd581764b7bdb65d10069d31d73a00cce74df3443478",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/mission-library/remote-solo-versus.mjs",
+        "bytes": 17525,
+        "sha256": "ac6e292c568a28fc654fbfcf73207e5502401788249ea79136c5f9e27f47aa7f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/mission-library/remote-team.mjs",
+        "bytes": 1945,
+        "sha256": "ae88b45d4dce59f448ebb507d0e064332e0832ea87eb013ae5f684d268820f91",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/mission-library/spatial-next-editions.mjs",
+        "bytes": 26053,
+        "sha256": "2f8b6fb284a606653cc76dcf763a66383e9edf7a88e7d4ef766ffa18245035b4",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/multiplayer-recording.mjs",
+        "bytes": 16269,
+        "sha256": "0f5ad0764722ef7b83259e664698d1520b07f83b21ef94ef3968e99780eaa6df",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/multiplayer-terminal-observation.mjs",
+        "bytes": 10186,
+        "sha256": "963502efdf6312e6f5183998745a1b98ebafa2dfed02d59b89563adf43ce1d0a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/continuous-celebration.mjs",
+        "bytes": 1806,
+        "sha256": "fbb629742f863df2aca04db9434acebe8b4eb3c3456fb93b00670434ff5414bb",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/couch-touch.mjs",
+        "bytes": 3978,
+        "sha256": "891079326fc17b4872108a8d94ac557a62136a5cb0f93a1e529a9331997aeb88",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/encounter-help.mjs",
+        "bytes": 2993,
+        "sha256": "f1a50d3c688ced53153da1797cd653fb791c0bf2faa016736753d415ff01308f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/enemy-stats-events.mjs",
+        "bytes": 1443,
+        "sha256": "d716162cf6176209e455d14a35cc52522741f5bd7efc72d01aad187a9fd79b8a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/journey-mode-pictures.mjs",
+        "bytes": 7983,
+        "sha256": "b0102c78bccf4c0cbe945a2d9d20ca1cc2c4d6374f377b41be1c0187e19cb5e7",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/journey-save-cue.css",
+        "bytes": 1381,
+        "sha256": "494318b44882186fe5fefe4248930285bf61ca32e56bd08db5cda27f143e128f",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/journey-save-cue.mjs",
+        "bytes": 1381,
+        "sha256": "8281363b0a32dcdff8992422cbe44d263107a58e799f44bae1c82a79466a7ac0",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/mode-boot.css",
+        "bytes": 1295,
+        "sha256": "4c2f747071af4648b5983db947b92d66dfb4dbe361262f957e2c8fd834ebeaa0",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/pause-menu.mjs",
+        "bytes": 3619,
+        "sha256": "fa2d081584b3a5ce947a65afe6af2e069901994e284bc6213b92114f171c8bc8",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/reading-input-prompt.mjs",
+        "bytes": 779,
+        "sha256": "c50c9aeae569e885cd0890b0d045c1d925b78771e4df1322c820f92740774b4a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/recording-verification.mjs",
+        "bytes": 974,
+        "sha256": "b85b2c2da6d48e5b6a9b48c0ff368073173782223ed9b66914423fb3cba248bc",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/team-hunt-save.mjs",
+        "bytes": 16083,
+        "sha256": "b7c8ee3ced7faea43c915e05e571f89e956e76ec209d73be2f1f930461f53eb2",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/terminal-recording-export.css",
+        "bytes": 991,
+        "sha256": "13b8506a14ce1bbfc5e539e5b6423f7ec3c008686fafb963d2973c7e03745142",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/ui/terminal-recording-export.mjs",
+        "bytes": 4841,
+        "sha256": "0f52dca53043736e409127eeaba2d066bdf3126c720d8aad212f9229eaf7026b",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/opening.json",
+        "bytes": 20768,
+        "sha256": "0dd34097ba74c64cca71139f0656846fab3214fac925abb195acc734c73b1cf9",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v9.json",
+        "bytes": 257778,
+        "sha256": "80d2406bece474a0dc169e9d8ea31b473d04d68144e8df6dd4eff41c7850e27a",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v10.json",
+        "bytes": 258783,
+        "sha256": "04b2c25e1e6bbbf8890b89a6661ec80fadac53f280ae2ae2caf77fd3de3ed4fc",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v11.json",
+        "bytes": 259575,
+        "sha256": "3d7b5b67d5d78a3f25a8108468385f9a6f1b2520fc12b275bcc3bf952ae0d978",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v12.json",
+        "bytes": 260606,
+        "sha256": "93ff983369b33f0b0cf005ddd3e3112475c8af6ac5d3d43ef1bdbe49e9df2325",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v13.json",
+        "bytes": 261539,
+        "sha256": "dbad0867d7642b78fe46d8eb1b1bf13d367d433248b673b0f00933fdc79491c2",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v14.json",
+        "bytes": 262645,
+        "sha256": "a5fa79c0174104525174559a7701c6241c747b2df3d8fc1f99484cfbca8312ef",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v15.json",
+        "bytes": 263597,
+        "sha256": "bd832d139178a8e82dbb8eea68aca94ee2e1b395897bcf6818af1cbb7966c6c9",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v16.json",
+        "bytes": 264185,
+        "sha256": "cb4761bfb1b528c0264de5b44ab9bb1e05b7d1b9bff752ba50828fbd1b650b8e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v17.json",
+        "bytes": 265782,
+        "sha256": "615510f0643bc972817bdf0d285a00bc6986a3bfb04667754393dc509929b0ea",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v18.json",
+        "bytes": 267605,
+        "sha256": "2eef985ba79babbac1a1b761f039dd6678bd447fbd02c18eb28367d20a5fdedb",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v19.json",
+        "bytes": 269126,
+        "sha256": "d0e631a5b8551d422ee6b3d5a2476aa25bdf38b824bdd86def06312f0c10658e",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v20.json",
+        "bytes": 270352,
+        "sha256": "505b52ec7be45d06c71ccbfdaa6ab23a962dc6777d147c619cd0d0e6b33abe1d",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v21.json",
+        "bytes": 271337,
+        "sha256": "45eff01ef344cb77700977c7135a265e9e0c7c2c7ff1e7f3366644c8517473b8",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v22.json",
+        "bytes": 273373,
+        "sha256": "4268a186d8565460ee8efc5566f0571d8150ec4d665380fbe329fdbd214b4072",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v23.json",
+        "bytes": 275331,
+        "sha256": "3b006b71af58209831aa9973dad88d47405188d0c8f28bad74d0ec03bd52a660",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v24.json",
+        "bytes": 276540,
+        "sha256": "54af78a72743cfb23ae5c9d091aec92e9f4a63a588aacd81953949c2ad4d5385",
+        "kind": "gameplay"
+      },
+      {
+        "path": "game/content-design/runtime/whole-spatial-v25.json",
+        "bytes": 277154,
+        "sha256": "26cafd633827012c3c8729329bb2fad0c3feedd2637c2e257bf50d8e123585e7",
+        "kind": "gameplay"
+      }
+    ],
+    "missions": [
+      {
+        "id": "journey:opening/first-return/greybox-1/solo",
+        "routeId": "opening",
+        "missionId": "first-return",
+        "modes": [
+          "solo"
+        ],
+        "current": false,
+        "classification": "archived",
+        "groups": [
+          "archive:journey:opening"
+        ]
+      },
+      {
+        "id": "journey:opening/choose-your-share/greybox-1/solo",
+        "routeId": "opening",
+        "missionId": "choose-your-share",
+        "modes": [
+          "solo"
+        ],
+        "current": false,
+        "classification": "archived",
+        "groups": [
+          "archive:journey:opening"
+        ]
+      },
+      {
+        "id": "journey:whole-spatial-v25/first-return/pressure-v2-36e60a42b78b4f1b/solo",
+        "routeId": "whole-spatial-v25",
+        "missionId": "first-return",
+        "modes": [
+          "solo"
+        ],
+        "current": true,
+        "classification": "current",
+        "groups": [
+          "solo:horizon-starter"
+        ]
+      },
+      {
+        "id": "journey:whole-spatial-v25/choose-your-share/pressure-v2-22994d37ea0a7a23/solo",
+        "routeId": "whole-spatial-v25",
+        "missionId": "choose-your-share",
+        "modes": [
+          "solo"
+        ],
+        "current": true,
+        "classification": "current",
+        "groups": [
+          "solo:horizon-starter"
+        ]
+      }
+    ],
+    "destinations": [
+      {
+        "path": "game/",
+        "mode": "solo",
+        "routeId": "opening",
+        "runtimeGroups": [
+          "shared"
+        ],
+        "groups": [
+          "archive:journey:opening"
+        ]
+      },
+      {
+        "path": "game/",
+        "mode": "solo",
+        "routeId": "whole-spatial-v25",
+        "runtimeGroups": [
+          "shared"
+        ],
+        "groups": [
+          "solo:horizon-starter"
+        ]
+      }
+    ],
+    "navigationBootstraps": [
+      {
+        "path": "game/index.html",
+        "routeId": "opening",
+        "files": [
+          "game/content-design/runtime/opening.json"
+        ]
+      }
+    ]
+  },
+  "navigation": {
+    "id": "whole-spatial-v25",
+    "navigation": {
+      "starterPackId": "journey-opening",
+      "views": {
+        "solo": {
+          "campaigns": [
+            {
+              "source": "candidate",
+              "packId": "journey-opening",
+              "id": "prologue",
+              "title": "Prologue",
+              "modes": [
+                "solo"
+              ],
+              "levels": [
+                {
+                  "id": "first-return",
+                  "name": "First return",
+                  "hook": "Cross to the far rail or turn back to the near rail?"
+                },
+                {
+                  "id": "choose-your-share",
+                  "name": "Choose your share",
+                  "hook": "Take the nearby narrow slice now, or travel along the rail for a larger enclosure?"
+                },
+                {
+                  "id": "two-keepers",
+                  "name": "Two keepers",
+                  "hook": "Separate the two keepers first or wait until they share one side?"
+                }
+              ]
+            },
+            {
+              "source": "candidate",
+              "packId": "journey-opening",
+              "id": "horizon-school",
+              "title": "Horizon School",
+              "modes": [
+                "solo"
+              ],
+              "levels": [
+                {
+                  "id": "nearby-shore",
+                  "name": "Nearby shore",
+                  "hook": "Take the short exposed line to the near woven landing, or cross the open gap to establish the larger far landing first?"
+                },
+                {
+                  "id": "island-outpost",
+                  "name": "Island outpost",
+                  "hook": "Close the short western join from the home panel, or make the longer bent return to the offset eastern stitches before choosing the next enclosure?"
+                },
+                {
+                  "id": "stepping-stones",
+                  "name": "Stepping stones",
+                  "hook": "Use the near seed landing to build a short spikelet chain, or bypass it for the broader central sun landing before choosing an upper or lower return?"
+                },
+                {
+                  "id": "two-bays",
+                  "name": "Two bays",
+                  "hook": "Work from the upper offset into the tighter western bay, or descend through the centre and use the lower offset against the wider eastern bay?"
+                },
+                {
+                  "id": "courtyard-return",
+                  "name": "Courtyard return",
+                  "hook": "Take the short outer bridge first, or move along the ring to choose an inward enclosure?"
+                },
+                {
+                  "id": "long-way-home",
+                  "name": "Long way home",
+                  "hook": "Join through the upper shoulder group for the shorter first return, or descend to the offset gathered group for a longer line that approaches the far shoulder?"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
