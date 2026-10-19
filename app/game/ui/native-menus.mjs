@@ -559,7 +559,7 @@ export function prepareNativeMenus({
       masterVolume: row(`${fieldPrefix}master-volume`),
       audioCues: [
         ...settings.querySelectorAll(
-          '[data-menu-audio], [data-radio-audio], [data-movement-audio]',
+          '[data-menu-audio], [data-radio-audio], [data-movement-audio], [data-gameplay-audio]',
         ),
       ],
       touchPresentation: touchRows,

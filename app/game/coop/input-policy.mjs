@@ -1,5 +1,6 @@
 const neutral = () => ({ direction: null, boost: false, support: false });
 export const COOP_INPUT_CAPABILITIES = Object.freeze({
+  keyboardMode: 'team',
   heldActions: Object.freeze(['action']),
   steeringEdges: true,
 });

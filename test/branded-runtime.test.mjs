@@ -279,3 +279,42 @@ test('the supplemental and official chapter registries cannot supply unrelated p
   assert.throws(() => external.prepareSourceExternalChapter('fpv-learning'));
   assert.equal(await routes.loadAuthoredJourneyRoute('fpv-learning'), null);
 });
+
+
+test('new shared-engine keyboard and audio preferences cannot read or overwrite the original app', async () => {
+  const { createGameplayAudioPreferences } = await import('../app/game/gameplay-audio-preferences.mjs');
+  const { createCouchKeyboardPreferences } = await import('../app/game/couch/keyboard-preferences.mjs');
+  const originalKeys = ['revealline.gameplay-audio-output.v1', 'revealline.couch-keyboard.v1', 'revealline.team-keyboard.v1'];
+  const values = new Map(originalKeys.map(key => [key, 'original app sentinel']));
+  const reads = [], writes = [], locks = [];
+  const storage = {
+    getItem(key) { reads.push(key); assert.ok(key.startsWith('revealline-mmm.'), key); return values.get(key) ?? null; },
+    setItem(key, value) { writes.push(key); assert.ok(key.startsWith('revealline-mmm.'), key); values.set(key, value); },
+  };
+  const lockManager = { request(key, _options, use) {
+    locks.push(key); assert.ok(key.startsWith('revealline-mmm.'), key); return use({ name: key });
+  } };
+  const audio = createGameplayAudioPreferences({ getStorage: () => storage, window: {} });
+  assert.equal(audio.choose(true).durable, true);
+  audio.dispose();
+  for (const mode of ['duel', 'team']) {
+    const keyboard = createCouchKeyboardPreferences({ mode, getStorage: () => storage, getLockManager: () => lockManager });
+    await keyboard.reset();
+    assert.equal(keyboard.snapshot().status, 'saved');
+    keyboard.dispose();
+  }
+  assert.equal(new Set(reads).size, 3);
+  assert.equal(new Set(writes).size, 3);
+  assert.equal(locks.length, 2);
+  for (const key of originalKeys) assert.equal(values.get(key), 'original app sentinel');
+});
+
+test('upstream imports reject an unprojected storage key before publication', async () => {
+  const { validateBrandIsolation } = await import('../scripts/isolate-brand.mjs');
+  const config = JSON.parse(await readFile(new URL('../brand.config.json', import.meta.url)));
+  const files = new Map([
+    ['edition-catalog.json', await readFile(path.join(appRoot, 'edition-catalog.json'))],
+    ['game/new-preference.mjs', Buffer.from("export const NEW_PREFERENCE_KEY = 'revealline.new-preference.v1';")],
+  ]);
+  assert.throws(() => validateBrandIsolation(files, config), /Unprojected upstream storage key/);
+});

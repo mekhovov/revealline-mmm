@@ -85,6 +85,63 @@ export function classicSnakeRatingCriteriaText({
     : '★ For a verified clear. This setup offers one completion star and personal bests; silver and gold are unavailable.';
 }
 
+/** A read-only explanation of the current attempt's accepted native grade. */
+export function classicSnakeRatingGoal(grade, moves) {
+  if (
+    !grade?.calibrated ||
+    ![1, 2, 3].includes(grade.stars) ||
+    !Number.isSafeInteger(moves) ||
+    moves < 0 ||
+    !Number.isSafeInteger(grade.goldMoves) ||
+    grade.goldMoves < 1 ||
+    !Number.isSafeInteger(grade.silverMoves) ||
+    grade.silverMoves < grade.goldMoves
+  )
+    return null;
+  const expected = moves <= grade.goldMoves ? 3 : moves <= grade.silverMoves ? 2 : 1;
+  if (grade.stars !== expected) return null;
+  if (grade.stars === 3) return Object.freeze({ state: 'highest', moves });
+  const target = grade.stars === 1 ? grade.silverMoves : grade.goldMoves;
+  return Object.freeze({
+    state: 'next',
+    moves,
+    stars: grade.stars + 1,
+    target,
+    shortfall: moves - target,
+  });
+}
+
+export function classicSnakeRatingResultText(grade, moves, locale = 'en') {
+  const goal = classicSnakeRatingGoal(grade, moves);
+  if (!goal) return '';
+  const uk = locale === 'uk';
+  const plurals = uk ? new Intl.PluralRules('uk') : null;
+  const moveCount = (value) =>
+    `${value} ${
+      uk
+        ? { one: 'хід', few: 'ходи', many: 'ходів', other: 'ходу' }[plurals.select(value)]
+        : value === 1
+          ? 'move'
+          : 'moves'
+    }`;
+  const attempt = uk
+    ? `Ця спроба: ${moveCount(goal.moves)}.`
+    : `This attempt: ${moveCount(goal.moves)}.`;
+  if (goal.state === 'highest')
+    return (
+      attempt +
+      (uk
+        ? ' Отримано 3 зірки. Це найвища оцінка для цього набору.'
+        : ' 3 stars earned. This is the highest rating for this setup.')
+    );
+  return (
+    attempt +
+    (uk
+      ? ` Наступна ціль: ${goal.stars} зірки за ${moveCount(goal.target)} або менше. Для повторної спроби потрібно на ${moveCount(goal.shortfall)} менше.`
+      : ` Next: ${goal.stars} stars in ${moveCount(goal.target)} or fewer. Retry with ${goal.shortfall} fewer ${goal.shortfall === 1 ? 'move' : 'moves'}.`)
+  );
+}
+
 function availableDatabase() {
   try {
     return globalThis.indexedDB;

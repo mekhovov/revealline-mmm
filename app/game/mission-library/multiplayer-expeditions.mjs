@@ -63,16 +63,26 @@ export async function retainedJourneyFromExpeditions({
   return [combineJourneyLibrarySources(modes)];
 }
 
-export function teamExpeditionLibrarySource({ launch, difficulty = () => 'standard' }) {
+export function teamExpeditionLibrarySource({ launch, difficulty = () => 'standard', onStage }) {
+  const observe = onStage
+    ? (kind) => {
+        try {
+          onStage(kind);
+        } catch {}
+      }
+    : null;
+  observe?.('missions-team-begin');
   const source = createTeamExpansionCandidates();
   const journey = createCandidateTeamHost(source, { corePackIds: source.packs.map((p) => p.id) });
-  return teamJourneyLibrarySource({
+  const result = teamJourneyLibrarySource({
     journey,
     editionId: TEAM_EXPANSION_ROUTE,
     edition: t('interface:expeditions.team'),
     difficulty,
     launch: (_row, context) => launch(context),
   });
+  observe?.('missions-team-end');
+  return result;
 }
 
 export function duelExpeditionLibrarySources({
@@ -80,15 +90,26 @@ export function duelExpeditionLibrarySources({
   launch,
   difficulty = () => 'standard',
   activeRouteId,
+  onStage,
 }) {
+  const observe = onStage
+    ? (kind) => {
+        try {
+          onStage(kind);
+        } catch {}
+      }
+    : null;
+  observe?.('missions-hunt-begin');
   const supplemental = supplementalDuelSources({ launch, themes, difficulty, activeRouteId });
+  observe?.('missions-hunt-end');
   if (activeRouteId === DUEL_EXPANSION_ROUTE) return supplemental;
+  observe?.('missions-duel-begin');
   const source = createDuelExpansionCandidates();
   const host = createCandidateVersusHost(source, {
     themes,
     corePackIds: source.packs.map((p) => p.id),
   });
-  return [
+  const result = [
     ...supplemental,
     journeyLibrarySource({
       editionId: DUEL_EXPANSION_ROUTE,
@@ -101,4 +122,6 @@ export function duelExpeditionLibrarySources({
       launch: (_mission, context) => launch(context),
     }),
   ];
+  observe?.('missions-duel-end');
+  return result;
 }

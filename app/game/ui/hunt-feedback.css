@@ -11,6 +11,9 @@
   color: var(--fk-text, inherit);
   overflow-wrap: anywhere;
 }
+.hunt-status[data-hunt-detail='result'] {
+  white-space: pre-line;
+}
 .racer-readouts .hunt-status {
   text-align: center;
 }

@@ -1,4 +1,5 @@
 @import url('../ui/terminal-recording-export.css');
+@import url('./keyboard-settings.css');
 
 /* Legacy layout and paint share one cascade layer. Theme recipes own opt-in appearance. */
 @layer legacy {

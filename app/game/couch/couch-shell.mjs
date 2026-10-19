@@ -2,7 +2,7 @@ import { createPauseMenu, pauseMusicAction } from '../ui/pause-menu.mjs';
 import { nativeArtReviewURL } from '../ui/art-review-navigation.mjs';
 import { gameplayStatsLabel } from '../ui/gameplay-copy.mjs';
 import { contentText } from '../i18n/content.mjs';
-import { t, localizedText } from '../i18n/index.mjs';
+import { t, localizedText, getLocale } from '../i18n/index.mjs';
 import { mountModeChoices } from '../ui/mode-choice.mjs';
 import { authoredModeDestinations } from '../ui/authored-mode-routes.mjs';
 import { DEFAULT_JOURNEY_ROUTES } from '../content-design/default-entry.mjs';
@@ -12,6 +12,8 @@ import { prepareNativeMenus } from '../ui/native-menus.mjs';
 import { commitMenuRetune } from '../ui/menu-retune.mjs';
 import { authoredJourneyModeHref, isAuthoredJourneyRouteId } from '../content-design/mode-href.mjs';
 import { isMissionLibrarySourceJourney } from '../mission-library/handoff.mjs';
+import { couchDirectionLabel, resolveCouchKeyboard } from './keyboard-bindings.mjs';
+import { keyLabel } from '../key-bindings.mjs';
 
 const ABILITY = Object.freeze({
   get scan() {
@@ -74,7 +76,13 @@ export function createCouchShell({
   onMissions = null,
   controllerNeedsTouch = () => false,
   getSceneContext = () => ({}),
+  getKeyboardBindings = () => null,
 } = {}) {
+  const recommendation = doc.getElementById('race-home-recommendation');
+  const recommendationHome = {
+    parent: recommendation.parentNode,
+    next: recommendation.nextSibling,
+  };
   const nativeMenu = prepareNativeMenus({ document: doc, mode: 'versus', getSceneContext });
   const $ = (id) => doc.getElementById(id),
     view = doc.defaultView,
@@ -84,6 +92,20 @@ export function createCouchShell({
     shown = [false, false],
     removers = [],
     settings = attachSettingsPanels({ root: $('race-options-panel'), document: doc });
+  let keyboardSource, keyboardLocale, keyboardView;
+  const keyboard = () => {
+    const source = getKeyboardBindings(),
+      locale = getLocale();
+    if (!keyboardView || source !== keyboardSource || locale !== keyboardLocale) {
+      keyboardSource = source;
+      keyboardLocale = locale;
+      keyboardView = {
+        bindings: resolveCouchKeyboard(source),
+        directions: [0, 1].map((player) => couchDirectionLabel(source, player)),
+      };
+    }
+    return keyboardView;
+  };
   const authoredDestinations = authoredModeDestinations('versus', authoredRoute);
   const secondaryDestinations = Object.freeze({
     about: $('race-more-about').getAttribute('href'),
@@ -145,6 +167,7 @@ export function createCouchShell({
       { element: $('versus-landing-fullscreen-status') },
     ],
   });
+  $('race-start').closest('.race-menu-actions').before(recommendation);
   let screen = 'main',
     status = null,
     opener = null,
@@ -315,9 +338,7 @@ export function createCouchShell({
             ? t('interface:onScreenControls')
             : modality[i] === 'touch'
               ? t('interface:touch')
-              : i === 0
-                ? t('interface:wASD')
-                : t('interface:arrowKeys');
+              : keyboard().directions[i];
       setText(`race-seat-${i}`, () => device());
       setText(
         `racer-input-${i}`,
@@ -627,6 +648,7 @@ export function createCouchShell({
     format = 'single',
     contentBusy = false,
     focusTransition = true,
+    startRecommendation = null,
   }) {
     if (destroyed) return;
     // Authored native/modified links need the edition before activation. Legacy
@@ -647,6 +669,16 @@ export function createCouchShell({
     }
     const series = format === 'first-to-two';
     setText('race-summary', summary);
+    const explanation = status === 'ready' && !contentBusy ? startRecommendation?.() : null;
+    setText('race-home-recommendation', explanation ? startRecommendation : '');
+    recommendation.hidden = !explanation;
+    const start = $('race-start');
+    const describedBy = (start.getAttribute('aria-describedby') || '')
+      .split(/\s+/)
+      .filter((id) => id && id !== recommendation.id);
+    if (explanation) describedBy.push(recommendation.id);
+    if (describedBy.length) start.setAttribute('aria-describedby', describedBy.join(' '));
+    else start.removeAttribute('aria-describedby');
     setText('race-format-note', () =>
       series ? t('interface:couch.seriesNote') : t('interface:couch.singleRaceNote'),
     );
@@ -712,13 +744,15 @@ export function createCouchShell({
       const run = match.runs[i],
         e = equipment[i];
       const keyboardHelp = () => {
-        const hints = [i === 0 ? t('interface:wASDMove') : t('interface:arrowKeysMove')];
-        if (e.action) hints.push(`${i === 0 ? 'Q' : t('interface:enter')}: ${e.label}`);
-        if (e.pickup) hints.push(t('gameplay:supply', { value1: i === 0 ? 'E' : '/' }));
-        if (e.boost)
-          hints.push(
-            i === 0 ? t('interface:couch.leftShiftBoost') : t('interface:couch.rightShiftBoost'),
-          );
+        const keys = keyboard().bindings.seats[i];
+        const hints = [
+          t('interface:couchKeyboard.move', {
+            keys: keyboard().directions[i],
+          }),
+        ];
+        if (e.action) hints.push(`${keyLabel(keys.action)}: ${e.label}`);
+        if (e.pickup) hints.push(t('gameplay:supply', { value1: keyLabel(keys.pickup) }));
+        if (e.boost) hints.push(`${keyLabel(keys.boost)}: ${t('common:controls.boost')}`);
         return `${hints.join(' · ')}.`;
       };
       setText(`race-help-${i}`, () => keyboardHelp());
@@ -772,6 +806,20 @@ export function createCouchShell({
       modeChoices.dispose();
       pauseMenu?.destroy();
       nativeMenu?.destroy();
+      recommendationHome.parent.insertBefore(
+        recommendation,
+        recommendationHome.next?.parentNode === recommendationHome.parent
+          ? recommendationHome.next
+          : null,
+      );
+      recommendation.hidden = true;
+      setText('race-home-recommendation', '');
+      const start = $('race-start');
+      const describedBy = (start.getAttribute('aria-describedby') || '')
+        .split(/\s+/)
+        .filter((id) => id && id !== recommendation.id);
+      if (describedBy.length) start.setAttribute('aria-describedby', describedBy.join(' '));
+      else start.removeAttribute('aria-describedby');
       for (const remove of removers) remove();
     },
   };

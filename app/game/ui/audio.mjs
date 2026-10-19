@@ -1,3 +1,4 @@
+import { createGameplayAudioOutput } from './gameplay-audio-output.mjs';
 import { createMediaPreparation } from './media-preparation.mjs';
 import { createHumanReactionPolicy } from './human-reaction-policy.mjs';
 import { DEFAULT_DIALOGUE_VOLUME, DIALOGUE_MIX_GAIN } from '../audio/dialogue-mix.mjs';
@@ -41,9 +42,16 @@ const defaultFactory = () => createGameAudioContext();
  * Only toggle/enable/resume create or resume audio; update never bypasses a gesture.
  */
 export class Soundscape {
-  constructor({ contextFactory = defaultFactory, persistentMusic = false, audioMaster } = {}) {
+  constructor({
+    contextFactory = defaultFactory,
+    persistentMusic = false,
+    audioMaster,
+    window,
+    getStorage,
+  } = {}) {
     if (typeof persistentMusic !== 'boolean')
       throw new TypeError('persistentMusic must be a boolean');
+    this.gameplayOutput = createGameplayAudioOutput({ window, getStorage });
     this.enabled = false;
     this.menuSettings = readMenuAudio();
     this.radioSettings = readRadioAudio();
@@ -406,6 +414,7 @@ export class Soundscape {
     if (!context) return false;
     this.context = context;
     Object.assign(this, createGameAudioOutput(context));
+    this.gameplayOutput.attach(this);
     if (context.createWaveShaper) {
       const curve = Float32Array.from({ length: 256 }, (_, i) =>
         Math.tanh(((i / 255) * 2 - 1) * 3),
@@ -587,6 +596,7 @@ export class Soundscape {
     if (this.disposed) return;
     this.disposed = true;
     this.releaseAudioMaster?.();
+    this.gameplayOutput.dispose();
     this.feedbackDirector.close();
     this.mediaPreparation.close();
     this.setPublishedAudio(null);
@@ -601,6 +611,7 @@ export class Soundscape {
       this.musicDrive,
       this.sfxDrive,
       this.musicBus,
+      this.gameplayBus,
       this.sfxBus,
       this.menuBus,
       this.radioBus,

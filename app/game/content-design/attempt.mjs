@@ -5,7 +5,7 @@ import { TURN_POLICIES } from '../core/registry.mjs';
 import { createRecorder } from '../replay.mjs';
 import { freezeDesign } from './catalogs.mjs';
 import { createContentExecutionCatalog } from './execution.mjs';
-import { loadPreviewArtwork, verifiedPreviewBackground } from './assets.mjs';
+import { loadPreviewArtwork, loadVerifiedArtwork, verifiedPreviewBackground } from './assets.mjs';
 import { acquireCandidatePicture } from './picture.mjs';
 import { applyGameplayTuning, validateGameplayTuning } from '../gameplay-tuning.mjs';
 import { CONTENT_ATTEMPT_PREPARATION_TIMEOUT_MS } from './limits.mjs';
@@ -24,8 +24,9 @@ export function createContentAttemptPreparer(
     packIds,
     themes,
     buildVersion = 'dev',
-    loadArtwork = loadPreviewArtwork,
+    loadArtwork,
     decodeImage,
+    serializeArtwork = true,
     timeoutMs = CONTENT_ATTEMPT_PREPARATION_TIMEOUT_MS,
   } = {},
 ) {
@@ -35,6 +36,9 @@ export function createContentAttemptPreparer(
       timeoutMs <= CONTENT_ATTEMPT_PREPARATION_TIMEOUT_MS,
     'Invalid candidate preparation timeout.',
   );
+  required(typeof serializeArtwork === 'boolean', 'Choose whether to retain serialized artwork.');
+  if (loadArtwork === undefined)
+    loadArtwork = serializeArtwork ? loadPreviewArtwork : loadVerifiedArtwork;
   required(typeof loadArtwork === 'function', 'Candidate preparation needs an artwork loader.');
   required(
     decodeImage === undefined || typeof decodeImage === 'function',
@@ -148,15 +152,17 @@ export function createContentAttemptPreparer(
             ? await loadArtwork(manifest.background, { signal: controller.signal })
             : null;
           check();
-          const visualOverrides = manifest.background
-            ? { background: verifiedPreviewBackground(manifest.background, media) }
-            : {};
+          const visualOverrides =
+            manifest.background && serializeArtwork
+              ? { background: verifiedPreviewBackground(manifest.background, media) }
+              : {};
           if (manifest.background) {
             report('decoding', 'Opening this mission’s verified original picture…');
             candidatePicture = await acquireCandidatePicture(manifest.background, {
               signal: controller.signal,
               loadArtwork: async () => media,
               decodeImage,
+              binary: !serializeArtwork,
             });
             check();
           }

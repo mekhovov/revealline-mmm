@@ -170,6 +170,9 @@ const reserved = (code) =>
   RESERVED_CODES.has(code) ||
   /^(F\d{1,2}|Browser\w*|Media\w*|Audio\w*|Launch\w*|OS\w*)$/.test(code);
 const allowed = (code) => /^(Key[A-Z]|Digit[0-9]|Numpad[0-9])$/.test(code) || OTHER_CODES.has(code);
+/** Physical gameplay keys; hosts still reserve their own menu/pause shortcuts. */
+export const isBindablePhysicalKey = (code) =>
+  typeof code === 'string' && !reserved(code) && allowed(code);
 const ownConfig = (config) => ({
   version: KEY_BINDINGS_VERSION,
   bindings: Object.fromEntries(

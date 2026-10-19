@@ -1,3 +1,4 @@
+import { mountGameplayAudioControls } from './gameplay-audio-controls.mjs';
 import { MOVEMENT_AUDIO_KEY } from './movement-audio.mjs';
 import { RADIO_AUDIO_KEY } from './radio-audio.mjs';
 import { t, localizedText, localizedAttribute } from '../i18n/index.mjs';
@@ -55,7 +56,14 @@ export function attachMenuAudioSettings(sound, doc = globalThis.document, option
     'movementVolume',
     options,
   );
+  const mono = mountGameplayAudioControls({
+    output: sound.gameplayOutput,
+    container: audioTarget(doc, options),
+    document: doc,
+    idPrefix: options.idPrefix,
+  });
   return () => {
+    mono();
     movement();
     menu();
     radio();
@@ -67,13 +75,7 @@ function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeC
   const win = options.window ?? globalThis,
     getStorage = options.getStorage ?? (() => globalThis.localStorage),
     idPrefix = options.idPrefix ? `${options.idPrefix}-` : '';
-  const target =
-    options.target ??
-    doc.getElementById('sfx-volume')?.parentElement?.parentElement ??
-    doc.getElementById('race-settings-panel-audio') ??
-    doc.getElementById('coop-settings-panel-audio') ??
-    doc.getElementById('settings-panel-audio') ??
-    doc.getElementById('settings-dialog');
+  const target = audioTarget(doc, options);
   if (!target || target.querySelector(`[data-${prefix}-audio]`)) return () => {};
   const group = doc.createElement('div');
   group.dataset[`${prefix}Audio`] = '';
@@ -138,4 +140,15 @@ function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeC
     volume.removeEventListener('input', change);
     group.remove();
   };
+}
+
+function audioTarget(doc, options) {
+  return (
+    options.target ??
+    doc?.getElementById('sfx-volume')?.parentElement?.parentElement ??
+    doc?.getElementById('race-settings-panel-audio') ??
+    doc?.getElementById('coop-settings-panel-audio') ??
+    doc?.getElementById('settings-panel-audio') ??
+    doc?.getElementById('settings-dialog')
+  );
 }

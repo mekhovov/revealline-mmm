@@ -218,6 +218,9 @@ function scopeStorage(source, repo) {
     "display",
     "encounter-display",
     "couch-controller-profiles",
+    "couch-keyboard",
+    "team-keyboard",
+    "gameplay-audio-output",
     "couch-radio-setup",
     "game-activity",
     "creator",
@@ -1201,6 +1204,15 @@ export function validateBrandIsolation(files, config) {
   )
     throw new Error("Foreign audience entered the dedicated artifact.");
   for (const name of files.keys()) {
+    if (/\.m?js$/.test(name)) {
+      const tree = parse(files.get(name).toString(), { ecmaVersion: "latest", sourceType: "module" });
+      walk(tree, (node) => {
+        if (node.type === "VariableDeclarator" && /(?:^|_)KEY$/.test(node.id?.name ?? "") &&
+          node.init?.type === "Literal" && typeof node.init.value === "string" &&
+          node.init.value.startsWith("revealline."))
+          throw new Error(`Unprojected upstream storage key: ${name} / ${node.id.name}`);
+      });
+    }
     if (
       /^(?:optional-practice\/|game\/(?:communities|community)\/.*\.html$)/.test(
         name,
