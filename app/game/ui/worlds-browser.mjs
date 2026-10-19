@@ -5,13 +5,11 @@ export const WORLD_THEMES = Object.freeze([
   ['fpv', 'FPV Front'],
   ['ukraine', 'Ukraine Atlas'],
   ['retro', '1994 Forever'],
-  ['coupa', 'Spend Network'],
 ]);
 const legacyModes = new Map([
   ['original-fpv-pressure', 'Arcade'],
   ['original-ukraine-atlas', 'Arcade'],
   ['original-retro-1994', 'Arcade'],
-  ['original-spend-network', 'Arcade'],
   ['fpv-route-choices', 'Tactical'],
 ]);
 export const legacyWorldMode = (id) => legacyModes.get(id) ?? 'Other';

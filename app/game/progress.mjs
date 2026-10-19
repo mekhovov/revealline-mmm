@@ -232,7 +232,6 @@ const STARTER_BODIES = Object.freeze([
   'heavy-lift',
   'ukrainian-bird',
   'retro-craft',
-  'navi-avatar',
   'neutral-marker',
 ]);
 const APPEARANCE_TIERS = Object.freeze([
@@ -244,7 +243,6 @@ const APPEARANCE_TIERS = Object.freeze([
       'fixedwing-body',
       'ukrainian-falcon',
       'retro-vector',
-      'navi-auditor',
     ]),
   }),
   Object.freeze({

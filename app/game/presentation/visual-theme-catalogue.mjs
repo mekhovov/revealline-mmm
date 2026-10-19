@@ -1,3 +1,4 @@
+import { migratePresentationHash } from './retained-migrations.mjs';
 import { boundedJSON, canonicalJSON, exactKeys, required, stableId } from '../data-json.mjs';
 
 export const VISUAL_THEME_CATALOGUE_FORMAT = 'revealline-visual-theme-catalogue.v1';
@@ -119,6 +120,7 @@ function presentation(value) {
   ref(value.theme);
   if (value.collection !== null) ref(value.collection);
   required(hash(value.sha256), 'Visual theme needs the exact compiled manifest hash.');
+  value.sha256 = migratePresentationHash(value.sha256);
   return value;
 }
 function slots(source) {

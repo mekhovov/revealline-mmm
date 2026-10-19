@@ -27,7 +27,7 @@ export const ACTOR_APPEARANCE_RELEASES = Object.freeze([
       source: Object.freeze({ id: 'field-kit', revision: 62 }),
       theme: Object.freeze({ id: 'fpv', revision: 62 }),
       collection: null,
-      sha256: 'b4a7285520550e4cd04c7b9e80b4c6468c0a914faac77c05fa7f86a72c8a3c8f',
+      sha256: 'af2d1d398ca56ec365899940d27f790c2b406d385461e89a1dc8fcbbcede6972',
     }),
   }),
 ]);

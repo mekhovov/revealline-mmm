@@ -82,7 +82,7 @@ function historicalPolicies(source) {
   const entries = Array.isArray(source)
     ? // Current canonical104 and45 retained identities, including manifest-pinned published101.
       // Another supported edition must deliberately revisit this finite bound.
-      boundedJSON(source, { maxBytes: 43 * 1024, maxArray: 46 })
+      boundedJSON(source, { maxBytes: 43 * 1024, maxArray: 47 })
     : [source];
   const seen = new Set();
   return freezePresentation(

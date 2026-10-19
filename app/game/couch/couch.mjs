@@ -1133,6 +1133,8 @@ try {
         );
       painters.forEach((p) => p.setAttemptAppearance(roundRecipe.attemptAppearance));
     }
+    // The accepted action starts a new clock boundary; menu time is never play time.
+    last = 0;
     resumeDuel(match, { preserveContinuation: true });
     if (cue) beginStartCue(cue);
     else {
@@ -4867,18 +4869,18 @@ try {
         while (accumulator + 1e-9 >= FIXED_DT && match.status === 'running') {
           const before = match.runs.map((r) => r.tick);
           const beforeStatus = match.runs.map((r) => r.status);
-          const commands = input.consume().map((command, i) =>
-            beforeStatus[i] === 'respawning'
-              ? {
-                  direction: null,
-                  boost: false,
-                  action: false,
-                  pickup: false,
-                }
-              : neutralResumeTick
-                ? { ...command, boost: false, action: false, pickup: false }
+          const commands = input
+            .consume(neutralResumeTick ? { neutralActions: true } : undefined)
+            .map((command, i) =>
+              beforeStatus[i] === 'respawning'
+                ? {
+                    direction: null,
+                    boost: false,
+                    action: false,
+                    pickup: false,
+                  }
                 : command,
-          );
+            );
           localRecordings.get(match)?.append(commands);
           stepDuel(match, commands);
           match.runs.forEach((run, i) =>

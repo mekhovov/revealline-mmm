@@ -57,6 +57,8 @@ export function attachMissionLibraryBrowser({
   description = localizedMessage('interface:allMissionsOneLibraryJourneyClassicAndCustomKeepTheir'),
   browsingContext = null,
   random = Math.random,
+  randomDownloadable = false,
+  randomFilter = () => true,
   renderPreview = () => null,
   createArtworkView = null,
   retune = {},
@@ -607,7 +609,14 @@ export function attachMissionLibraryBrowser({
         collection: collection.value,
         lifecycle: lifecycle.value,
       })
-      .filter((row) => library.availability(row, modeFilter.value).state === 'ready');
+      .filter((row) => {
+        if (!randomFilter(row)) return false;
+        const state = library.availability(row, modeFilter.value);
+        return (
+          state.state === 'ready' ||
+          (randomDownloadable && (state.state === 'download' || state.retry))
+        );
+      });
   }
   function playRandom({ resetFilters = false } = {}) {
     if (destroyed || !dialog.open || doc.hidden || doc.hasFocus?.() === false) return false;
@@ -779,9 +788,7 @@ export function attachMissionLibraryBrowser({
     // Campaigns are navigation anchors, never a hidden second filter. Every
     // matching campaign remains in this one scroll surface.
     const matches = railRows;
-    randomLevel.disabled = !matches.some(
-      (row) => library.availability(row, modeFilter.value).state === 'ready',
-    );
+    randomLevel.disabled = !readyRandomRows().length;
     resetFilters.hidden = !filtersActive();
     localizedText(status, () =>
       [

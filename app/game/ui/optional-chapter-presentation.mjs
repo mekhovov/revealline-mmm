@@ -28,6 +28,5 @@ const themeKeys = Object.freeze({
   fpv: 'interface:fpvFront',
   ukraine: 'interface:ukraineAtlas',
   retro: 'content:1994Forever',
-  coupa: 'interface:spendNetwork',
 });
 export const worldThemeLabel = (theme) => (themeKeys[theme] ? t(themeKeys[theme]) : theme);

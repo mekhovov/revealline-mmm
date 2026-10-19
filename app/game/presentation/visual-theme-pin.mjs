@@ -1,3 +1,4 @@
+import { migratePresentationHash } from './retained-migrations.mjs';
 import { boundedJSON, canonicalJSON, exactKeys, required, stableId } from '../data-json.mjs';
 import { snapshotVisualThemeContext } from './visual-theme-catalogue.mjs';
 
@@ -46,6 +47,7 @@ export function snapshotVisualThemePin(source) {
       /^[a-f0-9]{64}$/.test(value.presentation.sha256),
     'Retain the exact compiled manifest hash.',
   );
+  value.presentation.sha256 = migratePresentationHash(value.presentation.sha256);
   Object.freeze(value.presentation);
   return Object.freeze(value);
 }

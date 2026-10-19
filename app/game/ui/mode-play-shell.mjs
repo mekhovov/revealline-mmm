@@ -579,6 +579,16 @@ export function mountModePlayShell({
       else if (node === briefingTitle) value = text(state.missionName) || value;
       put(node, 'textContent', value);
     }
+    const pauseIcon =
+      state.phase === 'paused' && !state.pauseOpensMenu
+        ? 'play'
+        : state.pauseOpensMenu && state.phase !== 'playing'
+          ? 'menu'
+          : 'pause';
+    if (buttons.pause.dataset.modePauseIcon !== pauseIcon) {
+      buttons.pause.dataset.modePauseIcon = pauseIcon;
+      services.setMenuIcon?.(buttons.pause, pauseIcon);
+    }
     attribute(buttons.menu, 'aria-label', COPY[language].menu);
     put(modeLabel, 'textContent', text(modeName));
     put(edition, 'textContent', text(state.navigationContext));

@@ -691,8 +691,8 @@ for (const picture of CURRENT_PICTURES)
   );
 
 export const ASSET_SLOTS = freezePresentation(rows);
-export function createDefaultThemeBundle() {
-  const assets = ASSET_SLOTS.map((entry) => ({
+export function createDefaultThemeBundle({ slots = ASSET_SLOTS } = {}) {
+  const assets = slots.map((entry) => ({
     format: FORMATS.asset,
     id: `${entry.id}.default`,
     revision: 1,
@@ -722,7 +722,7 @@ export function createDefaultThemeBundle() {
     format: FORMATS.bundle,
     id: 'field-kit',
     revision: 1,
-    slots: structuredClone(ASSET_SLOTS),
+    slots: structuredClone(slots),
     assets,
     themes: [
       {
@@ -733,7 +733,7 @@ export function createDefaultThemeBundle() {
         parent: null,
         tokens: { ...TOKEN_DEFAULTS },
         bindings: Object.fromEntries(
-          ASSET_SLOTS.map((entry, i) => [entry.id, { id: assets[i].id, revision: 1 }]),
+          slots.map((entry, i) => [entry.id, { id: assets[i].id, revision: 1 }]),
         ),
       },
       {

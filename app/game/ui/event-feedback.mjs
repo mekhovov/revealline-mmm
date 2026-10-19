@@ -60,13 +60,7 @@ export function drawEventFeedback(
 ) {
   if (!finitePoint(event) || event.age >= 0.7) return;
   const feedbackTheme =
-      themeFamily === 'fpv'
-        ? 'fpv'
-        : themeFamily === 'atlas'
-          ? 'ukraine'
-          : themeFamily === 'navi'
-            ? 'coupa'
-            : themeId,
+      themeFamily === 'fpv' ? 'fpv' : themeFamily === 'atlas' ? 'ukraine' : themeId,
     pickup = event.type === 'powerup.collected' && PICKUP_COLORS[event.kind],
     failed = event.type === 'player.failed',
     lineHit = event.type === 'lineImpact.seeded',
@@ -126,10 +120,6 @@ export function drawEventFeedback(
         ctx.fillRect(-2, -offset - 3, 4, 5);
         ctx.restore();
       }
-    } else if (feedbackTheme === 'coupa') {
-      ctx.fillRect(-offset - 3, -6, 5, 12);
-      ctx.fillRect(offset - 2, -4, 5, 10);
-      ctx.fillRect(-2, -1, 3, 3);
     } else {
       for (const [x, y] of [
         [-1, 0],
@@ -152,12 +142,7 @@ export function drawEventFeedback(
       }[event.kind]
     : failed
       ? t('gameplay:1Life', {
-          value1:
-            feedbackTheme === 'fpv'
-              ? t('interface:craftLost')
-              : feedbackTheme === 'coupa'
-                ? t('interface:linkLost')
-                : t('interface:lifeLost'),
+          value1: feedbackTheme === 'fpv' ? t('interface:craftLost') : t('interface:lifeLost'),
         })
       : event.type === 'shield.absorbed'
         ? t('interface:shieldUsed')

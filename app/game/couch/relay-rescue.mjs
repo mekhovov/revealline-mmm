@@ -5383,6 +5383,8 @@ export function bootCoop({
         : t('interface:proceduralTeamArenaIsReadyForThisAttempt'),
     );
     generation++;
+    // Fresh Start and Retry discard time spent in the lobby or retained pause.
+    last = null;
     startCoop(run);
     libraryStatus('');
     beginInstalledTeamAttempt(run, selection, briefing?.restored, {
