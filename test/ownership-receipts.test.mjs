@@ -16,3 +16,12 @@ test('every named ownership candidate is preserved with its original Git blob an
   assert.equal(createHash('sha1').update(Buffer.from(`blob ${bytes.length}\0`)).update(bytes).digest('hex'),row.sourceGitBlob,row.sourcePath);
  }
 });
+
+test('owned mission display numbers survive retirement from the shared registry', async () => {
+ const receipt=await json('migration/level-numbering-receipt.json');
+ const {officialLevelNumber,OFFICIAL_LEVEL_COUNT}=await import('../app/game/level-numbering.mjs');
+ assert.equal(OFFICIAL_LEVEL_COUNT,47);
+ for(const entry of receipt.entries)assert.equal(officialLevelNumber(entry.key),entry.number,entry.key);
+ for(const key of receipt.previouslyUnnumbered)assert.equal(officialLevelNumber(key),null);
+ assert.equal(officialLevelNumber('["mission","journey-opening","prologue","first-return"]'),null);
+});
