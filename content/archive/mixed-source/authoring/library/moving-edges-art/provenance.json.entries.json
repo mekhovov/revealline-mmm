@@ -1,0 +1,97 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/moving-edges-art/provenance.json",
+  "sourceGitBlob": "100574fb8067237ed0c3de1370545f2cc10ac6b8",
+  "sourceSHA256": "bdaac5fc8776c83a9e2201f36409b576478b835c708e97e335c8c2d7ee9006e1",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/images/9",
+      "value": {
+        "cellId": "moving-edges/terrace-stitch/coupa",
+        "themeId": "coupa",
+        "missionSlot": "terrace-stitch",
+        "sourceLevelId": "moving-edges-terrace-stitch",
+        "title": "The Shared Goods Terraces",
+        "path": "originals/terrace-stitch-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-6746a2e4-e5a9-4123-9bab-ddd3dfac7b31.png",
+        "bytes": 2844215,
+        "sha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "2ce4db9ff2a53f2d895def86797819aa787e0576f8a2ff79607d8152196da0c8",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "runtimeBinding": null,
+        "sourceBytesEqual": true,
+        "observations": {
+          "scene": "Shared tools, parcels and workshop terraces rise toward a greenhouse above an idyllic coast.",
+          "topologyEcho": "Three working levels and connecting paths echo the stepped terraces.",
+          "deviations": "Some people are larger than requested. This is an invented cooperative scene, with no actual Coupa, financial or environmental outcome asserted."
+        },
+        "style": "Modern generated pixel-art illustration with luminous practical light and stepped silhouettes; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "pointer": "/images/10",
+      "value": {
+        "cellId": "moving-edges/survey-wheel/coupa",
+        "themeId": "coupa",
+        "missionSlot": "survey-wheel",
+        "sourceLevelId": "moving-edges-survey-wheel",
+        "title": "The Repair Exchange Rotunda",
+        "path": "originals/survey-wheel-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-5fce3dcc-4683-4a75-8db9-a361020d6a6a.png",
+        "bytes": 3151700,
+        "sha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "d830f9b7eebed06318303d626097047e7235aad569ec4d2a00890c4a4a340ff8",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "runtimeBinding": null,
+        "sourceBytesEqual": true,
+        "observations": {
+          "scene": "A snowy parts-exchange rotunda links warm timber repair workshops at night.",
+          "topologyEcho": "A central depot and surrounding workrooms echo the hub and sectors.",
+          "deviations": "Timber replaces the requested rose brick; the courtyard is close to symmetric and a distant castle is invented. No product or quantified benefit is represented."
+        },
+        "style": "Modern generated pixel-art illustration with luminous practical light and stepped silhouettes; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "pointer": "/images/11",
+      "value": {
+        "cellId": "moving-edges/breakwater-return/coupa",
+        "themeId": "coupa",
+        "missionSlot": "breakwater-return",
+        "sourceLevelId": "moving-edges-breakwater-return",
+        "title": "The Harbor Maintenance Round",
+        "path": "originals/breakwater-return-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-4d89079e-9281-408d-985a-f27d829ca4ed.png",
+        "bytes": 2635887,
+        "sha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "92e3a0abe7e7c7cc39b62698238acca9bbd393170344575615ccf6fc4a460e61",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "runtimeBinding": null,
+        "sourceBytesEqual": true,
+        "observations": {
+          "scene": "A harbor maintenance crew shares lit repair workshops and boats beside deep blue night water.",
+          "topologyEcho": "Projecting piers and sheltered return water echo the breakwaters.",
+          "deviations": "Three projecting pier volumes replace a literal two-bar arrangement. Incidental marks are decorative; no product, financial or physical-route claim is made."
+        },
+        "style": "Modern generated pixel-art illustration with luminous practical light and stepped silhouettes; not a certified hand-pixel grid."
+      }
+    }
+  ]
+}

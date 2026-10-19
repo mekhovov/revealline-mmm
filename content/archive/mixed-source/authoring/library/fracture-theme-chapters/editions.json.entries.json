@@ -1,0 +1,45 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/fracture-theme-chapters/editions.json",
+  "sourceGitBlob": "ae2f412c2b9e5548be97d35d4cdb407e2fbfa4c6",
+  "sourceSHA256": "15375a267c864634722f505b8f4f6897df4e8710714fd343fde51c55df229db7",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/editions/2",
+      "value": {
+        "themeId": "coupa",
+        "id": "fracture-lines-coupa",
+        "artRoot": "authoring/library/fracture-coupa-art",
+        "provenanceSha256": "3709b1a56f5e88f2335c8fcd50b82c3f7efa4de8f89585db6b6af3325c7898d8",
+        "images": [
+          {
+            "sourceCellId": "fracture-lines/split-ring/coupa",
+            "sourceLevelId": "fracture-lines-split-ring",
+            "path": "originals/split-ring-coupa.png",
+            "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362",
+            "title": "The Shared Repair Court",
+            "description": "A cobalt-walled ring of repair workshops surrounds a tree and shared worktable; plain blue reusable crates, a handcart and four scenic openings make the resource-sharing story visible."
+          },
+          {
+            "sourceCellId": "fracture-lines/fault-fan/coupa",
+            "sourceLevelId": "fracture-lines-fault-fan",
+            "path": "originals/fault-fan-coupa.png",
+            "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70",
+            "title": "Where Three Deliveries Meet",
+            "description": "Three separately roofed supply bays step beside a sheltered passage: receiving crates, checking and repairing household fittings, and returning useful items. A bright orchard and distant water open the right side."
+          },
+          {
+            "sourceCellId": "fracture-lines/frayed-causeway/coupa",
+            "sourceLevelId": "fracture-lines-frayed-causeway",
+            "path": "originals/frayed-causeway-coupa.png",
+            "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb",
+            "title": "The Bridges We Rebuilt",
+            "description": "Three main river islands hold a repair workshop, glass greenhouse and shared depot at blue hour; two neighbors carry a blue crate across a patched causeway while warm lamps reflect in dark water."
+          }
+        ]
+      }
+    }
+  ]
+}

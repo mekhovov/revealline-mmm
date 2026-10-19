@@ -1,0 +1,45 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/moving-edges-chapters/editions.json",
+  "sourceGitBlob": "6ff2b1435791cfa748a274051edc86eeb15021c3",
+  "sourceSHA256": "f62fc13b531bf8e0c1839dff0eb4e3994c9d3c00d73e87da43444d3dde12ea2d",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/editions/3",
+      "value": {
+        "themeId": "coupa",
+        "id": "moving-edges-coupa",
+        "artRoot": "authoring/library/moving-edges-art",
+        "provenanceSha256": "bdaac5fc8776c83a9e2201f36409b576478b835c708e97e335c8c2d7ee9006e1",
+        "images": [
+          {
+            "sourceCellId": "moving-edges/terrace-stitch/coupa",
+            "sourceLevelId": "moving-edges-terrace-stitch",
+            "path": "originals/terrace-stitch-coupa.png",
+            "sha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+            "title": "The Shared Goods Terraces",
+            "description": "Shared tools, parcels and workshop terraces rise toward a greenhouse above an idyllic coast. Three working levels and connecting paths echo the stepped terraces. This reward scene is not collision geometry."
+          },
+          {
+            "sourceCellId": "moving-edges/survey-wheel/coupa",
+            "sourceLevelId": "moving-edges-survey-wheel",
+            "path": "originals/survey-wheel-coupa.png",
+            "sha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+            "title": "The Repair Exchange Rotunda",
+            "description": "A snowy parts-exchange rotunda links warm timber repair workshops at night. A central depot and surrounding workrooms echo the hub and sectors. This reward scene is not collision geometry."
+          },
+          {
+            "sourceCellId": "moving-edges/breakwater-return/coupa",
+            "sourceLevelId": "moving-edges-breakwater-return",
+            "path": "originals/breakwater-return-coupa.png",
+            "sha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+            "title": "The Harbor Maintenance Round",
+            "description": "A harbor maintenance crew shares lit repair workshops and boats beside deep blue night water. Projecting piers and sheltered return water echo the breakwaters. This reward scene is not collision geometry."
+          }
+        ]
+      }
+    }
+  ]
+}

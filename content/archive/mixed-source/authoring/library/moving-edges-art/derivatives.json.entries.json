@@ -1,0 +1,55 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/moving-edges-art/derivatives.json",
+  "sourceGitBlob": "fb91e84385930476bef38309305c86c8b102bb56",
+  "sourceSHA256": "4a88240c4e61cead1f209069977a1f8a506c2429401e64f121afb46424a458c4",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/images/9",
+      "value": {
+        "cellId": "moving-edges/terrace-stitch/coupa",
+        "originalPath": "originals/terrace-stitch-coupa.png",
+        "originalSha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+        "path": "thumbnails/terrace-stitch-coupa.jpg",
+        "mime": "image/jpeg",
+        "width": 384,
+        "height": 192,
+        "bytes": 47195,
+        "sha256": "fc6cc12f655cfaa778bd30584ae2b0c1e0698df95d639b1a03c5a6349b98496f",
+        "decodedRGBASha256": "88e7dfd1013859aa72651abc0ff78e2e8652a9fec3439ab10de30334f447a751"
+      }
+    },
+    {
+      "pointer": "/images/10",
+      "value": {
+        "cellId": "moving-edges/survey-wheel/coupa",
+        "originalPath": "originals/survey-wheel-coupa.png",
+        "originalSha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+        "path": "thumbnails/survey-wheel-coupa.jpg",
+        "mime": "image/jpeg",
+        "width": 384,
+        "height": 192,
+        "bytes": 48660,
+        "sha256": "216da47b7285cd6d57edcc499d9f735d59cc87a1eaecec392deae5c0c958644a",
+        "decodedRGBASha256": "53401005d197e868544a589d1825afd340197283bb27d016bdfd0c930fa3b039"
+      }
+    },
+    {
+      "pointer": "/images/11",
+      "value": {
+        "cellId": "moving-edges/breakwater-return/coupa",
+        "originalPath": "originals/breakwater-return-coupa.png",
+        "originalSha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+        "path": "thumbnails/breakwater-return-coupa.jpg",
+        "mime": "image/jpeg",
+        "width": 384,
+        "height": 192,
+        "bytes": 39875,
+        "sha256": "28d3fbf4cc72949e38a01e836c5a0eaf7ec1a6d8d15ee921108926e3b9476da0",
+        "decodedRGBASha256": "b13d10c8ceb7c9eeca199b3aae75ea0f66e86f3a27d4bf0f3e887c9c19d0fe29"
+      }
+    }
+  ]
+}

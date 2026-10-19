@@ -33,5 +33,7 @@ The first application update was merged in PR #5 at `432ca959b6e5b6c88627ae71659
 `level-numbering-receipt.json` preserves the 47 previously assigned mission display numbers. The other three supplemental missions had no shared-registry number and retain that behavior. The dedicated app owns this small registry, so retiring its entries upstream cannot renumber local missions or expose another community through the registry.
 # Additional archive ownership
 
+`mixed-source-receipt.json` accounts for 217 owned records split from 30 shared registries and proof files. Each archive includes original JSON pointers, Git blob and source hashes. Every pointer was checked against the exact original committed JSON before the upstream cleanup. These are selected source records, not replacements presented as the original verified files.
+
 `additional-owned-source-receipt.json` preserves 58 files found under the earlier Navi Network, reserve Spend Network, and Spend role-presentation names. It records exact Git blobs, SHA-256 hashes, source revisions, and local destinations. `content/archive/coupa-reserve-art.json` selects the ten Coupa reserve illustration records with their source provenance. These are authoring archives and do not add playable modes or prohibited presentation options to the published app.
 

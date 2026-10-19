@@ -1,0 +1,45 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/countercurrent-chapters/editions.json",
+  "sourceGitBlob": "c04d2d10017c5d58b0090886edfce0ee4a27d62c",
+  "sourceSHA256": "242ed154276212f8928e81d0b3e4619bc3b5a6dd1d769573f58c63d984e992c6",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/editions/3",
+      "value": {
+        "themeId": "coupa",
+        "id": "countercurrent-coupa",
+        "artRoot": "authoring/library/countercurrent-art",
+        "provenanceSha256": "72137c0459d22aa1adc5acc53cb3ac95ca526d26fc53e76deca53552f107c435",
+        "images": [
+          {
+            "sourceCellId": "countercurrent/offset-docks/coupa",
+            "sourceLevelId": "countercurrent-offset-docks",
+            "path": "originals/offset-docks-coupa.png",
+            "sha256": "87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997",
+            "title": "The Shared Receiving Courts",
+            "description": "Two open supply and repair courts face a broad wet delivery lane, with a small cart, crates and bicycle repair."
+          },
+          {
+            "sourceCellId": "countercurrent/sandbar-braid/coupa",
+            "sourceLevelId": "countercurrent-sandbar-braid",
+            "path": "originals/sandbar-braid-coupa.png",
+            "sha256": "ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14",
+            "title": "Four Workshops, One Garden",
+            "description": "Four staggered greenhouse and workshop bands step across a rain garden at warm dusk."
+          },
+          {
+            "sourceCellId": "countercurrent/crossing-watch/coupa",
+            "sourceLevelId": "countercurrent-crossing-watch",
+            "path": "originals/crossing-watch-coupa.png",
+            "sha256": "1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5",
+            "title": "The Two Caretaker Houses",
+            "description": "A compact material-library pavilion faces an elongated repair hall across a dark garden at blue hour."
+          }
+        ]
+      }
+    }
+  ]
+}

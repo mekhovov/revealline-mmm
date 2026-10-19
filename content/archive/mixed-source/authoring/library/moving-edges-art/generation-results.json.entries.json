@@ -1,0 +1,79 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/moving-edges-art/generation-results.json",
+  "sourceGitBlob": "e0ac643fbc644706fa181607ba9430e65d5bd724",
+  "sourceSHA256": "a5f18cc48667235bbee8472b9729dbcb0f16806e7ff49c0cba838da1ed65eb87",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/generated/9",
+      "value": {
+        "cellId": "moving-edges/terrace-stitch/coupa",
+        "themeId": "coupa",
+        "missionSlot": "terrace-stitch",
+        "mode": "generate",
+        "tool": "image_gen.imagegen built-in",
+        "inputImages": [],
+        "workspacePath": "originals/terrace-stitch-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-6746a2e4-e5a9-4123-9bab-ddd3dfac7b31.png",
+        "outputHint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73 as /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-6746a2e4-e5a9-4123-9bab-ddd3dfac7b31.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "bytes": 2844215,
+        "sha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "2ce4db9ff2a53f2d895def86797819aa787e0576f8a2ff79607d8152196da0c8",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        }
+      }
+    },
+    {
+      "pointer": "/generated/10",
+      "value": {
+        "cellId": "moving-edges/survey-wheel/coupa",
+        "themeId": "coupa",
+        "missionSlot": "survey-wheel",
+        "mode": "generate",
+        "tool": "image_gen.imagegen built-in",
+        "inputImages": [],
+        "workspacePath": "originals/survey-wheel-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-5fce3dcc-4683-4a75-8db9-a361020d6a6a.png",
+        "outputHint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73 as /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-5fce3dcc-4683-4a75-8db9-a361020d6a6a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "bytes": 3151700,
+        "sha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "d830f9b7eebed06318303d626097047e7235aad569ec4d2a00890c4a4a340ff8",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        }
+      }
+    },
+    {
+      "pointer": "/generated/11",
+      "value": {
+        "cellId": "moving-edges/breakwater-return/coupa",
+        "themeId": "coupa",
+        "missionSlot": "breakwater-return",
+        "mode": "generate",
+        "tool": "image_gen.imagegen built-in",
+        "inputImages": [],
+        "workspacePath": "originals/breakwater-return-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-4d89079e-9281-408d-985a-f27d829ca4ed.png",
+        "outputHint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73 as /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-4d89079e-9281-408d-985a-f27d829ca4ed.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+        "bytes": 2635887,
+        "sha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "92e3a0abe7e7c7cc39b62698238acca9bbd393170344575615ccf6fc4a460e61",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/route-worlds/editions.json",
+  "sourceGitBlob": "81fa3221cdf75f9929fb4eb5f9df190cfc9f207a",
+  "sourceSHA256": "f1cf474b1f02b48bcbafb60fbab080416afc9c2c135c68a2def2ae90865300fc",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/editions/2",
+      "value": {
+        "themeId": "coupa",
+        "artRoot": "authoring/library/spend-route-art",
+        "provenanceSha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc",
+        "images": [
+          {
+            "id": "value-foundry",
+            "title": "Value Foundry",
+            "sourceLevelId": "route-choices-foundry"
+          },
+          {
+            "id": "shared-harbor",
+            "title": "Shared Harbor",
+            "sourceLevelId": "route-choices-depot"
+          },
+          {
+            "id": "network-garden",
+            "title": "Network Garden",
+            "sourceLevelId": "route-choices-switchback"
+          }
+        ]
+      }
+    }
+  ]
+}

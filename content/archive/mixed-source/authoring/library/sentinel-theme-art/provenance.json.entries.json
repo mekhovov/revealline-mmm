@@ -1,0 +1,70 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/sentinel-theme-art/provenance.json",
+  "sourceGitBlob": "f51b0f8355055a0f73fb8a60d1a049eef650ef40",
+  "sourceSHA256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/images/6",
+      "value": {
+        "cellId": "sentinel-circuit/listening-court/coupa",
+        "themeId": "coupa",
+        "missionSlot": "listening-court",
+        "title": "The shared inventory court",
+        "path": "coupa/originals/listening-court.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-23a30a93-1433-4da2-8815-a948b85e7091.png",
+        "bytes": 2767187,
+        "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "273a9cd5801621a624ab8ea519a0f617c1c6e4d8a83aa5a6899a585fe7a90763",
+        "sourceBytesEqual": true,
+        "runtimeBinding": null,
+        "proposedRoleOnly": "Information: material visibility and two passages echo observation, with no fictitious business-performance measurement.",
+        "visualReview": "A glass-and-brick civic court surrounds a tree and broad paved yard; a person and cobalt helper examine sample tiles at the lower left. Cool storage light contrasts with dawn. Repeated flower-like geometric banner emblems were generated despite the no-logo prompt; they are invented set decoration, not a real Coupa mark or endorsement."
+      }
+    },
+    {
+      "pointer": "/images/7",
+      "value": {
+        "cellId": "sentinel-circuit/switchyard-gates/coupa",
+        "themeId": "coupa",
+        "missionSlot": "switchyard-gates",
+        "title": "The inland exchange yard",
+        "path": "coupa/originals/switchyard-gates.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-f7821459-047f-4d8f-89bc-34971d7d5c8e.png",
+        "bytes": 2187660,
+        "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "3bf77746486510871fd85ad883d78eee7b090a44d59aecd69e3a05424ad38de3",
+        "sourceBytesEqual": true,
+        "runtimeBinding": null,
+        "proposedRoleOnly": "Timing/control: coordinated crossing as environmental metaphor, not automated financial or carrier-field authority.",
+        "visualReview": "Two loading doors and converging rail lines surround a clear crossing, small cart, cobalt parcels and a glazed waiting shelter at sunset. Navy and amber silhouettes distinguish the inland yard. Chevron-like crate marks and banner motifs are invented decoration, not real brands or a logistics operating diagram."
+      }
+    },
+    {
+      "pointer": "/images/8",
+      "value": {
+        "cellId": "sentinel-circuit/open-the-circuit/coupa",
+        "themeId": "coupa",
+        "missionSlot": "open-the-circuit",
+        "title": "The illuminated exchange hall",
+        "path": "coupa/originals/open-the-circuit.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-e3fd72c2-0863-4cff-98f4-ceb59ebb7fa3.png",
+        "bytes": 2449288,
+        "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "15d94d99127f228cd0c61d8ef70f758efba49333e63f54a0abafc7312283ec87",
+        "sourceBytesEqual": true,
+        "runtimeBinding": null,
+        "proposedRoleOnly": "Opening/release: a complete shared space becoming visible; no new game mechanic, achievement or additional boss schedule.",
+        "visualReview": "A circular glass hall on the right holds an amber spiral light sculpture, with a broad terrace, cyan light seams, small helper and city horizon. Calm violet and gold finish the sequence. Generated banner motifs and the sculpture are fictional decoration, not a product interface, performance metric or functional network."
+      }
+    }
+  ]
+}
