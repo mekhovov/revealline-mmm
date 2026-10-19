@@ -1,0 +1,406 @@
+{
+  "format": "revealline-owned-reserve-art.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-catalog/manifest.json",
+  "sourceSHA256": "2b6f772031c46a6c59784ea2fffdfb5459900d7913503f7415c5da9cc495b9d2",
+  "scope": "Selected source records, preserved as authoring material. Original paths in provenance refer to the source repository at the pinned revision; original PNGs and prompts are in content/archive/owned-source/. No runtime campaign is implied.",
+  "entries": [
+    {
+      "id": "spend-circular-workshop",
+      "title": "Circular Workshop",
+      "themeId": "coupa",
+      "wave": 1,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-1/originals/spend-circular-workshop.png",
+        "url": "../reserve-illustrations-wave-1/originals/spend-circular-workshop.png",
+        "bytes": 2820419,
+        "gitBlob": "c9549ff67bfe8b8d80ef679e1b8863ca2214c949",
+        "sha256": "d62070c73c86808cb43fdcc7117da98bcd625621aa44924ce9139c602bb5c6d5"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-1/prompts/spend-circular-workshop.txt",
+          "url": "../reserve-illustrations-wave-1/prompts/spend-circular-workshop.txt",
+          "bytes": 2346,
+          "gitBlob": "6642281a98a8f54016f1608c7547b51cde391b13",
+          "sha256": "1e8e7e3e331341c003c8d252de67fef4bf8de100b1bb5012cb567d3b5fc58027"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-1/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-1/provenance/originals.json",
+        "bytes": 7798,
+        "gitBlob": "0eee38f4b0fa2d0154ffa4c21e857b115c1321fd",
+        "sha256": "cb0a3be05fa8803e377f592fd5db53aec8c84df9eb348bade62581d556d33e1b"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-1/README.md",
+        "url": "../reserve-illustrations-wave-1/README.md",
+        "bytes": 4408,
+        "gitBlob": "fc7c87ca4695786834b3e2046a44ab030eda90ae",
+        "sha256": "4326407df98b28810777fcf22378bb2b156b69c9e6c2a18944f38a7458281ddc"
+      }
+    },
+    {
+      "id": "spend-cloud-cart-exchange",
+      "title": "Cloud Cart Exchange",
+      "themeId": "coupa",
+      "wave": 2,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange-clean.png",
+        "url": "../reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange-clean.png",
+        "bytes": 2549711,
+        "gitBlob": "d21dd94089d762b11b437020a927731f17fb1649",
+        "sha256": "560949cad2ee1031dd5f5edd9c5115db576db5d8133ae3712faa11243cee0971"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange.txt",
+          "url": "../reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange.txt",
+          "bytes": 2335,
+          "gitBlob": "ee5cb1a19c28e05be3e9b66be6a64cb198be9b01",
+          "sha256": "af7b9acae0dfc51534dca1afb14303f45f1a2f3ac437a288e727b1383d988112"
+        },
+        {
+          "path": "authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange-cleanup.txt",
+          "url": "../reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange-cleanup.txt",
+          "bytes": 538,
+          "gitBlob": "631d7f685f41ac3b4b0a72ce30803f02add551b8",
+          "sha256": "8c6c7de6b21f9661636fa86b9e882681b8de23f656c33eb847e6ade400ef9c22"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-2/provenance/selected-originals.json",
+        "url": "../reserve-illustrations-wave-2/provenance/selected-originals.json",
+        "bytes": 5642,
+        "gitBlob": "d52a40293d3d0bf4b6235656b6a979b856589f62",
+        "sha256": "7f67f507377bba8612121192047f5fe78c093eea1b9c3f1894cecc4195241dc0"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-2/README.md",
+        "url": "../reserve-illustrations-wave-2/README.md",
+        "bytes": 5239,
+        "gitBlob": "eba5bec43b754d3557d3f2fe18b1d1759733e9cc",
+        "sha256": "dba680a7ffa2aa53749b8a4440e06d894928becbb39cb8dce93234ab7c814053"
+      }
+    },
+    {
+      "id": "spend-copper-kettle-bazaar",
+      "title": "Copper Kettle Bazaar",
+      "themeId": "coupa",
+      "wave": 3,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-3/originals/spend-copper-kettle-bazaar.png",
+        "url": "../reserve-illustrations-wave-3/originals/spend-copper-kettle-bazaar.png",
+        "bytes": 2175587,
+        "gitBlob": "a7934688a039ca041531b7f314ff2406e58b908d",
+        "sha256": "6114aefe292f9c5410ad27cfd4c959fb0054a0374cfb8794eb6144a6ba6f9edb"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-3/prompts/spend-copper-kettle-bazaar.txt",
+          "url": "../reserve-illustrations-wave-3/prompts/spend-copper-kettle-bazaar.txt",
+          "bytes": 2016,
+          "gitBlob": "319525c5cff3d6d3045cbcf42eafe3b6351fd5c6",
+          "sha256": "30e04c040fa14958e1cf21751f33af07993691b53f389bf26a9c9c7a5147fce1"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-3/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-3/provenance/originals.json",
+        "bytes": 14864,
+        "gitBlob": "8306cebc0ed5acc1c8621d0b662c32c74d2d87c5",
+        "sha256": "1d0816fc07138a16c64d83ca8803f8ec3fdf80d76c6b76591db307aeb409c144"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-3/README.md",
+        "url": "../reserve-illustrations-wave-3/README.md",
+        "bytes": 4611,
+        "gitBlob": "ed37a9b96ac19c6bf22f72733e1c0c4b62f67eb9",
+        "sha256": "7fbba5c734f043f6cc507c11373f58e4b866a0511b928276493d708ad3a4d4aa"
+      }
+    },
+    {
+      "id": "spend-canal-parcel-crane",
+      "title": "Canal Parcel Crane",
+      "themeId": "coupa",
+      "wave": 4,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-4/originals/spend-canal-parcel-crane.png",
+        "url": "../reserve-illustrations-wave-4/originals/spend-canal-parcel-crane.png",
+        "bytes": 2670342,
+        "gitBlob": "1bec62387488376fa5d979ac1e9063e224eb5ab0",
+        "sha256": "407561c2a427e24175431c19d970f9581f9a6bab7d1adbcdbd69c87bb0e62f2b"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-4/prompts/spend-canal-parcel-crane.txt",
+          "url": "../reserve-illustrations-wave-4/prompts/spend-canal-parcel-crane.txt",
+          "bytes": 1742,
+          "gitBlob": "28183fa9c193bded58c288707cd7bd740ccf1cda",
+          "sha256": "661f9f029c6c4dcd1b5224cae4a3b42812e3aeefb1842ade787a9889c5503be8"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-4/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-4/provenance/originals.json",
+        "bytes": 3282,
+        "gitBlob": "3af0a1e652d4d3c6978626d67871a25b932d0f46",
+        "sha256": "d1f66c92174f5c7f37a8e32887a7b611363c4846f76cfa1af629fbfc47ca3764"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-4/README.md",
+        "url": "../reserve-illustrations-wave-4/README.md",
+        "bytes": 3672,
+        "gitBlob": "f2dce7cd0c48eb507e61178aba72008c417974a3",
+        "sha256": "fb1039a06b1e003e338f8426420ce3ea23b83675ab1b862a530a80fc145de645"
+      }
+    },
+    {
+      "id": "spend-raincatcher-rooftops",
+      "title": "Raincatcher Rooftops",
+      "themeId": "coupa",
+      "wave": 5,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-5/originals/spend-raincatcher-rooftops.png",
+        "url": "../reserve-illustrations-wave-5/originals/spend-raincatcher-rooftops.png",
+        "bytes": 2520491,
+        "gitBlob": "bb324d769b31b94e236a56b8da6dcd114ec959f6",
+        "sha256": "f94b2fef94700d10a68d770e4b2ea89ec97905e4c992cf26c5901ef983dafaaf"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-5/prompts/spend-raincatcher-rooftops.txt",
+          "url": "../reserve-illustrations-wave-5/prompts/spend-raincatcher-rooftops.txt",
+          "bytes": 1839,
+          "gitBlob": "39c418372b3d1adf36e01461aa5f1865f83533ed",
+          "sha256": "2f383f30a9a3c073fa6b590de71400684245d7fc02e7f4a6802816f9386d89d6"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-5/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-5/provenance/originals.json",
+        "bytes": 3297,
+        "gitBlob": "417a336bc771fbf07e4ce7e6e55cb9df7b36c5e4",
+        "sha256": "40db7b11e47c60b38565436e65b1bc4aa26bc15478a721d5223883bd138efabf"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-5/README.md",
+        "url": "../reserve-illustrations-wave-5/README.md",
+        "bytes": 4185,
+        "gitBlob": "0530d7ea1f7124d20a7abb41c6dbbed1aeae83d7",
+        "sha256": "c25a986f70eb793a6dae6ff06b326a592895b84f3746823d04184149eac54548"
+      }
+    },
+    {
+      "id": "spend-coral-dawn-bakery",
+      "title": "Coral Dawn Bakery",
+      "themeId": "coupa",
+      "wave": 6,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-6/originals/spend-coral-dawn-bakery.png",
+        "url": "../reserve-illustrations-wave-6/originals/spend-coral-dawn-bakery.png",
+        "bytes": 2794201,
+        "gitBlob": "f82426c7ebf15396ab6a74c06accea3533c2cdd9",
+        "sha256": "9c62a106d37c55e5b30cc9f4f12e34b1422e6fdc9bef2763e06c581d713861f0"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-6/prompts/spend-coral-dawn-bakery.txt",
+          "url": "../reserve-illustrations-wave-6/prompts/spend-coral-dawn-bakery.txt",
+          "bytes": 2026,
+          "gitBlob": "19f30087bf7573e562a0c2c45caf1605c9bd7c2d",
+          "sha256": "76a5dd3a941ec9ba1fce072e061f75534af60d4eb377004123c3c5f2fe0ccc84"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-6/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-6/provenance/originals.json",
+        "bytes": 5262,
+        "gitBlob": "b361720eea30c8782864b9d627e8f00ac05019f9",
+        "sha256": "3155eb67fbc5eb0514ced389722c9731d563a1d3c9adcb0f7ff82af04eaf7a8b"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-6/README.md",
+        "url": "../reserve-illustrations-wave-6/README.md",
+        "bytes": 4202,
+        "gitBlob": "5a5b6f3913e3dedcfa1b015be2bad2b2411fb818",
+        "sha256": "686925f83f9dbcdf82aca1ffb8337bd70cbc8ab4506cb1ae6a114472e0a8ad22"
+      }
+    },
+    {
+      "id": "spend-citrus-parcel-hub",
+      "title": "Citrus Parcel Hub",
+      "themeId": "coupa",
+      "wave": 7,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-7/originals/spend-citrus-parcel-hub.png",
+        "url": "../reserve-illustrations-wave-7/originals/spend-citrus-parcel-hub.png",
+        "bytes": 1916377,
+        "gitBlob": "dc6e4774ed3c4f40fc8ff947cc23212a166b1fd1",
+        "sha256": "a02df60240645d8a010619ae24e994646f71601cfb754db78d15a875bf301c52"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-7/prompts/spend-citrus-parcel-hub.txt",
+          "url": "../reserve-illustrations-wave-7/prompts/spend-citrus-parcel-hub.txt",
+          "bytes": 2109,
+          "gitBlob": "4e3a309f232f3248194f1a75f9743fdfcae2d642",
+          "sha256": "2e27f658c027bf9f0e13ce21482c627a43e9fb26bcfece6e65bcb4e79a9b93a5"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-7/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-7/provenance/originals.json",
+        "bytes": 5209,
+        "gitBlob": "7d3308aaf7f5c64a1ae150a0f219e911a0a889c5",
+        "sha256": "88ca9815203c3345dfd6860ef34f7018ce534b63b3834ff53130951dd04b9bd0"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-7/README.md",
+        "url": "../reserve-illustrations-wave-7/README.md",
+        "bytes": 4546,
+        "gitBlob": "941a643076e1ee4ac5430364f080adf1a16f8fb2",
+        "sha256": "0d44f7aefe14720241947f485f5fc38298a4b9287867ef7b75712ce7d2e35e70"
+      }
+    },
+    {
+      "id": "spend-mint-canal-tram",
+      "title": "Mint Canal Tram",
+      "themeId": "coupa",
+      "wave": 8,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-8/originals/spend-mint-canal-tram.png",
+        "url": "../reserve-illustrations-wave-8/originals/spend-mint-canal-tram.png",
+        "bytes": 1501782,
+        "gitBlob": "74c96ee80d2e90e92afb3ffdd4fba38f35f77307",
+        "sha256": "a02eedd7fac88c0c1cceb07903b027bb6b3dc5739d7ffecf9906ecd38f963aba"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-8/prompts/spend-mint-canal-tram.txt",
+          "url": "../reserve-illustrations-wave-8/prompts/spend-mint-canal-tram.txt",
+          "bytes": 1737,
+          "gitBlob": "945d05ef5857dde8be2518ca1aa4ecf6e961111a",
+          "sha256": "b0fdbcca43c6cc9fc14031f3635e21d83ab9c4e12a58f4b4c4e3ef988fc31df5"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-8/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-8/provenance/originals.json",
+        "bytes": 5358,
+        "gitBlob": "cb2e05ea3b0d88e4bb8fb797c4665369ce6f1432",
+        "sha256": "d950c6520a497eb5236aab8db3e4ddaf46ef763403e099c800b9ce4944a7f41f"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-8/README.md",
+        "url": "../reserve-illustrations-wave-8/README.md",
+        "bytes": 4486,
+        "gitBlob": "c2cd840737d262538f337ce0f2f7d237c93b1ddd",
+        "sha256": "3e768e9c3e73ab69249042de4feb41f672596bf5056195d5eb490dd68d367696"
+      }
+    },
+    {
+      "id": "spend-sunroof-market-house",
+      "title": "Sunroof Market House",
+      "themeId": "coupa",
+      "wave": 9,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-9/originals/spend-sunroof-market-house.png",
+        "url": "../reserve-illustrations-wave-9/originals/spend-sunroof-market-house.png",
+        "bytes": 2006763,
+        "gitBlob": "caba9229dbcb8a8479ef1615b87fd21c898c86b1",
+        "sha256": "d0328adc0ce24e22afbcaf67e09d93c0eb03e7a805d30890532284ecc0a1f24c"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-9/prompts/spend-sunroof-market-house.txt",
+          "url": "../reserve-illustrations-wave-9/prompts/spend-sunroof-market-house.txt",
+          "bytes": 1763,
+          "gitBlob": "d1dda4e3174290ad2e3077207bd08f8d4461fc79",
+          "sha256": "512c0afdf32685dae7af8b17cd5ba8e8bb8bc3e6be6d197a774f0dfa0e63b76d"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-9/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-9/provenance/originals.json",
+        "bytes": 5627,
+        "gitBlob": "bf53329e7c30744ecd55e32e23f8820ef031c971",
+        "sha256": "f442c956021f556d386ecbb19f8b38cdb07c3e7cbc19c918e1e0f9376ba646f9"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-9/README.md",
+        "url": "../reserve-illustrations-wave-9/README.md",
+        "bytes": 4029,
+        "gitBlob": "7d94bfb27cec1350ef47214d0f014dd9472c79ea",
+        "sha256": "975e14eba1dc6a0ddb7a1dbc8a227f499fcadfa63854bb875abb5176a6c75c14"
+      }
+    },
+    {
+      "id": "spend-storybook-rail-depot",
+      "title": "Storybook Rail Depot",
+      "themeId": "coupa",
+      "wave": 10,
+      "width": 1774,
+      "height": 887,
+      "sourceOnly": true,
+      "original": {
+        "path": "authoring/library/reserve-illustrations-wave-10/originals/spend-storybook-rail-depot.png",
+        "url": "../reserve-illustrations-wave-10/originals/spend-storybook-rail-depot.png",
+        "bytes": 1803179,
+        "gitBlob": "8ce158e3e1f758d52d5f62a5e5553ffab07186ea",
+        "sha256": "f0dd68a9228b140047ca071e9526679cfeea3b29a921b7f0434120f3186e1ba0"
+      },
+      "prompts": [
+        {
+          "path": "authoring/library/reserve-illustrations-wave-10/prompts/spend-storybook-rail-depot.txt",
+          "url": "../reserve-illustrations-wave-10/prompts/spend-storybook-rail-depot.txt",
+          "bytes": 1673,
+          "gitBlob": "122af812aaaaf2361f07b51e37fbc59dd782fbc7",
+          "sha256": "63b6e70e02f6e240598b45ac88decef95c25c1df341824a984565249a7b7a7f4"
+        }
+      ],
+      "provenance": {
+        "path": "authoring/library/reserve-illustrations-wave-10/provenance/originals.json",
+        "url": "../reserve-illustrations-wave-10/provenance/originals.json",
+        "bytes": 5462,
+        "gitBlob": "d319ad46254164b0df5801be1f4c5a988266d4b5",
+        "sha256": "1325ef106ef243095d3360b837885350b8d9eae14a7497bef3ee4592fcdec8b3"
+      },
+      "notes": {
+        "path": "authoring/library/reserve-illustrations-wave-10/README.md",
+        "url": "../reserve-illustrations-wave-10/README.md",
+        "bytes": 4357,
+        "gitBlob": "a3899ec59385eebabd296941492603bbce5ee8ea",
+        "sha256": "beba623c201a03992309546909f4e99df0718fd2b3fc81bebaef7ca0eed8bb0b"
+      }
+    }
+  ]
+}

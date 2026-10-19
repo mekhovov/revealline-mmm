@@ -1,0 +1,560 @@
+{
+  "mediaVersion": "1.0.0",
+  "id": "navi-network-media",
+  "themeId": "navi-network",
+  "roles": {
+    "player.avatar": "Player artwork; scale and silhouette do not define collision.",
+    "enemy.field": "Artwork for a field-threat visual slot; behavior belongs elsewhere.",
+    "enemy.contour": "Artwork for a contour-threat visual slot.",
+    "enemy.exposed": "Artwork for an exposed-area threat visual slot.",
+    "enemy.erosion": "Artwork for an erosion-threat visual slot.",
+    "terrain.wall": "Solid-barrier visual material, including objects instead of glyphs.",
+    "terrain.slow": "Slow-field visual material, including objects instead of glyphs.",
+    "terrain.danger": "Lethal-field visual material, including objects instead of glyphs.",
+    "reveal.original": "Preserved original chosen as reveal source.",
+    "reveal.display": "Chosen original or separately produced styled reveal artwork.",
+    "reveal.mask": "Unrevealed-area visual material.",
+    "territory.boundary": "Claimed-area contour artwork.",
+    "trail.active": "Exposed player-trail artwork.",
+    "pickup.item": "Pickup artwork; effect is defined outside this manifest.",
+    "ui.menu": "Menu background or visual skin.",
+    "ui.hud": "HUD visual skin; localized labels remain real text.",
+    "ui.icon": "Interface icon artwork.",
+    "ui.cursor": "Focus/cursor artwork.",
+    "effect.capture": "Capture effect source artwork.",
+    "marketing.key-art": "Marketing illustration, separate from runtime assets."
+  },
+  "assets": [
+    {
+      "id": "player-source",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Planned Coupa Navi or Coupa-logo avatar using approved source artwork when supplied; no brand approval or asset license is claimed now."
+      }
+    },
+    {
+      "id": "player-pixel",
+      "kind": "derivative",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Optional separately produced pixel-art derivative; preserve the source identity and composition. approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration",
+        "parentAssetId": "player-source"
+      }
+    },
+    {
+      "id": "field-character",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Fictional duplicate-invoice or cost-leak agent, friendly and legible, for the field-threat visual slot."
+      }
+    },
+    {
+      "id": "field-equipment",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Fictional wasteful subscription server or spend-leak machine variant for the same field-threat slot."
+      }
+    },
+    {
+      "id": "enemy-contour",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Approval-delay agent with a contour-role badge."
+      }
+    },
+    {
+      "id": "enemy-exposed",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Fictional recurring-fee crawler with an exposed-area badge."
+      }
+    },
+    {
+      "id": "enemy-erosion",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Budget-leak machine with an erosion-role badge; no real customer metrics or business claims."
+      }
+    },
+    {
+      "id": "terrain-wall",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Solid filing cabinets or approved-contract archive blocks."
+      }
+    },
+    {
+      "id": "terrain-wall-pixel",
+      "kind": "derivative",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Optional pixel treatment of the same themed terrain object. Retain the role silhouette and texture; do not replace it with generic X/^ glyphs.",
+        "parentAssetId": "terrain-wall"
+      }
+    },
+    {
+      "id": "terrain-slow",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Paperwork queue and pending-review objects with a consistent slowdown texture."
+      }
+    },
+    {
+      "id": "terrain-slow-pixel",
+      "kind": "derivative",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Optional pixel treatment of the same themed terrain object. Retain the role silhouette and texture; do not replace it with generic X/^ glyphs.",
+        "parentAssetId": "terrain-slow"
+      }
+    },
+    {
+      "id": "terrain-danger",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Duplicate-charge or expired-contract warning objects replacing red X markers; explain their fictional game role."
+      }
+    },
+    {
+      "id": "terrain-danger-pixel",
+      "kind": "derivative",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Optional pixel treatment of the same themed terrain object. Retain the role silhouette and texture; do not replace it with generic X/^ glyphs.",
+        "parentAssetId": "terrain-danger"
+      }
+    },
+    {
+      "id": "reveal-source",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "A future approved Coupa business-city illustration or uploaded company image with actual brand/source review recorded at import. Savings depicted in gameplay are fictional."
+      }
+    },
+    {
+      "id": "reveal-pixel-art",
+      "kind": "derivative",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Optional pixel-art version with preserved content and composition; no silent conversion of the original. approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration",
+        "parentAssetId": "reveal-source"
+      }
+    },
+    {
+      "id": "reveal-illustration",
+      "kind": "derivative",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Optional painted/illustrated version with preserved content and composition. approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration",
+        "parentAssetId": "reveal-source"
+      }
+    },
+    {
+      "id": "reveal-mask",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Low-contrast unrevealed-area material that leaves threats and the active trail prominent. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "territory-boundary",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Thin readable claimed-area contour material, distinct from a vulnerable active trail. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "trail-active",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Bright continuous active-trail source texture, with a clearly identifiable player endpoint. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "pickup-item",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Distinct collectible source art; pick-up effects remain outside this media manifest. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "ui-menu",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Menu background and panel art; keep translated text and interactive controls outside generated raster art. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "ui-hud",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "HUD panel art that allows readable real text, progress, lives and time at minimum display size. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "ui-icon",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Consistent interface icon source artwork; individual exports/atlases still need a later production pass. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "ui-cursor",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Visible keyboard/controller focus art with sufficient contrast. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "effect-capture",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Capture-celebration source art; animation exports and timing are still planned. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "marketing-key-art",
+      "kind": "original",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Separate marketing key art; do not present concept art as an in-game screenshot. Style: approved Coupa/Navi visual references, clear blue/white space, warm AI-guidance accents and restrained celebration."
+      }
+    },
+    {
+      "id": "ui-hud-compact",
+      "kind": "derivative",
+      "status": "planned",
+      "provenance": {
+        "method": "planned",
+        "brief": "Optional compact HUD panel derivative for phone UI. Do not resize the simulation grid or bake tiny labels into it.",
+        "parentAssetId": "ui-hud"
+      }
+    }
+  ],
+  "bindings": [
+    {
+      "role": "player.avatar",
+      "variant": "default",
+      "assetId": "player-source",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "player.avatar",
+      "variant": "original",
+      "assetId": "player-source",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "player.avatar",
+      "variant": "pixel-art",
+      "assetId": "player-pixel",
+      "presentation": {
+        "sampling": "nearest",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "enemy.field",
+      "variant": "default",
+      "assetId": "field-character",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "enemy.field",
+      "variant": "character",
+      "assetId": "field-character",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "enemy.field",
+      "variant": "equipment",
+      "assetId": "field-equipment",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "enemy.contour",
+      "variant": "default",
+      "assetId": "enemy-contour",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "enemy.exposed",
+      "variant": "default",
+      "assetId": "enemy-exposed",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "enemy.erosion",
+      "variant": "default",
+      "assetId": "enemy-erosion",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "terrain.wall",
+      "variant": "default",
+      "assetId": "terrain-wall",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "terrain.wall",
+      "variant": "pixel-art",
+      "assetId": "terrain-wall-pixel",
+      "presentation": {
+        "sampling": "nearest",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "terrain.slow",
+      "variant": "default",
+      "assetId": "terrain-slow",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "terrain.slow",
+      "variant": "pixel-art",
+      "assetId": "terrain-slow-pixel",
+      "presentation": {
+        "sampling": "nearest",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "terrain.danger",
+      "variant": "default",
+      "assetId": "terrain-danger",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "terrain.danger",
+      "variant": "pixel-art",
+      "assetId": "terrain-danger-pixel",
+      "presentation": {
+        "sampling": "nearest",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "reveal.original",
+      "variant": "default",
+      "assetId": "reveal-source",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "reveal.display",
+      "variant": "default",
+      "assetId": "reveal-source",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "reveal.display",
+      "variant": "original",
+      "assetId": "reveal-source",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "reveal.display",
+      "variant": "pixel-art",
+      "assetId": "reveal-pixel-art",
+      "presentation": {
+        "sampling": "nearest",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "reveal.display",
+      "variant": "illustration",
+      "assetId": "reveal-illustration",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "reveal.mask",
+      "variant": "default",
+      "assetId": "reveal-mask",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "territory.boundary",
+      "variant": "default",
+      "assetId": "territory-boundary",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "trail.active",
+      "variant": "default",
+      "assetId": "trail-active",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "pickup.item",
+      "variant": "default",
+      "assetId": "pickup-item",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "ui.menu",
+      "variant": "default",
+      "assetId": "ui-menu",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "ui.hud",
+      "variant": "default",
+      "assetId": "ui-hud",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "ui.icon",
+      "variant": "default",
+      "assetId": "ui-icon",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "ui.cursor",
+      "variant": "default",
+      "assetId": "ui-cursor",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "effect.capture",
+      "variant": "default",
+      "assetId": "effect-capture",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "marketing.key-art",
+      "variant": "default",
+      "assetId": "marketing-key-art",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    },
+    {
+      "role": "ui.hud",
+      "variant": "compact",
+      "assetId": "ui-hud-compact",
+      "presentation": {
+        "sampling": "linear",
+        "fit": "contain"
+      }
+    }
+  ]
+}

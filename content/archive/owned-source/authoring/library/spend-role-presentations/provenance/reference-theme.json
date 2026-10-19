@@ -1,0 +1,46 @@
+{
+  "source": "e9928cdaad2f55d912aadd2ef25f635fb99e938c",
+  "path": "game/content/themes.json",
+  "bytes": 4266,
+  "sha256": "93582f7d9ba53753106df7b63928f086820fc0f68357d3c08f26c0b89fb84774",
+  "theme": {
+    "id": "coupa",
+    "name": "Spend Network",
+    "subtitle": "A clearer picture of spend",
+    "family": "navi",
+    "player": "navi-avatar",
+    "enemyShape": "cube",
+    "patrolShape": "spark",
+    "bossShape": "core",
+    "scene": "network",
+    "labels": {
+      "objective": "Opportunity",
+      "supply": "Sync point",
+      "enemy": "Exception",
+      "boss": "Complexity hub",
+      "currency": "Insight",
+      "ability": "AI assist"
+    },
+    "palette": {
+      "ink": "#173747",
+      "paper": "#edf2ed",
+      "muted": "#85a8b6",
+      "accent": "#e2c775",
+      "safe": "#87cbe0",
+      "danger": "#e69477",
+      "field": "#112b3e",
+      "grid": "#1e3d51",
+      "sky": "#bbdadd",
+      "land": "#689bb1"
+    },
+    "classBodies": {
+      "scout": "navi-avatar",
+      "bomber": "navi-avatar",
+      "carrier": "navi-avatar",
+      "interceptor": "navi-avatar",
+      "fiber": "navi-avatar",
+      "impact": "navi-avatar",
+      "trapper": "navi-avatar"
+    }
+  }
+}

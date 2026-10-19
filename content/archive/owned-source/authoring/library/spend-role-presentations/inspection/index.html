@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spend Network — seven helper bodies</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 16px; color: #edf2fc; background: #172030; font: 14px system-ui, sans-serif; }
+    h1 { margin: 0 0 6px; font-size: 21px; }
+    p { margin: 6px 0; }
+    label { margin-right: 20px; }
+    select { font: inherit; }
+    table { width: 1000px; max-width: 100%; margin-top: 12px; border-collapse: collapse; table-layout: fixed; }
+    th, td { border: 1px solid #67718a; text-align: center; }
+    th { height: 25px; font-size: 12px; }
+    tbody th { width: 130px; text-align: left; padding-left: 12px; font-size: 14px; }
+    td { height: 70px; background: #000; }
+    td.scene { background: #243449 url('/scene.png') center / cover no-repeat; }
+    img { display: block; margin: auto; object-fit: contain; image-rendering: auto; transform: rotate(var(--heading, 0deg)); }
+    body.pixelated img { image-rendering: pixelated; }
+    .note { font-size: 12px; color: #cbd4e5; }
+  </style>
+  <h1>Spend Network — seven original helper-body candidates</h1>
+  <p>Untouched 1254 × 1254 RGBA originals displayed at exact CSS sizes. Static source inspection; names and purposes are art direction only.</p>
+  <p>
+    <label>Heading <select id="heading"><option value="0deg">North</option><option value="90deg">East</option><option value="180deg">South</option><option value="270deg">West</option></select></label>
+    <label>Sampling <select id="sampling"><option value="auto">Auto</option><option value="pixelated">Pixelated</option></select></label>
+  </p>
+  <table aria-label="Seven source sprites on black and a revealed picture background">
+    <thead><tr><th rowspan="2">Role</th><th colspan="3">Black</th><th colspan="3">Revealed picture crop</th></tr><tr><th>24 px</th><th>32 px</th><th>56 px</th><th>24 px</th><th>32 px</th><th>56 px</th></tr></thead>
+    <tbody id="bodies"></tbody>
+  </table>
+  <p class="note">Picture: retained “Spend Circular Workshop” reserve illustration, served without copying. CSS display only; no runtime, collider, contact-size, animation, palette-limit, or physical-touch qualification.</p>
+  <script>
+    const roles = ['scout', 'bomber', 'carrier', 'interceptor', 'fiber', 'impact', 'trapper'];
+    const names = { scout: 'Savings Seeker', bomber: 'Value Dispatcher', carrier: 'Supply Courier', interceptor: 'Waste Catcher', fiber: 'Workflow Linker', impact: 'Flow Opener', trapper: 'Risk Cradle' };
+    const tableBody = document.querySelector('#bodies');
+    for (const role of roles) {
+      const row = document.createElement('tr');
+      const name = document.createElement('th');
+      name.scope = 'row';
+      name.textContent = names[role];
+      const roleLabel = document.createElement('div');
+      roleLabel.style.fontSize = '11px';
+      roleLabel.textContent = '(' + role + ')';
+      name.append(roleLabel);
+      row.append(name);
+      for (const background of ['black', 'scene']) {
+        for (const size of [24, 32, 56]) {
+          const cell = document.createElement('td');
+          cell.className = background;
+          const sprite = document.createElement('img');
+          sprite.src = '../originals/' + role + '.png';
+          sprite.alt = role + ', ' + size + ' CSS pixels, ' + background;
+          sprite.width = size;
+          sprite.height = size;
+          cell.append(sprite);
+          row.append(cell);
+        }
+      }
+      tableBody.append(row);
+    }
+    document.querySelector('#heading').addEventListener('change', (event) => {
+      document.body.style.setProperty('--heading', event.target.value);
+    });
+    document.querySelector('#sampling').addEventListener('change', (event) => {
+      document.body.classList.toggle('pixelated', event.target.value === 'pixelated');
+    });
+  </script>
+</html>

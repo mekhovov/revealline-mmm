@@ -1,0 +1,400 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentVersion": "0.1.0",
+  "id": "navi-network",
+  "status": "draft",
+  "title": "Navi Network: Savings City",
+  "summary": "Restore a fictional business network through territory capture, document connections and visible city improvements.",
+  "requiresCapabilities": [
+    "content.raster-reveal.v1",
+    "content.sprite-animation.v1",
+    "effect.disable-enemy-tag.v1",
+    "effect.grant-score.v1",
+    "enemy.bounce-field.v1",
+    "enemy.patrol-boundary.v1",
+    "fill.enemy-seeded.v1",
+    "goal.capture-markers.v1",
+    "goal.coverage.v1",
+    "layout.fixed-arena.v1"
+  ],
+  "theme": {
+    "id": "navi-network",
+    "family": "navi-network",
+    "title": "Navi Network: Savings City",
+    "artDirection": "Clean blue/white pixel city, warm workshop lights, expressive assistant silhouette. Use a provisional C character until official brand/Navi assets are supplied.",
+    "cultureNotes": "Currency and AI behavior are fictional arcade metaphors, not product performance or savings claims. Replace placeholder marks using authorized brand assets.",
+    "referenceUrls": [
+      "https://docs.coupa.com/en/coupa-glossary/overview/c"
+    ],
+    "palette": {
+      "field": "#11293F",
+      "safe": "#70C5EB",
+      "trail": "#F3C75B",
+      "player": "#CDEEFF",
+      "enemy": "#EF8890",
+      "objective": "#7ADDAB",
+      "text": "#F7FBFF",
+      "panel": "#1E3C57"
+    },
+    "vocabulary": {
+      "player": "Navi placeholder",
+      "enemy": "Cost leak",
+      "capture": "Reconnect",
+      "score": "Fictional savings",
+      "objective": "Matched invoice"
+    },
+    "visualRoles": {
+      "player": "player-sprite",
+      "fieldEnemy": "field-enemy",
+      "boundaryEnemy": "boundary-enemy",
+      "objective": "objective-sprite",
+      "menuBackdrop": "menu-art"
+    },
+    "animations": [
+      {
+        "id": "player-idle",
+        "assetId": "player-sprite",
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "fps": 8,
+        "loop": true
+      }
+    ],
+    "audio": {
+      "musicAssetId": "music",
+      "cutAssetId": "sfx-cut",
+      "captureAssetId": "sfx-capture",
+      "failureAssetId": "sfx-failure"
+    },
+    "presentation": {
+      "coverStyle": "blueprint",
+      "spriteSampling": "nearest",
+      "motionIntensity": 0.25,
+      "crtStrength": 0,
+      "arenaAspect": "4:3",
+      "layoutPolicy": "fixed-arena-adaptive-chrome"
+    },
+    "imagePolicy": {
+      "allowedStyles": [
+        "pixel-art",
+        "illustration",
+        "photograph",
+        "scanned-art"
+      ],
+      "preserveOriginal": true,
+      "cropApprovalRequired": true
+    }
+  },
+  "assets": [
+    {
+      "id": "player-sprite",
+      "kind": "spritesheet",
+      "status": "planned",
+      "brief": "Original navi-network player; clear 32 px silhouette, all frames consistent.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      },
+      "spriteLayout": {
+        "frameWidth": 32,
+        "frameHeight": 32,
+        "frameCount": 4
+      }
+    },
+    {
+      "id": "field-enemy",
+      "kind": "spritesheet",
+      "status": "planned",
+      "brief": "Original navi-network fieldEnemy; clear 32 px silhouette, all frames consistent.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      },
+      "spriteLayout": {
+        "frameWidth": 32,
+        "frameHeight": 32,
+        "frameCount": 4
+      }
+    },
+    {
+      "id": "boundary-enemy",
+      "kind": "spritesheet",
+      "status": "planned",
+      "brief": "Original navi-network boundaryEnemy; clear 32 px silhouette, all frames consistent.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      },
+      "spriteLayout": {
+        "frameWidth": 32,
+        "frameHeight": 32,
+        "frameCount": 4
+      }
+    },
+    {
+      "id": "objective-sprite",
+      "kind": "spritesheet",
+      "status": "planned",
+      "brief": "Original navi-network objective; clear 32 px silhouette, all frames consistent.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      },
+      "spriteLayout": {
+        "frameWidth": 32,
+        "frameHeight": 32,
+        "frameCount": 4
+      }
+    },
+    {
+      "id": "menu-art",
+      "kind": "image",
+      "status": "planned",
+      "brief": "Original navi-network menuBackdrop; clear 32 px silhouette, all frames consistent.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      }
+    },
+    {
+      "id": "reveal-main",
+      "kind": "image",
+      "status": "planned",
+      "brief": "Original inviting business city with suppliers and workshops; no text or numeric savings claims baked into the image.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      }
+    },
+    {
+      "id": "music",
+      "kind": "audio",
+      "status": "planned",
+      "brief": "Original navi-network audio, clean loop/transient, no copied recordings.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      }
+    },
+    {
+      "id": "sfx-cut",
+      "kind": "audio",
+      "status": "planned",
+      "brief": "Original navi-network audio, clean loop/transient, no copied recordings.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      }
+    },
+    {
+      "id": "sfx-capture",
+      "kind": "audio",
+      "status": "planned",
+      "brief": "Original navi-network audio, clean loop/transient, no copied recordings.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      }
+    },
+    {
+      "id": "sfx-failure",
+      "kind": "audio",
+      "status": "planned",
+      "brief": "Original navi-network audio, clean loop/transient, no copied recordings.",
+      "provenance": {
+        "method": "planned",
+        "creator": "TBD; original commissioned/generated work reviewed before ready"
+      }
+    }
+  ],
+  "revealArt": [
+    {
+      "id": "main",
+      "sourceAssetId": "reveal-main",
+      "style": "illustration",
+      "title": "Connected Workshop",
+      "caption": "Original inviting business city with suppliers and workshops; no text or numeric savings claims baked into the image.",
+      "altText": "Original inviting business city with suppliers and workshops; no text or numeric savings claims baked into the image.",
+      "fit": "contain",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sampling": "linear",
+      "preserveSource": true,
+      "cropApproved": false,
+      "protectedRegions": [],
+      "luminanceTreatment": "dim-until-complete"
+    }
+  ],
+  "rulesets": [
+    {
+      "id": "standard",
+      "title": "First board",
+      "fillPolicy": {
+        "primitiveId": "fill.enemy-seeded.v1",
+        "params": {}
+      },
+      "lives": 3,
+      "timeLimitSeconds": 120,
+      "playerCellsPerSecond": 10,
+      "scorePerCapturedCell": 1,
+      "cutCommit": "hold",
+      "trailContact": "lose-life",
+      "goals": [
+        {
+          "id": "coverage",
+          "test": {
+            "primitiveId": "goal.coverage.v1",
+            "params": {
+              "targetFraction": 0.7
+            }
+          }
+        },
+        {
+          "id": "objective",
+          "test": {
+            "primitiveId": "goal.capture-markers.v1",
+            "params": {
+              "markerTag": "invoice",
+              "targetCount": 2
+            }
+          }
+        }
+      ],
+      "completion": {
+        "mode": "all",
+        "goalIds": [
+          "coverage",
+          "objective"
+        ]
+      },
+      "failure": {
+        "zeroLives": true,
+        "timerExpiry": "fail"
+      }
+    }
+  ],
+  "levels": [
+    {
+      "id": "first-light",
+      "title": "Connected Workshop",
+      "rulesetId": "standard",
+      "revealArtId": "main",
+      "grid": {
+        "width": 48,
+        "height": 36,
+        "safeBorder": 1,
+        "blockedRects": [
+          {
+            "x": 20,
+            "y": 14,
+            "width": 4,
+            "height": 4
+          }
+        ]
+      },
+      "playerStart": {
+        "x": 24,
+        "y": 0
+      },
+      "enemies": [
+        {
+          "id": "roamer",
+          "visualRole": "fieldEnemy",
+          "behavior": {
+            "primitiveId": "enemy.bounce-field.v1",
+            "params": {
+              "cellsPerSecond": 3
+            }
+          },
+          "start": {
+            "x": 12,
+            "y": 10
+          },
+          "tags": [
+            "leak"
+          ]
+        },
+        {
+          "id": "edge",
+          "visualRole": "boundaryEnemy",
+          "behavior": {
+            "primitiveId": "enemy.patrol-boundary.v1",
+            "params": {
+              "cellsPerSecond": 2,
+              "clockwise": true
+            }
+          },
+          "start": {
+            "x": 0,
+            "y": 24
+          },
+          "tags": [
+            "boundary"
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "id": "marker-a",
+          "at": {
+            "x": 8,
+            "y": 8
+          },
+          "tag": "invoice",
+          "visualRole": "objective",
+          "onCapture": [
+            {
+              "primitiveId": "effect.grant-score.v1",
+              "params": {
+                "points": 150
+              }
+            },
+            {
+              "primitiveId": "effect.disable-enemy-tag.v1",
+              "params": {
+                "enemyTag": "leak"
+              }
+            }
+          ]
+        },
+        {
+          "id": "marker-b",
+          "at": {
+            "x": 36,
+            "y": 26
+          },
+          "tag": "invoice",
+          "visualRole": "objective",
+          "onCapture": [
+            {
+              "primitiveId": "effect.grant-score.v1",
+              "params": {
+                "points": 150
+              }
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "difficulty": "intro"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "chapter-one",
+      "title": "Navi Network: Savings City",
+      "levelIds": [
+        "first-light"
+      ],
+      "progression": "linear",
+      "rewardMode": "gallery",
+      "fictionalEconomy": true
+    }
+  ]
+}

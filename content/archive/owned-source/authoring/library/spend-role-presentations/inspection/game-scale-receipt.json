@@ -1,0 +1,63 @@
+{
+  "format": "spend-role-native-css-inspection.v1",
+  "at": "2026-09-14T18:15:11.960793+00:00",
+  "nativeOperator": "Parent/root in owned native tab384",
+  "authorInspection": "Lagrange viewed both complete JPEG screenshots through view_image detail=original; seven source originals previously viewed individually",
+  "url": "http://127.0.0.1:49161/inspection/index.html",
+  "cssSizes": [
+    24,
+    32,
+    56
+  ],
+  "backgrounds": [
+    "black",
+    "existing Spend Circular Workshop reward picture as a scene crop"
+  ],
+  "screenshots": [
+    {
+      "path": "inspection/north-auto.jpg",
+      "originalCapturePath": "/Users/oleksandr.mekhovov/work/my_projects/go_test/.cache/round47/v042-plan-review/spend-bodies-north-auto.jpg",
+      "bytes": 87538,
+      "sha256": "29eb99044437fbc2fab649ff1e3c15f9556a7e6165cf6d93d7e72718d5c55955",
+      "imageFormat": "JPEG",
+      "dimensions": [
+        2000,
+        1125
+      ],
+      "visibleState": "North / Auto",
+      "copy": "Exclusive APFS fclonefileat; no image edit or fallback",
+      "sourceInode": 76099483,
+      "destinationInode": 76101258
+    },
+    {
+      "path": "inspection/east-pixelated.jpg",
+      "originalCapturePath": "/Users/oleksandr.mekhovov/work/my_projects/go_test/.cache/round47/v042-plan-review/spend-bodies-east-pixelated.jpg",
+      "bytes": 88305,
+      "sha256": "42847003fa5c4def715169fdce730554e90e47c71d01d1ae0bf35729864b4547",
+      "imageFormat": "JPEG",
+      "dimensions": [
+        2000,
+        1125
+      ],
+      "visibleState": "East / Pixelated",
+      "copy": "Exclusive APFS fclonefileat; no image edit or fallback",
+      "sourceInode": 76099492,
+      "destinationInode": 76101259
+    }
+  ],
+  "parentObservation": "Parent confirmed settled East/Pixelated selection in DOM before its separate capture and visually reviewed both states. Other art tabs/servers381/382 remain unchanged.",
+  "findings": [
+    "All seven broad silhouettes are distinguishable on black in the reviewed board. Carrier forks, Fiber two rings, Impact T bar and Trapper U cradle are particularly distinct.",
+    "The bright, detailed workshop background obscures fine interiors and reduces isolation of the smaller bodies. Scout is noticeably small at24/32 because its actual painted footprint has extra padding.",
+    "Interceptor, Carrier and Impact provide clearer directional reading than the round/ring shapes. Fiber remains identifiable as two loops, but heading needs more attention or a future motion cue.",
+    "At56 the interior lens, cargo blocks, rings and utility fittings are much easier to see. Pixelated sampling creates punctuated highlights at small size; no universal sampling decision is claimed.",
+    "Source alpha composites without an opaque rectangular background; exact low-alpha fringe and near-opaque-body measurements remain separately recorded."
+  ],
+  "limitations": [
+    "Static source-art comparison only. Runtime adoption requires its own per-role paint sizing, animation, sampling, contrast and motion checks.",
+    "Screenshot2000\u00d71125 full-page output is not a physical CSS pixel measurement. Explicit board source sets24/32/56 CSS sizes; original screenshots are not cropped or rescaled offline.",
+    "No runtime/gameplay/hitbox/rig/loading-memory/physical-device or new-mechanics claim."
+  ],
+  "freeBeforeScreenshotClones": 5613629440,
+  "screenshotOriginalBytes": 175843
+}

@@ -25,3 +25,27 @@ test('owned mission display numbers survive retirement from the shared registry'
  for(const key of receipt.previouslyUnnumbered)assert.equal(officialLevelNumber(key),null);
  assert.equal(officialLevelNumber('["mission","journey-opening","prologue","first-return"]'),null);
 });
+
+test('additional owned archives retain exact bytes and every selected reserve original', async () => {
+ const receipt=await json('migration/additional-owned-source-receipt.json');
+ const paths=new Set();
+ for(const row of receipt.items){
+  assert.ok(row.destination.startsWith('content/archive/owned-source/'));
+  assert.ok(!row.destination.split('/').includes('..'));
+  assert.ok(!paths.has(row.sourcePath));paths.add(row.sourcePath);
+  const bytes=await readFile(new URL(row.destination,root));
+  assert.equal(bytes.length,row.bytes,row.sourcePath);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),row.sha256,row.sourcePath);
+  assert.equal(createHash('sha1').update(Buffer.from(`blob ${bytes.length}\0`)).update(bytes).digest('hex'),row.sourceGitBlob,row.sourcePath);
+ }
+ const reserve=await json('content/archive/coupa-reserve-art.json');
+ assert.equal(reserve.entries.length,10);
+ for(const entry of reserve.entries){
+  assert.equal(entry.themeId,'coupa');
+  const original=receipt.items.find(row=>row.sourcePath===entry.original.path);
+  assert.ok(original,entry.id);
+  assert.equal(original.sha256,entry.original.sha256,entry.id);
+  assert.equal(original.sourceGitBlob,entry.original.gitBlob,entry.id);
+  for(const prompt of entry.prompts)assert.ok(paths.has(prompt.path),prompt.path);
+ }
+});
