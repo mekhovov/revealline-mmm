@@ -1094,6 +1094,132 @@
       "sha256": "7f7a3a66487eba9d5abd124f1daabb988e6443e97ff8a2674e3dc2b12963f24f",
       "bytes": 7480,
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/actor-presentation.md",
+      "destination": "content/archive/owned-source/docs/actor-presentation.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "8d282035fe405be6c1c9b9f397f833a598586cfb",
+      "sha256": "a516226cf5552ab717bf4c1caf0e0bed89ab09c1a0fc0258cf7ec05f8b9e7461",
+      "bytes": 8458,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/assets-and-configuration.md",
+      "destination": "content/archive/owned-source/docs/assets-and-configuration.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "a2e87cf845c63c120b952c30bbd74a7721406f87",
+      "sha256": "53e795bc6915bf0e975a2d085362188565062c4fe718cc84e65a01d6bef3c2ea",
+      "bytes": 11699,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/audio-and-rewards.md",
+      "destination": "content/archive/owned-source/docs/audio-and-rewards.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "14911524ef3e249ce201281d21e54e9f236b576e",
+      "sha256": "83a32f4dde73241d2a41ef68bcebcb15c0ee33e2343bf3b808c0e096870f894e",
+      "bytes": 14877,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/authored-art.md",
+      "destination": "content/archive/owned-source/docs/authored-art.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "715a9e8129193679db3746cf4075cf8bfe82db61",
+      "sha256": "907bcec70191b63c54152757ceb61153182b7e63c8ca3c6913228dd5155a2b69",
+      "bytes": 13697,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-artwork-engineering-review.md",
+      "destination": "content/archive/owned-source/docs/company-artwork-engineering-review.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "89ca5954c357a0c2dac1f7e15a4d6f85abd59f2f",
+      "sha256": "51d44aeb02e83b6c9b6708577c0a56e8bae628758bdd360e2b34356c37265c57",
+      "bytes": 5443,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-communities.md",
+      "destination": "content/archive/owned-source/docs/company-communities.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "8d5b2b53580919f6a113d550f3a5563efee69d00",
+      "sha256": "012bb083ed2fc7e8fed435932e2d3947c3481e0b0f7ef057abe99a50026c95bd",
+      "bytes": 3122,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-editions-accessibility.md",
+      "destination": "content/archive/owned-source/docs/company-editions-accessibility.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "74f718740e55f301265a27c842fb7864175b31d2",
+      "sha256": "4f2d200f37de8351c98b5084463d11b21511f5087eff4e92ab91833a6a38811a",
+      "bytes": 6707,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-editions-device-qualification.md",
+      "destination": "content/archive/owned-source/docs/company-editions-device-qualification.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "98e4fcd60c5deee7ec59250e524822c9feece4d6",
+      "sha256": "b74e0dfbf096033c049eeee59852857d6047408163daafcb6bee39bad2a5f906",
+      "bytes": 22172,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-editions-performance.md",
+      "destination": "content/archive/owned-source/docs/company-editions-performance.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "74ceef6de9ea6939ddc040d76f1e5ca832181e36",
+      "sha256": "86346eab71d4d5b5e08189d4e5ded541804c7858b810a6f8ab679046898d892c",
+      "bytes": 4392,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-editions-shared-solo.md",
+      "destination": "content/archive/owned-source/docs/company-editions-shared-solo.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "4245e0b33888bfca850cc4fcdd85f6042998d5d4",
+      "sha256": "1951575e41d3986b5a7066d5d8a0fb3d64dc65aafe56ca505fed373f858b88bb",
+      "bytes": 8735,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/company-editions.md",
+      "destination": "content/archive/owned-source/docs/company-editions.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "23229739e03f74c2b34129b0228459216a3db788",
+      "sha256": "8f555426b7dd0a6314de9a289c81656ccf593cdb1f8ad3242005e46cc904d670",
+      "bytes": 40312,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/equipment-workshop/README.md",
+      "destination": "content/archive/owned-source/authoring/library/equipment-workshop/README.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "5376a2b5900c4904702ac1fb30d7bf37fdedc894",
+      "sha256": "ca2755da99160b7e392c4d423a5d4bdc329cc2e798ae7dab18cacc32801bdc19",
+      "bytes": 6171,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "scripts/build-workshop-pack.mjs",
+      "destination": "content/archive/owned-source/scripts/build-workshop-pack.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "26f7b0f989a02b103bb946204395ad836607fd87",
+      "sha256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "bytes": 9412,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "scripts/test-build-workshop-pack.mjs",
+      "destination": "content/archive/owned-source/scripts/test-build-workshop-pack.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "65de8c920647858b7c40c7c1d202220c957afc45",
+      "sha256": "27e53508adbc6429ce1a0edb58e7f37ac0990c293b05daa615318617fd03c5a4",
+      "bytes": 10593,
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }
