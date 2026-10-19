@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/library/moving-edges-art/index.html",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "f3ff11ee96d1c07d228b2919352df1e601848f05",
+  "sourceSHA256": "adc4cb5692b75d8bd4b9b35faf11f93830febc10ac28eee39364613748c25118",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 5501,
+      "end": 5926,
+      "source": "<article>\n        <a href=\"originals/terrace-stitch-coupa.png\"\n          ><img\n            src=\"thumbnails/terrace-stitch-coupa.jpg\"\n            width=\"384\"\n            height=\"192\"\n            alt=\"Shared tools, parcels and workshop terraces rise toward a greenhouse above an idyllic coast.\"\n        /></a>\n        <h2>The Shared Goods Terraces</h2>\n        <p>coupa · terrace-stitch · 1774×887 original</p>\n      </article>"
+    },
+    {
+      "start": 5933,
+      "end": 6337,
+      "source": "<article>\n        <a href=\"originals/survey-wheel-coupa.png\"\n          ><img\n            src=\"thumbnails/survey-wheel-coupa.jpg\"\n            width=\"384\"\n            height=\"192\"\n            alt=\"A snowy parts-exchange rotunda links warm timber repair workshops at night.\"\n        /></a>\n        <h2>The Repair Exchange Rotunda</h2>\n        <p>coupa · survey-wheel · 1774×887 original</p>\n      </article>"
+    },
+    {
+      "start": 6344,
+      "end": 6782,
+      "source": "<article>\n        <a href=\"originals/breakwater-return-coupa.png\"\n          ><img\n            src=\"thumbnails/breakwater-return-coupa.jpg\"\n            width=\"384\"\n            height=\"192\"\n            alt=\"A harbor maintenance crew shares lit repair workshops and boats beside deep blue night water.\"\n        /></a>\n        <h2>The Harbor Maintenance Round</h2>\n        <p>coupa · breakwater-return · 1774×887 original</p>\n      </article>"
+    }
+  ]
+}

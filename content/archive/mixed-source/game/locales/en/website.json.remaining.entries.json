@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/en/website.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "99fc5a997f482353a5ab45153b05bc818cccabfd",
+  "sourceSHA256": "cc58f40ebff9b9478fe437451829d529be24e568c7a0bc0d7612a0d37813ab49",
+  "scope": "Additional retired publication and localization records; pointers refer to the original source revision.",
+  "entries": [
+    {
+      "pointer": "/theWorldsBackgroundsAndCharacterRigsAreChangeableFpvGameplay",
+      "value": "The worlds, backgrounds and character rigs are changeable. FPV gameplay is a fictional arcade abstraction. The business-spend theme is a design concept and does not claim endorsement or actual business-product functionality."
+    }
+  ]
+}

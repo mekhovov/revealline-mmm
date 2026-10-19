@@ -1,0 +1,38 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/en/content.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "9da8f760e45a0dda4d3c4f85ad3949296b400965",
+  "sourceSHA256": "3bca53318ea0f46a9e0485f82c8e6c0582f1f82160c0cdf735a0e911d956f422",
+  "scope": "Additional retired publication and localization records; pointers refer to the original source revision.",
+  "entries": [
+    {
+      "pointer": "/motionLab.originalImageGeneratedHelperNotVerifiedOfficialCoupaNavi",
+      "value": "original image-generated helper; not verified official Coupa Navi artwork"
+    },
+    {
+      "pointer": "/motionLab.sharedOriginalHelperImageCosmeticPulseVariantNotOfficial",
+      "value": "shared original helper image; cosmetic pulse variant, not official Navi"
+    },
+    {
+      "pointer": "/motionLab.starterOriginalBusinessHelperConceptThisIsNotAn",
+      "value": "Starter original business helper concept. This is not an official Coupa or Navi character."
+    },
+    {
+      "pointer": "/naviArchiveQueueAlerts",
+      "value": "Navi · archive / queue / alerts"
+    },
+    {
+      "pointer": "/naviNetworkBlueHours",
+      "value": "Navi Network / blue hours"
+    },
+    {
+      "pointer": "/neonMosaicCoupa",
+      "value": "Neon COUPA"
+    },
+    {
+      "pointer": "/neonMosaicCoupaDescription",
+      "value": "Red pixel lettering spells COUPA. Blue ground slows the craft; red ground is lethal until captured. Open constellation surround the motif, with stepping stones along the lower route. 3 yellow bouncers, two outer patrols and 4 island-contour patrols guard the field. No horizontal barrier bars. Start at bottom center and reveal 75%."
+    }
+  ]
+}

@@ -544,8 +544,64 @@
       "sourceSHA256": "51d009694dc2d38920942c0e64559569e8b59e57241bc4eab05841fdf585357a",
       "sha256": "4b9bbc3fa471f0e7173c6f6557f70b1ebb17275bd7d8f90c121d9f2558ad717b",
       "bytes": 603
+    },
+    {
+      "sourcePath": "game/build-config.json",
+      "destination": "content/archive/mixed-source/game/build-config.json.remaining.entries.json",
+      "entries": 9,
+      "sourceSHA256": "8844ee47b61b301910cafc3cfb2c9d5e1bb0ff7b389248d042bdabe1683cddd4",
+      "sha256": "8baf223bfe853790dc4c93746a644c3a367d5575440672492075d8fc5f23c9e4",
+      "bytes": 1551
+    },
+    {
+      "sourcePath": "game/locales/en/content.json",
+      "destination": "content/archive/mixed-source/game/locales/en/content.json.remaining.entries.json",
+      "entries": 7,
+      "sourceSHA256": "3bca53318ea0f46a9e0485f82c8e6c0582f1f82160c0cdf735a0e911d956f422",
+      "sha256": "787cb02b72a14e5801643a4767b304e3dda2472e01d4e0a33291e84222d17d31",
+      "bytes": 1730
+    },
+    {
+      "sourcePath": "game/locales/en/tools.json",
+      "destination": "content/archive/mixed-source/game/locales/en/tools.json.remaining.entries.json",
+      "entries": 1,
+      "sourceSHA256": "a74a159f1377bb84796c6abbde77901099363930aff821811be39e619580c010",
+      "sha256": "95525316142e6039ac926b997197199d970f0ad1320fa774bce3f60588efe4e3",
+      "bytes": 695
+    },
+    {
+      "sourcePath": "game/locales/en/website.json",
+      "destination": "content/archive/mixed-source/game/locales/en/website.json.remaining.entries.json",
+      "entries": 1,
+      "sourceSHA256": "cc58f40ebff9b9478fe437451829d529be24e568c7a0bc0d7612a0d37813ab49",
+      "sha256": "18af19063713b2d85a124bc863985230c8c445d66e17b76cbd2bd04c010004cd",
+      "bytes": 791
+    },
+    {
+      "sourcePath": "game/locales/uk/content.json",
+      "destination": "content/archive/mixed-source/game/locales/uk/content.json.remaining.entries.json",
+      "entries": 7,
+      "sourceSHA256": "1e8b32b2eb9ed103d4f646eaffdb5a15b497da22d3be55e23832cedc3d025f2c",
+      "sha256": "079eafa6449a230fac7bbe6ce128afc9bcbe0830a899c5950503c6b0dab71f44",
+      "bytes": 2003
+    },
+    {
+      "sourcePath": "game/locales/uk/tools.json",
+      "destination": "content/archive/mixed-source/game/locales/uk/tools.json.remaining.entries.json",
+      "entries": 1,
+      "sourceSHA256": "dfecb435f860827c31f17dfbb3cf450461509cdb6f5435987aaa24e98e6e18cf",
+      "sha256": "61cb85dec1c5052373f06ae483ea46b2df017a34438eb3c21f160ea537eafa8b",
+      "bytes": 784
+    },
+    {
+      "sourcePath": "game/locales/uk/website.json",
+      "destination": "content/archive/mixed-source/game/locales/uk/website.json.remaining.entries.json",
+      "entries": 1,
+      "sourceSHA256": "2a22c9f31d8365208c7e1f5616f6a560d0cd8839087e0de0e57f0611d6c98ef9",
+      "sha256": "f77b598dbb985db252b1a01b628ab3c5936478bc88b44cefc4805d9c30e6b3a4",
+      "bytes": 951
     }
   ],
   "verification": "Every extracted JSON pointer was compared with the exact original Git source object.",
-  "entries": 564
+  "entries": 591
 }

@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/library/reserve-illustrations-catalog/sources.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "a95fc7a0b5cd87b4b28397728a2d46128cf0d826d2c12e28e797896c167b18bf",
+  "sourceGitBlob": "8cd1ac652ee7eea148eafdf37109d08aabbdf769",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 1972,
+      "end": 2008,
+      "source": "['fpv', 'ukraine', 'retro', 'coupa']"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/build-config.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "64a3cfd9f1049d0972e11874892beed24d893b97",
+  "sourceSHA256": "8844ee47b61b301910cafc3cfb2c9d5e1bb0ff7b389248d042bdabe1683cddd4",
+  "scope": "Additional retired publication and localization records; pointers refer to the original source revision.",
+  "entries": [
+    {
+      "pointer": "/include/54",
+      "value": "authoring/library/spend-network-art/originals/city-savings-observatory.png"
+    },
+    {
+      "pointer": "/include/55",
+      "value": "authoring/library/spend-network-art/originals/shared-value-harbor.png"
+    },
+    {
+      "pointer": "/include/56",
+      "value": "authoring/library/spend-network-art/originals/thoughtful-market-workshop.png"
+    },
+    {
+      "pointer": "/include/57",
+      "value": "authoring/library/spend-network-art/provenance.json"
+    },
+    {
+      "pointer": "/include/58",
+      "value": "authoring/library/spend-route-art/originals/network-garden.png"
+    },
+    {
+      "pointer": "/include/59",
+      "value": "authoring/library/spend-route-art/originals/shared-harbor.png"
+    },
+    {
+      "pointer": "/include/60",
+      "value": "authoring/library/spend-route-art/originals/value-foundry.png"
+    },
+    {
+      "pointer": "/include/61",
+      "value": "authoring/library/spend-route-art/provenance.json"
+    },
+    {
+      "pointer": "/include/267",
+      "value": "optional-practice/navigation.mjs"
+    }
+  ]
+}

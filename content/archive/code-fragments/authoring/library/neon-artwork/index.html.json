@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/library/neon-artwork/index.html",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "bea087cd16216351b91b740474e05a4eac00d6e7",
+  "sourceSHA256": "8be9a518aefff90029bdc49d1a1ea700d0a5b0833ac8dad1bfe3a2e5a33ffc66",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 17541,
+      "end": 18263,
+      "source": "<article data-ui-surface=\"panel\" id=\"coupa\">\n    <a href=\"backgrounds/coupa.jpg\" aria-label=\"Open Neon COUPA artwork\">\n      <img src=\"backgrounds/coupa.jpg\" alt=\"Neon COUPA reveal illustration\" width=\"1024\" height=\"512\" loading=\"lazy\" decoding=\"async\">\n    </a><h3>Neon COUPA</h3>\n    <a class=\"play\" href=\"../../../game/?journey=legacy&amp;library-mission=%5B%22%5B%5C%22classic%5C%22%2C%5C%22bundled%5C%22%2C%5C%22neon-mosaic-pack%5C%22%2C%5C%22current-line-impact.v1%5C%22%5D%22%2C%22b7835f71ad45e7a8fcaae4b81f30fe91cf7c3e7e0e215a8a675f521b8f438ef6%3Acurrent-line-impact.v1%22%2C%22neon-mosaic%2F2%2F68f10772f1871b8b%3A%3Acurrent-line-impact.v1%22%2C%22neon-coupa-pack%22%2C%222%22%5D\">Play Neon COUPA</a>\n  </article>"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "sourcePath": "game/ui/celebration.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "5411cc0c37530c6d78aaadc5fdd500050d6160c84c4f5760b06e52ecb6566652",
+  "sourceGitBlob": "8eef329371fb5cc9afec62c011eb9a8db123021a",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 926,
+      "end": 1002,
+      "source": "  'savings-nodes': ['safe', 'accent', 'paper', 'safe', 'danger', 'accent'],\n"
+    },
+    {
+      "start": 1742,
+      "end": 1856,
+      "source": "      : theme.family === 'navi' || theme.scene === 'network'\n        ? 'savings-nodes'\n        : 'neon-fireworks';"
+    }
+  ]
+}

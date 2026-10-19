@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/production/sources.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "f7000fca6c676d4957cedb6cdd5a3130c7cfbc8a4bff959197753613fd2c8492",
+  "sourceGitBlob": "a1f41864681ea7de1cea8062c666ec2f57b9179f",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 23441,
+      "end": 23470,
+      "source": "['ukraine', 'retro', 'coupa']"
+    }
+  ]
+}

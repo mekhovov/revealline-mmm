@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/production/panel.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "e298ae06092aaf1a45383623a303474332ddecca99ec213639fc511ca96c1f32",
+  "sourceGitBlob": "6dc41ba4590c390840734a8073819fef42958650",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 1214,
+      "end": 1240,
+      "source": "  coupa: 'Spend Network',\n"
+    }
+  ]
+}

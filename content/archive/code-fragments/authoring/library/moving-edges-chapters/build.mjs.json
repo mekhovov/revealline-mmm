@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/library/moving-edges-chapters/build.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "bf514558341debda914d8a21fe13d011e7e8c357ec7fc765d0968f690d5e4bfd",
+  "sourceGitBlob": "bb27a8604e3fba8abe1e6df66c2802c65d587534",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 1523,
+      "end": 1559,
+      "source": "['fpv', 'ukraine', 'retro', 'coupa']"
+    },
+    {
+      "start": 6441,
+      "end": 6477,
+      "source": "Choose fpv, ukraine, retro or coupa."
+    }
+  ]
+}

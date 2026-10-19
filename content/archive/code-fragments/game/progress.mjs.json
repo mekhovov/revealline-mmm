@@ -1,0 +1,19 @@
+{
+  "sourcePath": "game/progress.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "4dd5c9c895c9e7861e09652f8253866364e93cda53e257bcf66306cb9dd570cd",
+  "sourceGitBlob": "8047c6a3abfe260834c1e2b047551a8855650163",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 7803,
+      "end": 7820,
+      "source": "  'navi-avatar',\n"
+    },
+    {
+      "start": 8071,
+      "end": 8093,
+      "source": "      'navi-auditor',\n"
+    }
+  ]
+}

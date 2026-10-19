@@ -572,6 +572,15 @@
       "sourceGitBlob": "67c2d2d9cb26c420def81584dd6994cffc46b0fa",
       "sha256": "e3ea9d75ff3a8940d122242a335ef6ad8c4842cb03fbbcf3048d08430b0163fe",
       "bytes": 8261
+    },
+    {
+      "sourcePath": "game/test/company-artwork.test.mjs",
+      "destination": "content/archive/owned-source/game/test/company-artwork.test.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "c521b5ba33a9334ab556dbf4a80d0a729284f47d",
+      "sha256": "3107b4b5a7eb20301ba578a6d429824b8cb02ceec434a8bde4155d7e88d74e58",
+      "bytes": 7494,
+      "disposition": "historical-artwork-regression-source; current local media hashes verified separately"
     }
   ]
 }

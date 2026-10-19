@@ -1,0 +1,14 @@
+{
+  "sourcePath": "game/content-design/uniqueness-pilot.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "bf1c330629c40a68b3e5ef12d9876b66dc391cace8272f81571c152dd3bae278",
+  "sourceGitBlob": "3f184efbb28d46b5b8f3d590e1fb15284f4affcc",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 3962,
+      "end": 5190,
+      "source": "  {\n    id: 'shared-branches',\n    name: 'Shared market branches',\n    replaces: 'original-spend-shared-harbor',\n    decision:\n      'Secure one side’s required exchange and expand from that return, or build a central connection first and alternate between both branches.',\n    difference:\n      'Four interrupted shelves create two target branches sharing a middle corridor; either side can be approached first but both must be completed.',\n    walls: [\n      { x: 14, y: 8, w: 18, h: 2 },\n      { x: 40, y: 8, w: 18, h: 2 },\n      { x: 14, y: 26, w: 18, h: 2 },\n      { x: 40, y: 26, w: 18, h: 2 },\n    ],\n    objectives: [\n      { id: 'exchange-west', x: 8.5, y: 18.5, required: true },\n      { id: 'exchange-east', x: 63.5, y: 18.5, required: true },\n    ],\n    terrain: [{ id: 'north-delay', kind: 'slow', x: 30, y: 3, w: 12, h: 3 }],\n    powerups: [{ id: 'central-freeze', kind: 'enemy-freeze', x: 36.5, y: 20.5 }],\n    coverage: 0.7,\n    durationSeconds: [55, 120],\n    artBrief:\n      'A circular community market beneath a timber canopy, seen from the central tea stall, with four distinct radial stalls, baskets and one sunlit fabric awning. No skyline, harbour or warehouse layout from the existing collection.',\n  },"
+    }
+  ]
+}
