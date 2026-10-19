@@ -1,0 +1,6335 @@
+{
+  "format": "revealline-uniqueness-pilot.v2",
+  "status": "Design review pending; no current content or reward assignments changed.",
+  "evidenceContract": {
+    "format": "revealline-pilot-proof.v1",
+    "portableFields": [
+      "seed",
+      "column",
+      "depth",
+      "side",
+      "status",
+      "ticks",
+      "seconds",
+      "livesLost",
+      "coverage",
+      "closure",
+      "failures",
+      "replayVerified",
+      "segments"
+    ],
+    "historicalExactCheckpoint": {
+      "reportFormat": "revealline-uniqueness-pilot.v1",
+      "retainedInGitHistory": true,
+      "purpose": "Architecture-specific runtime diagnostic; excluded from portable design-proof identity.",
+      "knownEquivalentExample": {
+        "pilotId": "uniqueness-pilot-arcade-delivery",
+        "darwinArm64": "e8e4e128969b3aba",
+        "linuxX64": "83f58b12fcadafda",
+        "difference": "A single-ULP enemy-velocity substitution reproduces the historical Linux hash; the exact Linux field difference remains inferred. Reported route, closure, coverage, failures, segments and replay verification are identical."
+      }
+    }
+  },
+  "controls": {
+    "solo": {
+      "format": "ResolvedMissionV1",
+      "missionId": "first-return",
+      "mode": "solo",
+      "difficulty": "standard",
+      "policyId": "journey-trail-impact-v3",
+      "simulationIdentity": "fa30f146920d0226",
+      "level": {
+        "version": "xonix-level.v5",
+        "id": "first-return",
+        "revision": "pressure-v2-998aa1fbcdc8582f",
+        "name": "First return",
+        "width": 72,
+        "height": 36,
+        "spawn": {
+          "x": 24.5,
+          "y": 0.5
+        },
+        "walls": [],
+        "foundations": [],
+        "goal": {
+          "coverage": 0.3
+        },
+        "encounter": null,
+        "classic": {
+          "version": "classic.v1",
+          "terrain": [],
+          "powerups": [],
+          "arcadeActions": {
+            "version": "arcade-actions.v1"
+          },
+          "lineImpact": {
+            "version": "line-impact.v1",
+            "speed": 24
+          }
+        },
+        "enemies": [
+          {
+            "id": "keeper",
+            "type": "bouncer",
+            "x": 58.5,
+            "y": 23.5,
+            "vx": 2.3758787847867993,
+            "vy": -2.3758787847867993
+          }
+        ],
+        "objectives": [],
+        "supplies": [],
+        "rules": {
+          "lives": 3,
+          "moveSpeed": 10,
+          "boostMultiplier": 1.5,
+          "respawnSeconds": 0.65,
+          "graceSeconds": 1,
+          "playerRadius": 0.18,
+          "pointsPerCell": 10,
+          "objectivePoints": 500,
+          "timeMedals": [
+            90,
+            150
+          ],
+          "switchCooldownSeconds": 2,
+          "timeLimitSeconds": 0,
+          "cutTimeLimitSeconds": 0,
+          "maxTrailCells": 0,
+          "stopOnCapture": true
+        },
+        "signalZones": [],
+        "hangars": [
+          {
+            "id": "home-hangar",
+            "x": 24.5,
+            "y": 0.5,
+            "radius": 2
+          }
+        ]
+      },
+      "presentation": {
+        "themeId": "horizon-actors-v1",
+        "backgroundAssetId": null
+      },
+      "background": null,
+      "design": {
+        "routeDecision": "Cross to the far rail or turn back to the near rail?",
+        "lesson": "Reaching reclaimed ground secures a live line; empty regions fill.",
+        "counterplay": "Watch each keeper before departing; close early when its path threatens the line.",
+        "captureConsequence": "One keeper retains only the region it occupies at closure.",
+        "introduces": [
+          "enemy-seeded-closure"
+        ],
+        "practices": [],
+        "combines": [],
+        "memorableMoment": "The first enclosure reveals a broad part of the horizon.",
+        "mastery": "Close a cut without losing a life.",
+        "durationSeconds": [
+          10,
+          45
+        ],
+        "difficulty": {
+          "band": 1,
+          "planning": 1,
+          "execution": 1,
+          "threatDensity": 1,
+          "timePressure": 0,
+          "mechanicLoad": 1,
+          "coordination": 0
+        }
+      },
+      "officialProgressEligible": false,
+      "validation": "compiled-candidate-not-playtested",
+      "topology": {
+        "assumption": "Static wall connectivity and initial enemy retention only; not a solution, timing or enjoyment proof.",
+        "inaccessibleRetainedCells": 0,
+        "optimisticCoverageCeiling": 1,
+        "diagnostics": []
+      },
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "code": "greybox-background"
+        }
+      ]
+    },
+    "team": {
+      "format": "ResolvedTeamMissionV1",
+      "missionId": "twin-landings",
+      "mode": "team",
+      "difficulty": "standard",
+      "policyId": "journey-trail-impact-v3",
+      "simulationIdentity": "20379278ff878567",
+      "level": {
+        "version": "revealline-coop-level.v6",
+        "terrain": [],
+        "lineImpact": {
+          "version": "team-line-impact.v2",
+          "speed": 24
+        },
+        "id": "twin-landings",
+        "revision": "owned-trail-impact-1",
+        "name": "Twin landings",
+        "width": 72,
+        "height": 36,
+        "journeyDifficulty": "standard",
+        "spawns": [
+          {
+            "x": 20.5,
+            "y": 17.5
+          },
+          {
+            "x": 51.5,
+            "y": 17.5
+          }
+        ],
+        "walls": [],
+        "safeRects": [
+          {
+            "x": 18,
+            "y": 15,
+            "w": 5,
+            "h": 5
+          },
+          {
+            "x": 49,
+            "y": 15,
+            "w": 5,
+            "h": 5
+          }
+        ],
+        "enemies": [
+          {
+            "id": "north-keeper",
+            "type": "drifter",
+            "x": 35.5,
+            "y": 8.5,
+            "vx": 3.36,
+            "vy": 0,
+            "radius": 0.25
+          },
+          {
+            "id": "south-keeper",
+            "type": "drifter",
+            "x": 35.5,
+            "y": 27.5,
+            "vx": -3.36,
+            "vy": 0,
+            "radius": 0.25
+          }
+        ],
+        "goal": {
+          "coverage": 0.6
+        },
+        "rules": {
+          "moveSpeed": 10,
+          "boostMultiplier": 1
+        }
+      },
+      "presentation": {
+        "themeId": "horizon",
+        "backgroundAssetId": "team-partners-twin-landings"
+      },
+      "background": {
+        "format": "AssetRevisionV1",
+        "id": "team-partners-twin-landings",
+        "revision": "r1",
+        "kind": "reveal-background",
+        "path": "content-design/assets/team-partners-r1/twin-landings.png",
+        "bytes": 2559323,
+        "sha256": "058e72001734f5ae3351a43e4f686e62090d76d5eaa552a5a78bea0e7a5e6bcc",
+        "width": 1774,
+        "height": 887,
+        "alt": "Two coastal landing decks and study huts face a sheltered teal bay beneath a distant stone causeway.",
+        "review": "candidate"
+      },
+      "design": {
+        "routeDecision": "Connect the islands together, or establish opposite return routes first?",
+        "lesson": "Both craft can build a shared route network from separate foundations.",
+        "counterplay": "Watch the two keepers; cover different approaches and close onto reclaimed ground or meet both moving heads.",
+        "captureConsequence": "A bridge may secure only its line while keepers occupy both sides. The new link still gives both craft a shorter return.",
+        "introduces": [
+          "team-foundations"
+        ],
+        "practices": [
+          "closure",
+          "enemy-retained-regions"
+        ],
+        "combines": [
+          "foundations",
+          "complementary-routes"
+        ],
+        "memorableMoment": "Two isolated starting islands become a shared launch corridor.",
+        "mastery": "Both craft contribute a closure before the shared clear, without a knockdown.",
+        "durationSeconds": [
+          45,
+          120
+        ],
+        "difficulty": {
+          "band": 2,
+          "planning": 2,
+          "execution": 2,
+          "threatDensity": 2,
+          "timePressure": 0,
+          "mechanicLoad": 2,
+          "coordination": 2
+        }
+      },
+      "officialProgressEligible": false,
+      "validation": "compiled-candidate-not-playtested",
+      "topology": {
+        "assumption": "Static wall connectivity and initial enemy retention only; not a solution, timing or enjoyment proof.",
+        "inaccessibleRetainedCells": 0,
+        "optimisticCoverageCeiling": 1,
+        "diagnostics": []
+      },
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "code": "disconnected-foundations",
+          "componentIds": [
+            0,
+            1098,
+            1129
+          ]
+        },
+        {
+          "severity": "warning",
+          "code": "team-candidate-not-playtested"
+        }
+      ]
+    }
+  },
+  "horizonProject": {
+    "format": "ContentProjectV1",
+    "id": "uniqueness-pilot-horizon-versus",
+    "revision": "greybox-1",
+    "name": "Uniqueness pilot · Horizon Versus · unapproved",
+    "policyId": "journey-trail-impact-v3",
+    "actorCatalogId": "journey-actors-v9",
+    "difficultyCatalogId": "journey-difficulty-v2",
+    "maps": [
+      {
+        "format": "MapDesignV1",
+        "id": "uniqueness-pilot-horizon-race-map",
+        "revision": "greybox-1",
+        "name": "Two-bank time trial",
+        "width": 72,
+        "height": 36,
+        "walls": [
+          {
+            "x": 27,
+            "y": 15,
+            "w": 18,
+            "h": 2
+          }
+        ],
+        "foundations": [
+          {
+            "x": 10,
+            "y": 11,
+            "w": 7,
+            "h": 3
+          },
+          {
+            "x": 55,
+            "y": 22,
+            "w": 7,
+            "h": 3
+          }
+        ],
+        "terrain": [],
+        "spawns": [
+          {
+            "id": "home",
+            "x": 12.5,
+            "y": 0.5
+          }
+        ]
+      }
+    ],
+    "missions": [
+      {
+        "format": "MissionDesignV1",
+        "id": "uniqueness-pilot-horizon-race",
+        "revision": "greybox-1",
+        "name": "Two-bank time trial",
+        "map": {
+          "id": "uniqueness-pilot-horizon-race-map",
+          "revision": "greybox-1"
+        },
+        "spawnId": "home",
+        "modes": [
+          "versus"
+        ],
+        "actors": [
+          {
+            "id": "north-keeper",
+            "role": "field-keeper",
+            "tier": "measured",
+            "x": 35.5,
+            "y": 8.5,
+            "heading": [
+              1,
+              0
+            ]
+          },
+          {
+            "id": "south-keeper",
+            "role": "field-keeper",
+            "tier": "measured",
+            "x": 36.5,
+            "y": 27.5,
+            "heading": [
+              -1,
+              0
+            ]
+          }
+        ],
+        "objectives": [],
+        "bonuses": [],
+        "coverage": 0.62,
+        "timeLimitSeconds": 0,
+        "design": {
+          "routeDecision": "Bank the nearby island for a reliable start, or take the longer outside return to claim a wider region before the opponent?",
+          "lesson": "A competitive time trial offers a short reliable bank and a longer high-value opening; both players receive the same course.",
+          "counterplay": "Watch the keeper above each shelf; use either foundation to shorten an unfinished cut. The middle wall never banks a line.",
+          "captureConsequence": "A conservative first enclosure creates safe staging ground; a successful longer route can overtake that head start.",
+          "introduces": [
+            "foundations"
+          ],
+          "practices": [
+            "enemy-seeded-closure"
+          ],
+          "combines": [],
+          "memorableMoment": "The two racers reach different amounts of safe territory from different opening commitments.",
+          "mastery": "Complete the same course using both the conservative and long-return openings without losing a life.",
+          "durationSeconds": [
+            35,
+            85
+          ],
+          "difficulty": {
+            "band": 2,
+            "planning": 2,
+            "execution": 2,
+            "threatDensity": 2,
+            "timePressure": 0,
+            "mechanicLoad": 2,
+            "coordination": 0
+          }
+        },
+        "presentation": {
+          "themeId": "horizon-actors-v1",
+          "backgroundAssetId": null
+        }
+      }
+    ],
+    "campaigns": [
+      {
+        "format": "CampaignDesignV1",
+        "id": "uniqueness-pilot-horizon",
+        "revision": "greybox-1",
+        "name": "Horizon race review",
+        "band": 2,
+        "missionIds": [
+          "uniqueness-pilot-horizon-race"
+        ]
+      }
+    ],
+    "packs": [
+      {
+        "format": "PackDesignV1",
+        "id": "uniqueness-pilot-horizon",
+        "revision": "greybox-1",
+        "name": "Horizon race review",
+        "campaignIds": [
+          "uniqueness-pilot-horizon"
+        ]
+      }
+    ],
+    "assets": []
+  },
+  "pilots": [
+    {
+      "id": "uniqueness-pilot-illustrated-orchard",
+      "classification": "tooling",
+      "approval": "pending-human-playtest",
+      "baselineLevelId": "orchard-crossing",
+      "brief": {
+        "id": "illustrated-orchard",
+        "name": "Orchard return lanes",
+        "replaces": "original-fpv-orchard-crossing",
+        "decision": "Bank the short middle cut, then choose the upper western entrance or the lower eastern entrance to reach the required far-side marker.",
+        "difference": "Long staggered partitions create opposite entry directions; the required eastern capture prevents a near-side-only clear.",
+        "walls": [
+          {
+            "x": 18,
+            "y": 1,
+            "w": 2,
+            "h": 24
+          },
+          {
+            "x": 51,
+            "y": 11,
+            "w": 2,
+            "h": 24
+          }
+        ],
+        "objectives": [
+          {
+            "id": "east-marker",
+            "x": 61.5,
+            "y": 7.5,
+            "required": true
+          }
+        ],
+        "terrain": [
+          {
+            "id": "west-mud",
+            "kind": "slow",
+            "x": 7,
+            "y": 25,
+            "w": 18,
+            "h": 3
+          }
+        ],
+        "powerups": [
+          {
+            "id": "west-speed",
+            "kind": "player-speed",
+            "x": 9.5,
+            "y": 29.5
+          }
+        ],
+        "coverage": 0.68,
+        "durationSeconds": [
+          45,
+          100
+        ],
+        "artBrief": "A high-angle orchard loading yard: three irregular apricot terraces, a small eastern packing shed and a curved irrigation pond, with a low morning sun. No watchtower, courtyard or skyline reused from another mission."
+      },
+      "level": {
+        "version": "xonix-level.v4",
+        "revision": "greybox-1",
+        "width": 72,
+        "height": 36,
+        "themeId": "fpv",
+        "encounter": null,
+        "objectives": [
+          {
+            "id": "east-marker",
+            "x": 61.5,
+            "y": 7.5,
+            "required": true
+          }
+        ],
+        "supplies": [],
+        "signalZones": [],
+        "hangars": [],
+        "id": "uniqueness-pilot-illustrated-orchard",
+        "name": "Orchard return lanes",
+        "spawn": {
+          "x": 36.5,
+          "y": 0.5
+        },
+        "walls": [
+          {
+            "x": 18,
+            "y": 1,
+            "w": 2,
+            "h": 24
+          },
+          {
+            "x": 51,
+            "y": 11,
+            "w": 2,
+            "h": 24
+          }
+        ],
+        "enemies": [
+          {
+            "id": "orchard-hunter",
+            "type": "bouncer",
+            "x": 17.5,
+            "y": 7.5,
+            "vx": 9,
+            "vy": 6,
+            "radius": 0.3
+          },
+          {
+            "id": "east-crosser",
+            "type": "bouncer",
+            "x": 60.5,
+            "y": 29.5,
+            "vx": -8,
+            "vy": -7,
+            "radius": 0.3
+          },
+          {
+            "id": "south-crosser",
+            "type": "bouncer",
+            "x": 29.5,
+            "y": 30.5,
+            "vx": 7,
+            "vy": -8,
+            "radius": 0.3
+          },
+          {
+            "id": "orchard-contour",
+            "type": "contour-patrol",
+            "edge": {
+              "x": 1,
+              "y": 26,
+              "side": "west"
+            },
+            "clockwise": true,
+            "speed": 6,
+            "radius": 0.25
+          }
+        ],
+        "goal": {
+          "coverage": 0.68
+        },
+        "rules": {
+          "lives": 3,
+          "moveSpeed": 15,
+          "boostMultiplier": 1,
+          "respawnSeconds": 0.7,
+          "graceSeconds": 0.8,
+          "playerRadius": 0.18,
+          "pointsPerCell": 10,
+          "objectivePoints": 500,
+          "timeMedals": [
+            34,
+            58
+          ],
+          "switchCooldownSeconds": 2,
+          "timeLimitSeconds": 180,
+          "cutTimeLimitSeconds": 0,
+          "maxTrailCells": 0,
+          "stopOnCapture": true
+        },
+        "metadata": {
+          "title": "Orchard return lanes",
+          "description": "UNAPPROVED GREYBOX. Bank the short middle cut, then choose the upper western entrance or the lower eastern entrance to reach the required far-side marker.",
+          "author": "RevealLine",
+          "license": "Original project content",
+          "rightsStatus": "Review-only original gameplay design; no replacement artwork commissioned."
+        },
+        "classic": {
+          "version": "classic.v1",
+          "terrain": [
+            {
+              "id": "west-mud",
+              "kind": "slow",
+              "x": 7,
+              "y": 25,
+              "w": 18,
+              "h": 3
+            }
+          ],
+          "powerups": [
+            {
+              "id": "west-speed",
+              "kind": "player-speed",
+              "x": 9.5,
+              "y": 29.5
+            }
+          ],
+          "lineImpact": {
+            "version": "line-impact.v1",
+            "speed": 24
+          },
+          "arcadeActions": {
+            "version": "arcade-actions.v1"
+          },
+          "enemyPressure": {
+            "version": "enemy-pressure.v1",
+            "actors": [
+              {
+                "id": "orchard-hunter",
+                "mode": "trail-pursuit",
+                "senseRadius": 16,
+                "scanTicks": 60,
+                "warningTicks": 90,
+                "commitTicks": 144,
+                "cooldownTicks": 300,
+                "leadTicks": 0
+              }
+            ]
+          }
+        }
+      },
+      "evidence": {
+        "scope": "First bank only; full clear, alternate-route balance and human approval remain pending.",
+        "attempts": [
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": null,
+            "side": "left",
+            "status": "running",
+            "ticks": 469,
+            "seconds": 3.908333333333333,
+            "livesLost": 0,
+            "coverage": 0.0148861646234676,
+            "closure": {
+              "tick": 469,
+              "coverage": 0.0148861646234676
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 469
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:94668f14f33cfebf03d187d104079fc909e3967636e38320664af8eb73e480e9"
+          },
+          {
+            "seed": 17,
+            "column": 6.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 455,
+            "seconds": 3.7916666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 455,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 49
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:6ecea6cb7494b0c457c9eb2e9db4a3554c797b9baa65c2d808a6a248d681e32b"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 594,
+            "seconds": 4.95,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 594,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 270
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:6d21b5e8e204d9727438033ada9ca679d14f236b667279aa92dbda03b8aa0791"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 553,
+            "seconds": 4.608333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 553,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 392
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0adcc3fdc7d73a68ed439592cb9fb83d0434114bfc7e1c6af624db93653197aa"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 305,
+            "seconds": 2.5416666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 305,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 144
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:3152cd2191a84133d3607f0f6e23df9ff93a97549207967b30b11bb5b7c0e278"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 530,
+            "seconds": 4.416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 530,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 206
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:2a4d8785b37db434b9eb40b10d6138a4b9818cf7aa5703a9d0746f8c7565d827"
+          },
+          {
+            "seed": 17,
+            "column": 66.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 427,
+            "seconds": 3.558333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 427,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 21
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:f002aabf81412ad1c450e49424826eed11173fa02b163ea0d22483a9f1aa1d53"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.021015761821366025,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.021015761821366025
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:88c17d34ee0c0230622d651b21abeacf2e093e9d621a026efe907acc3f41062c"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 561,
+            "seconds": 4.675,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 561,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 182
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:1ae47cd05c8984ab3a78199a6c1949c68876d55ec7367d2a68e9054d7eadfa69"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.03677758318739054,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.03677758318739054
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:c8a450e881acaf07e97f85f27263df270d7541a7fc4785e062cfce6ce95143fe"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 570,
+            "seconds": 4.75,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 570,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 150
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:8d2fc7268cc09c371071ab8a6b516c499ed7769718d10df2799efdd50a85226e"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 1191,
+            "seconds": 9.925,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 1191,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 975
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4d24695fdddb68d62f1477ad2a464c433d5da58c08fbac3a1457fdd08fe9d35a"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 846,
+            "seconds": 7.05,
+            "livesLost": 0,
+            "coverage": 0.08231173380035026,
+            "closure": {
+              "tick": 846,
+              "coverage": 0.08231173380035026
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 630
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:3866c776e01900608b585cec705e65e7f252a8451252a137c19f0e206cc78e2c"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 1167,
+            "seconds": 9.725,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 1167,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 910
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:51e37ffbfd73568be61369903ae1bbe26c6731199b9263df0ee1444ce984927c"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 887,
+            "seconds": 7.391666666666667,
+            "livesLost": 0,
+            "coverage": 0.14404553415061297,
+            "closure": {
+              "tick": 887,
+              "coverage": 0.14404553415061297
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 630
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:6119973020a57ed43a275074bba8f4888ada7cd435ca7f5bf08d248e37db668b"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 1191,
+            "seconds": 9.925,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 1191,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 1136
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:121dbff0d98570540c052ee65cb47877a9026ae540832a2b01d7223c1d6a1534"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 395,
+            "seconds": 3.2916666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 395,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 340
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:9fd988194ac190483a421de10cdf8c36246c49ac2e92faf521e972299e3995fa"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 1124,
+            "seconds": 9.366666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 1124,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 1028
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0056f8455e45faa6ec13349909756d2fdcaf29a64e403ec24158e60d24a05f26"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 337,
+            "seconds": 2.808333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 337,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 241
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:61d732dd814255409f5b7e449469a62e5d4346a47943f97da7ce2641662b561c"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 1200,
+            "seconds": 10,
+            "livesLost": 0,
+            "coverage": 0,
+            "closure": null,
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 984
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:c692795a59d748f26369036477e721d7de712cd5ac0faa79f1433457fd2140f8"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 395,
+            "seconds": 3.2916666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 395,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 179
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:419f3d6d59081f746551be98fac1a142941b7e655354112ab454e1026eda6767"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 340,
+            "seconds": 2.8333333333333335,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 340,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 83
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:c6c44814e1dd1e485c796d1480edad299b9704d6fb71a85b4c492734c419cd7e"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 337,
+            "seconds": 2.808333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 337,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 80
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:326a1acec8ad6d7c6dcf1b3d1f3b1b0111a5f084cab0621d821d659bde031c02"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 463,
+            "seconds": 3.8583333333333334,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 463,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 84
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:596a48acc0edc1d165d2e038953e90ae72dbcb43e3320a535aae20b0485a945e"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 510,
+            "seconds": 4.25,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 510,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 131
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:05f0a6aa3f030c4caf09fb296c4eedde568cdbfe8f9c8e96012e269162dea01a"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 514,
+            "seconds": 4.283333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 514,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 94
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:5d2b6b02663e3011a23cfa5702a9e15c8b9654aa7ec435cf6d6f541a485bb2c9"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 530,
+            "seconds": 4.416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 530,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 110
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:ce6861719e46b0c38e2c72510062199eb13a10b9ce6c5df0b8418c7550248f21"
+          }
+        ],
+        "seedChecks": [
+          {
+            "seed": 1,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 887,
+            "seconds": 7.391666666666667,
+            "livesLost": 0,
+            "coverage": 0.14404553415061297,
+            "closure": {
+              "tick": 887,
+              "coverage": 0.14404553415061297
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 630
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:574f7a155bbfbb4ccffa0eca7ecfd904d805bf48f478876e1b80553eee54fe2b"
+          },
+          {
+            "seed": 2,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 673,
+            "seconds": 5.608333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 673,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 416
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:008602e5036875bb32e602951e919af0856617aad47889eabedc90607559ecd2"
+          },
+          {
+            "seed": 1,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 846,
+            "seconds": 7.05,
+            "livesLost": 0,
+            "coverage": 0.08231173380035026,
+            "closure": {
+              "tick": 846,
+              "coverage": 0.08231173380035026
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 630
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:db581ef2ee3b45babacac35a5da36eca0ef40b59e40f2a5642d5daad0cbb90bf"
+          },
+          {
+            "seed": 2,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 576,
+            "seconds": 4.8,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 576,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 360
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:2b87ab24ef51c424bb518a67d535b2cae79f631fc3d3014e0ff6a1d1778048eb"
+          }
+        ],
+        "successfulOpenings": 5
+      }
+    },
+    {
+      "id": "uniqueness-pilot-woven-crossings",
+      "classification": "tooling",
+      "approval": "pending-human-playtest",
+      "baselineLevelId": "orchard-crossing",
+      "brief": {
+        "id": "woven-crossings",
+        "name": "Woven crossing bands",
+        "replaces": "original-atlas-woven-dawn",
+        "decision": "Cross the slow middle ribbon directly while the hunter is cooling, or travel around its end to approach two required markers from opposite banks.",
+        "difference": "A slow transversal and opposed target captures make return timing and approach direction matter instead of reusing Orchard Crossing’s side walls.",
+        "walls": [
+          {
+            "x": 5,
+            "y": 10,
+            "w": 20,
+            "h": 2
+          },
+          {
+            "x": 47,
+            "y": 23,
+            "w": 20,
+            "h": 2
+          }
+        ],
+        "objectives": [
+          {
+            "id": "north-thread",
+            "x": 57.5,
+            "y": 7.5,
+            "required": true
+          },
+          {
+            "id": "south-thread",
+            "x": 14.5,
+            "y": 28.5,
+            "required": true
+          }
+        ],
+        "terrain": [
+          {
+            "id": "woven-ribbon",
+            "kind": "slow",
+            "x": 25,
+            "y": 16,
+            "w": 22,
+            "h": 3
+          }
+        ],
+        "powerups": [
+          {
+            "id": "east-freeze",
+            "kind": "enemy-freeze",
+            "x": 61.5,
+            "y": 18.5
+          }
+        ],
+        "coverage": 0.62,
+        "durationSeconds": [
+          55,
+          110
+        ],
+        "artBrief": "A river weaving workshop seen from a low upstream bank: a suspended loom, curved willow roots, hanging linen and a distant wooden footbridge. Use a new perspective and silhouette, with researched Ukrainian textile motifs rather than a recoloured orchard."
+      },
+      "level": {
+        "version": "xonix-level.v4",
+        "revision": "greybox-1",
+        "width": 72,
+        "height": 36,
+        "themeId": "fpv",
+        "encounter": null,
+        "objectives": [
+          {
+            "id": "north-thread",
+            "x": 57.5,
+            "y": 7.5,
+            "required": true
+          },
+          {
+            "id": "south-thread",
+            "x": 14.5,
+            "y": 28.5,
+            "required": true
+          }
+        ],
+        "supplies": [],
+        "signalZones": [],
+        "hangars": [],
+        "id": "uniqueness-pilot-woven-crossings",
+        "name": "Woven crossing bands",
+        "spawn": {
+          "x": 36.5,
+          "y": 0.5
+        },
+        "walls": [
+          {
+            "x": 5,
+            "y": 10,
+            "w": 20,
+            "h": 2
+          },
+          {
+            "x": 47,
+            "y": 23,
+            "w": 20,
+            "h": 2
+          }
+        ],
+        "enemies": [
+          {
+            "id": "orchard-hunter",
+            "type": "bouncer",
+            "x": 17.5,
+            "y": 7.5,
+            "vx": 9,
+            "vy": 6,
+            "radius": 0.3
+          },
+          {
+            "id": "east-crosser",
+            "type": "bouncer",
+            "x": 60.5,
+            "y": 29.5,
+            "vx": -8,
+            "vy": -7,
+            "radius": 0.3
+          },
+          {
+            "id": "south-crosser",
+            "type": "bouncer",
+            "x": 29.5,
+            "y": 30.5,
+            "vx": 7,
+            "vy": -8,
+            "radius": 0.3
+          },
+          {
+            "id": "orchard-contour",
+            "type": "contour-patrol",
+            "edge": {
+              "x": 1,
+              "y": 26,
+              "side": "west"
+            },
+            "clockwise": true,
+            "speed": 6,
+            "radius": 0.25
+          }
+        ],
+        "goal": {
+          "coverage": 0.62
+        },
+        "rules": {
+          "lives": 3,
+          "moveSpeed": 15,
+          "boostMultiplier": 1,
+          "respawnSeconds": 0.7,
+          "graceSeconds": 0.8,
+          "playerRadius": 0.18,
+          "pointsPerCell": 10,
+          "objectivePoints": 500,
+          "timeMedals": [
+            34,
+            58
+          ],
+          "switchCooldownSeconds": 2,
+          "timeLimitSeconds": 180,
+          "cutTimeLimitSeconds": 0,
+          "maxTrailCells": 0,
+          "stopOnCapture": true
+        },
+        "metadata": {
+          "title": "Woven crossing bands",
+          "description": "UNAPPROVED GREYBOX. Cross the slow middle ribbon directly while the hunter is cooling, or travel around its end to approach two required markers from opposite banks.",
+          "author": "RevealLine",
+          "license": "Original project content",
+          "rightsStatus": "Review-only original gameplay design; no replacement artwork commissioned."
+        },
+        "classic": {
+          "version": "classic.v1",
+          "terrain": [
+            {
+              "id": "woven-ribbon",
+              "kind": "slow",
+              "x": 25,
+              "y": 16,
+              "w": 22,
+              "h": 3
+            }
+          ],
+          "powerups": [
+            {
+              "id": "east-freeze",
+              "kind": "enemy-freeze",
+              "x": 61.5,
+              "y": 18.5
+            }
+          ],
+          "lineImpact": {
+            "version": "line-impact.v1",
+            "speed": 24
+          },
+          "arcadeActions": {
+            "version": "arcade-actions.v1"
+          },
+          "enemyPressure": {
+            "version": "enemy-pressure.v1",
+            "actors": [
+              {
+                "id": "orchard-hunter",
+                "mode": "trail-pursuit",
+                "senseRadius": 16,
+                "scanTicks": 60,
+                "warningTicks": 90,
+                "commitTicks": 144,
+                "cooldownTicks": 300,
+                "leadTicks": 0
+              }
+            ]
+          }
+        }
+      },
+      "evidence": {
+        "scope": "First bank only; full clear, alternate-route balance and human approval remain pending.",
+        "attempts": [
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 263,
+            "seconds": 2.1916666666666664,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 263,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 263
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:743f9fd5ee90fbf45c94393b1627d80944a61ae636484acdaa75bdd12301aa28"
+          },
+          {
+            "seed": 17,
+            "column": 6.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 455,
+            "seconds": 3.7916666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 455,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 49
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:6ecea6cb7494b0c457c9eb2e9db4a3554c797b9baa65c2d808a6a248d681e32b"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 561,
+            "seconds": 4.675,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 561,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 237
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:a011e90f9ea60fef9f685710b61fa235463b5784ebec676abc0f74e77d85fa09"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 439,
+            "seconds": 3.658333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 439,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 278
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0c8b8d7c4d57513d7d0a0eadfb39adc01e96ac0430f29f2d8863754c43355265"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 305,
+            "seconds": 2.5416666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 305,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 144
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:3152cd2191a84133d3607f0f6e23df9ff93a97549207967b30b11bb5b7c0e278"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 530,
+            "seconds": 4.416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 530,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 206
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:2a4d8785b37db434b9eb40b10d6138a4b9818cf7aa5703a9d0746f8c7565d827"
+          },
+          {
+            "seed": 17,
+            "column": 66.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 612,
+            "seconds": 5.1,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 612,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 206
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:53b252df5db4fa4cfc4d7adc777cbe8e0b7cf9e13ad10b6d7365a80625392506"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.020869565217391306,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.020869565217391306
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:38dd6c5b82321aaf383277099a18c6d1c0d05ecec57884ecb7372b561dc37069"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 594,
+            "seconds": 4.95,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 594,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 215
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:8252ec5948ce268b31432285aa8596333b10ee171c2ce63cf08645b865cff7c0"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.036521739130434785,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.036521739130434785
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:e3046c1cfd417a7cd6f74593cfa572ec544082456e37c883cf4faea0d39974eb"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 594,
+            "seconds": 4.95,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 594,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 174
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:637e41ca13eccb53dd9f2dec3e29fd0006b4af57cbad5ad3204087f6decf15df"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 268
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:65195b6538aa5a0c78ccdff27b6ecca1b6a34437119ca1e404f02984c527d2fd"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 268
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:7962411abd2e7a1df37b37a9f2b0b5160ce1ab4e4b7df27242315111bf71867b"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 227
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:bed2eacb92b09dbdea256bed38e074b06902a159d33452a51ca5c2683fc6d6bc"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 227
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:5a9442fc7e55ea8fc30337e79603e7d6c1e7d617a4271da0fecab4ea6d5b3a80"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 145,
+            "seconds": 1.2083333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 145,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 90
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:8669ec6194b902e59da10bfd3269552ceffb82e3a67167f24383c9a83aee758b"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 272,
+            "seconds": 2.2666666666666666,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 272,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 217
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4e972abfed3b80f11a71fc3db99e4533b4f0fcde2610df30a9b89f633c4d791a"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 175
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:e8dc2586e9e3b0c999cb750451a5f3c4513b19107a1e2bead8e8f79f02c9e135"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 175
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:b779a4f2e04cd6220976971c5965d3b93ee410219720eaddbcf83143cb86a7b2"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 407,
+            "seconds": 3.3916666666666666,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 407,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 191
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:d7682cba1fc9c998ea77b849a4d62abecd87c98968e8968c2cac1dad7a310341"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 395,
+            "seconds": 3.2916666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 395,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 179
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:419f3d6d59081f746551be98fac1a142941b7e655354112ab454e1026eda6767"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 329,
+            "seconds": 2.7416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 329,
+                "cause": "enemy-player"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 72
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4f2a6f83167e9ebabcbfe29efc0e8066a921c26da97fe4fbb1ec66318d71d0c3"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 337,
+            "seconds": 2.808333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 337,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 80
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:326a1acec8ad6d7c6dcf1b3d1f3b1b0111a5f084cab0621d821d659bde031c02"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 463,
+            "seconds": 3.8583333333333334,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 463,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 84
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:596a48acc0edc1d165d2e038953e90ae72dbcb43e3320a535aae20b0485a945e"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 524,
+            "seconds": 4.366666666666666,
+            "livesLost": 0,
+            "coverage": 0.019130434782608695,
+            "closure": {
+              "tick": 524,
+              "coverage": 0.019130434782608695
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 145
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:cd3571e86839ae4b8994d4f6b562520c2eb5da047ceff9ccec318fd044cf82d6"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 514,
+            "seconds": 4.283333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 514,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 94
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:5d2b6b02663e3011a23cfa5702a9e15c8b9654aa7ec435cf6d6f541a485bb2c9"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 530,
+            "seconds": 4.416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 530,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 110
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:ce6861719e46b0c38e2c72510062199eb13a10b9ce6c5df0b8418c7550248f21"
+          }
+        ],
+        "seedChecks": [
+          {
+            "seed": 1,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.036521739130434785,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.036521739130434785
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:bb05d67be94e8aee2119dde8fdbaee9a0e272a4f56c0bfba60660b205475dd66"
+          },
+          {
+            "seed": 2,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.036521739130434785,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.036521739130434785
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:298bbc00c561338393225c7f2d81de51ccb27184a8bc0c3c4f9d605ff50cec9e"
+          },
+          {
+            "seed": 1,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.020869565217391306,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.020869565217391306
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:f91c33d5bc4cc8219fc5dcbe584bb5a833b6f6c570c620380035369d2d529b09"
+          },
+          {
+            "seed": 2,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.020869565217391306,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.020869565217391306
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:572fe3a23b34b49c3562bf022c69af40198fb046e9291cb97c5beb65be0ba6b7"
+          }
+        ],
+        "successfulOpenings": 3
+      }
+    },
+    {
+      "id": "uniqueness-pilot-arcade-delivery",
+      "classification": "tooling",
+      "approval": "pending-human-playtest",
+      "baselineLevelId": "orchard-crossing",
+      "brief": {
+        "id": "arcade-delivery",
+        "name": "Last delivery circuit",
+        "replaces": "original-retro-midnight-arcade",
+        "decision": "Reach the northern delivery marker first, or spend the opening detour collecting speed before committing to the southern return under a finite clock.",
+        "difference": "A two-ended delivery circuit, asymmetrical side pockets and optional speed detour replace free coverage expansion.",
+        "walls": [
+          {
+            "x": 1,
+            "y": 10,
+            "w": 25,
+            "h": 2
+          },
+          {
+            "x": 46,
+            "y": 24,
+            "w": 25,
+            "h": 2
+          }
+        ],
+        "objectives": [
+          {
+            "id": "delivery-north",
+            "x": 59.5,
+            "y": 5.5,
+            "required": true
+          },
+          {
+            "id": "delivery-south",
+            "x": 10.5,
+            "y": 30.5,
+            "required": true
+          }
+        ],
+        "terrain": [],
+        "powerups": [
+          {
+            "id": "alley-speed",
+            "kind": "player-speed",
+            "x": 9.5,
+            "y": 18.5
+          }
+        ],
+        "coverage": 0.55,
+        "timeLimitSeconds": 90,
+        "durationSeconds": [
+          40,
+          85
+        ],
+        "artBrief": "A rain-soaked 1994 bicycle courier depot viewed from inside a repair alcove, with a red cargo bicycle, stacked parcels, an illuminated wall clock and reflected amber street lights. Avoid arcade-cabinet or train-platform compositions."
+      },
+      "level": {
+        "version": "xonix-level.v4",
+        "revision": "greybox-1",
+        "width": 72,
+        "height": 36,
+        "themeId": "fpv",
+        "encounter": null,
+        "objectives": [
+          {
+            "id": "delivery-north",
+            "x": 59.5,
+            "y": 5.5,
+            "required": true
+          },
+          {
+            "id": "delivery-south",
+            "x": 10.5,
+            "y": 30.5,
+            "required": true
+          }
+        ],
+        "supplies": [],
+        "signalZones": [],
+        "hangars": [],
+        "id": "uniqueness-pilot-arcade-delivery",
+        "name": "Last delivery circuit",
+        "spawn": {
+          "x": 36.5,
+          "y": 0.5
+        },
+        "walls": [
+          {
+            "x": 1,
+            "y": 10,
+            "w": 25,
+            "h": 2
+          },
+          {
+            "x": 46,
+            "y": 24,
+            "w": 25,
+            "h": 2
+          }
+        ],
+        "enemies": [
+          {
+            "id": "orchard-hunter",
+            "type": "bouncer",
+            "x": 17.5,
+            "y": 7.5,
+            "vx": 9,
+            "vy": 6,
+            "radius": 0.3
+          },
+          {
+            "id": "east-crosser",
+            "type": "bouncer",
+            "x": 60.5,
+            "y": 29.5,
+            "vx": -8,
+            "vy": -7,
+            "radius": 0.3
+          },
+          {
+            "id": "south-crosser",
+            "type": "bouncer",
+            "x": 29.5,
+            "y": 30.5,
+            "vx": 7,
+            "vy": -8,
+            "radius": 0.3
+          },
+          {
+            "id": "orchard-contour",
+            "type": "contour-patrol",
+            "edge": {
+              "x": 1,
+              "y": 26,
+              "side": "west"
+            },
+            "clockwise": true,
+            "speed": 6,
+            "radius": 0.25
+          }
+        ],
+        "goal": {
+          "coverage": 0.55
+        },
+        "rules": {
+          "lives": 3,
+          "moveSpeed": 15,
+          "boostMultiplier": 1,
+          "respawnSeconds": 0.7,
+          "graceSeconds": 0.8,
+          "playerRadius": 0.18,
+          "pointsPerCell": 10,
+          "objectivePoints": 500,
+          "timeMedals": [
+            34,
+            58
+          ],
+          "switchCooldownSeconds": 2,
+          "timeLimitSeconds": 90,
+          "cutTimeLimitSeconds": 0,
+          "maxTrailCells": 0,
+          "stopOnCapture": true
+        },
+        "metadata": {
+          "title": "Last delivery circuit",
+          "description": "UNAPPROVED GREYBOX. Reach the northern delivery marker first, or spend the opening detour collecting speed before committing to the southern return under a finite clock.",
+          "author": "RevealLine",
+          "license": "Original project content",
+          "rightsStatus": "Review-only original gameplay design; no replacement artwork commissioned."
+        },
+        "classic": {
+          "version": "classic.v1",
+          "terrain": [],
+          "powerups": [
+            {
+              "id": "alley-speed",
+              "kind": "player-speed",
+              "x": 9.5,
+              "y": 18.5
+            }
+          ],
+          "lineImpact": {
+            "version": "line-impact.v1",
+            "speed": 24
+          },
+          "arcadeActions": {
+            "version": "arcade-actions.v1"
+          },
+          "enemyPressure": {
+            "version": "enemy-pressure.v1",
+            "actors": [
+              {
+                "id": "orchard-hunter",
+                "mode": "trail-pursuit",
+                "senseRadius": 16,
+                "scanTicks": 60,
+                "warningTicks": 90,
+                "commitTicks": 144,
+                "cooldownTicks": 300,
+                "leadTicks": 0
+              }
+            ]
+          }
+        }
+      },
+      "evidence": {
+        "scope": "First bank only; full clear, alternate-route balance and human approval remain pending.",
+        "attempts": [
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 271
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0c8cdcf02e22fef488180b7dc1d02494e29fe2cc24ddc08e8bf75653013caa6f"
+          },
+          {
+            "seed": 17,
+            "column": 6.5,
+            "depth": null,
+            "side": "left",
+            "status": "running",
+            "ticks": 1200,
+            "seconds": 10,
+            "livesLost": 0,
+            "coverage": 0,
+            "closure": null,
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 794
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:a39871d1be926c3035819fce2101169094c8b92014d9af485c32c8871695dc3d"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": null,
+            "side": "left",
+            "status": "running",
+            "ticks": 1200,
+            "seconds": 10,
+            "livesLost": 0,
+            "coverage": 0,
+            "closure": null,
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 876
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:5fd9768f70b23341e6f5376fe011885b7d732aef93227e07f14fead84b4de508"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 439,
+            "seconds": 3.658333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 439,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 278
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0c8b8d7c4d57513d7d0a0eadfb39adc01e96ac0430f29f2d8863754c43355265"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 305,
+            "seconds": 2.5416666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 305,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 144
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:3152cd2191a84133d3607f0f6e23df9ff93a97549207967b30b11bb5b7c0e278"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 530,
+            "seconds": 4.416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 530,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 206
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:2a4d8785b37db434b9eb40b10d6138a4b9818cf7aa5703a9d0746f8c7565d827"
+          },
+          {
+            "seed": 17,
+            "column": 66.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 612,
+            "seconds": 5.1,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 612,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 206
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:53b252df5db4fa4cfc4d7adc777cbe8e0b7cf9e13ad10b6d7365a80625392506"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.021052631578947368,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.021052631578947368
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:9f266ce95a25eca72eb65e669653ce871e022ab3d8c2df880662af07db2c5c2c"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 943,
+            "seconds": 7.858333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 943,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 564
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:d06928996024da879f43fd8cf8de57f90d5db1342b586a14ecbab26ab885fdd5"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.03684210526315789,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.03684210526315789
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:80a88ead5984d3a0c8e93511ce1e26e25bfeee3a76a269d85bab03345612d7a4"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 1084,
+            "seconds": 9.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 1084,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 664
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:9375c8b6cbc40b59129dd71008162a207e13ab5920577754925caab521929660"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 268
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:65195b6538aa5a0c78ccdff27b6ecca1b6a34437119ca1e404f02984c527d2fd"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 268
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:7962411abd2e7a1df37b37a9f2b0b5160ce1ab4e4b7df27242315111bf71867b"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 227
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:bed2eacb92b09dbdea256bed38e074b06902a159d33452a51ca5c2683fc6d6bc"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 484,
+            "seconds": 4.033333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 484,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 227
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:5a9442fc7e55ea8fc30337e79603e7d6c1e7d617a4271da0fecab4ea6d5b3a80"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 145,
+            "seconds": 1.2083333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 145,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 90
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:8669ec6194b902e59da10bfd3269552ceffb82e3a67167f24383c9a83aee758b"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 272,
+            "seconds": 2.2666666666666666,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 272,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 217
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4e972abfed3b80f11a71fc3db99e4533b4f0fcde2610df30a9b89f633c4d791a"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 175
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:e8dc2586e9e3b0c999cb750451a5f3c4513b19107a1e2bead8e8f79f02c9e135"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 175
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:b779a4f2e04cd6220976971c5965d3b93ee410219720eaddbcf83143cb86a7b2"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 407,
+            "seconds": 3.3916666666666666,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 407,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 191
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:d7682cba1fc9c998ea77b849a4d62abecd87c98968e8968c2cac1dad7a310341"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 395,
+            "seconds": 3.2916666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 395,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 179
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:419f3d6d59081f746551be98fac1a142941b7e655354112ab454e1026eda6767"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 329,
+            "seconds": 2.7416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 329,
+                "cause": "enemy-player"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 72
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4f2a6f83167e9ebabcbfe29efc0e8066a921c26da97fe4fbb1ec66318d71d0c3"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 337,
+            "seconds": 2.808333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 337,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 80
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:326a1acec8ad6d7c6dcf1b3d1f3b1b0111a5f084cab0621d821d659bde031c02"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 463,
+            "seconds": 3.8583333333333334,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 463,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 84
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:596a48acc0edc1d165d2e038953e90ae72dbcb43e3320a535aae20b0485a945e"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 524,
+            "seconds": 4.366666666666666,
+            "livesLost": 0,
+            "coverage": 0.01929824561403509,
+            "closure": {
+              "tick": 524,
+              "coverage": 0.01929824561403509
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 145
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:55542656e194204295f744e9a0e5a0938e18281c7a60f888bf16ada0ec263733"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 514,
+            "seconds": 4.283333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 514,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 94
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:5d2b6b02663e3011a23cfa5702a9e15c8b9654aa7ec435cf6d6f541a485bb2c9"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 530,
+            "seconds": 4.416666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 530,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 110
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:ce6861719e46b0c38e2c72510062199eb13a10b9ce6c5df0b8418c7550248f21"
+          }
+        ],
+        "seedChecks": [
+          {
+            "seed": 1,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.03684210526315789,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.03684210526315789
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4852c8e78e95424050fdd732b1c9476274d4e16d906594e198b3c1ba2a249ca9"
+          },
+          {
+            "seed": 2,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.03684210526315789,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.03684210526315789
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:99e7431e74d1418756dcac53ab38fe3d6fe3eea3ae4344dd677a689e28678b25"
+          },
+          {
+            "seed": 1,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.021052631578947368,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.021052631578947368
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:075978817ff9c5ca7355960460dc181627cad1e1fce9db39c8280bd9ef05e8cf"
+          },
+          {
+            "seed": 2,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.021052631578947368,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.021052631578947368
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:2e529e8326ff024d4bf09961e528acf16fb82bb2896bee81cb8d9aa3b6e7e247"
+          }
+        ],
+        "successfulOpenings": 3
+      }
+    },
+    {
+      "id": "uniqueness-pilot-shared-branches",
+      "classification": "tooling",
+      "approval": "pending-human-playtest",
+      "baselineLevelId": "orchard-crossing",
+      "brief": {
+        "id": "shared-branches",
+        "name": "Shared market branches",
+        "replaces": "original-spend-shared-harbor",
+        "decision": "Secure one side’s required exchange and expand from that return, or build a central connection first and alternate between both branches.",
+        "difference": "Four interrupted shelves create two target branches sharing a middle corridor; either side can be approached first but both must be completed.",
+        "walls": [
+          {
+            "x": 14,
+            "y": 8,
+            "w": 18,
+            "h": 2
+          },
+          {
+            "x": 40,
+            "y": 8,
+            "w": 18,
+            "h": 2
+          },
+          {
+            "x": 14,
+            "y": 26,
+            "w": 18,
+            "h": 2
+          },
+          {
+            "x": 40,
+            "y": 26,
+            "w": 18,
+            "h": 2
+          }
+        ],
+        "objectives": [
+          {
+            "id": "exchange-west",
+            "x": 8.5,
+            "y": 18.5,
+            "required": true
+          },
+          {
+            "id": "exchange-east",
+            "x": 63.5,
+            "y": 18.5,
+            "required": true
+          }
+        ],
+        "terrain": [
+          {
+            "id": "north-delay",
+            "kind": "slow",
+            "x": 30,
+            "y": 3,
+            "w": 12,
+            "h": 3
+          }
+        ],
+        "powerups": [
+          {
+            "id": "central-freeze",
+            "kind": "enemy-freeze",
+            "x": 36.5,
+            "y": 20.5
+          }
+        ],
+        "coverage": 0.7,
+        "durationSeconds": [
+          55,
+          120
+        ],
+        "artBrief": "A circular community market beneath a timber canopy, seen from the central tea stall, with four distinct radial stalls, baskets and one sunlit fabric awning. No skyline, harbour or warehouse layout from the existing collection."
+      },
+      "level": {
+        "version": "xonix-level.v4",
+        "revision": "greybox-1",
+        "width": 72,
+        "height": 36,
+        "themeId": "fpv",
+        "encounter": null,
+        "objectives": [
+          {
+            "id": "exchange-west",
+            "x": 8.5,
+            "y": 18.5,
+            "required": true
+          },
+          {
+            "id": "exchange-east",
+            "x": 63.5,
+            "y": 18.5,
+            "required": true
+          }
+        ],
+        "supplies": [],
+        "signalZones": [],
+        "hangars": [],
+        "id": "uniqueness-pilot-shared-branches",
+        "name": "Shared market branches",
+        "spawn": {
+          "x": 36.5,
+          "y": 0.5
+        },
+        "walls": [
+          {
+            "x": 14,
+            "y": 8,
+            "w": 18,
+            "h": 2
+          },
+          {
+            "x": 40,
+            "y": 8,
+            "w": 18,
+            "h": 2
+          },
+          {
+            "x": 14,
+            "y": 26,
+            "w": 18,
+            "h": 2
+          },
+          {
+            "x": 40,
+            "y": 26,
+            "w": 18,
+            "h": 2
+          }
+        ],
+        "enemies": [
+          {
+            "id": "orchard-hunter",
+            "type": "bouncer",
+            "x": 17.5,
+            "y": 7.5,
+            "vx": 9,
+            "vy": 6,
+            "radius": 0.3
+          },
+          {
+            "id": "east-crosser",
+            "type": "bouncer",
+            "x": 60.5,
+            "y": 29.5,
+            "vx": -8,
+            "vy": -7,
+            "radius": 0.3
+          },
+          {
+            "id": "south-crosser",
+            "type": "bouncer",
+            "x": 29.5,
+            "y": 30.5,
+            "vx": 7,
+            "vy": -8,
+            "radius": 0.3
+          },
+          {
+            "id": "orchard-contour",
+            "type": "contour-patrol",
+            "edge": {
+              "x": 1,
+              "y": 26,
+              "side": "west"
+            },
+            "clockwise": true,
+            "speed": 6,
+            "radius": 0.25
+          }
+        ],
+        "goal": {
+          "coverage": 0.7
+        },
+        "rules": {
+          "lives": 3,
+          "moveSpeed": 15,
+          "boostMultiplier": 1,
+          "respawnSeconds": 0.7,
+          "graceSeconds": 0.8,
+          "playerRadius": 0.18,
+          "pointsPerCell": 10,
+          "objectivePoints": 500,
+          "timeMedals": [
+            34,
+            58
+          ],
+          "switchCooldownSeconds": 2,
+          "timeLimitSeconds": 180,
+          "cutTimeLimitSeconds": 0,
+          "maxTrailCells": 0,
+          "stopOnCapture": true
+        },
+        "metadata": {
+          "title": "Shared market branches",
+          "description": "UNAPPROVED GREYBOX. Secure one side’s required exchange and expand from that return, or build a central connection first and alternate between both branches.",
+          "author": "RevealLine",
+          "license": "Original project content",
+          "rightsStatus": "Review-only original gameplay design; no replacement artwork commissioned."
+        },
+        "classic": {
+          "version": "classic.v1",
+          "terrain": [
+            {
+              "id": "north-delay",
+              "kind": "slow",
+              "x": 30,
+              "y": 3,
+              "w": 12,
+              "h": 3
+            }
+          ],
+          "powerups": [
+            {
+              "id": "central-freeze",
+              "kind": "enemy-freeze",
+              "x": 36.5,
+              "y": 20.5
+            }
+          ],
+          "lineImpact": {
+            "version": "line-impact.v1",
+            "speed": 24
+          },
+          "arcadeActions": {
+            "version": "arcade-actions.v1"
+          },
+          "enemyPressure": {
+            "version": "enemy-pressure.v1",
+            "actors": [
+              {
+                "id": "orchard-hunter",
+                "mode": "trail-pursuit",
+                "senseRadius": 16,
+                "scanTicks": 60,
+                "warningTicks": 90,
+                "commitTicks": 144,
+                "cooldownTicks": 300,
+                "leadTicks": 0
+              }
+            ]
+          }
+        }
+      },
+      "evidence": {
+        "scope": "First bank only; full clear, alternate-route balance and human approval remain pending.",
+        "attempts": [
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 271
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0c8cdcf02e22fef488180b7dc1d02494e29fe2cc24ddc08e8bf75653013caa6f"
+          },
+          {
+            "seed": 17,
+            "column": 6.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 455,
+            "seconds": 3.7916666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 455,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 49
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:6ecea6cb7494b0c457c9eb2e9db4a3554c797b9baa65c2d808a6a248d681e32b"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 594,
+            "seconds": 4.95,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 594,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 270
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:6d21b5e8e204d9727438033ada9ca679d14f236b667279aa92dbda03b8aa0791"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 440,
+            "seconds": 3.6666666666666665,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 440,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 279
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:a491c1a6cf6e5926c06f4c21f081cdc1bb0d2a0cd6422846d705923d935a79ca"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 523,
+            "seconds": 4.358333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 523,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 362
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:d9a02a49e919c517968f6feb95aa599f386fa9a94adcce5ee7ec0374c2f390cb"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 691,
+            "seconds": 5.758333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 691,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 367
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:f5590e3953072c3e3b5e08c8fae8521ea85b5074abf7ac9b4978de61d9c89efa"
+          },
+          {
+            "seed": 17,
+            "column": 66.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 665,
+            "seconds": 5.541666666666667,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 665,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 406
+              },
+              {
+                "direction": "down",
+                "ticks": 259
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:6f62c2dea10026bdc17cb5d5d88d9a7dbc6b6bd44df296b962588a574c4620a9"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 537,
+            "seconds": 4.475,
+            "livesLost": 0,
+            "coverage": 0.02146690518783542,
+            "closure": {
+              "tick": 537,
+              "coverage": 0.02146690518783542
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:d4c9850a03283c952a73eb6c7450664c08fcb5f3c8936da4cbc03d442bc31669"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 594,
+            "seconds": 4.95,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 594,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 215
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:8252ec5948ce268b31432285aa8596333b10ee171c2ce63cf08645b865cff7c0"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.03756708407871199,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.03756708407871199
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:f97509fc06c9c18c32470df09f5781875ef3b2ce20f2b4cf0688ec5636d3394a"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 594,
+            "seconds": 4.95,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 594,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 174
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:637e41ca13eccb53dd9f2dec3e29fd0006b4af57cbad5ad3204087f6decf15df"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 494,
+            "seconds": 4.116666666666666,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 494,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 278
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:1e2290bf457f310d984288155bcb139e3c04587642ffa7945f16c17d327124a3"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 375,
+            "seconds": 3.125,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 375,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 159
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:942a4062ef47ebdfb746d53eca19b3347e5104a3afa4329b97ad13098ee9d65f"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 494,
+            "seconds": 4.116666666666666,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 494,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 237
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:ba65ea648b7a997f3ac261ce07e5cb888c775d9b017f465dc0f5417530e83ae5"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 494,
+            "seconds": 4.116666666666666,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 494,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 237
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:55aae97146f12a20c48dc6a6a9eae059e67c03dcd9132b7ab1707326351cb3b3"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 225,
+            "seconds": 1.875,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 225,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 75
+              },
+              {
+                "direction": "left",
+                "ticks": 150
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:097cef0d5dccf3ce67c19a75eb4d54257b570d60e76831902b59df1093711566"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 255,
+            "seconds": 2.125,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 255,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 75
+              },
+              {
+                "direction": "right",
+                "ticks": 180
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:07a04b03c9593f3902258d3a621cf32f52f241b9c30400968050b6ba6a1a8148"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 136
+              },
+              {
+                "direction": "left",
+                "ticks": 135
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:abcb27d5f59f6b8f648f755a5a675308e036a8c8e5bbbb5ab6e53bb2ba621543"
+          },
+          {
+            "seed": 17,
+            "column": 36.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 271,
+            "seconds": 2.2583333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 271,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 136
+              },
+              {
+                "direction": "right",
+                "ticks": 135
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:51209b9b3f112c048296030c70ce83fbcbd26ea45272fff405cc266653f7db72"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 453,
+            "seconds": 3.775,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 453,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 237
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:b2ff4a6085a028b400b914571755e9645ff56375ad73979d558d4af2419316e2"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 524,
+            "seconds": 4.366666666666666,
+            "livesLost": 0,
+            "coverage": 0.04114490161001789,
+            "closure": {
+              "tick": 524,
+              "coverage": 0.04114490161001789
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 308
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:b21e35805c7cc94690b59a4cf448bbd61c1ce8e22095319c209fa97c284bbd38"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 421,
+            "seconds": 3.5083333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 421,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 164
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:61515554cb0a3809dbfad57db6ecca748ebe93675bb00d3049d0a8351f3f099c"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 565,
+            "seconds": 4.708333333333333,
+            "livesLost": 0,
+            "coverage": 0.0129695885509839,
+            "closure": {
+              "tick": 565,
+              "coverage": 0.0129695885509839
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 308
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:103b63b88c45ffe5e4a6ae2f62ddb8e0e15f8ec79223548cf3178078ca304660"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 988,
+            "seconds": 8.233333333333333,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 988,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 609
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:cb2607f32ed14e9cb44ebcd050e390a2164ebf375af2a6790bdb1aca9108298a"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 524,
+            "seconds": 4.366666666666666,
+            "livesLost": 0,
+            "coverage": 0.01967799642218247,
+            "closure": {
+              "tick": 524,
+              "coverage": 0.01967799642218247
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 145
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:34b2185765f70c9a46cad2a7e16a1b2212fb1a5e4a9b943206435f0e6337e153"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 936,
+            "seconds": 7.8,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 936,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 516
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:31b6aac36a5a883606968405c38839b87507fcc90985acce4a776448d06bdcca"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 565,
+            "seconds": 4.708333333333333,
+            "livesLost": 0,
+            "coverage": 0.03443649373881932,
+            "closure": {
+              "tick": 565,
+              "coverage": 0.03443649373881932
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 145
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4ffee8649d0c5f1bb235ae8956c5a1e588771935f371e9aa6b9e1ffc47f0d4b2"
+          }
+        ],
+        "seedChecks": [
+          {
+            "seed": 1,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 381,
+            "seconds": 3.175,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 381,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 165
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:99e42affec983adb9b8aaa91a5be99cd579a1645a6c84b4717e2bae5835b9a81"
+          },
+          {
+            "seed": 2,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "respawning",
+            "ticks": 375,
+            "seconds": 3.125,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 375,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 159
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:de751660911e72c508a06ad2a8309531f1fbb2ff1189bbfc2d49df234af9fbb3"
+          },
+          {
+            "seed": 1,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.03756708407871199,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.03756708407871199
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:4a39aad497e5fdc9d2872f5cb44710c60eab75b93cd16a09d3d0540d8cfbb102"
+          },
+          {
+            "seed": 2,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 578,
+            "seconds": 4.816666666666666,
+            "livesLost": 0,
+            "coverage": 0.03756708407871199,
+            "closure": {
+              "tick": 578,
+              "coverage": 0.03756708407871199
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 324
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 158
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:abb406438d3a3e2c947a1e67b4d26c8cd452040b26aefe53e8aa2d549118861f"
+          }
+        ],
+        "successfulOpenings": 6
+      }
+    },
+    {
+      "id": "uniqueness-pilot-horizon-race",
+      "classification": "tooling",
+      "approval": "pending-human-playtest",
+      "mode": "versus",
+      "level": {
+        "version": "xonix-level.v5",
+        "id": "uniqueness-pilot-horizon-race",
+        "revision": "greybox-1",
+        "name": "Two-bank time trial",
+        "width": 72,
+        "height": 36,
+        "spawn": {
+          "x": 12.5,
+          "y": 0.5
+        },
+        "walls": [
+          {
+            "x": 27,
+            "y": 15,
+            "w": 18,
+            "h": 2
+          }
+        ],
+        "foundations": [
+          {
+            "x": 10,
+            "y": 11,
+            "w": 7,
+            "h": 3
+          },
+          {
+            "x": 55,
+            "y": 22,
+            "w": 7,
+            "h": 3
+          }
+        ],
+        "goal": {
+          "coverage": 0.62
+        },
+        "encounter": null,
+        "classic": {
+          "version": "classic.v1",
+          "terrain": [],
+          "powerups": [],
+          "arcadeActions": {
+            "version": "arcade-actions.v1"
+          },
+          "lineImpact": {
+            "version": "line-impact.v1",
+            "speed": 24
+          }
+        },
+        "enemies": [
+          {
+            "id": "north-keeper",
+            "type": "bouncer",
+            "x": 35.5,
+            "y": 8.5,
+            "vx": 3.36,
+            "vy": 0
+          },
+          {
+            "id": "south-keeper",
+            "type": "bouncer",
+            "x": 36.5,
+            "y": 27.5,
+            "vx": -3.36,
+            "vy": 0
+          }
+        ],
+        "objectives": [],
+        "supplies": [],
+        "rules": {
+          "lives": 3,
+          "moveSpeed": 10,
+          "boostMultiplier": 1.5,
+          "respawnSeconds": 0.65,
+          "graceSeconds": 1,
+          "playerRadius": 0.18,
+          "pointsPerCell": 10,
+          "objectivePoints": 500,
+          "timeMedals": [
+            90,
+            150
+          ],
+          "switchCooldownSeconds": 2,
+          "timeLimitSeconds": 0,
+          "cutTimeLimitSeconds": 0,
+          "maxTrailCells": 0,
+          "stopOnCapture": true
+        },
+        "signalZones": [],
+        "hangars": [
+          {
+            "id": "home-hangar",
+            "x": 12.5,
+            "y": 0.5,
+            "radius": 2
+          }
+        ]
+      },
+      "brief": {
+        "name": "Two-bank time trial",
+        "decision": "Bank the nearby island for a reliable start, or take the longer outside return to claim a wider region before the opponent?",
+        "difference": "Replaces the Solo opening’s open rectangle/one keeper with two staging foundations, a central obstacle and two watched approaches; distinct competitive routing without copying the Solo course.",
+        "durationSeconds": [
+          35,
+          85
+        ],
+        "artBrief": "A low view from a seaside cable-ferry platform, with two raised landing shelters, taut cables crossing turquoise water, distant angular cliffs and an overcast silver sky. Avoid the Solo sandstone observatory composition."
+      },
+      "evidence": {
+        "scope": "First bank only; full clear, alternate-route balance and human approval remain pending.",
+        "attempts": [
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": null,
+            "side": "left",
+            "status": "running",
+            "ticks": 143,
+            "seconds": 1.1916666666666667,
+            "livesLost": 0,
+            "coverage": 0.004344048653344918,
+            "closure": {
+              "tick": 143,
+              "coverage": 0.004344048653344918
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 143
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:52ee8cc57a8a0d9dc42b194686d88e02483ac73c392cb58d551fd8f290534a68"
+          },
+          {
+            "seed": 17,
+            "column": 6.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 433,
+            "seconds": 3.6083333333333334,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 433,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "left",
+                "ticks": 80
+              },
+              {
+                "direction": "down",
+                "ticks": 353
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:3eef33e9cda7ae44d290c991cd2dfeb73b463bea3b58cf12a02ff76eef0a8fda"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": null,
+            "side": "left",
+            "status": "running",
+            "ticks": 630,
+            "seconds": 5.25,
+            "livesLost": 0,
+            "coverage": 0.014769765421372719,
+            "closure": {
+              "tick": 630,
+              "coverage": 0.014769765421372719
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 469
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:8547d467d7a04eba0964b553dc1008d97f345b0006e2275cfa3d8ed4c94653c9"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 630,
+            "seconds": 5.25,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 630,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 487
+              },
+              {
+                "direction": "down",
+                "ticks": 143
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:85638dca795b6266ad9cc6ab9deddc16a721e05b2266ea7c4e5965f0eae5e9e9"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": null,
+            "side": "left",
+            "status": "running",
+            "ticks": 942,
+            "seconds": 7.85,
+            "livesLost": 0,
+            "coverage": 0.009122502172024326,
+            "closure": {
+              "tick": 942,
+              "coverage": 0.009122502172024326
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 650
+              },
+              {
+                "direction": "down",
+                "ticks": 292
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:bb46cdf7e5dec14c872404562b2852f5d2c07b5404474a40dbda0024fcc92746"
+          },
+          {
+            "seed": 17,
+            "column": 66.5,
+            "depth": null,
+            "side": "left",
+            "status": "respawning",
+            "ticks": 1125,
+            "seconds": 9.375,
+            "livesLost": 1,
+            "coverage": 0,
+            "closure": null,
+            "failures": [
+              {
+                "tick": 1125,
+                "cause": "enemy-trail"
+              }
+            ],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 731
+              },
+              {
+                "direction": "down",
+                "ticks": 394
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:a63c22ba4bb272444eee300907fe1c7364a48dba722311bf92e67e8c3bea0d57"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 212,
+            "seconds": 1.7666666666666666,
+            "livesLost": 0,
+            "coverage": 0.020851433536055605,
+            "closure": {
+              "tick": 212,
+              "coverage": 0.020851433536055605
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 157
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:f455215057ca4bda87005cb2d14654e4b5df45adf5fd30986d5202806685f1ba"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 850,
+            "seconds": 7.083333333333333,
+            "livesLost": 0,
+            "coverage": 0.10251954821894005,
+            "closure": {
+              "tick": 850,
+              "coverage": 0.10251954821894005
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:cdfa0c6a9bc8c2947f1b9275a07f7c234e92e22a9d449c3bb52fe1f9640fde6f"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 253,
+            "seconds": 2.1083333333333334,
+            "livesLost": 0,
+            "coverage": 0.036490008688097306,
+            "closure": {
+              "tick": 253,
+              "coverage": 0.036490008688097306
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 157
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:af16e1af73e398a8656d79b710880c4638d3f81d89fed704acad3ee4e3b16d61"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.17940920938314509,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.17940920938314509
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0fca04a6bfe9b2a7d5896c2a5ee4a9ce6668dfb91f11b23627ffc08d528a1d8a"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 534,
+            "seconds": 4.45,
+            "livesLost": 0,
+            "coverage": 0.04170286707211121,
+            "closure": {
+              "tick": 534,
+              "coverage": 0.04170286707211121
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 318
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:b01faf744cc94bf662fed5927812f552c32d9f7a2430a7606a35c8eb90199667"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 850,
+            "seconds": 7.083333333333333,
+            "livesLost": 0,
+            "coverage": 0.08166811468288444,
+            "closure": {
+              "tick": 850,
+              "coverage": 0.08166811468288444
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 634
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:547ced2a78b6d3a7be99b6589a48d34c77c5e844f593083e940ec13c1ae94806"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 575,
+            "seconds": 4.791666666666667,
+            "livesLost": 0,
+            "coverage": 0.07298001737619461,
+            "closure": {
+              "tick": 575,
+              "coverage": 0.07298001737619461
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 318
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:1925741fd3c79c972a743cff84c805d2af05e593e675d9db739058c10946faa1"
+          },
+          {
+            "seed": 17,
+            "column": 24.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.1429192006950478,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.1429192006950478
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 161
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 634
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:51fa118973a7cad9577ff4523a0cf5bfbb9653ea0d9f81552660d68ba20a9b0b"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 212,
+            "seconds": 1.7666666666666666,
+            "livesLost": 0,
+            "coverage": 0.020851433536055605,
+            "closure": {
+              "tick": 212,
+              "coverage": 0.020851433536055605
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 157
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:f455215057ca4bda87005cb2d14654e4b5df45adf5fd30986d5202806685f1ba"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 850,
+            "seconds": 7.083333333333333,
+            "livesLost": 0,
+            "coverage": 0.10251954821894005,
+            "closure": {
+              "tick": 850,
+              "coverage": 0.10251954821894005
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:cdfa0c6a9bc8c2947f1b9275a07f7c234e92e22a9d449c3bb52fe1f9640fde6f"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 253,
+            "seconds": 2.1083333333333334,
+            "livesLost": 0,
+            "coverage": 0.036490008688097306,
+            "closure": {
+              "tick": 253,
+              "coverage": 0.036490008688097306
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 157
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:af16e1af73e398a8656d79b710880c4638d3f81d89fed704acad3ee4e3b16d61"
+          },
+          {
+            "seed": 17,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.17940920938314509,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.17940920938314509
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:0fca04a6bfe9b2a7d5896c2a5ee4a9ce6668dfb91f11b23627ffc08d528a1d8a"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 1186,
+            "seconds": 9.883333333333333,
+            "livesLost": 0,
+            "coverage": 0.08340573414422242,
+            "closure": {
+              "tick": 1186,
+              "coverage": 0.08340573414422242
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 487
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 644
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:315e2237d216a29be17ddc9c9dc72a6284eb3fef7b7b5c3873896700fdcb6869"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 850,
+            "seconds": 7.083333333333333,
+            "livesLost": 0,
+            "coverage": 0.03996524761077324,
+            "closure": {
+              "tick": 850,
+              "coverage": 0.03996524761077324
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 487
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 308
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:ec235cfaf97770def4308328755863eb3d86b682ea64a06a37d3ceac37821cf0"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 1200,
+            "seconds": 10,
+            "livesLost": 0,
+            "coverage": 0,
+            "closure": null,
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 487
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 617
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:383c35c84e5afb16fc22f569912cd6b1224263a47f346c61117d15b4101e4a5e"
+          },
+          {
+            "seed": 17,
+            "column": 48.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.06993918331885317,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.06993918331885317
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 487
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 308
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:88ac889ec24437a72446e2f5512c91bf1146fe0bfaca8ecab91ef673f48d65f2"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 1200,
+            "seconds": 10,
+            "livesLost": 0,
+            "coverage": 0,
+            "closure": null,
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 650
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "left",
+                "ticks": 495
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:38e312218ee055431fc1f67ba0468455e76c1798524b665152b2750c47da9474"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 4.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 850,
+            "seconds": 7.083333333333333,
+            "livesLost": 0,
+            "coverage": 0.019113814074717638,
+            "closure": {
+              "tick": 850,
+              "coverage": 0.019113814074717638
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 650
+              },
+              {
+                "direction": "down",
+                "ticks": 55
+              },
+              {
+                "direction": "right",
+                "ticks": 145
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:9174b283ec52f1b4a62d02af69233a034f4eed88a81424ddd944baeb4a723ccb"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "left",
+            "status": "running",
+            "ticks": 1200,
+            "seconds": 10,
+            "livesLost": 0,
+            "coverage": 0,
+            "closure": null,
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 650
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "left",
+                "ticks": 454
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:a1fe94468b896d0eb8467b9b9b4bf66dbb1db1435259a8269364f16331de38ea"
+          },
+          {
+            "seed": 17,
+            "column": 60.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.03344917463075586,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.03344917463075586
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "right",
+                "ticks": 650
+              },
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 145
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:b7d1230f2d1e9ec0239967feb1cda0c387d074f54c376d497fe835055f4de29c"
+          }
+        ],
+        "seedChecks": [
+          {
+            "seed": 1,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.17940920938314509,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.17940920938314509
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:e9e3498ec6dd6838965332637dd02b0ff7bdcff011a0121daaa18f54bc113ca6"
+          },
+          {
+            "seed": 2,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.17940920938314509,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.17940920938314509
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:80d25fd24c988676d47f68de82f550d1145121ef6bd57a8a81681899efe9701a"
+          },
+          {
+            "seed": 1,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.17940920938314509,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.17940920938314509
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:e9e3498ec6dd6838965332637dd02b0ff7bdcff011a0121daaa18f54bc113ca6"
+          },
+          {
+            "seed": 2,
+            "column": 12.5,
+            "depth": 7.5,
+            "side": "right",
+            "status": "running",
+            "ticks": 891,
+            "seconds": 7.425,
+            "livesLost": 0,
+            "coverage": 0.17940920938314509,
+            "closure": {
+              "tick": 891,
+              "coverage": 0.17940920938314509
+            },
+            "failures": [],
+            "replayVerified": true,
+            "segments": [
+              {
+                "direction": "down",
+                "ticks": 96
+              },
+              {
+                "direction": "right",
+                "ticks": 795
+              }
+            ],
+            "evidenceIdentity": "revealline-pilot-proof.v1:80d25fd24c988676d47f68de82f550d1145121ef6bd57a8a81681899efe9701a"
+          }
+        ],
+        "successfulOpenings": 20
+      }
+    }
+  ],
+  "reviewCriteria": [
+    "Play each candidate with neutral artwork using its exact runtime level; compare two viable openings and finish complete runs.",
+    "Record route choices, failures and completion times across Standard, Gentle and Expert; confirm the intended decision is observable.",
+    "Verify cooperative Twin landings remains a distinct shared-return decision. It is a control, not a redesign request.",
+    "Review the five artwork composition briefs before image generation. No commissioned image or automatic hash difference counts as design approval.",
+    "Keep these tooling identities outside current catalogues until full route evidence and human review are recorded."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "format": "revealline-optional-tactical-chapter.v1",
+  "distribution": "manual-optional-import",
+  "includedInDefaultBuild": false,
+  "mode": "Tactical",
+  "id": "fpv-route-choices",
+  "version": "1.0.0",
+  "path": "authoring/library/fpv-route-choices/packs/fpv-route-choices.json",
+  "bytes": 11949780,
+  "sha256": "589543f693e650355216aa702844a7726b7cd6e318900b8583702fd0650ae989",
+  "normalizedBytes": 11944013,
+  "normalizedSha256": "db6e45beb68d3d7cc03444a8516f3ba2096debd011e36d7b7693e7dd3551ac6e",
+  "libraryBytes": 11944058,
+  "campaignKey": "fpv-route-choices/1/4a7f15a0b07d557d",
+  "themeId": "fpv",
+  "maps": [
+    {
+      "sourceLevelId": "challenge-forked-approach",
+      "levelId": "route-choices-foundry",
+      "imageId": "split-signal-foundry",
+      "name": "Split Signal Foundry",
+      "classId": "scout",
+      "imageBytes": 2765609,
+      "imageSha256": "dfc6398db48c897df00254f4516704b44b134a9bfbb4bd993d659996077f0749",
+      "fit": "contain"
+    },
+    {
+      "sourceLevelId": "challenge-crosswind-depot",
+      "levelId": "route-choices-depot",
+      "imageId": "crosswind-depot",
+      "name": "Crosswind Depot",
+      "classId": "bomber",
+      "imageBytes": 3136739,
+      "imageSha256": "c7cd2e7d98ecea4b02a63a46da583e2cdd3bcfe627fb929c06235e39fca2ee04",
+      "fit": "contain"
+    },
+    {
+      "sourceLevelId": "challenge-signal-switchback",
+      "levelId": "route-choices-switchback",
+      "imageId": "signal-switchback",
+      "name": "Signal Switchback",
+      "classId": "fiber",
+      "imageBytes": 3047928,
+      "imageSha256": "2f454f321578454b79d6f01205b1e25ab2364d1d1cbb58fb98b9a8197f6ae345",
+      "fit": "contain"
+    }
+  ],
+  "sourcePins": {
+    "authoring/library/tactical-challenges/build.mjs": "5286b9ad70c9db945579c63bb1e57de9ccefc4e45f4af0ecb3636f5bb72c3457",
+    "authoring/library/tactical-challenges/routes.json": "e8b9429a562a445025f03c5375eaab6dd3853bd73b29789859ee2dd2089f95f4",
+    "authoring/library/four-worlds-chapters/verify-images.mjs": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34",
+    "authoring/library/challenge-chapter-art/provenance.json": "4bea88060c4d5b8b6e484e6ba85afebe4b22ff315ab03c327b8916321caa9d18",
+    "authoring/library/challenge-chapter-art/prompts.json": "c5de9cd5e54800529b94c84a5ff3fcab21730b87b5c1cc21363db7105752545b",
+    "game/content/themes.json": "93582f7d9ba53753106df7b63928f086820fc0f68357d3c08f26c0b89fb84774",
+    "game/content/classes.json": "2f776b0dfd099478ffe78465c7b602cd98896206a222a0ed7fd4405a4a643f84",
+    "authoring/library/tactical-challenges/scenarios/challenge-crosswind-depot.json": "659f65e975d374b7ec6e493d9e2405d6f7bb1dae2e7f410731370be7a6badaf0",
+    "authoring/library/tactical-challenges/scenarios/challenge-forked-approach.json": "aacad1980854527a20a57d1d6abcd6bf6d9adef3088b02a89e8aa6d541d419bc",
+    "authoring/library/tactical-challenges/scenarios/challenge-signal-switchback.json": "8902ea649b427ef65145408f853d81e272bf7cc5627b5a2cc3cd8a3c835cc07c",
+    "authoring/library/challenge-chapter-art/originals/crosswind-depot.png": "c7cd2e7d98ecea4b02a63a46da583e2cdd3bcfe627fb929c06235e39fca2ee04",
+    "authoring/library/challenge-chapter-art/originals/signal-switchback.png": "2f454f321578454b79d6f01205b1e25ab2364d1d1cbb58fb98b9a8197f6ae345",
+    "authoring/library/challenge-chapter-art/originals/split-signal-foundry.png": "dfc6398db48c897df00254f4516704b44b134a9bfbb4bd993d659996077f0749"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "format": "revealline-source-art-derivatives.v1",
+  "purpose": "Review previews only; original PNGs remain the future compiler inputs.",
+  "originalManifestSha256": "27f31bdaa91db438066107e221ed77f16ad5325873b1512566edb7881475e6b1",
+  "recipe": {
+    "renderer": "@napi-rs/canvas",
+    "moduleSha256": "bbdad32cab670261983ea56d4625fc7d07b1382f8bb7d6d31232bb2834861597",
+    "operation": "Full-frame proportional resample; imageSmoothingEnabled=false",
+    "width": 384,
+    "height": 192,
+    "format": "jpeg",
+    "quality": 90,
+    "crop": false,
+    "originalChanges": false
+  },
+  "validation": "Each encoded JPEG decoded through the same existing Canvas library; dimensions and decoded RGBA hash recorded. Portable verifier checks JPEG structure/hash and all source associations, not cross-platform encoder identity.",
+  "images": [
+    {
+      "cellId": "countercurrent/offset-docks/fpv",
+      "originalPath": "originals/offset-docks-fpv.png",
+      "originalSha256": "93a52b10713a088729964e86c14c2999325885f28825455f335ea1e6edff7842",
+      "path": "thumbnails/offset-docks-fpv.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 39385,
+      "sha256": "5977827adfe97a801812e3fbd167574e835da9a1393af9552a49392616919a5c",
+      "decodedRGBASha256": "c0afc8a1024a55bac506eb4a047ac12d075181686a718f5d64f0b4db8da473eb"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/fpv",
+      "originalPath": "originals/sandbar-braid-fpv.png",
+      "originalSha256": "71c6ec5acd362215811107b783ea1e8942c8c45bee20f43002b00dfb3ed2e5b0",
+      "path": "thumbnails/sandbar-braid-fpv.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 34470,
+      "sha256": "7b5dbf1ddac028985dc6e7a65ef86b5f1546a71d15a8b0fbfc91635340caf8a7",
+      "decodedRGBASha256": "62cfd41624b514f8151091f583ad13b14b85c1fae3aa70c086c35f20271e2637"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/fpv",
+      "originalPath": "originals/crossing-watch-fpv.png",
+      "originalSha256": "6a191c14e5de093a69e5845af2e39c3246feac3f9eae1ed8e19341214a7a2811",
+      "path": "thumbnails/crossing-watch-fpv.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 25699,
+      "sha256": "4c1dabd78624468a5868327687af5864108e9b9c96c7d9fc9b4a07578219383b",
+      "decodedRGBASha256": "6c7f2220903ca26cdf2601258eb655bb00da055268ecf6ae57637d2862081911"
+    },
+    {
+      "cellId": "countercurrent/offset-docks/ukraine",
+      "originalPath": "originals/offset-docks-ukraine.png",
+      "originalSha256": "697a6980465d20d93c6b5e51a38eb05855910d019b6d4a1ab8ce88081b5ba195",
+      "path": "thumbnails/offset-docks-ukraine.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 45623,
+      "sha256": "7fd3875179c062e33356a8065d175ff6a4691c88e2d726c21241bd1631b13059",
+      "decodedRGBASha256": "f6cd96a997874f0b5c01bb5188c08481df250db2ed13f7253a6f439a2c70d348"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/ukraine",
+      "originalPath": "originals/sandbar-braid-ukraine.png",
+      "originalSha256": "6ffd72d30d946af28111434e666a86cf5977d81de2beb33d8d0c547a33c02a24",
+      "path": "thumbnails/sandbar-braid-ukraine.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 48025,
+      "sha256": "22fbf30067af23851cc227492f013e989f4b2ddd703ca278c857e6b33bdf287f",
+      "decodedRGBASha256": "95348449eaa393a69f54e439bd020209936c8cc7d46991444cbd39914825e143"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/ukraine",
+      "originalPath": "originals/crossing-watch-ukraine.png",
+      "originalSha256": "2ac1edcab88ec92348e7c3118503b109724bb551f7a2a290532f2a0355ae29d4",
+      "path": "thumbnails/crossing-watch-ukraine.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 35394,
+      "sha256": "5fc06e74cc98027aafe52e2b4a46848a3c7f312a180d9202174661d608467eca",
+      "decodedRGBASha256": "d6fdf32ec9f945a744750976b8f931bcc7fb062cadaaae5f8da995dd07a56eaa"
+    },
+    {
+      "cellId": "countercurrent/offset-docks/retro",
+      "originalPath": "originals/offset-docks-retro.png",
+      "originalSha256": "26fa92a40658fe2499655e7c4aa9ea29cd03060c9967d93945960d8f1c12c16e",
+      "path": "thumbnails/offset-docks-retro.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 42020,
+      "sha256": "4ca5634fe76193a030f6b20e7c4960af8afa7d7b0af4b3478b2fc70109e6d9eb",
+      "decodedRGBASha256": "8b0ae70c159b69636dec1e804f79a3d30a4e800c9615b63241cd64ab978adcd9"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/retro",
+      "originalPath": "originals/sandbar-braid-retro.png",
+      "originalSha256": "1ebdd0087fa096feff52c568587c55a1c8a41aca95b7b3ccfa143d1aa7d1e3bf",
+      "path": "thumbnails/sandbar-braid-retro.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 39129,
+      "sha256": "54102bdf93820d655e1f1156e9fcfa40f896c7be4cc67eb7c3258b969da6dcd3",
+      "decodedRGBASha256": "3ec79a77bb232f5c1380cebf4061b7ce6918a291436fe117ef9513e38c00682f"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/retro",
+      "originalPath": "originals/crossing-watch-retro.png",
+      "originalSha256": "498dca62d17a4e59c486bbea7a023b9e8aa11cf69cba169092a4671d0fde8e99",
+      "path": "thumbnails/crossing-watch-retro.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 36250,
+      "sha256": "ec0944d7cb367c03a9d65afb1b917441a960bcc79ca2ae0ca518437c9db0b7a7",
+      "decodedRGBASha256": "2d43a87994ece065d404eea710ca8f5364394feb4843e054b2dbde9b5d9e0db7"
+    }
+  ]
+}

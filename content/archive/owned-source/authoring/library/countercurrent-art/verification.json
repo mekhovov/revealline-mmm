@@ -1,0 +1,539 @@
+{
+  "format": "revealline-source-art-verification.v1",
+  "baseCommit": "58f96f3fa0189d60230d4797b4d456b1804167fa",
+  "sourceCandidates": 12,
+  "newGeometries": 0,
+  "runtimeBindings": 0,
+  "totalOriginalBytes": 31692501,
+  "totalThumbnailBytes": 483255,
+  "originalMethod": "Unchanged bounded RGB8 PNG decoder: full chunk CRC/order, inflate and scanline reconstruction, exact original bytes/hash/dimensions. Record mode requires all default tool files to match.",
+  "thumbnailMethod": "Declared 384x192 proportional nearest-neighbor JPEG review copies; exact bytes/hash/header/source identity here. The recorded Canvas production run decoded every JPEG and recorded its RGBA hash; portable verification does not replay an optional platform encoder.",
+  "limits": "Authoring candidates only. No runtime/catalog/production-count adoption, native/partial-reveal/gameplay/animation/device/human quality or rights certification. Root visual review is separate.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5552,
+      "sha256": "58f9b5ae620949b1070e0ba165e07bf5d776113f54f2ead53c7f2d412ec6bc66"
+    },
+    {
+      "path": "derivatives.json",
+      "bytes": 7315,
+      "sha256": "b0224ff32cc1885504323184bb575409e696a44b556c451afebe3de35858bbe4"
+    },
+    {
+      "path": "generation-results.json",
+      "bytes": 16317,
+      "sha256": "31a1785c53536964a548b483b48f0250041d0d42090b520d1f5ecef44ee2e8fc"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5120,
+      "sha256": "43ab3a42f490c0eed8e8f6d0ef5df429282d50f382c642dd345c5240ba0111b8"
+    },
+    {
+      "path": "layout-briefs.json",
+      "bytes": 1715,
+      "sha256": "697a54b85573fc13e2604c2eb5cc8f192fed43036f42a4927b98be2ecb3f3435"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 9279,
+      "sha256": "27f31bdaa91db438066107e221ed77f16ad5325873b1512566edb7881475e6b1"
+    },
+    {
+      "path": "originals/crossing-watch-fpv.png",
+      "bytes": 1953105,
+      "sha256": "6a191c14e5de093a69e5845af2e39c3246feac3f9eae1ed8e19341214a7a2811"
+    },
+    {
+      "path": "originals/crossing-watch-retro.png",
+      "bytes": 2426061,
+      "sha256": "498dca62d17a4e59c486bbea7a023b9e8aa11cf69cba169092a4671d0fde8e99"
+    },
+    {
+      "path": "originals/crossing-watch-ukraine.png",
+      "bytes": 2447624,
+      "sha256": "2ac1edcab88ec92348e7c3118503b109724bb551f7a2a290532f2a0355ae29d4"
+    },
+    {
+      "path": "originals/offset-docks-fpv.png",
+      "bytes": 2571756,
+      "sha256": "93a52b10713a088729964e86c14c2999325885f28825455f335ea1e6edff7842"
+    },
+    {
+      "path": "originals/offset-docks-retro.png",
+      "bytes": 2698820,
+      "sha256": "26fa92a40658fe2499655e7c4aa9ea29cd03060c9967d93945960d8f1c12c16e"
+    },
+    {
+      "path": "originals/offset-docks-ukraine.png",
+      "bytes": 3047188,
+      "sha256": "697a6980465d20d93c6b5e51a38eb05855910d019b6d4a1ab8ce88081b5ba195"
+    },
+    {
+      "path": "originals/sandbar-braid-fpv.png",
+      "bytes": 2534483,
+      "sha256": "71c6ec5acd362215811107b783ea1e8942c8c45bee20f43002b00dfb3ed2e5b0"
+    },
+    {
+      "path": "originals/sandbar-braid-retro.png",
+      "bytes": 2489771,
+      "sha256": "1ebdd0087fa096feff52c568587c55a1c8a41aca95b7b3ccfa143d1aa7d1e3bf"
+    },
+    {
+      "path": "originals/sandbar-braid-ukraine.png",
+      "bytes": 3007068,
+      "sha256": "6ffd72d30d946af28111434e666a86cf5977d81de2beb33d8d0c547a33c02a24"
+    },
+    {
+      "path": "prompts.json",
+      "bytes": 27895,
+      "sha256": "02652252288ebb936463d2417733cefd07903f287b36fe5c91e8d214d646120f"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 25236,
+      "sha256": "72137c0459d22aa1adc5acc53cb3ac95ca526d26fc53e76deca53552f107c435"
+    },
+    {
+      "path": "render-previews.mjs",
+      "bytes": 4721,
+      "sha256": "2d82878118567c9f68006f7d7715f0c8c0e1bff727f3d527a594992f7233d389"
+    },
+    {
+      "path": "thumbnails/crossing-watch-fpv.jpg",
+      "bytes": 25699,
+      "sha256": "4c1dabd78624468a5868327687af5864108e9b9c96c7d9fc9b4a07578219383b"
+    },
+    {
+      "path": "thumbnails/crossing-watch-retro.jpg",
+      "bytes": 36250,
+      "sha256": "ec0944d7cb367c03a9d65afb1b917441a960bcc79ca2ae0ca518437c9db0b7a7"
+    },
+    {
+      "path": "thumbnails/crossing-watch-ukraine.jpg",
+      "bytes": 35394,
+      "sha256": "5fc06e74cc98027aafe52e2b4a46848a3c7f312a180d9202174661d608467eca"
+    },
+    {
+      "path": "thumbnails/offset-docks-fpv.jpg",
+      "bytes": 39385,
+      "sha256": "5977827adfe97a801812e3fbd167574e835da9a1393af9552a49392616919a5c"
+    },
+    {
+      "path": "thumbnails/offset-docks-retro.jpg",
+      "bytes": 42020,
+      "sha256": "4ca5634fe76193a030f6b20e7c4960af8afa7d7b0af4b3478b2fc70109e6d9eb"
+    },
+    {
+      "path": "thumbnails/offset-docks-ukraine.jpg",
+      "bytes": 45623,
+      "sha256": "7fd3875179c062e33356a8065d175ff6a4691c88e2d726c21241bd1631b13059"
+    },
+    {
+      "path": "thumbnails/sandbar-braid-fpv.jpg",
+      "bytes": 34470,
+      "sha256": "7b5dbf1ddac028985dc6e7a65ef86b5f1546a71d15a8b0fbfc91635340caf8a7"
+    },
+    {
+      "path": "thumbnails/sandbar-braid-retro.jpg",
+      "bytes": 39129,
+      "sha256": "54102bdf93820d655e1f1156e9fcfa40f896c7be4cc67eb7c3258b969da6dcd3"
+    },
+    {
+      "path": "thumbnails/sandbar-braid-ukraine.jpg",
+      "bytes": 48025,
+      "sha256": "22fbf30067af23851cc227492f013e989f4b2ddd703ca278c857e6b33bdf287f"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 10266,
+      "sha256": "64bd97fc4f5e9b1037f815c1bca82de45c7c80274bd2f6a01b5989e7f7a9f40c"
+    }
+  ],
+  "originals": [
+    {
+      "cellId": "countercurrent/offset-docks/fpv",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "b8b49525047ff9bc7a227d2635e8c33508ac025ba1bed20b8b4c56b14a9d8d09",
+      "bytes": 2571756,
+      "sha256": "93a52b10713a088729964e86c14c2999325885f28825455f335ea1e6edff7842"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/fpv",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "d83ff231f0c573f3b4ec8600379da7dd6fde6d895d90554fea6836558263c0bc",
+      "bytes": 2534483,
+      "sha256": "71c6ec5acd362215811107b783ea1e8942c8c45bee20f43002b00dfb3ed2e5b0"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/fpv",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "e59abede8781be860a9f59d4341017fb4c54452ee1a047094383a297b4c0c893",
+      "bytes": 1953105,
+      "sha256": "6a191c14e5de093a69e5845af2e39c3246feac3f9eae1ed8e19341214a7a2811"
+    },
+    {
+      "cellId": "countercurrent/offset-docks/ukraine",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "c357d7bf83df0495857e4d967a0de807c5a9b43c44f9b9fbcd37a37af4d9d813",
+      "bytes": 3047188,
+      "sha256": "697a6980465d20d93c6b5e51a38eb05855910d019b6d4a1ab8ce88081b5ba195"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/ukraine",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "3f2dfffc8fbe49ab4d604140fddef7a96a23746019d8fce43a08a7cbacea2bc8",
+      "bytes": 3007068,
+      "sha256": "6ffd72d30d946af28111434e666a86cf5977d81de2beb33d8d0c547a33c02a24"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/ukraine",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "775dc563bc55e4d3e8f32d72ea1fa9f1c2c3bac38ce548679e2a368f5aed68c3",
+      "bytes": 2447624,
+      "sha256": "2ac1edcab88ec92348e7c3118503b109724bb551f7a2a290532f2a0355ae29d4"
+    },
+    {
+      "cellId": "countercurrent/offset-docks/retro",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "152f8989852030c41244f47fe7e59b6fde547934971dac927ae70a5b673c9eb0",
+      "bytes": 2698820,
+      "sha256": "26fa92a40658fe2499655e7c4aa9ea29cd03060c9967d93945960d8f1c12c16e"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/retro",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "79a117e8d29c5b8b6fac3f4e8b8481bb9f4f57093d0483d225cab11b087884ce",
+      "bytes": 2489771,
+      "sha256": "1ebdd0087fa096feff52c568587c55a1c8a41aca95b7b3ccfa143d1aa7d1e3bf"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/retro",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "90d39cc020d5a1869b4ec46f466cf944b563c3e8ea97ab476ed6f29fbdf68fbd",
+      "bytes": 2426061,
+      "sha256": "498dca62d17a4e59c486bbea7a023b9e8aa11cf69cba169092a4671d0fde8e99"
+    }
+  ],
+  "thumbnails": [
+    {
+      "cellId": "countercurrent/offset-docks/fpv",
+      "originalPath": "originals/offset-docks-fpv.png",
+      "originalSha256": "93a52b10713a088729964e86c14c2999325885f28825455f335ea1e6edff7842",
+      "path": "thumbnails/offset-docks-fpv.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 39385,
+      "sha256": "5977827adfe97a801812e3fbd167574e835da9a1393af9552a49392616919a5c",
+      "decodedRGBASha256": "c0afc8a1024a55bac506eb4a047ac12d075181686a718f5d64f0b4db8da473eb"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/fpv",
+      "originalPath": "originals/sandbar-braid-fpv.png",
+      "originalSha256": "71c6ec5acd362215811107b783ea1e8942c8c45bee20f43002b00dfb3ed2e5b0",
+      "path": "thumbnails/sandbar-braid-fpv.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 34470,
+      "sha256": "7b5dbf1ddac028985dc6e7a65ef86b5f1546a71d15a8b0fbfc91635340caf8a7",
+      "decodedRGBASha256": "62cfd41624b514f8151091f583ad13b14b85c1fae3aa70c086c35f20271e2637"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/fpv",
+      "originalPath": "originals/crossing-watch-fpv.png",
+      "originalSha256": "6a191c14e5de093a69e5845af2e39c3246feac3f9eae1ed8e19341214a7a2811",
+      "path": "thumbnails/crossing-watch-fpv.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 25699,
+      "sha256": "4c1dabd78624468a5868327687af5864108e9b9c96c7d9fc9b4a07578219383b",
+      "decodedRGBASha256": "6c7f2220903ca26cdf2601258eb655bb00da055268ecf6ae57637d2862081911"
+    },
+    {
+      "cellId": "countercurrent/offset-docks/ukraine",
+      "originalPath": "originals/offset-docks-ukraine.png",
+      "originalSha256": "697a6980465d20d93c6b5e51a38eb05855910d019b6d4a1ab8ce88081b5ba195",
+      "path": "thumbnails/offset-docks-ukraine.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 45623,
+      "sha256": "7fd3875179c062e33356a8065d175ff6a4691c88e2d726c21241bd1631b13059",
+      "decodedRGBASha256": "f6cd96a997874f0b5c01bb5188c08481df250db2ed13f7253a6f439a2c70d348"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/ukraine",
+      "originalPath": "originals/sandbar-braid-ukraine.png",
+      "originalSha256": "6ffd72d30d946af28111434e666a86cf5977d81de2beb33d8d0c547a33c02a24",
+      "path": "thumbnails/sandbar-braid-ukraine.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 48025,
+      "sha256": "22fbf30067af23851cc227492f013e989f4b2ddd703ca278c857e6b33bdf287f",
+      "decodedRGBASha256": "95348449eaa393a69f54e439bd020209936c8cc7d46991444cbd39914825e143"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/ukraine",
+      "originalPath": "originals/crossing-watch-ukraine.png",
+      "originalSha256": "2ac1edcab88ec92348e7c3118503b109724bb551f7a2a290532f2a0355ae29d4",
+      "path": "thumbnails/crossing-watch-ukraine.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 35394,
+      "sha256": "5fc06e74cc98027aafe52e2b4a46848a3c7f312a180d9202174661d608467eca",
+      "decodedRGBASha256": "d6fdf32ec9f945a744750976b8f931bcc7fb062cadaaae5f8da995dd07a56eaa"
+    },
+    {
+      "cellId": "countercurrent/offset-docks/retro",
+      "originalPath": "originals/offset-docks-retro.png",
+      "originalSha256": "26fa92a40658fe2499655e7c4aa9ea29cd03060c9967d93945960d8f1c12c16e",
+      "path": "thumbnails/offset-docks-retro.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 42020,
+      "sha256": "4ca5634fe76193a030f6b20e7c4960af8afa7d7b0af4b3478b2fc70109e6d9eb",
+      "decodedRGBASha256": "8b0ae70c159b69636dec1e804f79a3d30a4e800c9615b63241cd64ab978adcd9"
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/retro",
+      "originalPath": "originals/sandbar-braid-retro.png",
+      "originalSha256": "1ebdd0087fa096feff52c568587c55a1c8a41aca95b7b3ccfa143d1aa7d1e3bf",
+      "path": "thumbnails/sandbar-braid-retro.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 39129,
+      "sha256": "54102bdf93820d655e1f1156e9fcfa40f896c7be4cc67eb7c3258b969da6dcd3",
+      "decodedRGBASha256": "3ec79a77bb232f5c1380cebf4061b7ce6918a291436fe117ef9513e38c00682f"
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/retro",
+      "originalPath": "originals/crossing-watch-retro.png",
+      "originalSha256": "498dca62d17a4e59c486bbea7a023b9e8aa11cf69cba169092a4671d0fde8e99",
+      "path": "thumbnails/crossing-watch-retro.jpg",
+      "mime": "image/jpeg",
+      "width": 384,
+      "height": 192,
+      "bytes": 36250,
+      "sha256": "ec0944d7cb367c03a9d65afb1b917441a960bcc79ca2ae0ca518437c9db0b7a7",
+      "decodedRGBASha256": "2d43a87994ece065d404eea710ca8f5364394feb4843e054b2dbde9b5d9e0db7"
+    }
+  ],
+  "protectedContext": [
+    {
+      "path": ".gitattributes",
+      "bytes": 485,
+      "sha256": "367c1353565ebf4b355e01413a282349d799716976daf32147c20d5de858038f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 124,
+      "sha256": "38812e650ec5d06647adbf4a940526cb422f1b50ae44a73181ef35860c25b8d2"
+    },
+    {
+      "path": "authoring/library/four-worlds-chapters/verify-images.mjs",
+      "bytes": 3838,
+      "sha256": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "bytes": 1610,
+      "sha256": "418e718b4c0d2eff5092693fddebf57b553bfc45c1b40d9b5bfb144ea9447873"
+    },
+    {
+      "path": "game/campaign-contexts.mjs",
+      "bytes": 4403,
+      "sha256": "3243fc2fc9d0db9fb6cf913609a86105d87bf80270a24fde10ec3b46d5eb92b8"
+    },
+    {
+      "path": "game/campaign-difficulty.mjs",
+      "bytes": 7336,
+      "sha256": "7890880e30df503b69fef0e44e8d58bfa919243aa535ed33c6a1afaa83367b97"
+    },
+    {
+      "path": "game/content-launch.mjs",
+      "bytes": 9259,
+      "sha256": "cec26626541e3a7bb89ff07d7b787040668ff308c7833fd8e6636098d60c80a2"
+    },
+    {
+      "path": "game/content.mjs",
+      "bytes": 23214,
+      "sha256": "305dfa4d5fb4c4c27856b59abd0e71779d431f68221ac592989be8f828d75b38"
+    },
+    {
+      "path": "game/core/abilities.mjs",
+      "bytes": 3855,
+      "sha256": "bb7cb0df95beb6878878d77cac40b2cb6f2403f74e089db46432659098fb3cde"
+    },
+    {
+      "path": "game/core/arcade-actions.mjs",
+      "bytes": 848,
+      "sha256": "fa88d2371b6a6c889550ab196ac0cfbc5dced9ad8493cda126928f4cd53f2726"
+    },
+    {
+      "path": "game/core/capture.mjs",
+      "bytes": 8038,
+      "sha256": "960ebb9ecf19a656fd4fb0877cc5a1d967d1e83617b0262ba62dad4c2189aaef"
+    },
+    {
+      "path": "game/core/classic-contour.mjs",
+      "bytes": 7465,
+      "sha256": "39f096ad8a10605031eecf49227c06d77cf5032042325c0053439ed311ce5da8"
+    },
+    {
+      "path": "game/core/classic-definition.mjs",
+      "bytes": 7266,
+      "sha256": "fa49c1e2442a393b2be8e3d3b34a0eef188bbe158243f7c13cb824d18d1d3638"
+    },
+    {
+      "path": "game/core/classic-motion.mjs",
+      "bytes": 12271,
+      "sha256": "d593680e715467fd4ebfd50bf68bfdd2c3690e79ebbc579a64cdbab093c0a020"
+    },
+    {
+      "path": "game/core/classic-state.mjs",
+      "bytes": 2306,
+      "sha256": "1964712c73cbb2c793881ccf74a2899ef173eff6cc48251274cb738aa0473377"
+    },
+    {
+      "path": "game/core/classic-step.mjs",
+      "bytes": 16343,
+      "sha256": "c6078d7ce18dc8d5b4ecf3414bbf943bcb68dd80951d68e2cc7b8f1bf5b29fca"
+    },
+    {
+      "path": "game/core/classic-topology.mjs",
+      "bytes": 6357,
+      "sha256": "aae16753e999d4829dab13503f3ef603e42b73f4b44e782180881160651db3ff"
+    },
+    {
+      "path": "game/core/contacts.mjs",
+      "bytes": 5168,
+      "sha256": "aadd6aceee0380ff8e9389f305fe96b6642d553ee255ebfb7bcc1251c2c7c67b"
+    },
+    {
+      "path": "game/core/encounter.mjs",
+      "bytes": 8716,
+      "sha256": "7b98eb4ec29998ce902a62388b089a0a26b41675199bb9601e4b2a55f0df44ba"
+    },
+    {
+      "path": "game/core/enemy-pressure.mjs",
+      "bytes": 11725,
+      "sha256": "e66302eab2bc961c3328f0fc572f21d3ea67ee32132c4d0d8f15c1c08d04a2cb"
+    },
+    {
+      "path": "game/core/geometry.mjs",
+      "bytes": 3989,
+      "sha256": "8ca7877a89ea203f072fbf3b85f304844f3a3abcf992e8ba1a54f39957e6f331"
+    },
+    {
+      "path": "game/core/index.mjs",
+      "bytes": 17291,
+      "sha256": "787d7cdc759b04ae2a475e8d5ac49e0618dd26f153336ea71b5920232532e1a2"
+    },
+    {
+      "path": "game/core/level.mjs",
+      "bytes": 14178,
+      "sha256": "0a9fa39cdfa6bb6ed4c9b07a231491529777ab099f2cd6528c54fde84d5e41b8"
+    },
+    {
+      "path": "game/core/line-impact.mjs",
+      "bytes": 9000,
+      "sha256": "cf6e1b509d6789f3bd922f1374ba4ba7a80933bb8a117058dfe579bb95b547e6"
+    },
+    {
+      "path": "game/core/movement.mjs",
+      "bytes": 10912,
+      "sha256": "3f9ee5115eb94c001fe38595f39763b188ea276114ca21d1bc7a426be6e6922a"
+    },
+    {
+      "path": "game/core/registry.mjs",
+      "bytes": 6661,
+      "sha256": "ca7e365071ab3c49514343ea7683d8e552d2cd3f9fdbd0f317df64a57c0b7c2c"
+    },
+    {
+      "path": "game/core/systems.mjs",
+      "bytes": 4621,
+      "sha256": "ecfc946dbe6caf9feacab674730b8b1844e2f133c40566069d722206c6e546b6"
+    },
+    {
+      "path": "game/core/versions.mjs",
+      "bytes": 3074,
+      "sha256": "9bc39659dde70e76c63c9f9bfaa267b3cdfa07966d9096cc079383c71478eec3"
+    },
+    {
+      "path": "game/data-json.mjs",
+      "bytes": 4640,
+      "sha256": "e765ace4b34cc64d8948b73d896e5f8d4666ba5984385f6b2de81c1babefba0c"
+    },
+    {
+      "path": "game/mastery-catalog.mjs",
+      "bytes": 13632,
+      "sha256": "2d7d7679b084ff1dcf6c15579605a00dd71cf611f822b79e198703fc4ac045be"
+    },
+    {
+      "path": "game/mastery-equipment.mjs",
+      "bytes": 29233,
+      "sha256": "5d45dfb343754c728277ea83a6a32ff46547adf747da65eee5ec0aa30bd09d1a"
+    },
+    {
+      "path": "game/mastery.mjs",
+      "bytes": 16941,
+      "sha256": "2794850285f343ac3ea30dabd22bac1e80bc45e6a73734597e364272af9d8504"
+    },
+    {
+      "path": "game/media-library.mjs",
+      "bytes": 12188,
+      "sha256": "ed1f1abe0b95b9889741ec8929522f0fcaba29a5438b09df18016d3ffffc6eb4"
+    },
+    {
+      "path": "game/platform.mjs",
+      "bytes": 2524,
+      "sha256": "737f4e6dabcc08cd45ad5e5b1fb3b16792881897e89927ce5fe7fc609c0f3260"
+    },
+    {
+      "path": "game/ui/music.mjs",
+      "bytes": 7050,
+      "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1819,
+      "sha256": "fc95490babde1090db3de255b114fd4e4282eae162d77fbb55e5ce3f5a117500"
+    },
+    {
+      "path": "scripts/game-cli.mjs",
+      "bytes": 58005,
+      "sha256": "93805cedc9abe70298df782504eacf352c68f258bcfe74157bc58b1736365b2e"
+    },
+    {
+      "path": "scripts/pack-indexes.mjs",
+      "bytes": 5421,
+      "sha256": "34ecdb35caecd581a5477e3972130f1ef67004fcd7add7f055126cb65a52a35e"
+    }
+  ]
+}
