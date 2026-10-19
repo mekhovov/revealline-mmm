@@ -1,0 +1,909 @@
+[
+  {
+    "label": "Orchard initial artwork preparation",
+    "time": "2026-09-15T16:58:52.039Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Two boards. One race.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Two boards. One race.\" [level=1]\n    - status: Both boards use the same map, class, seed and prepared picture. Start when you are ready.\n    - paragraph: FPV Front · Pressure Lines · Orchard Crossing · Arcade · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Start round ↗\"\n    - button \"Race setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "",
+        "tag": "BODY",
+        "text": "\n    \n    Back to the game\n    \n      \n        Pause\n        SUNFLOWER 0 : 0\n          SKYLINE\n        1:30\n      \n     "
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "First keyboard focus in ready Versus",
+    "time": "2026-09-15T16:58:58.595Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Two boards. One race.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Two boards. One race.\" [level=1]\n    - status: Both boards use the same map, class, seed and prepared picture. Start when you are ready.\n    - paragraph: FPV Front · Pressure Lines · Orchard Crossing · Arcade · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\" [active]:\n      - /url: relay-rescue.html\n    - button \"Start round ↗\"\n    - button \"Race setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-coop",
+        "tag": "A",
+        "text": "Relay Rescue · team up"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Start Orchard Versus from keyboard",
+    "time": "2026-09-15T16:59:03.102Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - button \"Pause\"\n  - generic: SUNFLOWER\n  - strong: \"0 : 0\"\n  - generic: SKYLINE\n  - strong: 1:30\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: running\n      - img \"Player 1 race board\" [active]\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: W A S D · Pause for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: running\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Pause for options",
+    "dom": {
+      "active": {
+        "id": "race-canvas-0",
+        "tag": "CANVAS",
+        "text": ""
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 523.7760620117188,
+            "w": 1368.229248046875
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 523.7847290039062,
+            "w": 1368.229248046875
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Orchard after actual cuts paused",
+    "time": "2026-09-15T16:59:14.700Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Both boards paused.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Both boards paused.\" [level=1]\n    - status: Both players are paused. Resume when everyone is ready.\n    - paragraph: FPV Front · Pressure Lines · Orchard Crossing · Arcade · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Resume round →\" [active]\n    - button \"New match · setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-start",
+        "tag": "BUTTON",
+        "text": "Resume round →"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Resume preserves both cuts",
+    "time": "2026-09-15T16:59:25.697Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - button \"Pause\"\n  - generic: SUNFLOWER\n  - strong: \"0 : 0\"\n  - generic: SKYLINE\n  - strong: 1:19\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: running\n      - img \"Player 1 race board\" [active]\n      - paragraph: 1.5% · 3 lives · 340 points\n      - paragraph: W A S D · Pause for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: running\n      - img \"Player 2 race board\"\n      - paragraph: 1.5% · 3 lives · 340 points\n      - paragraph: Arrow keys · Pause for options",
+    "dom": {
+      "active": {
+        "id": "race-canvas-0",
+        "tag": "CANVAS",
+        "text": ""
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 523.7760620117188,
+            "w": 1368.229248046875
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 523.7847290039062,
+            "w": 1368.229248046875
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Open new match setup",
+    "time": "2026-09-15T16:59:37.554Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Start a new match?\":\n    - paragraph: BOTH PLAYERS ARE PAUSED\n    - heading \"Start a new match?\" [level=1]\n    - paragraph: The current couch round and series score will be replaced. Your solo progress stays saved.\n    - button \"Keep this match\" [active]\n    - button \"New match · edit setup\"\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-confirm-back",
+        "tag": "BUTTON",
+        "text": "Keep this match"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Confirm new match then choose map",
+    "time": "2026-09-15T16:59:45.129Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - paragraph:\n    - status: Downloading the published picture original…\n  - region \"Race setup\":\n    - paragraph: SAME CONDITIONS / TWO ROUTES\n    - heading \"Race setup\" [level=1]\n    - paragraph: Choose together. Each player starts with the same map, craft and time.\n    - text: Map\n    - combobox \"Map\" [active]:\n      - option \"FPV Front · Pressure Lines · Orchard Crossing · Arcade\" [selected]\n      - option \"FPV Front · Pressure Lines · Courtyard Exits · Arcade\"\n      - option \"FPV Front · Pressure Lines · Night Crossfire · Arcade\"\n      - option \"First Signal · First Signal · Tactical\"\n      - option \"First Signal · Relay Orchard · Tactical\"\n      - option \"First Signal · Crosswind · Tactical\"\n      - option \"First Signal · Stone Lanes · Tactical\"\n      - option \"First Signal · Night Patrol · Tactical\"\n      - option \"First Signal · Hidden Frequency · Tactical\"\n      - option \"First Signal · The Crossing · Tactical\"\n      - option \"First Signal · Last Light · Tactical\"\n      - option \"First Signal · Signal Garden · Tactical\"\n      - option \"First Signal · Supply Circuit · Tactical\"\n      - option \"First Signal · Short Fuse · Tactical\"\n      - option \"First Signal · Relay Storm · Tactical\"\n    - text: World\n    - combobox \"World\":\n      - option \"FPV Front\" [selected]\n    - text: Steering\n    - combobox \"Steering\":\n      - option \"Immediate turns\" [selected]\n      - option \"Grid-center turns\"\n    - text: Round time\n    - combobox \"Round time\":\n      - option \"90 seconds\" [selected]\n      - option \"3 minutes\"\n      - option \"30 seconds\"\n    - paragraph: Directions only. Pickups activate on contact.\n    - button \"Refresh installed chapters\" [disabled]\n    - button \"Done · back to lobby\"\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-level",
+        "tag": "SELECT",
+        "text": "FPV Front · Pressure Lines · Orchard Crossing · ArcadeFPV Front · Pressure Lines · Courtyard Exits · ArcadeFPV Front · P"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Select First Signal using native map picker",
+    "time": "2026-09-15T16:59:49.714Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - paragraph:\n    - status: Downloading the published picture original…\n  - region \"Race setup\":\n    - paragraph: SAME CONDITIONS / TWO ROUTES\n    - heading \"Race setup\" [level=1]\n    - paragraph: Choose together. Each player starts with the same map, craft and time.\n    - text: Map\n    - combobox \"Map\" [active]:\n      - option \"FPV Front · Pressure Lines · Orchard Crossing · Arcade\"\n      - option \"FPV Front · Pressure Lines · Courtyard Exits · Arcade\"\n      - option \"FPV Front · Pressure Lines · Night Crossfire · Arcade\"\n      - option \"First Signal · First Signal · Tactical\" [selected]\n      - option \"First Signal · Relay Orchard · Tactical\"\n      - option \"First Signal · Crosswind · Tactical\"\n      - option \"First Signal · Stone Lanes · Tactical\"\n      - option \"First Signal · Night Patrol · Tactical\"\n      - option \"First Signal · Hidden Frequency · Tactical\"\n      - option \"First Signal · The Crossing · Tactical\"\n      - option \"First Signal · Last Light · Tactical\"\n      - option \"First Signal · Signal Garden · Tactical\"\n      - option \"First Signal · Supply Circuit · Tactical\"\n      - option \"First Signal · Short Fuse · Tactical\"\n      - option \"First Signal · Relay Storm · Tactical\"\n    - text: World\n    - combobox \"World\":\n      - option \"FPV Front\" [selected]\n      - option \"Ukraine Atlas\"\n      - option \"1994 Forever\"\n      - option \"Spend Network\"\n    - text: Craft\n    - combobox \"Craft\":\n      - option \"Scout\" [selected]\n      - option \"Light carrier\"\n      - option \"Heavy carrier\"\n      - option \"Interceptor\"\n      - option \"Fiber relay\"\n      - option \"Impact craft\"\n      - option \"Trapper\"\n    - text: Steering\n    - combobox \"Steering\":\n      - option \"Immediate turns\" [selected]\n      - option \"Grid-center turns\"\n    - text: Round time\n    - combobox \"Round time\":\n      - option \"90 seconds\" [selected]\n      - option \"3 minutes\"\n      - option \"30 seconds\"\n    - paragraph: Mark hidden objectives permanently; show enemy direction hints for four seconds. No slowing.\n    - button \"Refresh installed chapters\" [disabled]\n    - button \"Done · back to lobby\"\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-level",
+        "tag": "SELECT",
+        "text": "FPV Front · Pressure Lines · Orchard Crossing · ArcadeFPV Front · Pressure Lines · Courtyard Exits · ArcadeFPV Front · P"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Return to First Signal lobby",
+    "time": "2026-09-15T16:59:54.025Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Two boards. One race.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Two boards. One race.\" [level=1]\n    - status: Both boards use the same map, class, seed and prepared picture. Start when you are ready.\n    - paragraph: First Signal · First Signal · Tactical · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Start round ↗\"\n    - button \"Race setup\" [active]\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-focus",
+        "tag": "BUTTON",
+        "text": "Race setup"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "First Signal started with both players steering",
+    "time": "2026-09-15T17:00:00.617Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - button \"Pause\"\n  - generic: SUNFLOWER\n  - strong: \"0 : 0\"\n  - generic: SKYLINE\n  - strong: 1:30\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: running\n      - img \"Player 1 race board\" [active]\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: W A S D · Pause for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: running\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Pause for options",
+    "dom": {
+      "active": {
+        "id": "race-canvas-0",
+        "tag": "CANVAS",
+        "text": ""
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 523.7760620117188,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 523.7847290039062,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "First Signal after both actual vertical cuts",
+    "time": "2026-09-15T17:00:04.716Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Round complete.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Round complete.\" [level=1]\n    - status: Sunflower wins the round. First clear.\n    - paragraph: First Signal · First Signal · Tactical · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n      - paragraph: 52.2% · 3 lives · 8160 points · 1 round wins\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n      - paragraph: 0.0% · 3 lives · 0 points · 0 round wins\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Next round ↗\" [active]\n    - button \"New match · setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - button \"View both boards\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-start",
+        "tag": "BUTTON",
+        "text": "Next round ↗"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Open earned First Signal boards",
+    "time": "2026-09-15T17:00:13.648Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - button \"Results\" [active]\n  - generic: SUNFLOWER\n  - strong: \"1 : 0\"\n  - generic: SKYLINE\n  - strong: 1:27\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: finished\n      - img \"Player 1 race board\"\n      - paragraph: 52.2% · 3 lives · 8160 points\n      - paragraph: W A S D · Results for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: finished\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Results for options",
+    "dom": {
+      "active": {
+        "id": "race-pause",
+        "tag": "BUTTON",
+        "text": "Results"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 523.7760620117188,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 523.7847290039062,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Second round preserves prepared picture and series",
+    "time": "2026-09-15T17:00:35.605Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - button \"Results\" [active]\n  - generic: SUNFLOWER\n  - strong: \"1 : 0\"\n  - generic: SKYLINE\n  - strong: 1:27\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: finished\n      - img \"Player 1 race board\"\n      - paragraph: 52.2% · 3 lives · 8160 points\n      - paragraph: W A S D · Results for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: finished\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Results for options",
+    "dom": {
+      "active": {
+        "id": "race-pause",
+        "tag": "BUTTON",
+        "text": "Results"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 523.7760620117188,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 523.7847290039062,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    },
+    "observed": "Two Return presses reopened View both boards; this did not start another round. The snapshot remains the original 1:0 result."
+  },
+  {
+    "label": "Actual Next round begins with unchanged 1:0 series",
+    "time": "2026-09-15T17:00:55.276Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - paragraph:\n    - status: Downloading the published picture original…\n  - region \"Loading the shared picture…\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Loading the shared picture…\" [level=1]\n    - paragraph: First Signal · First Signal · Tactical · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Start round ↗\" [disabled]\n    - button \"Cancel picture loading\"\n    - button \"Race setup\" [active]\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-focus",
+        "tag": "BUTTON",
+        "text": "Race setup"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    },
+    "observed": "Next round action entered shared-picture preparation; no next-round score was yet visible."
+  },
+  {
+    "label": "Next round resumed with 1:0 series and fresh boards",
+    "time": "2026-09-15T17:01:11.385Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - button \"Pause\"\n  - generic: SUNFLOWER\n  - strong: \"1 : 0\"\n  - generic: SKYLINE\n  - strong: 1:30\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: running\n      - img \"Player 1 race board\" [active]\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: W A S D · Pause for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: running\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Pause for options",
+    "dom": {
+      "active": {
+        "id": "race-canvas-0",
+        "tag": "CANVAS",
+        "text": ""
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 523.7760620117188,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 523.7847290039062,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Deploy matching Solo First Signal",
+    "time": "2026-09-15T17:01:48.491Z",
+    "url": "http://127.0.0.1:64176/game/",
+    "snapshot": "- button \"Game menu\": ◩ REVEAL / LINE\n- button \"Enter fullscreen\": ⛶\n- button \"Pause or resume\": Ⅱ\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 0.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:00\n    - generic: SCORE\n    - strong: \"00000\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\" [active]\n    - strong: Safe ground\n    - generic: Close a line to reveal the picture\n    - status: \"Your first route: fly down from the marked start to the opposite border.\"\n    - status",
+    "dom": {
+      "active": {
+        "id": "game-canvas",
+        "tag": "DIV",
+        "text": ""
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "",
+          "rect": {
+            "h": 1025.8941650390625,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        },
+        {
+          "h": 0,
+          "id": "result-picture",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 0
+        },
+        {
+          "h": 576,
+          "id": "gallery-canvas",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        },
+        {
+          "h": 112,
+          "id": "enemy-guide-preview",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 192
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Solo First Signal actual win",
+    "time": "2026-09-15T17:02:23.534Z",
+    "url": "http://127.0.0.1:64176/game/",
+    "snapshot": "- button \"Game menu\": ◩ REVEAL / LINE\n- generic: TACTICAL EDITION\n- button \"Enter fullscreen\": ⛶\n- button \"Missions\"\n- button \"Collection\"\n- button \"Game settings\": Settings\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 50.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:18\n    - generic: SCORE\n    - strong: \"07820\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\"\n    - region \"Mission details\":\n      - img \"The picture revealed in this flight\"\n      - paragraph: MISSION 01 / FIRST SIGNAL\n      - heading \"A little more light.\" [level=1]\n      - paragraph: 50.0% captured · 7,820 points · 0:18. Full picture added to your collection.\n      - paragraph: Standard difficulty.\n      - generic: ★★★\n    - button \"Next uncleared mission →\" [active]\n    - button \"View picture ⤢\"\n    - button \"Try again\"\n    - button \"Choose appearance\"\n    - button \"Main menu\"\n    - paragraph: \"Gold: fast and no lives lost.\"\n    - strong: Mission complete\n    - generic: Target reached\n    - status: Picture unlocked. A whole world, from one brave line.\n    - status",
+    "dom": {
+      "active": {
+        "id": "next-button",
+        "tag": "BUTTON",
+        "text": "Next uncleared mission →"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "",
+          "rect": {
+            "h": 1025.8941650390625,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        },
+        {
+          "h": 480,
+          "id": "result-picture",
+          "rect": {
+            "h": 300,
+            "w": 446.0330200195313
+          },
+          "w": 640
+        },
+        {
+          "h": 576,
+          "id": "gallery-canvas",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        },
+        {
+          "h": 112,
+          "id": "enemy-guide-preview",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 192
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Solo earned First Signal picture viewer",
+    "time": "2026-09-15T17:02:37.230Z",
+    "url": "http://127.0.0.1:64176/game/",
+    "snapshot": "- button \"Game menu\": ◩ REVEAL / LINE\n- generic: TACTICAL EDITION\n- button \"Enter fullscreen\": ⛶\n- button \"Missions\"\n- button \"Collection\"\n- button \"Game settings\": Settings\n- main:\n  - region \"Game\":\n    - generic: REVEALED\n    - strong: 50.0%\n    - emphasis: TARGET 45%\n    - generic: LIVES\n    - strong: ◆ ◆ ◆\n    - generic: TIME\n    - strong: 0:18\n    - generic: SCORE\n    - strong: \"07820\"\n    - application \"Territory capture game. Tap a direction to fly. Tap another to turn. Up ↑ / W; down ↓ / S; left ← / A; right → / D; ability E; boost Left Shift / Right Shift; change craft G; pause Esc / P. Releasing a direction keeps you moving.\"\n    - button \"Results ↗\" [active]\n    - strong: Mission complete\n    - generic: Target reached\n    - status: Picture unlocked. A whole world, from one brave line.\n    - status",
+    "dom": {
+      "active": {
+        "id": "show-result",
+        "tag": "BUTTON",
+        "text": "Results ↗"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "",
+          "rect": {
+            "h": 1025.8941650390625,
+            "w": 1368.229248046875
+          },
+          "w": 768
+        },
+        {
+          "h": 480,
+          "id": "result-picture",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 640
+        },
+        {
+          "h": 576,
+          "id": "gallery-canvas",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 768
+        },
+        {
+          "h": 112,
+          "id": "enemy-guide-preview",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 192
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Cancel real picture preparation",
+    "time": "2026-09-15T17:02:54.178Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - paragraph:\n    - status: Loading release artwork and fonts…\n  - region \"Two boards. One race.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Two boards. One race.\" [level=1]\n    - status: Picture loading cancelled. Retry when you are ready.\n    - paragraph: FPV Front · Pressure Lines · Orchard Crossing · Arcade · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Start round ↗\" [disabled]\n    - button \"Retry picture\" [active]\n    - button \"Race setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-chapter-retry",
+        "tag": "BUTTON",
+        "text": "Retry picture"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Cancelled picture stays cancelled after other artwork loading settles",
+    "time": "2026-09-15T17:02:58.923Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Two boards. One race.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Two boards. One race.\" [level=1]\n    - status: Picture loading cancelled. Retry when you are ready.\n    - paragraph: FPV Front · Pressure Lines · Orchard Crossing · Arcade · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Start round ↗\" [disabled]\n    - button \"Retry picture\" [active]\n    - button \"Race setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-chapter-retry",
+        "tag": "BUTTON",
+        "text": "Retry picture"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Explicit Retry after cancellation",
+    "time": "2026-09-15T17:02:59.538Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - paragraph:\n    - status: Downloading the published picture original…\n  - region \"Loading the shared picture…\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Loading the shared picture…\" [level=1]\n    - paragraph: FPV Front · Pressure Lines · Orchard Crossing · Arcade · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Start round ↗\" [disabled]\n    - button \"Cancel picture loading\"\n    - button \"Race setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-start",
+        "tag": "BUTTON",
+        "text": "Start round ↗"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Retried picture ready before explicit Start",
+    "time": "2026-09-15T17:03:15.991Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - region \"Two boards. One race.\":\n    - paragraph: REVEAL LINE / LOCAL TWO PLAYER\n    - heading \"Two boards. One race.\" [level=1]\n    - status: Both boards use the same map, class, seed and prepared picture. Start when you are ready.\n    - paragraph: FPV Front · Pressure Lines · Orchard Crossing · Arcade · FPV Front · Immediate turns · 90 seconds\n    - article:\n      - text: PLAYER 1\n      - heading \"Sunflower\" [level=2]\n      - paragraph: W A S D\n    - article:\n      - text: PLAYER 2\n      - heading \"Skyline\" [level=2]\n      - paragraph: Arrow keys\n    - link \"Relay Rescue · team up\":\n      - /url: relay-rescue.html\n    - button \"Start round ↗\" [active]\n    - button \"Race setup\"\n    - button \"Options\"\n    - button \"How to play\"\n    - link \"Return to solo\":\n      - /url: ../\n    - paragraph: First to two rounds. Couch races do not change your solo progress.\n  - status: Connect a controller and use it while this page is visible. Keyboard and touch remain available.",
+    "dom": {
+      "active": {
+        "id": "race-start",
+        "tag": "BUTTON",
+        "text": "Start round ↗"
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 0,
+            "w": 0
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  },
+  {
+    "label": "Retried Orchard starts both boards",
+    "time": "2026-09-15T17:03:16.168Z",
+    "url": "http://127.0.0.1:64176/game/couch/",
+    "snapshot": "- main:\n  - button \"Pause\"\n  - generic: SUNFLOWER\n  - strong: \"0 : 0\"\n  - generic: SKYLINE\n  - strong: 1:30\n  - generic \"Two separate race boards\":\n    - 'region \"Player 1: Sunflower\"':\n      - heading \"Sunflower\" [level=2]\n      - generic: running\n      - img \"Player 1 race board\" [active]\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: W A S D · Pause for options\n    - 'region \"Player 2: Skyline\"':\n      - heading \"Skyline\" [level=2]\n      - generic: running\n      - img \"Player 2 race board\"\n      - paragraph: 0.0% · 3 lives · 0 points\n      - paragraph: Arrow keys · Pause for options",
+    "dom": {
+      "active": {
+        "id": "race-canvas-0",
+        "tag": "CANVAS",
+        "text": ""
+      },
+      "canvases": [
+        {
+          "h": 576,
+          "id": "race-canvas-0",
+          "rect": {
+            "h": 523.7760620117188,
+            "w": 1368.229248046875
+          },
+          "w": 1152
+        },
+        {
+          "h": 576,
+          "id": "race-canvas-1",
+          "rect": {
+            "h": 523.7847290039062,
+            "w": 1368.229248046875
+          },
+          "w": 1152
+        }
+      ],
+      "viewport": [
+        1393,
+        1348
+      ]
+    }
+  }
+]

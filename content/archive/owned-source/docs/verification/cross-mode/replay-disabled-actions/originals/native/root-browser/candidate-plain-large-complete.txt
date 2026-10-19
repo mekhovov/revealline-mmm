@@ -1,0 +1,71 @@
+- banner:
+  - link "← Back to the game":
+    - /url: ../
+  - generic: Reveal Line / Replay Theater
+  - heading "Watch the route unfold." [level=1]
+  - paragraph: Pause at a turning point. Follow the cable. See what each craft changes.
+  - paragraph: Read-only playback · No rewards, scores or player progress are saved.
+  - generic "Interface"
+  - text: Text style
+  - combobox "Text style":
+    - option "Theme"
+    - option "Plain" [selected]
+  - text: Text size
+  - combobox "Text size":
+    - option "Standard"
+    - option "Large" [selected]
+  - checkbox "Reduced effects"
+  - text: Reduced effects
+  - paragraph: Shared with the game. These choices change the interface and replay effects; the recording and its playback position stay unchanged.
+  - link "Jump to playback ↓":
+    - /url: "#playback"
+- paragraph:
+  - status: Copper Crossing example verified and loaded. Ready to watch.
+- main:
+  - region "Copper Crossing":
+    - generic: Verified recording
+    - heading "Copper Crossing" [level=2]
+    - generic: complete
+    - generic "Recorded territory-capture game. Space plays or pauses; right arrow steps one tick."
+    - generic "Playback controls":
+      - button "Play" [disabled]
+      - button "Restart" [active]
+      - button "Step 1 tick" [disabled]
+      - text: Speed
+      - combobox "Speed":
+        - option "0.5×"
+        - option "1×" [selected]
+        - option "2×"
+    - progressbar "Recording playback progress"
+    - generic: Tick 1305 / 1305
+    - generic: 10.88 / 10.88 s
+    - paragraph: 48 × 36 cells · immediate · fiber · 74.1% covered · 3 lives · 12590 recorded points
+    - paragraph: Final checkpoint matches · 861a6de2ffd7e119 · No progress awarded.
+    - status: Recording complete. The final state matches. Restart to watch again.
+    - status: Connect a controller and use it while this page is visible.
+    - generic "Recorded events"
+  - complementary:
+    - region "Four ways through.":
+      - generic: Fieldcraft collection
+      - heading "Four ways through." [level=2]
+      - generic: Watch an equipment example
+      - combobox "Watch an equipment example":
+        - option "Copper Crossing · Fiber" [selected]
+        - option "Switchyard Circuit · Carrier"
+        - option "Pulse Recall · Impact"
+        - option "Net Loom · Trapper"
+      - paragraph: Immediate turns · A fiber craft crosses the interference band at full speed. Its exposed cable still needs a safe route home.
+      - button "Load example"
+      - generic "Import your own replay"
+    - region "A different atmosphere.":
+      - heading "A different atmosphere." [level=2]
+      - generic: Presentation theme
+      - combobox "Presentation theme":
+        - option "FPV Front" [selected]
+        - option "Ukraine Atlas"
+        - option "1994 Forever"
+        - option "Spend Network"
+      - checkbox "Show grid"
+      - text: Show grid
+      - paragraph: Themes change the art. The imported route, class abilities and result stay exactly as recorded. This theater is silent.
+    - paragraph: The examples use normal movement, equipment and class-change inputs. They are demonstrations, not player completions. To try them yourself, install Fieldcraft in the game’s Library.
