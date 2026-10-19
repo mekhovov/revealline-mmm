@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/library/four-worlds-chapters/build.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "dd6c7bbb17ab668f4c140cffc85217e45e60a6f582a258ea1c003b4f9868a4a8",
+  "sourceGitBlob": "14df77070680d2f1156d72d10b8915ff8feac612",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 6893,
+      "end": 6945,
+      "source": "      ['original-spend-network', 'coupa', 'coupa'],\n"
+    },
+    {
+      "start": 7038,
+      "end": 7078,
+      "source": "assert.equal(catalog.images.length, 12);"
+    }
+  ]
+}

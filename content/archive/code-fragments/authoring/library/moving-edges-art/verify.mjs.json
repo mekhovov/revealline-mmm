@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/library/moving-edges-art/verify.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "20bfc048e14f630107632ef4acf3ef9d3bf1015aa692677b906cbc410ac97a31",
+  "sourceGitBlob": "ccd43105119755afc8ef323f2848e7904014060f",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 951,
+      "end": 987,
+      "source": "['fpv', 'ukraine', 'retro', 'coupa']"
+    }
+  ]
+}

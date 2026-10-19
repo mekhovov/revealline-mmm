@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/motion-lab/ability.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "5379aa0dc4993a1c23f3a75f60498f7e6b0e94e98ce0a2581ae40c5392ef3b9d",
+  "sourceGitBlob": "2265e52665023ae03c0e4e727f2258f1d40b1c50",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 5253,
+      "end": 5268,
+      "source": ",\"navi-network\""
+    }
+  ]
+}

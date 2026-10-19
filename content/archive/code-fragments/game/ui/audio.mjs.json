@@ -1,0 +1,14 @@
+{
+  "sourcePath": "game/ui/audio.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "e98576d5153262130e6556edaf758cdf15ed69700472066fb2f4d92c8a70c538",
+  "sourceGitBlob": "291fa9c94be79c7ef1b162d63baa1e2370eaaef7",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 37559,
+      "end": 37674,
+      "source": "            : this.themeFamily === 'navi'\n              ? [0, 4, 9, 7, 12, 16]\n              : [0, 4, 7, 12, 7, 12]"
+    }
+  ]
+}

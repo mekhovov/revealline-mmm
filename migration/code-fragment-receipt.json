@@ -1,0 +1,127 @@
+{
+  "format": "revealline-owned-code-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "scope": "Additional owned generator and presentation excerpts. Offsets are Unicode code-point offsets in the original UTF-8 source. These archives are not shipped runtime files.",
+  "items": [
+    {
+      "sourcePath": "game/ui/movement-profiles.mjs",
+      "destination": "content/archive/code-fragments/game/ui/movement-profiles.mjs.json",
+      "sourceSHA256": "687c5770264af29bdddc5444019c40b457765bd570f6ac8c435cb0a38af6c96c",
+      "sha256": "b19c13aa359c3686d3caa87c817cd39434533d5fd30ae707a52fb00776616f4e",
+      "bytes": 696,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "game/progress.mjs",
+      "destination": "content/archive/code-fragments/game/progress.mjs.json",
+      "sourceSHA256": "4dd5c9c895c9e7861e09652f8253866364e93cda53e257bcf66306cb9dd570cd",
+      "sha256": "50af139b3b3e1226104010a85d7558804ca9f4e3babdcc90bc298f2d893bb2cb",
+      "bytes": 522,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "game/ui/audio.mjs",
+      "destination": "content/archive/code-fragments/game/ui/audio.mjs.json",
+      "sourceSHA256": "e98576d5153262130e6556edaf758cdf15ed69700472066fb2f4d92c8a70c538",
+      "sha256": "b53c03d607473a60c41df11c7c854d61499cc211e08465785dfe2d254b67db7c",
+      "bytes": 528,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/ui/celebration.mjs",
+      "destination": "content/archive/code-fragments/game/ui/celebration.mjs.json",
+      "sourceSHA256": "5411cc0c37530c6d78aaadc5fdd500050d6160c84c4f5760b06e52ecb6566652",
+      "sha256": "00ecda85d068d1a7d568d4efdac7e85ad8f578ccf398ee4dd8fe799d98173fda",
+      "bytes": 679,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "game/content-design/uniqueness-pilot.mjs",
+      "destination": "content/archive/code-fragments/game/content-design/uniqueness-pilot.mjs.json",
+      "sourceSHA256": "bf1c330629c40a68b3e5ef12d9876b66dc391cace8272f81571c152dd3bae278",
+      "sha256": "026bf94c5737a50648dd6f483c22508eab35d52aac1fc04d612e14a960c260a3",
+      "bytes": 1686,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/motion-lab/ability.mjs",
+      "destination": "content/archive/code-fragments/authoring/motion-lab/ability.mjs.json",
+      "sourceSHA256": "5379aa0dc4993a1c23f3a75f60498f7e6b0e94e98ce0a2581ae40c5392ef3b9d",
+      "sha256": "53f6cfa50341cc23108c52581509f7475d7667b7477d23deaa35f3530e064acd",
+      "bytes": 441,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/production/panel.mjs",
+      "destination": "content/archive/code-fragments/authoring/production/panel.mjs.json",
+      "sourceSHA256": "e298ae06092aaf1a45383623a303474332ddecca99ec213639fc511ca96c1f32",
+      "sha256": "11a29325894ace4e48b65dac988a0a12d1d2c0832a2e209ad9f746d5d54c40c9",
+      "bytes": 449,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/production/sources.mjs",
+      "destination": "content/archive/code-fragments/authoring/production/sources.mjs.json",
+      "sourceSHA256": "f7000fca6c676d4957cedb6cdd5a3130c7cfbc8a4bff959197753613fd2c8492",
+      "sha256": "68b31b9af28d8d5b5ac941d39131a456e7f61fff00c879df1ddc98da51f02f45",
+      "bytes": 455,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-catalog/sources.mjs",
+      "destination": "content/archive/code-fragments/authoring/library/reserve-illustrations-catalog/sources.mjs.json",
+      "sourceSHA256": "a95fc7a0b5cd87b4b28397728a2d46128cf0d826d2c12e28e797896c167b18bf",
+      "sha256": "bb23cbe750be3c77272d2e13c34390fce49fa188666425b0aa3a92ac3fca8dff",
+      "bytes": 487,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-catalog/catalog.py",
+      "destination": "content/archive/code-fragments/authoring/library/reserve-illustrations-catalog/catalog.py.json",
+      "sourceSHA256": "4d9e7708fdb2a76c05aa830f1a4ffcc3142754ccdafcc37f10db7f11d56e7f91",
+      "sha256": "90a22bf01c7c4d3bcc406cad258294ad049b81cb97d32688326e25bafc1fcb2b",
+      "bytes": 474,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-chapters/build.mjs",
+      "destination": "content/archive/code-fragments/authoring/library/moving-edges-chapters/build.mjs.json",
+      "sourceSHA256": "bf514558341debda914d8a21fe13d011e7e8c357ec7fc765d0968f690d5e4bfd",
+      "sha256": "38f635e3aef5654fc7fe9b1641dc1ff3ae4f746998bd1fa682ef7ed988ffc276",
+      "bytes": 585,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/render-previews.mjs",
+      "destination": "content/archive/code-fragments/authoring/library/moving-edges-art/render-previews.mjs.json",
+      "sourceSHA256": "7224954af28d1449a2d72727d9df57645641e597e5a20618a5912f5ad89d7522",
+      "sha256": "7425370c15af613626ecab987b37e2d85b4f90ae4b06a2bbd6e5c7710ae32bac",
+      "bytes": 469,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/verify.mjs",
+      "destination": "content/archive/code-fragments/authoring/library/moving-edges-art/verify.mjs.json",
+      "sourceSHA256": "20bfc048e14f630107632ef4acf3ef9d3bf1015aa692677b906cbc410ac97a31",
+      "sha256": "bb4bf2abeac13972fddfd1013160409428dc8fb6314fc47e6f0386726547c880",
+      "bytes": 471,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/build.mjs",
+      "destination": "content/archive/code-fragments/authoring/library/four-worlds-chapters/build.mjs.json",
+      "sourceSHA256": "dd6c7bbb17ab668f4c140cffc85217e45e60a6f582a258ea1c003b4f9868a4a8",
+      "sha256": "9119acbe2ae6a1c19dee8771df9eeb0702d512382804c920ce396cfe4c664096",
+      "bytes": 605,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/scripts/build_contract.py",
+      "destination": "content/archive/code-fragments/authoring/scripts/build_contract.py.json",
+      "sourceSHA256": "f8bb959e2ed24703e80fd9f27b0161fa54114ee59f0c064af0928403f292ab83",
+      "sha256": "422d1575ae113b8e4e20dc65de4de9cec9c0f9249d8b4b56322d37a5c8a51f48",
+      "bytes": 2125,
+      "fragments": 6
+    }
+  ]
+}

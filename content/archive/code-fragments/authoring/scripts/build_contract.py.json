@@ -1,0 +1,39 @@
+{
+  "sourcePath": "authoring/scripts/build_contract.py",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "f8bb959e2ed24703e80fd9f27b0161fa54114ee59f0c064af0928403f292ab83",
+  "sourceGitBlob": "9bf8841b6cc8174c304b6a2cc4b2d670baf7834a",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 14769,
+      "end": 15779,
+      "source": "    (\"navi-network\", \"Navi Network: Savings City\", \"Restore a fictional business network through territory capture, document connections and visible city improvements.\",\n     \"Clean blue/white pixel city, warm workshop lights, expressive assistant silhouette. Use a provisional C character until official brand/Navi assets are supplied.\",\n     \"Currency and AI behavior are fictional arcade metaphors, not product performance or savings claims. Replace placeholder marks using authorized brand assets.\",\n     [\"#11293F\", \"#70C5EB\", \"#F3C75B\", \"#CDEEFF\", \"#EF8890\", \"#7ADDAB\", \"#F7FBFF\", \"#1E3C57\"],\n     [\"Navi placeholder\", \"Cost leak\", \"Reconnect\", \"Fictional savings\", \"Matched invoice\"],\n     [\"pixel-art\", \"illustration\", \"photograph\"], \"illustration\", \"blueprint\", \"fill.enemy-seeded.v1\", \"Connected Workshop\", \"Original inviting business city with suppliers and workshops; no text or numeric savings claims baked into the image.\",\n     [\"https://docs.coupa.com/en/coupa-glossary/overview/c\"], \"invoice\")"
+    },
+    {
+      "start": 2676,
+      "end": 2692,
+      "source": ", \"navi-network\""
+    },
+    {
+      "start": 17125,
+      "end": 17234,
+      "source": "    if family == \"navi-network\":\n        effects += [invoke(\"effect.disable-enemy-tag.v1\", enemyTag=\"leak\")]\n"
+    },
+    {
+      "start": 20269,
+      "end": 20317,
+      "source": "\"leak\" if family == \"navi-network\" else \"patrol\""
+    },
+    {
+      "start": 17132,
+      "end": 17156,
+      "source": "family == \"navi-network\""
+    },
+    {
+      "start": 54,
+      "end": 100,
+      "source": "primitive catalog and four authoring examples."
+    }
+  ]
+}

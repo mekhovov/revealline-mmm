@@ -162,3 +162,25 @@ test('published runtime excludes authoring transfer answers and retains its QR d
   for (const name of ['qrcodegen-1.8.0.mjs', 'qrcodegen-1.8.0.json', 'QRCODEGEN-LICENSE.txt'])
     assert.ok((await readFile(new URL(`../app/game/vendor/${name}`, import.meta.url))).length > 0);
 });
+
+test('additional presentation and generator excerpts retain their source hashes', async () => {
+  const receipt = await json('migration/code-fragment-receipt.json');
+  const sources = new Set();
+  for (const row of receipt.items) {
+    assert.ok(!sources.has(row.sourcePath));
+    sources.add(row.sourcePath);
+    assert.ok(row.destination.startsWith('content/archive/code-fragments/'));
+    assert.ok(!row.destination.split('/').includes('..'));
+    const bytes = await readFile(new URL(row.destination, root));
+    assert.equal(bytes.length, row.bytes);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), row.sha256);
+    const archive = JSON.parse(bytes);
+    assert.equal(archive.sourceSHA256, row.sourceSHA256);
+    assert.equal(archive.sourceRevision, receipt.sourceRevision);
+    assert.equal(archive.fragments.length, row.fragments);
+    for (const fragment of archive.fragments) {
+      assert.ok(Number.isSafeInteger(fragment.start) && fragment.start >= 0);
+      assert.equal([...fragment.source].length, fragment.end - fragment.start);
+    }
+  }
+});
