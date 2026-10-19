@@ -1,0 +1,29 @@
+{
+  "tool": "image_gen.imagegen",
+  "outputs": [
+    {
+      "id": "shared-value-harbor",
+      "title": "Shared Value Harbor",
+      "originalToolOutputPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-64ff0766-b741-4e01-b6d5-9da440c29268.png",
+      "output_hint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb as /Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-64ff0766-b741-4e01-b6d5-9da440c29268.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "responseFields": ["image_url", "output_hint"],
+      "inlineImageReturned": true
+    },
+    {
+      "id": "city-savings-observatory",
+      "title": "City of Small Wins",
+      "originalToolOutputPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-7e6db3fd-67bf-4215-8351-40bbcb0e71b9.png",
+      "output_hint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb as /Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-7e6db3fd-67bf-4215-8351-40bbcb0e71b9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "responseFields": ["image_url", "output_hint"],
+      "inlineImageReturned": true
+    },
+    {
+      "id": "thoughtful-market-workshop",
+      "title": "The Thoughtful Market",
+      "originalToolOutputPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-315cee37-db08-4279-9c02-bf509bda2b9d.png",
+      "output_hint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb as /Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-315cee37-db08-4279-9c02-bf509bda2b9d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "responseFields": ["image_url", "output_hint"],
+      "inlineImageReturned": true
+    }
+  ]
+}

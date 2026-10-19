@@ -1,0 +1,57 @@
+{
+  "sourcePath": "game/external-chapter-source.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "3e4467ace9ffecf7e2c070e41b5ec77916ce1bcc",
+  "sourceSHA256": "37227329d56c3fa11e46953f299b990b6f5ea11457a7cb0b628fb151762b85f8",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 5664,
+      "end": 7423,
+      "kind": "ObjectExpression",
+      "source": "{\n    format: 'revealline-external-chapter.v1',\n    id: 'route-worlds-coupa',\n    revision: 1,\n    source: {\n      id: 'fpv-route-choices',\n      bytes: 11949780,\n      sha256: '589543f693e650355216aa702844a7726b7cd6e318900b8583702fd0650ae989',\n    },\n    pack: {\n      bytes: 8317,\n      sha256: '96d6c0e6612197a542ec28d31132a20e0e945c1e12407109ddedad04ac0b0813',\n    },\n    media: {\n      bytes: 8280993,\n      sha256: 'f26c91482325aaa0ea7d7484d9aa2de5f2209b1a8fcfc2ba518eb145f8ddd77f',\n    },\n    campaignKey: 'route-worlds-coupa/1/708c553521008c7d',\n    themeId: 'coupa',\n    originals: [\n      {\n        assetId: 'route-worlds-coupa-poster-1',\n        presentationId: 'route-worlds-coupa-poster-1-presentation',\n        levelId: 'route-worlds-coupa-foundry',\n        levelRevision: '1',\n        sha256: '0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518',\n        bytes: 2725160,\n        mime: 'image/png',\n        width: 1672,\n        height: 941,\n      },\n      {\n        assetId: 'route-worlds-coupa-poster-2',\n        presentationId: 'route-worlds-coupa-poster-2-presentation',\n        levelId: 'route-worlds-coupa-depot',\n        levelRevision: '1',\n        sha256: '8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d',\n        bytes: 2686912,\n        mime: 'image/png',\n        width: 1672,\n        height: 941,\n      },\n      {\n        assetId: 'route-worlds-coupa-poster-3',\n        presentationId: 'route-worlds-coupa-poster-3-presentation',\n        levelId: 'route-worlds-coupa-switchback',\n        levelRevision: '1',\n        sha256: '65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0',\n        bytes: 2858095,\n        mime: 'image/png',\n        width: 1672,\n        height: 941,\n      },\n    ],\n  }"
+    },
+    {
+      "start": 12933,
+      "end": 14752,
+      "kind": "ObjectExpression",
+      "source": "{\n    format: 'revealline-external-chapter.v1',\n    id: 'sentinel-circuit-coupa',\n    revision: 1,\n    source: {\n      id: 'sentinel-circuit',\n      bytes: 8943,\n      sha256: 'cf6009eeadef504d033de0dd27f33aa3d6405caf1954a6417cbdfc09bc566b40',\n    },\n    pack: {\n      bytes: 9427,\n      sha256: '0fc200adfd509d7a993f24c73432195e314b4450b2ef45fd601b523f62464c6c',\n    },\n    media: {\n      bytes: 7416321,\n      sha256: '185e104975706717deb11ad6e4dc91b1cedc6680755fa9174583ceec0660da16',\n    },\n    campaignKey: 'sentinel-circuit-coupa/1/8459eb3ba67608e6',\n    themeId: 'coupa',\n    originals: [\n      {\n        assetId: 'sentinel-circuit-coupa-poster-1',\n        presentationId: 'sentinel-circuit-coupa-poster-1-presentation',\n        levelId: 'sentinel-circuit-coupa-listening-court',\n        levelRevision: '1',\n        sha256: '8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d',\n        bytes: 2767187,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n      {\n        assetId: 'sentinel-circuit-coupa-poster-2',\n        presentationId: 'sentinel-circuit-coupa-poster-2-presentation',\n        levelId: 'sentinel-circuit-coupa-switchyard-gates',\n        levelRevision: '1',\n        sha256: '1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a',\n        bytes: 2187660,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n      {\n        assetId: 'sentinel-circuit-coupa-poster-3',\n        presentationId: 'sentinel-circuit-coupa-poster-3-presentation',\n        levelId: 'sentinel-circuit-coupa-open-circuit',\n        levelRevision: '1',\n        sha256: 'c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793',\n        bytes: 2449288,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n    ],\n  }"
+    },
+    {
+      "start": 20182,
+      "end": 21950,
+      "kind": "ObjectExpression",
+      "source": "{\n    format: 'revealline-external-chapter.v1',\n    id: 'fracture-lines-coupa',\n    revision: 1,\n    source: {\n      id: 'fracture-lines',\n      bytes: 9533,\n      sha256: 'c52a0f2996ea57229b9686f6ba65edb6de8a1628f5fc7609418c706fbfd39421',\n    },\n    pack: {\n      bytes: 9345,\n      sha256: 'd9e4ba55eddc55c15e690b590d7c7dbb34934227faa7fcff471fc82929c8dcd9',\n    },\n    media: {\n      bytes: 8718918,\n      sha256: '974993c218a9b87dae250348905ea712a28b719db4b28336e665179fc4528b1f',\n    },\n    campaignKey: 'fracture-lines-coupa/1/7366cdb1e5e3ed7e',\n    themeId: 'coupa',\n    originals: [\n      {\n        assetId: 'fracture-lines-coupa-poster-1',\n        presentationId: 'fracture-lines-coupa-poster-1-presentation',\n        levelId: 'fracture-lines-split-ring',\n        levelRevision: '1',\n        sha256: 'd914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362',\n        bytes: 3057159,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n      {\n        assetId: 'fracture-lines-coupa-poster-2',\n        presentationId: 'fracture-lines-coupa-poster-2-presentation',\n        levelId: 'fracture-lines-fault-fan',\n        levelRevision: '1',\n        sha256: 'e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70',\n        bytes: 2950816,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n      {\n        assetId: 'fracture-lines-coupa-poster-3',\n        presentationId: 'fracture-lines-coupa-poster-3-presentation',\n        levelId: 'fracture-lines-frayed-causeway',\n        levelRevision: '1',\n        sha256: 'b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb',\n        bytes: 2698848,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n    ],\n  }"
+    },
+    {
+      "start": 27381,
+      "end": 29154,
+      "kind": "ObjectExpression",
+      "source": "{\n    format: 'revealline-external-chapter.v1',\n    id: 'countercurrent-coupa',\n    revision: 1,\n    source: {\n      id: 'countercurrent',\n      bytes: 8560,\n      sha256: 'fa1ad192dbb09efe1ea97ec2689064cf84dc086e9a293e2c1a482d5e97cac6bb',\n    },\n    pack: {\n      bytes: 8121,\n      sha256: '625879853cfd4e7b26deb252ba0505565efda8fe27891e68c167893149310ff5',\n    },\n    media: {\n      bytes: 8527514,\n      sha256: '1edc1f00c0c27f0bab6c90a0dce4edee2cda3106a832b519db09bb63d2d940f4',\n    },\n    campaignKey: 'countercurrent-coupa/1/5f8155b60753cb07',\n    themeId: 'coupa',\n    originals: [\n      {\n        assetId: 'countercurrent-coupa-poster-1',\n        presentationId: 'countercurrent-coupa-poster-1-presentation',\n        levelId: 'countercurrent-offset-docks',\n        levelRevision: '1',\n        sha256: '87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997',\n        bytes: 2735312,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n      {\n        assetId: 'countercurrent-coupa-poster-2',\n        presentationId: 'countercurrent-coupa-poster-2-presentation',\n        levelId: 'countercurrent-sandbar-braid',\n        levelRevision: '1',\n        sha256: 'ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14',\n        bytes: 2884014,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n      {\n        assetId: 'countercurrent-coupa-poster-3',\n        presentationId: 'countercurrent-coupa-poster-3-presentation',\n        levelId: 'countercurrent-crossing-watch',\n        levelRevision: '1',\n        sha256: '1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5',\n        bytes: 2897299,\n        mime: 'image/png',\n        width: 1774,\n        height: 887,\n      },\n    ],\n  }"
+    },
+    {
+      "start": 29559,
+      "end": 29590,
+      "kind": "Literal",
+      "source": "'Spend Network · Route Choices'"
+    },
+    {
+      "start": 29703,
+      "end": 29737,
+      "kind": "Literal",
+      "source": "'Spend Network · Sentinel Circuit'"
+    },
+    {
+      "start": 29844,
+      "end": 29876,
+      "kind": "Literal",
+      "source": "'Spend Network · Fracture Lines'"
+    },
+    {
+      "start": 29983,
+      "end": 30015,
+      "kind": "Literal",
+      "source": "'Spend Network · Countercurrent'"
+    }
+  ]
+}

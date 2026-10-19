@@ -1,0 +1,40 @@
+{
+  "sourcePath": "authoring/production/history/4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "98bb94616cc676d887309dfb91246b68a8162a3d",
+  "sourceSHA256": "4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 721,
+      "end": 728,
+      "kind": "Literal",
+      "source": "'coupa'"
+    },
+    {
+      "start": 749,
+      "end": 751,
+      "kind": "owned-conditional-branch",
+      "condition": "['fpv', 'ukraine', 'retro', 'coupa'].includes(id)",
+      "source": "id"
+    },
+    {
+      "start": 813,
+      "end": 820,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 11287,
+      "end": 12701,
+      "kind": "FunctionDeclaration",
+      "source": "function coupa(c, f, colors) {\n  const compact = f.style === 'microtile',\n    step = f.reduced ? 0 : Math.floor(f.travelPhase * 6) % 2;\n  if (f.role === 'boss' || f.role === 'eroder') {\n    for (let i = 0; i < 4; i++) {\n      c.save();\n      c.rotate((i * Math.PI) / 2);\n      rect(c, colors.dark, -4, -13, 8, 8);\n      rect(c, colors.trim, -3, -12, 6, 6);\n      if (!compact) rect(c, colors.light, -2, -11, 2, 2);\n      c.restore();\n    }\n    rect(c, colors.dark, -7, -7, 14, 14);\n    rect(c, colors.body, -5, -5, 10, 10);\n  } else if (f.role === 'patrol' || f.role === 'contour') {\n    rect(c, colors.dark, -13, -13, 26, 26);\n    rect(c, colors.body, -12, -12, 24, 24);\n    rect(c, colors.light, -12, -12, 24, 2);\n    rect(c, colors.trim, -2, -12, 4, 24);\n    rect(c, colors.dark, -4, -2, 8, 4);\n    rect(c, colors.light, -2, -2, 4, 2);\n    rect(c, colors.trim, -5, 10 + step, 3, 2);\n    rect(c, colors.trim, 2, 11 - step, 3, 2);\n  } else {\n    rect(c, colors.dark, -9, -12, 18, 24);\n    rect(c, colors.light, -7, -12, 14, 24);\n    rect(c, colors.body, -7, -10, 14, 4);\n    rect(c, colors.trim, 3, -10, 4, 4);\n    for (let y = -2; y < 7; y += 4) rect(c, colors.dark, -4, y, compact ? 6 : 8, 1);\n    rect(c, colors.body, -11, 4 + step, 3, 6);\n    rect(c, colors.body, 8, 5 - step, 3, 6);\n    if (f.role === 'rover') {\n      rect(c, colors.dark, -10, 11, 7, 3);\n      rect(c, colors.dark, 3, 11, 7, 3);\n    }\n  }\n}"
+    },
+    {
+      "start": 19835,
+      "end": 19840,
+      "kind": "Property",
+      "source": "coupa"
+    }
+  ]
+}

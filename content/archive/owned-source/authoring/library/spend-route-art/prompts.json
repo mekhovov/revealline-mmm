@@ -1,0 +1,28 @@
+{
+  "format": "revealline-art-prompts.v1",
+  "theme": "spend-network",
+  "prompts": [
+    {
+      "id": "value-foundry",
+      "prompt": "Use case: stylized-concept. Create a finished original full-bleed 16:9 landscape reward picture for a modern premium pixel-art territory-reveal game, theme Spend Network, a playful Coupa-inspired world of procurement and useful savings. Scene: an imaginative blue-and-amber circular parts-reuse foundry in a bright old industrial hall at blue hour. Two broad separate conveyor routes bend around a central sorting-and-repair island; tiny friendly cobalt-blue courier robots carry reclaimed components toward a glowing golden assembly, while a human technician at a desk watches abstract diagram screens. Windows show a peaceful city. Organized bins of spare gears, neatly stacked packages, a hanging crane, greenery and copper lamps give dense rewarding details. Two clear paths, readable large shapes and a small central beacon of value restored. Rich square pixel clusters, crisp stepped edges, restrained dithering, painterly depth built entirely from visible pixels, nostalgic 1990s adventure-game craft with modern lighting. Deep ink-blue shadows, signature bright cobalt and cyan surfaces, warm amber/yellow practical lights, limited magenta. Warm ingenious collaborative optimistic mood. This is a fictional game metaphor, not a Coupa product UI or actual mascot. No readable text, real logo, financial numbers, claims, watermarks, UI frame, infographic, collage, photorealism or copied game art. No combat.",
+      "tool": "built-in image_gen",
+      "intent": "generate",
+      "status": "Original generated candidate; root visually inspected; not assigned to a live campaign"
+    },
+    {
+      "id": "shared-harbor",
+      "prompt": "Use case: stylized-concept. Create a finished original full-bleed 16:9 landscape reward picture for a modern premium pixel-art territory-reveal game, theme Spend Network, a playful Coupa-inspired world of collaborative procurement and supply chains. Scene: a beautiful compact nighttime harbor distribution district. A strong diagonal elevated freight walkway crosses a deep-blue canal, connecting small warehouse docks to a warm glowing central shared depot; a tiny blue delivery robot leads a neatly bundled pallet to workers with lanterns. Small boats, cranes, orderly cobalt shipping crates with abstract icons, rain-washed stone, roof gardens, distant city windows and a few golden resource tokens as understated game-world objects. Clear foreground dock/midground diagonal bridge/background depot, not an overhead strategy map. Rich crisp square pixel clusters, stepped geometry, restrained dithering, detailed 1990s adventure-game nostalgia with modern atmospheric lighting. Deep navy and cobalt, turquoise water reflections, warm golden lamps and orange sunset lingering at the horizon. Friendly efficient lively world, each region contains a small discovery. Fictional game metaphor, no real enterprise screenshot or actual mascot. No readable text, company marks, financial percentages, advertising claims, UI, collage, watermarks, photorealistic texture or copying any game illustration. No military content.",
+      "tool": "built-in image_gen",
+      "intent": "generate",
+      "status": "Original generated candidate; root visually inspected; not assigned to a live campaign"
+    },
+    {
+      "id": "network-garden",
+      "prompt": "Use case: stylized-concept. Create a finished original full-bleed 16:9 landscape reward picture for a modern premium pixel-art territory-reveal game, theme Spend Network, a playful Coupa-inspired world of spend visibility, collaborative planning and AI assistance. Scene: a tranquil rooftop signal garden above a fictional city. Foreground patchboard terminals and bright thin cyan connections wind along planters and small footbridges toward a central glass pavilion containing a softly luminous amber tree-shaped network sculpture. Two small friendly cobalt-blue robot helpers and one person compare abstract constellation diagrams, connecting a disconnected route so the whole garden lights up. In the background warm office windows, rooftop solar panels, small city delivery pods and a starry indigo sky; emphasize a complete beautiful place rather than a diagram or dashboard. Clear cable path and readable architecture, lush little plants and purposeful crafted props. Crisp square pixel clusters, stepped diagonals, restrained dithering, premium 1990s adventure-game nostalgic detail and modern light composition. Deep navy, cobalt and teal with ivory accents and restrained warm amber light. Peaceful satisfying discovery, technology serving a human-scale world. Entirely original fictional scene, no authentic Coupa UI or mascot, no readable text, logos, financial figures, performance claims, collage, UI frame, watermarks or photorealism.",
+      "tool": "built-in image_gen",
+      "intent": "generate",
+      "status": "Original generated candidate; root visually inspected; not assigned to a live campaign"
+    }
+  ],
+  "inputImages": []
+}

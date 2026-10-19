@@ -1,0 +1,45 @@
+{
+  "sourcePath": "scripts/external-distribution.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "3ed47cde695bb23cd4b80b4b4b4f7c444323cea2",
+  "sourceSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 2600,
+      "end": 2617,
+      "kind": "Literal",
+      "source": "'spend-route-art'"
+    },
+    {
+      "start": 2897,
+      "end": 2917,
+      "kind": "Literal",
+      "source": "'fracture-coupa-art'"
+    },
+    {
+      "start": 4623,
+      "end": 4677,
+      "kind": "ArrayExpression",
+      "source": "['route-worlds-coupa', () => buildRouteWorld('coupa')]"
+    },
+    {
+      "start": 4874,
+      "end": 4935,
+      "kind": "ArrayExpression",
+      "source": "['sentinel-circuit-coupa', () => buildSentinelTheme('coupa')]"
+    },
+    {
+      "start": 5125,
+      "end": 5184,
+      "kind": "ArrayExpression",
+      "source": "['fracture-lines-coupa', () => buildFractureTheme('coupa')]"
+    },
+    {
+      "start": 5403,
+      "end": 5468,
+      "kind": "ArrayExpression",
+      "source": "['countercurrent-coupa', () => buildCountercurrentTheme('coupa')]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sourcePath": "game/company-campaigns/progression.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "074df9167860b0174deaae31b9de4827357ddc53",
+  "sourceSHA256": "6898fb29406baab7ae43a4520565e659593ac736360eafc2081d3024f2b1ecbd",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 4289,
+      "end": 4296,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 4303,
+      "end": 4483,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "[\n        { stage: 1, band: 1 },\n        { stage: 2, band: 4 },\n        { stage: 3, band: 6 },\n        { stage: 4, band: 8 },\n        { stage: 6, band: 11 },\n      ][campaignIndex]"
+    }
+  ]
+}

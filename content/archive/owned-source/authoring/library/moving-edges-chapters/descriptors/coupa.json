@@ -1,0 +1,55 @@
+{
+  "format": "revealline-external-chapter.v1",
+  "id": "moving-edges-coupa",
+  "revision": 1,
+  "source": {
+    "id": "moving-edges",
+    "bytes": 9227,
+    "sha256": "048100f48c2406949639b86b540d17e26e5660e59879707dc913f52ac74fc33c"
+  },
+  "pack": {
+    "bytes": 8649,
+    "sha256": "98c6bfa6fb3f94e09867de548ec4bcd81b0b6e2da6f6d1800073eb4f6e6b0cc8"
+  },
+  "media": {
+    "bytes": 8643157,
+    "sha256": "dab7d61d0939397515cb1d96a78ad4a39f8ce805906d3f180295f29bc94f9e0f"
+  },
+  "campaignKey": "moving-edges-coupa/1/7ae067673a222093",
+  "themeId": "coupa",
+  "originals": [
+    {
+      "assetId": "moving-edges-coupa-poster-1",
+      "presentationId": "moving-edges-coupa-poster-1-presentation",
+      "levelId": "moving-edges-terrace-stitch",
+      "levelRevision": "1",
+      "sha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+      "bytes": 2844215,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "moving-edges-coupa-poster-2",
+      "presentationId": "moving-edges-coupa-poster-2-presentation",
+      "levelId": "moving-edges-survey-wheel",
+      "levelRevision": "1",
+      "sha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+      "bytes": 3151700,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "moving-edges-coupa-poster-3",
+      "presentationId": "moving-edges-coupa-poster-3-presentation",
+      "levelId": "moving-edges-breakwater-return",
+      "levelRevision": "1",
+      "sha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+      "bytes": 2635887,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    }
+  ]
+}

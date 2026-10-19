@@ -1,0 +1,55 @@
+{
+  "format": "revealline-external-chapter.v1",
+  "id": "fracture-lines-coupa",
+  "revision": 1,
+  "source": {
+    "id": "fracture-lines",
+    "bytes": 9533,
+    "sha256": "c52a0f2996ea57229b9686f6ba65edb6de8a1628f5fc7609418c706fbfd39421"
+  },
+  "pack": {
+    "bytes": 9345,
+    "sha256": "d9e4ba55eddc55c15e690b590d7c7dbb34934227faa7fcff471fc82929c8dcd9"
+  },
+  "media": {
+    "bytes": 8718918,
+    "sha256": "974993c218a9b87dae250348905ea712a28b719db4b28336e665179fc4528b1f"
+  },
+  "campaignKey": "fracture-lines-coupa/1/7366cdb1e5e3ed7e",
+  "themeId": "coupa",
+  "originals": [
+    {
+      "assetId": "fracture-lines-coupa-poster-1",
+      "presentationId": "fracture-lines-coupa-poster-1-presentation",
+      "levelId": "fracture-lines-split-ring",
+      "levelRevision": "1",
+      "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362",
+      "bytes": 3057159,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "fracture-lines-coupa-poster-2",
+      "presentationId": "fracture-lines-coupa-poster-2-presentation",
+      "levelId": "fracture-lines-fault-fan",
+      "levelRevision": "1",
+      "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70",
+      "bytes": 2950816,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "fracture-lines-coupa-poster-3",
+      "presentationId": "fracture-lines-coupa-poster-3-presentation",
+      "levelId": "fracture-lines-frayed-causeway",
+      "levelRevision": "1",
+      "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb",
+      "bytes": 2698848,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sourcePath": "game/app.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "417917463f1efc4901e7ed242feeb2d694df502a",
+  "sourceSHA256": "6c74d9ad957de55ffc7ba9d19cf011c01ce74318f49d4e5bfefdff9554b11bb3",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 350201,
+      "end": 350208,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 350219,
+      "end": 350284,
+      "kind": "owned-conditional-branch",
+      "condition": "theme.id === 'coupa'",
+      "source": "t('interface:fictionalSpendManagementThemeOriginalHelperArtwork')"
+    }
+  ]
+}

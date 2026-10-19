@@ -1,0 +1,21 @@
+{
+  "sourcePath": "docs/verification/company-qualification-model.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "c0cb1009a668ddcecb84a4100505f93348e67f5a",
+  "sourceSHA256": "26489f204e04ab0c5b9bc7036c185e90194057c7f6311b57a18c0e8259effbc2",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1078,
+      "end": 1095,
+      "kind": "Literal",
+      "source": "'coupa-os-launch'"
+    },
+    {
+      "start": 2239,
+      "end": 2250,
+      "kind": "Literal",
+      "source": "'coupa-all'"
+    }
+  ]
+}

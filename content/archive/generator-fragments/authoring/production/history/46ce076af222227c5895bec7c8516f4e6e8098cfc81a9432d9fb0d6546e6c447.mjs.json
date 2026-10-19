@@ -1,0 +1,15 @@
+{
+  "sourcePath": "authoring/production/history/46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "ad9eb4659a16249934b6eefb8582f7b813b0c5b5",
+  "sourceSHA256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 302,
+      "end": 309,
+      "kind": "Literal",
+      "source": "'coupa'"
+    }
+  ]
+}

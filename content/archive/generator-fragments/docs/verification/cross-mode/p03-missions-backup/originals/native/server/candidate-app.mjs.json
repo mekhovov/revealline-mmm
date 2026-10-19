@@ -1,0 +1,22 @@
+{
+  "sourcePath": "docs/verification/cross-mode/p03-missions-backup/originals/native/server/candidate-app.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "2f2aea49a9608b5cf72f56754ae6d6d7ffbe02d2",
+  "sourceSHA256": "8eded9082a16787c87a5e0507e69fd566e0a597405014f91934e6eaacc11f950",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 185038,
+      "end": 185045,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 185056,
+      "end": 185116,
+      "kind": "owned-conditional-branch",
+      "condition": "theme.id === 'coupa'",
+      "source": "'Fictional spend-management theme · original helper artwork'"
+    }
+  ]
+}

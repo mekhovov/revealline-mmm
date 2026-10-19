@@ -1,0 +1,159 @@
+{
+  "format": "revealline-source-art-verification.v1",
+  "baseCommit": "3b2c01040e87b2b33950c9914825dc5f13d80e58",
+  "sourceCandidates": 3,
+  "newGeometries": 0,
+  "totalOriginalBytes": 8706823,
+  "method": "Exact SHA/bytes; all PNG chunk CRCs, bounded full RGB8 scanline decompression and filters; existing unchanged decoder; no output image transformations.",
+  "originalCopyEvidence": "Recording requires --tool-originals and byte equality with all three untouched default tool files. Portable verification checks workspace/source pins; --tool-originals repeats local copy comparison.",
+  "visualReview": "All three actual images visually inspected by the authoring agent. Per-image observations and deviations are in provenance and README; root visual review is separate.",
+  "limits": "Source-art checks only; no browser/pack/storage/offline/gameplay/device/animation or rights certification.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4647,
+      "sha256": "3ea1b43fc5a89aba625e9a189980d3ca9102caafe20f447a41657f9d51e174d8"
+    },
+    {
+      "path": "prompts.json",
+      "bytes": 8641,
+      "sha256": "a349bf22d7f5c02b9a06b790e64178f166fee5fabb5fc3151aa8cf4143ba8834"
+    },
+    {
+      "path": "generation-results.json",
+      "bytes": 3923,
+      "sha256": "931c5ecb516924a19c9ea12717bece9b6e895443606b0335ba27237a54a680e4"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 9538,
+      "sha256": "3709b1a56f5e88f2335c8fcd50b82c3f7efa4de8f89585db6b6af3325c7898d8"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 10070,
+      "sha256": "112a243591864dd4338dd0ba59bbc798d064474600c8be33adc979a024ff05b3"
+    },
+    {
+      "path": "originals/split-ring-coupa.png",
+      "bytes": 3057159,
+      "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362"
+    },
+    {
+      "path": "originals/fault-fan-coupa.png",
+      "bytes": 2950816,
+      "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70"
+    },
+    {
+      "path": "originals/frayed-causeway-coupa.png",
+      "bytes": 2698848,
+      "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb"
+    }
+  ],
+  "decoded": [
+    {
+      "cellId": "fracture-lines/split-ring/coupa",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "44e1c760d6f623c463b49bfa56f1c1421413f4fa767338f325d113ed938a7623",
+      "bytes": 3057159,
+      "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362"
+    },
+    {
+      "cellId": "fracture-lines/fault-fan/coupa",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "94e8fde9b6a848d3e0f289e09383fce90fccb1181a310a3d9ec50be9098f2b03",
+      "bytes": 2950816,
+      "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70"
+    },
+    {
+      "cellId": "fracture-lines/frayed-causeway/coupa",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "9ebe532db0cb5b056a052db36548807d2db9ca55b34720a65ff7e1d6b433a192",
+      "bytes": 2698848,
+      "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb"
+    }
+  ],
+  "protectedContext": [
+    {
+      "path": "authoring/library/fracture-lines/README.md",
+      "bytes": 6212,
+      "sha256": "d492969d506e901a2442aa444a99d47ecbcf908644687bb24fcb78b93dc6cfc8"
+    },
+    {
+      "path": "authoring/library/fracture-lines/layouts.json",
+      "bytes": 7669,
+      "sha256": "af15577704ce673100f7c6d89ae92baffa25c5ebfdae2459ea4c720a9d7ab179"
+    },
+    {
+      "path": "authoring/library/fracture-lines/build.mjs",
+      "bytes": 8909,
+      "sha256": "56cb05d183ce0406af2949506d6c3f6da78e9e275ce7302360a3d6742d72e59d"
+    },
+    {
+      "path": "authoring/library/fracture-lines-art/README.md",
+      "bytes": 3315,
+      "sha256": "a9e9c7072be59aab3d89f1481b7b12f5782b3e9f85aed1f339df0c0bfc0bc3fd"
+    },
+    {
+      "path": "authoring/library/fracture-lines-art/verify.mjs",
+      "bytes": 8509,
+      "sha256": "d294985c6d56af02b0c93c3be45b1b08e640101a78794c461f96265e607d6eb5"
+    },
+    {
+      "path": "authoring/library/fracture-lines-chapter/README.md",
+      "bytes": 4945,
+      "sha256": "627d8bad65b3dfdfd7ddba777d1bf808e67daa73a91403aeae47d7ca6201e5f5"
+    },
+    {
+      "path": "authoring/library/fracture-lines-chapter/edition.json",
+      "bytes": 1230,
+      "sha256": "4dbb016b650803670a9f842acd83a699c61165f88cb2efa5bda3beae06c1cb23"
+    },
+    {
+      "path": "authoring/library/spend-route-art/README.md",
+      "bytes": 4027,
+      "sha256": "feb2ed590334a1e8cdb8ce34e0ffb16c57721cead74705d9f58f06595e86a132"
+    },
+    {
+      "path": "authoring/library/spend-route-art/provenance.json",
+      "bytes": 5024,
+      "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+    },
+    {
+      "path": "authoring/library/sentinel-theme-art/README.md",
+      "bytes": 5504,
+      "sha256": "eadccd93624f9a497733c0f01564a0b68fba15dd1ec05b5052ce37c271529147"
+    },
+    {
+      "path": "authoring/library/sentinel-theme-art/verify.mjs",
+      "bytes": 7194,
+      "sha256": "27ab5ba0eb07e25468a12fae81bcc38006603154d20e429c85af326bbc3282d2"
+    },
+    {
+      "path": "authoring/library/four-worlds-chapters/verify-images.mjs",
+      "bytes": 3838,
+      "sha256": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34"
+    },
+    {
+      "path": "game/media-library.mjs",
+      "bytes": 12188,
+      "sha256": "ed1f1abe0b95b9889741ec8929522f0fcaba29a5438b09df18016d3ffffc6eb4"
+    },
+    {
+      "path": "authoring/library/sentinel-theme-art/coupa/originals/listening-court.png",
+      "bytes": 2767187,
+      "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+    },
+    {
+      "path": "authoring/library/fracture-lines-art/originals/frayed-causeway-fpv.png",
+      "bytes": 2938361,
+      "sha256": "5aae2f84912ca35b7145617c98d3c4ecac72a93d8d6cc04558d86873ca0938f1"
+    }
+  ]
+}

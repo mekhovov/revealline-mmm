@@ -1,0 +1,45 @@
+{
+  "sourcePath": "authoring/library/countercurrent-art/sources.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "e273781f68fde74acd816963ff9f1592637e260c",
+  "sourceSHA256": "5e1817c35837b2624c2950e783bd6275a762d1ebcec8cdc29136fa7295ba4c62",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 3286,
+      "end": 3306,
+      "kind": "ownership-reference",
+      "source": "'coupa-offset-docks'"
+    },
+    {
+      "start": 3379,
+      "end": 3450,
+      "kind": "ownership-reference",
+      "source": "'authoring/library/countercurrent-art/originals/offset-docks-coupa.png'"
+    },
+    {
+      "start": 3618,
+      "end": 3639,
+      "kind": "ownership-reference",
+      "source": "'coupa-sandbar-braid'"
+    },
+    {
+      "start": 3711,
+      "end": 3783,
+      "kind": "ownership-reference",
+      "source": "'authoring/library/countercurrent-art/originals/sandbar-braid-coupa.png'"
+    },
+    {
+      "start": 3951,
+      "end": 3973,
+      "kind": "ownership-reference",
+      "source": "'coupa-crossing-watch'"
+    },
+    {
+      "start": 4043,
+      "end": 4116,
+      "kind": "ownership-reference",
+      "source": "'authoring/library/countercurrent-art/originals/crossing-watch-coupa.png'"
+    }
+  ]
+}

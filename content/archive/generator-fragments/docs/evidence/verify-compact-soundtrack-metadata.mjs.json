@@ -1,0 +1,15 @@
+{
+  "sourcePath": "docs/evidence/verify-compact-soundtrack-metadata.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "ad098a2458004b8308b4df38ae30165e1458504b",
+  "sourceSHA256": "3dfcead51458e919b15efeb790fa698216f6db10360ef0430aa0237b014b6307",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 4091,
+      "end": 4455,
+      "kind": "ownership-reference",
+      "source": "'coupa-all,coupa-adventure,coupa-culture,coupa-foundations,coupa-operations,coupa-developers,droneaid-community,droneaid-nl-community,droneaid-nl-workshop-lights,droneaid-nl-parts-in-motion,droneaid-nl-signals-of-support,droneaid-nl-careful-handoff,droneaid-nl-makers-together,droneaid-nl-shared-horizon,social-drone-ua,victory-drones,ukraine-culture,fpv-learning'"
+    }
+  ]
+}

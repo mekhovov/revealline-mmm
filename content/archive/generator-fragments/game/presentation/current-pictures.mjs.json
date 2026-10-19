@@ -1,0 +1,237 @@
+{
+  "sourcePath": "game/presentation/current-pictures.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "1f61c16a6dc8c2f247ab1d22079362b097b16e63",
+  "sourceSHA256": "b771b4a14d79991ccb7efb0766e8b6a6d01f052638622eab8b7b9f44dfc19cf3",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 300,
+      "end": 343,
+      "kind": "Literal",
+      "source": "\"sentinel-circuit-coupa/1/8459eb3ba67608e6\""
+    },
+    {
+      "start": 344,
+      "end": 385,
+      "kind": "Literal",
+      "source": "\"fracture-lines-coupa/1/7366cdb1e5e3ed7e\""
+    },
+    {
+      "start": 386,
+      "end": 425,
+      "kind": "Literal",
+      "source": "\"route-worlds-coupa/1/708c553521008c7d\""
+    },
+    {
+      "start": 466,
+      "end": 507,
+      "kind": "Literal",
+      "source": "\"countercurrent-coupa/1/5f8155b60753cb07\""
+    },
+    {
+      "start": 1737,
+      "end": 1744,
+      "kind": "Literal",
+      "source": "\"coupa\""
+    },
+    {
+      "start": 1926,
+      "end": 1944,
+      "kind": "Literal",
+      "source": "\"Spend Network · \""
+    },
+    {
+      "start": 2200,
+      "end": 2288,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.0481ceb3eba28ea9\",0,\"Stone Lanes · Spend Network\",0,0,\"signal-04\",\"1\",0]"
+    },
+    {
+      "start": 2289,
+      "end": 2415,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.05d993f4148d93fc\",1,\"Shared Routes · City of Small Wins · Spend Network\",1,1,\"original-spend-city-wins\",\"1\",0]"
+    },
+    {
+      "start": 2416,
+      "end": 2505,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.090b4ca5dc7ea7fa\",0,\"Night Patrol · Spend Network\",0,0,\"signal-05\",\"1\",0]"
+    },
+    {
+      "start": 2506,
+      "end": 2637,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.0ff486f1577a5fc7\",1,\"Shared Routes · Shared Value Harbor · Spend Network\",1,1,\"original-spend-shared-harbor\",\"1\",0]"
+    },
+    {
+      "start": 2638,
+      "end": 2785,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.1b09bd3b6f1608be\",1,\"Sentinel Circuit · sentinel-circuit-coupa-listening-court\",2,2,\"sentinel-circuit-coupa-listening-court\",\"1\",0]"
+    },
+    {
+      "start": 2786,
+      "end": 2915,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.1f4ed16be3f1c6cc\",1,\"Fracture Lines · fracture-lines-frayed-causeway\",2,3,\"fracture-lines-frayed-causeway\",\"1\",0]"
+    },
+    {
+      "start": 2916,
+      "end": 3065,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.280ea068e8a16fac\",1,\"Sentinel Circuit · sentinel-circuit-coupa-switchyard-gates\",2,2,\"sentinel-circuit-coupa-switchyard-gates\",\"1\",0]"
+    },
+    {
+      "start": 3066,
+      "end": 3192,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.2a75ce6ea2ef63e0\",1,\"Route Choices · route-worlds-coupa-switchback\",3,4,\"route-worlds-coupa-switchback\",\"1\",0]"
+    },
+    {
+      "start": 3193,
+      "end": 3286,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.3d671e7498b870e7\",0,\"Hidden Frequency · Spend Network\",0,0,\"signal-06\",\"1\",0]"
+    },
+    {
+      "start": 3287,
+      "end": 3422,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.3f2efe130aa97273\",1,\"Shared Routes · The Thoughtful Market · Spend Network\",1,1,\"original-spend-market-workshop\",\"1\",0]"
+    },
+    {
+      "start": 3423,
+      "end": 3564,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.40f512bb0fb9c2b3\",1,\"Sentinel Circuit · sentinel-circuit-coupa-open-circuit\",2,2,\"sentinel-circuit-coupa-open-circuit\",\"1\",0]"
+    },
+    {
+      "start": 3565,
+      "end": 3654,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.47c1d9559d9f2246\",0,\"First Signal · Spend Network\",0,0,\"signal-01\",\"1\",0]"
+    },
+    {
+      "start": 3655,
+      "end": 3751,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.5686cf79f5ffe46d\",2,\"Garden of Threads · Spend Network\",0,5,\"workshop-01\",\"1\",0]"
+    },
+    {
+      "start": 3752,
+      "end": 3842,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.5865540015dd327e\",0,\"Signal Garden · Spend Network\",0,0,\"signal-09\",\"1\",0]"
+    },
+    {
+      "start": 3843,
+      "end": 3962,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.691155cfa40084bf\",1,\"Fracture Lines · fracture-lines-split-ring\",2,3,\"fracture-lines-split-ring\",\"1\",0]"
+    },
+    {
+      "start": 3963,
+      "end": 4050,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.73d147ccabfbd137\",0,\"Short Fuse · Spend Network\",0,0,\"signal-11\",\"1\",0]"
+    },
+    {
+      "start": 4051,
+      "end": 4174,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.7b47f9c3630246d4\",1,\"Countercurrent · countercurrent-offset-docks\",2,6,\"countercurrent-offset-docks\",\"1\",0]"
+    },
+    {
+      "start": 4175,
+      "end": 4274,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.918ad57613204cd4\",3,\"Sentinel Relay · Spend Network\",0,7,\"sentinel-relay-01\",\"1\",0]"
+    },
+    {
+      "start": 4275,
+      "end": 4370,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.92819c6b51cb991c\",2,\"Neon Switchboard · Spend Network\",0,5,\"workshop-02\",\"1\",0]"
+    },
+    {
+      "start": 4371,
+      "end": 4459,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.9b4302b0e015b34a\",0,\"Relay Storm · Spend Network\",0,0,\"signal-12\",\"1\",0]"
+    },
+    {
+      "start": 4460,
+      "end": 4547,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.9c36bbfb2cf2e14d\",0,\"Last Light · Spend Network\",0,0,\"signal-08\",\"1\",0]"
+    },
+    {
+      "start": 4548,
+      "end": 4639,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.a47222e499efa5eb\",2,\"Clear Ledger · Spend Network\",0,5,\"workshop-03\",\"1\",0]"
+    },
+    {
+      "start": 4640,
+      "end": 4730,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.aa5451d69dc5c353\",0,\"Relay Orchard · Spend Network\",0,0,\"signal-02\",\"1\",0]"
+    },
+    {
+      "start": 4731,
+      "end": 4847,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.b2c793a221d65a11\",1,\"Route Choices · route-worlds-coupa-depot\",3,4,\"route-worlds-coupa-depot\",\"1\",0]"
+    },
+    {
+      "start": 4848,
+      "end": 4934,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.b80cf770ce6cb4a4\",0,\"Crosswind · Spend Network\",0,0,\"signal-03\",\"1\",0]"
+    },
+    {
+      "start": 4935,
+      "end": 5052,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.c09c95e761808a54\",1,\"Fracture Lines · fracture-lines-fault-fan\",2,3,\"fracture-lines-fault-fan\",\"1\",0]"
+    },
+    {
+      "start": 5053,
+      "end": 5173,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.c6000faa77b7d10e\",1,\"Route Choices · route-worlds-coupa-foundry\",3,4,\"route-worlds-coupa-foundry\",\"1\",0]"
+    },
+    {
+      "start": 5174,
+      "end": 5263,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.cb4a704dd3086148\",0,\"The Crossing · Spend Network\",0,0,\"signal-07\",\"1\",0]"
+    },
+    {
+      "start": 5264,
+      "end": 5391,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.d89ff114a5355b44\",1,\"Countercurrent · countercurrent-crossing-watch\",2,6,\"countercurrent-crossing-watch\",\"1\",0]"
+    },
+    {
+      "start": 5392,
+      "end": 5517,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.d9bbb55300b07784\",1,\"Countercurrent · countercurrent-sandbar-braid\",2,6,\"countercurrent-sandbar-braid\",\"1\",0]"
+    },
+    {
+      "start": 5518,
+      "end": 5609,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.coupa.e9fe90c13e941598\",0,\"Supply Circuit · Spend Network\",0,0,\"signal-10\",\"1\",0]"
+    },
+    {
+      "start": 14291,
+      "end": 14384,
+      "kind": "ArrayExpression",
+      "source": "[\"picture.retro.4a05e2ea99601447\",7,\"Neon COUPA · 1994 Forever\",1,22,\"neon-coupa-pack\",\"2\",2]"
+    }
+  ]
+}

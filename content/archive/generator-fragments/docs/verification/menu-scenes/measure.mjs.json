@@ -1,0 +1,15 @@
+{
+  "sourcePath": "docs/verification/menu-scenes/measure.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "552c4b5d92d98ece54679a04eea08b8ddd65622a",
+  "sourceSHA256": "038bd31b9ea5e35c467e74861877ebcf9a1fa0e1144c8119ee174e675f50be66",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 3592,
+      "end": 3630,
+      "kind": "ArrayExpression",
+      "source": "['coupa-spend-in-motion-theme', false]"
+    }
+  ]
+}

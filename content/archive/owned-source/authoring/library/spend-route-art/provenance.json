@@ -1,0 +1,100 @@
+{
+  "format": "revealline-source-art-provenance.v1",
+  "scope": "Three new static original candidates only; no runtime/pack/award integration.",
+  "baseCommit": "f1a5d0cb4b13bc57f65c8892b81b2a405479f1e7",
+  "generatedOn": "2026-09-13",
+  "tool": "image_gen.imagegen built-in",
+  "calls": 3,
+  "editCalls": 0,
+  "referenceImages": [],
+  "rawOriginalsPreserved": true,
+  "pixelTransformations": [],
+  "contextPins": [
+    {
+      "path": "authoring/library/fpv-route-choices/routes.json",
+      "bytes": 239987,
+      "sha256": "d6af87beb11f55b81cf33b6b07254c51d19923d8823d2d80c17606db0e4c1245"
+    },
+    {
+      "path": "authoring/library/four-worlds-chapters/verify-images.mjs",
+      "bytes": 3838,
+      "sha256": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34"
+    },
+    {
+      "path": "game/media-library.mjs",
+      "bytes": 12188,
+      "sha256": "ed1f1abe0b95b9889741ec8929522f0fcaba29a5438b09df18016d3ffffc6eb4"
+    },
+    {
+      "path": "authoring/skills/xonix-asset-creator/SKILL.md",
+      "bytes": 14206,
+      "sha256": "c68a0e3138398c5277095c9698292a1bc194adcd0e152ed69bba48adf969b6a6"
+    }
+  ],
+  "inspiration": [
+    {
+      "url": "https://www.coupa.com/blog/an-8-trillion-advantage-coupas-community-driven-ai-turns-transactions-into-intelligent-insights/",
+      "use": "Parent-selected conceptual reference for fictional collaborative spend/supply motifs; no image or product interface copied.",
+      "retrieval": "Direct web retrieval by preserving worker returned403; no financial figures or factual performance claim derived."
+    },
+    {
+      "url": "https://www.coupa.com/blog/how-business-spend-management-can-help-accelerate-financial-transformation/",
+      "use": "Parent-selected conceptual reference for fictional collaborative spend/supply motifs; no image or product interface copied.",
+      "retrieval": "Direct web retrieval by preserving worker returned403; no financial figures or factual performance claim derived."
+    }
+  ],
+  "images": [
+    {
+      "id": "value-foundry",
+      "title": "Value Foundry",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09328-21d8-7e93-9403-7e6793a4fac2/exec-ea7323a6-08bf-4e1d-bed3-e4d0a697061c.png",
+      "path": "originals/value-foundry.png",
+      "bytes": 2725160,
+      "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518",
+      "width": 1672,
+      "height": 941,
+      "sourceBytesEqual": true,
+      "promptSha256": "9e99cd0abf000526ea289e17e11d1de3582e91e51a998b170441ac247827a158",
+      "runtimeBinding": null,
+      "proposedRoleOnly": "route-choices-foundry",
+      "visualReview": "Two broad conveyor lanes circle an amber gear assembly; small blue robots and a technician occupy a detailed navy industrial hall. Abstract screens contain tiny pseudo-letter marks. No real product interface or readable instruction is relied on."
+    },
+    {
+      "id": "shared-harbor",
+      "title": "Shared Harbor",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09328-21d8-7e93-9403-7e6793a4fac2/exec-d5289c7d-6a61-4e3a-8d1e-7f2257a7c91e.png",
+      "path": "originals/shared-harbor.png",
+      "bytes": 2686912,
+      "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d",
+      "width": 1672,
+      "height": 941,
+      "sourceBytesEqual": true,
+      "promptSha256": "67c26faadc291e6353462b7f72f8e27b1df72be5dc0ca16846025dd148819236",
+      "runtimeBinding": null,
+      "proposedRoleOnly": "route-choices-depot",
+      "visualReview": "A diagonal freight bridge connects a cool harbor to a warm shared depot. Small workers, boats and a blue robot give scale. Three-dot, cube and leaf motifs decorate signs and crates; these are not approved Coupa branding or an actual product UI."
+    },
+    {
+      "id": "network-garden",
+      "title": "Network Garden",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09328-21d8-7e93-9403-7e6793a4fac2/exec-2a44f820-723d-4cfe-be71-90983cbc765c.png",
+      "path": "originals/network-garden.png",
+      "bytes": 2858095,
+      "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0",
+      "width": 1672,
+      "height": 941,
+      "sourceBytesEqual": true,
+      "promptSha256": "4c8a49f5be3c69e3b4ba0291363a6d5d1d75c84950fd0ffcd116313cf055f151",
+      "runtimeBinding": null,
+      "proposedRoleOnly": "route-choices-switchback",
+      "visualReview": "Cyan connections trace footbridges toward a glowing tree-shaped network in a garden pavilion. Blue robots and a foreground person are larger than the prompt requested. Screens and cables are fictional scenery, not a real dashboard or technical diagram."
+    }
+  ],
+  "notQualified": [
+    "Partial-reveal and active-actor contrast",
+    "Browser decoding and target-device fit",
+    "Pack/managed storage adoption",
+    "Animation, movie timestamps or audio",
+    "Real product/mascot accuracy, endorsement, financial performance or exclusive rights"
+  ]
+}

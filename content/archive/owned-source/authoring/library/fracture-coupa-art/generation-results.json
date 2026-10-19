@@ -1,0 +1,56 @@
+{
+  "format": "revealline-source-art-generation-results.v1",
+  "tool": "image_gen.imagegen built-in",
+  "calls": 3,
+  "edits": 0,
+  "generated": [
+    {
+      "cellId": "fracture-lines/split-ring/coupa",
+      "themeId": "coupa",
+      "missionSlot": "split-ring",
+      "mode": "generate",
+      "tool": "image_gen.imagegen built-in",
+      "inputImages": [],
+      "workspacePath": "originals/split-ring-coupa.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-aed42171-7edf-4471-93af-1e26d34464b7.png",
+      "outputHint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73 as /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-aed42171-7edf-4471-93af-1e26d34464b7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "bytes": 3057159,
+      "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "55d7e92937b32c62e185572e63122936b235fb5cdeedf314db8f67cbec0f19bf"
+    },
+    {
+      "cellId": "fracture-lines/fault-fan/coupa",
+      "themeId": "coupa",
+      "missionSlot": "fault-fan",
+      "mode": "generate",
+      "tool": "image_gen.imagegen built-in",
+      "inputImages": [],
+      "workspacePath": "originals/fault-fan-coupa.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-2d037eee-2de1-4d03-b782-b66df73ad548.png",
+      "outputHint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73 as /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-2d037eee-2de1-4d03-b782-b66df73ad548.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "bytes": 2950816,
+      "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "fb216ef67f198207150c5f199c7aca4e9c2deb6daccc9e06b3fa85e57bb0187b"
+    },
+    {
+      "cellId": "fracture-lines/frayed-causeway/coupa",
+      "themeId": "coupa",
+      "missionSlot": "frayed-causeway",
+      "mode": "generate",
+      "tool": "image_gen.imagegen built-in",
+      "inputImages": [],
+      "workspacePath": "originals/frayed-causeway-coupa.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-5b00e88b-12f1-4bfa-b04d-d539dcedf321.png",
+      "outputHint": "Generated images are saved to /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73 as /Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-5b00e88b-12f1-4bfa-b04d-d539dcedf321.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "bytes": 2698848,
+      "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "9776d111e2f3fb70d70061a57f313f6430bae2fe9a6ed83805d49949c20d56e0"
+    }
+  ]
+}

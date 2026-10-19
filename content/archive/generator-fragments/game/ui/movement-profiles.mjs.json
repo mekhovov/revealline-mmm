@@ -1,0 +1,27 @@
+{
+  "sourcePath": "game/ui/movement-profiles.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "045d0e66d37760386e0a142c69e084f14bc51234",
+  "sourceSHA256": "687c5770264af29bdddc5444019c40b457765bd570f6ac8c435cb0a38af6c96c",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1969,
+      "end": 2205,
+      "kind": "Property",
+      "source": "coupa: {\n        bouncer: 'grain',\n        'border-patrol': 'grain',\n        'contour-patrol': 'grain',\n        'claimed-rover': 'wheels',\n        eroder: 'motor',\n        'lane-boss': 'grain',\n        'relay-sentinel': 'grain',\n      }"
+    },
+    {
+      "start": 2338,
+      "end": 2345,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 4486,
+      "end": 4500,
+      "kind": "Property",
+      "source": "coupa: 'grain'"
+    }
+  ]
+}

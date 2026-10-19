@@ -1,0 +1,22 @@
+{
+  "sourcePath": "authoring/production/sources.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "a1f41864681ea7de1cea8062c666ec2f57b9179f",
+  "sourceSHA256": "f7000fca6c676d4957cedb6cdd5a3130c7cfbc8a4bff959197753613fd2c8492",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 23462,
+      "end": 23469,
+      "kind": "Literal",
+      "source": "'coupa'"
+    },
+    {
+      "start": 23507,
+      "end": 23581,
+      "kind": "owned-conditional-branch",
+      "condition": "cohort.format !== 'revealline-sentinel-theme-editions.v1' ||\n        cohort.artRoot !== 'authoring/library/sentinel-theme-art' ||\n        cohort.provenanceSha256 !==\n          declared.get('authoring/library/sentinel-theme-art/provenance.json')?.sha256 ||\n        !['ukraine', 'retro', 'coupa'].includes(w.themeId)",
+      "source": "throw new Error(t('errors:productionSources.unknownSentinelThemeCohort'));"
+    }
+  ]
+}

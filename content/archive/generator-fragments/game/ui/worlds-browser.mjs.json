@@ -1,0 +1,21 @@
+{
+  "sourcePath": "game/ui/worlds-browser.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "ff35171d6f6920102d394e2f8540e5ae4eed9e29",
+  "sourceSHA256": "d6b4bf4866e3ba679c13eebf7a4583dcc35bd179537d8ace085d6b87ddebe3f0",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 216,
+      "end": 242,
+      "kind": "ArrayExpression",
+      "source": "['coupa', 'Spend Network']"
+    },
+    {
+      "start": 396,
+      "end": 432,
+      "kind": "ArrayExpression",
+      "source": "['original-spend-network', 'Arcade']"
+    }
+  ]
+}

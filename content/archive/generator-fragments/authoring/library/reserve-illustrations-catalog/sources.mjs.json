@@ -1,0 +1,22 @@
+{
+  "sourcePath": "authoring/library/reserve-illustrations-catalog/sources.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "8cd1ac652ee7eea148eafdf37109d08aabbdf769",
+  "sourceSHA256": "a95fc7a0b5cd87b4b28397728a2d46128cf0d826d2c12e28e797896c167b18bf",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 2000,
+      "end": 2007,
+      "kind": "Literal",
+      "source": "'coupa'"
+    },
+    {
+      "start": 2388,
+      "end": 2436,
+      "kind": "owned-conditional-branch",
+      "condition": "entry.sourceOnly !== true ||\n      typeof entry.id !== 'string' ||\n      typeof entry.title !== 'string' ||\n      !['fpv', 'ukraine', 'retro', 'coupa'].includes(entry.themeId) ||\n      !value.themes?.[entry.themeId] ||\n      !Number.isInteger(entry.wave) ||\n      entry.wave < 1 ||\n      entry.wave > 10 ||\n      entry.width !== 1774 ||\n      entry.height !== 887 ||\n      !entry.original?.path.endsWith('.png') ||\n      !Array.isArray(entry.prompts) ||\n      entry.prompts.length < 1 ||\n      entry.prompts.length > 2",
+      "source": "throw new Error('Invalid reserve illustration');"
+    }
+  ]
+}

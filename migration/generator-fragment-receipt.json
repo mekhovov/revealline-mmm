@@ -1,0 +1,292 @@
+{
+  "format": "owned-generator-fragments.v1",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "items": [
+    {
+      "sourcePath": "authoring/library/countercurrent-art/sources.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/countercurrent-art/sources.mjs.json",
+      "fragments": 6
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/verify.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/countercurrent-art/verify.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/build.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/countercurrent-chapters/build.mjs.json",
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/build.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/four-worlds-chapters/build.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/verify.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/fracture-coupa-art/verify.mjs.json",
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/fracture-theme-chapters/build.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/fracture-theme-chapters/build.mjs.json",
+      "fragments": 4
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/verify.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/moving-edges-art/verify.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-chapters/build.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/moving-edges-chapters/build.mjs.json",
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-catalog/sources.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/reserve-illustrations-catalog/sources.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/library/route-worlds/build.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/route-worlds/build.mjs.json",
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/verify.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/sentinel-theme-art/verify.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-chapters/build.mjs",
+      "destination": "content/archive/generator-fragments/authoring/library/sentinel-theme-chapters/build.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/production/history/4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a.mjs",
+      "destination": "content/archive/generator-fragments/authoring/production/history/4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a.mjs.json",
+      "fragments": 5
+    },
+    {
+      "sourcePath": "authoring/production/history/46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447.mjs",
+      "destination": "content/archive/generator-fragments/authoring/production/history/46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/production/model.mjs",
+      "destination": "content/archive/generator-fragments/authoring/production/model.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/production/panel.mjs",
+      "destination": "content/archive/generator-fragments/authoring/production/panel.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/production/sources.mjs",
+      "destination": "content/archive/generator-fragments/authoring/production/sources.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "docs/evidence/verify-compact-soundtrack-metadata.mjs",
+      "destination": "content/archive/generator-fragments/docs/evidence/verify-compact-soundtrack-metadata.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "docs/verification/company-qualification-model.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/company-qualification-model.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "docs/verification/company-qualification.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/company-qualification.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "docs/verification/cross-mode/about-navigation-v0614/originals/p03-release-history-about-628e95da/preimage/game/app.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/cross-mode/about-navigation-v0614/originals/p03-release-history-about-628e95da/preimage/game/app.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "docs/verification/cross-mode/about-navigation-v0614/originals/p03-release-history-about-628e95da/proposal/game/app.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/cross-mode/about-navigation-v0614/originals/p03-release-history-about-628e95da/proposal/game/app.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "docs/verification/cross-mode/enemy-workshop-return-v0613/originals/p03-enemy-workshop-return-r2-ccd04f9c/source/game/enemy-catalog.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/cross-mode/enemy-workshop-return-v0613/originals/p03-enemy-workshop-return-r2-ccd04f9c/source/game/enemy-catalog.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "docs/verification/cross-mode/enemy-workshop-return-v0613/originals/p03-enemy-workshop-return-r2-ccd04f9c/source/game/ui/actor-presentation.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/cross-mode/enemy-workshop-return-v0613/originals/p03-enemy-workshop-return-r2-ccd04f9c/source/game/ui/actor-presentation.mjs.json",
+      "fragments": 5
+    },
+    {
+      "sourcePath": "docs/verification/cross-mode/enemy-workshop-return-v0613/originals/p03-enemy-workshop-return-r2-ccd04f9c/source/game/ui/event-feedback.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/cross-mode/enemy-workshop-return-v0613/originals/p03-enemy-workshop-return-r2-ccd04f9c/source/game/ui/event-feedback.mjs.json",
+      "fragments": 4
+    },
+    {
+      "sourcePath": "docs/verification/cross-mode/p03-missions-backup/originals/native/server/candidate-app.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/cross-mode/p03-missions-backup/originals/native/server/candidate-app.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "docs/verification/journey-performance.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/journey-performance.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "docs/verification/menu-scenes/measure.mjs",
+      "destination": "content/archive/generator-fragments/docs/verification/menu-scenes/measure.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/app.mjs",
+      "destination": "content/archive/generator-fragments/game/app.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "game/community-routes.mjs",
+      "destination": "content/archive/generator-fragments/game/community-routes.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/company-campaigns/brands.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/brands.mjs.json",
+      "fragments": 37
+    },
+    {
+      "sourcePath": "game/company-campaigns/catalog.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/catalog.mjs.json",
+      "fragments": 12
+    },
+    {
+      "sourcePath": "game/company-campaigns/content.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/content.mjs.json",
+      "fragments": 6
+    },
+    {
+      "sourcePath": "game/company-campaigns/learning-rewards.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/learning-rewards.mjs.json",
+      "fragments": 5
+    },
+    {
+      "sourcePath": "game/company-campaigns/lessons.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/lessons.mjs.json",
+      "fragments": 44
+    },
+    {
+      "sourcePath": "game/company-campaigns/playtest-fixtures.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/playtest-fixtures.mjs.json",
+      "fragments": 4
+    },
+    {
+      "sourcePath": "game/company-campaigns/progression.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/progression.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "game/company-campaigns/rewards.mjs",
+      "destination": "content/archive/generator-fragments/game/company-campaigns/rewards.mjs.json",
+      "fragments": 8
+    },
+    {
+      "sourcePath": "game/enemy-catalog.mjs",
+      "destination": "content/archive/generator-fragments/game/enemy-catalog.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/external-chapter-source.mjs",
+      "destination": "content/archive/generator-fragments/game/external-chapter-source.mjs.json",
+      "fragments": 8
+    },
+    {
+      "sourcePath": "game/level-numbering.mjs",
+      "destination": "content/archive/generator-fragments/game/level-numbering.mjs.json",
+      "fragments": 46
+    },
+    {
+      "sourcePath": "game/presentation/current-art-sources.mjs",
+      "destination": "content/archive/generator-fragments/game/presentation/current-art-sources.mjs.json",
+      "fragments": 38
+    },
+    {
+      "sourcePath": "game/presentation/current-pictures.mjs",
+      "destination": "content/archive/generator-fragments/game/presentation/current-pictures.mjs.json",
+      "fragments": 38
+    },
+    {
+      "sourcePath": "game/ui/actor-presentation.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/actor-presentation.mjs.json",
+      "fragments": 5
+    },
+    {
+      "sourcePath": "game/ui/event-feedback.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/event-feedback.mjs.json",
+      "fragments": 5
+    },
+    {
+      "sourcePath": "game/ui/feedback-cues.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/feedback-cues.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/ui/menu-scene-catalog.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/menu-scene-catalog.mjs.json",
+      "fragments": 30
+    },
+    {
+      "sourcePath": "game/ui/movement-profiles.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/movement-profiles.mjs.json",
+      "fragments": 3
+    },
+    {
+      "sourcePath": "game/ui/optional-chapter-presentation.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/optional-chapter-presentation.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/ui/soundtrack-panel.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/soundtrack-panel.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/ui/worlds-browser.mjs",
+      "destination": "content/archive/generator-fragments/game/ui/worlds-browser.mjs.json",
+      "fragments": 2
+    },
+    {
+      "sourcePath": "publishing/edition-fixture.mjs",
+      "destination": "content/archive/generator-fragments/publishing/edition-fixture.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "scripts/audit-journey.mjs",
+      "destination": "content/archive/generator-fragments/scripts/audit-journey.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "scripts/build-company-route-fixtures.mjs",
+      "destination": "content/archive/generator-fragments/scripts/build-company-route-fixtures.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "scripts/build-neon-mosaic.mjs",
+      "destination": "content/archive/generator-fragments/scripts/build-neon-mosaic.mjs.json",
+      "fragments": 1
+    },
+    {
+      "sourcePath": "scripts/external-distribution.mjs",
+      "destination": "content/archive/generator-fragments/scripts/external-distribution.mjs.json",
+      "fragments": 6
+    },
+    {
+      "sourcePath": "scripts/produce-company-content.mjs",
+      "destination": "content/archive/generator-fragments/scripts/produce-company-content.mjs.json",
+      "fragments": 1
+    }
+  ],
+  "note": "Provenance excerpts from mixed generators. Not executable imports; editable runtime content remains in content/files. Unnamed structural dependencies still require the migration inventory review."
+}

@@ -1,0 +1,83 @@
+{
+  "sourcePath": "game/company-campaigns/catalog.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "7b6e00affde86be3311f162ed13c3b73a7314446",
+  "sourceSHA256": "9ce6f756c4ba2df6d37ff5e0d1a765de183ab75c4471f7f2e6f309f77ee826a1",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 88,
+      "end": 1825,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-spend-in-motion',\n    'coupa',\n    'Spend in Motion',\n    'Brand adventure',\n    [\n      [\n        'First Connection',\n        'Light the first district by closing a safe loop.',\n        'A welcoming plaza opens around the Coupa flower.',\n        'Choose a short return to the central plaza before crossing the broad east field.',\n      ],\n      [\n        'Supplier Square',\n        'Connect the market courts while watching the paper drifters.',\n        'Friendly supplier stalls surround two connected courtyards.',\n        'Take the western arcade or split the two courts from the central landing.',\n      ],\n      [\n        'Paper Jam',\n        'Untangle the district around two wandering duplicate-paper knots.',\n        'Folded paper ribbons become an orderly, playful city arcade.',\n        'Separate the wandering knots before committing to the long middle aisle.',\n      ],\n      [\n        'Shared Routes',\n        'Bring the harbour and workshop into the same revealed network.',\n        'Bright bridges join a busy harbour to a miniature workshop.',\n        'Use the long dock as a return or cross between the smaller loading islands.',\n      ],\n      [\n        'Quarter-End Weather',\n        'Find a calm route through a familiar, busier district.',\n        'An evening skyline glows above streams of orderly information.',\n        'Use the inner refuges while the border patrol passes the outer rail.',\n      ],\n      [\n        'Make Room for Tomorrow',\n        'Reconnect the whole neighbourhood using the routes you have learned.',\n        'The completed village celebrates beneath a clear blue night sky.',\n        'Join the central plaza first or connect the two quieter outer gardens.',\n      ],\n    ],\n  ]"
+    },
+    {
+      "start": 1829,
+      "end": 3625,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village',\n    'coupa',\n    'Inside the Village',\n    'Employee culture',\n    [\n      [\n        'Hello, Village',\n        'Meet the people and roles that make a shared outcome possible.',\n        'An illustrated welcome square frames fictional reflections inspired by Coupa’s public culture page.',\n        'Connect the welcome desk and the distant meeting nook in the order you prefer.',\n      ],\n      [\n        'Listen, Then Link',\n        'Discover two teams’ needs before completing their shared handoff.',\n        'Two listening spaces connect through a bright collaboration garden.',\n        'Read both sides of the courtyard before choosing your linking route.',\n      ],\n      [\n        'Room for Everyone',\n        'Make every participation point part of the finished picture.',\n        'Different workspaces contribute to one welcoming community room.',\n        'Connect the small side rooms as well as the large central gathering space.',\n      ],\n      [\n        'Own the Handoff',\n        'Bring evidence, an owner and a next step to a shared task.',\n        'A visible handoff travels between friendly workshop stations.',\n        'Build an interior return before crossing the exposed handoff lane.',\n      ],\n      [\n        'Build Tomorrow',\n        'Combine contributions into a shared prototype.',\n        'An inventive workshop displays sketches, models and a finished collaboration.',\n        'Link the separated benches through the central prototype island.',\n      ],\n      [\n        'All of Us',\n        'Celebrate what the community has built together.',\n        'A six-part festival mosaic reunites the people and places of the journey.',\n        'Choose a tour through familiar spaces without leaving the small corners isolated.',\n      ],\n    ],\n  ]"
+    },
+    {
+      "start": 3629,
+      "end": 5397,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay',\n    'coupa',\n    'From Need to Value',\n    'Source-to-pay basics',\n    [\n      [\n        'Find the Need',\n        'Turn a fictional business need into a clear requirement.',\n        'A small community workshop prepares a well-defined supply request.',\n        'Reveal the requirement desk before crossing toward the supplier offers.',\n      ],\n      [\n        'Choose Together',\n        'Compare offers against the declared requirement.',\n        'Friendly market pavilions display distinct offers rather than rival villains.',\n        'Use the offer islands as short returns while inspecting all the evidence.',\n      ],\n      [\n        'Terms Bridge',\n        'Connect the chosen offer to the agreed scope and terms.',\n        'A clear bridge links a supplier pavilion with a contract library.',\n        'Connect the contract landing before reaching the far delivery district.',\n      ],\n      [\n        'Request to Order',\n        'Distinguish a request, its review and an issued order.',\n        'Three labelled neighbourhoods show the handoff from request to order.',\n        'Build a return at each handoff instead of committing to one long crossing.',\n      ],\n      [\n        'Received in Part',\n        'Record only the goods that arrived in the fictional delivery.',\n        'Two dockside deliveries arrive at different times beside an open ledger.',\n        'Use the first delivery landing before connecting the second, distant dock.',\n      ],\n      [\n        'Close the Loop',\n        'Reconcile the records and distinguish approved from paid.',\n        'Order, delivery and invoice landmarks form a complete illuminated circuit.',\n        'Join the three record islands while preserving a safe way back.',\n      ],\n    ],\n  ]"
+    },
+    {
+      "start": 5401,
+      "end": 7221,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations',\n    'coupa',\n    'A Day in Coupa',\n    'Illustrative product operations',\n    [\n      [\n        'Find Your Work',\n        'Identify the task that needs action from your current role.',\n        'A readable, fictional task desk sits within a bright operations courtyard.',\n        'Reveal the task stations before taking the longer route around the desk.',\n      ],\n      [\n        'Repair the Draft',\n        'Correct a missing field and save a valid fictional draft.',\n        'Loose request cards become a tidy, complete draft at the review desk.',\n        'Visit the two evidence shelves using their short interior returns.',\n      ],\n      [\n        'Review the Request',\n        'Apply the scenario’s stated review policy to the evidence.',\n        'A calm review room shows a request and its supporting documents together.',\n        'Bring both evidence rooms into view before crossing the central review lane.',\n      ],\n      [\n        'Handle the Change',\n        'Route an order change to its owner while it awaits review.',\n        'A marked change request travels between a supplier dock and a buyer desk.',\n        'Use the change desk to shorten the return from the outer dock.',\n      ],\n      [\n        'Record the Delivery',\n        'Record the actual partial quantity against the right line.',\n        'A delivery bay keeps arrived and outstanding packages visibly separate.',\n        'Connect the arrived-goods bay without confusing it with the later delivery.',\n      ],\n      [\n        'Clear the Exception',\n        'Trace an invoice discrepancy and choose the appropriate handoff.',\n        'A linked operations room makes one unresolved record stand out clearly.',\n        'Reveal the three record stations before linking the exception desk.',\n      ],\n    ],\n  ]"
+    },
+    {
+      "start": 7225,
+      "end": 9057,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration',\n    'coupa',\n    'Connect the Network',\n    'Developer integration onboarding',\n    [\n      [\n        'Resource Atlas',\n        'Map a fictional integration requirement to its resources.',\n        'A blueprint of the village exposes labelled resource districts and data routes.',\n        'Link the input and output hubs through the smallest useful resource loop.',\n      ],\n      [\n        'Scoped Access',\n        'Select only the fictional permissions the task needs.',\n        'Clearly labelled access stations protect distinct data districts.',\n        'Take the narrow authorized route or inspect the broader perimeter first.',\n      ],\n      [\n        'Beyond Page One',\n        'Read every page of a filtered fictional record set.',\n        'Three numbered data shelves fill a complete local response ledger.',\n        'Use the page landings in sequence without mistaking the first for the whole collection.',\n      ],\n      [\n        'Known References',\n        'Resolve valid references before preparing a transaction.',\n        'Supplier, requester and accounting nodes connect to one draft hub.',\n        'Connect the reference islands before making the long return through the hub.',\n      ],\n      [\n        'Draft, Validate, Explain',\n        'Inspect an error and correct a fictional draft request.',\n        'A transparent validation workshop shows inputs, feedback and a corrected draft.',\n        'Use the validation landing to recover before crossing the second input lane.',\n      ],\n      [\n        'Run Ledger',\n        'Reconcile processed records and recover one failed item.',\n        'A complete network lights up while one recoverable record is clearly identified.',\n        'Connect all ledger stations without revisiting the long outside route.',\n      ],\n    ],\n  ]"
+    },
+    {
+      "start": 21505,
+      "end": 21512,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 21515,
+      "end": 21518,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "'4'"
+    },
+    {
+      "start": 22223,
+      "end": 22245,
+      "kind": "Literal",
+      "source": "'coupa-inside-village'"
+    },
+    {
+      "start": 22255,
+      "end": 22276,
+      "kind": "Literal",
+      "source": "'coupa-source-to-pay'"
+    },
+    {
+      "start": 22286,
+      "end": 22312,
+      "kind": "Literal",
+      "source": "'coupa-product-operations'"
+    },
+    {
+      "start": 22322,
+      "end": 22351,
+      "kind": "Literal",
+      "source": "'coupa-developer-integration'"
+    },
+    {
+      "start": 22392,
+      "end": 22452,
+      "kind": "owned-conditional-branch",
+      "condition": "[\n        'coupa-inside-village',\n        'coupa-source-to-pay',\n        'coupa-product-operations',\n        'coupa-developer-integration',\n      ].includes(campaignId)",
+      "source": "`${campaignId}-${String(index + 1).padStart(2, '0')}-lesson`"
+    }
+  ]
+}

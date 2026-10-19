@@ -1,0 +1,15 @@
+{
+  "sourcePath": "scripts/build-company-route-fixtures.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "474d0676e08d3b929165d3e6eb421e829681a30c",
+  "sourceSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1174,
+      "end": 1181,
+      "kind": "Literal",
+      "source": "'coupa'"
+    }
+  ]
+}

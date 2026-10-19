@@ -1,0 +1,47 @@
+{
+  "sourcePath": "game/company-campaigns/content.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "6e73be1099068417eec58a6fc0e2ef0d3a8d78bb",
+  "sourceSHA256": "3ccdbed97f76cd110203b78974fe0980cc4a9f8fdb1f4edc6511120ef72173b6",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 12899,
+      "end": 12906,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 13863,
+      "end": 13870,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 13873,
+      "end": 13880,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "'Coupa'"
+    },
+    {
+      "start": 15877,
+      "end": 15884,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 15887,
+      "end": 15890,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "'2'"
+    },
+    {
+      "start": 19003,
+      "end": 19010,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    }
+  ]
+}

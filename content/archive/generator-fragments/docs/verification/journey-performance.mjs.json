@@ -1,0 +1,15 @@
+{
+  "sourcePath": "docs/verification/journey-performance.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "aa56bf70e5abbc47c9f2be885f9efc40afbc14a1",
+  "sourceSHA256": "c992e57b14c7d9cd402ec1aa774ae6badd085ddc442f6838f826695bc84dfad4",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1203,
+      "end": 1214,
+      "kind": "Literal",
+      "source": "'coupa-all'"
+    }
+  ]
+}

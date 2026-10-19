@@ -1,0 +1,15 @@
+{
+  "sourcePath": "scripts/audit-journey.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "69cf57162a0313db60dd977589417449d3139e0a",
+  "sourceSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 3583,
+      "end": 3598,
+      "kind": "Literal",
+      "source": "'spend-network'"
+    }
+  ]
+}

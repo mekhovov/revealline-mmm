@@ -1,0 +1,27 @@
+{
+  "sourcePath": "authoring/library/countercurrent-chapters/build.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "eef8ef23fa2a2f2ee3f105cc6043a76253fbbec7",
+  "sourceSHA256": "fdc00d48205ba96642a2cbe579b696bf731cf278ed2869b88e62b1629a45a355",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1560,
+      "end": 1567,
+      "kind": "Literal",
+      "source": "'coupa'"
+    },
+    {
+      "start": 5668,
+      "end": 5706,
+      "kind": "ownership-reference",
+      "source": "'Choose fpv, ukraine, retro or coupa.'"
+    },
+    {
+      "start": 12914,
+      "end": 12952,
+      "kind": "ownership-reference",
+      "source": "'Choose fpv, ukraine, retro or coupa.'"
+    }
+  ]
+}
