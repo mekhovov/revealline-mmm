@@ -1,0 +1,189 @@
+{
+  "sourcePath": "game/ui/menu-scene-catalog.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "00c2b9b03306aadafcd952708110c4780bbb4cd1",
+  "sourceSHA256": "2d2024429fa1c0dd49b004002a3d9e75b0c608243c45b14052cb84b7679436c4",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 363,
+      "end": 447,
+      "kind": "ArrayExpression",
+      "source": "['coupa', 'village', '#08233c', '#ffdc84', '#8adcf7', '62% 50%', '65% 45%', 'petal']"
+    },
+    {
+      "start": 451,
+      "end": 543,
+      "kind": "ArrayExpression",
+      "source": "['coupa-village', 'village', '#092941', '#ffe1a0', '#83cffb', '68% 50%', '71% 50%', 'petal']"
+    },
+    {
+      "start": 547,
+      "end": 691,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-spend-in-motion-theme',\n    'current',\n    '#0a2845',\n    '#ffe395',\n    '#6ddaf4',\n    '60% 50%',\n    '64% 50%',\n    'signal',\n  ]"
+    },
+    {
+      "start": 695,
+      "end": 836,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village-theme',\n    'garden',\n    '#14364b',\n    '#ffce98',\n    '#9ddfdb',\n    '60% 50%',\n    '55% 50%',\n    'petal',\n  ]"
+    },
+    {
+      "start": 840,
+      "end": 980,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay-theme',\n    'route',\n    '#152f49',\n    '#eecb74',\n    '#8fe0e5',\n    '60% 50%',\n    '58% 50%',\n    'parcel',\n  ]"
+    },
+    {
+      "start": 984,
+      "end": 1132,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations-theme',\n    'workshop',\n    '#113347',\n    '#f8b96e',\n    '#87dcd1',\n    '60% 50%',\n    '62% 50%',\n    'signal',\n  ]"
+    },
+    {
+      "start": 1136,
+      "end": 1286,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration-theme',\n    'network',\n    '#172f58',\n    '#c6b2ff',\n    '#64daf3',\n    '60% 50%',\n    '57% 50%',\n    'signal',\n  ]"
+    },
+    {
+      "start": 2856,
+      "end": 2901,
+      "kind": "Property",
+      "source": "coupa: ['bridge', 49, 5, 49, 0.52, 28, 3, 71]"
+    },
+    {
+      "start": 2905,
+      "end": 2958,
+      "kind": "Property",
+      "source": "'coupa-village': ['rise', 48, 4, 50, 0.54, 28, 3, 71]"
+    },
+    {
+      "start": 2962,
+      "end": 3031,
+      "kind": "Property",
+      "source": "'coupa-spend-in-motion-theme': ['bridge', 47, 5, 51, 0.48, 27, 2, 72]"
+    },
+    {
+      "start": 3035,
+      "end": 3104,
+      "kind": "Property",
+      "source": "'coupa-inside-village-theme': ['horizon', 48, 6, 49, 0.48, 27, 3, 72]"
+    },
+    {
+      "start": 3108,
+      "end": 3174,
+      "kind": "Property",
+      "source": "'coupa-source-to-pay-theme': ['bridge', 50, 5, 48, 0.5, 29, 3, 70]"
+    },
+    {
+      "start": 3178,
+      "end": 3251,
+      "kind": "Property",
+      "source": "'coupa-product-operations-theme': ['circuit', 48, 4, 50, 0.48, 28, 3, 71]"
+    },
+    {
+      "start": 3255,
+      "end": 3331,
+      "kind": "Property",
+      "source": "'coupa-developer-integration-theme': ['circuit', 47, 4, 51, 0.62, 27, 2, 72]"
+    },
+    {
+      "start": 5008,
+      "end": 5136,
+      "kind": "Property",
+      "source": "coupa: [\n    ['water', 47, 93, 14, 5, -2, 5.4],\n    ['water', 68, 45, 10, 3, -0.8, 4.4],\n    ['beam', 76, 3, 22, 28, -4, 9],\n  ]"
+    },
+    {
+      "start": 5140,
+      "end": 5280,
+      "kind": "Property",
+      "source": "'coupa-village': [\n    ['water', 42, 26, 17, 10, -2, 5.6],\n    ['water', 66, 63, 12, 3, -0.7, 4.2],\n    ['cloud', 56, 5, 24, 9, -5, 17],\n  ]"
+    },
+    {
+      "start": 5284,
+      "end": 5433,
+      "kind": "Property",
+      "source": "'coupa-spend-in-motion-theme': [\n    ['water', 47, 84, 16, 10, -2, 5],\n    ['water', 77, 64, 8, 8, -1, 4.6],\n    ['cloud', 61, 2, 24, 8, -6, 18],\n  ]"
+    },
+    {
+      "start": 5437,
+      "end": 5586,
+      "kind": "Property",
+      "source": "'coupa-inside-village-theme': [\n    ['water', 50, 64, 15, 3, -1, 4.6],\n    ['cloud', 14, 2, 25, 11, -4, 17],\n    ['lamp', 94, 18, 5, 8, -2, 5.6],\n  ]"
+    },
+    {
+      "start": 5590,
+      "end": 5741,
+      "kind": "Property",
+      "source": "'coupa-source-to-pay-theme': [\n    ['water', 67, 49, 5, 8, -1, 4.4],\n    ['water', 76, 77, 7, 10, -2.6, 5.2],\n    ['cloud', 12, 4, 27, 10, -5, 17],\n  ]"
+    },
+    {
+      "start": 5745,
+      "end": 5895,
+      "kind": "Property",
+      "source": "'coupa-product-operations-theme': [\n    ['lamp', 44, 12, 5, 6, -1, 4.8],\n    ['lamp', 77, 13, 6, 7, -2.7, 6],\n    ['beam', 63, 48, 11, 23, -3, 8],\n  ]"
+    },
+    {
+      "start": 5899,
+      "end": 6053,
+      "kind": "Property",
+      "source": "'coupa-developer-integration-theme': [\n    ['beam', 49, 4, 5, 24, -1, 5.4],\n    ['beam', 49, 55, 6, 15, -2, 4.8],\n    ['lamp', 25, 77, 4, 7, -1.2, 6],\n  ]"
+    },
+    {
+      "start": 8845,
+      "end": 8877,
+      "kind": "Literal",
+      "source": "'coupa-product-operations-theme'"
+    },
+    {
+      "start": 8881,
+      "end": 8916,
+      "kind": "Literal",
+      "source": "'coupa-developer-integration-theme'"
+    },
+    {
+      "start": 13701,
+      "end": 15130,
+      "kind": "Property",
+      "source": "coupa: Object.freeze({\n    versus: Object.freeze({\n      composition: 'coupa-versus',\n      landscape: './art/menu-scenes/coupa-versus.webp',\n      portrait: './art/menu-scenes/coupa-versus-portrait.webp',\n      landscapePosition: '70% 50%',\n      portraitPosition: '50% 50%',\n      environment: freezeEnvironment([\n        ['cloud', 79, 4, 20, 10, -4, 16],\n        ['lamp', 39, 24, 3, 6, -1, 4.8],\n        ['water', 85, 28, 9, 4, -2, 5.2],\n        ['foliage', 32, 38, 5, 12, -2, 7],\n      ]),\n      portraitEnvironment: freezeEnvironment([\n        ['cloud', 56, 40, 37, 5, -4, 16],\n        ['lamp', 17, 49, 5, 3, -1, 4.8],\n        ['water', 81, 54, 10, 3, -2, 5.2],\n        ['foliage', 78, 85, 15, 10, -2, 7],\n      ]),\n    }),\n    team: Object.freeze({\n      composition: 'coupa-team',\n      landscape: './art/menu-scenes/coupa-team.webp',\n      portrait: './art/menu-scenes/coupa-team-portrait.webp',\n      landscapePosition: '70% 50%',\n      portraitPosition: '50% 50%',\n      environment: freezeEnvironment([\n        ['cloud', 78, 9, 20, 14, -4, 16],\n        ['lamp', 39, 19, 3, 7, -1, 4.8],\n        ['water', 84, 33, 7, 5, -2, 5.2],\n        ['foliage', 42, 30, 5, 18, -2, 7],\n      ]),\n      portraitEnvironment: freezeEnvironment([\n        ['cloud', 57, 40, 39, 7, -4, 16],\n        ['lamp', 7, 34, 7, 5, -1, 4.8],\n        ['water', 78, 53, 8, 3, -2, 5.2],\n        ['foliage', 80, 87, 12, 10, -2, 7],\n      ]),\n    }),\n  })"
+    },
+    {
+      "start": 16878,
+      "end": 16906,
+      "kind": "Property",
+      "source": "'coupa-all': 'coupa-village'"
+    },
+    {
+      "start": 16910,
+      "end": 16958,
+      "kind": "Property",
+      "source": "'coupa-adventure': 'coupa-spend-in-motion-theme'"
+    },
+    {
+      "start": 16962,
+      "end": 17007,
+      "kind": "Property",
+      "source": "'coupa-culture': 'coupa-inside-village-theme'"
+    },
+    {
+      "start": 17011,
+      "end": 17059,
+      "kind": "Property",
+      "source": "'coupa-foundations': 'coupa-source-to-pay-theme'"
+    },
+    {
+      "start": 17063,
+      "end": 17115,
+      "kind": "Property",
+      "source": "'coupa-operations': 'coupa-product-operations-theme'"
+    },
+    {
+      "start": 17119,
+      "end": 17174,
+      "kind": "Property",
+      "source": "'coupa-developers': 'coupa-developer-integration-theme'"
+    }
+  ]
+}

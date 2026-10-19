@@ -1,0 +1,167 @@
+{
+  "format": "revealline-source-art-provenance.v1",
+  "scope": "Three original static Spend Network reward-art candidates for existing Fracture Lines roles. No runtime, descriptor, registry, saved/earned binding, production-count or release adoption.",
+  "baseCommit": "3b2c01040e87b2b33950c9914825dc5f13d80e58",
+  "generatedOn": "2026-09-14",
+  "tool": "image_gen.imagegen built-in",
+  "calls": 3,
+  "editCalls": 0,
+  "referenceImages": [],
+  "rawOriginalsPreserved": true,
+  "pixelTransformations": [],
+  "rightsScope": "New AI-generated originals made for this project from independent text prompts. No reference image, existing game image or named artist style was supplied. These are fictional cooperation and resource-sharing scenes, not Coupa product screens, approved mascots, endorsements, financial or AI performance claims, historical reconstructions or exclusive-rights certification.",
+  "references": [],
+  "contextPins": [
+    {
+      "path": "authoring/library/fracture-lines/README.md",
+      "bytes": 6212,
+      "sha256": "d492969d506e901a2442aa444a99d47ecbcf908644687bb24fcb78b93dc6cfc8"
+    },
+    {
+      "path": "authoring/library/fracture-lines/layouts.json",
+      "bytes": 7669,
+      "sha256": "af15577704ce673100f7c6d89ae92baffa25c5ebfdae2459ea4c720a9d7ab179"
+    },
+    {
+      "path": "authoring/library/fracture-lines/build.mjs",
+      "bytes": 8909,
+      "sha256": "56cb05d183ce0406af2949506d6c3f6da78e9e275ce7302360a3d6742d72e59d"
+    },
+    {
+      "path": "authoring/library/fracture-lines-art/README.md",
+      "bytes": 3315,
+      "sha256": "a9e9c7072be59aab3d89f1481b7b12f5782b3e9f85aed1f339df0c0bfc0bc3fd"
+    },
+    {
+      "path": "authoring/library/fracture-lines-art/verify.mjs",
+      "bytes": 8509,
+      "sha256": "d294985c6d56af02b0c93c3be45b1b08e640101a78794c461f96265e607d6eb5"
+    },
+    {
+      "path": "authoring/library/fracture-lines-chapter/README.md",
+      "bytes": 4945,
+      "sha256": "627d8bad65b3dfdfd7ddba777d1bf808e67daa73a91403aeae47d7ca6201e5f5"
+    },
+    {
+      "path": "authoring/library/fracture-lines-chapter/edition.json",
+      "bytes": 1230,
+      "sha256": "4dbb016b650803670a9f842acd83a699c61165f88cb2efa5bda3beae06c1cb23"
+    },
+    {
+      "path": "authoring/library/spend-route-art/README.md",
+      "bytes": 4027,
+      "sha256": "feb2ed590334a1e8cdb8ce34e0ffb16c57721cead74705d9f58f06595e86a132"
+    },
+    {
+      "path": "authoring/library/spend-route-art/provenance.json",
+      "bytes": 5024,
+      "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+    },
+    {
+      "path": "authoring/library/sentinel-theme-art/README.md",
+      "bytes": 5504,
+      "sha256": "eadccd93624f9a497733c0f01564a0b68fba15dd1ec05b5052ce37c271529147"
+    },
+    {
+      "path": "authoring/library/sentinel-theme-art/verify.mjs",
+      "bytes": 7194,
+      "sha256": "27ab5ba0eb07e25468a12fae81bcc38006603154d20e429c85af326bbc3282d2"
+    },
+    {
+      "path": "authoring/library/four-worlds-chapters/verify-images.mjs",
+      "bytes": 3838,
+      "sha256": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34"
+    },
+    {
+      "path": "game/media-library.mjs",
+      "bytes": 12188,
+      "sha256": "ed1f1abe0b95b9889741ec8929522f0fcaba29a5438b09df18016d3ffffc6eb4"
+    },
+    {
+      "path": "authoring/library/sentinel-theme-art/coupa/originals/listening-court.png",
+      "bytes": 2767187,
+      "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+    },
+    {
+      "path": "authoring/library/fracture-lines-art/originals/frayed-causeway-fpv.png",
+      "bytes": 2938361,
+      "sha256": "5aae2f84912ca35b7145617c98d3c4ecac72a93d8d6cc04558d86873ca0938f1"
+    }
+  ],
+  "generation": "Three independent text-only generate calls; no retries, edit calls, reference uploads, crop, stretch, resampling, re-encoding or derivative images. Default tool files remain untouched; workspace copies are byte-identical.",
+  "review": {
+    "agent": "All three actual default/copy PNGs inspected with native image tools. Scene observations and visible prompt deviations are recorded per image.",
+    "root": "Independent root visual acceptance is a separate cache receipt; no approval is inferred from these source checks.",
+    "limits": "No partial-reveal/browser/device/offline/gameplay/animation or human-quality certification."
+  },
+  "images": [
+    {
+      "cellId": "fracture-lines/split-ring/coupa",
+      "themeId": "coupa",
+      "missionSlot": "split-ring",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-aed42171-7edf-4471-93af-1e26d34464b7.png",
+      "bytes": 3057159,
+      "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "55d7e92937b32c62e185572e63122936b235fb5cdeedf314db8f67cbec0f19bf",
+      "path": "originals/split-ring-coupa.png",
+      "sourceLevelId": "fracture-lines-split-ring",
+      "title": "The Shared Repair Court",
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "A cobalt-walled ring of repair workshops surrounds a tree and shared worktable; plain blue reusable crates, a handcart and four scenic openings make the resource-sharing story visible.",
+        "topologyEcho": "The enclosing ring and gateways echo Split Ring without reproducing its authored collision walls.",
+        "deviations": "People around the table and near gate are larger than requested. The result is brighter and warmer than the cool-morning brief, with an invented waterfront town, bell and incidental churchlike towers in the distance. These are not a named place or corporate campus.",
+        "style": "Blue brick and crates, amber workshop interiors, copper and greenery provide the established Spend Network palette through physical materials."
+      }
+    },
+    {
+      "cellId": "fracture-lines/fault-fan/coupa",
+      "themeId": "coupa",
+      "missionSlot": "fault-fan",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-2d037eee-2de1-4d03-b782-b66df73ad548.png",
+      "bytes": 2950816,
+      "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "fb216ef67f198207150c5f199c7aca4e9c2deb6daccc9e06b3fa85e57bb0187b",
+      "path": "originals/fault-fan-coupa.png",
+      "sourceLevelId": "fracture-lines-fault-fan",
+      "title": "Where Three Deliveries Meet",
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "Three separately roofed supply bays step beside a sheltered passage: receiving crates, checking and repairing household fittings, and returning useful items. A bright orchard and distant water open the right side.",
+        "topologyEcho": "Deep bays connect to one shared path, loosely echoing Fault Fan. Their result is a stepped linear arrangement rather than an exact branching-spine blueprint.",
+        "deviations": "The near people are larger than requested. The scene is sunny and locally mountainous, with distant water and a small settlement beyond the intended inland orchard. All geography and activity are fictional; no procurement-process accuracy is claimed.",
+        "style": "Marine-blue roof ribs and shutters, pale concrete, copper gutters and soft green landscape under clear post-rain light."
+      }
+    },
+    {
+      "cellId": "fracture-lines/frayed-causeway/coupa",
+      "themeId": "coupa",
+      "missionSlot": "frayed-causeway",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-5b00e88b-12f1-4bfa-b04d-d539dcedf321.png",
+      "bytes": 2698848,
+      "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "9776d111e2f3fb70d70061a57f313f6430bae2fe9a6ed83805d49949c20d56e0",
+      "path": "originals/frayed-causeway-coupa.png",
+      "sourceLevelId": "fracture-lines-frayed-causeway",
+      "title": "The Bridges We Rebuilt",
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "Three main river islands hold a repair workshop, glass greenhouse and shared depot at blue hour; two neighbors carry a blue crate across a patched causeway while warm lamps reflect in dark water.",
+        "topologyEcho": "Separated workshop islands and replacement spans echo Frayed Causeway. Small causeway piers are scenery, not additional missions or collision geometry.",
+        "deviations": "The carrying figures are larger than the requested tiny silhouettes. No connecting bridge to the middle greenhouse is clearly visible, so the picture does not establish a complete connected network. The main workshop is strongly timber-clad rather than the requested brick-and-timber mix.",
+        "style": "Navy and cobalt water and sky, muted teal reeds and amber interiors form a dark final reward with broad readable island silhouettes."
+      }
+    }
+  ],
+  "sourceContextCommit": "c8abd4e4e48c34a9ae30255d2d4a2e9a74d593ed",
+  "conceptualBasis": "The existing Spend Network source guides informed blue/cyan/amber material vocabulary and fictional shared-resource themes. Earlier parent-selected article links remain in those guides; this batch did not retrieve those pages or derive factual or financial assertions from them."
+}

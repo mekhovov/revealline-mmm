@@ -1,0 +1,21 @@
+{
+  "sourcePath": "authoring/library/sentinel-theme-chapters/build.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "d1f703b32a39967d790ec83bf25af8fbc555c80e",
+  "sourceSHA256": "7f28cdb791a07a7f0f7c76999e8f8febe0a8403803d5001dc80f68f289544e11",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1279,
+      "end": 1286,
+      "kind": "Literal",
+      "source": "'coupa'"
+    },
+    {
+      "start": 4585,
+      "end": 4618,
+      "kind": "ownership-reference",
+      "source": "'Choose ukraine, retro or coupa.'"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "sourcePath": "game/company-campaigns/learning-rewards.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "c0aea2e5acbeb4aa6a1d29216a888c7c2ab27306",
+  "sourceSHA256": "9c876f5629991b88489285594740b1497d4752881d0f4980a6081334af0771a5",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 184,
+      "end": 205,
+      "kind": "Literal",
+      "source": "'coupa-source-to-pay'"
+    },
+    {
+      "start": 551,
+      "end": 575,
+      "kind": "ownership-reference",
+      "source": "'coupa-source-to-pay-01'"
+    },
+    {
+      "start": 769,
+      "end": 776,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 2755,
+      "end": 3029,
+      "kind": "Literal",
+      "source": "'A useful answer is eight reading lamps by 18 November: the offered item, quantity and arrival date all differ. This optional reflection is not scored or saved as another learning completion. It is a fictional example, not a universal Coupa policy or product certification.'"
+    },
+    {
+      "start": 3867,
+      "end": 4160,
+      "kind": "Literal",
+      "source": "'Корисна відповідь — вісім ламп для читання до 18 листопада: предмет, кількість і дата доставки в пропозиції відрізняються. Це додаткове запитання не оцінюється й не зберігається як нове завершене навчання. Приклад вигаданий і не є універсальним правилом Coupa чи підтвердженням кваліфікації.'"
+    }
+  ]
+}

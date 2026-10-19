@@ -1,0 +1,239 @@
+{
+  "sourcePath": "game/company-campaigns/brands.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "db742824ddd455f684abd49f94b18abba385b2b0",
+  "sourceSHA256": "fb7e21ef8854d43369cae36a503e8db723fe783822f879678c0a284bd7b5fa83",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 344,
+      "end": 1642,
+      "kind": "ObjectExpression",
+      "source": "{\n    format: 'revealline-brand-pack.v1',\n    id: 'coupa',\n    revision: 2,\n    name: 'Coupa',\n    description: 'Make room for tomorrow. An illustrated world of connected work.',\n    publication: 'public',\n    themeId: 'coupa-village',\n    themeIds: [\n      'coupa-village',\n      ...COMPANY_CAMPAIGNS.filter((c) => c.brandId === 'coupa').map((c) => `${c.id}-theme`),\n    ],\n    actorSetId: 'coupa-flower',\n    logoAssetId: 'coupa-flower',\n    heroAssetId: 'coupa-wallpaper-network-2024',\n    iconAssetId: 'coupa-icon-512',\n    fontAssetId: 'poppins-regular',\n    assetIds: [\n      'coupa-flower',\n      'coupa-wallpaper-network-2024',\n      'coupa-wallpaper-center-2024',\n      'poppins-regular',\n      'poppins-license',\n      'coupa-icon-512',\n    ],\n    sources: [\n      {\n        title: 'Coupa brand library — official flower identity',\n        url: 'https://drive.google.com/drive/folders/1Bhq6KoBjES--iHt3gWZA2rhjo456Q9j6',\n        kind: 'official',\n      },\n      {\n        title: 'Life at Coupa — current company values',\n        url: 'https://careers.coupa.com/en/life-at-coupa/',\n        kind: 'official',\n      },\n      {\n        title: 'Poppins — SIL Open Font License',\n        url: 'https://github.com/google/fonts/tree/main/ofl/poppins',\n        kind: 'license',\n      },\n    ],\n  }"
+    },
+    {
+      "start": 4180,
+      "end": 4329,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-all',\n    'coupa',\n    'Coupa Village',\n    'everyone',\n    COMPANY_CAMPAIGNS.filter((c) => c.brandId === 'coupa').map((c) => c.id),\n  ]"
+    },
+    {
+      "start": 4333,
+      "end": 4417,
+      "kind": "ArrayExpression",
+      "source": "['coupa-adventure', 'coupa', 'Spend in Motion', 'public', ['coupa-spend-in-motion']]"
+    },
+    {
+      "start": 4421,
+      "end": 4506,
+      "kind": "ArrayExpression",
+      "source": "['coupa-culture', 'coupa', 'Inside the Village', 'culture', ['coupa-inside-village']]"
+    },
+    {
+      "start": 4510,
+      "end": 4599,
+      "kind": "ArrayExpression",
+      "source": "['coupa-foundations', 'coupa', 'From Need to Value', 'learners', ['coupa-source-to-pay']]"
+    },
+    {
+      "start": 4603,
+      "end": 4693,
+      "kind": "ArrayExpression",
+      "source": "['coupa-operations', 'coupa', 'A Day in Coupa', 'operators', ['coupa-product-operations']]"
+    },
+    {
+      "start": 4697,
+      "end": 4821,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developers',\n    'coupa',\n    'Connect the Network',\n    'developers',\n    ['coupa-developer-integration'],\n  ]"
+    },
+    {
+      "start": 13432,
+      "end": 14495,
+      "kind": "Property",
+      "source": "'coupa-all': [\n    {\n      id: '13e5c4ff2313ebd3714e6d6461e2468857be6e4997fede8da24542880951df13',\n      path: 'game/editions/retained/coupa-all-before-learning-bonus.json',\n      sha256: 'de8370665d5c99e953326e1861f0817afb3dfc511f0629cdec6f50c6d4b5c709',\n      bytes: 191970,\n    },\n    {\n      id: 'ecb87b6208f6f55322188ab34d8d9aa63b94064dd346f400bbe2bbbcc9d7870b',\n      path: 'game/editions/retained/coupa-all.json',\n      sha256: 'a48dc47e3e788046de0094c7d34bd74eda0c8776f271131254e26f5ec12e5706',\n      bytes: 146284,\n    },\n    {\n      id: 'd9deabcadfd9bdc7622da65ebbcc91bdd752db02234009edc3fe09f85812f842',\n      path: 'game/editions/retained/coupa-all-fb207466c.json',\n      sha256: '680c7f4fdb23619aed0627ea47444c7040a7f208104e4c2abc1a3d486adbe636',\n      bytes: 148510,\n    },\n    {\n      id: 'c55614c27b1c70e0ac9d0701d3defbfbb03262ecfe3e8458d436958bdaf96561',\n      path: 'game/editions/retained/coupa-all-before-discovery-rewards.json',\n      sha256: '4d79d4b009d3496712fe6919bb02730dc6fbe4c3d7191908bf75db75a989865b',\n      bytes: 165206,\n    },\n  ]"
+    },
+    {
+      "start": 14499,
+      "end": 15062,
+      "kind": "Property",
+      "source": "'coupa-adventure': [\n    {\n      id: '82527f475e9cb0ddbc6bf9701e495e49e08dd635a0e89578c107268373426a05',\n      path: 'game/editions/retained/coupa-adventure-fb207466c.json',\n      sha256: 'ef9a0bf6562fa74ab643d9b214bf1deb1338a1694337cdd822d9cb3cd3c26937',\n      bytes: 29600,\n    },\n    {\n      id: '77db1de24b49c04417f38b32002177590c92b353c17e5e9f580f44207e5fccf1',\n      path: 'game/editions/retained/coupa-adventure-before-discovery-rewards.json',\n      sha256: 'e251352b441ac1352802030be0bd6e9e2aed6a48e38dff8eee572c1d26221902',\n      bytes: 33391,\n    },\n  ]"
+    },
+    {
+      "start": 15066,
+      "end": 15348,
+      "kind": "Property",
+      "source": "'coupa-culture': [\n    {\n      id: 'ed8d7747ad136a06243a2cf8c90dacdc5cf42dc71f5c6448174bde48ea241ae8',\n      path: 'game/editions/retained/coupa-culture-fb207466c.json',\n      sha256: '12dbf430730aff337133b19e1140efc2c107cc18351b07048eef59c19593bcba',\n      bytes: 44733,\n    },\n  ]"
+    },
+    {
+      "start": 15352,
+      "end": 16172,
+      "kind": "Property",
+      "source": "'coupa-foundations': [\n    {\n      id: 'bb5393ff4a73f30346496334ac6004d84766dfbd958dbdfb62d2b3554e20d429',\n      path: 'game/editions/retained/coupa-foundations-before-learning-bonus.json',\n      sha256: '0ee0079828321ec31cfc6f0683f76ec5a8e90d7065008626793e33195f6a1187',\n      bytes: 50235,\n    },\n    {\n      id: '57dd4d5b7e0f8c27662349a8af870862657d700682ac758ad51721a61fdd59aa',\n      path: 'game/editions/retained/coupa-foundations.json',\n      sha256: '98d2a026fc89b48cbd76c2d2c2d74d491f666583ae819324f855ebd7f309dd90',\n      bytes: 46542,\n    },\n    {\n      id: '176ab6d261ed0e4366b570dd14df270d6b27a761404baf17921dc1f974898bd6',\n      path: 'game/editions/retained/coupa-foundations-fb207466c.json',\n      sha256: 'e6694057707e69a8a134836d91bc1879f3555b39f6fc58622a15073454bf7432',\n      bytes: 47276,\n    },\n  ]"
+    },
+    {
+      "start": 16176,
+      "end": 16717,
+      "kind": "Property",
+      "source": "'coupa-operations': [\n    {\n      id: '99254aaf116f5b68881ef51f36c7b5b9ebfbcf6cce371de90c8234c07862a43d',\n      path: 'game/editions/retained/coupa-operations.json',\n      sha256: '716bcbd296e6053ca6628b8b55dada9c0489a8893c1044cbc24854899caf6e20',\n      bytes: 47693,\n    },\n    {\n      id: '681f63d8afef4e5a89e3d62ac1a2ddaa775cf6d03ad2c3897c64bc2dfb84b922',\n      path: 'game/editions/retained/coupa-operations-fb207466c.json',\n      sha256: 'b00276030dd4642756c75e15120f2d415e07e85dc90b0eacf99cf0ee71574c3d',\n      bytes: 48443,\n    },\n  ]"
+    },
+    {
+      "start": 16721,
+      "end": 17262,
+      "kind": "Property",
+      "source": "'coupa-developers': [\n    {\n      id: '72ede618c25678c324d39389b9789130c66bb05f461e900d367e9c3f2a878224',\n      path: 'game/editions/retained/coupa-developers.json',\n      sha256: 'ee4d10212133066658ae5543883a5e1def3602a5bc840874223b90bdccac9c06',\n      bytes: 50046,\n    },\n    {\n      id: 'ab769c5bd0c8e9cfeb09c20c9363a6012d482b911aec1577c6665d264490127a',\n      path: 'game/editions/retained/coupa-developers-fb207466c.json',\n      sha256: 'd4bc46ff2c873a07325b9efec577e1df854b85479f3ba10a89ceb2a0db019d9a',\n      bytes: 50786,\n    },\n  ]"
+    },
+    {
+      "start": 22675,
+      "end": 22686,
+      "kind": "ownership-reference",
+      "source": "'coupa-all'"
+    },
+    {
+      "start": 22697,
+      "end": 22698,
+      "kind": "owned-conditional-branch",
+      "condition": "id === 'coupa-all'",
+      "source": "8"
+    },
+    {
+      "start": 22716,
+      "end": 22735,
+      "kind": "ownership-reference",
+      "source": "'coupa-foundations'"
+    },
+    {
+      "start": 22748,
+      "end": 22749,
+      "kind": "owned-conditional-branch",
+      "condition": "id === 'coupa-foundations'",
+      "source": "7"
+    },
+    {
+      "start": 22780,
+      "end": 22797,
+      "kind": "Literal",
+      "source": "'coupa-adventure'"
+    },
+    {
+      "start": 22856,
+      "end": 22874,
+      "kind": "Literal",
+      "source": "'coupa-operations'"
+    },
+    {
+      "start": 22892,
+      "end": 22910,
+      "kind": "Literal",
+      "source": "'coupa-developers'"
+    },
+    {
+      "start": 22955,
+      "end": 22956,
+      "kind": "owned-conditional-branch",
+      "condition": "[\n                'coupa-adventure',\n                'droneaid-nl-community',\n                'coupa-operations',\n                'coupa-developers',\n              ].includes(id)",
+      "source": "6"
+    },
+    {
+      "start": 22983,
+      "end": 22990,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 23007,
+      "end": 23008,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "5"
+    },
+    {
+      "start": 24396,
+      "end": 24623,
+      "kind": "Property",
+      "source": "coupa: {\n    ink: '#081D4D',\n    paper: '#FFFFFF',\n    muted: '#B8CAE5',\n    accent: '#5FD6FF',\n    safe: '#96EAAA',\n    danger: '#FF9A88',\n    field: '#081D4D',\n    grid: '#193866',\n    sky: '#D8F0FF',\n    land: '#1565C0',\n  }"
+    },
+    {
+      "start": 25693,
+      "end": 25700,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 25711,
+      "end": 25750,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "'Connected work. Shared possibilities.'"
+    },
+    {
+      "start": 27236,
+      "end": 27243,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 27254,
+      "end": 27452,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "{\n            id: 'village-connections',\n            name: 'Village Connections',\n            genre: 'chiptune',\n            tempo: 108,\n            root: 60,\n            scale: 'major',\n          }"
+    },
+    {
+      "start": 29081,
+      "end": 29088,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 29091,
+      "end": 29105,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "'Coupa flower'"
+    },
+    {
+      "start": 29153,
+      "end": 29160,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    },
+    {
+      "start": 29173,
+      "end": 29518,
+      "kind": "owned-conditional-branch",
+      "condition": "brandId === 'coupa'",
+      "source": "{\n              src: '../../game/editions/assets/coupa/flower-blue.png',\n              sourceStatus: 'Official Coupa flower; gameplay rotation chosen for this game',\n              bodyMotion: { kind: 'rigid-spin', radiansPerSecond: Math.PI, travelGain: 0 },\n              bodyBacking: { kind: 'opaque-interior', color: '#FFFFFF' },\n            }"
+    },
+    {
+      "start": 30333,
+      "end": 30503,
+      "kind": "Property",
+      "source": "'coupa-spend-in-motion': [\n    'Connected City',\n    '#081D4D',\n    '#1565C0',\n    '#5FD6FF',\n    'paper-tangle',\n    'Paper tangle',\n    'chiptune',\n    108,\n    60,\n  ]"
+    },
+    {
+      "start": 30507,
+      "end": 30682,
+      "kind": "Property",
+      "source": "'coupa-inside-village': [\n    'Community Mosaic',\n    '#112A55',\n    '#276EC8',\n    '#EEC874',\n    'missing-cloud',\n    'Missed connection',\n    'ambient',\n    84,\n    62,\n  ]"
+    },
+    {
+      "start": 30686,
+      "end": 30861,
+      "kind": "Property",
+      "source": "'coupa-source-to-pay': [\n    'Supply District',\n    '#102A50',\n    '#2469B5',\n    '#8CDFE8',\n    'stale-fragments',\n    'Loose fragments',\n    'chiptune',\n    102,\n    60,\n  ]"
+    },
+    {
+      "start": 30865,
+      "end": 31040,
+      "kind": "Property",
+      "source": "'coupa-product-operations': [\n    'Operations Studio',\n    '#102446',\n    '#2864A3',\n    '#E8C378',\n    'paper-tangle',\n    'Paper tangle',\n    'chiptune',\n    96,\n    65,\n  ]"
+    },
+    {
+      "start": 31044,
+      "end": 31221,
+      "kind": "Property",
+      "source": "'coupa-developer-integration': [\n    'Resource Atlas',\n    '#08182F',\n    '#214A97',\n    '#5FD6FF',\n    'backlog-knot',\n    'Unresolved knot',\n    'ambient',\n    90,\n    57,\n  ]"
+    }
+  ]
+}

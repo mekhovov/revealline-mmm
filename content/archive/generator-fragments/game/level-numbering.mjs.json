@@ -1,0 +1,285 @@
+{
+  "sourcePath": "game/level-numbering.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "8640bb47a7c3d3714a5f99e8c751f488a47596ae",
+  "sourceSHA256": "de761d310d1441fd5c06f3cab769504b086867c82a5c8e8386d3c1748f88e59a",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 11628,
+      "end": 11728,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"original-spend-network\",\"original-spend-shared-routes\",\"original-spend-shared-harbor\"]'"
+    },
+    {
+      "start": 11732,
+      "end": 11828,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"original-spend-network\",\"original-spend-shared-routes\",\"original-spend-city-wins\"]'"
+    },
+    {
+      "start": 11832,
+      "end": 11934,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"original-spend-network\",\"original-spend-shared-routes\",\"original-spend-market-workshop\"]'"
+    },
+    {
+      "start": 13118,
+      "end": 13202,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"route-worlds-coupa\",\"route-worlds-coupa\",\"route-worlds-coupa-foundry\"]'"
+    },
+    {
+      "start": 13206,
+      "end": 13288,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"route-worlds-coupa\",\"route-worlds-coupa\",\"route-worlds-coupa-depot\"]'"
+    },
+    {
+      "start": 13292,
+      "end": 13379,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"route-worlds-coupa\",\"route-worlds-coupa\",\"route-worlds-coupa-switchback\"]'"
+    },
+    {
+      "start": 14349,
+      "end": 14453,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa-listening-court\"]'"
+    },
+    {
+      "start": 14457,
+      "end": 14562,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa-switchyard-gates\"]'"
+    },
+    {
+      "start": 14566,
+      "end": 14667,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa-open-circuit\"]'"
+    },
+    {
+      "start": 15502,
+      "end": 15589,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"fracture-lines-coupa\",\"fracture-lines-coupa\",\"fracture-lines-split-ring\"]'"
+    },
+    {
+      "start": 15593,
+      "end": 15679,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"fracture-lines-coupa\",\"fracture-lines-coupa\",\"fracture-lines-fault-fan\"]'"
+    },
+    {
+      "start": 15683,
+      "end": 15775,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"fracture-lines-coupa\",\"fracture-lines-coupa\",\"fracture-lines-frayed-causeway\"]'"
+    },
+    {
+      "start": 16625,
+      "end": 16714,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"countercurrent-coupa\",\"countercurrent-coupa\",\"countercurrent-offset-docks\"]'"
+    },
+    {
+      "start": 16718,
+      "end": 16808,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"countercurrent-coupa\",\"countercurrent-coupa\",\"countercurrent-sandbar-braid\"]'"
+    },
+    {
+      "start": 16812,
+      "end": 16903,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"countercurrent-coupa\",\"countercurrent-coupa\",\"countercurrent-crossing-watch\"]'"
+    },
+    {
+      "start": 16907,
+      "end": 16971,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-01\"]'"
+    },
+    {
+      "start": 16975,
+      "end": 17039,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-02\"]'"
+    },
+    {
+      "start": 17043,
+      "end": 17107,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-03\"]'"
+    },
+    {
+      "start": 17111,
+      "end": 17175,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-04\"]'"
+    },
+    {
+      "start": 17179,
+      "end": 17243,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-05\"]'"
+    },
+    {
+      "start": 17247,
+      "end": 17311,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-06\"]'"
+    },
+    {
+      "start": 17315,
+      "end": 17377,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-inside-village\",\"coupa-inside-village-01\"]'"
+    },
+    {
+      "start": 17381,
+      "end": 17443,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-inside-village\",\"coupa-inside-village-02\"]'"
+    },
+    {
+      "start": 17447,
+      "end": 17509,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-inside-village\",\"coupa-inside-village-03\"]'"
+    },
+    {
+      "start": 17513,
+      "end": 17575,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-inside-village\",\"coupa-inside-village-04\"]'"
+    },
+    {
+      "start": 17579,
+      "end": 17641,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-inside-village\",\"coupa-inside-village-05\"]'"
+    },
+    {
+      "start": 17645,
+      "end": 17707,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-inside-village\",\"coupa-inside-village-06\"]'"
+    },
+    {
+      "start": 17711,
+      "end": 17771,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-01\"]'"
+    },
+    {
+      "start": 17775,
+      "end": 17835,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-02\"]'"
+    },
+    {
+      "start": 17839,
+      "end": 17899,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-03\"]'"
+    },
+    {
+      "start": 17903,
+      "end": 17963,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-04\"]'"
+    },
+    {
+      "start": 17967,
+      "end": 18027,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-05\"]'"
+    },
+    {
+      "start": 18031,
+      "end": 18091,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-06\"]'"
+    },
+    {
+      "start": 18095,
+      "end": 18165,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-product-operations\",\"coupa-product-operations-01\"]'"
+    },
+    {
+      "start": 18169,
+      "end": 18239,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-product-operations\",\"coupa-product-operations-02\"]'"
+    },
+    {
+      "start": 18243,
+      "end": 18313,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-product-operations\",\"coupa-product-operations-03\"]'"
+    },
+    {
+      "start": 18317,
+      "end": 18387,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-product-operations\",\"coupa-product-operations-04\"]'"
+    },
+    {
+      "start": 18391,
+      "end": 18461,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-product-operations\",\"coupa-product-operations-05\"]'"
+    },
+    {
+      "start": 18465,
+      "end": 18535,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-product-operations\",\"coupa-product-operations-06\"]'"
+    },
+    {
+      "start": 18539,
+      "end": 18615,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-01\"]'"
+    },
+    {
+      "start": 18619,
+      "end": 18695,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-02\"]'"
+    },
+    {
+      "start": 18699,
+      "end": 18775,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-03\"]'"
+    },
+    {
+      "start": 18779,
+      "end": 18855,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-04\"]'"
+    },
+    {
+      "start": 18859,
+      "end": 18935,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-05\"]'"
+    },
+    {
+      "start": 18939,
+      "end": 19015,
+      "kind": "Literal",
+      "source": "'[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-06\"]'"
+    },
+    {
+      "start": 22814,
+      "end": 22878,
+      "kind": "Literal",
+      "source": "'[\"mission\",\"neon-mosaic-pack\",\"neon-mosaic\",\"neon-coupa-pack\"]'"
+    }
+  ]
+}

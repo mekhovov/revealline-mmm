@@ -1,0 +1,15 @@
+{
+  "sourcePath": "authoring/production/model.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "0c490df3f0fec491b0a8a8ea4d7f5c51bede8e8a",
+  "sourceSHA256": "228a554a884fcd8b4cdcb216ec5e7cc3485ff4e53a56dac081a7a1bfde139e80",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 215,
+      "end": 222,
+      "kind": "Literal",
+      "source": "'coupa'"
+    }
+  ]
+}

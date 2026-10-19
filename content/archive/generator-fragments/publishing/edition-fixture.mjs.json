@@ -1,0 +1,15 @@
+{
+  "sourcePath": "publishing/edition-fixture.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "e863ee5c06397dc1b9138de6feac47666b8e2949",
+  "sourceSHA256": "c363600ce4a17ec6c278e21d36b6f9e20a3274bac6096fe07185d1ba08e7feda",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 306,
+      "end": 313,
+      "kind": "ownership-reference",
+      "source": "'coupa'"
+    }
+  ]
+}

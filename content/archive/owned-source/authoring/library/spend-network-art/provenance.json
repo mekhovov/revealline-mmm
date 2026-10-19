@@ -1,0 +1,121 @@
+{
+  "format": "revealline-art-provenance.v1",
+  "recordedAt": "2026-09-13T07:38:46.039056+00:00",
+  "status": "Three generated and visually inspected source illustrations; no runtime integration; harbor emblem deviation explicitly recorded",
+  "generation": {
+    "tool": "OpenAI built-in image_gen.imagegen",
+    "mode": "Three new independent generations,one distinct prompt and output each",
+    "calls": 3,
+    "editCalls": 0,
+    "model": "Not exposed by tool response; no model-version claim",
+    "fallbackCLI": false,
+    "promptType": "Exact arguments in tool-requests.json; prompts/*.txt match exact text plus terminal newline",
+    "toolRequestsFile": "tool-requests.json",
+    "toolResponsesFile": "tool-responses.json"
+  },
+  "images": [
+    {
+      "id": "shared-value-harbor",
+      "title": "Shared Value Harbor",
+      "file": "originals/shared-value-harbor.png",
+      "width": 1774,
+      "height": 887,
+      "aspectRatio": 2.0,
+      "bitDepth": 8,
+      "colorType": "opaque RGB",
+      "bytes": 2577915,
+      "sha256": "d80e371a2bc008ce1b893268725add92a5b9a18bc8589e7b5145cbb4a75b46fa",
+      "prompt": "prompts/shared-value-harbor.txt",
+      "promptSha256": "34a21f7b4e3f84c63eb30c0f2467db93cec95c96bd408e4115da072a355fc124",
+      "toolOutputFile": "exec-64ff0766-b741-4e01-b6d5-9da440c29268.png",
+      "originalToolOutputPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-64ff0766-b741-4e01-b6d5-9da440c29268.png",
+      "processing": "Exact raw-output byte copy; no crop,rescale,color change,palette reduction,recompression or image editing.",
+      "inspection": "Wide dusk harbor with foreground reusable supplies, small freight vessel, short rail connection, warehouses and crane. Broad blue water separates detailed dock clusters. Repeated generic leaf emblems were generated on cargo despite the no-logo brief; no Coupa or other identified brand likeness is claimed. Raw is preserved and the emblem deviation is explicitly pending artistic decision.",
+      "pngValidation": "All PNG chunk CRCs,2:1 opaque8-bitRGB IHDR and original-byte equality passed."
+    },
+    {
+      "id": "city-savings-observatory",
+      "title": "City of Small Wins",
+      "file": "originals/city-savings-observatory.png",
+      "width": 1774,
+      "height": 887,
+      "aspectRatio": 2.0,
+      "bitDepth": 8,
+      "colorType": "opaque RGB",
+      "bytes": 2702090,
+      "sha256": "71e39606ce0283c0bb6fe120f22e2429415aba1d9dac0d412f629b686ba82175",
+      "prompt": "prompts/city-savings-observatory.txt",
+      "promptSha256": "5fea4a3a2396fab0e8cf4b9275f751b304ec495adefaf7f26cd1c82122da6ef1",
+      "toolOutputFile": "exec-7e6db3fd-67bf-4215-8351-40bbcb0e71b9.png",
+      "originalToolOutputPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-7e6db3fd-67bf-4215-8351-40bbcb0e71b9.png",
+      "processing": "Exact raw-output byte copy; no crop,rescale,color change,palette reduction,recompression or image editing.",
+      "inspection": "Brass/cyan-glass physical planning instrument with miniature businesses and railway before a warm city, greenhouse, bridges and water. Stored material samples suggest conserved resources. The apparatus and city are fictional metaphors,not actual software or equipment. Small schematic paper linework appears in foreground; no legible wording or dashboard observed.",
+      "pngValidation": "All PNG chunk CRCs,2:1 opaque8-bitRGB IHDR and original-byte equality passed."
+    },
+    {
+      "id": "thoughtful-market-workshop",
+      "title": "The Thoughtful Market",
+      "file": "originals/thoughtful-market-workshop.png",
+      "width": 1774,
+      "height": 887,
+      "aspectRatio": 2.0,
+      "bitDepth": 8,
+      "colorType": "opaque RGB",
+      "bytes": 3005071,
+      "sha256": "4f64115023245871c5ae126ddc8f711e9b0b48d130316045a1ba3baf08934fa0",
+      "prompt": "prompts/thoughtful-market-workshop.txt",
+      "promptSha256": "670f880aae5703032aaffbff5984cdf0a7864d8a1d77879cfe83f79e45aacbd1",
+      "toolOutputFile": "exec-315cee37-db08-4279-9c02-bf509bda2b9d.png",
+      "originalToolOutputPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-315cee37-db08-4279-9c02-bf509bda2b9d.png",
+      "processing": "Exact raw-output byte copy; no crop,rescale,color change,palette reduction,recompression or image editing.",
+      "inspection": "Sunlit covered craft-market arcade with a foreground balance, materials,plainboxes and repair tools; ceramics, textile and woodworking bays share a loading cart. Clear cyan structures and warm materials; no readable labels,logo or UI observed. Savings/procurement meaning depends on accompanying fictional-game context,not a measurable economic result.",
+      "pngValidation": "All PNG chunk CRCs,2:1 opaque8-bitRGB IHDR and original-byte equality passed."
+    }
+  ],
+  "referencesInspected": [
+    {
+      "id": "coupa-community-ai",
+      "url": "https://www.coupa.com/blog/an-8-trillion-advantage-coupas-community-driven-ai-turns-transactions-into-intelligent-insights/",
+      "publisher": "Coupa; Jeff Stangle,Product Marketing Director,AI & Platform",
+      "published": "2025-06-12",
+      "read": "Coupa-authored indexed article text returned by web search,2026-09-13; direct opening returned403",
+      "supportedConcept": "Vendor describes spend insights,supplier management,procurement automation and supply-chain planning supported by AI and community data.",
+      "creativeUse": "Shared physical networks and a fictional lens instrument express these ideas; no product screenshots,customer data,performance numbers or measured savings reproduced."
+    },
+    {
+      "id": "coupa-platform-innovation",
+      "url": "https://www.coupa.com/newsroom/new-coupa-platform-innovations-help-organizations-drive-profitability/",
+      "publisher": "Coupa newsroom",
+      "read": "Primary vendor search-indexed text,2026-09-13",
+      "supportedConcept": "Coupa presents spend visibility and supply-chain scenario planning as ways to support cost control and continuity.",
+      "creativeUse": "Organized reusable goods,careful selection and reserve materials illustrate fictional value preservation rather than actual product interfaces or guaranteed outcomes."
+    }
+  ],
+  "referenceImagesProvided": [],
+  "researchLimitations": [
+    "Direct Coupa homepage,products page and blog open requests returned403; no page screenshot or logo/Navi visual inspection claimed.",
+    "Primary search-indexed vendor descriptions informed broad concepts only. No present-day numeric adoption,transaction,savings or AI accuracy claim.",
+    "No official brand guide was used. Cyan/navy/amber palette and all fictional hardware/architecture are creative choices."
+  ],
+  "review": {
+    "method": "Direct inspection of all full generated outputs plus source-byte equality,PNGheaders/allchunkCRCs,prompt equality andSHA256.",
+    "observations": [
+      "Three original2:1 scenes: dusk harbor,night observatory and sunnymarket.",
+      "No legible text,knownbrandlogo,Navi/mascot,HUD or gameplay trail observed.",
+      "Harbor contains invented leaf cargo emblems; the no-emblem/no-logo brief is not perfectly met. Do not relabel these as official Coupa art.",
+      "Detailed modern pixel-art treatment is not a certified hand-authored grid or indexed palette.",
+      "Dense architecture and material detail need partial-reveal/phone/actor contrast review."
+    ],
+    "pending": [
+      "Artistic acceptance and decision on generic harbor emblems; raw remains unchanged.",
+      "Map/theme identity,managedderivatives,image decode and runtime integration.",
+      "Real phone/desktop partial-concealment and actor/trail contrast checks.",
+      "Offline/storage budgets,public release and any actual branded use."
+    ]
+  },
+  "rightsAndRelease": {
+    "provenance": "Original AI-assisted text-prompt compositions for this project. No Coupa logo,mascot,software screenshot or reference-game artwork supplied as input.",
+    "brandBoundary": "Fictional spend-management theme inspired by high-level vendor concepts; not endorsed product or brand illustration.",
+    "release": "Future untracked source artwork under authoring/library/spend-network-art only. No runtime,build,score,rule,version or immutable release changed."
+  }
+}

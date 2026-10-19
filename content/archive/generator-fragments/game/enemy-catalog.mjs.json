@@ -1,0 +1,15 @@
+{
+  "sourcePath": "game/enemy-catalog.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "d1a4cf09a81bd6466b2931fe6d7d1a9f9630fb70",
+  "sourceSHA256": "0c64df28a25ac55c55d1890ec9521b5f8284a0a85d76a42163e84d564ad9478a",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 302,
+      "end": 309,
+      "kind": "Literal",
+      "source": "'coupa'"
+    }
+  ]
+}

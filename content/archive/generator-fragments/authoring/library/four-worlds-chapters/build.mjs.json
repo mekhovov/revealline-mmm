@@ -1,0 +1,15 @@
+{
+  "sourcePath": "authoring/library/four-worlds-chapters/build.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "14df77070680d2f1156d72d10b8915ff8feac612",
+  "sourceSHA256": "dd6c7bbb17ab668f4c140cffc85217e45e60a6f582a258ea1c003b4f9868a4a8",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 6899,
+      "end": 6943,
+      "kind": "ArrayExpression",
+      "source": "['original-spend-network', 'coupa', 'coupa']"
+    }
+  ]
+}

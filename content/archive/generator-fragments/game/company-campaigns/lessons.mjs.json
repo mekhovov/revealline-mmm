@@ -1,0 +1,275 @@
+{
+  "sourcePath": "game/company-campaigns/lessons.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "d68acddb097bcd0796d030b0055696de32dbc340",
+  "sourceSHA256": "ea8bb610aa1c4f8c97966c02c32305fb7ac0f4ccb425d44f4081b17b1658ee57",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 77,
+      "end": 105,
+      "kind": "ownership-reference",
+      "source": "'https://docs.coupa.com/en/'"
+    },
+    {
+      "start": 136,
+      "end": 181,
+      "kind": "ownership-reference",
+      "source": "'https://careers.coupa.com/en/life-at-coupa/'"
+    },
+    {
+      "start": 1556,
+      "end": 1579,
+      "kind": "ownership-reference",
+      "source": "'Coupa — Life at Coupa'"
+    },
+    {
+      "start": 1588,
+      "end": 1620,
+      "kind": "ownership-reference",
+      "source": "'Coupa glossary — Source to pay'"
+    },
+    {
+      "start": 1634,
+      "end": 1661,
+      "kind": "ownership-reference",
+      "source": "'Coupa glossary — Approval'"
+    },
+    {
+      "start": 1679,
+      "end": 1710,
+      "kind": "ownership-reference",
+      "source": "'Coupa Core API — Requisitions'"
+    },
+    {
+      "start": 1735,
+      "end": 1783,
+      "kind": "ownership-reference",
+      "source": "'Coupa Core API — Requisition creation examples'"
+    },
+    {
+      "start": 1797,
+      "end": 1824,
+      "kind": "ownership-reference",
+      "source": "'Coupa Core API — Receipts'"
+    },
+    {
+      "start": 1838,
+      "end": 1888,
+      "kind": "ownership-reference",
+      "source": "'Coupa Supplier Portal — View and manage invoices'"
+    },
+    {
+      "start": 1900,
+      "end": 1947,
+      "kind": "ownership-reference",
+      "source": "'Coupa Supplier Portal — Edit a purchase order'"
+    },
+    {
+      "start": 1956,
+      "end": 1986,
+      "kind": "ownership-reference",
+      "source": "'Coupa Core API — Get started'"
+    },
+    {
+      "start": 1998,
+      "end": 2039,
+      "kind": "ownership-reference",
+      "source": "'Coupa Core API — OpenID Connect clients'"
+    },
+    {
+      "start": 2050,
+      "end": 2085,
+      "kind": "ownership-reference",
+      "source": "'Coupa Core API — Querying options'"
+    },
+    {
+      "start": 2095,
+      "end": 2130,
+      "kind": "ownership-reference",
+      "source": "'Coupa Core API — Integration runs'"
+    },
+    {
+      "start": 2704,
+      "end": 3957,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village',\n    1,\n    'Make a first connection',\n    'New colleague',\n    'Choose a small next step in a fictional first week. This is a reflection on how you prefer to connect, not a test of belonging.',\n    [\n      record(\n        'welcome',\n        'Village welcome',\n        'Coupa’s public culture page names Cultivate Belonging as a core value.',\n        'The fictional team offers a buddy conversation and a written introduction thread.',\n        'Both routes are available; neither determines whether someone belongs.',\n      ),\n      record(\n        'handoff',\n        'A helpful introduction',\n        'Share your role, one current question, and how teammates can reach you.',\n        'Keep personal details optional.',\n      ),\n    ],\n    [\n      reflection('connection', 'Your first step', [\n        [\n          'Ask a buddy for a short conversation',\n          'A buddy can provide immediate context and introduce another teammate.',\n        ],\n        [\n          'Write a short introduction',\n          'A written introduction gives colleagues across time zones a way to respond.',\n        ],\n      ]),\n    ],\n    'Your connection plan is saved. Different approaches can build the same community.',\n    ['culture'],\n  ]"
+    },
+    {
+      "start": 3961,
+      "end": 5235,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village',\n    2,\n    'Listen before connecting',\n    'Teammate',\n    'A fictional colleague asks for help with a confusing handoff. Choose how to understand the need before proposing a fix.',\n    [\n      record(\n        'request',\n        'Colleague’s message',\n        '“I am not sure who owns the next step.”',\n        'There are no customer records in this exercise.',\n      ),\n      record(\n        'context',\n        'Available context',\n        'Drive Success for #AllofUs is one of Coupa’s current public core values.',\n        'A shared handoff note may be stale. The colleague is available today.',\n        'You can begin with either the person or the written context, then confirm understanding.',\n      ),\n    ],\n    [\n      reflection('start', 'Where you begin', [\n        [\n          'Ask the colleague to describe the blocker',\n          'A short conversation can uncover missing context; record the agreed next step afterward.',\n        ],\n        [\n          'Read the handoff note together',\n          'Reviewing the note together can expose the gap; check that it matches the colleague’s experience.',\n        ],\n      ]),\n    ],\n    'Listening approach saved. The next handoff begins with a shared understanding.',\n    ['culture'],\n  ]"
+    },
+    {
+      "start": 5239,
+      "end": 6519,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village',\n    3,\n    'Make participation easier',\n    'Workshop host',\n    'A fictional team workshop spans time zones and communication preferences. Choose the first improvement you would make.',\n    [\n      record(\n        'workshop',\n        'Workshop constraints',\n        'Two colleagues cannot join the live hour. Another prefers time to consider written questions.',\n        'The team wants everyone to have a useful way to contribute.',\n      ),\n      record(\n        'options',\n        'Available support',\n        'A shared document and a recorded summary are available.',\n        'Ask participants what helps; do not infer anyone’s disability or personal circumstances.',\n      ),\n    ],\n    [\n      reflection('support', 'First improvement', [\n        [\n          'Share questions before the session',\n          'Advance questions create more time to consider and contribute; leave an asynchronous response route.',\n        ],\n        [\n          'Open an asynchronous contribution thread',\n          'An open thread gives colleagues outside the live hour a place to contribute; bring their ideas into the summary.',\n        ],\n      ]),\n    ],\n    'Participation plan saved. Follow up with the people it is intended to help.',\n    ['culture'],\n  ]"
+    },
+    {
+      "start": 6523,
+      "end": 7776,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village',\n    4,\n    'Own the handoff',\n    'Project contributor',\n    'Your fictional project moves to another team tomorrow. Choose how to make the transition understandable.',\n    [\n      record(\n        'work',\n        'Current state',\n        'Coupa’s public culture page names Own our Results as a core value.',\n        'The prototype works. One open question remains about the demonstration schedule.',\n        'The receiving team needs an owner and a clear next step.',\n      ),\n      record(\n        'handoff',\n        'Available handoff routes',\n        'You can write a short status note or host a short walkthrough.',\n        'Both routes should retain the open question instead of hiding it.',\n      ),\n    ],\n    [\n      reflection('handoff', 'Handoff approach', [\n        [\n          'Write status, owner and next step',\n          'A written handoff gives the receiving team a durable reference; invite corrections.',\n        ],\n        [\n          'Walk through the work and record decisions',\n          'A walkthrough can surface questions quickly; save the resulting owner and next step.',\n        ],\n      ]),\n    ],\n    'Handoff approach saved. Ownership stays visible after the transition.',\n    ['culture'],\n  ]"
+    },
+    {
+      "start": 7780,
+      "end": 9079,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village',\n    5,\n    'Build a small experiment',\n    'Team contributor',\n    'A fictional repeated task slows your team. Choose a small, reversible way to learn before proposing a wider change.',\n    [\n      record(\n        'problem',\n        'Repeated task',\n        'Build Tomorrow Together is one of Coupa’s current public core values.',\n        'Teammates repeatedly ask where the latest workshop guide lives.',\n        'No production system or customer information is involved.',\n      ),\n      record(\n        'experiment',\n        'Two local experiments',\n        'Try a visible link on the team page, or try a short guide index with three teammates.',\n        'Use what you learn to decide whether the change helps.',\n      ),\n    ],\n    [\n      reflection('experiment', 'First experiment', [\n        [\n          'Try one visible team-page link',\n          'A small link change tests whether discoverability is the main problem; observe whether questions decrease.',\n        ],\n        [\n          'Test a guide index with three teammates',\n          'A small usability check can reveal confusing labels before the index grows.',\n        ],\n      ]),\n    ],\n    'Experiment saved. A useful result can be improvement or evidence to change direction.',\n    ['culture'],\n  ]"
+    },
+    {
+      "start": 9083,
+      "end": 10292,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-inside-village',\n    6,\n    'Share what the village learned',\n    'Team contributor',\n    'Close the fictional team project by choosing how to carry useful learning forward. This reflection does not score your values.',\n    [\n      record(\n        'result',\n        'Project notes',\n        'A shared owner list reduced confusion. An early scheduling assumption proved wrong.',\n        'Several colleagues helped; the team wants their contribution recognized.',\n      ),\n      record(\n        'next',\n        'Two ways to share',\n        'A short retrospective or an annotated handoff guide can carry learning forward.',\n        'Include what changed and credit the collaborators in either format.',\n      ),\n    ],\n    [\n      reflection('share', 'Sharing format', [\n        [\n          'Host a short retrospective',\n          'A conversation can surface more perspectives; preserve the agreed learning afterward.',\n        ],\n        [\n          'Publish an annotated team guide',\n          'A durable guide supports future teammates; invite additions from contributors.',\n        ],\n      ]),\n    ],\n    'Reflection saved. Community learning continues beyond this route.',\n    ['culture'],\n  ]"
+    },
+    {
+      "start": 10296,
+      "end": 11809,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay',\n    1,\n    'Write the requirement',\n    'Requester',\n    'Prepare the requirement for a fictional workshop opening. The chosen record must describe the need, not prematurely choose a supplier.',\n    [\n      record(\n        'need',\n        'Workshop brief',\n        'Twelve learners each need one electronics kit.',\n        'The workshop starts 14 October. Kits must arrive by 12 October.',\n      ),\n      record(\n        'offer',\n        'Unsolicited offer',\n        'Supplier Birch offers ten camera cases arriving 16 October.',\n        'An offer is evidence to compare, not the requirement itself.',\n      ),\n    ],\n    [\n      field(\n        'item',\n        'Required item',\n        choices('Electronics kit', 'Camera case'),\n        'Electronics kit',\n        'Camera cases cannot replace the electronics kits learners will use; copying the offer would leave the workshop without its required equipment.',\n      ),\n      field(\n        'quantity',\n        'Required quantity',\n        choices('10', '12'),\n        '12',\n        'Ten kits would leave two of the twelve learners without equipment. Keep one kit per learner.',\n      ),\n      field(\n        'needBy',\n        'Required arrival',\n        choices('12 October', '16 October'),\n        '12 October',\n        'An arrival on 16 October misses the 14 October workshop. The brief needs kits by 12 October for preparation.',\n      ),\n    ],\n    'Requirement saved: 12 electronics kits, needed by 12 October.',\n    ['s2p'],\n  ]"
+    },
+    {
+      "start": 11813,
+      "end": 13188,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay',\n    2,\n    'Compare the offers',\n    'Buyer',\n    'Select an offer against the declared need and budget. These fictional suppliers are collaborators, not enemies.',\n    [\n      record(\n        'requirement',\n        'Approved requirement',\n        '12 electronics kits by 12 October. Maximum total: 600 credits.',\n        'All kits must include a reusable case.',\n      ),\n      record(\n        'offers',\n        'Comparable offers',\n        'Birch: 12 kits with cases, 570 credits, 11 October.',\n        'Cedar: 12 kits without cases, 510 credits, 10 October.',\n        'Maple: 12 kits with cases, 540 credits, 15 October.',\n      ),\n    ],\n    [\n      field(\n        'supplier',\n        'Selected offer',\n        choices('Birch', 'Cedar', 'Maple'),\n        'Birch',\n        'Cedar omits the required cases; Maple arrives after the deadline. Birch supplies the complete scope on time within 600 credits.',\n      ),\n      field(\n        'basis',\n        'Recorded decision basis',\n        choices('Meets scope, date and budget', 'Lowest displayed price'),\n        'Meets scope, date and budget',\n        'Choosing the lowest displayed price would omit required cases. Record scope, date and budget so the next owner can understand the award.',\n      ),\n    ],\n    'Birch offer linked to the requirement with its decision basis.',\n    ['s2p'],\n  ]"
+    },
+    {
+      "start": 13192,
+      "end": 14531,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay',\n    3,\n    'Prepare the terms handoff',\n    'Sourcing coordinator',\n    'Connect the chosen offer to a fictional contract brief. This exercise is a document handoff, not legal advice.',\n    [\n      record(\n        'award',\n        'Chosen offer',\n        'Birch: 12 electronics kits with reusable cases.',\n        'Total 570 credits; arrival 11 October.',\n      ),\n      record(\n        'terms',\n        'Agreed scenario terms',\n        'The parties have agreed payment 30 days after invoice date.',\n        'The contract brief must retain the chosen scope and those terms.',\n      ),\n    ],\n    [\n      field(\n        'scope',\n        'Contract scope',\n        choices('12 kits with cases', '12 cases only'),\n        '12 kits with cases',\n        'Cases alone would remove the electronics kits from the handoff. Retain both kits and cases from the chosen offer.',\n      ),\n      field(\n        'paymentTerm',\n        'Payment term',\n        choices('30 days after invoice date', 'Pay immediately on order'),\n        '30 days after invoice date',\n        'Immediate payment on order changes the agreed obligation. Carry forward the parties’ 30-days-after-invoice term without inventing a new one.',\n      ),\n    ],\n    'Contract brief prepared with the awarded scope and agreed payment term.',\n    ['s2p'],\n  ]"
+    },
+    {
+      "start": 14535,
+      "end": 15869,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay',\n    4,\n    'Route the request',\n    'Requester',\n    'A draft request is ready. Apply the fictional organization’s handoff policy; this is not a live Coupa configuration.',\n    [\n      record(\n        'request',\n        'Request R-104',\n        '12 kits, total 570 credits. Status: Draft.',\n        'Supplier and contract references are present.',\n      ),\n      record(\n        'policy',\n        'Scenario policy',\n        'A department approver reviews requests above 500 credits.',\n        'Only an approved request can proceed to the buyer for order issuance.',\n      ),\n    ],\n    [\n      field(\n        'nextOwner',\n        'Next owner',\n        choices('Department approver', 'Supplier'),\n        'Department approver',\n        '570 credits exceeds this case’s 500-credit threshold. Sending the draft to the supplier would skip the required department review.',\n      ),\n      field(\n        'nextState',\n        'Requested next state',\n        choices('Pending approval', 'Issued order'),\n        'Pending approval',\n        'Pending approval preserves the required review step. Calling the draft an issued order would claim an authorization that has not happened.',\n      ),\n    ],\n    'Request R-104 routed for approval; no purchase order has been issued.',\n    ['approval', 'requisitions'],\n  ]"
+    },
+    {
+      "start": 15873,
+      "end": 17002,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay',\n    5,\n    'Record what arrived',\n    'Receiver',\n    'Update the fictional receiving record using the delivery evidence. Leave undelivered quantities outstanding.',\n    [\n      record('order', 'Order PO-204', 'Line 1: 12 electronics kits. Previously received: 0.'),\n      record(\n        'delivery',\n        'Delivery note D-204A',\n        '8 kits arrived intact today.',\n        'The remaining 4 kits are scheduled for later.',\n      ),\n    ],\n    [\n      field(\n        'line',\n        'Order line',\n        choices('PO-204 / line 1', 'PO-999 / line 1'),\n        'PO-204 / line 1',\n        'PO-204 is the order on the delivery evidence. Posting to PO-999 would leave the real order outstanding and corrupt an unrelated record.',\n      ),\n      field(\n        'received',\n        'Quantity received today',\n        choices('8', '12'),\n        '8',\n        'Recording 12 would claim the four undelivered kits arrived and hide the remaining delivery. Record the eight physically received today.',\n      ),\n    ],\n    'Receipt recorded for 8 kits. Four kits remain outstanding.',\n    ['receipts'],\n  ]"
+    },
+    {
+      "start": 17006,
+      "end": 18530,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-source-to-pay',\n    6,\n    'Close the record chain',\n    'Accounts payable',\n    'Reconcile the example’s three-document check and prepare the correct handoff. A later payment is a separate event.',\n    [\n      record(\n        'chain',\n        'Order and receipt',\n        'PO-204 ordered 12 kits. Receipts now total 12 kits.',\n        'Invoice INV-204 is for 12 kits at the agreed 570 credits.',\n      ),\n      record(\n        'status',\n        'Current invoice',\n        'Status: Pending approval. No payment record exists.',\n        'The scenario requires an AP review before payment scheduling.',\n        'For this simplified case, matching quantities and the agreed total satisfy that review; there are no other holds. Real review rules vary by organization.',\n      ),\n    ],\n    [\n      field(\n        'match',\n        'Reconciliation result',\n        choices('Documents match', 'Quantity mismatch'),\n        'Documents match',\n        'The order, receipts and invoice each show 12 kits, and the invoice matches 570 credits. Flagging a quantity mismatch would delay this ready handoff.',\n      ),\n      field(\n        'state',\n        'After the review',\n        choices('Approved for payment', 'Paid'),\n        'Approved for payment',\n        'This case permits approval after the matching check, but no payment record exists. Marking it paid would conceal the outstanding payment step.',\n      ),\n    ],\n    'Invoice approved for payment scheduling. It has not been marked paid.',\n    ['invoices'],\n  ]"
+    },
+    {
+      "start": 18534,
+      "end": 19920,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations',\n    1,\n    'Choose the actionable task',\n    'Requester',\n    'Work from a fictional task board. Select the request assigned to your role instead of acting on another team’s notification.',\n    [\n      record(\n        'role',\n        'Your current role',\n        'You are the requester for R-301.',\n        'Your task is to complete a missing delivery address.',\n      ),\n      record(\n        'tasks',\n        'Task board',\n        'R-301: delivery address missing; assigned to you.',\n        'INV-77: approved notification; no requester action.',\n        'R-405: review pending; assigned to a department approver.',\n      ),\n    ],\n    [\n      field(\n        'record',\n        'Open record',\n        choices('R-301', 'INV-77', 'R-405'),\n        'R-301',\n        'R-301 is assigned to the requester. Acting on R-405 would take another role’s review while leaving your delivery address unresolved.',\n      ),\n      field(\n        'action',\n        'Work to perform',\n        choices('Complete delivery address', 'Approve invoice'),\n        'Complete delivery address',\n        'The invoice notification reports an outcome; it does not assign you approval work. Complete the address so the requester’s task can move forward.',\n      ),\n    ],\n    'R-301 opened with the requester’s delivery-address task selected.',\n    ['requisitions', 'approval'],\n  ]"
+    },
+    {
+      "start": 19924,
+      "end": 21120,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations',\n    2,\n    'Repair and save the draft',\n    'Requester',\n    'Correct the fictional draft’s missing information and save it. Saving is deliberately separate from submitting.',\n    [\n      record(\n        'draft',\n        'Draft R-301',\n        'Item: desk lamp. Quantity: empty. Currency: EUR.',\n        'Delivery address is now Workshop North.',\n      ),\n      record(\n        'brief',\n        'Request note',\n        'The team needs 4 desk lamps.',\n        'The requester wants to save the draft for review before submission.',\n      ),\n    ],\n    [\n      field(\n        'quantity',\n        'Quantity',\n        choices('1', '4'),\n        '4',\n        'One lamp would leave three of the four requested lamps unfulfilled. Use the request note’s quantity of four.',\n      ),\n      field(\n        'operation',\n        'Draft action',\n        choices('Save draft', 'Submit for approval'),\n        'Save draft',\n        'Submitting now would start a review before the requester’s intended draft check. Save the complete draft and keep submission separate.',\n      ),\n    ],\n    'R-301 saved as a complete draft. It has not been submitted.',\n    ['requisitions'],\n  ]"
+    },
+    {
+      "start": 21124,
+      "end": 22465,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations',\n    3,\n    'Review the evidence',\n    'Department approver',\n    'Apply the stated policy to a fictional request. The training screen is illustrative, not a replica of a customer instance.',\n    [\n      record(\n        'request',\n        'Request R-302',\n        'Total: 780 credits. Business purpose: workshop equipment.',\n        'Supporting quote: missing.',\n      ),\n      record(\n        'policy',\n        'Review policy for this case',\n        'Requests above 500 credits require an attached quote.',\n        'Incomplete requests are returned to the requester for clarification.',\n      ),\n    ],\n    [\n      field(\n        'decision',\n        'Review action',\n        choices('Return for clarification', 'Approve'),\n        'Return for clarification',\n        '780 credits exceeds this case’s threshold and the required quote is absent. Approval would bypass the stated evidence check.',\n      ),\n      field(\n        'reason',\n        'Handoff reason',\n        choices('Attach supporting quote', 'Request is too old'),\n        'Attach supporting quote',\n        'A request to attach the quote tells the requester how to repair the handoff. An age complaint does not identify the missing evidence.',\n      ),\n    ],\n    'R-302 returned with a request for the supporting quote.',\n    ['approval'],\n  ]"
+    },
+    {
+      "start": 22469,
+      "end": 23733,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations',\n    4,\n    'Handle a pending change',\n    'Buyer',\n    'Track a fictional supplier change without confusing a request with the currently accepted order.',\n    [\n      record(\n        'order',\n        'Issued PO-303',\n        'Accepted delivery date: 18 October.',\n        'Accepted quantity: 10 kits.',\n      ),\n      record(\n        'change',\n        'Supplier change request C-303',\n        'Proposed delivery date: 21 October. Status: Pending review.',\n        'The scenario routes delivery changes to the buyer for review.',\n      ),\n    ],\n    [\n      field(\n        'owner',\n        'Review owner',\n        choices('Buyer', 'Requester automatically'),\n        'Buyer',\n        'This case assigns delivery-change review to the buyer. Sending it elsewhere would leave the pending change without its designated decision maker.',\n      ),\n      field(\n        'acceptedDate',\n        'Current accepted delivery date',\n        choices('18 October', '21 October'),\n        '18 October',\n        'Using 21 October now would treat an unapproved proposal as accepted. Retain 18 October until this change is approved.',\n      ),\n    ],\n    'Change C-303 routed to the buyer. The accepted date remains 18 October.',\n    ['orders'],\n  ]"
+    },
+    {
+      "start": 23737,
+      "end": 24969,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations',\n    5,\n    'Receive the correct line',\n    'Receiver',\n    'Record the delivery against the correct fictional order line, leaving undelivered goods open.',\n    [\n      record(\n        'lines',\n        'Order PO-304',\n        'Line 1: 6 monitors. Line 2: 10 keyboards.',\n        'Neither line has a previous receipt.',\n      ),\n      record(\n        'delivery',\n        'Packing slip',\n        '4 monitors delivered. No keyboards delivered.',\n        'Record only the goods physically received in this case.',\n      ),\n    ],\n    [\n      field(\n        'line',\n        'Receiving line',\n        choices('Line 1: monitors', 'Line 2: keyboards'),\n        'Line 1: monitors',\n        'Receiving keyboards would record goods that did not arrive while leaving the monitor delivery unrecorded. Use the monitor line.',\n      ),\n      field(\n        'quantity',\n        'Quantity received',\n        choices('4', '6', '10'),\n        '4',\n        'Six would hide the two undelivered monitors; ten would also confuse the keyboard quantity. Record the four monitors on the packing slip.',\n      ),\n    ],\n    'Four monitors received on line 1; two monitors and ten keyboards remain open.',\n    ['receipts'],\n  ]"
+    },
+    {
+      "start": 24973,
+      "end": 26401,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-product-operations',\n    6,\n    'Resolve the quantity exception',\n    'Accounts payable',\n    'Trace a fictional discrepancy using linked records. This exercise does not prescribe country-specific tax or credit-note rules.',\n    [\n      record(\n        'records',\n        'Linked records',\n        'PO-305: 8 lamps. Receipt: 8 lamps. Invoice: 10 lamps.',\n        'The invoice has not been paid.',\n      ),\n      record(\n        'policy',\n        'Exception handling for this case',\n        'Send a quantity clarification to the supplier through the AP owner.',\n        'Do not alter a correct receipt to make the invoice match.',\n      ),\n    ],\n    [\n      field(\n        'issue',\n        'Discrepancy',\n        choices('Invoice quantity', 'Receipt quantity'),\n        'Invoice quantity',\n        'The order and actual receipt both show eight lamps; only the invoice shows ten. Changing the receipt would erase accurate delivery evidence.',\n      ),\n      field(\n        'handoff',\n        'Next action',\n        choices('AP requests supplier clarification', 'Increase receipt to ten'),\n        'AP requests supplier clarification',\n        'AP can ask the supplier to clarify the extra two invoiced lamps. Increasing a correct receipt would disguise the discrepancy without delivering goods.',\n      ),\n    ],\n    'Quantity exception documented and handed to AP for supplier clarification.',\n    ['invoices'],\n  ]"
+    },
+    {
+      "start": 26405,
+      "end": 27650,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration',\n    1,\n    'Plan a resource read',\n    'Integration developer',\n    'Configure an illustrative Core API read. No request is sent and no customer instance is used.',\n    [\n      record(\n        'requirement',\n        'Integration requirement',\n        'Read one known supplier record for a small on-demand lookup.',\n        'The job does not update the supplier.',\n      ),\n      record(\n        'resources',\n        'Resource notes',\n        'Supplier records belong to the suppliers resource.',\n        'API reads suit the on-demand lookup; bulk file imports serve a different job.',\n      ),\n    ],\n    [\n      field(\n        'resource',\n        'Resource',\n        choices('suppliers', 'invoices'),\n        'suppliers',\n        'An invoices read returns the wrong business object. Select suppliers so the lookup can resolve the known supplier record.',\n      ),\n      field(\n        'method',\n        'Operation',\n        choices('GET', 'POST'),\n        'GET',\n        'GET reads the existing supplier; POST attempts a create. Choosing a write operation would exceed this read-only lookup.',\n      ),\n    ],\n    'Local request plan: GET one supplier record. No network request was made.',\n    ['api'],\n  ]"
+    },
+    {
+      "start": 27654,
+      "end": 29097,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration',\n    2,\n    'Choose the narrow access',\n    'Integration developer',\n    'Configure a fictional system-to-system client. Scope labels are training labels, not a list to paste into a live instance.',\n    [\n      record(\n        'job',\n        'Job context',\n        'A scheduled backend job reads accounting reference data.',\n        'No end user is present and the job never writes data.',\n      ),\n      record(\n        'access',\n        'Available training choices',\n        'Client credentials: system-to-system. Authorization code: user-involved consent.',\n        'Read accounting grants the needed read; write accounting is broader than this job.',\n      ),\n    ],\n    [\n      field(\n        'grant',\n        'Grant type',\n        choices('Client credentials', 'Authorization code'),\n        'Client credentials',\n        'The unattended job has no user to complete consent. Client credentials fits the stated system-to-system context; authorization code needs user involvement.',\n      ),\n      field(\n        'scope',\n        'Training permission',\n        choices('Read accounting', 'Read and write accounting'),\n        'Read accounting',\n        'Write permission adds an ability this job never needs. Read-only access limits what the fictional client can change if misused.',\n      ),\n    ],\n    'Fictional client configured for client credentials and accounting read only.',\n    ['scopes'],\n  ]"
+    },
+    {
+      "start": 29101,
+      "end": 30413,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration',\n    3,\n    'Finish the filtered read',\n    'Integration developer',\n    'Complete a frozen, two-page local response set. The fixture is small; the documented Core API page bound is separate.',\n    [\n      record(\n        'page-one',\n        'Local page 1',\n        'Filter: active suppliers. IDs returned: 101, 102.',\n        'The fixture indicates another page exists.',\n      ),\n      record(\n        'page-two',\n        'Local page 2',\n        'Same filter. ID returned: 103. No further page.',\n        'The combined result contains three unique records.',\n      ),\n    ],\n    [\n      field(\n        'ids',\n        'Combined result IDs',\n        choices('101, 102', '101, 102, 103'),\n        '101, 102, 103',\n        'Stopping after the first page drops supplier 103 from the ledger. Include both frozen pages to complete this query.',\n      ),\n      field(\n        'filter',\n        'Filter on subsequent page',\n        choices('Keep active-supplier filter', 'Drop filter'),\n        'Keep active-supplier filter',\n        'Dropping the active-supplier filter can mix in records outside the requested set. Keep the same query while advancing through pages.',\n      ),\n    ],\n    'Local ledger completed with IDs 101, 102 and 103 under the same filter.',\n    ['pages'],\n  ]"
+    },
+    {
+      "start": 30417,
+      "end": 31777,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration',\n    4,\n    'Resolve valid references',\n    'Integration developer',\n    'Prepare a fictional transaction using existing active references. This is not a complete production payload.',\n    [\n      record(\n        'references',\n        'Available reference records',\n        'Supplier S-10: active. Supplier S-11: inactive.',\n        'Requester U-7: active. Accounting code WORKSHOP: exists.',\n      ),\n      record(\n        'draft',\n        'Draft requirement',\n        'The transaction requires the active supplier, requester U-7 and existing code WORKSHOP.',\n        'Do not invent a missing supplier or change the intended requester.',\n      ),\n    ],\n    [\n      field(\n        'supplier',\n        'Supplier reference',\n        choices('S-10', 'S-11', 'S-99'),\n        'S-10',\n        'S-11 is inactive and S-99 does not exist in this fixture. Neither satisfies the draft’s active-reference requirement; resolve S-10.',\n      ),\n      field(\n        'account',\n        'Accounting reference',\n        choices('WORKSHOP', 'UNLISTED'),\n        'WORKSHOP',\n        'UNLISTED has no reference in this fixture. WORKSHOP preserves the intended accounting assignment without inventing a record.',\n      ),\n    ],\n    'Active supplier and existing accounting references linked to the fictional draft.',\n    ['requisitions'],\n  ]"
+    },
+    {
+      "start": 31781,
+      "end": 33144,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration',\n    5,\n    'Repair the validation error',\n    'Integration developer',\n    'Inspect a deterministic local validation response and repair only the missing field.',\n    [\n      record(\n        'request',\n        'Fictional draft request',\n        'One quantity-based line: electronics kit. Currency EUR. Quantity missing.',\n        'The intended quantity is 3. This exercise creates a draft only.',\n      ),\n      record(\n        'response',\n        'Local response',\n        'Validation failed: quantity is required for this quantity-based line.',\n        'No draft was created on the failed attempt; correct the request before retrying.',\n      ),\n    ],\n    [\n      field(\n        'quantity',\n        'Line quantity',\n        choices('0', '3'),\n        '3',\n        'Zero does not fulfill the three-kit requirement. Repair the missing quantity to three while retaining the other draft fields.',\n      ),\n      field(\n        'operation',\n        'Successful next operation',\n        choices('Create draft', 'Mark order issued'),\n        'Create draft',\n        'Passing draft validation creates a draft only. Marking an order issued would skip separate submission, approval and issuance steps.',\n      ),\n    ],\n    'Local validation passed. Fictional draft created; no real API was called.',\n    ['requisitionExamples'],\n  ]"
+    },
+    {
+      "start": 33148,
+      "end": 34642,
+      "kind": "ArrayExpression",
+      "source": "[\n    'coupa-developer-integration',\n    6,\n    'Recover the failed item',\n    'Integration developer',\n    'Use the fixture’s recovery policy. Coupa endpoint-specific idempotency and retry behavior must be checked separately.',\n    [\n      record(\n        'ledger',\n        'Local integration run',\n        'A: processed, destination ID 901. B: failed validation, no destination record. C: processed, destination ID 903.',\n        'Run result: failed because B is unresolved.',\n      ),\n      record(\n        'recovery',\n        'Recovery policy for this fixture',\n        'Correct B and retry only B after confirming no destination record exists.',\n        'Do not blindly repeat successful creates A or C. Verify every intended record before marking the run successful.',\n      ),\n    ],\n    [\n      field(\n        'retry',\n        'Records to retry',\n        choices('B only', 'A, B and C'),\n        'B only',\n        'A and C already have destination records. Repeating their creates risks duplicates; correct and retry only B, whose absence is confirmed.',\n      ),\n      field(\n        'completion',\n        'Completion condition',\n        choices('All intended records reconciled', 'Retry command sent'),\n        'All intended records reconciled',\n        'A sent retry may still fail. Reconcile all intended destination records before calling the run successful.',\n      ),\n    ],\n    'Recovery plan targets B only and requires reconciliation before success.',\n    ['runs', 'api'],\n  ]"
+    },
+    {
+      "start": 35019,
+      "end": 35041,
+      "kind": "ownership-reference",
+      "source": "'coupa-inside-village'"
+    },
+    {
+      "start": 35069,
+      "end": 35090,
+      "kind": "ownership-reference",
+      "source": "'coupa-source-to-pay'"
+    },
+    {
+      "start": 35121,
+      "end": 35124,
+      "kind": "owned-conditional-branch",
+      "condition": "campaignId === 'coupa-inside-village' ||\n        (campaignId === 'coupa-source-to-pay' && ordinal === 6)",
+      "source": "'2'"
+    },
+    {
+      "start": 35242,
+      "end": 35264,
+      "kind": "ownership-reference",
+      "source": "'coupa-inside-village'"
+    },
+    {
+      "start": 35267,
+      "end": 35279,
+      "kind": "owned-conditional-branch",
+      "condition": "campaignId === 'coupa-inside-village'",
+      "source": "'reflection'"
+    },
+    {
+      "start": 35316,
+      "end": 35408,
+      "kind": "ownership-reference",
+      "source": "'Fictional, offline training. Illustrative records; no live Coupa actions or certification.'"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "sourcePath": "scripts/produce-company-content.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "c73e7f7f92eb9e3cf2ec4c63068754172b9cb8c1",
+  "sourceSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 8290,
+      "end": 8301,
+      "kind": "ownership-reference",
+      "source": "'coupa-all'"
+    }
+  ]
+}

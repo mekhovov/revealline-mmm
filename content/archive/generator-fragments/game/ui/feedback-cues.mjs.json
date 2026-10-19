@@ -1,0 +1,16 @@
+{
+  "sourcePath": "game/ui/feedback-cues.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "191df69ddb467d03d4448af94d4057be99454a61",
+  "sourceSHA256": "80a7f9c1ac51e35ac2bb25de2611dbac515be84c818497ae617ecc694473b633",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1861,
+      "end": 1875,
+      "kind": "owned-conditional-branch",
+      "condition": "/navi|coupa|spend|paper/.test(id)",
+      "source": "return 'soft';"
+    }
+  ]
+}

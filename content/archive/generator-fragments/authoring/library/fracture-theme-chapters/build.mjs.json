@@ -1,0 +1,33 @@
+{
+  "sourcePath": "authoring/library/fracture-theme-chapters/build.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "feb46e40809c101a5d70584dc1f865a414109476",
+  "sourceSHA256": "8269034c715e788532c2d9736fd378e9ab3778680d287f277b830d874858a1be",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1186,
+      "end": 1193,
+      "kind": "Literal",
+      "source": "'coupa'"
+    },
+    {
+      "start": 2301,
+      "end": 2427,
+      "kind": "Property",
+      "source": "'authoring/library/fracture-coupa-art/provenance.json':\n    '3709b1a56f5e88f2335c8fcd50b82c3f7efa4de8f89585db6b6af3325c7898d8'"
+    },
+    {
+      "start": 5492,
+      "end": 5525,
+      "kind": "ownership-reference",
+      "source": "'Choose ukraine, retro or coupa.'"
+    },
+    {
+      "start": 12667,
+      "end": 12700,
+      "kind": "ownership-reference",
+      "source": "'Choose ukraine, retro or coupa.'"
+    }
+  ]
+}

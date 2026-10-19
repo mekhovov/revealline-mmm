@@ -1,0 +1,55 @@
+{
+  "format": "revealline-external-chapter.v1",
+  "id": "countercurrent-coupa",
+  "revision": 1,
+  "source": {
+    "id": "countercurrent",
+    "bytes": 8560,
+    "sha256": "fa1ad192dbb09efe1ea97ec2689064cf84dc086e9a293e2c1a482d5e97cac6bb"
+  },
+  "pack": {
+    "bytes": 8121,
+    "sha256": "625879853cfd4e7b26deb252ba0505565efda8fe27891e68c167893149310ff5"
+  },
+  "media": {
+    "bytes": 8527514,
+    "sha256": "1edc1f00c0c27f0bab6c90a0dce4edee2cda3106a832b519db09bb63d2d940f4"
+  },
+  "campaignKey": "countercurrent-coupa/1/5f8155b60753cb07",
+  "themeId": "coupa",
+  "originals": [
+    {
+      "assetId": "countercurrent-coupa-poster-1",
+      "presentationId": "countercurrent-coupa-poster-1-presentation",
+      "levelId": "countercurrent-offset-docks",
+      "levelRevision": "1",
+      "sha256": "87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997",
+      "bytes": 2735312,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "countercurrent-coupa-poster-2",
+      "presentationId": "countercurrent-coupa-poster-2-presentation",
+      "levelId": "countercurrent-sandbar-braid",
+      "levelRevision": "1",
+      "sha256": "ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14",
+      "bytes": 2884014,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "countercurrent-coupa-poster-3",
+      "presentationId": "countercurrent-coupa-poster-3-presentation",
+      "levelId": "countercurrent-crossing-watch",
+      "levelRevision": "1",
+      "sha256": "1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5",
+      "bytes": 2897299,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    }
+  ]
+}

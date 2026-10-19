@@ -1,0 +1,15 @@
+{
+  "sourcePath": "game/community-routes.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "85b1cc2f278d6ff86098a14998d666b73fb3206f",
+  "sourceSHA256": "fb9b2d24cdcc325da1d7e7cb8d74ed35e6ff36bc336248843b0d233888fdab56",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 388,
+      "end": 657,
+      "kind": "ObjectExpression",
+      "source": "{\n      slug: 'coupa',\n      brandId: 'coupa',\n      editionId: 'coupa-all',\n      editionIds: [\n        'coupa-all',\n        'coupa-adventure',\n        'coupa-culture',\n        'coupa-foundations',\n        'coupa-operations',\n        'coupa-developers',\n      ],\n    }"
+    }
+  ]
+}

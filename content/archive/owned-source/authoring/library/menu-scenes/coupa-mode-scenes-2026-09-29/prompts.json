@@ -1,0 +1,82 @@
+{
+  "format": "revealline-menu-scene-prompts.v1",
+  "created": "2026-09-29",
+  "generator": "OpenAI built-in image_gen",
+  "rights": "Original project artwork generated for the user; approved project Coupa world and Navi actor supplied as references. No third-party stock assets.",
+  "images": [
+    {
+      "id": "coupa-versus",
+      "file": "coupa-versus-v1.png",
+      "prompt": "Use case: stylized-concept.\nAsset type: FPV / LINE Spend Network VERSUS landing background, landscape 3:2.\nInput images: image 1 is the approved Coupa coastal village world: white stone bridges and blue roofs, turquoise sea, cypress trees, warm golden light. Image 2 is the approved Navi player actor: compact rounded white robot pod, deep navy screen face, two cyan square eyes and small cyan smile, blue side earpieces and a tiny gold indicator. These are style/world/character references; create a distinct original mode composition, do not merely crop either image.\nCreate a finished native-game pixel-art title background: a shaded stone terrace overlooking the welcoming blue-and-white coastal village. TWO clearly readable Navi robot pods on TWO SEPARATE low stone docking pedestals in the right half, rotated inward toward one another in friendly competition. One has a restrained amber readiness trim; the other cyan. Both retain the exact recognizable white rounded pod, navy face and cyan pixel eyes, with subtly different three-quarter orientations. No humanoid bodies or legs. The separate stands and opposing orientation communicate Versus.\nComposition: left 46% quiet very dark navy shaded stone arch/wall with sparse low-contrast vine shadow, safe for a fixed menu. Keep both complete robots around x62% and x82%, y65%, each about 14% image width. Behind them show distant village rooflines and the sea, without overwhelming their silhouettes. Upper-right: distinct soft stepped cloud wisps in clear sky. Right foreground: a small leafy planter; one warm terrace lamp near the shaded arch; a clear sea patch for subtle ripple animation later.\nStyle: deliberate crisp 16-bit pixel clusters, stepped silhouettes, restrained navy/cobalt/turquoise/ivory/gold palette; match the actor's pixel identity while retaining the village's depth. NOT smooth 3D rendering, NOT photo, no blur, no gradients smeared across pixels.\nConstraints: no letters, words, logos, numbers, flags, UI, menus, buttons, borders or watermark. No weapons or combat. Opaque complete full-frame artwork.",
+      "references": [
+        "game/ui/art/menu-scenes/coupa.webp",
+        "authoring/motion-lab/assets/navi-avatar.png"
+      ],
+      "referenceRole": "Approved world/actor or generated mode identity references; source art preserved unchanged.",
+      "sourceSha256": "750068532ca11c1c110fe662d9668b59a215c5d7619ad766e2af4810ed8f9312",
+      "referenceSha256": {
+        "game/ui/art/menu-scenes/coupa.webp": "393ebd9f3cf395598a79a43cd1277adfe4381cee177549be38fc027ec76afdc1",
+        "authoring/motion-lab/assets/navi-avatar.png": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69"
+      }
+    },
+    {
+      "id": "coupa-versus-portrait",
+      "file": "coupa-versus-portrait-v1.png",
+      "prompt": "Use case: stylized-concept.\nAsset type: Spend Network VERSUS landing background, separately authored tall 9:16 portrait.\nInput images: image 1 is the approved new Versus landscape, preserving its two Navi white robot pods, cyan versus amber separate docking pedestals, coastal village and crisp pixel art; image 2 is the original Navi actor to preserve the navy screen, cyan eyes/smile, white housing and blue earpieces. Recompose for a phone; do not crop the landscape.\nTop 48%: quiet very dark navy shaded stone arch interior with only low-contrast wall/ivy shapes, empty enough for a vertical native-game menu. Opening mainly below the midpoint reveals the blue-white coastal village, turquoise sea and warm dawn sky. A small warm lantern sits around x30%,y49%; small cloud wisps in the right opening at y47%; leafy planter at lower right.\nLower half: TWO COMPLETE Navi robot pods on TWO SEPARATE small stone pedestals, deliberately rotated toward one another with their faces angled inward in friendly rivalry. Left one cyan-trimmed at about x34%,y70%; right one amber-trimmed slightly lower around x66%,y76%. Their separate stands and the gap between them remain obvious. Both whole robot silhouettes, earpieces and pedestal edges must fit in the central76% of width with at least12% edge margin for phone cropping. Make the characters the clear foreground focus, no humanoid bodies or legs. Keep an uncluttered sea patch behind the robots for later localized ripple animation.\nUse intentional coarse 16-bit pixel clusters, stepped outlines and rich navy/cobalt/turquoise/ivory/gold shadows exactly matching the reference. No smooth photographic shading or blur.\nNo words, lettering, logos, numbers, flags, UI, controls, border or watermark, no combat or weapons. Opaque full-frame original portrait artwork.",
+      "references": [
+        "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-v1.png",
+        "authoring/motion-lab/assets/navi-avatar.png"
+      ],
+      "referenceRole": "Approved world/actor or generated mode identity references; source art preserved unchanged.",
+      "sourceSha256": "a2208f8167939c73bde30635ccb83820fa7c02900221593ca8398d136c0dae85",
+      "referenceSha256": {
+        "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-v1.png": "750068532ca11c1c110fe662d9668b59a215c5d7619ad766e2af4810ed8f9312",
+        "authoring/motion-lab/assets/navi-avatar.png": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69"
+      }
+    },
+    {
+      "id": "coupa-team",
+      "file": "coupa-team-v1.png",
+      "prompt": "Use case: stylized-concept.\nAsset type: FPV / LINE Spend Network TEAM landing background, landscape 3:2.\nInput images: image 1 defines the approved Coupa world of white stone coastal village, blue roofs, turquoise sea, cypress trees, warm golden light; image 2 defines the Navi player: rounded white robot pod, deep navy screen face, two cyan square eyes and small cyan smile, blue side earpieces, tiny gold indicator. Use these references to create a distinct original Team composition.\nA shaded stone terrace above the welcoming coastal network village. TWO friendly Navi robot pods sit side by side on ONE shared broad stone service dock, both facing the same direction toward the sunrise sea. Keep recognizable white rounded housings and navy faces with cyan eyes. A single small cyan glass navigation beacon between and just in front of them, connected to each robot by a short tidy cable, makes the shared cooperative task unmistakable. Their matching gold trim and common dock communicate one coordinated team, not rivals. No humanoid bodies, arms or legs.\nComposition: left 46% quiet very dark navy shaded arch/wall for menu. Place the coordinated pair with shared dock in the middle-right foreground, around x62% and x79%, y65%, all complete silhouettes with room between them. Sea and white-blue village extend behind; distant arched bridges and lighthouse. Upper right has clear stepped cloud wisps. A warm lamp at the arch edge, one flowering leafy planter to the far right, and a clear strip of sea provide localized animation regions. Keep the shared dock readable.\nStyle: crisp authored 16-bit pixel clusters and stepped silhouettes, deep navy, cobalt, turquoise, ivory and warm golden highlights. Preserve the reference world but render in the actor's deliberate pixel-art aesthetic. No smooth 3D, photorealism, blur or airbrushing.\nNo text, lettering, words, logos, numbers, UI, menus, buttons, frames, watermark, weapons or combat. Opaque full-frame finished game illustration.",
+      "references": [
+        "game/ui/art/menu-scenes/coupa.webp",
+        "authoring/motion-lab/assets/navi-avatar.png"
+      ],
+      "referenceRole": "Approved world/actor or generated mode identity references; source art preserved unchanged.",
+      "sourceSha256": "2db87ceb4d9633c34b363a7f675c382421c542e58e8ee15a0627601f4d723977",
+      "referenceSha256": {
+        "game/ui/art/menu-scenes/coupa.webp": "393ebd9f3cf395598a79a43cd1277adfe4381cee177549be38fc027ec76afdc1",
+        "authoring/motion-lab/assets/navi-avatar.png": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69"
+      }
+    },
+    {
+      "id": "coupa-team-portrait",
+      "file": "coupa-team-portrait-v1.png",
+      "prompt": "Use case: precise-object-edit.\nAsset type: Spend Network TEAM portrait landing background refinement.\nInput images: image 1 is the Team portrait edit target. Image 2 is the approved Versus portrait, used ONLY to show the intended dark upper menu-safe arch framing.\nChange only the upper framing and background of image 1: the TOP 38% of the complete tall canvas must be continuous very dark navy low-contrast stone arch interior and sparse shadowed ivy, as quiet and dark as the top of image 2. Move the arch opening down so bright blue sky begins at about 38% height. Do not leave bright sky across the top menu area. Recompose/compress the distant village and sky inside the lower opening as needed, keeping clouds and sea visibly available behind the actors.\nPRESERVE the bottom Team composition exactly in identity, scale, pixel style and cooperative meaning: both complete white Navi robots facing the same direction, one shared stone docking platform, one cyan beacon in front, two cables, warm navy/cobalt/ivory/gold pixel-art palette, current canvas dimensions. Keep the robots around their present lower-half placement and preserve their faces, matching gold lights, side earpieces and all dock/cable details. Preserve a warm wall lamp near the mid-height left and foliage at the lower right.\nNo text, logos, words, numbers, UI, frames or watermarks. Opaque finished artwork. The essential edit is a genuinely dark quiet upper 38% for a phone menu; do not crop or enlarge actors.",
+      "references": [
+        "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-portrait-draft-v1.png",
+        "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-portrait-v1.png"
+      ],
+      "referenceRole": "First reference is retained generated edit target; second is approved portrait framing reference. Earlier source art preserved unchanged.",
+      "initialGeneration": {
+        "file": "coupa-team-portrait-draft-v1.png",
+        "prompt": "Use case: stylized-concept.\nAsset type: Spend Network TEAM landing background, separately authored tall 9:16 portrait.\nInput images: image 1 is the new approved Team landscape and defines the paired Navi robots on ONE shared docking platform with ONE cyan beacon connected by two cables; image 2 is the original Navi actor reference for white rounded pod, navy screen face, cyan square eyes and smile, blue earpieces, small gold indicator. Create a distinct tall phone composition rather than cropping.\nTop 48% is quiet very dark navy stone arch and sparse shaded ivy, low contrast for a vertical menu. Coastal village appears through the opening below: white stepped houses and blue roofs, warm dawn clouds, turquoise sea, distant lighthouse. A small warm lamp around x25%,y49% and modest foliage on the right edge; enough clear sky and water for localized animation.\nBottom half: TWO COMPLETE friendly Navi robot pods side by side in the SAME forward orientation on ONE shared broad stone dock, around x35% and x65%,y73%. Both match the white/cyan/navy identity and matching gold readiness lights. Put ONE small glowing cyan glass beacon in front between them; TWO neat short cables visibly connect it to the robots so cooperation is unmistakable. Keep both complete pods, side earpieces, cables, beacon and shared platform within the central76% image width, at least12% edge margin. A little front/back stagger is okay but both face the same way; no opposing rivalry. No humanoid bodies or legs.\nCrisp authored 16-bit pixel clusters, stepped silhouettes, navy/cobalt/turquoise/ivory/gold, no smooth 3D rendering, photo texture or blur. Match approved references.\nNo lettering, text, logos, numbers, flags, UI, menus, buttons, borders or watermark. No combat or weapons. Opaque complete portrait artwork.",
+        "references": [
+          "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-v1.png",
+          "authoring/motion-lab/assets/navi-avatar.png"
+        ],
+        "reasonForRefinement": "Bright sky occupied the upper menu area; the final image lowers the opening while retaining the cooperative actor arrangement.",
+        "sourceSha256": "a6b9b7b3a52f131ef6f6068b85eb0c935afcb7201732c94c6010d57e411894c2",
+        "referenceSha256": {
+          "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-v1.png": "2db87ceb4d9633c34b363a7f675c382421c542e58e8ee15a0627601f4d723977",
+          "authoring/motion-lab/assets/navi-avatar.png": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69"
+        }
+      },
+      "sourceSha256": "029755aadb33607acfcfdf0e96c2bb08181ef742f47d19f94179979d8a382e32",
+      "referenceSha256": {
+        "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-portrait-draft-v1.png": "a6b9b7b3a52f131ef6f6068b85eb0c935afcb7201732c94c6010d57e411894c2",
+        "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-portrait-v1.png": "a2208f8167939c73bde30635ccb83820fa7c02900221593ca8398d136c0dae85"
+      }
+    }
+  ]
+}

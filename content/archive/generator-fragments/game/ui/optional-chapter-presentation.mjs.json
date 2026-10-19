@@ -1,0 +1,15 @@
+{
+  "sourcePath": "game/ui/optional-chapter-presentation.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "8e3cd07d00a1e3fdcf7b6baacf3e0a9bf3a00e0b",
+  "sourceSHA256": "c6f2a270bb43d2c09b001e62815d30df9b16e4727c3cacf835e97307755c72dc",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1072,
+      "end": 1103,
+      "kind": "Property",
+      "source": "coupa: 'interface:spendNetwork'"
+    }
+  ]
+}

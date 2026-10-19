@@ -1,0 +1,55 @@
+{
+  "format": "revealline-external-chapter.v1",
+  "id": "sentinel-circuit-coupa",
+  "revision": 1,
+  "source": {
+    "id": "sentinel-circuit",
+    "bytes": 8943,
+    "sha256": "cf6009eeadef504d033de0dd27f33aa3d6405caf1954a6417cbdfc09bc566b40"
+  },
+  "pack": {
+    "bytes": 9427,
+    "sha256": "0fc200adfd509d7a993f24c73432195e314b4450b2ef45fd601b523f62464c6c"
+  },
+  "media": {
+    "bytes": 7416321,
+    "sha256": "185e104975706717deb11ad6e4dc91b1cedc6680755fa9174583ceec0660da16"
+  },
+  "campaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+  "themeId": "coupa",
+  "originals": [
+    {
+      "assetId": "sentinel-circuit-coupa-poster-1",
+      "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+      "levelId": "sentinel-circuit-coupa-listening-court",
+      "levelRevision": "1",
+      "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+      "bytes": 2767187,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "sentinel-circuit-coupa-poster-2",
+      "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+      "levelId": "sentinel-circuit-coupa-switchyard-gates",
+      "levelRevision": "1",
+      "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+      "bytes": 2187660,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "assetId": "sentinel-circuit-coupa-poster-3",
+      "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+      "levelId": "sentinel-circuit-coupa-open-circuit",
+      "levelRevision": "1",
+      "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+      "bytes": 2449288,
+      "mime": "image/png",
+      "width": 1774,
+      "height": 887
+    }
+  ]
+}

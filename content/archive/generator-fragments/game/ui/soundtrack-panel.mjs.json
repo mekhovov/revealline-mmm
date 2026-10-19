@@ -1,0 +1,15 @@
+{
+  "sourcePath": "game/ui/soundtrack-panel.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "8f7894242e9572eccff97bb997aba9361e17a699",
+  "sourceSHA256": "a9df4484f1ea7bf26c795ac591aae2ccccd0b0528957f71e07ceed4c721abfc2",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 41511,
+      "end": 41563,
+      "kind": "ownership-reference",
+      "source": "'interface:worldsCommaSeparatedRetroFpvUkraineCoupa'"
+    }
+  ]
+}

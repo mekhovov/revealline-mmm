@@ -1,0 +1,15 @@
+{
+  "sourcePath": "authoring/library/moving-edges-art/verify.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "ccd43105119755afc8ef323f2848e7904014060f",
+  "sourceSHA256": "20bfc048e14f630107632ef4acf3ef9d3bf1015aa692677b906cbc410ac97a31",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 979,
+      "end": 986,
+      "kind": "Literal",
+      "source": "'coupa'"
+    }
+  ]
+}

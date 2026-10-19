@@ -1,0 +1,102 @@
+{
+  "format": "revealline-source-art-verification.v1",
+  "baseCommit": "f1a5d0cb4b13bc57f65c8892b81b2a405479f1e7",
+  "sourceCandidates": 3,
+  "totalOriginalBytes": 8270167,
+  "method": "Exact SHA/bytes; all PNG chunk CRCs, bounded full RGB8 scanline decompression and filters; existing unchanged decoder; no output image transformations.",
+  "visualReview": "Each actual image inspected; root separately accepted source candidates. Detailed observations and limits are in provenance and README.",
+  "limits": "No browser/pack/storage/offline/gameplay/device/animation or rights certification.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4027,
+      "sha256": "feb2ed590334a1e8cdb8ce34e0ffb16c57721cead74705d9f58f06595e86a132"
+    },
+    {
+      "path": "prompts.json",
+      "bytes": 5088,
+      "sha256": "6ad44570fe6576f2880802e427f8c4fc793ab35061d1273a1061c6d00bd01c55"
+    },
+    {
+      "path": "generation-results.json",
+      "bytes": 3217,
+      "sha256": "54af970b2bbb79bff440dd6101194572483ef500dd7accebe1c77a11e21011ae"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 5024,
+      "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 4494,
+      "sha256": "563631894e8cd249990c9dcab0e51d04138f1bcb7ef30b71e5a1aea33dc07501"
+    },
+    {
+      "path": "originals/value-foundry.png",
+      "bytes": 2725160,
+      "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518"
+    },
+    {
+      "path": "originals/shared-harbor.png",
+      "bytes": 2686912,
+      "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d"
+    },
+    {
+      "path": "originals/network-garden.png",
+      "bytes": 2858095,
+      "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0"
+    }
+  ],
+  "decoded": [
+    {
+      "id": "value-foundry",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "pixelBytes": 4720056,
+      "pixelsSha256": "6f3ed2ecf487d43407d036a6eaff4abe7132dd6a1dbae1253beea45924eb7b5f",
+      "bytes": 2725160,
+      "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518"
+    },
+    {
+      "id": "shared-harbor",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "pixelBytes": 4720056,
+      "pixelsSha256": "d58e1249f63c6ac900b9495fc4a07ec8835511922211526e30f91337b38640cb",
+      "bytes": 2686912,
+      "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d"
+    },
+    {
+      "id": "network-garden",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "pixelBytes": 4720056,
+      "pixelsSha256": "21425689e19c1e3d5c9d115b3ecd396a01e1181220e51979355e6ba4dd40437c",
+      "bytes": 2858095,
+      "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0"
+    }
+  ],
+  "protectedContext": [
+    {
+      "path": "authoring/library/fpv-route-choices/routes.json",
+      "bytes": 239987,
+      "sha256": "d6af87beb11f55b81cf33b6b07254c51d19923d8823d2d80c17606db0e4c1245"
+    },
+    {
+      "path": "authoring/library/four-worlds-chapters/verify-images.mjs",
+      "bytes": 3838,
+      "sha256": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34"
+    },
+    {
+      "path": "game/media-library.mjs",
+      "bytes": 12188,
+      "sha256": "ed1f1abe0b95b9889741ec8929522f0fcaba29a5438b09df18016d3ffffc6eb4"
+    },
+    {
+      "path": "authoring/skills/xonix-asset-creator/SKILL.md",
+      "bytes": 14206,
+      "sha256": "c68a0e3138398c5277095c9698292a1bc194adcd0e152ed69bba48adf969b6a6"
+    }
+  ]
+}

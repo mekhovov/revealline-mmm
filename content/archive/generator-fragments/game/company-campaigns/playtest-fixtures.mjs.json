@@ -1,0 +1,33 @@
+{
+  "sourcePath": "game/company-campaigns/playtest-fixtures.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "67c2d2d9cb26c420def81584dd6994cffc46b0fa",
+  "sourceSHA256": "e3ea9d75ff3a8940d122242a335ef6ad8c4842cb03fbbcf3048d08430b0163fe",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1213,
+      "end": 1238,
+      "kind": "ownership-reference",
+      "source": "'coupa-inside-village-01'"
+    },
+    {
+      "start": 3024,
+      "end": 3048,
+      "kind": "ownership-reference",
+      "source": "'coupa-source-to-pay-01'"
+    },
+    {
+      "start": 4649,
+      "end": 4678,
+      "kind": "ownership-reference",
+      "source": "'coupa-product-operations-01'"
+    },
+    {
+      "start": 6224,
+      "end": 6256,
+      "kind": "ownership-reference",
+      "source": "'coupa-developer-integration-01'"
+    }
+  ]
+}

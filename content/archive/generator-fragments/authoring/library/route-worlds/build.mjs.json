@@ -1,0 +1,27 @@
+{
+  "sourcePath": "authoring/library/route-worlds/build.mjs",
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "sourceGitBlob": "bf4289b797c98c440e3f7d9e7e1bc58badc02c7e",
+  "sourceSHA256": "8cb7ec2e3bf6cf334517ad056568110af4f7bc70a0143ad37bc33b10ff733d43",
+  "encoding": "UTF-8; offsets are JavaScript string offsets",
+  "fragments": [
+    {
+      "start": 1317,
+      "end": 1324,
+      "kind": "Literal",
+      "source": "'coupa'"
+    },
+    {
+      "start": 1521,
+      "end": 1538,
+      "kind": "Literal",
+      "source": "'spend-route-art'"
+    },
+    {
+      "start": 2822,
+      "end": 2855,
+      "kind": "ownership-reference",
+      "source": "'Choose ukraine, retro or coupa.'"
+    }
+  ]
+}
