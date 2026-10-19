@@ -1,0 +1,97 @@
+{
+  "format": "owned-chapter-authoring.v1",
+  "sourceRevision": "407572093c45f180122fd863950722fe8f01ad95",
+  "scope": "Five Coupa chapters and their six retained edition identities; only coupa-all is selected at runtime.",
+  "method": "Owner-specific registries, layouts, lesson and reward generators split from mixed upstream modules. Shared engine helpers remain pinned.",
+  "verification": {
+    "generatedFiles": 48,
+    "campaigns": 5,
+    "missions": 30,
+    "playtestFixtures": 4,
+    "allJSONValuesMatch": true,
+    "byteIdenticalFiles": 47,
+    "serializationDifference": "content/catalog.json"
+  },
+  "files": [
+    {
+      "path": "authoring/company/files/.prettierrc.json",
+      "sourcePath": ".prettierrc.json",
+      "sourceGitBlob": "ebb4af5f9a7d5c457d4c01d96f8a80d9e0285fd1",
+      "sha256": "d7fa1c1dee12b930b45e1f8c465b07da95fa519cfd9e3e503c76dc762617b1fb",
+      "bytes": 73
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/brands.mjs",
+      "sourcePath": "game/company-campaigns/brands.mjs",
+      "sourceGitBlob": "db742824ddd455f684abd49f94b18abba385b2b0",
+      "sha256": "ba126482805bf65109a7f95e523dc2d165a74820ffb76d5390b9b025dfcca1ba",
+      "bytes": 20424
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/catalog.mjs",
+      "sourcePath": "game/company-campaigns/catalog.mjs",
+      "sourceGitBlob": "7b6e00affde86be3311f162ed13c3b73a7314446",
+      "sha256": "74ce2800690f23c56adda0c781ab2be5ac6d56e7da016347581147deacc1b0e7",
+      "bytes": 17834
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/content.mjs",
+      "sourcePath": "game/company-campaigns/content.mjs",
+      "sourceGitBlob": "6e73be1099068417eec58a6fc0e2ef0d3a8d78bb",
+      "sha256": "5fcf35caf27050a7f28f903dba1a18dc94f018e760eb414922bb17b0c2319faf",
+      "bytes": 12356
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/learning-rewards.mjs",
+      "sourcePath": "game/company-campaigns/learning-rewards.mjs",
+      "sourceGitBlob": "c0aea2e5acbeb4aa6a1d29216a888c7c2ab27306",
+      "sha256": "9c876f5629991b88489285594740b1497d4752881d0f4980a6081334af0771a5",
+      "bytes": 5196
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/lessons.mjs",
+      "sourcePath": "game/company-campaigns/lessons.mjs",
+      "sourceGitBlob": "d68acddb097bcd0796d030b0055696de32dbc340",
+      "sha256": "ea8bb610aa1c4f8c97966c02c32305fb7ac0f4ccb425d44f4081b17b1658ee57",
+      "bytes": 35798
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/playtest-fixtures.mjs",
+      "sourcePath": "game/company-campaigns/playtest-fixtures.mjs",
+      "sourceGitBlob": "67c2d2d9cb26c420def81584dd6994cffc46b0fa",
+      "sha256": "e3ea9d75ff3a8940d122242a335ef6ad8c4842cb03fbbcf3048d08430b0163fe",
+      "bytes": 8261
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/progression.mjs",
+      "sourcePath": "game/company-campaigns/progression.mjs",
+      "sourceGitBlob": "074df9167860b0174deaae31b9de4827357ddc53",
+      "sha256": "34e65397a4229708f6de61c0bb98880b358208880fefdbf3656d634a332c8266",
+      "bytes": 14086
+    },
+    {
+      "path": "authoring/company/files/game/company-campaigns/rewards.mjs",
+      "sourcePath": "game/company-campaigns/rewards.mjs",
+      "sourceGitBlob": "024628deac1d807412b728d479f21ff5f220391c",
+      "sha256": "847d34ca818643f02eb91e10186781531e32703ab05d178c25e68cf491d3827b",
+      "bytes": 17421
+    },
+    {
+      "path": "authoring/company/files/scripts/produce-company-content.mjs",
+      "sourcePath": "scripts/produce-company-content.mjs",
+      "sourceGitBlob": "c73e7f7f92eb9e3cf2ec4c63068754172b9cb8c1",
+      "sha256": "18d0f51eccc4637c3748d0f9fbb65a9f6c55c830f15e9abd0f6d1768a8e704f7",
+      "bytes": 9057
+    },
+    {
+      "path": "authoring/company/inputs.json",
+      "sourcePaths": [
+        "game/editions/artwork.json",
+        "game/content/classes.json",
+        "content/catalog.json"
+      ],
+      "sha256": "a095f14731a6d5fc2c83132c12d15e3d06db600d259d186a292dacf3653e8bc1",
+      "bytes": 30912
+    }
+  ]
+}
