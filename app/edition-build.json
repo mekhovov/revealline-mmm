@@ -4291,8 +4291,8 @@
     },
     {
       "path": "game/ui/field-kit-compiled.css",
-      "bytes": 996,
-      "sha256": "05f92b12ebbb125f7842821d82b67b826f35570a396a373c21e6dc4a3209c9d9"
+      "bytes": 1312,
+      "sha256": "d0661fd74b8556dcc8226dd69ee1da861fb717912dcef9223e7b5db88ef3a475"
     },
     {
       "path": "game/ui/field-kit-components.css",
