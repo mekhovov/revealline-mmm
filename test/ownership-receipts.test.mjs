@@ -26,6 +26,29 @@ test('named historical versions retain exact Git identities outside the playable
   }
 });
 
+test('historical aliases resolve to exact locally preserved artwork', async () => {
+  const receipt = await json('migration/historical-asset-alias-receipt.json');
+  assert.equal(receipt.format, 'revealline-historical-owned-asset-aliases.v1');
+  assert.equal(receipt.items.length, 5);
+  const paths = new Set();
+  for (const row of receipt.items) {
+    assert.ok(row.paths.length >= 2);
+    assert.ok(row.destination.startsWith('content/'));
+    assert.ok(!row.destination.split('/').includes('..'));
+    for (const path of row.paths) {
+      assert.ok(!paths.has(path));
+      paths.add(path);
+    }
+    const bytes = await readFile(new URL(row.destination, root));
+    assert.equal(bytes.length, row.bytes);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), row.sha256);
+    assert.equal(
+      createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex'),
+      row.gitBlob,
+    );
+  }
+});
+
 test('every named ownership candidate is preserved with its original Git blob and byte hash', async () => {
   const inventory = await json('migration/upstream-inventory.json'),
     receipt = await json('migration/owned-source-receipt.json');

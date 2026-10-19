@@ -1,0 +1,56 @@
+{
+  "format": "revealline-historical-owned-asset-aliases.v1",
+  "scope": "Five exact-byte asset aliases discovered across every parent diff in the preserved graph. The local destination preserves each Git blob; historical paths do not imply that they remain in the current upstream tree.",
+  "items": [
+    {
+      "gitBlob": "e65b698e4d497d37cf02ba3e7ca9d8302824e425",
+      "sha256": "324157d049b2a122cd352fbc8fceac8c807bf44095c77c4870c640a2971f634d",
+      "bytes": 2949329,
+      "paths": [
+        "authoring/library/equipment-workshop/backgrounds/workshop-03.png",
+        "docs/concepts/generated_images/exec-23a0c167-3b00-4dbb-92ce-4df41911f746.png"
+      ],
+      "destination": "content/files/game/collections/workshop/workshop-03.png"
+    },
+    {
+      "gitBlob": "b548eaeacbec7ec2bf031a7f6f2011d5741b75f0",
+      "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0",
+      "bytes": 2858095,
+      "paths": [
+        "authoring/library/spend-route-art/originals/network-garden.png",
+        "docs/concepts/generated_images/exec-2a44f820-723d-4cfe-be71-90983cbc765c.png"
+      ],
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/originals/network-garden.png"
+    },
+    {
+      "gitBlob": "db7acded5da57ca1f79c64fbcf3c7eea386b6914",
+      "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d",
+      "bytes": 2686912,
+      "paths": [
+        "authoring/library/spend-route-art/originals/shared-harbor.png",
+        "docs/concepts/generated_images/exec-d5289c7d-6a61-4e3a-8d1e-7f2257a7c91e.png"
+      ],
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/originals/shared-harbor.png"
+    },
+    {
+      "gitBlob": "dac73dc20b9ea2007913e6a3bf8eb9cf4580ca84",
+      "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518",
+      "bytes": 2725160,
+      "paths": [
+        "authoring/library/spend-route-art/originals/value-foundry.png",
+        "docs/concepts/generated_images/exec-ea7323a6-08bf-4e1d-bed3-e4d0a697061c.png"
+      ],
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/originals/value-foundry.png"
+    },
+    {
+      "gitBlob": "7f48702f790f140cac56eab4b22fadb95ff1e3dc",
+      "sha256": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69",
+      "bytes": 384917,
+      "paths": [
+        "authoring/motion-lab/assets/navi-avatar.png",
+        "docs/concepts/generated_images/exec-a7fd2e46-5146-4ff4-84ec-1b80c430d3e0.png"
+      ],
+      "destination": "content/archive/owned-source/authoring/motion-lab/assets/navi-avatar.png"
+    }
+  ]
+}

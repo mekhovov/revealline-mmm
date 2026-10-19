@@ -25,7 +25,7 @@ npm run verify:collections
 - `company-authoring-receipt.json` and `generator-fragment-receipt.json` record the executable local generators and the original mixed-generator excerpts.
 - `mixed-source-receipt.json` accounts for 2,241 structured entries from 105 mixed files. Original JSON pointers and source hashes distinguish extracted records from the original complete artifacts.
 - `code-fragment-receipt.json` records 146 excerpts from 71 source and documentation files.
-- `additional-owned-source-receipt.json` preserves 122 complete source, authoring and evidence files. These include the earlier Navi and Spend Network material and mixed originals needed to document the ownership split.
+- `additional-owned-source-receipt.json` preserves 136 complete source, authoring and evidence files. These include the earlier Navi and Spend Network material and mixed originals needed to document the ownership split.
 - `presentation-source-receipt.json` records 165 extracted records covering 33 owned slots, 33 recipe revisions and their bindings.
 - `owned-test-receipt.json` records the original owned regression suites and support files.
 - `historical-owned-object-receipt.json` preserves 336 named historical file versions from the verified backup graph. Of these, 244 already exist byte-for-byte in local content; 92 additional objects occupy about 3 MB under `content/archive/historical-objects/`. Tests verify the original Git object identity, SHA-256 and length of every version.
@@ -37,3 +37,5 @@ Archived records retain their original bytes and claims as historical evidence. 
 The historical-object receipt covers named ownership candidates from one preserved Git graph. It is not a claim that mixed files, every path alias, embedded archives, new remote commits or GitHub-hosted artifacts have all been migrated. The full Git backup and compact release backup are stored outside both repositories. Compact preservation retains full Git history, unique content and evidence, and one complete verified release instead of every duplicate release archive.
 
 The original game's source cleanup is tracked separately in [RevealLine PR #1755](https://github.com/mekhovov/revealline/pull/1755). Historical rewriting, hosted artifact cleanup, pending-PR reconciliation and the final regeneration from rewritten upstream `main` remain separate steps. Original dirty worktrees must not be reset. A final migration report must distinguish repository-owner-controlled records from GitHub-owned PR references, cached objects and external copies.
+
+`historical-asset-alias-receipt.json` records five artwork originals whose alternate historical filenames were found by exact byte identity. Each destination is verified locally; the receipt does not claim the original repository history has already been rewritten.
