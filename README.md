@@ -46,6 +46,8 @@ Keep general gameplay fixes in the upstream game. Keep this repository's content
 
 The five chapter generators and their lesson, reward, layout and presentation inputs are owned in [`authoring/company/`](authoring/company/README.md). CI reconstructs their native content using the pinned generic engine and checks it against the retained local identities before deployment.
 
+The eight supplemental collections use locally owned native pack inputs and the compiler in [`authoring/collections/`](authoring/collections/README.md). `npm run verify:collections` reproduces all 20 shipped recipes without any upstream branded input.
+
 The Coupa landing presentation lives in `branding/coupa-landing.css` and `branding/coupa-landing.html`. The projection applies these files, the official Coupa wallpaper, and the rotating flower without changing the campaign or its artwork pins. These inputs are hashed in the extraction lock and reapplied on upstream updates. Decorative motion follows the game's animation preference, reduced-motion settings, and menu visibility.
 
 Campaign, map, lesson, and asset identities are preserved. This preserves upstream's content and replay compatibility rules; it is not a promise that every historical replay works after a gameplay change. Coupa saves remain in the dedicated app namespace. Snake and Collections use separate verified round envelopes; exported rounds only restore against included recipes. The branded renderer and preference adapters force clean effects independently of saved settings. Future brands need their own repository, selected edition, Pages path, isolation checks, and application/storage identity. Never combine their catalogs in a branded distribution.
