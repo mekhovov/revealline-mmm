@@ -1,3 +1,4 @@
+import { createEarnedVideo } from './earned-video.mjs';
 import { rewardPresentationItems } from '../rewards/audio-groups.mjs';
 import { mountRewardAudioGroup } from './reward-audio-group.mjs';
 import { loadRewardImage } from './reward-image.mjs';
@@ -81,7 +82,9 @@ export async function mountEditionRewards({
     value.rel = 'noopener noreferrer';
     return value;
   };
-  const bindings = createRewardMissionBindings(provider.route.source);
+  const bindings = createRewardMissionBindings(provider.route.source, {
+    includeRunningEnemies: true,
+  });
   const cosmeticRegistry = createRewardCosmeticRegistry({
     presets: provider.bootstrap?.boot?.presets,
     themes: provider.bootstrap?.boot?.themes?.themes ?? [],
@@ -200,6 +203,14 @@ export async function mountEditionRewards({
     },
   });
   await store.load();
+  const earnedVideo = createEarnedVideo({
+    document: doc,
+    window: win,
+    provider,
+    audioMaster,
+    musicDucker,
+    getReducedMotion,
+  });
 
   function releaseMedia() {
     mediaVisit++;
@@ -325,7 +336,8 @@ export async function mountEditionRewards({
     note.setAttribute('aria-atomic', 'true');
     return note;
   }
-  let shelfContentKey = null;
+  let shelfContentKey = null,
+    shelfDirty = true;
   let shelfCampaign = null,
     showPictures = false,
     shelfVisit = 0,
@@ -339,6 +351,10 @@ export async function mountEditionRewards({
     shelfURLs.clear();
   }
   function renderShelf() {
+    if (disposed || !collectionDialog.open) {
+      shelfDirty = true;
+      return;
+    }
     const focused = shelf.contains(doc.activeElement) ? doc.activeElement : null;
     const title = node('h3', tr('collection'));
     const exhibits = projectRewardExhibits({
@@ -349,8 +365,14 @@ export async function mountEditionRewards({
       receipts: state.receipts,
       progress,
     });
-    if (!exhibits.some((item) => item.campaign.id === shelfCampaign))
-      shelfCampaign = exhibits[0]?.campaign.id ?? null;
+    if (!exhibits.some((item) => item.campaign.id === shelfCampaign)) {
+      // Open the Collection on an earned campaign first. A freshly unlocked
+      // video should never be hidden behind an unrelated campaign picker.
+      shelfCampaign =
+        exhibits.find((item) => item.rows.some((row) => row.receipt))?.campaign.id ??
+        exhibits[0]?.campaign.id ??
+        null;
+    }
     const exhibit = exhibits.find((item) => item.campaign.id === shelfCampaign);
     const contentKey = JSON.stringify([
       shelfCampaign,
@@ -362,6 +384,7 @@ export async function mountEditionRewards({
     ]);
     if (shelfContentKey === contentKey) {
       syncShelfSaveNote();
+      shelfDirty = false;
       return;
     }
     shelfContentKey = contentKey;
@@ -384,7 +407,7 @@ export async function mountEditionRewards({
     label.append(select);
     controls.append(label);
     const pictures = button(
-      tr(showPictures ? 'hideDiscoveryPictures' : 'showDiscoveryPictures'),
+      tr(showPictures ? 'hidePromisePictures' : 'showPromisePictures'),
       () => {
         showPictures = !showPictures;
         renderShelf();
@@ -419,13 +442,21 @@ export async function mountEditionRewards({
         ),
         node('h4', copy.title),
       );
-      // Locked cards can request only separately authored teaser art. The
-      // explicit toggle bounds work to twelve pictures in the selected exhibit.
-      const picture = receipt ? row.image : row.teaserImage;
-      if (showPictures && picture && imageJobs.length < 12) {
-        const image = node('div', undefined, 'completion-reward-exhibit-picture');
+      // Earned art is the collection: show every picture without another click.
+      // Locked cards still require an explicit request for their teaser art.
+      const picture = receipt ? row.image : showPictures ? row.teaserImage : null;
+      if (picture) {
+        const image = node('div', undefined, 'completion-reward-exhibit-picture'),
+          media = node('div');
+        image.append(media);
+        if (receipt && row.video) {
+          const badge = node('span', tr('videoDiscovery'), 'completion-reward-video-badge');
+          badge.setAttribute('aria-hidden', 'true');
+          image.append(badge);
+          card.dataset.video = 'true';
+        }
         card.append(image);
-        imageJobs.push({ payload: picture, container: image, teaser: !receipt });
+        imageJobs.push({ payload: picture, container: media, teaser: !receipt });
       }
       card.append(
         node('p', copy.teaser),
@@ -439,7 +470,10 @@ export async function mountEditionRewards({
               }),
         ),
       );
-      if (receipt) card.append(exploreButton(receipt, 'collection'));
+      if (receipt) {
+        card.append(exploreButton(receipt, 'collection'));
+        if (row.video) card.append(exploreButton(receipt, 'collection-video', 'playVideo'));
+      }
       grid.append(card);
     }
     shelf.replaceChildren(title, controls);
@@ -456,14 +490,24 @@ export async function mountEditionRewards({
     shelf.append(grid);
     syncShelfSaveNote();
     restoreFocus(focused);
+    shelfDirty = false;
     if (imageJobs.length) {
       const visit = shelfVisit,
         controller = new AbortController();
       shelfRequest = controller;
-      const owner = { urls: shelfURLs, current: () => shelfVisit };
+      const owner = {
+        urls: shelfURLs,
+        current: () => (collectionDialog.open ? shelfVisit : null),
+      };
       // Two requests at a time keep decoding away from a burst of full-size art.
       const work = async () => {
-        while (imageJobs.length && !controller.signal.aborted) {
+        while (
+          imageJobs.length &&
+          !disposed &&
+          collectionDialog.open &&
+          visit === shelfVisit &&
+          !controller.signal.aborted
+        ) {
           const job = imageJobs.shift();
           await loadImage(
             job.payload,
@@ -573,6 +617,8 @@ export async function mountEditionRewards({
     }
     if (won) {
       actions.append(exploreButton(receipt, 'result'));
+      if (receipt.definition.payloads.some((item) => item.type === 'video'))
+        actions.append(exploreButton(receipt, 'result-video', 'playVideo'));
       const saved = store.status();
       if (!saved.durable) {
         const compact = node(
@@ -883,16 +929,25 @@ export async function mountEditionRewards({
   }
   const collectionDialog = doc.getElementById('collection-dialog');
   const closeShelf = () => {
-    if (disposed || !showPictures) return;
+    if (disposed) return;
     showPictures = false;
     releaseShelfPictures();
-    renderShelf();
+    shelfContentKey = null;
+    shelfDirty = true;
+    const toggle = doc.getElementById('completion-reward-exhibit-pictures');
+    if (toggle) {
+      toggle.textContent = tr('showPromisePictures');
+      toggle.setAttribute('aria-pressed', 'false');
+    }
+    for (const picture of shelf.querySelectorAll('.completion-reward-exhibit-picture'))
+      picture.querySelector('div')?.replaceChildren();
   };
   collectionDialog.addEventListener('close', closeShelf);
   const shelfObserver =
     typeof win.MutationObserver === 'function'
       ? new win.MutationObserver(() => {
-          if (!collectionDialog.open) closeShelf();
+          if (collectionDialog.open) refresh();
+          else closeShelf();
         })
       : null;
   shelfObserver?.observe(collectionDialog, { attributes: true, attributeFilter: ['open'] });
@@ -972,8 +1027,9 @@ export async function mountEditionRewards({
       exportButton.textContent = tr('export');
       labelText.textContent = tr('import');
       saveStatus();
-      renderShelf();
+      shelfDirty = true;
     }
+    if (shelfDirty && collectionDialog.open) renderShelf();
     if (dirty || lastRun !== run || lastKind !== kind || lastMotion !== getReducedMotion())
       renderResult(animate);
     resultLayout.sync(!result.hidden && result.dataset.placement === 'summary', run);
@@ -997,8 +1053,14 @@ export async function mountEditionRewards({
     snapshot: () => ({ state, progress }),
     cosmeticBodies: () => cosmeticProjection.available.map((item) => item.recipeId),
     closeResultDetails: () => resultLayout.close(),
+    presentVictoryVideo(run, opener) {
+      refresh();
+      if (!played.has(run)) return false;
+      return earnedVideo.present(run, state.receipts, opener);
+    },
     dispose() {
       disposed = true;
+      earnedVideo.dispose();
       importVisit++;
       releaseMedia();
       releaseShelfPictures();

@@ -77,6 +77,13 @@ export const ENEMY_MOVEMENT = Object.freeze(
 const familyFor = (theme) =>
   ({ atlas: 'ukraine', navi: 'coupa', arcade: 'retro' })[theme.family] ?? theme.family ?? theme.id;
 const explicitBody = (body) =>
+  (body === 'humanoid'
+    ? 'grain'
+    : body === 'tracked-vehicle'
+      ? 'ratchet'
+      : body === 'wheeled-vehicle'
+        ? 'wheels'
+        : null) ??
   PLAYER_MOVEMENT[body] ??
   (/bird|falcon|swallow|sail|moth/.test(body)
     ? 'wings'

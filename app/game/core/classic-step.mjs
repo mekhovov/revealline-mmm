@@ -1,3 +1,5 @@
+import { huntObjectiveSatisfied } from '../hunt/rules.mjs';
+import { snakeContacts, advanceSnakeBodies, resetSnakeBody } from '../snake/rules.mjs';
 import {
   nextLineImpactSeed,
   nextLineImpactEvent,
@@ -220,12 +222,16 @@ const failureOrder = [
   'cut-timeout',
   'cable-limit',
   'self-contact',
+  'snake-body',
   'lethal-terrain',
   'enemy-trail',
   'enemy-player',
   'boss-lane',
   'combat-projectile',
 ];
+// Specialist fatalities retain exactly the enemy-player tie rank.
+const failureRank = (kind) =>
+  failureOrder.indexOf(kind === 'combat-specialist' ? 'enemy-player' : kind);
 function firstFailure(candidates) {
   return (
     candidates
@@ -233,14 +239,19 @@ function firstFailure(candidates) {
       .sort((a, b) =>
         Math.abs(a.time - b.time) > EPS
           ? a.time - b.time
-          : failureOrder.indexOf(a.kind) - failureOrder.indexOf(b.kind) ||
-            (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
+          : failureRank(a.kind) - failureRank(b.kind) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
       )[0] ?? null
   );
 }
 function won(state) {
+  if (state.level.classic?.hunt?.mode === 'hunt')
+    return huntObjectiveSatisfied(state.level.classic.hunt, state.classic.hunt, false);
   return (
-    state.coverage + EPS >= state.level.goal.coverage &&
+    huntObjectiveSatisfied(
+      state.level.classic?.hunt,
+      state.classic?.hunt,
+      state.coverage + EPS >= state.level.goal.coverage,
+    ) &&
     state.objectives.every((item) => !item.required || item.captured) &&
     (!state.encounter || state.encounter.defeated)
   );
@@ -317,7 +328,9 @@ function world(state, input, hooks) {
       : combatContacts(state, playerPlan.paths, combatPlans, trace, horizon);
     horizon = Math.min(horizon, combat.rams[0]?.time ?? Infinity);
     const self = recovering ? null : selfContact(state, trace, horizon);
+    const snakePlans = [{ playerId: 0, radius: state.rules.playerRadius, paths: playerPlan.paths }];
     const failure = firstFailure([
+      ...(!recovering ? snakeContacts(state, snakePlans, horizon) : []),
       combat.failure && combat.failure.time <= horizon + EPS ? combat.failure : null,
       challengeContact(state, trace, horizon),
       self === null ? null : { time: self, kind: 'self-contact', id: 'player' },
@@ -343,6 +356,7 @@ function world(state, input, hooks) {
     const position = positionAt(playerPlan.paths, elapsed, state.player),
       active = playerPlan.paths.find((p) => p.t1 >= elapsed - EPS);
     if (!recovering) appendTrail(state, trace, elapsed);
+    if (!recovering) advanceSnakeBodies(state, snakePlans, elapsed);
     if (elapsed >= remaining - EPS)
       Object.assign(state.player, playerPlan.player, { cutting: state.player.cutting });
     else
@@ -486,6 +500,8 @@ export function stepClassic(state, input, hooks) {
   useAbilities(state, input);
   if (beforeAbility !== 'respawning' && state.status === 'respawning')
     clearCombatPatrols(state, 'recovery');
+  if (beforeAbility !== 'respawning' && state.status === 'respawning')
+    resetSnakeBody(state, 0, state.level.spawn);
   if (state.status === 'respawning') {
     state.classic.effects['player-speed'] = { from: 0, until: 0 };
     state.classic.departure = null;

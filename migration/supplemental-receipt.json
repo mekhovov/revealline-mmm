@@ -1,0 +1,442 @@
+{
+  "sourceRevision": "cdbda99ac881eb9cac62d536543d9078b92ac081",
+  "collections": [
+    {
+      "id": "countercurrent-coupa",
+      "name": "Spend Network \u00b7 Countercurrent \u2014 Arcade",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/countercurrent/recipes.json",
+        "bytes": 6717,
+        "sha256": "9ade7530bdaf3def2b4f8e24ab167adfabe926cf7185474729353d8ab2b6c8b9"
+      },
+      "images": [
+        {
+          "levelId": "countercurrent-offset-docks",
+          "path": "game/collections/countercurrent/offset-docks-coupa.png",
+          "bytes": 2735312,
+          "sha256": "87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997",
+          "fit": "contain"
+        },
+        {
+          "levelId": "countercurrent-sandbar-braid",
+          "path": "game/collections/countercurrent/sandbar-braid-coupa.png",
+          "bytes": 2884014,
+          "sha256": "ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14",
+          "fit": "contain"
+        },
+        {
+          "levelId": "countercurrent-crossing-watch",
+          "path": "game/collections/countercurrent/crossing-watch-coupa.png",
+          "bytes": 2897299,
+          "sha256": "1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5",
+          "fit": "contain"
+        }
+      ],
+      "missions": 3
+    },
+    {
+      "id": "fracture-lines-coupa",
+      "name": "Spend Network \u00b7 Fracture Lines \u2014 Arcade",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/fracture/recipes.json",
+        "bytes": 7943,
+        "sha256": "56ce0bae9394ab7b12dfe3e7f5798159c32ddfa5ce7226a752250d6dea7accf1"
+      },
+      "images": [
+        {
+          "levelId": "fracture-lines-split-ring",
+          "path": "game/collections/fracture/split-ring-coupa.png",
+          "bytes": 3057159,
+          "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362",
+          "fit": "contain"
+        },
+        {
+          "levelId": "fracture-lines-fault-fan",
+          "path": "game/collections/fracture/fault-fan-coupa.png",
+          "bytes": 2950816,
+          "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70",
+          "fit": "contain"
+        },
+        {
+          "levelId": "fracture-lines-frayed-causeway",
+          "path": "game/collections/fracture/frayed-causeway-coupa.png",
+          "bytes": 2698848,
+          "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb",
+          "fit": "contain"
+        }
+      ],
+      "missions": 3
+    },
+    {
+      "id": "moving-edges-coupa",
+      "name": "Spend Network \u00b7 Moving Edges \u2014 Arcade",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/moving/recipes.json",
+        "bytes": 7226,
+        "sha256": "d91af8492bcdf5626383b2c169d057ba703859ac50f2b8cfb3e7be82a83e73b6"
+      },
+      "images": [
+        {
+          "levelId": "moving-edges-terrace-stitch",
+          "path": "game/collections/moving/terrace-stitch-coupa.png",
+          "bytes": 2844215,
+          "sha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+          "fit": "contain"
+        },
+        {
+          "levelId": "moving-edges-survey-wheel",
+          "path": "game/collections/moving/survey-wheel-coupa.png",
+          "bytes": 3151700,
+          "sha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+          "fit": "contain"
+        },
+        {
+          "levelId": "moving-edges-breakwater-return",
+          "path": "game/collections/moving/breakwater-return-coupa.png",
+          "bytes": 2635887,
+          "sha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+          "fit": "contain"
+        }
+      ],
+      "missions": 3
+    },
+    {
+      "id": "sentinel-circuit-coupa",
+      "name": "Spend Network \u00b7 Sentinel Circuit \u2014 Tactical",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/sentinel/recipes.json",
+        "bytes": 7914,
+        "sha256": "d5cd9337196ef05b921741b70d41c28f3195965fba004ae6454e5bd171eb31d5"
+      },
+      "images": [
+        {
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "path": "game/collections/sentinel/listening-court.png",
+          "bytes": 2767187,
+          "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+          "fit": "contain"
+        },
+        {
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "path": "game/collections/sentinel/switchyard-gates.png",
+          "bytes": 2187660,
+          "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+          "fit": "contain"
+        },
+        {
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "path": "game/collections/sentinel/open-the-circuit.png",
+          "bytes": 2449288,
+          "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+          "fit": "contain"
+        }
+      ],
+      "missions": 3
+    },
+    {
+      "id": "route-worlds-coupa",
+      "name": "Spend Network \u00b7 Route Choices \u2014 Tactical",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/routes/recipes.json",
+        "bytes": 6770,
+        "sha256": "8a70544a05bd4d14327ecb5e173ecfbb0b242c992b017c250a241835bd89577b"
+      },
+      "images": [
+        {
+          "levelId": "route-worlds-coupa-foundry",
+          "path": "game/collections/routes/value-foundry.png",
+          "bytes": 2725160,
+          "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518",
+          "fit": "contain"
+        },
+        {
+          "levelId": "route-worlds-coupa-depot",
+          "path": "game/collections/routes/shared-harbor.png",
+          "bytes": 2686912,
+          "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d",
+          "fit": "contain"
+        },
+        {
+          "levelId": "route-worlds-coupa-switchback",
+          "path": "game/collections/routes/network-garden.png",
+          "bytes": 2858095,
+          "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0",
+          "fit": "contain"
+        }
+      ],
+      "missions": 3
+    },
+    {
+      "id": "original-spend-network",
+      "name": "Spend Network \u00b7 Shared Routes",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/spend/recipes.json",
+        "bytes": 7682,
+        "sha256": "283f8386e5892b7aafaaec6d25a617e6db98f04e7bd2b69fc97c6080a6f3086d"
+      },
+      "images": [
+        {
+          "levelId": "original-spend-shared-harbor",
+          "path": "game/collections/spend/original-spend-shared-harbor.png",
+          "bytes": 2577915,
+          "sha256": "d80e371a2bc008ce1b893268725add92a5b9a18bc8589e7b5145cbb4a75b46fa",
+          "fit": "contain"
+        },
+        {
+          "levelId": "original-spend-city-wins",
+          "path": "game/collections/spend/original-spend-city-wins.png",
+          "bytes": 2702090,
+          "sha256": "71e39606ce0283c0bb6fe120f22e2429415aba1d9dac0d412f629b686ba82175",
+          "fit": "contain"
+        },
+        {
+          "levelId": "original-spend-market-workshop",
+          "path": "game/collections/spend/original-spend-market-workshop.png",
+          "bytes": 3005071,
+          "sha256": "4f64115023245871c5ae126ddc8f711e9b0b48d130316045a1ba3baf08934fa0",
+          "fit": "contain"
+        }
+      ],
+      "missions": 3
+    },
+    {
+      "id": "neon-mosaic-pack",
+      "name": "Neon Coupa",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/neon/recipes.json",
+        "bytes": 4855,
+        "sha256": "24929b03cf7bce146ae7ee95666634e0e6a1d4d8c1473ae4142b770accedf494"
+      },
+      "images": [
+        {
+          "levelId": "neon-coupa-pack",
+          "path": "game/collections/neon/neon-coupa-pack.jpg",
+          "bytes": 315948,
+          "sha256": "e1d6aea7e2c9d2ffeb1f48e79ab82a901a981963851ed6ae381757d3fd7bf98d",
+          "fit": "contain"
+        }
+      ],
+      "missions": 1
+    },
+    {
+      "id": "equipment-workshop",
+      "name": "Connection Workshop",
+      "modes": [
+        "solo"
+      ],
+      "recipe": {
+        "path": "game/collections/workshop/recipes.json",
+        "bytes": 3363,
+        "sha256": "0121bca9d8479c6f5fea087f3d6b42a4b65fbb371355ec31682bc607fda3ecdd"
+      },
+      "images": [
+        {
+          "levelId": "workshop-03",
+          "path": "game/collections/workshop/workshop-03.png",
+          "bytes": 2949329,
+          "sha256": "324157d049b2a122cd352fbc8fceac8c807bf44095c77c4870c640a2971f634d",
+          "fit": "contain"
+        }
+      ],
+      "missions": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "game/collections/countercurrent/offset-docks-coupa.png",
+      "bytes": 2735312,
+      "sha256": "87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997",
+      "source": "authoring/library/countercurrent-art/originals/offset-docks-coupa.png"
+    },
+    {
+      "path": "game/collections/countercurrent/sandbar-braid-coupa.png",
+      "bytes": 2884014,
+      "sha256": "ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14",
+      "source": "authoring/library/countercurrent-art/originals/sandbar-braid-coupa.png"
+    },
+    {
+      "path": "game/collections/countercurrent/crossing-watch-coupa.png",
+      "bytes": 2897299,
+      "sha256": "1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5",
+      "source": "authoring/library/countercurrent-art/originals/crossing-watch-coupa.png"
+    },
+    {
+      "path": "game/collections/countercurrent/recipes.json",
+      "bytes": 6717,
+      "sha256": "9ade7530bdaf3def2b4f8e24ab167adfabe926cf7185474729353d8ab2b6c8b9",
+      "source": "validated-producer:countercurrent"
+    },
+    {
+      "path": "game/collections/fracture/split-ring-coupa.png",
+      "bytes": 3057159,
+      "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362",
+      "source": "authoring/library/fracture-coupa-art/originals/split-ring-coupa.png"
+    },
+    {
+      "path": "game/collections/fracture/fault-fan-coupa.png",
+      "bytes": 2950816,
+      "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70",
+      "source": "authoring/library/fracture-coupa-art/originals/fault-fan-coupa.png"
+    },
+    {
+      "path": "game/collections/fracture/frayed-causeway-coupa.png",
+      "bytes": 2698848,
+      "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb",
+      "source": "authoring/library/fracture-coupa-art/originals/frayed-causeway-coupa.png"
+    },
+    {
+      "path": "game/collections/fracture/recipes.json",
+      "bytes": 7943,
+      "sha256": "56ce0bae9394ab7b12dfe3e7f5798159c32ddfa5ce7226a752250d6dea7accf1",
+      "source": "validated-producer:fracture"
+    },
+    {
+      "path": "game/collections/moving/terrace-stitch-coupa.png",
+      "bytes": 2844215,
+      "sha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+      "source": "authoring/library/moving-edges-art/originals/terrace-stitch-coupa.png"
+    },
+    {
+      "path": "game/collections/moving/survey-wheel-coupa.png",
+      "bytes": 3151700,
+      "sha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+      "source": "authoring/library/moving-edges-art/originals/survey-wheel-coupa.png"
+    },
+    {
+      "path": "game/collections/moving/breakwater-return-coupa.png",
+      "bytes": 2635887,
+      "sha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+      "source": "authoring/library/moving-edges-art/originals/breakwater-return-coupa.png"
+    },
+    {
+      "path": "game/collections/moving/recipes.json",
+      "bytes": 7226,
+      "sha256": "d91af8492bcdf5626383b2c169d057ba703859ac50f2b8cfb3e7be82a83e73b6",
+      "source": "validated-producer:moving"
+    },
+    {
+      "path": "game/collections/sentinel/listening-court.png",
+      "bytes": 2767187,
+      "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+      "source": "authoring/library/sentinel-theme-art/coupa/originals/listening-court.png"
+    },
+    {
+      "path": "game/collections/sentinel/switchyard-gates.png",
+      "bytes": 2187660,
+      "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+      "source": "authoring/library/sentinel-theme-art/coupa/originals/switchyard-gates.png"
+    },
+    {
+      "path": "game/collections/sentinel/open-the-circuit.png",
+      "bytes": 2449288,
+      "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+      "source": "authoring/library/sentinel-theme-art/coupa/originals/open-the-circuit.png"
+    },
+    {
+      "path": "game/collections/sentinel/recipes.json",
+      "bytes": 7914,
+      "sha256": "d5cd9337196ef05b921741b70d41c28f3195965fba004ae6454e5bd171eb31d5",
+      "source": "validated-producer:sentinel"
+    },
+    {
+      "path": "game/collections/routes/value-foundry.png",
+      "bytes": 2725160,
+      "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518",
+      "source": "authoring/library/spend-route-art/originals/value-foundry.png"
+    },
+    {
+      "path": "game/collections/routes/shared-harbor.png",
+      "bytes": 2686912,
+      "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d",
+      "source": "authoring/library/spend-route-art/originals/shared-harbor.png"
+    },
+    {
+      "path": "game/collections/routes/network-garden.png",
+      "bytes": 2858095,
+      "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0",
+      "source": "authoring/library/spend-route-art/originals/network-garden.png"
+    },
+    {
+      "path": "game/collections/routes/recipes.json",
+      "bytes": 6770,
+      "sha256": "8a70544a05bd4d14327ecb5e173ecfbb0b242c992b017c250a241835bd89577b",
+      "source": "validated-producer:routes"
+    },
+    {
+      "path": "game/collections/spend/original-spend-shared-harbor.png",
+      "bytes": 2577915,
+      "sha256": "d80e371a2bc008ce1b893268725add92a5b9a18bc8589e7b5145cbb4a75b46fa",
+      "source": "authoring/library/four-worlds-chapters/packs/original-spend-network.json#original-spend-shared-harbor"
+    },
+    {
+      "path": "game/collections/spend/original-spend-city-wins.png",
+      "bytes": 2702090,
+      "sha256": "71e39606ce0283c0bb6fe120f22e2429415aba1d9dac0d412f629b686ba82175",
+      "source": "authoring/library/four-worlds-chapters/packs/original-spend-network.json#original-spend-city-wins"
+    },
+    {
+      "path": "game/collections/spend/original-spend-market-workshop.png",
+      "bytes": 3005071,
+      "sha256": "4f64115023245871c5ae126ddc8f711e9b0b48d130316045a1ba3baf08934fa0",
+      "source": "authoring/library/four-worlds-chapters/packs/original-spend-network.json#original-spend-market-workshop"
+    },
+    {
+      "path": "game/collections/spend/recipes.json",
+      "bytes": 7682,
+      "sha256": "283f8386e5892b7aafaaec6d25a617e6db98f04e7bd2b69fc97c6080a6f3086d",
+      "source": "authoring/library/four-worlds-chapters/packs/original-spend-network.json"
+    },
+    {
+      "path": "game/collections/neon/neon-coupa-pack.jpg",
+      "bytes": 315948,
+      "sha256": "e1d6aea7e2c9d2ffeb1f48e79ab82a901a981963851ed6ae381757d3fd7bf98d",
+      "source": "game/content/packs/neon-mosaic-pack.json#neon-coupa-pack"
+    },
+    {
+      "path": "game/collections/neon/recipes.json",
+      "bytes": 4855,
+      "sha256": "24929b03cf7bce146ae7ee95666634e0e6a1d4d8c1473ae4142b770accedf494",
+      "source": "game/content/packs/neon-mosaic-pack.json"
+    },
+    {
+      "path": "game/collections/workshop/workshop-03.png",
+      "bytes": 2949329,
+      "sha256": "324157d049b2a122cd352fbc8fceac8c807bf44095c77c4870c640a2971f634d",
+      "source": "game/content/packs/equipment-workshop.json#workshop-03"
+    },
+    {
+      "path": "game/collections/workshop/recipes.json",
+      "bytes": 3363,
+      "sha256": "0121bca9d8479c6f5fea087f3d6b42a4b65fbb371355ec31682bc607fda3ecdd",
+      "source": "game/content/packs/equipment-workshop.json"
+    },
+    {
+      "path": "game/collections/catalog.json",
+      "bytes": 8864,
+      "sha256": "13d49169678b1709478b550470461c4b805195d91ec434886afc98ca0a75831c",
+      "source": "local ownership projection"
+    }
+  ],
+  "identityPolicy": "Native level and class recipes are unchanged. Mixed collections retain only explicitly owned level IDs. Presentation is independently forced to Coupa."
+}

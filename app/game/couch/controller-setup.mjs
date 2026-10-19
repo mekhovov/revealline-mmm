@@ -1,4 +1,4 @@
-import { isTestedTX15, tx15StickProfile } from './tx15-presets.mjs';
+import { isTestedTX15, tx15SoloMenuProfile, tx15StickProfile } from './tx15-presets.mjs';
 import { t, onLocaleChange } from '../i18n/index.mjs';
 import {
   ACTIONS,
@@ -90,6 +90,12 @@ export function mountControllerSetup({
     session.apply(index, tx15StickProfile(pad));
     message = tr('tx15Applied');
   });
+  const tx15Menus = button('tx15Menus', () => {
+    const index = Number(devices.value),
+      pad = session.raw(index);
+    if (solo && session.apply(index, tx15SoloMenuProfile(pad))) message = tr('tx15MenusApplied');
+  });
+  tx15Menus.hidden = !solo;
   const tx15Shared = button('tx15Shared', () => {
     const index = Number(devices.value),
       pad = session.raw(index);
@@ -450,8 +456,10 @@ export function mountControllerSetup({
     join1.disabled = join2.disabled =
       !!draft || !state.editable || !list.find((d) => d.index === Number(devices.value))?.profile;
     const selectedPad = session.raw(Number(devices.value));
-    tx15Solo.disabled = tx15Shared.disabled =
-      !!draft || !state.editable || !isTestedTX15(selectedPad) || Number(devices.value) >= 1024;
+    tx15Solo.disabled =
+      tx15Shared.disabled =
+      tx15Menus.disabled =
+        !!draft || !state.editable || !isTestedTX15(selectedPad) || Number(devices.value) >= 1024;
     actionGuide.disabled =
       !!draft || !state.editable || !list.find((d) => d.index === Number(devices.value))?.profile;
     restorationNote.textContent = tr(state.restoreError ? 'restoreFailed' : 'restoreHelp');

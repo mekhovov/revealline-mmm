@@ -69,8 +69,11 @@ export function attachJourneyBackup({
   let revision = 0,
     inspected = null,
     opener = null,
-    operation = null;
+    operation = null,
+    exportOperation = null;
   function reset() {
+    exportOperation?.abort();
+    exportOperation = null;
     operation?.abort();
     operation = null;
     revision++;
@@ -84,6 +87,8 @@ export function attachJourneyBackup({
     opener?.focus({ preventScroll: true });
   }
   input.onchange = async () => {
+    exportOperation?.abort();
+    exportOperation = null;
     operation?.abort();
     const controller = new AbortController();
     operation = controller;
@@ -149,6 +154,8 @@ export function attachJourneyBackup({
   };
   apply.onclick = async () => {
     if (!inspected) return;
+    exportOperation?.abort();
+    exportOperation = null;
     operation?.abort();
     const controller = new AbortController();
     operation = controller;
@@ -186,15 +193,35 @@ export function attachJourneyBackup({
     }
   };
   exportButton.onclick = async () => {
+    exportOperation?.abort();
+    const controller = new AbortController();
+    exportOperation = controller;
     const ticket = revision;
+    const current = () =>
+      ticket === revision && exportOperation === controller && !controller.signal.aborted;
     try {
-      const result = await exportFile(JSON.parse(profile.export()), profile.backupFilename);
-      if (ticket === revision) localizedText(status, () => result.message);
+      const { raw, partial } = profile.exportAsync
+        ? await profile.exportAsync({ signal: controller.signal })
+        : { raw: profile.export(), partial: false };
+      if (!current()) return;
+      const filename = partial
+        ? profile.backupFilename.replace(/\.json$/, '-recovery.json')
+        : profile.backupFilename;
+      const result = await exportFile(JSON.parse(raw), filename);
+      if (current())
+        localizedText(status, () =>
+          partial
+            ? t('interface:journeyBackup.exportPartial', { result: result.message })
+            : result.message,
+        );
     } catch (error) {
-      if (ticket === revision)
+      if (current())
         localizedText(status, () =>
           t('interface:journeyBackup.exportFailed', { error: error.message }),
         );
+    } finally {
+      if (exportOperation === controller) exportOperation = null;
+      controller.abort();
     }
   };
   back.onclick = close;

@@ -22,7 +22,7 @@ export function attachDemoFullscreen({ document: doc = globalThis.document, dial
     button.hidden = !supported || (!!doc.fullscreenElement && !isOwned());
     button.disabled = !!pending || exiting;
     const label = t(isOwned() ? 'demo:exitFullscreen' : 'demo:enterFullscreen');
-    button.textContent = label;
+    button.textContent = t(isOwned() ? 'demo:windowedShort' : 'demo:fullscreenShort');
     button.setAttribute('aria-label', label);
     button.setAttribute('aria-pressed', String(isOwned()));
     button.title = denied ? t('demo:fullscreenUnavailable') : label;

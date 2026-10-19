@@ -1,4 +1,3 @@
-
 import { localizedText, t } from '../i18n/index.mjs';
 import { attachModalNavigation } from './modal-navigation.mjs';
 import { attachFieldKitSurfaces } from './field-kit-surfaces.mjs';
@@ -30,12 +29,16 @@ export function attachGameShell({
   separateTeam = false,
   titleDestination,
   titleContinueDestination,
+  navigationContext = () =>
+    t('interface:captureNavigation.context', { mode: t('interface:solo2') }),
   onWorlds,
   onMissions,
   getTopDialog,
   focusMissions,
   focusBriefing,
   focusGame = () => doc.getElementById('start-button')?.focus(),
+  getAppearanceDefault = () => null,
+  comfortSettings,
 } = {}) {
   // A registered embedded lesson already owns a token-checked return action.
   // Its shell must not expose campaign destinations inside the practice frame.
@@ -218,6 +221,14 @@ export function attachGameShell({
   };
   const refreshHomeCopy = () => {
     const continued = !isolated && canContinue();
+    if ($('shell-family-context')) {
+      const context = () => (isolated ? '' : navigationContext());
+      $('shell-family-context').hidden = !context();
+      localizedText($('shell-family-context'), context);
+      if ($('shell-family-context').hidden)
+        $('shell-title-modes')?.removeAttribute('aria-describedby');
+      else $('shell-title-modes')?.setAttribute('aria-describedby', 'shell-family-context');
+    }
     $('shell-continue').hidden = !continued;
     if ($('shell-featured')) $('shell-featured').hidden = isolated || continued;
     if ($('shell-destination'))
@@ -288,10 +299,25 @@ export function attachGameShell({
       doc.hasFocus?.() === false
     )
       return false;
+    // Controller Lab belongs to Settings → Controls after native-menu layout.
+    // Retain the fixed tool-return protocol while restoring its actual owner.
+    const entryOpener = entry ? $(entry.opener) : null;
+    const settings = $('settings-dialog');
+    if (entry?.id === 'controller-lab' && settings?.contains(entryOpener)) {
+      if (!settings.open) {
+        $('shell-options').focus();
+        $('settings-button').click();
+      }
+      if (destroyed || !settings.open || topDialog() !== settings) return false;
+      $('settings-tab-controls')?.click();
+      if (destroyed || topDialog() !== settings || !availableReturn(entryOpener, settings))
+        return false;
+      entryOpener.focus();
+      return doc.activeElement === entryOpener;
+    }
     $('shell-workshop').focus();
     workshop.showModal();
     if (destroyed || !workshop.open || topDialog() !== workshop) return false;
-    const entryOpener = entry ? $(entry.opener) : null;
     const entrySection = entryOpener?.closest('details');
     if (entrySection) entrySection.open = true;
     const target =
@@ -550,14 +576,21 @@ export function attachGameShell({
   };
   home.addEventListener('click', leaveFeatured, true);
   const titleModes = $('shell-title-modes');
+  let modeChoices = null;
   if (titleModes) {
-    mountModeChoices({
+    modeChoices = mountModeChoices({
       root: titleModes,
       current: 'solo',
+      getAppearanceDefault,
+      pause,
       separateTeam,
       actions: { versus: $('shell-title-versus'), team: $('shell-title-team') },
     });
     titleModes.hidden = isolated || !onModeDeparture;
+    if (homeFPV && !isolated && modeChoices.openSimulator) {
+      homeFPV.hidden = false;
+      homeFPV.onclick = () => modeChoices.openSimulator(homeFPV);
+    }
     for (const kind of ['versus', 'team']) {
       const opener = $(`shell-title-${kind}`);
       opener.onclick = (event) => {
@@ -693,6 +726,10 @@ export function attachGameShell({
   }
   const cancelHome = (event) => {
     titleModeIntent = null;
+    if (modeChoices?.closeMore()) {
+      event.preventDefault();
+      return;
+    }
     if (titleAction) {
       // Back during preparation cancels that operation and keeps its opener.
       // Closing the title too would strand focus on the underlying ready field.
@@ -755,8 +792,15 @@ export function attachGameShell({
     event.preventDefault();
   };
   doc.addEventListener('keydown', keydown);
+  surfaces.refreshGlobalSettings({ comfort: comfortSettings });
   if (initial) openHome({ focus: initialFocus });
   return {
+    get qualityObservationOwner() {
+      return destroyed ? null : surfaces.qualityObservationOwner;
+    },
+    setQuality: (tier) => {
+      if (!destroyed) surfaces.setQuality(tier);
+    },
     primary,
     openHome,
     openMissions,
@@ -794,6 +838,7 @@ export function attachGameShell({
       modalNavigation?.destroy();
       surfaces.destroy();
       optionalPractice?.dispose();
+      modeChoices?.dispose();
       if (homeFPV) {
         homeFPV.onclick = null;
         homeFPV.hidden = true;

@@ -176,6 +176,7 @@ export function imagePresentation(source) {
   const g = asset.geometry;
   return freezePresentation({
     frame: g.frame,
+    animation: asset.animation ?? null,
     pivot: g.pivot,
     occupiedBounds: g.occupiedBounds,
     nineSlice: g.nineSlice,

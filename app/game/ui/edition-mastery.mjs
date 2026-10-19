@@ -25,6 +25,7 @@ export async function mountEditionMastery({
   getRecorder,
   getJourneyProfile,
   getJourneyDurable,
+  scheduleReplayChunk,
   getJourneyRevision,
   previewSession = null,
   report = () => {},
@@ -50,7 +51,9 @@ export async function mountEditionMastery({
     items.push(requirement);
     requiredByMission.set(requirement.missionId, items);
   }
-  const bindings = createRewardMissionBindings(provider.route.source);
+  const bindings = createRewardMissionBindings(provider.route.source, {
+    includeRunningEnemies: true,
+  });
   const byMission = new Map(bindings.map((entry) => [entry.missionId, entry]));
   const acceptClear = (clear) =>
     byMission.get(clear.missionId)?.journeyMissionIds.some((id) => {
@@ -137,6 +140,7 @@ export async function mountEditionMastery({
     onError: (error) => reportStatus('session', error),
   });
   const proofs = createJourneyMasteryProofStore({
+    scheduleChunk: scheduleReplayChunk,
     editionId: provider.editionId,
     requirements,
     bindings,

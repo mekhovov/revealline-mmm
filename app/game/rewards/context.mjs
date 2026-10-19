@@ -1,5 +1,15 @@
 import { completionLearningReference } from './learning.mjs';
 
+const rewardClear = (mission, clear) => ({
+  runId: clear.runId,
+  gameplayId:
+    mission.runningEnemyBindings?.find(
+      (binding) =>
+        binding.gameplayId === clear.gameplayId && binding.difficulty === clear.difficulty,
+    )?.baseGameplayId ?? clear.gameplayId,
+  difficulty: clear.difficulty,
+});
+
 /** Translate only selected authored missions from the Journey authority. Skips,
  * practice results and unknown mission IDs never become reward evidence. */
 export function rewardContext(
@@ -18,11 +28,10 @@ export function rewardContext(
       // The reward model checks its promised revision. Current bindings must
       // not discard historical accepted clears from a retained promise.
       if (!clear) continue;
-      const accepted = {
-        runId: clear.runId,
-        gameplayId: clear.gameplayId,
-        difficulty: clear.difficulty,
-      };
+      // A separately derived Bonus overlay may satisfy its original mission
+      // promise. Journey clears and replay/performance evidence keep the actual
+      // gameplay ID; only this reward projection uses the unchanged base ID.
+      const accepted = rewardClear(mission, clear);
       if (!clears[mission.missionId]) {
         clears[mission.missionId] = accepted;
       } else {
@@ -76,11 +85,7 @@ export function rewardContext(
       !candidates.some(matchesBinding)
     )
       continue;
-    const accepted = {
-      runId: historic.runId,
-      gameplayId: historic.gameplayId,
-      difficulty: historic.difficulty,
-    };
+    const accepted = rewardClear(mission, historic);
     if (
       candidates.some(
         (entry) =>

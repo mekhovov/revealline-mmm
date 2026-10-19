@@ -2,6 +2,7 @@ import {
   resolveEditionContext,
   validateCompanyInstallationReference,
 } from '../edition-context.mjs';
+import { companyPackageWithinBudget } from './package-budget.mjs';
 
 const defaultScope = () => new URL('../../', import.meta.url).href;
 function exactScope(scope) {
@@ -60,12 +61,7 @@ function receipt(data, { scope, editionId, version, buildId }) {
     data.version === 'DEV' ||
     typeof data.buildId !== 'string' ||
     !/^[a-f0-9]{64}$/.test(data.buildId) ||
-    !Number.isSafeInteger(data.count) ||
-    data.count < 1 ||
-    data.count > 2000 ||
-    !Number.isSafeInteger(data.bytes) ||
-    data.bytes < 0 ||
-    data.bytes > 64 * 1024 * 1024 ||
+    !companyPackageWithinBudget(data.count, data.bytes) ||
     (editionId !== undefined && data.editionId !== editionId) ||
     (version !== undefined && data.version.replace(/^v/, '') !== version.replace(/^v/, '')) ||
     (buildId !== undefined && data.buildId !== buildId)

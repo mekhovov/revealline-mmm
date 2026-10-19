@@ -1,9 +1,42 @@
 import { boundedJSON, exactKeys, required, stableId, dataIdentity } from '../data-json.mjs';
-import { inspectImageDataUrl } from '../content.mjs';
+import { inspectImageBytes } from '../content.mjs';
 import { freezeDesign } from './catalogs.mjs';
 import { CONTENT_ARTWORK_LOAD_TIMEOUT_MS, CONTENT_ASSET_MAX_BYTES } from './limits.mjs';
 
 const verified = new WeakMap();
+function imageDataURL(bytes, mime, signal) {
+  if (typeof FileReader === 'function')
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      let settled = false;
+      const finish = (error) => {
+        if (settled) return;
+        settled = true;
+        signal.removeEventListener('abort', cancel);
+        reader.onload = reader.onerror = reader.onabort = null;
+        if (error) reject(error);
+        else resolve(reader.result);
+      };
+      const cancel = () => {
+        finish(new DOMException('Artwork preview cancelled.', 'AbortError'));
+        reader.abort();
+      };
+      reader.onload = () => finish();
+      reader.onerror = () => finish(reader.error ?? new Error('Artwork encoding failed.'));
+      reader.onabort = cancel;
+      signal.addEventListener('abort', cancel, { once: true });
+      if (signal.aborted) return cancel();
+      try {
+        reader.readAsDataURL(new Blob([bytes], { type: mime }));
+      } catch (error) {
+        finish(error);
+      }
+    });
+  let binary = '';
+  for (let start = 0; start < bytes.length; start += 16384)
+    binary += String.fromCharCode(...bytes.subarray(start, start + 16384));
+  return Promise.resolve(`data:${mime};base64,${btoa(binary)}`);
+}
 export function compileAssetRevision(source) {
   const asset = boundedJSON(source, { maxBytes: 4096, maxNodes: 30, maxDepth: 2 });
   exactKeys(
@@ -149,12 +182,8 @@ export async function loadPreviewArtwork(
           b.toString(16).padStart(2, '0'),
         ).join('');
         required(hash === asset.sha256, 'Artwork digest differs from its pinned revision.');
-        let binary = '';
-        for (let start = 0; start < bytes.length; start += 16384)
-          binary += String.fromCharCode(...bytes.subarray(start, start + 16384));
         const mime = assetRevisionMime(asset);
-        const media = { dataUrl: `data:${mime};base64,${btoa(binary)}` };
-        const image = inspectImageDataUrl(media.dataUrl);
+        const image = inspectImageBytes(bytes, mime);
         required(
           image.valid &&
             image.mime === mime &&
@@ -162,6 +191,9 @@ export async function loadPreviewArtwork(
             image.height === asset.height,
           'Artwork dimensions or raster header differ from its revision.',
         );
+        // Browser-native encoding avoids materializing a large JavaScript
+        // binary string. The source and its exact header are already verified.
+        const media = { dataUrl: await imageDataURL(bytes, mime, controller.signal) };
         verified.set(media, dataIdentity(asset));
         return Object.freeze(media);
       }),

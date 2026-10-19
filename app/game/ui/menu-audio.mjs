@@ -1,6 +1,6 @@
 import { MOVEMENT_AUDIO_KEY } from './movement-audio.mjs';
 import { RADIO_AUDIO_KEY } from './radio-audio.mjs';
-import { t, localizedText } from '../i18n/index.mjs';
+import { t, localizedText, localizedAttribute } from '../i18n/index.mjs';
 export const MENU_AUDIO_KEY = 'revealline-mmm.menu-audio.v1';
 export function readMenuAudio(storage) {
   try {
@@ -24,7 +24,7 @@ export function saveMenuAudio(value) {
     /* Session intent stays on Soundscape. */
   }
 }
-export function attachMenuAudioSettings(sound, doc = globalThis.document) {
+export function attachMenuAudioSettings(sound, doc = globalThis.document, options = {}) {
   const menu = attachPreference(
     sound,
     doc,
@@ -33,6 +33,7 @@ export function attachMenuAudioSettings(sound, doc = globalThis.document) {
     MENU_AUDIO_KEY,
     'menuSounds',
     'menuVolume',
+    options,
   );
   const radio = attachPreference(
     sound,
@@ -42,6 +43,7 @@ export function attachMenuAudioSettings(sound, doc = globalThis.document) {
     RADIO_AUDIO_KEY,
     'radioSounds',
     'radioVolume',
+    options,
   );
   const movement = attachPreference(
     sound,
@@ -51,6 +53,7 @@ export function attachMenuAudioSettings(sound, doc = globalThis.document) {
     MOVEMENT_AUDIO_KEY,
     'movementSounds',
     'movementVolume',
+    options,
   );
   return () => {
     movement();
@@ -58,9 +61,14 @@ export function attachMenuAudioSettings(sound, doc = globalThis.document) {
     radio();
   };
 }
-function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeCopy) {
+function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeCopy, options) {
+  if (prefix === 'radio') return () => {};
   if (!sound[property] || !doc?.createElement) return () => {};
+  const win = options.window ?? globalThis,
+    getStorage = options.getStorage ?? (() => globalThis.localStorage),
+    idPrefix = options.idPrefix ? `${options.idPrefix}-` : '';
   const target =
+    options.target ??
     doc.getElementById('sfx-volume')?.parentElement?.parentElement ??
     doc.getElementById('race-settings-panel-audio') ??
     doc.getElementById('coop-settings-panel-audio') ??
@@ -73,7 +81,7 @@ function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeC
   group.style.gap = '0.75rem';
   const enabledLabel = doc.createElement('label'),
     enabled = doc.createElement('input');
-  enabled.id = `${prefix}-audio-enabled`;
+  enabled.id = `${idPrefix}${prefix}-audio-enabled`;
   enabled.type = 'checkbox';
   enabled.style.width = 'auto';
   enabled.style.margin = '0';
@@ -86,7 +94,7 @@ function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeC
   enabledLabel.append(enabled, enabledText);
   const volumeLabel = doc.createElement('label'),
     volume = doc.createElement('input');
-  volume.id = `${prefix}-audio-volume`;
+  volume.id = `${idPrefix}${prefix}-audio-volume`;
   volume.type = 'range';
   volumeLabel.style.display = 'grid';
   volumeLabel.style.gap = '0.35rem';
@@ -94,9 +102,9 @@ function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeC
   volume.max = '100';
   volume.step = '1';
   volume.value = String(Math.round(sound[property].volume * 100));
-  volume.setAttribute('aria-label', t(`common:${volumeCopy}`));
+  localizedAttribute(volume, 'aria-label', () => t(`common:${volumeCopy}`));
   const volumeText = doc.createElement('span');
-  volumeText.id = `${prefix}-audio-volume-label`;
+  volumeText.id = `${idPrefix}${prefix}-audio-volume-label`;
   const volumeCaption = () =>
     `${t(`common:${volumeCopy}`)} · ${Math.round(sound[property].volume * 100)}%`;
   localizedText(volumeText, volumeCaption);
@@ -104,7 +112,7 @@ function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeC
   const change = () => {
     sound[property] = { enabled: enabled.checked, volume: Number(volume.value) / 100 };
     try {
-      globalThis.localStorage?.setItem(key, JSON.stringify(sound[property]));
+      getStorage()?.setItem(key, JSON.stringify(sound[property]));
     } catch {
       /* Preserve session intent. */
     }
@@ -115,14 +123,17 @@ function attachPreference(sound, doc, prefix, property, key, enableCopy, volumeC
   volume.addEventListener('input', change);
   group.append(enabledLabel, volumeLabel);
   target.append(group);
-  const restore = () => {
+  const restore = (event) => {
+    if (event?.type === 'storage' && event.key && event.key !== key) return;
     enabled.checked = sound[property].enabled;
     volume.value = String(Math.round(sound[property].volume * 100));
     volumeText.textContent = volumeCaption();
   };
-  globalThis.addEventListener?.('pageshow', restore);
+  win.addEventListener?.('pageshow', restore);
+  win.addEventListener?.('storage', restore);
   return () => {
-    globalThis.removeEventListener?.('pageshow', restore);
+    win.removeEventListener?.('pageshow', restore);
+    win.removeEventListener?.('storage', restore);
     enabled.removeEventListener('change', change);
     volume.removeEventListener('input', change);
     group.remove();

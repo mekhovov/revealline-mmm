@@ -47,7 +47,7 @@ export function attachFlightInformation({ element, getState, writeWarning }) {
     // The existing host writer retains its exact text/cue/expiry assignments.
     const value = writeWarning(fullText, cue);
     if (run && bridge.observeWarning(run, value, role)) {
-      const [next, omitted] = retain(notices, bridge.read(getState()).lastWarning, 32768);
+      const [next, omitted] = retain(notices, bridge.readLastWarning(), 32768);
       notices = next;
       omittedNotices += omitted;
     }
@@ -82,7 +82,7 @@ export function attachFlightInformation({ element, getState, writeWarning }) {
     observeEvent: bridge.observeEvent,
     finish(ticket) {
       if (!bridge.finish(ticket)) return false;
-      const batch = bridge.read(getState()).lastBatch;
+      const batch = bridge.readLastBatch();
       if (batch.events.length) {
         const [next, omitted] = retain(batches, batch, 65536);
         batches = next;

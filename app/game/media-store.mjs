@@ -1,6 +1,6 @@
 import { createManagedMediaStore } from './managed-media-store.mjs';
 import { canonicalJSON, required } from './data-json.mjs';
-import { inspectImageDataUrl } from './content.mjs';
+import { inspectImageBytes } from './content.mjs';
 import { prepareStillAsset } from './media-still.mjs';
 import {
   hydrateStoredStillMedia,
@@ -63,10 +63,7 @@ export function createStillMediaStore({ managedStore, decodeImage, ...options } 
       if (signal?.aborted) throw new DOMException('Still acquisition cancelled.', 'AbortError');
       const hash = [...digest].map((byte) => byte.toString(16).padStart(2, '0')).join('');
       required(hash === asset.sha256, 'Saved picture SHA-256 differs from its original bytes.');
-      let binary = '';
-      for (let offset = 0; offset < bytes.length; offset += 16384)
-        binary += String.fromCharCode(...bytes.subarray(offset, offset + 16384));
-      const header = inspectImageDataUrl(`data:${asset.mime};base64,${btoa(binary)}`);
+      const header = inspectImageBytes(bytes, asset.mime);
       required(
         header.valid &&
           header.width === asset.width &&

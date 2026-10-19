@@ -9,6 +9,7 @@ import { loadPreviewArtwork, verifiedPreviewBackground } from './assets.mjs';
 import { acquireCandidatePicture } from './picture.mjs';
 import { applyGameplayTuning, validateGameplayTuning } from '../gameplay-tuning.mjs';
 import { CONTENT_ATTEMPT_PREPARATION_TIMEOUT_MS } from './limits.mjs';
+import { prepareRunningEnemyLevel } from '../hunt/running-enemies.mjs';
 
 const cancelled = () => new DOMException('Candidate preparation cancelled.', 'AbortError');
 
@@ -70,7 +71,17 @@ export function createContentAttemptPreparer(
     previous?.abort();
     retired?.picture?.release();
   };
-  async function prepare(request, { signal, onStatus = () => {}, gameplayTuning } = {}) {
+  async function prepare(
+    request,
+    {
+      signal,
+      onStatus = () => {},
+      gameplayTuning,
+      runningEnemies = false,
+      runningEnemyStyle = 'original',
+      pursuitGeneration = 'pursuit-goals.v2',
+    } = {},
+  ) {
     required(!disposed, 'Candidate preparer is disposed.');
     const selected = boundedJSON(request, { maxBytes: 4096, maxNodes: 12, maxDepth: 1 });
     exactKeys(selected, ['missionId', 'difficulty', 'seed', 'turnPolicy'], 'candidate attempt');
@@ -83,6 +94,7 @@ export function createContentAttemptPreparer(
     required(TURN_POLICIES.includes(selected.turnPolicy), 'Unsupported candidate steering policy.');
     required(typeof selected.difficulty === 'string', 'Choose an explicit candidate difficulty.');
     const tuning = gameplayTuning === undefined ? null : validateGameplayTuning(gameplayTuning);
+    required(typeof runningEnemies === 'boolean', 'Choose whether to add running enemies.');
     required(
       !tuning || tuning.difficulty === selected.difficulty,
       'Candidate tuning difficulty must match its selection.',
@@ -155,8 +167,15 @@ export function createContentAttemptPreparer(
             classId: 'scout',
             classRecipes: CLASSES,
           };
+          const tunedLevel = tuning ? applyGameplayTuning(manifest.level, tuning) : manifest.level;
           const run = createRun(
-            tuning ? applyGameplayTuning(manifest.level, tuning) : manifest.level,
+            runningEnemies
+              ? prepareRunningEnemyLevel(tunedLevel, {
+                  classes: options.classRecipes,
+                  style: runningEnemyStyle,
+                  generation: pursuitGeneration,
+                })
+              : tunedLevel,
             options,
           );
           const recorder = createRecorder(run.level, options, buildVersion);

@@ -27,7 +27,9 @@ export function validateCoopTimedBonuses(level, geometry) {
     definition.version === TIMED_BONUS_TRAIL_VERSION,
     'Team requires trail-aware timed bonuses v2.',
   );
-  const ids = new Set(level.enemies.map((enemy) => enemy.id));
+  const ids = new Set(
+    [...level.enemies, ...(level.combatPatrols?.actors ?? [])].map((enemy) => enemy.id),
+  );
   validateTimedBonuses(
     { ...level, classic: { timedBonuses: definition } },
     {

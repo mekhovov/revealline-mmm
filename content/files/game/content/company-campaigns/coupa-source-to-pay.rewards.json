@@ -1,0 +1,78 @@
+[
+  {
+    "brandId": "coupa",
+    "campaignId": "coupa-source-to-pay",
+    "format": "revealline-completion-reward.v1",
+    "id": "coupa-source-to-pay-01-learning-discovery",
+    "locales": {
+      "en": {
+        "teaser": "Optional discovery: win Find the Need and complete its fictional workbench to open a new requirement puzzle.",
+        "title": "A need before an offer"
+      },
+      "uk": {
+        "teaser": "Додаткове відкриття: переможіть у місії «Знайдіть потребу» та завершіть її вигадану вправу, щоб відкрити нову задачу про вимоги.",
+        "title": "Спочатку потреба, потім пропозиція"
+      }
+    },
+    "payloads": [
+      {
+        "id": "coupa-source-to-pay-01-requirement-guide",
+        "locales": {
+          "en": {
+            "paragraphs": [
+              "In the fictional workshop, twelve learners needed twelve electronics kits by 12 October. An unsolicited offer for ten camera cases arriving later could not replace that requirement. Your workbench result kept item, quantity and date tied to the original evidence.",
+              "Try another fictional situation: a library hosts eight readers on 20 November and needs one reading lamp for each by 18 November. A supplier offers six desk mats arriving on 21 November. Before comparing offers, state the required item, quantity and date. Which parts of the offer conflict with the need?",
+              "A useful answer is eight reading lamps by 18 November: the offered item, quantity and arrival date all differ. This optional reflection is not scored or saved as another learning completion. It is a fictional example, not a universal Coupa policy or product certification."
+            ],
+            "sources": [
+              {
+                "title": "Coupa glossary — Source to pay",
+                "url": "https://docs.coupa.com/en/coupa-glossary/overview/s"
+              }
+            ],
+            "title": "Keep the need visible"
+          },
+          "uk": {
+            "paragraphs": [
+              "У вигаданій майстерні дванадцятьом учасникам були потрібні дванадцять наборів електроніки до 12 жовтня. Пропозиція десяти футлярів для камер із пізнішою доставкою не могла замінити цю вимогу. У вправі ви пов’язали предмет, кількість і дату з початковими даними.",
+              "Спробуйте іншу вигадану ситуацію: 20 листопада бібліотека приймає вісім читачів і потребує по одній лампі для кожного до 18 листопада. Постачальник пропонує шість настільних килимків із доставкою 21 листопада. Перш ніж порівнювати пропозиції, назвіть потрібний предмет, кількість і дату. Які частини пропозиції суперечать потребі?",
+              "Корисна відповідь — вісім ламп для читання до 18 листопада: предмет, кількість і дата доставки в пропозиції відрізняються. Це додаткове запитання не оцінюється й не зберігається як нове завершене навчання. Приклад вигаданий і не є універсальним правилом Coupa чи підтвердженням кваліфікації."
+            ],
+            "sources": [
+              {
+                "title": "Coupa glossary — Source to pay",
+                "url": "https://docs.coupa.com/en/coupa-glossary/overview/s"
+              }
+            ],
+            "title": "Не втрачайте початкову потребу"
+          }
+        },
+        "type": "knowledge"
+      }
+    ],
+    "requirements": {
+      "learning": [
+        {
+          "fixtureRevision": "1",
+          "lessonId": "coupa-source-to-pay-01-lesson",
+          "lessonIdentity": "319bfb90c69d1b2b",
+          "lessonRevision": "3",
+          "missionId": "coupa-source-to-pay-01"
+        }
+      ],
+      "mastery": [],
+      "missions": [
+        {
+          "bindings": [
+            { "difficulty": "gentle", "gameplayId": "cf74fe3c9caa5d01" },
+            { "difficulty": "standard", "gameplayId": "2cd0235984efa275" },
+            { "difficulty": "expert", "gameplayId": "abf29d299b15283e" }
+          ],
+          "missionId": "coupa-source-to-pay-01"
+        }
+      ]
+    },
+    "revision": "1",
+    "scope": { "id": "coupa-source-to-pay-01", "kind": "mission" }
+  }
+]

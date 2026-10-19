@@ -1,0 +1,685 @@
+{
+  "actorCatalogId": "journey-actors-v9",
+  "assets": [
+    {
+      "alt": "A fictional illustrated Coupa Village district, with shared workspaces and connected routes.",
+      "bytes": 2021650,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-source-to-pay-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/coupa-source-to-pay-key.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "bbfb32e28c42863a2c444de4c42d5843f107ae8573d8f773817abe9488801f3b",
+      "width": 1280
+    },
+    {
+      "alt": "A fictional blue-and-white supplier market with three welcoming pavilions, parcels, canal bridges and two quiet central plazas.",
+      "bytes": 3209122,
+      "format": "AssetRevisionV1",
+      "height": 887,
+      "id": "coupa-source-to-pay-02-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/choose-together-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "9fc3d2f24f59dc49d7ea72f5ae7e201b511da5a0ab9607f094f782919ebbe7b6",
+      "width": 1774
+    },
+    {
+      "alt": "A broad porcelain bridge joins a friendly supplier pavilion and a blue contract library above a calm canal.",
+      "bytes": 938978,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-source-to-pay-03-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/terms-bridge-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "774f33dfce5bb1c62c3cb5ff46ff64cf8c6624b1d5d0e92feba7faaac3cca998",
+      "width": 960
+    },
+    {
+      "alt": "Three connected blue village pavilions suggest preparation, review and dispatch around calm handoff courtyards.",
+      "bytes": 941689,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-source-to-pay-04-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/request-to-order-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "24e38468dc0836f5cd6f189a074f3e4857628b8a613e4b2009e5ab55d05c38d9",
+      "width": 960
+    },
+    {
+      "alt": "Two blue canal delivery docks show arrived parcels and a waiting berth with a quiet receiving terrace.",
+      "bytes": 927662,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-source-to-pay-05-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/received-in-part-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "f60c7a5f9ab780e052cf5c43fe73ca05f4b6e48383c84a3dbf446ca672ddcda3",
+      "width": 960
+    },
+    {
+      "alt": "Three blue record pavilions gather around calm white terraces in a dusk reconciliation garden.",
+      "bytes": 994506,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-source-to-pay-06-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/close-the-loop-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "176b93f6ec0c0ba5bd34e85cc733e8c918e8eb3087604f600f7bd542b6ba8f51",
+      "width": 960
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 6,
+      "format": "CampaignDesignV1",
+      "id": "coupa-source-to-pay",
+      "missionIds": [
+        "coupa-source-to-pay-01",
+        "coupa-source-to-pay-02",
+        "coupa-source-to-pay-03",
+        "coupa-source-to-pay-04",
+        "coupa-source-to-pay-05",
+        "coupa-source-to-pay-06"
+      ],
+      "name": "From Need to Value",
+      "revision": "4"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v2",
+  "format": "ContentProjectV1",
+  "id": "coupa-source-to-pay",
+  "maps": [
+    {
+      "format": "MapDesignV1",
+      "foundations": [{ "h": 4, "w": 10, "x": 17, "y": 12 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-01-map",
+      "name": "Find the Need",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 22.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 10, "w": 2, "x": 42, "y": 13 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 12, "x": 29, "y": 10 },
+        { "h": 4, "w": 12, "x": 29, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-02-map",
+      "name": "Choose Together",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 15, "w": 2, "x": 17, "y": 10 },
+        { "h": 15, "w": 2, "x": 49, "y": 10 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 15, "x": 30, "y": 14 },
+        { "h": 4, "w": 7, "x": 11, "y": 22 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-03-map",
+      "name": "Terms Bridge",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 10, "x": 20, "y": 8 },
+        { "h": 2, "w": 10, "x": 43, "y": 25 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 8, "x": 11, "y": 11 },
+        { "h": 4, "w": 8, "x": 31, "y": 17 },
+        { "h": 4, "w": 8, "x": 53, "y": 22 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-04-map",
+      "name": "Request to Order",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 15.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 10, "w": 3, "x": 22, "y": 16 },
+        { "h": 10, "w": 3, "x": 48, "y": 8 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 10, "x": 13, "y": 17 },
+        { "h": 4, "w": 10, "x": 49, "y": 12 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-05-map",
+      "name": "Received in Part",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 18.5, "y": 0.5 }],
+      "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 9, "x": 30, "y": 23 }],
+      "walls": [
+        { "h": 10, "w": 2, "x": 28, "y": 8 },
+        { "h": 10, "w": 2, "x": 42, "y": 19 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 12, "x": 29, "y": 8 },
+        { "h": 4, "w": 12, "x": 29, "y": 24 },
+        { "h": 3, "w": 6, "x": 32, "y": 16 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-06-map",
+      "name": "Close the Loop",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 8, "x": 17, "y": 16 },
+        { "h": 2, "w": 8, "x": 46, "y": 16 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 9.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "rework-drift",
+          "role": "territory-eroder",
+          "tier": "measured",
+          "x": 15.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.5660000000000001,
+      "design": {
+        "captureConsequence": "A capture may wake a roamer and gives an eroder more reclaimed edge. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "difficulty": {
+          "band": 6,
+          "coordination": 0,
+          "execution": 5,
+          "mechanicLoad": 6,
+          "planning": 6,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": ["territory-eroder"],
+        "lesson": "Turn a fictional business need into a clear requirement. Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A small community workshop prepares a well-defined supply request.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "reclaimed-roamer",
+          "territory-eroder"
+        ],
+        "routeDecision": "Reveal the requirement desk before crossing toward the supplier offers. Keep another return available when capture wakes a knot or rework erodes the edge."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-01",
+      "map": { "id": "coupa-source-to-pay-01-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Find the Need",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-source-to-pay-01-picture",
+        "themeId": "coupa-source-to-pay-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 9.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "rework-drift",
+          "role": "territory-eroder",
+          "tier": "measured",
+          "x": 15.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6160000000000001,
+      "design": {
+        "captureConsequence": "A capture may wake a roamer and gives an eroder more reclaimed edge. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "difficulty": {
+          "band": 6,
+          "coordination": 0,
+          "execution": 5,
+          "mechanicLoad": 6,
+          "planning": 6,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Compare offers against the declared requirement. Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Friendly market pavilions display distinct offers rather than rival villains.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "reclaimed-roamer",
+          "territory-eroder"
+        ],
+        "routeDecision": "Use the offer islands as short returns while inspecting all the evidence. Keep another return available when capture wakes a knot or rework erodes the edge."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-02",
+      "map": { "id": "coupa-source-to-pay-02-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Choose Together",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-source-to-pay-02-picture",
+        "themeId": "coupa-source-to-pay-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 9.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "rework-drift",
+          "role": "territory-eroder",
+          "tier": "measured",
+          "x": 15.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6460000000000001,
+      "design": {
+        "captureConsequence": "A capture may wake a roamer and gives an eroder more reclaimed edge. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "difficulty": {
+          "band": 6,
+          "coordination": 0,
+          "execution": 5,
+          "mechanicLoad": 6,
+          "planning": 6,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Connect the chosen offer to the agreed scope and terms. Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A clear bridge links a supplier pavilion with a contract library.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "reclaimed-roamer",
+          "territory-eroder"
+        ],
+        "routeDecision": "Connect the contract landing before reaching the far delivery district. Keep another return available when capture wakes a knot or rework erodes the edge."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-03",
+      "map": { "id": "coupa-source-to-pay-03-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Terms Bridge",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-source-to-pay-03-picture",
+        "themeId": "coupa-source-to-pay-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 9.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "rework-drift",
+          "role": "territory-eroder",
+          "tier": "measured",
+          "x": 15.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": true,
+          "edge": { "side": "east", "x": 10, "y": 11 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 11.5, "y": 11.5 }],
+      "coverage": 0.666,
+      "design": {
+        "captureConsequence": "A capture may wake a roamer and gives an eroder more reclaimed edge. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["reclaimed-roamer", "territory-eroder", "frontier-patrol"],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing. Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "difficulty": {
+          "band": 7,
+          "coordination": 0,
+          "execution": 5,
+          "mechanicLoad": 7,
+          "planning": 7,
+          "threatDensity": 4,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Distinguish a request, its review and an issued order. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Three labelled neighbourhoods show the handoff from request to order.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "reclaimed-roamer",
+          "territory-eroder",
+          "frontier-patrol"
+        ],
+        "routeDecision": "Build a return at each handoff instead of committing to one long crossing. Keep another return available when capture wakes a knot or rework erodes the edge."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-04",
+      "map": { "id": "coupa-source-to-pay-04-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Request to Order",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 26.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-source-to-pay-04-picture",
+        "themeId": "coupa-source-to-pay-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 9.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "rework-drift",
+          "role": "territory-eroder",
+          "tier": "measured",
+          "x": 15.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": false,
+          "edge": { "side": "east", "x": 12, "y": 17 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 13.5, "y": 17.5 }],
+      "coverage": 0.686,
+      "design": {
+        "captureConsequence": "A capture may wake a roamer and gives an eroder more reclaimed edge. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["reclaimed-roamer", "territory-eroder", "frontier-patrol"],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing. Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "difficulty": {
+          "band": 7,
+          "coordination": 0,
+          "execution": 5,
+          "mechanicLoad": 7,
+          "planning": 7,
+          "threatDensity": 4,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Record only the goods that arrived in the fictional delivery. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Two dockside deliveries arrive at different times beside an open ledger.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "reclaimed-roamer",
+          "territory-eroder",
+          "frontier-patrol"
+        ],
+        "routeDecision": "Use the first delivery landing before connecting the second, distant dock. Keep another return available when capture wakes a knot or rework erodes the edge."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-05",
+      "map": { "id": "coupa-source-to-pay-05-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Received in Part",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-source-to-pay-05-picture",
+        "themeId": "coupa-source-to-pay-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [0, 1],
+          "id": "sleeping-backlog",
+          "role": "reclaimed-roamer",
+          "tier": "measured",
+          "x": 35.5,
+          "y": 7.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "rework-drift",
+          "role": "territory-eroder",
+          "tier": "measured",
+          "x": 15.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": true,
+          "edge": { "side": "east", "x": 28, "y": 8 },
+          "id": "moving-boundary",
+          "role": "frontier-patrol",
+          "tier": "measured"
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 29.5, "y": 8.5 }],
+      "coverage": 0.7260000000000001,
+      "design": {
+        "captureConsequence": "A capture may wake a roamer and gives an eroder more reclaimed edge. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["reclaimed-roamer", "territory-eroder", "frontier-patrol"],
+        "counterplay": "Frontier patrols follow the changed boundary after capture; check the return edge before departing. Rework can erode reclaimed ground. Protect a second return and watch the dormant knot wake after capture.",
+        "difficulty": {
+          "band": 7,
+          "coordination": 0,
+          "execution": 5,
+          "mechanicLoad": 7,
+          "planning": 7,
+          "threatDensity": 4,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Reconcile the records and distinguish approved from paid. Frontier patrols follow the changed boundary after capture; check the return edge before departing.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Order, delivery and invoice landmarks form a complete illuminated circuit.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "reclaimed-roamer",
+          "territory-eroder",
+          "frontier-patrol"
+        ],
+        "routeDecision": "Join the three record islands while preserving a safe way back. Keep another return available when capture wakes a knot or rework erodes the edge."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-06",
+      "map": { "id": "coupa-source-to-pay-06-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Close the Loop",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-source-to-pay-06-picture",
+        "themeId": "coupa-source-to-pay-theme"
+      },
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "From Need to Value",
+  "packs": [
+    {
+      "campaignIds": ["coupa-source-to-pay"],
+      "format": "PackDesignV1",
+      "id": "coupa-source-to-pay-pack",
+      "name": "From Need to Value",
+      "revision": "4"
+    }
+  ],
+  "policyId": "journey-trail-impact-v3",
+  "revision": "4"
+}

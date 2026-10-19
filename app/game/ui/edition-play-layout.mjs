@@ -41,6 +41,7 @@ export function mountEditionPlayLayout({
     controls = $('.play-controls');
   const notices = [
     'encounter-status',
+    'hunt-feedback',
     'run-message',
     'save-warning',
     'asset-warning',

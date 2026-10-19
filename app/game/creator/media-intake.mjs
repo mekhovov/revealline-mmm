@@ -355,6 +355,7 @@ export async function prepareCreatorMediaIntake(
   {
     signal,
     inspectVideo = openVideoPosterSource,
+    prepareVideo,
     prepareImage = prepareCreatorImage,
     pairingFor,
     posterTimeFor = ({ video }) => video.durationSeconds * 0.5,
@@ -372,6 +373,13 @@ export async function prepareCreatorMediaIntake(
     creatorAbort(signal);
     if (row.error) continue;
     try {
+      if (row.kind === 'video' && prepareVideo) {
+        // Editing choices follow selected bytes; conversion may rewrite MP4 metadata.
+        row.sourceSha256 = await creatorSHA256(await row.blob.arrayBuffer());
+        creatorAbort(signal);
+        row.blob = await prepareVideo(row.blob, { signal });
+        row.bytes = row.blob.size;
+      }
       const bytes = await row.blob.arrayBuffer();
       creatorAbort(signal);
       row.sha256 = await creatorSHA256(bytes);
@@ -458,7 +466,11 @@ export async function prepareCreatorMediaIntake(
       errorCode = 'invalid-playback-range';
       const playbackRange = validateCreatorPlaybackRange(
           video,
-          playbackRangeFor({ video, assetSha256: row.sha256 }),
+          playbackRangeFor({
+            video,
+            assetSha256: row.sha256,
+            sourceSha256: row.sourceSha256 ?? row.sha256,
+          }),
         ),
         suggestion = suggestions.get(row.index),
         posterCandidates = [];
@@ -467,6 +479,7 @@ export async function prepareCreatorMediaIntake(
       const pairingChoice = pairingFor?.({
         video,
         assetSha256: row.sha256,
+        sourceSha256: row.sourceSha256 ?? row.sha256,
         suggestion,
         imageAssetSha256s: Object.freeze([...imageByHash.keys()].sort()),
       });
@@ -500,6 +513,7 @@ export async function prepareCreatorMediaIntake(
         const selectedTime = posterTimeFor({
           video,
           assetSha256: row.sha256,
+          sourceSha256: row.sourceSha256 ?? row.sha256,
           suggestion,
         });
         required(
@@ -625,6 +639,7 @@ export async function prepareCreatorMediaIntake(
         kind: row.kind,
         normalizedStem: row.stem ?? null,
         assetSha256: row.sha256 ?? null,
+        sourceSha256: row.sourceSha256 ?? row.sha256 ?? null,
         ...(row.kind === 'image'
           ? { poster: row.sha256 ? (imageByHash.get(row.sha256) ?? null) : null }
           : {}),

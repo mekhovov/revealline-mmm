@@ -2,6 +2,9 @@ import { t, localizedText } from '../i18n/index.mjs';
 import { createMenuStylePreferences } from '../menu-style-preferences.mjs';
 import { createMenuAppearance } from './menu-appearance.mjs';
 import { attachPreferenceRestoration } from './preference-restoration.mjs';
+import { installThemeHost } from '../presentation/theme-host.mjs';
+import { attachThemeFamilyControls } from './theme-family-controls.mjs';
+import { mountBattlefieldGroundControls } from './battlefield-ground-controls.mjs';
 
 /** Existing Options owns navigation. These native selectors own only the separate
  * menu-style record, and never call a flight's preferences, prepare or Resume. */
@@ -32,6 +35,28 @@ export function attachMenuStyleControls({
     appearance.set(state);
   };
   const stopView = preferences.subscribe(render);
+  const themeHost = installThemeHost({
+    document: doc,
+    window: win,
+    getStorage,
+    writable,
+    menuPreferences: preferences,
+  });
+  const themeControls = attachThemeFamilyControls({
+    document: doc,
+    root: status.parentElement,
+    host: themeHost,
+    prefix,
+    legacyPalette: palette,
+    legacyOrnaments: ornaments,
+    mountBattlefieldGroundControls,
+  });
+  const stopThemeOrnaments = themeHost.preferences.subscribe((state) =>
+    appearance.set({
+      ...preferences.snapshot(),
+      ornaments: state.ornaments === 'theme' ? 'subtle' : state.ornaments,
+    }),
+  );
   const restoration = attachPreferenceRestoration({
     window: win,
     getSnapshot: preferences.snapshot,
@@ -43,6 +68,8 @@ export function attachMenuStyleControls({
   ornaments.addEventListener('change', chooseOrnaments);
   let disposed = false;
   return Object.freeze({
+    preferences,
+    themeHost,
     setPresentation: (snapshot) => appearance.setPresentation(snapshot),
     dispose() {
       if (disposed) return;
@@ -50,6 +77,9 @@ export function attachMenuStyleControls({
       palette.removeEventListener('change', choosePalette);
       ornaments.removeEventListener('change', chooseOrnaments);
       restoration.dispose();
+      stopThemeOrnaments();
+      themeControls.dispose();
+      themeHost.dispose();
       stopView();
       preferences.dispose();
       appearance.dispose();

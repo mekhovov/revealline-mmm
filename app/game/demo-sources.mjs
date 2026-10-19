@@ -6,7 +6,7 @@ import {
   loadDemoRecording,
 } from './demo-catalog.mjs';
 import { prepareReplayPlayer, prepareReviewedReplayPlayer } from './replay-player.mjs';
-import { prepareBotPlayer } from './demo-bot-player.mjs';
+import { prepareCompleteBotPlayer } from './demo-bot-player.mjs';
 import { prepareImprovPlayer } from './demo-improv-player.mjs';
 import { LIVE_BOT_LEVEL_IDS, supportsDemoBot } from './demo-bot.mjs';
 import { campaignKey } from './library.mjs';
@@ -63,9 +63,14 @@ export async function loadDemoSources({
         );
         try {
           const isLastCandidate = index === candidates.length - 1;
-          return await (isLastCandidate && clip.source !== 'local'
+          const player = await (isLastCandidate && clip.source !== 'local'
             ? prepareReviewedReplayPlayer(replay, { signal })
             : prepareReplayPlayer(replay, { signal }));
+          if (!['won', 'lost'].includes(player.info.recordedStatus)) {
+            player.dispose();
+            throw new Error('Demo recordings must finish with a real win or loss.');
+          }
+          return player;
         } catch (error) {
           if (
             error.name !== 'ReplayVerificationError' ||
@@ -90,6 +95,8 @@ export async function loadDemoSources({
           classRecipes: entry.classRecipes ?? entry.campaign.classRecipes,
         };
         if (!supportsDemoBot(simulationLevel, options)) continue;
+        const identity = demoIdentity(level, options.classRecipes),
+          recordingIdentity = demoIdentity(simulationLevel, options.classRecipes);
         for (const seed of [1, 2, 3])
           sources.push({
             id: `live-${campaignKey(entry.campaign)}-${level.id}-${seed}`,
@@ -97,15 +104,15 @@ export async function loadDemoSources({
             levelId: level.id,
             level,
             entry,
-            identity: demoIdentity(level, options.classRecipes),
-            recordingIdentity: demoIdentity(simulationLevel, options.classRecipes),
+            identity,
+            recordingIdentity,
             campaignKey: campaignKey(entry.campaign),
             levelKey: `${campaignKey(entry.campaign)}/${level.id}`,
-            create: ({ signal }) =>
-              prepareBotPlayer(
+            create: ({ signal, onWorker }) =>
+              prepareCompleteBotPlayer(
                 simulationLevel,
                 { ...options, seed },
-                { signal, WorkerClass, plannerSeed: seed },
+                { signal, WorkerClass, plannerSeed: seed, onWorker },
               ),
           });
       }

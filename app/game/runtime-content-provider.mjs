@@ -1,8 +1,11 @@
 import { assertBrandedLocation } from './branded-isolation.mjs';
 import { editionOfflinePackageId } from './editions/offline-package-id.mjs';
-import { loadEditionBootstrap } from './editions/bootstrap.mjs';
 import { verifyEditionAssets } from './editions/assets.mjs';
-import { resolveEditionAssets } from './editions/model.mjs';
+import {
+  resolveEditionAssets,
+  resolveEditionAppearanceDefault,
+  resolveEditionAppearanceThemes,
+} from './editions/model.mjs';
 import { editionIdentityId, editionPublicSlug, resolveEditionContext } from './edition-context.mjs';
 import {
   communityEntryURL,
@@ -98,6 +101,9 @@ export async function loadRuntimeContentProvider({
   const selector = url.searchParams.get('edition') ?? compiled;
   const requested = selector ? editionIdentityId(selector) : selector;
   if (!requested && url.searchParams.get('company') !== '1') return null;
+  // Ordinary Solo never needs the edition authoring compiler or Team runtime.
+  // Evaluate this graph only while an explicitly selected edition is preparing.
+  const { loadEditionBootstrap } = await import('./editions/bootstrap.mjs');
   if (compiled)
     required(requested === compiled, 'This installed edition cannot load another audience.');
   const rootURL = new URL('../', url);
@@ -198,6 +204,15 @@ export async function loadRuntimeContentProvider({
     route: Object.freeze({ ...route, sessionKey: `${route.sessionKey}.solo-v2` }),
     legacySessionKey: route.sessionKey,
     theme,
+    appearanceDefault: resolveEditionAppearanceDefault(selection),
+    appearanceThemes: resolveEditionAppearanceThemes(catalog, {
+      editionIds: [selection.edition.id],
+    }),
+    appearanceDefaultFor(campaignId = selection.campaign.id) {
+      const campaign = selection.campaigns.find((item) => item.id === campaignId);
+      required(campaign, 'This campaign is not included in the selected edition.');
+      return resolveEditionAppearanceDefault({ ...selection, campaign });
+    },
     bootstrap,
     rootURL: rootURL.href,
     themes: projected.themes.themes,

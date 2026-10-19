@@ -27,8 +27,10 @@ export function preparedPackIdentity(pack) {
  * proves the original pack edition, not managed artwork readiness or installation
  * in the current library. The host must still check both immediately before Play.
  */
-export async function verifyIndexedInstalledPack(pack, row) {
+export async function verifyIndexedInstalledPack(pack, row, { isCurrent = () => true } = {}) {
+  if (!isCurrent()) return false;
   const identity = await preparedPackIdentity(pack);
+  if (!isCurrent()) return false;
   if (
     !row ||
     row.source === 'base' ||

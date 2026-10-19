@@ -2,7 +2,7 @@ import { required, canonicalJSON } from '../data-json.mjs';
 import { normalizedLevel } from '../core/level.mjs';
 import { compileContentProject, resolveMission } from '../content-design/project.mjs';
 import { applyGameplayTuning, resolveGameplayTuning } from '../gameplay-tuning.mjs';
-import { entryScenario } from '../playground/model.mjs';
+import { entryScenario } from '../scenario-entry.mjs';
 
 const projects = new WeakMap();
 function selectedProject(provider) {

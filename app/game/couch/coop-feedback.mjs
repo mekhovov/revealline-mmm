@@ -1,4 +1,6 @@
-import { t, formatNumber } from '../i18n/index.mjs';
+import { specialistFailureCopy } from '../hunt/actor-catalog.mjs';
+import { snakeText } from '../snake/copy.mjs';
+import { t, formatNumber, getLocale } from '../i18n/index.mjs';
 import { coopGroundContext } from './coop-ground.mjs';
 import { isJourneyTeamLevel } from '../coop/foundations.mjs';
 import { foundationCaptionForCell } from '../ui/foundation-feedback.mjs';
@@ -19,6 +21,13 @@ export function coopFoundationReturnCaption(run, events = run.events) {
 
 /** Describe observed failures without assigning blame or changing game state. */
 export function coopFailureFeedback(run, event) {
+  if (event?.cause === 'combat-specialist') {
+    const family = run.level.pursuit?.actors.find((actor) => actor.id === event.enemy)?.behavior;
+    const copy = specialistFailureCopy(family, getLocale());
+    return { cause: copy.reason, advice: copy.tip };
+  }
+  if (event?.cause === 'snake-body')
+    return { cause: snakeText('failure'), advice: snakeText('hint') };
   if (event?.cause === 'lethal-terrain')
     return {
       cause: t('interface:unclaimedLethalFieldCaughtACraft'),

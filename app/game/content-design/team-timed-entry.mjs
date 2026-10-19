@@ -1,3 +1,4 @@
+import { localizedMessage } from '../i18n/index.mjs';
 import { createTeamTimedOriginalCandidates } from './team-timed-originals.mjs';
 import { createTeamWindowSpatialCandidates } from './team-window-spatial-candidates.mjs';
 import { createTeamDepotSpatialCandidates } from './team-depot-spatial-candidates.mjs';
@@ -39,6 +40,13 @@ export async function createTeamTimedEntry({ spatial = false, depot = false } = 
     candidateCardPresenter: createTeamMissionCardPresenter(candidateJourney, candidateProgress),
     candidateCaptureTeaching: createTeamCaptureTeaching(candidateJourney, ['window-exchange']),
     candidateDifficulty: snapshot.difficulty,
+    candidateNavigationLabel: localizedMessage(
+      depot
+        ? 'interface:couch.teamNavigation_depot'
+        : spatial
+          ? 'interface:couch.teamNavigation_window'
+          : 'interface:couch.teamNavigation_timed',
+    ),
     candidateNotice: snapshot.durable ? '' : snapshot.error,
   });
 }

@@ -1,5 +1,5 @@
 import { mapProfile, descriptorKey, deviceDescriptor } from '../couch/controller-profiles.mjs';
-import { t } from '../i18n/index.mjs';
+import { getLocale, t } from '../i18n/index.mjs';
 import {
   resolveControllerBindings,
   CONTROLLER_DIRECTION_PRIORITY,
@@ -7,6 +7,26 @@ import {
 } from '../controller-bindings.mjs';
 import { DEFAULT_CONTROLLER_BOOST_MODE, resolveControllerBoostMode } from '../controller-boost.mjs';
 
+// Literal translation calls remain visible to the localization source extractor.
+const STATUS_COPY = Object.freeze({
+  'interface:controllerInputIsStopped': () => t('interface:controllerInputIsStopped'),
+  'interface:controllerAccessIsUnavailableKeyboardAndTouchRemainAvailable': () =>
+    t('interface:controllerAccessIsUnavailableKeyboardAndTouchRemainAvailable'),
+  'interface:controllerDisconnectedReleaseControlsThenPressAFaceButtonTo': () =>
+    t('interface:controllerDisconnectedReleaseControlsThenPressAFaceButtonTo'),
+  'interface:controllerReady': () => t('interface:controllerReady'),
+  'interface:controllerJoinedReleaseControlsToContinue': () =>
+    t('interface:controllerJoinedReleaseControlsToContinue'),
+  'interface:thisControllerHasNoStandardMappingKeyboardAndTouchRemain': () =>
+    t('interface:thisControllerHasNoStandardMappingKeyboardAndTouchRemain'),
+  'interface:connectAControllerAndUseItWhileThisPageIs': () =>
+    t('interface:connectAControllerAndUseItWhileThisPageIs'),
+  'interface:pressAFaceButtonOrMenuToJoin': () => t('interface:pressAFaceButtonOrMenuToJoin'),
+  'interface:releaseTheControllerButtonsAndMovementStick': () =>
+    t('interface:releaseTheControllerButtonsAndMovementStick'),
+  'interface:controllerDisconnectedReconnectAndReleaseControlsToContinue': () =>
+    t('interface:controllerDisconnectedReconnectAndReleaseControlsToContinue'),
+});
 const JOIN_BUTTONS = [0, 1, 2, 3, 9];
 const CONTEXTS = ['flight', 'menu'];
 const usesDefaultLayout = (config) =>
@@ -124,6 +144,21 @@ export function createControllerRouter({
     sampledConfirmPad = null,
     sampledRawGamepads = undefined,
     destroyed = false;
+
+  // Status copy changes only with its message key or the accepted locale. Keep
+  // every hardware sample and edge fresh without translating unchanged text.
+  let statusLocale = null,
+    statusKey = null,
+    statusMessage = null;
+  function statusText(key) {
+    const locale = getLocale();
+    if (statusLocale !== locale || statusKey !== key) {
+      statusMessage = STATUS_COPY[key]();
+      statusLocale = locale;
+      statusKey = key;
+    }
+    return statusMessage;
+  }
 
   const confirmIndexes = (buttons) =>
     [
@@ -429,7 +464,7 @@ export function createControllerRouter({
   function sample({ scope, timeMs, toggleBoostEligible = true, spectator = false } = {}) {
     sampledConfirmPad = null;
     sampledRawGamepads = undefined;
-    if (destroyed) return result('disposed', t('interface:controllerInputIsStopped'));
+    if (destroyed) return result('disposed', statusText('interface:controllerInputIsStopped'));
     if (typeof scope !== 'string' || !scope || scope.length > 160)
       throw new TypeError(t('interface:controllerScopeMustBeAStableNonemptyString'));
     if (typeof toggleBoostEligible !== 'boolean')
@@ -453,7 +488,7 @@ export function createControllerRouter({
       pendingDisconnect = false;
       return result(
         'unavailable',
-        t('interface:controllerAccessIsUnavailableKeyboardAndTouchRemainAvailable'),
+        statusText('interface:controllerAccessIsUnavailableKeyboardAndTouchRemainAvailable'),
         undefined,
         undefined,
         disconnected,
@@ -493,7 +528,7 @@ export function createControllerRouter({
       clear();
       return result(
         'disconnected',
-        t('interface:controllerDisconnectedReleaseControlsThenPressAFaceButtonTo'),
+        statusText('interface:controllerDisconnectedReleaseControlsThenPressAFaceButtonTo'),
         undefined,
         undefined,
         true,
@@ -521,8 +556,8 @@ export function createControllerRouter({
           return result(
             'joined',
             autoJoin
-              ? t('interface:controllerReady')
-              : t('interface:controllerJoinedReleaseControlsToContinue'),
+              ? statusText('interface:controllerReady')
+              : statusText('interface:controllerJoinedReleaseControlsToContinue'),
           );
         }
       }
@@ -530,12 +565,18 @@ export function createControllerRouter({
         return connected
           ? result(
               'unsupported',
-              t('interface:thisControllerHasNoStandardMappingKeyboardAndTouchRemain'),
+              statusText('interface:thisControllerHasNoStandardMappingKeyboardAndTouchRemain'),
             )
-          : result('waiting-controller', t('interface:connectAControllerAndUseItWhileThisPageIs'));
+          : result(
+              'waiting-controller',
+              statusText('interface:connectAControllerAndUseItWhileThisPageIs'),
+            );
       return [...seen.values()].some((candidate) => candidate.armed)
-        ? result('ready-to-join', t('interface:pressAFaceButtonOrMenuToJoin'))
-        : result('waiting-neutral', t('interface:releaseTheControllerButtonsAndMovementStick'));
+        ? result('ready-to-join', statusText('interface:pressAFaceButtonOrMenuToJoin'))
+        : result(
+            'waiting-neutral',
+            statusText('interface:releaseTheControllerButtonsAndMovementStick'),
+          );
     }
     const pad = pads.get(assigned.index);
     // An assigned pad always has a corresponding seen entry until loss handling.
@@ -557,8 +598,8 @@ export function createControllerRouter({
       return result(
         blocked ? 'waiting-neutral' : 'connected',
         blocked
-          ? t('interface:releaseTheControllerButtonsAndMovementStick')
-          : t('interface:controllerReady'),
+          ? statusText('interface:releaseTheControllerButtonsAndMovementStick')
+          : statusText('interface:controllerReady'),
       );
     }
     const edge = (i) => pad.buttons.has(i) && !previousButtons.has(i);
@@ -625,15 +666,15 @@ export function createControllerRouter({
       repeatDirection = direction;
     }
     previousButtons = new Set(pad.buttons);
-    return result('connected', t('interface:controllerReady'), flight, ui);
+    return result('connected', statusText('interface:controllerReady'), flight, ui);
   }
   function sampleLoss() {
     pendingDisconnect = false;
     return result(
       'disconnected',
       autoJoin
-        ? t('interface:controllerDisconnectedReconnectAndReleaseControlsToContinue')
-        : t('interface:controllerDisconnectedReleaseControlsThenPressAFaceButtonTo'),
+        ? statusText('interface:controllerDisconnectedReconnectAndReleaseControlsToContinue')
+        : statusText('interface:controllerDisconnectedReleaseControlsThenPressAFaceButtonTo'),
       undefined,
       undefined,
       true,

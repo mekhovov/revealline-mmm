@@ -1,3 +1,4 @@
+import { createActorDefeatPresentation } from '../ui/actor-defeat-presentation.mjs';
 import { prepareTeamEnemies, teamEnemySlot } from './coop-enemy-slots.mjs';
 import { prepareTeamPilots, teamPilotSlot } from './coop-pilot-slots.mjs';
 import { prepareTeamCores, teamCoreState } from './coop-core-presentation.mjs';
@@ -121,7 +122,9 @@ function hunterPose(run, enemy, frame, old) {
 export function createCoopActorPresentation({
   loadEnemyCatalog = loadEnemyPresentationCatalog,
 } = {}) {
-  const sampler = createActorPresentation();
+  const sampler = createActorPresentation(),
+    defeats = createActorDefeatPresentation({ kind: 'team' });
+  let finishSamples = [];
   let snapshot = null,
     sprites = new Map(),
     pilotSprites = new Map(),
@@ -136,6 +139,8 @@ export function createCoopActorPresentation({
     catalogGeneration = 0;
   function reset() {
     sampler.reset();
+    defeats.reset();
+    finishSamples = [];
     entries = new Map();
     pilots = new Map();
     attempt = null;
@@ -170,7 +175,7 @@ export function createCoopActorPresentation({
     const ticket = ++catalogGeneration;
     motionCatalog = null;
     const theme = next?.resolved?.theme;
-    if (!next || (theme?.id !== 'fpv' && theme?.family !== 'fpv')) return Promise.resolve();
+    return Promise.resolve(); // Branded actors never load global cosmetic catalogs.
     return Promise.resolve()
       .then(loadEnemyCatalog)
       .then(
@@ -191,6 +196,7 @@ export function createCoopActorPresentation({
       canvasCSSWidth = 1152,
       style = 'hybrid',
       previousRun = null,
+      concealed = false,
     } = {},
   ) {
     if (
@@ -207,6 +213,12 @@ export function createCoopActorPresentation({
       reset();
       attempt = run;
     }
+    defeats.bind(run);
+    finishSamples = defeats.advance(run, {
+      paused: !['running', 'won', 'lost'].includes(run.status),
+      reduced: reduced || motionScale === 0,
+      concealed,
+    });
     const width = Number.isFinite(canvasCSSWidth) && canvasCSSWidth > 0 ? canvasCSSWidth : 1152;
     const screenScale = width / (run.width * CELL);
     const elapsed =
@@ -272,7 +284,9 @@ export function createCoopActorPresentation({
           mode: enemy.rover?.mode,
           frozen: enemiesFrozen || enemy.rover?.mode !== 'active',
         });
-      } else if (enemiesFrozen) frozen.push({ id, frozen: true });
+      } else if (enemy.type === 'hunter')
+        frozen.push({ id, frozen: enemiesFrozen, phase: enemy.phase });
+      else if (enemiesFrozen) frozen.push({ id, frozen: true });
       actors.push({
         id,
         type: enemy.type,
@@ -423,5 +437,24 @@ export function createCoopActorPresentation({
     }
     return true;
   }
-  return { setPresentation, reset, update, frame, draw };
+  return {
+    setPresentation,
+    reset,
+    update,
+    frame,
+    draw,
+    observe(run) {
+      defeats.observe(run, run.events, (id) => entries.get(key('enemy', id)));
+    },
+    drawDefeats(ctx, reserve) {
+      ctx.save();
+      try {
+        ctx.scale(1 / CELL, 1 / CELL);
+        defeats.draw(ctx, finishSamples, reserve);
+      } finally {
+        ctx.restore();
+      }
+    },
+    defeatSnapshot: defeats.snapshot,
+  };
 }

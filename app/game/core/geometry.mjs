@@ -1,4 +1,12 @@
-import { versionsForLevel, resolveVersions, WIDE_VERSIONS, isClassicRuleset } from './versions.mjs';
+import {
+  versionsForLevel,
+  resolveVersions,
+  WIDE_VERSIONS,
+  isClassicRuleset,
+  isRunningEnemyLevel,
+  isRunningEnemyRuleset,
+  baseLevelVersion,
+} from './versions.mjs';
 
 /** Deterministic continuous geometry. Times returned here are fractions in [0, 1]. */
 export const EPS = 1e-9;
@@ -84,7 +92,9 @@ const board = (width, height) =>
 export const LEGACY_GEOMETRY = board(48, 36);
 export const WIDE_GEOMETRY = board(72, 36);
 export function geometryForLevel(level) {
-  const pair = versionsForLevel(level);
+  const pair = isRunningEnemyLevel(level)
+    ? resolveVersions({ levelVersion: baseLevelVersion(level) })
+    : versionsForLevel(level);
   const geometry =
     pair.ruleset === WIDE_VERSIONS.ruleset || isClassicRuleset(pair.ruleset)
       ? WIDE_GEOMETRY
@@ -98,7 +108,9 @@ export function geometryForLevel(level) {
 }
 /** Runs are core-owned; this lookup never changes another run's geometry. */
 export function geometryForRun(run) {
-  const pair = resolveVersions({ ruleset: run.ruleset });
+  const pair = isRunningEnemyRuleset(run.ruleset)
+    ? resolveVersions({ levelVersion: baseLevelVersion(run.level) })
+    : resolveVersions({ ruleset: run.ruleset });
   const geometry =
     pair.ruleset === WIDE_VERSIONS.ruleset || isClassicRuleset(pair.ruleset)
       ? WIDE_GEOMETRY

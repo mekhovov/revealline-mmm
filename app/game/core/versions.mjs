@@ -50,6 +50,94 @@ export const SENTINEL_VERSIONS = Object.freeze({
   replayVersion: 'xonix-replay.v10',
   checkpointAlgorithm: 'fnv1a64-state-v9',
 });
+export const HUNT_VERSIONS = Object.freeze({
+  levelVersion: 'xonix-level.v9',
+  ruleset: 'xonix-core.v10',
+  replayVersion: 'xonix-replay.v11',
+  checkpointAlgorithm: 'fnv1a64-state-v10',
+});
+export const RUNNING_ENEMY_VERSIONS = Object.freeze({
+  levelVersion: 'xonix-level.v10',
+  ruleset: 'xonix-core.v11',
+  replayVersion: 'xonix-replay.v12',
+  checkpointAlgorithm: 'fnv1a64-state-v11',
+});
+export const SNAKE_VERSIONS = Object.freeze({
+  levelVersion: 'xonix-level.v11',
+  ruleset: 'xonix-core.v12',
+  replayVersion: 'xonix-replay.v13',
+  checkpointAlgorithm: 'fnv1a64-state-v12',
+});
+export const PURSUIT_VERSIONS = Object.freeze({
+  levelVersion: 'xonix-level.v12',
+  ruleset: 'xonix-core.v13',
+  replayVersion: 'xonix-replay.v14',
+  checkpointAlgorithm: 'fnv1a64-state-v13',
+});
+export const SNAKE_PURSUIT_VERSIONS = Object.freeze({
+  levelVersion: 'xonix-level.v13',
+  ruleset: 'xonix-core.v14',
+  replayVersion: 'xonix-replay.v15',
+  checkpointAlgorithm: 'fnv1a64-state-v14',
+});
+export const PURSUIT_V2_VERSIONS = Object.freeze({
+  levelVersion: 'xonix-level.v14',
+  ruleset: 'xonix-core.v15',
+  replayVersion: 'xonix-replay.v16',
+  checkpointAlgorithm: 'fnv1a64-state-v15',
+});
+export const SNAKE_PURSUIT_V2_VERSIONS = Object.freeze({
+  levelVersion: 'xonix-level.v15',
+  ruleset: 'xonix-core.v16',
+  replayVersion: 'xonix-replay.v17',
+  checkpointAlgorithm: 'fnv1a64-state-v16',
+});
+export const isPursuitV2Level = (level) =>
+  [PURSUIT_V2_VERSIONS.levelVersion, SNAKE_PURSUIT_V2_VERSIONS.levelVersion].includes(
+    level?.version,
+  );
+export const isSnakePursuitLevel = (level) =>
+  [SNAKE_PURSUIT_VERSIONS.levelVersion, SNAKE_PURSUIT_V2_VERSIONS.levelVersion].includes(
+    level?.version,
+  );
+export const isPursuitLevel = (level) =>
+  [
+    PURSUIT_VERSIONS.levelVersion,
+    SNAKE_PURSUIT_VERSIONS.levelVersion,
+    PURSUIT_V2_VERSIONS.levelVersion,
+    SNAKE_PURSUIT_V2_VERSIONS.levelVersion,
+  ].includes(level?.version);
+export const isPursuitRuleset = (ruleset) =>
+  [
+    PURSUIT_VERSIONS.ruleset,
+    SNAKE_PURSUIT_VERSIONS.ruleset,
+    PURSUIT_V2_VERSIONS.ruleset,
+    SNAKE_PURSUIT_V2_VERSIONS.ruleset,
+  ].includes(ruleset);
+export const isRunningEnemyLevel = (level) =>
+  [
+    RUNNING_ENEMY_VERSIONS.levelVersion,
+    PURSUIT_VERSIONS.levelVersion,
+    SNAKE_PURSUIT_VERSIONS.levelVersion,
+    PURSUIT_V2_VERSIONS.levelVersion,
+    SNAKE_PURSUIT_V2_VERSIONS.levelVersion,
+  ].includes(level?.version);
+export const isRunningEnemyRuleset = (ruleset) =>
+  [
+    RUNNING_ENEMY_VERSIONS.ruleset,
+    PURSUIT_VERSIONS.ruleset,
+    SNAKE_PURSUIT_VERSIONS.ruleset,
+    PURSUIT_V2_VERSIONS.ruleset,
+    SNAKE_PURSUIT_V2_VERSIONS.ruleset,
+  ].includes(ruleset);
+export const baseLevelVersion = (level) =>
+  level?.version === SNAKE_VERSIONS.levelVersion
+    ? HUNT_VERSIONS.levelVersion
+    : isRunningEnemyLevel(level)
+      ? level.runningEnemies?.baseVersion === SNAKE_VERSIONS.levelVersion
+        ? HUNT_VERSIONS.levelVersion
+        : level.runningEnemies?.baseVersion
+      : level?.version;
 export const isClassicRuleset = (ruleset) =>
   [
     CLASSIC_VERSIONS.ruleset,
@@ -57,6 +145,8 @@ export const isClassicRuleset = (ruleset) =>
     RELAY_VERSIONS.ruleset,
     DIRECTIONAL_VERSIONS.ruleset,
     SENTINEL_VERSIONS.ruleset,
+    HUNT_VERSIONS.ruleset,
+    SNAKE_VERSIONS.ruleset,
   ].includes(ruleset);
 export const isFoundationRuleset = (ruleset) =>
   [
@@ -64,13 +154,24 @@ export const isFoundationRuleset = (ruleset) =>
     RELAY_VERSIONS.ruleset,
     DIRECTIONAL_VERSIONS.ruleset,
     SENTINEL_VERSIONS.ruleset,
+    HUNT_VERSIONS.ruleset,
+    SNAKE_VERSIONS.ruleset,
   ].includes(ruleset);
 export const isRelayRuleset = (ruleset) =>
-  [RELAY_VERSIONS.ruleset, DIRECTIONAL_VERSIONS.ruleset, SENTINEL_VERSIONS.ruleset].includes(
-    ruleset,
-  );
+  [
+    RELAY_VERSIONS.ruleset,
+    DIRECTIONAL_VERSIONS.ruleset,
+    SENTINEL_VERSIONS.ruleset,
+    HUNT_VERSIONS.ruleset,
+    SNAKE_VERSIONS.ruleset,
+  ].includes(ruleset);
 export const isDirectionalRuleset = (ruleset) =>
-  [DIRECTIONAL_VERSIONS.ruleset, SENTINEL_VERSIONS.ruleset].includes(ruleset);
+  [
+    DIRECTIONAL_VERSIONS.ruleset,
+    SENTINEL_VERSIONS.ruleset,
+    HUNT_VERSIONS.ruleset,
+    SNAKE_VERSIONS.ruleset,
+  ].includes(ruleset);
 
 /** An omitted pair remains legacy. Explicit fields must select exactly one supported pair. */
 export function resolveVersions(value = {}) {
@@ -89,6 +190,13 @@ export function resolveVersions(value = {}) {
     RELAY_VERSIONS,
     DIRECTIONAL_VERSIONS,
     SENTINEL_VERSIONS,
+    HUNT_VERSIONS,
+    RUNNING_ENEMY_VERSIONS,
+    SNAKE_VERSIONS,
+    PURSUIT_VERSIONS,
+    SNAKE_PURSUIT_VERSIONS,
+    PURSUIT_V2_VERSIONS,
+    SNAKE_PURSUIT_V2_VERSIONS,
   ].find((pair) => keys.every((key) => request[key] === pair[key]));
   if (!match) throw new TypeError('unsupported or mismatched simulation versions');
   return { ...match };

@@ -1,3 +1,10 @@
+import {
+  isPursuitSpecialist,
+  protectedPursuitContact,
+  specialistMotionAllowed,
+} from '../hunt/pursuit-specialists.mjs';
+import { combatOwner, huntDefinition } from '../hunt/running-enemy-definition.mjs';
+import { huntTargetKind } from '../hunt/rules.mjs';
 import { CELL } from './registry.mjs';
 import { EPS, movingCirclesTime, pointAt } from './geometry.mjs';
 import { positionAt, pathPoint } from './movement.mjs';
@@ -10,7 +17,18 @@ const segment = (a, b, t0, t1) => ({ x1: a.x, y1: a.y, x2: b.x, y2: b.y, t0, t1 
 
 function planMotion(state, body, duration, radius, factor, reflect) {
   const a = { x: body.x, y: body.y };
-  const b = { x: a.x + body.vx * factor * duration, y: a.y + body.vy * factor * duration };
+  const proposed = { x: a.x + body.vx * factor * duration, y: a.y + body.vy * factor * duration };
+  const b =
+    reflect &&
+    !specialistMotionAllowed(
+      body,
+      proposed,
+      state,
+      state.status === 'running' ? [state.player] : [],
+      state.rules.playerRadius,
+    )
+      ? a
+      : proposed;
   const hit = factor ? classicDomainHit(state, a, b, radius, CELL.FIELD) : null;
   const used = duration * (hit?.t ?? 1),
     end = pointAt(a, b, hit?.t ?? 1);
@@ -42,18 +60,22 @@ export function planCombatMotion(state, duration) {
           true,
         ),
       ),
-    shots: (state.classic?.combatPatrols?.projectiles ?? []).map((shot) =>
+    shots: (combatOwner(state)?.combatPatrols?.projectiles ?? []).map((shot) =>
       planMotion(state, shot, duration, COMBAT_SHOT_RADIUS, factor, false),
     ),
   };
 }
 
-function bodyContact(state, paths, plan, trace, horizon, radius) {
+function bodyContact(state, paths, plan, trace, horizon, radius, huntTouch = false) {
   let earliest = null;
   for (const p of paths)
     for (const q of plan.paths) {
-      const lo = Math.max(p.t0, q.t0, state.player.cutting ? 0 : (trace.started ?? Infinity));
-      const hi = Math.min(p.t1, q.t1, horizon, trace.closure ?? Infinity);
+      const lo = Math.max(
+        p.t0,
+        q.t0,
+        huntTouch || state.player.cutting ? 0 : (trace.started ?? Infinity),
+      );
+      const hi = Math.min(p.t1, q.t1, horizon, huntTouch ? Infinity : (trace.closure ?? Infinity));
       if (lo > hi + EPS) continue;
       const t = movingCirclesTime(
         pathPoint(p, lo),
@@ -62,7 +84,17 @@ function bodyContact(state, paths, plan, trace, horizon, radius) {
         pathPoint(q, hi),
         radius + state.rules.playerRadius,
       );
-      if (t !== null) earliest = Math.min(earliest ?? Infinity, lo + (hi - lo) * t);
+      if (t !== null) {
+        const contactAt = lo + (hi - lo) * t;
+        // Hunt touch crosses the reclaimed boundary, never a wall or closed gate.
+        // Shot exposure and every historical scout/sentry contact keep their old gate.
+        if (
+          huntTouch &&
+          classicDomainHit(state, pathPoint(p, contactAt), pathPoint(q, contactAt), 0, null)
+        )
+          continue;
+        earliest = Math.min(earliest ?? Infinity, contactAt);
+      }
     }
   return earliest;
 }
@@ -73,8 +105,24 @@ export function combatContacts(state, playerPaths, plans, trace, horizon) {
   const rams = [],
     failures = [];
   for (const plan of plans.patrols) {
-    const time = bodyContact(state, playerPaths, plan, trace, horizon, plan.body.radius);
-    if (time !== null) rams.push({ time, actor: plan.body });
+    const time = bodyContact(
+      state,
+      playerPaths,
+      plan,
+      trace,
+      horizon,
+      plan.body.radius,
+      state.status === 'running' &&
+        huntTargetKind(huntDefinition(state.level), plan.body.id) !== null,
+    );
+    if (time !== null) {
+      const player = positionAt(playerPaths, time, state.player),
+        actor = positionAt(plan.paths, time, plan.body);
+      if (protectedPursuitContact(plan.body, player, actor)) {
+        if (state.player.graceUntil <= state.time + EPS)
+          failures.push({ time, kind: 'combat-specialist', id: plan.body.id });
+      } else rams.push({ time, actor: plan.body });
+    }
   }
   if (!classicEffectActive(state, 'enemy-freeze') && state.player.graceUntil <= state.time + EPS)
     for (const plan of plans.shots) {
@@ -83,7 +131,9 @@ export function combatContacts(state, playerPaths, plans, trace, horizon) {
         failures.push({ time, kind: 'combat-projectile', id: plan.body.actorId, shot: plan.body });
     }
   rams.sort((a, b) => a.time - b.time || (a.actor.id < b.actor.id ? -1 : 1));
-  failures.sort((a, b) => a.time - b.time || (a.shot.id < b.shot.id ? -1 : 1));
+  failures.sort(
+    (a, b) => a.time - b.time || ((a.shot?.id ?? a.id) < (b.shot?.id ?? b.id) ? -1 : 1),
+  );
   return { rams, failure: failures[0] ?? null };
 }
 
@@ -93,8 +143,13 @@ export function advanceCombatMotion(state, plans, elapsed) {
     Object.assign(body, positionAt(plan.paths, elapsed, body));
     if (!plan.reflect || !plan.event || plan.event.time > elapsed + EPS) continue;
     const { nx, ny } = plan.hit;
-    if (nx) body.vx = -body.vx;
-    if (ny) body.vy = -body.vy;
+    if (isPursuitSpecialist(body)) {
+      body.vx = 0;
+      body.vy = 0;
+    } else {
+      if (nx) body.vx = -body.vx;
+      if (ny) body.vy = -body.vy;
+    }
     if (!nx && !ny) throw new Error('Combat patrol embedded in field boundary');
     body.x += nx * EPS * 2;
     body.y += ny * EPS * 2;

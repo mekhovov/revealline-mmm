@@ -1,0 +1,13 @@
+/* Locally owned Coupa interface. No global theme textures or fallback artwork. */
+:root, body.field-kit {
+  --fk-bg:#071c47; --fk-panel:#0c2956; --fk-panel-raised:#123868;
+  --fk-text:#f6fbff; --fk-muted:#b6d3e8; --fk-line:#497ea6;
+  --fk-control-line:#6dbedb; --fk-cyan:#59d5ef; --fk-amber:#ffdc65;
+  --fk-hazard:#fa8c9c; --fk-success:#80dcbd; --fk-accent:#ffdc65;
+  --fk-corner:8px;
+}
+.field-kit :is(button,.button,input,select,textarea,dialog,.overlay-card,.pause-card) {
+  border-image:none!important;
+}
+.field-kit :is(button,.button) { border-radius:6px; }
+.field-kit .home-art { background:linear-gradient(135deg,#071c47,#164b74); }

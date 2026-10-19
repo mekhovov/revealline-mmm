@@ -114,6 +114,13 @@ export function attachControllerNavigation({
     return element.getClientRects().length > 0 && accept(element);
   }
   const controls = () => [...(root?.querySelectorAll(CONTROLS) || [])].filter(visible);
+  // querySelectorAll includes matching descendants, never the scope root itself.
+  const isCurrentControl = (element) =>
+    element !== root &&
+    element?.matches(CONTROLS) &&
+    visible(element) &&
+    // Acceptance may synchronously replace focus; do not validate its former owner.
+    element === doc.activeElement;
   function mark(element) {
     if (focused !== element) focused?.classList.remove('controller-focus');
     focused = element;
@@ -219,7 +226,7 @@ export function attachControllerNavigation({
     previous.region.removeAttribute('data-controller-reading');
     if (focused === previous.region || focused === previous.exit) mark(null);
     readingInvalidated ||= invalidated;
-    onReadingChange(null);
+    onReadingChange(null, { restoreFocus, invalidated });
     if (message) readingMessage(message, previous);
     if (
       restoreFocus &&
@@ -644,7 +651,7 @@ export function attachControllerNavigation({
       engaged &&
       !surfaceEditor &&
       !reading &&
-      (!visible(doc.activeElement) || !controls().includes(doc.activeElement))
+      (!visible(doc.activeElement) || !isCurrentControl(doc.activeElement))
     ) {
       invalidated = true;
       ensureFocus();
@@ -684,7 +691,10 @@ export function attachControllerNavigation({
     if (!editing) return;
     const value =
       editing.kind === 'select' ? editing.options[editing.index].label : String(editing.draft);
-    const controls = getControlLabels();
+    const controls =
+      inputMode === 'keyboard'
+        ? { directions: '↑ ↓ ← →', confirm: 'Enter', back: 'Esc' }
+        : getControlLabels();
     localizedText(editing.preview, () =>
       t('gameplay:changesConfirmsCancels', {
         value1: contentText(editing, 'label'),
@@ -1105,6 +1115,37 @@ export function attachControllerNavigation({
         remaining.find((element) => element.tabIndex >= 0) ||
         (event.shiftKey ? tabStops.at(-1) : tabStops[0]);
       focus(next);
+      return true;
+    }
+    // In game Settings, arrows select the next control until Confirm explicitly
+    // enters value editing. Keep text/file inputs and ordinary forms native.
+    const settingField = event.target?.closest?.('select,input');
+    const directionalSetting =
+      settingField?.closest?.('.native-settings') &&
+      visible(settingField) &&
+      (settingField.tagName === 'SELECT' ||
+        ['range', 'checkbox', 'radio'].includes(settingField.type));
+    if (
+      directionalSetting &&
+      (event.key.startsWith('Arrow') ||
+        event.key === 'Enter' ||
+        (event.key === ' ' && !['checkbox', 'radio'].includes(settingField.type)))
+    ) {
+      event.preventDefault();
+      setMenuInput('keyboard');
+      const direction = {
+        ArrowUp: 'up',
+        ArrowDown: 'down',
+        ArrowLeft: 'left',
+        ArrowRight: 'right',
+      }[event.key];
+      if (direction) {
+        if (editing) editDirection(direction);
+        else move(direction);
+      } else if (!event.repeat) {
+        if (editing) commitEdit();
+        else activate(settingField);
+      }
       return true;
     }
     if (['Enter', ' '].includes(event.key)) {

@@ -72,8 +72,9 @@ export function attachControllerConfirmTrace({
     output.scrollTop = output.scrollHeight;
   };
 
-  function syncHost(host = getHost()) {
+  function syncHost(host) {
     if (!panel) return;
+    if (host === undefined) host = getHost();
     // Modal dialogs occupy the browser top layer and make body siblings inert.
     // Follow the host's active modal without opening a new focusable overlay.
     const parent = host?.append ? host : doc?.body;

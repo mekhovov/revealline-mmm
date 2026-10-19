@@ -43,35 +43,87 @@ export function interiorAlphaMask(rgba, width, height) {
 }
 
 const masks = new WeakMap();
-function interiorImage(image, color) {
-  let variants = masks.get(image);
-  if (!variants) {
-    variants = new Map();
-    masks.set(image, variants);
-  }
-  if (variants.has(color)) return variants.get(color);
-  const width = image.naturalWidth ?? image.width,
-    height = image.naturalHeight ?? image.height;
+function createInteriorSurface(width, height) {
   const canvas =
     typeof OffscreenCanvas === 'function'
       ? new OffscreenCanvas(width, height)
       : document.createElement('canvas');
   canvas.width = width;
   canvas.height = height;
-  const ctx = canvas.getContext('2d', { willReadFrequently: true });
-  ctx.drawImage(image, 0, 0);
-  const data = ctx.getImageData(0, 0, width, height),
-    mask = interiorAlphaMask(data.data, width, height);
-  const rgb = [1, 3, 5].map((at) => parseInt(color.slice(at, at + 2), 16));
-  for (let i = 0; i < mask.length; i++) {
-    data.data[i * 4] = rgb[0];
-    data.data[i * 4 + 1] = rgb[1];
-    data.data[i * 4 + 2] = rgb[2];
-    data.data[i * 4 + 3] = mask[i];
+  const context = canvas.getContext('2d', { willReadFrequently: true });
+  if (!context) throw new Error('Body backing context unavailable.');
+  const surface = {
+    canvas,
+    context,
+    width,
+    height,
+    hasLossEvents:
+      typeof canvas.addEventListener === 'function' &&
+      'oncontextlost' in canvas &&
+      'oncontextrestored' in canvas,
+    lost: false,
+    dirty: true,
+  };
+  // Keep event closures separate from the source image and its weak cache key.
+  canvas.addEventListener?.('contextlost', () => {
+    surface.lost = true;
+    surface.dirty = true;
+  });
+  canvas.addEventListener?.('contextrestored', () => {
+    surface.lost = false;
+    surface.dirty = true;
+  });
+  return surface;
+}
+function interiorImage(image, color) {
+  let variants = masks.get(image);
+  if (!variants) {
+    variants = new Map();
+    masks.set(image, variants);
   }
-  ctx.putImageData(data, 0, 0);
-  variants.set(color, canvas);
-  return canvas;
+  let surface = variants.get(color);
+  if (!surface) {
+    surface = createInteriorSurface(
+      image.naturalWidth ?? image.width,
+      image.naturalHeight ?? image.height,
+    );
+    variants.set(color, surface);
+  }
+  const { canvas, context: ctx } = surface;
+  // Clean event-supported cache hits need no native polling or pixel readback.
+  const checkNativeLoss = !surface.hasLossEvents || surface.dirty || surface.lost;
+  const lost =
+    checkNativeLoss && typeof ctx.isContextLost === 'function' ? ctx.isContextLost() : surface.lost;
+  if (lost) {
+    surface.lost = true;
+    surface.dirty = true;
+    return null;
+  }
+  if (surface.lost) {
+    surface.lost = false;
+    surface.dirty = true;
+  }
+  if (!surface.dirty) return canvas;
+  try {
+    const { width, height } = surface;
+    ctx.drawImage(image, 0, 0);
+    const data = ctx.getImageData(0, 0, width, height),
+      mask = interiorAlphaMask(data.data, width, height);
+    const rgb = [1, 3, 5].map((at) => parseInt(color.slice(at, at + 2), 16));
+    for (let i = 0; i < mask.length; i++) {
+      data.data[i * 4] = rgb[0];
+      data.data[i * 4 + 1] = rgb[1];
+      data.data[i * 4 + 2] = rgb[2];
+      data.data[i * 4 + 3] = mask[i];
+    }
+    ctx.putImageData(data, 0, 0);
+    surface.dirty = false;
+    return canvas;
+  } catch (error) {
+    // A failed readback remains a visible failure and cannot poison the cache.
+    if (variants.get(color) === surface) variants.delete(color);
+    throw error;
+  }
 }
 
 export function paintBodyBacking(ctx, body, image, width, height) {
@@ -84,12 +136,8 @@ export function paintBodyBacking(ctx, body, image, width, height) {
     ctx.fill();
   } else {
     const pivot = body.presentationPivot ?? { x: 0.5, y: 0.5 };
-    ctx.drawImage(
-      interiorImage(image, backing.color),
-      -width * pivot.x,
-      -height * pivot.y,
-      width,
-      height,
-    );
+    const backingImage = interiorImage(image, backing.color);
+    if (!backingImage) return;
+    ctx.drawImage(backingImage, -width * pivot.x, -height * pivot.y, width, height);
   }
 }

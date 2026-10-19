@@ -5,21 +5,38 @@ import {
   recordInput,
   exportReplay,
   verifyReplayAsync,
+  MAX_REPLAY_TICKS,
 } from './replay.mjs';
 import { supportsDemoBot, BOT_LIMITS } from './demo-bot.mjs';
 
-const MAX_FRAME_SECONDS = 0.25,
-  MAX_SCENE_TICKS = 60 * 120;
+const MAX_FRAME_SECONDS = 0.25;
 const abortError = () => Object.assign(new Error('Autoplay cancelled.'), { name: 'AbortError' });
 function checkAbort(signal) {
   if (signal?.aborted) throw abortError();
 }
 
-function workerTransport(WorkerClass, watchdogMs) {
+function workerTransport(WorkerClass, watchdogMs, onWorker) {
   if (typeof WorkerClass !== 'function') throw new Error('Live autoplay requires a Web Worker.');
   const worker = new WorkerClass(new URL('./demo-bot-worker.mjs', import.meta.url), {
     type: 'module',
   });
+  let releaseObservation = null;
+  try {
+    const release = onWorker?.();
+    if (typeof release === 'function') releaseObservation = release;
+  } catch {
+    // Optional diagnostics cannot change the worker's lifetime or gameplay.
+  }
+  const terminate = () => {
+    worker.terminate();
+    const release = releaseObservation;
+    releaseObservation = null;
+    try {
+      release?.();
+    } catch {
+      // A diagnostic observer never prevents ordinary owner cleanup.
+    }
+  };
   let serial = 0,
     stopped = false;
   const waiting = new Map();
@@ -49,7 +66,7 @@ function workerTransport(WorkerClass, watchdogMs) {
         const timer = setTimeout(() => {
           finish(id, new Error('Autoplay planning deadline reached.'));
           // A stuck search must not retain a CPU owner after the watchdog fires.
-          worker.terminate();
+          terminate();
           stopped = true;
         }, watchdogMs);
         waiting.set(id, { resolve, reject, timer });
@@ -65,7 +82,7 @@ function workerTransport(WorkerClass, watchdogMs) {
       worker.removeEventListener('message', message);
       worker.removeEventListener('error', error);
       for (const id of waiting.keys()) finish(id, abortError());
-      worker.terminate();
+      terminate();
     },
   };
 }
@@ -117,6 +134,7 @@ export async function prepareBotPlayer(
     WorkerClass = globalThis.Worker,
     plannerSeed = options.seed ?? 1,
     watchdogMs = 1000,
+    onWorker = null,
   } = {},
 ) {
   checkAbort(signal);
@@ -159,14 +177,14 @@ export async function prepareBotPlayer(
     classId: options.classId ?? 'scout',
     seed: options.seed ?? 1,
     plannerSeed,
-    totalTicks: MAX_SCENE_TICKS,
-    durationSeconds: 60,
+    totalTicks: null,
+    durationSeconds: null,
   });
   function report(events = [], ticks = 0, reason = null) {
     return {
       phase,
       tick: state.tick,
-      totalTicks: MAX_SCENE_TICKS,
+      totalTicks: null,
       ticks,
       events,
       reason: reason ?? completionReason,
@@ -183,8 +201,7 @@ export async function prepareBotPlayer(
     transport?.dispose();
   }
   function prefetch() {
-    if (disposed || current.predictedState.status === 'won' || current.endTick >= MAX_SCENE_TICKS)
-      return;
+    if (disposed || current.predictedState.status === 'won') return;
     const version = generation,
       expected = current.predictedState;
     pending = transport
@@ -217,7 +234,7 @@ export async function prepareBotPlayer(
     decision = 0;
     state = createRun(sourceLevel, sourceOptions);
     recorder = createRecorder(sourceLevel, sourceOptions, 'revealline-live-demo.v1');
-    transport = workerTransport(WorkerClass, watchdogMs);
+    transport = workerTransport(WorkerClass, watchdogMs, onWorker);
     try {
       const result = await transport.request(state, plannerSeed, decision);
       checkAbort(signal);
@@ -274,7 +291,7 @@ export async function prepareBotPlayer(
         fail('Autoplay state no longer matches its planned controls.');
         return events;
       }
-      if (state.status === 'won' || state.tick >= MAX_SCENE_TICKS) complete();
+      if (state.status === 'won') complete();
       else if (!next && nextFailure?.code === 'no-safe-macro') complete(true, 'no-safe-macro');
       else if (!next) fail(nextFailure ?? 'Autoplay has no safe move ready before its deadline.');
       else {
@@ -285,7 +302,9 @@ export async function prepareBotPlayer(
         segmentTick = 0;
         prefetch();
       }
-    } else if (state.tick >= MAX_SCENE_TICKS) complete(null);
+    }
+    if (state.tick >= MAX_REPLAY_TICKS && phase === 'playing')
+      fail('Autoplay recording capacity reached before a terminal result.');
     return events;
   }
   function play() {
@@ -393,8 +412,7 @@ export async function prepareBotPlayer(
     // tick until the next result (including a watchdog failure) has settled.
     get maxAdvanceSeconds() {
       if (disposed || phase !== 'playing' || !ready || !current) return 0;
-      const terminal =
-        current.predictedState.status === 'won' || current.endTick >= MAX_SCENE_TICKS;
+      const terminal = current.predictedState.status === 'won';
       const reserve = !terminal && !next && !nextFailure ? 1 : 0;
       return Math.max(
         0,
@@ -412,4 +430,27 @@ export async function prepareBotPlayer(
     exportRecording,
     forkForPractice,
   });
+}
+
+/** Admit a live source only after this exact seed can reach a real result.
+ * The disposable rehearsal uses the same worker/watchdog/checkpoints. Reset
+ * creates a fresh ordinary run before any frame is handed to the demo host.
+ */
+export async function prepareCompleteBotPlayer(level, options, settings = {}) {
+  const player = await prepareBotPlayer(level, options, settings);
+  try {
+    player.play();
+    while (player.phase === 'playing') {
+      checkAbort(settings.signal);
+      await player.planning;
+      player.advance(Math.min(MAX_FRAME_SECONDS, player.maxAdvanceSeconds));
+    }
+    if (player.phase !== 'complete' || !['won', 'lost'].includes(player.state.status))
+      throw new Error('Live performance cannot reach a complete result.');
+    await player.reset();
+    return player;
+  } catch (error) {
+    player.dispose();
+    throw error;
+  }
 }

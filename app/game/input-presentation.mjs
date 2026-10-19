@@ -1,4 +1,5 @@
 import { arcadeActionCapabilities } from './core/arcade-actions.mjs';
+import { baseLevelVersion } from './core/versions.mjs';
 
 /** Presentation only: never changes a command, saved heading, or simulation tick. */
 export const SCREEN_STEERING_HANDS = Object.freeze(['left', 'right']);
@@ -41,7 +42,7 @@ export function showScreenControls({ preference = 'auto', modality, scope, runni
 export function hasFieldWarningBand(level) {
   return !(
     (level?.encounter === null ||
-      (level?.version === 'xonix-level.v1' && level.encounter === undefined)) &&
+      (baseLevelVersion(level) === 'xonix-level.v1' && level.encounter === undefined)) &&
     Array.isArray(level.enemies) &&
     level.enemies.every((enemy) =>
       ['bouncer', 'border-patrol', 'contour-patrol'].includes(enemy.type),

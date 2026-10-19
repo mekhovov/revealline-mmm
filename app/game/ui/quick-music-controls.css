@@ -1,38 +1,71 @@
-.quick-music-controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  grid-column: 1 / -1;
-  flex: 1 1 100%;
-  min-width: 0;
-  width: 100%;
-  padding-block: 8px;
-}
-.quick-music-controls .quick-music-title {
-  flex: 1 1 100%;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: var(--fk-muted, var(--muted, currentColor));
-  font-size: 0.8rem;
-}
-.quick-music-controls button {
-  flex: 1 1 auto;
-  min-height: 44px;
-  width: auto;
-  margin: 0;
-}
-.quick-music-settings {
-  margin-block: 12px;
-}
-.quick-music-settings label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-}
-.quick-music-settings input {
-  width: auto;
+/* Legacy layout and paint share one cascade layer. Theme recipes own opt-in appearance. */
+@layer legacy {
+  .quick-music-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    grid-column: 1 / -1;
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+    padding-block: 8px;
+  }
+  .quick-music-credit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  .music-creator-links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+  }
+  .music-creator-links[hidden] {
+    display: none;
+  }
+  .music-creator-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding-block: 2px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--fk-accent, var(--accent, currentColor));
+  }
+  .music-creator-links a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+  .quick-music-controls .quick-music-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--fk-muted, var(--muted, currentColor));
+    font-size: 0.8rem;
+  }
+  .quick-music-controls button {
+    flex: 1 1 auto;
+    min-height: 44px;
+    width: auto;
+    margin: 0;
+  }
+  .quick-music-settings {
+    margin-block: 12px;
+  }
+  .quick-music-settings label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+  }
+  .quick-music-settings input {
+    width: auto;
+  }
 }

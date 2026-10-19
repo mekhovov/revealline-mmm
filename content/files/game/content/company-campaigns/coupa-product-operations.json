@@ -1,0 +1,651 @@
+{
+  "actorCatalogId": "journey-actors-v9",
+  "assets": [
+    {
+      "alt": "A fictional illustrated Coupa Village district, with shared workspaces and connected routes.",
+      "bytes": 2105228,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-product-operations-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/coupa-product-operations-key.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "371ab48050bb585c118346bcbbf97e8cdec3234415c3f41b16859874bda83604",
+      "width": 1280
+    },
+    {
+      "alt": "A fictional sunlit request workshop with a round review desk, blank cards, a blue folder, side workstations and a resting alcove.",
+      "bytes": 2698028,
+      "format": "AssetRevisionV1",
+      "height": 887,
+      "id": "coupa-product-operations-02-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/repair-the-draft-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "a1edf3bae43ddeb0c1694dea868a0327ccfed038f64162d08839e84585e1e5e0",
+      "width": 1774
+    },
+    {
+      "alt": "A blue glass review room connects two document alcoves around a quiet upper review terrace.",
+      "bytes": 823416,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-product-operations-03-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/review-the-request-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "6815b2caaf6b65230d7efc90e57fd357e72f20eb6c3978164ba03668d943d431",
+      "width": 960
+    },
+    {
+      "alt": "A blue buyer studio and a supplier dock frame two calm terraces around a blank change folder.",
+      "bytes": 792498,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-product-operations-04-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/handle-the-change-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "1dd7123f8cb633625226f096f5c5da7a848fd3532f04e4796ce70aeb7687d2a2",
+      "width": 960
+    },
+    {
+      "alt": "A spacious blue receiving hall separates arrived parcels, a central counting desk and empty future-delivery shelves.",
+      "bytes": 829094,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-product-operations-05-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/record-the-delivery-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "b5d544d7eb6c299976bd102b4c7e63e41337cf23b317dd12a09cccc74e2f23f3",
+      "width": 960
+    },
+    {
+      "alt": "An interconnected blue operations archive gathers record stations around a small unresolved folder and calm return terraces.",
+      "bytes": 896391,
+      "format": "AssetRevisionV1",
+      "height": 480,
+      "id": "coupa-product-operations-06-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/bulk-02/clear-the-exception-v1.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "54555dc7657f068e77b902f2f474baff16f344bc3b7e933bc40a07a9c2fa38a2",
+      "width": 960
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 8,
+      "format": "CampaignDesignV1",
+      "id": "coupa-product-operations",
+      "missionIds": [
+        "coupa-product-operations-01",
+        "coupa-product-operations-02",
+        "coupa-product-operations-03",
+        "coupa-product-operations-04",
+        "coupa-product-operations-05",
+        "coupa-product-operations-06"
+      ],
+      "name": "A Day in Coupa",
+      "revision": "4"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v2",
+  "format": "ContentProjectV1",
+  "id": "coupa-product-operations",
+  "maps": [
+    {
+      "format": "MapDesignV2",
+      "foundations": [
+        { "h": 5, "w": 10, "x": 13, "y": 11 },
+        { "h": 5, "w": 10, "x": 48, "y": 20 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-product-operations-01-map",
+      "name": "Find Your Work",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 18.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 2, "w": 11, "x": 31, "y": 18 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV2",
+      "foundations": [
+        { "h": 5, "w": 10, "x": 30, "y": 15 },
+        { "h": 3, "w": 9, "x": 14, "y": 25 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-product-operations-02-map",
+      "name": "Repair the Draft",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 10, "x": 17, "y": 8 },
+        { "h": 2, "w": 10, "x": 43, "y": 8 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV2",
+      "foundations": [
+        { "h": 4, "w": 7, "x": 12, "y": 17 },
+        { "h": 4, "w": 8, "x": 31, "y": 10 },
+        { "h": 4, "w": 7, "x": 53, "y": 17 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-product-operations-03-map",
+      "name": "Review the Request",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 12, "w": 3, "x": 24, "y": 12 },
+        { "h": 12, "w": 3, "x": 44, "y": 12 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV2",
+      "foundations": [
+        { "h": 4, "w": 8, "x": 32, "y": 10 },
+        { "h": 4, "w": 8, "x": 32, "y": 23 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-product-operations-04-map",
+      "name": "Handle the Change",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 17, "x": 12, "y": 13 },
+        { "h": 2, "w": 17, "x": 44, "y": 21 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV2",
+      "foundations": [
+        { "h": 4, "w": 8, "x": 12, "y": 24 },
+        { "h": 6, "w": 9, "x": 31, "y": 14 },
+        { "h": 4, "w": 8, "x": 53, "y": 8 }
+      ],
+      "gates": [],
+      "height": 36,
+      "id": "coupa-product-operations-05-map",
+      "name": "Record the Delivery",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 15, "x": 27, "y": 22 }],
+      "walls": [
+        { "h": 13, "w": 3, "x": 21, "y": 7 },
+        { "h": 13, "w": 3, "x": 46, "y": 18 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV2",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 13, "y": 23 },
+        { "h": 4, "w": 9, "x": 47, "y": 8 }
+      ],
+      "gates": [{ "h": 7, "id": "return-1", "w": 1, "x": 51, "y": 1 }],
+      "height": 36,
+      "id": "coupa-product-operations-06-map",
+      "name": "Clear the Exception",
+      "revision": "2",
+      "spawns": [{ "id": "home", "x": 18.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 11, "x": 15, "y": 11 },
+        { "h": 2, "w": 11, "x": 45, "y": 23 },
+        { "h": 6, "w": 2, "x": 35, "y": 15 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "locked-demand",
+          "role": "trail-pursuer",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.5780000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "The pursuer commits to one observed point on the unfinished trail. Keep a short return ready and close before its finite approach reaches you.",
+        "difficulty": {
+          "band": 8,
+          "coordination": 0,
+          "execution": 7,
+          "mechanicLoad": 8,
+          "planning": 8,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": ["trail-pursuer"],
+        "lesson": "Identify the task that needs action from your current role. The pursuer commits to one observed point on the unfinished trail. Keep a short return ready and close before its finite approach reaches you.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A readable, fictional task desk sits within a bright operations courtyard.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "trail-pursuer"
+        ],
+        "routeDecision": "Reveal the task stations before taking the longer route around the desk. Keep a second return ready before the warning locks your trail or heading."
+      },
+      "format": "MissionDesignV2",
+      "id": "coupa-product-operations-01",
+      "map": { "id": "coupa-product-operations-01-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Find Your Work",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-product-operations-01-picture",
+        "themeId": "coupa-product-operations-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "locked-demand",
+          "role": "trail-pursuer",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6280000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "The pursuer commits to one observed point on the unfinished trail. Keep a short return ready and close before its finite approach reaches you.",
+        "difficulty": {
+          "band": 8,
+          "coordination": 0,
+          "execution": 7,
+          "mechanicLoad": 8,
+          "planning": 8,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Correct a missing field and save a valid fictional draft. The pursuer commits to one observed point on the unfinished trail. Keep a short return ready and close before its finite approach reaches you.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "Loose request cards become a tidy, complete draft at the review desk.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "trail-pursuer"
+        ],
+        "routeDecision": "Visit the two evidence shelves using their short interior returns. Keep a second return ready before the warning locks your trail or heading."
+      },
+      "format": "MissionDesignV2",
+      "id": "coupa-product-operations-02",
+      "map": { "id": "coupa-product-operations-02-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Repair the Draft",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-product-operations-02-picture",
+        "themeId": "coupa-product-operations-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "locked-demand",
+          "role": "heading-interceptor",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.6580000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": [],
+        "counterplay": "The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return.",
+        "difficulty": {
+          "band": 8,
+          "coordination": 0,
+          "execution": 7,
+          "mechanicLoad": 8,
+          "planning": 8,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": ["heading-interceptor"],
+        "lesson": "Apply the scenario’s stated review policy to the evidence. The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A calm review room shows a request and its supporting documents together.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "heading-interceptor"
+        ],
+        "routeDecision": "Bring both evidence rooms into view before crossing the central review lane. Keep a second return ready before the warning locks your trail or heading."
+      },
+      "format": "MissionDesignV2",
+      "id": "coupa-product-operations-03",
+      "map": { "id": "coupa-product-operations-03-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Review the Request",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-product-operations-03-picture",
+        "themeId": "coupa-product-operations-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "locked-demand",
+          "role": "heading-interceptor",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 27.5
+        },
+        {
+          "axis": "horizontal",
+          "id": "scheduled-wave",
+          "role": "lane-emitter",
+          "tier": "measured",
+          "x": 56.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 32.5, "y": 10.5 }],
+      "coverage": 0.678,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["heading-interceptor", "lane-emitter"],
+        "counterplay": "The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return. The marked lane warns before firing; close the whole exposed line before the pulse, not only the craft.",
+        "difficulty": {
+          "band": 9,
+          "coordination": 0,
+          "execution": 7,
+          "mechanicLoad": 9,
+          "planning": 9,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": ["lane-emitter"],
+        "lesson": "Route an order change to its owner while it awaits review. The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A marked change request travels between a supplier dock and a buyer desk.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "heading-interceptor",
+          "lane-emitter"
+        ],
+        "routeDecision": "Use the change desk to shorten the return from the outer dock. Keep a second return ready before the warning locks your trail or heading."
+      },
+      "format": "MissionDesignV2",
+      "id": "coupa-product-operations-04",
+      "map": { "id": "coupa-product-operations-04-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Handle the Change",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-product-operations-04-picture",
+        "themeId": "coupa-product-operations-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "locked-demand",
+          "role": "heading-interceptor",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 28.5
+        },
+        {
+          "axis": "vertical",
+          "id": "scheduled-wave",
+          "role": "lane-emitter",
+          "tier": "measured",
+          "x": 56.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 12.5, "y": 24.5 }],
+      "coverage": 0.6980000000000001,
+      "design": {
+        "captureConsequence": "This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["heading-interceptor", "lane-emitter"],
+        "counterplay": "The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return. The marked lane warns before firing; close the whole exposed line before the pulse, not only the craft.",
+        "difficulty": {
+          "band": 9,
+          "coordination": 0,
+          "execution": 7,
+          "mechanicLoad": 9,
+          "planning": 9,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": [],
+        "lesson": "Record the actual partial quantity against the right line. The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A delivery bay keeps arrived and outstanding packages visibly separate.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "heading-interceptor",
+          "lane-emitter"
+        ],
+        "routeDecision": "Connect the arrived-goods bay without confusing it with the later delivery. Keep a second return ready before the warning locks your trail or heading."
+      },
+      "format": "MissionDesignV2",
+      "id": "coupa-product-operations-05",
+      "map": { "id": "coupa-product-operations-05-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Record the Delivery",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-product-operations-05-picture",
+        "themeId": "coupa-product-operations-theme"
+      },
+      "relayLinks": [],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "locked-demand",
+          "role": "heading-interceptor",
+          "tier": "measured",
+          "x": 13.5,
+          "y": 27.5
+        },
+        {
+          "axis": "horizontal",
+          "id": "scheduled-wave",
+          "role": "lane-emitter",
+          "tier": "measured",
+          "x": 56.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 13.5, "y": 23.5 }],
+      "coverage": 0.7380000000000001,
+      "design": {
+        "captureConsequence": "The captured relay opens its matching return. This fictional reveal never changes a business record or a real-world delivery.",
+        "combines": ["heading-interceptor", "lane-emitter", "relay-gates"],
+        "counterplay": "The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return. The marked lane warns before firing; close the whole exposed line before the pulse, not only the craft. Each numbered objective opens its matching connector. Closed connectors block a cut; open ones become safe returns without another fill.",
+        "difficulty": {
+          "band": 9,
+          "coordination": 0,
+          "execution": 7,
+          "mechanicLoad": 9,
+          "planning": 9,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [50, 210],
+        "introduces": ["relay-gates"],
+        "lesson": "Trace an invoice discrepancy and choose the appropriate handoff. The interceptor commits to one observed heading after its warning. Change your route after the lock and close on the nearer return.",
+        "mastery": "Connect every required objective and complete the encounter without losing a life; optional learning remains separate from arcade progress.",
+        "memorableMoment": "A linked operations room makes one unresolved record stand out clearly.",
+        "practices": [
+          "foundations",
+          "enemy-seeded-closure",
+          "travelling-trail-impact",
+          "heading-interceptor",
+          "lane-emitter",
+          "relay-gates"
+        ],
+        "routeDecision": "Reveal the three record stations before linking the exception desk. Choose which numbered relay will open the most useful return connector first."
+      },
+      "format": "MissionDesignV2",
+      "id": "coupa-product-operations-06",
+      "map": { "id": "coupa-product-operations-06-map", "revision": "2" },
+      "modes": ["solo"],
+      "name": "Clear the Exception",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 },
+        { "hidden": false, "id": "handoff", "required": true, "x": 55.5, "y": 25.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-product-operations-06-picture",
+        "themeId": "coupa-product-operations-theme"
+      },
+      "relayLinks": [{ "gateId": "return-1", "objectiveId": "connection" }],
+      "revision": "3",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "A Day in Coupa",
+  "packs": [
+    {
+      "campaignIds": ["coupa-product-operations"],
+      "format": "PackDesignV1",
+      "id": "coupa-product-operations-pack",
+      "name": "A Day in Coupa",
+      "revision": "4"
+    }
+  ],
+  "policyId": "journey-trail-impact-v3",
+  "revision": "4"
+}

@@ -5,7 +5,7 @@ import { verifyMasteryRun, verifiedMasteryRecord } from './mastery-verification.
  * an accepted replacement can hold commits until storage settles.
  * commit is a synchronous local metadata/storage operation.
  */
-export function createMasteryAwards({ getGeneration, commit, onStatus = () => {} }) {
+export function createMasteryAwards({ getGeneration, commit, onStatus = () => {}, scheduleChunk }) {
   const jobs = new Map(),
     holds = new Set(),
     waiters = new Set();
@@ -37,7 +37,10 @@ export function createMasteryAwards({ getGeneration, commit, onStatus = () => {}
       !controller.signal.aborted && ticket === epoch && generation === getGeneration();
     try {
       publish(runId, 'checking', 'Checking your equipment goal…');
-      const verified = await verifyMasteryRun(attempt, { signal: controller.signal });
+      const verified = await verifyMasteryRun(attempt, {
+        signal: controller.signal,
+        scheduleChunk,
+      });
       if (!current()) return { runId, status: 'cancelled', message: '' };
       const record = verifiedMasteryRecord(verified);
       if (!record)

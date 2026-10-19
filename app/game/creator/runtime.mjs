@@ -1,4 +1,4 @@
-import { boundedJSON, exactKeys, required } from '../data-json.mjs';
+import { boundedJSON, canonicalJSON, exactKeys, required } from '../data-json.mjs';
 import { createContentAttemptPreparer } from '../content-design/attempt.mjs';
 import { stepRun, releaseInputs } from '../core/index.mjs';
 import { recordInput, recordRelease, exportReplay, verifyReplayAsync } from '../replay.mjs';
@@ -87,9 +87,17 @@ export function createCreatorRuntime(prepared, { decodeImage, buildVersion = 'de
     generation = 0,
     disposed = false;
   const completions = new WeakSet();
+  const choices = new WeakMap();
   const key = (entry) => `creator:${prepared.editionId}:${entry.executionKey}`;
-  async function prepare(missionId, difficulty, turnPolicy, { signal } = {}) {
+  async function prepare(
+    missionId,
+    difficulty,
+    turnPolicy,
+    runningEnemies,
+    { signal, runningEnemyStyle = 'original' } = {},
+  ) {
     required(!disposed, 'Custom player is closed.');
+    required(typeof runningEnemies === 'boolean', 'Choose whether to add running enemies.');
     const ticket = ++generation;
     const mission = preparer.catalog
       .journey()
@@ -99,18 +107,27 @@ export function createCreatorRuntime(prepared, { decodeImage, buildVersion = 'de
     required(missionProvenance, 'This mission is missing its generation evidence.');
     const candidate = await preparer.prepare(
       { missionId: mission.id, difficulty, turnPolicy, seed: missionProvenance.runtimeSeed },
-      { signal },
+      { signal, runningEnemies, runningEnemyStyle },
     );
     if (disposed || ticket !== generation || signal?.aborted) {
       if (preparer.current(candidate)) preparer.cancel();
       throw new DOMException('Custom attempt superseded.', 'AbortError');
     }
+    choices.set(candidate, runningEnemies);
     return candidate;
   }
   function adopt(candidate, restored = null) {
     const next = preparer.take(candidate);
     attempt?.picture?.release();
-    attempt = { ...next, ...(restored ? { run: restored.run, recorder: restored.recorder } : {}) };
+    attempt = {
+      ...next,
+      selection: Object.freeze({
+        ...next.selection,
+        runningEnemies: choices.get(candidate),
+        runningEnemyStyle: next.run.level.pursuit ? 'varied' : 'original',
+      }),
+      ...(restored ? { run: restored.run, recorder: restored.recorder } : {}),
+    };
     runId = restored?.session.runId ?? crypto.randomUUID();
     return attempt;
   }
@@ -126,10 +143,21 @@ export function createCreatorRuntime(prepared, { decodeImage, buildVersion = 'de
     current: () => attempt,
     runId: () => runId,
     async start(
-      { missionId = missionOrder[0], difficulty = 'standard', turnPolicy = 'immediate' } = {},
+      {
+        missionId = missionOrder[0],
+        difficulty = 'standard',
+        turnPolicy = 'immediate',
+        runningEnemies = false,
+        runningEnemyStyle = 'original',
+      } = {},
       options,
     ) {
-      return adopt(await prepare(missionId, difficulty, turnPolicy, options));
+      return adopt(
+        await prepare(missionId, difficulty, turnPolicy, runningEnemies, {
+          ...options,
+          runningEnemyStyle,
+        }),
+      );
     },
     step(input) {
       required(attempt && !disposed, 'Start an installed Custom mission first.');
@@ -146,7 +174,10 @@ export function createCreatorRuntime(prepared, { decodeImage, buildVersion = 'de
     suspend() {
       required(attempt && !disposed, 'There is no unfinished Custom mission.');
       return {
-        format: 'revealline-creator-attempt.v1',
+        format: attempt.selection.runningEnemies
+          ? 'revealline-creator-attempt.v2'
+          : 'revealline-creator-attempt.v1',
+        ...(attempt.selection.runningEnemies ? { runningEnemies: true } : {}),
         editionId: prepared.editionId,
         missionId: attempt.selection.missionId,
         difficulty: attempt.selection.difficulty,
@@ -169,18 +200,33 @@ export function createCreatorRuntime(prepared, { decodeImage, buildVersion = 'de
       });
       exactKeys(
         saved,
-        ['format', 'editionId', 'missionId', 'difficulty', 'session'],
+        [
+          'format',
+          'editionId',
+          'missionId',
+          'difficulty',
+          'session',
+          ...(saved.format === 'revealline-creator-attempt.v2' ? ['runningEnemies'] : []),
+        ],
         'Custom attempt',
       );
       required(
-        saved.format === 'revealline-creator-attempt.v1' && saved.editionId === prepared.editionId,
+        ['revealline-creator-attempt.v1', 'revealline-creator-attempt.v2'].includes(saved.format) &&
+          saved.editionId === prepared.editionId,
         'This saved attempt belongs to a different installed edition.',
+      );
+      const runningEnemies =
+        saved.format === 'revealline-creator-attempt.v2' ? saved.runningEnemies : false;
+      required(
+        typeof runningEnemies === 'boolean',
+        'Saved attempt needs its running enemy choice.',
       );
       const candidate = await prepare(
         saved.missionId,
         saved.difficulty,
         saved.session.replay.options.turnPolicy,
-        { signal },
+        runningEnemies,
+        { signal, runningEnemyStyle: saved.session.replay.level.pursuit ? 'varied' : 'original' },
       );
       try {
         required(
@@ -199,7 +245,8 @@ export function createCreatorRuntime(prepared, { decodeImage, buildVersion = 'de
         );
         required(
           restored.run.level.id === candidate.manifest.missionId &&
-            restored.session.themeId === candidate.theme.id,
+            restored.session.themeId === candidate.theme.id &&
+            canonicalJSON(restored.run.level) === canonicalJSON(candidate.run.level),
           'Saved mission or picture differs from this edition.',
         );
         return adopt(candidate, restored);

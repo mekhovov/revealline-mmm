@@ -1,14 +1,30 @@
+import {
+  requireAcceptedAttemptAppearance,
+  snapshotAttemptAppearance,
+} from './presentation/attempt-appearance.mjs';
+import { canonicalJSON } from './data-json.mjs';
 import { boundedJSON, plainObject, required } from './data-json.mjs';
 import { campaignKey } from './library.mjs';
 import { verifyReplayAsync } from './replay.mjs';
-import { snapshotSession, restoreSession } from './sessions.mjs';
+import {
+  snapshotCaptureSession as snapshotSession,
+  restoreCaptureSession as restoreSession,
+  nativeCaptureSession,
+  captureSessionAppearance,
+} from './capture-presentation-session.mjs';
 
 function exportOptions(value) {
   required(plainObject(value), 'Attempt export options must be an object.');
   const options = {};
   for (const key of Reflect.ownKeys(value)) {
     required(
-      ['campaign', 'signal', 'onProgress', 'mediaIdentityCatalog'].includes(key),
+      [
+        'campaign',
+        'signal',
+        'onProgress',
+        'mediaIdentityCatalog',
+        'resolveAttemptAppearance',
+      ].includes(key),
       'Unsupported attempt export option.',
     );
     const descriptor = Object.getOwnPropertyDescriptor(value, key);
@@ -30,6 +46,11 @@ function exportOptions(value) {
         typeof options.signal === 'object' &&
         typeof options.signal.aborted === 'boolean'),
     'Attempt export signal must expose a boolean aborted state.',
+  );
+  required(
+    options.resolveAttemptAppearance === undefined ||
+      typeof options.resolveAttemptAppearance === 'function',
+    'The attempt artwork resolver must be a trusted function.',
   );
   return options;
 }
@@ -57,10 +78,12 @@ function freeze(value) {
  * context always rejects. Neither result grants persistence or award authority.
  */
 export async function prepareAttemptExport(candidate, options = {}) {
-  const { campaign, signal, onProgress, mediaIdentityCatalog } = exportOptions(options);
+  const { campaign, signal, onProgress, mediaIdentityCatalog, resolveAttemptAppearance } =
+    exportOptions(options);
   checkAbort(signal);
   // Own all portable data before yielding or calling host progress callbacks.
-  const session = snapshotSession(candidate);
+  const saved = snapshotSession(candidate);
+  const session = nativeCaptureSession(saved);
   const installed = campaign === undefined ? undefined : boundedJSON(campaign);
   let context;
   if (installed !== undefined) {
@@ -71,13 +94,28 @@ export async function prepareAttemptExport(candidate, options = {}) {
     );
     // Restore verifies the actual map, entire roster, checkpoint and unfinished
     // state. Discard its run/recorder: resuspending would alter release markers.
-    await restoreSession(session, {
+    await restoreSession(saved, {
       campaign: installed,
       campaignKey: key,
       signal,
       onProgress,
       mediaIdentityCatalog,
     });
+    const artwork = captureSessionAppearance(saved);
+    if (artwork?.environmentPin) {
+      required(
+        typeof resolveAttemptAppearance === 'function',
+        'This attempt needs its exact original mission artwork owner.',
+      );
+      const resolved = requireAcceptedAttemptAppearance(
+        await resolveAttemptAppearance(session, artwork, { signal }),
+      );
+      checkAbort(signal);
+      required(
+        canonicalJSON(snapshotAttemptAppearance(resolved)) === canonicalJSON(artwork),
+        'Saved artwork differs from its authenticated mission source.',
+      );
+    }
     context = 'installed-campaign';
   } else {
     const checked = await verifyReplayAsync(session.replay, { signal, onProgress });
@@ -92,5 +130,5 @@ export async function prepareAttemptExport(candidate, options = {}) {
   }
   // A final progress callback may cancel after the verifier's last yield.
   checkAbort(signal);
-  return freeze({ session, context });
+  return freeze({ session: saved, context });
 }

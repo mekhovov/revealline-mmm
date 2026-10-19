@@ -1,0 +1,353 @@
+{
+  "themes": [
+    {
+      "actorRecipes": {
+        "border-patrol": "stale-fragments",
+        "bouncer": "paper-tangle",
+        "claimed-rover": "missing-cloud",
+        "contour-patrol": "missing-cloud",
+        "eroder": "stale-fragments",
+        "lane-boss": "backlog-knot",
+        "relay-sentinel": "backlog-knot"
+      },
+      "bossShape": "core",
+      "classBodies": {
+        "bomber": "coupa-flower",
+        "carrier": "coupa-flower",
+        "fiber": "coupa-flower",
+        "impact": "coupa-flower",
+        "interceptor": "coupa-flower",
+        "scout": "coupa-flower",
+        "trapper": "coupa-flower"
+      },
+      "coverColor": "#081D4D",
+      "enemyShape": "cube",
+      "family": "company",
+      "id": "coupa-village",
+      "labels": {
+        "ability": "Support",
+        "boss": "Backlog knot",
+        "currency": "Connections",
+        "enemy": "Paper tangle",
+        "objective": "Connection",
+        "supply": "Support station"
+      },
+      "name": "Coupa",
+      "palette": {
+        "accent": "#5FD6FF",
+        "danger": "#FF9A88",
+        "field": "#081D4D",
+        "grid": "#193866",
+        "ink": "#081D4D",
+        "land": "#1565C0",
+        "muted": "#B8CAE5",
+        "paper": "#FFFFFF",
+        "safe": "#96EAAA",
+        "sky": "#D8F0FF"
+      },
+      "patrolShape": "spark",
+      "player": "coupa-flower",
+      "scene": "network",
+      "soundtrack": {
+        "genre": "chiptune",
+        "id": "village-connections",
+        "name": "Village Connections",
+        "root": 60,
+        "scale": "major",
+        "tempo": 108
+      },
+      "subtitle": "Connected work. Shared possibilities."
+    },
+    {
+      "actorRecipes": {
+        "border-patrol": "stale-fragments",
+        "bouncer": "paper-tangle",
+        "claimed-rover": "missing-cloud",
+        "contour-patrol": "missing-cloud",
+        "eroder": "stale-fragments",
+        "lane-boss": "backlog-knot",
+        "relay-sentinel": "backlog-knot"
+      },
+      "bossShape": "core",
+      "classBodies": {
+        "bomber": "coupa-flower",
+        "carrier": "coupa-flower",
+        "fiber": "coupa-flower",
+        "impact": "coupa-flower",
+        "interceptor": "coupa-flower",
+        "scout": "coupa-flower",
+        "trapper": "coupa-flower"
+      },
+      "coverColor": "#081D4D",
+      "enemyShape": "cube",
+      "family": "company",
+      "id": "coupa-spend-in-motion-theme",
+      "labels": {
+        "ability": "Support",
+        "boss": "Backlog knot",
+        "currency": "Connections",
+        "enemy": "Paper tangle",
+        "objective": "Connection",
+        "supply": "Support station"
+      },
+      "name": "Coupa · Connected City",
+      "palette": {
+        "accent": "#5FD6FF",
+        "danger": "#FF9A88",
+        "field": "#081D4D",
+        "grid": "#193866",
+        "ink": "#081D4D",
+        "land": "#1565C0",
+        "muted": "#B8CAE5",
+        "paper": "#FFFFFF",
+        "safe": "#96EAAA",
+        "sky": "#D8F0FF"
+      },
+      "patrolShape": "spark",
+      "player": "coupa-flower",
+      "scene": "network",
+      "soundtrack": {
+        "genre": "chiptune",
+        "id": "coupa-spend-in-motion-score",
+        "name": "Connected City",
+        "root": 60,
+        "scale": "major",
+        "tempo": 108
+      },
+      "subtitle": "Spend in Motion"
+    },
+    {
+      "actorRecipes": {
+        "border-patrol": "stale-fragments",
+        "bouncer": "missing-cloud",
+        "claimed-rover": "missing-cloud",
+        "contour-patrol": "missing-cloud",
+        "eroder": "stale-fragments",
+        "lane-boss": "backlog-knot",
+        "relay-sentinel": "backlog-knot"
+      },
+      "bossShape": "core",
+      "classBodies": {
+        "bomber": "coupa-flower",
+        "carrier": "coupa-flower",
+        "fiber": "coupa-flower",
+        "impact": "coupa-flower",
+        "interceptor": "coupa-flower",
+        "scout": "coupa-flower",
+        "trapper": "coupa-flower"
+      },
+      "coverColor": "#112A55",
+      "enemyShape": "cube",
+      "family": "company",
+      "id": "coupa-inside-village-theme",
+      "labels": {
+        "ability": "Support",
+        "boss": "Backlog knot",
+        "currency": "Connections",
+        "enemy": "Missed connection",
+        "objective": "Connection",
+        "supply": "Support station"
+      },
+      "name": "Coupa · Community Mosaic",
+      "palette": {
+        "accent": "#EEC874",
+        "danger": "#FF9A88",
+        "field": "#112A55",
+        "grid": "#193866",
+        "ink": "#081D4D",
+        "land": "#276EC8",
+        "muted": "#B8CAE5",
+        "paper": "#FFFFFF",
+        "safe": "#96EAAA",
+        "sky": "#D8F0FF"
+      },
+      "patrolShape": "spark",
+      "player": "coupa-flower",
+      "scene": "network",
+      "soundtrack": {
+        "genre": "ambient",
+        "id": "coupa-inside-village-score",
+        "name": "Community Mosaic",
+        "root": 62,
+        "scale": "dorian",
+        "tempo": 84
+      },
+      "subtitle": "Inside the Village"
+    },
+    {
+      "actorRecipes": {
+        "border-patrol": "stale-fragments",
+        "bouncer": "stale-fragments",
+        "claimed-rover": "missing-cloud",
+        "contour-patrol": "missing-cloud",
+        "eroder": "stale-fragments",
+        "lane-boss": "backlog-knot",
+        "relay-sentinel": "backlog-knot"
+      },
+      "bossShape": "core",
+      "classBodies": {
+        "bomber": "coupa-flower",
+        "carrier": "coupa-flower",
+        "fiber": "coupa-flower",
+        "impact": "coupa-flower",
+        "interceptor": "coupa-flower",
+        "scout": "coupa-flower",
+        "trapper": "coupa-flower"
+      },
+      "coverColor": "#102A50",
+      "enemyShape": "cube",
+      "family": "company",
+      "id": "coupa-source-to-pay-theme",
+      "labels": {
+        "ability": "Support",
+        "boss": "Backlog knot",
+        "currency": "Connections",
+        "enemy": "Loose fragments",
+        "objective": "Connection",
+        "supply": "Support station"
+      },
+      "name": "Coupa · Supply District",
+      "palette": {
+        "accent": "#8CDFE8",
+        "danger": "#FF9A88",
+        "field": "#102A50",
+        "grid": "#193866",
+        "ink": "#081D4D",
+        "land": "#2469B5",
+        "muted": "#B8CAE5",
+        "paper": "#FFFFFF",
+        "safe": "#96EAAA",
+        "sky": "#D8F0FF"
+      },
+      "patrolShape": "spark",
+      "player": "coupa-flower",
+      "scene": "network",
+      "soundtrack": {
+        "genre": "chiptune",
+        "id": "coupa-source-to-pay-score",
+        "name": "Supply District",
+        "root": 60,
+        "scale": "major",
+        "tempo": 102
+      },
+      "subtitle": "From Need to Value"
+    },
+    {
+      "actorRecipes": {
+        "border-patrol": "stale-fragments",
+        "bouncer": "paper-tangle",
+        "claimed-rover": "missing-cloud",
+        "contour-patrol": "missing-cloud",
+        "eroder": "stale-fragments",
+        "lane-boss": "backlog-knot",
+        "relay-sentinel": "backlog-knot"
+      },
+      "bossShape": "core",
+      "classBodies": {
+        "bomber": "coupa-flower",
+        "carrier": "coupa-flower",
+        "fiber": "coupa-flower",
+        "impact": "coupa-flower",
+        "interceptor": "coupa-flower",
+        "scout": "coupa-flower",
+        "trapper": "coupa-flower"
+      },
+      "coverColor": "#102446",
+      "enemyShape": "cube",
+      "family": "company",
+      "id": "coupa-product-operations-theme",
+      "labels": {
+        "ability": "Support",
+        "boss": "Backlog knot",
+        "currency": "Connections",
+        "enemy": "Paper tangle",
+        "objective": "Connection",
+        "supply": "Support station"
+      },
+      "name": "Coupa · Operations Studio",
+      "palette": {
+        "accent": "#E8C378",
+        "danger": "#FF9A88",
+        "field": "#102446",
+        "grid": "#193866",
+        "ink": "#081D4D",
+        "land": "#2864A3",
+        "muted": "#B8CAE5",
+        "paper": "#FFFFFF",
+        "safe": "#96EAAA",
+        "sky": "#D8F0FF"
+      },
+      "patrolShape": "spark",
+      "player": "coupa-flower",
+      "scene": "network",
+      "soundtrack": {
+        "genre": "chiptune",
+        "id": "coupa-product-operations-score",
+        "name": "Operations Studio",
+        "root": 65,
+        "scale": "major",
+        "tempo": 96
+      },
+      "subtitle": "A Day in Coupa"
+    },
+    {
+      "actorRecipes": {
+        "border-patrol": "stale-fragments",
+        "bouncer": "backlog-knot",
+        "claimed-rover": "missing-cloud",
+        "contour-patrol": "missing-cloud",
+        "eroder": "stale-fragments",
+        "lane-boss": "backlog-knot",
+        "relay-sentinel": "backlog-knot"
+      },
+      "bossShape": "core",
+      "classBodies": {
+        "bomber": "coupa-flower",
+        "carrier": "coupa-flower",
+        "fiber": "coupa-flower",
+        "impact": "coupa-flower",
+        "interceptor": "coupa-flower",
+        "scout": "coupa-flower",
+        "trapper": "coupa-flower"
+      },
+      "coverColor": "#08182F",
+      "enemyShape": "cube",
+      "family": "company",
+      "id": "coupa-developer-integration-theme",
+      "labels": {
+        "ability": "Support",
+        "boss": "Backlog knot",
+        "currency": "Connections",
+        "enemy": "Unresolved knot",
+        "objective": "Connection",
+        "supply": "Support station"
+      },
+      "name": "Coupa · Resource Atlas",
+      "palette": {
+        "accent": "#5FD6FF",
+        "danger": "#FF9A88",
+        "field": "#08182F",
+        "grid": "#193866",
+        "ink": "#081D4D",
+        "land": "#214A97",
+        "muted": "#B8CAE5",
+        "paper": "#FFFFFF",
+        "safe": "#96EAAA",
+        "sky": "#D8F0FF"
+      },
+      "patrolShape": "spark",
+      "player": "coupa-flower",
+      "scene": "network",
+      "soundtrack": {
+        "genre": "ambient",
+        "id": "coupa-developer-integration-score",
+        "name": "Resource Atlas",
+        "root": 57,
+        "scale": "dorian",
+        "tempo": 90
+      },
+      "subtitle": "Connect the Network"
+    }
+  ],
+  "version": "xonix-themes.v1"
+}

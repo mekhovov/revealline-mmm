@@ -1,3 +1,4 @@
+import { AUDIO_FILE_LIMITS } from './mp3-inspection.mjs';
 import { boundedJSON, canonicalJSON, exactKeys, required, stableId } from './data-json.mjs';
 import { DEFAULT_TRACKS, MUSIC_STYLES } from './ui/music.mjs';
 import { SOUNDTRACK_COLLECTIONS } from './content/soundtrack-catalogue.mjs';
@@ -28,8 +29,7 @@ export const SOUNDTRACK_GENRES = Object.freeze(Object.keys(SOUNDTRACK_GENRE_LABE
 export const SOUNDTRACK_MODES = Object.freeze(['auto', ...SOUNDTRACK_GENRES, 'fusion', 'mix']);
 export const AUDIO_TRACK_FORMAT = 'revealline-audio-track.v1';
 export const SOUNDTRACK_LIMITS = Object.freeze({
-  trackBytes: 32 * 1024 * 1024,
-  durationSeconds: 720,
+  ...AUDIO_FILE_LIMITS,
   tracks: 128,
   customTracks: 123,
   customPlaylists: 26,

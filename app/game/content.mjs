@@ -44,6 +44,35 @@ export const FOUNDATION_SCENARIO_VERSION = 'xonix-playground.v6';
 export const RELAY_SCENARIO_VERSION = 'xonix-playground.v7';
 export const DIRECTIONAL_SCENARIO_VERSION = 'xonix-playground.v8';
 export const SENTINEL_SCENARIO_VERSION = 'xonix-playground.v9';
+export const HUNT_SCENARIO_VERSION = 'xonix-playground.v10';
+export const SNAKE_SCENARIO_VERSION = 'xonix-playground.v11';
+export const PURSUIT_SCENARIO_VERSION = 'xonix-playground.v12';
+export const SNAKE_PURSUIT_SCENARIO_VERSION = 'xonix-playground.v13';
+export const PURSUIT_V2_SCENARIO_VERSION = 'xonix-playground.v14';
+export const SNAKE_PURSUIT_V2_SCENARIO_VERSION = 'xonix-playground.v15';
+
+// Transport admission and Studio preparation share this table. The older v1
+// envelope remains readable; new v1 previews can carry an explicit null mastery.
+const scenarioLevelVersions = Object.freeze({
+  [MASTERY_SCENARIO_VERSION]: 'xonix-level.v1',
+  [SCENARIO_VERSION]: 'xonix-level.v1',
+  [ENCOUNTER_SCENARIO_VERSION]: 'xonix-level.v2',
+  [WIDE_SCENARIO_VERSION]: 'xonix-level.v3',
+  [CLASSIC_SCENARIO_VERSION]: 'xonix-level.v4',
+  [FOUNDATION_SCENARIO_VERSION]: 'xonix-level.v5',
+  [RELAY_SCENARIO_VERSION]: 'xonix-level.v6',
+  [DIRECTIONAL_SCENARIO_VERSION]: 'xonix-level.v7',
+  [SENTINEL_SCENARIO_VERSION]: 'xonix-level.v8',
+  [HUNT_SCENARIO_VERSION]: 'xonix-level.v9',
+  [SNAKE_SCENARIO_VERSION]: 'xonix-level.v11',
+  [PURSUIT_SCENARIO_VERSION]: 'xonix-level.v12',
+  [SNAKE_PURSUIT_SCENARIO_VERSION]: 'xonix-level.v13',
+  [PURSUIT_V2_SCENARIO_VERSION]: 'xonix-level.v14',
+  [SNAKE_PURSUIT_V2_SCENARIO_VERSION]: 'xonix-level.v15',
+});
+export function scenarioFormatForLevel(version) {
+  return Object.entries(scenarioLevelVersions).find(([, level]) => level === version)?.[0] ?? null;
+}
 
 /** A preview uses the authored definition's campaign ID and this single map.
  * It is deliberately separate from any installed campaign or award authority.
@@ -130,12 +159,13 @@ function checkJSON(value, path = 'content') {
     ancestors.add(item);
     const descriptors = Object.getOwnPropertyDescriptors(item),
       names = Object.keys(descriptors);
-    if (Array.isArray(item) && item.length > 256) {
-      errors.push(contentError('arrayBudget', { path: where }));
+    const arrayLimit = where === 'content.level.classic.terrain' ? 512 : 256;
+    if (Array.isArray(item) && item.length > arrayLimit) {
+      errors.push(contentError('arrayBudget', { path: where, limit: arrayLimit }));
       ancestors.delete(item);
       return;
     }
-    if (names.length > 257) {
+    if (names.length > (Array.isArray(item) ? arrayLimit + 1 : 257)) {
       errors.push(contentError('fieldBudget', { path: where }));
       ancestors.delete(item);
       return;
@@ -440,8 +470,7 @@ function webpSize(bytes) {
  * Original bytes are never converted or rewritten. No SVG, URL, script or animation.
  */
 export function inspectImageDataUrl(dataUrl) {
-  const errors = [];
-  let mime, width, height, byteLength;
+  let mime, byteLength;
   if (typeof dataUrl !== 'string' || dataUrl.length > CONTENT_LIMITS.maxEncodedImageChars)
     return result([contentError('image.encodedBudgetOrType')]);
   const match = /^data:image\/(png|jpeg|webp);base64,/.exec(dataUrl);
@@ -455,14 +484,34 @@ export function inspectImageDataUrl(dataUrl) {
   if (byteLength > CONTENT_LIMITS.maxImageBytes)
     return result([contentError('image.originalByteBudget')]);
   try {
-    const binary = atob(encoded),
-      bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0)),
-      size =
-        match[1] === 'png'
-          ? pngSize(bytes)
-          : match[1] === 'jpeg'
-            ? jpegSize(bytes)
-            : webpSize(bytes);
+    const binary = atob(encoded);
+    return inspectImageBytes(
+      Uint8Array.from(binary, (c) => c.charCodeAt(0)),
+      mime,
+    );
+  } catch (error) {
+    return result([error.message || contentError('image.headerUnreadable')], { mime, byteLength });
+  }
+}
+/** Inspect owned binary originals without a base64 encode/decode roundtrip.
+ * Byte, pixel, static-container and MIME checks match embedded-image admission.
+ */
+export function inspectImageBytes(bytes, mime) {
+  if (!(bytes instanceof Uint8Array)) return result([contentError('image.headerUnreadable')]);
+  if (!['image/png', 'image/jpeg', 'image/webp'].includes(mime))
+    return result([contentError('image.embeddedDataUrlRequired')]);
+  const byteLength = bytes.byteLength;
+  if (byteLength > CONTENT_LIMITS.maxImageBytes)
+    return result([contentError('image.originalByteBudget')]);
+  const errors = [];
+  let width, height;
+  try {
+    const size =
+      mime === 'image/png'
+        ? pngSize(bytes)
+        : mime === 'image/jpeg'
+          ? jpegSize(bytes)
+          : webpSize(bytes);
     ({ width, height } = size);
     if (
       !width ||
@@ -483,22 +532,20 @@ export function validateScenario(value, { classRecipes: defaultRecipes = CLASSES
   if (errors.length) return result(errors, { warnings });
   if (
     !plain(value) ||
-    ![
-      SCENARIO_VERSION,
-      MASTERY_SCENARIO_VERSION,
-      ENCOUNTER_SCENARIO_VERSION,
-      WIDE_SCENARIO_VERSION,
-      CLASSIC_SCENARIO_VERSION,
-      FOUNDATION_SCENARIO_VERSION,
-      RELAY_SCENARIO_VERSION,
-      DIRECTIONAL_SCENARIO_VERSION,
-      SENTINEL_SCENARIO_VERSION,
-    ].includes(value.format)
+    typeof value.format !== 'string' ||
+    !Object.hasOwn(scenarioLevelVersions, value.format)
   )
     return result([contentError('scenario.supportedFormat')], {
       warnings,
     });
-  const sentinel = value.format === SENTINEL_SCENARIO_VERSION;
+  const snakePursuit = [SNAKE_PURSUIT_SCENARIO_VERSION, SNAKE_PURSUIT_V2_SCENARIO_VERSION].includes(
+    value.format,
+  );
+  const pursuit =
+    [PURSUIT_SCENARIO_VERSION, PURSUIT_V2_SCENARIO_VERSION].includes(value.format) || snakePursuit;
+  const snake = value.format === SNAKE_SCENARIO_VERSION || snakePursuit;
+  const hunt = value.format === HUNT_SCENARIO_VERSION || snake || pursuit;
+  const sentinel = value.format === SENTINEL_SCENARIO_VERSION || hunt;
   const directional = value.format === DIRECTIONAL_SCENARIO_VERSION || sentinel;
   const relays = value.format === RELAY_SCENARIO_VERSION || directional;
   const foundations = value.format === FOUNDATION_SCENARIO_VERSION || relays;
@@ -524,25 +571,7 @@ export function validateScenario(value, { classRecipes: defaultRecipes = CLASSES
     errors,
   );
   errors.push(...validateLevel(value.level).errors);
-  if (
-    plain(value.level) &&
-    value.level.version !==
-      (sentinel
-        ? 'xonix-level.v8'
-        : directional
-          ? 'xonix-level.v7'
-          : relays
-            ? 'xonix-level.v6'
-            : foundations
-              ? 'xonix-level.v5'
-              : classic
-                ? 'xonix-level.v4'
-                : wide
-                  ? 'xonix-level.v3'
-                  : hasEncounter
-                    ? 'xonix-level.v2'
-                    : 'xonix-level.v1')
-  )
+  if (plain(value.level) && value.level.version !== scenarioLevelVersions[value.format])
     errors.push(contentError('scenario.simulationVersionMatch'));
   themeChecks(value.theme, errors);
   if (plain(value.level)) {

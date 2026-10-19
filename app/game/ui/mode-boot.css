@@ -1,0 +1,51 @@
+/* Loaded before the theme and module graph: no legacy setup-page flash. */
+html:not([data-tool-state='ready']) body > :is(#couch-app, #coop-app, [data-language-launch]) {
+  display: none !important;
+}
+html[data-tool-state='ready'] #mode-boot {
+  display: none !important;
+}
+html:not([data-tool-state='ready']) {
+  background: #070914;
+  color-scheme: dark;
+}
+.mode-boot {
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: max(20px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(20px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  color: var(--iw-text, #edf2ff);
+  background: var(--iw-ink, #070914);
+}
+.mode-boot-card {
+  box-sizing: border-box;
+  width: min(100%, 510px);
+  display: grid;
+  gap: 20px;
+}
+.mode-boot .fpv-line-wordmark {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5.7;
+  object-fit: cover;
+  object-position: center 42%;
+}
+.mode-boot :is(#boot-status, #coop-boot) {
+  margin: 0;
+}
+.mode-boot a {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 44px;
+  color: var(--iw-accent, #78dce8);
+}
+.mode-boot a:focus-visible {
+  outline: 3px solid var(--iw-focus, #78dce8);
+  outline-offset: 4px;
+}
+.mode-boot [hidden] {
+  display: none !important;
+}

@@ -1,5 +1,5 @@
 import { boundedJSON, exactKeys, required } from './data-json.mjs';
-import { inspectImageDataUrl } from './content.mjs';
+import { inspectImageBytes } from './content.mjs';
 import { MEDIA_LIMITS, STILL_ASSET_FORMAT, validateStillAsset } from './media-library.mjs';
 
 const sizeGetter = Object.getOwnPropertyDescriptor(Blob.prototype, 'size').get;
@@ -29,10 +29,7 @@ function imageHeader(bytes) {
           ? 'image/webp'
           : null;
   required(mime, 'Only static PNG/JPEG/WebP bytes are supported.');
-  let binary = '';
-  for (let offset = 0; offset < bytes.length; offset += 16384)
-    binary += String.fromCharCode(...bytes.subarray(offset, offset + 16384));
-  const result = inspectImageDataUrl(`data:${mime};base64,${btoa(binary)}`);
+  const result = inspectImageBytes(bytes, mime);
   required(result.valid, `Invalid still image: ${result.errors.join('; ')}`);
   return result;
 }

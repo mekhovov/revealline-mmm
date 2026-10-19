@@ -1,5 +1,5 @@
-const FORMAT = 'revealline.team-contextual-teaching.v1';
-const DEFAULT_KEY = 'revealline.team-contextual-teaching.v1';
+const FORMAT = 'revealline-mmm.team-contextual-teaching.v1';
+const DEFAULT_KEY = 'revealline-mmm.team-contextual-teaching.v1';
 const SKILLS = Object.freeze(['cut', 'support', 'rescue']);
 
 const blank = () => ({ introduced: new Set(), completed: new Set() });

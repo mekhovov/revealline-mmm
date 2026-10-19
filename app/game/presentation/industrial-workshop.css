@@ -1,0 +1,2473 @@
+@import url('../ui/field-kit-fonts.css');
+
+/* Shared appearance recipes. Existing screen layout is in @layer legacy so
+   component paint has one authority, independent of a screen's ID selectors.
+   The aliases below are the migration boundary for existing semantic classes;
+   new components should use data-ui-surface / data-ui-action / data-ui-tone. */
+[data-theme-styled='true'] {
+  color-scheme: var(--iw-color-scheme, dark);
+  color: var(--iw-text);
+  background: var(--iw-ink);
+  font-family: var(--iw-font-ui);
+  --ui-shadow: color-mix(in srgb, var(--iw-ink) 78%, black);
+  --ui-hover: color-mix(in srgb, var(--iw-panel-raised) 90%, var(--iw-text));
+  --ui-disabled: var(--iw-muted);
+  --ui-control-border: var(--iw-control-line);
+}
+[data-theme-family] {
+  /* Each presentation owns its finish, including nested Studio specimens.
+     Material paint never leaks from an enclosing theme or accessibility mode. */
+  --ui-panel-finish: none;
+  --ui-control-finish: none;
+  --ui-hover-finish: initial;
+  --ui-selected-finish: initial;
+  --ui-active-finish: none;
+  --ui-inset-finish: none;
+  --ui-toolbar-finish: none;
+  --ui-thumb-finish: none;
+  --ui-inset-depth: initial;
+  --ui-input-hover-depth: initial;
+  --ui-material-travel: none;
+  --ui-loading-rail: 3px;
+  --ui-hover-face: initial;
+  --ui-hover-ink: initial;
+  --ui-hover-frame: initial;
+  --ui-panel-frame: none;
+  --ui-raised-frame: none;
+  --ui-primary-frame: none;
+  --ui-panel-depth: initial;
+  --ui-action-depth: initial;
+  --ui-hover-depth: initial;
+  --ui-pressed-depth: initial;
+  --ui-selected-depth: initial;
+  --ui-gallery-depth: none;
+  --ui-press-travel: none;
+  --ui-scene-motif: none;
+  --ui-scene-motif-size: 48px 48px;
+  --ui-scene-inset: 24px 24px auto auto;
+  --ui-scene-width: min(24vw, 192px);
+  --ui-scene-height: 96px;
+  --ui-scene-repeat: no-repeat;
+  --ui-scene-opacity: 0.18;
+}
+/* Rebind older semantic variables on their owning scope. Authored image, video,
+   Canvas and 3D assets remain in their own renderer; none are filtered/recolored. */
+[data-theme-styled='true'],
+[data-theme-styled='true']
+  :where(
+    body,
+    .field-kit,
+    dialog,
+    .race-screen,
+    .race-shell,
+    .overlay-card,
+    .native-landing,
+    .native-settings,
+    [data-ui-surface]
+  ) {
+  --fk-bg: var(--iw-ink);
+  --fk-panel: var(--iw-panel);
+  --fk-panel-raised: var(--iw-panel-raised);
+  --fk-text: var(--iw-text);
+  --fk-muted: var(--iw-muted);
+  --fk-line: var(--iw-line);
+  --fk-control-line: var(--iw-control-line);
+  --fk-cyan: var(--iw-accent);
+  --fk-amber: var(--iw-amber);
+  --fk-hazard: var(--iw-hazard);
+  --fk-success: var(--iw-safe);
+  --fk-accent: var(--iw-accent);
+  --fk-on-accent: var(--iw-on-accent, var(--iw-ink));
+  --fk-focus: var(--iw-focus, var(--iw-control-line));
+  --fk-font-ui: var(--iw-font-ui);
+  --fk-font-pixel: var(--iw-font-ui);
+  --fk-font-mono: var(--iw-font-mono);
+  --fk-font-display: var(--iw-font-display);
+  --fk-text-body: var(--iw-text-size);
+  --fk-text-control: var(--iw-text-size);
+  --fk-text-secondary: max(14px, calc(var(--iw-text-size) - 2px));
+  --fk-target-size: var(--iw-target);
+  --rl-menu-skin-bg: var(--iw-ink);
+  --rl-menu-skin-panel: var(--iw-panel);
+  --rl-menu-skin-panel-raised: var(--iw-panel-raised);
+  --rl-menu-skin-text: var(--iw-text);
+  --rl-menu-skin-muted: var(--iw-muted);
+  --rl-menu-skin-line: var(--iw-line);
+  --rl-menu-skin-control-line: var(--iw-control-line);
+  --rl-menu-skin-cyan: var(--iw-accent);
+  --rl-menu-skin-amber: var(--iw-amber);
+  --rl-menu-skin-hazard: var(--iw-hazard);
+  --rl-menu-skin-decorative: var(--iw-line);
+  --native-ink: var(--iw-ink);
+  --native-panel: var(--iw-panel);
+  --native-surface: var(--iw-panel-raised);
+  --paper: var(--iw-ink);
+  --ink: var(--iw-text);
+  --bg: var(--iw-ink);
+  --panel: var(--iw-panel);
+  --panel-raised: var(--iw-panel-raised);
+  --text: var(--iw-text);
+  --muted: var(--iw-muted);
+  --line: var(--iw-line);
+  --accent: var(--iw-accent);
+  --safe: var(--iw-safe);
+  --danger: var(--iw-hazard);
+  --sky: var(--iw-accent);
+  --sun: var(--iw-amber);
+  --mint: var(--iw-safe);
+}
+[data-theme-styled='true']
+  :where(
+    body,
+    .access-gate,
+    .launch-screen,
+    .native-landing,
+    .native-mission-library,
+    .race-screen,
+    .race-shell,
+    #coop-menu,
+    [data-ui-surface='page']
+  ) {
+  color: var(--iw-text);
+  background: var(--iw-ink);
+  font-family: var(--iw-font-ui);
+  color-scheme: inherit;
+}
+[data-theme-styled='true']
+  :where(p, li, dd, dt, label, legend, summary, h1, h2, h3, h4, h5, h6, strong, b, em, span) {
+  color: inherit;
+  text-shadow: none;
+}
+[data-theme-styled='true'] :where(h1, .display-heading, .native-game-title) {
+  color: var(--iw-text);
+  font-family: var(--iw-font-display);
+  letter-spacing: 0.02em;
+}
+[data-theme-styled='true'] :where(h2, h3, h4, legend, label, summary) {
+  font-family: var(--iw-font-ui);
+}
+[data-theme-styled='true'] :where(a) {
+  color: var(--iw-link, var(--iw-accent));
+  text-underline-offset: 0.2em;
+}
+[data-theme-styled='true']
+  :where(
+    .micro-note,
+    .muted,
+    small,
+    .help,
+    .description,
+    .quiet,
+    .smallprint,
+    .race-footnote,
+    .race-menu-status,
+    .soundtrack-advanced-description,
+    .native-menu-footer,
+    #demo-status,
+    #demo-picture-note,
+    #demo-audio-artist,
+    .demo-audio-status,
+    .sidebar-note,
+    [data-ui-tone='muted']
+  ) {
+  color: var(--iw-muted);
+}
+[data-theme-styled='true']
+  :where(.eyebrow, .launch-kicker, .access-gate-eyebrow, [data-ui-tone='accent']) {
+  color: var(--iw-accent);
+}
+[data-theme-styled='true'] :where(kbd, code, pre, .telemetry, .hud-value, .metric-value) {
+  font-family: var(--iw-font-mono);
+}
+
+/* Reading surfaces receive a bounded material finish over semantic colors.
+   Asset frames supply the edges; their opaque nine-slice centers are not used. */
+[data-theme-styled='true']
+  :where(
+    dialog,
+    .overlay-card,
+    .panel,
+    .field-kit-panel,
+    .inspection-card,
+    .mission-detail,
+    .settings-group,
+    .inspector,
+    .tool-panel,
+    .editor-panel,
+    .launch-card,
+    .access-gate-card,
+    .hud-card,
+    .sim-panel,
+    .workshop-card,
+    .iw-panel,
+    .studio-panel,
+    .sidebar,
+    .creator-inspector,
+    .controller-settings-section,
+    .settings-section,
+    .settings-card,
+    .info-card,
+    .choice-card,
+    .mission-card,
+    .campaign-card,
+    .library-card,
+    .community-card,
+    .candidate-entry,
+    .version-control,
+    .pack-instructions,
+    .content-card,
+    .pack-card,
+    .profile-card,
+    .recovery-card,
+    .download-card,
+    .story-card,
+    .flight-dialog,
+    .soundtrack-section,
+    .soundtrack-now-card,
+    .soundtrack-listen-card,
+    .soundtrack-online-card,
+    .soundtrack-settings-style-card,
+    .soundtrack-source-row,
+    .first-flight-card,
+    .school-lesson-card,
+    .school-after,
+    .coach-card,
+    .result-panel,
+    .sim-academy #complete,
+    .sim-academy #fallback,
+    .optional-world-card,
+    .team-level-card,
+    .team-review-card,
+    .creator-media-card,
+    .creator-mission-review-card,
+    .batch-card,
+    .watch,
+    [role='tooltip'],
+    [data-component='panel'],
+    [data-ui-surface='panel'],
+    [data-ui-surface='dialog']
+  ) {
+  color: var(--iw-text);
+  font-family: var(--iw-font-ui);
+  background: var(--ui-panel-finish, none), var(--iw-panel);
+  border: 2px solid var(--iw-line);
+  border-image: var(--ui-panel-frame, none);
+  border-radius: 0;
+  box-shadow: var(
+    --ui-panel-depth,
+    inset 0 1px 0 color-mix(in srgb, var(--iw-text) 8%, transparent),
+    0 2px 0 var(--ui-shadow),
+    0 8px 18px #0002
+  );
+}
+[data-theme-styled='true']
+  :where(
+    .masthead,
+    .shell-bar,
+    body > header,
+    .toolbar,
+    .studio-toolbar,
+    .authoring-input-rail,
+    .authoring-section-menu,
+    .sim-toolbar,
+    .hud,
+    .telemetry,
+    .workspace-bar,
+    .studio-header,
+    .flight-controls,
+    .flight-immersive-bar,
+    .sim-drone-response,
+    .flight-instruments,
+    .flight-coaching,
+    .coaching,
+    .sim-menu-hint,
+    .coach-heading,
+    .coach-lab-toolbar,
+    .coach-lab-telemetry,
+    .coach-drone-figure figcaption,
+    .handheld-flight-identity,
+    .sim-worlds #flight-objective,
+    .sim-worlds .flight-brief p,
+    .beginner-coach[data-stage='live'] :is(.coach-target, .coach-explain),
+    .settings-heading,
+    .dialog-header,
+    .dialog-footer,
+    .field-kit-settings-tabs,
+    .soundtrack-footer,
+    #soundtrack-operation,
+    .optional-worlds-top,
+    .race-heading,
+    .reading-toolbar,
+    .shell-dialog-heading,
+    .demo-panel,
+    .demo-notes,
+    .demo-transport,
+    #demo-audio,
+    [data-ui-surface='toolbar']
+  ) {
+  color: var(--iw-text);
+  background: var(--ui-toolbar-finish, none), var(--iw-panel);
+  border-color: var(--iw-line);
+  border-image: none;
+  text-shadow: none;
+}
+[data-theme-styled='true']
+  :where(
+    fieldset,
+    details,
+    .drop,
+    .drop-zone,
+    .setting-row,
+    .settings-row,
+    .settings-preset,
+    .device-card,
+    .controller-card,
+    .controller-mapping,
+    .range-field,
+    .settings-metric,
+    .settings-note,
+    .settings-warning,
+    .mission-brief,
+    .enemy-guide,
+    .soundtrack-choice,
+    .soundtrack-advanced,
+    .soundtrack-online-results,
+    .school-flight-map,
+    .replay-controls,
+    .radio-device-card,
+    .radio-monitor,
+    .coach-tip,
+    .checkpoint,
+    .encounter-cue,
+    .demo-board,
+    .demo-settings,
+    .seat,
+    .control-card,
+    .batch-card-media,
+    .creator-media-poster,
+    .creator-poster-option,
+    #mission-brief-reading,
+    [data-ui-surface='inset']
+  ) {
+  color: var(--iw-text);
+  background: var(--ui-inset-finish, none), var(--iw-ink);
+  border-color: var(--iw-line);
+  border-image: none;
+  border-radius: 0;
+  box-shadow: var(--ui-inset-depth, none);
+}
+[data-theme-styled='true'] :where(table, .asset-grid, .inventory-grid, [data-ui-surface='table']) {
+  color: var(--iw-text);
+  background: var(--ui-panel-finish, none), var(--iw-panel);
+}
+[data-theme-styled='true'] :where(th, td, hr) {
+  color: inherit;
+  border-color: var(--iw-line);
+}
+[data-theme-styled='true'] :where(th, thead) {
+  background: var(--iw-panel-raised);
+}
+[data-theme-styled='true']
+  :where(tr[aria-selected='true'], [data-ui-surface='slot'][aria-selected='true']) {
+  color: var(--iw-on-selection, var(--iw-text));
+  background: var(--iw-selection, var(--iw-panel-raised));
+  box-shadow: inset 3px 0 var(--iw-focus, var(--iw-accent));
+}
+
+/* Each action chooses paired local roles; one painter handles every state. */
+[data-theme-styled='true']
+  :where(
+    button,
+    .button,
+    .button-link,
+    #profile-recovery-root a,
+    .action,
+    .community-entry,
+    [role='button'],
+    [data-ui-action],
+    .launch-action,
+    .file-button,
+    .native-menu-actions > a,
+    .game-mode-choice > a
+  ) {
+  --ui-action-status-depth: 0 0 0 0 transparent;
+  --ui-action-fill: var(--iw-button-default-background, var(--iw-panel-raised));
+  --ui-action-ink: var(--iw-button-default-foreground, var(--iw-text));
+  --ui-action-hover-fill: var(
+    --ui-hover-face,
+    var(--iw-button-hover-background, var(--iw-panel-raised))
+  );
+  --ui-action-hover-ink: var(--ui-hover-ink, var(--iw-button-hover-foreground, var(--iw-text)));
+  --ui-action-pressed-fill: var(--iw-button-pressed-background, var(--iw-selection));
+  --ui-action-pressed-ink: var(--iw-button-pressed-foreground, var(--iw-on-selection));
+  --ui-action-edge: var(--iw-control-line);
+  --ui-action-frame: var(--ui-raised-frame, none);
+  --ui-action-hover-frame: var(--ui-hover-frame, var(--ui-raised-frame, none));
+  --ui-action-pressed-frame: var(--ui-primary-frame, none);
+  color: var(--ui-action-ink);
+  background: var(--ui-control-finish, none), var(--ui-action-fill);
+  border: 2px solid var(--ui-action-edge);
+  border-image: var(--ui-action-frame, none);
+  border-radius: 0;
+  min-height: var(--iw-target);
+  box-sizing: border-box;
+  padding: 8px 14px;
+  font-family: var(--iw-font-ui);
+  font-size: var(--iw-text-size);
+  font-weight: 600;
+  line-height: 1.35;
+  text-shadow: none;
+  text-decoration: none;
+  box-shadow:
+    var(--ui-action-status-depth, 0 0 0 0 transparent),
+    var(
+      --ui-action-depth,
+      inset 0 1px 0 color-mix(in srgb, var(--ui-action-ink) 12%, transparent),
+      inset 0 -1px 0 #0002,
+      0 2px 0 var(--ui-shadow)
+    );
+  cursor: pointer;
+}
+[data-theme-styled='true']
+  :where(
+    .primary,
+    .primary-action,
+    .field-kit-primary,
+    .race-primary,
+    .soundtrack-primary-action,
+    .community-entry,
+    [data-ui-action='primary']
+  ) {
+  --ui-action-fill: var(--iw-primary-default-background, var(--iw-accent));
+  --ui-action-ink: var(--iw-primary-default-foreground, var(--iw-on-accent, var(--iw-ink)));
+  --ui-action-hover-fill: var(--iw-primary-hover-background, var(--iw-accent));
+  --ui-action-hover-ink: var(--iw-primary-hover-foreground, var(--iw-on-accent, var(--iw-ink)));
+  --ui-action-pressed-fill: var(--iw-primary-pressed-background, var(--iw-selection));
+  --ui-action-pressed-ink: var(--iw-primary-pressed-foreground, var(--iw-on-selection));
+  --ui-action-edge: var(--iw-accent);
+  --ui-action-frame: var(--ui-primary-frame, none);
+  --ui-action-hover-frame: var(--ui-primary-frame, none);
+}
+[data-theme-styled='true'] :where(.danger, .danger-action, [data-ui-action='danger']) {
+  --ui-action-fill: var(--iw-danger-default-background, var(--iw-hazard));
+  --ui-action-ink: var(--iw-danger-default-foreground, var(--iw-on-hazard));
+  --ui-action-hover-fill: var(--iw-danger-hover-background, var(--iw-hazard));
+  --ui-action-hover-ink: var(--iw-danger-hover-foreground, var(--iw-on-hazard));
+  --ui-action-pressed-fill: var(--iw-danger-pressed-background, var(--iw-hazard));
+  --ui-action-pressed-ink: var(--iw-danger-pressed-foreground, var(--iw-on-hazard));
+  --ui-action-edge: var(--iw-hazard);
+  --ui-action-frame: none;
+  --ui-action-hover-frame: none;
+  --ui-action-pressed-frame: none;
+}
+[data-theme-styled='true']
+  :where(
+    button,
+    .button,
+    .button-link,
+    #profile-recovery-root a,
+    .action,
+    .community-entry,
+    [role='button'],
+    [data-ui-action],
+    .launch-action,
+    .file-button,
+    .native-menu-actions > a,
+    .game-mode-choice > a
+  ):is(:hover, [data-state='hover']):not(:disabled, [aria-disabled='true']) {
+  background: var(--ui-hover-finish, var(--ui-control-finish, none)), var(--ui-action-hover-fill);
+  border-image: var(--ui-action-hover-frame, none);
+  color: var(--ui-action-hover-ink);
+  box-shadow:
+    var(--ui-action-status-depth, 0 0 0 0 transparent),
+    var(--ui-hover-depth, inset 0 0 0 1px var(--ui-action-edge), 0 2px 0 var(--ui-shadow));
+}
+[data-theme-styled='true']
+  :where(
+    button,
+    .button,
+    .button-link,
+    #profile-recovery-root a,
+    .action,
+    .community-entry,
+    [role='button'],
+    [data-ui-action],
+    .launch-action,
+    .file-button,
+    .native-menu-actions > a,
+    .game-mode-choice > a
+  ):is(:active, [data-state='pressed']):not(:disabled, [aria-disabled='true']) {
+  background: var(--ui-active-finish, none), var(--ui-action-pressed-fill);
+  color: var(--ui-action-pressed-ink);
+  border-image: var(--ui-action-pressed-frame, none);
+  box-shadow:
+    var(--ui-action-status-depth, 0 0 0 0 transparent),
+    var(--ui-pressed-depth, inset 0 2px 3px #0005);
+}
+[data-theme-styled='true']
+  :where(button, .button, [role='button'], a, [role='tab']):is(
+    [aria-pressed='true'],
+    [aria-selected='true'],
+    [aria-current]:where(:not([aria-current='false'])),
+    .selected,
+    .active-tab
+  ) {
+  --ui-action-fill: var(--iw-selection, var(--iw-panel-raised));
+  --ui-action-ink: var(--iw-on-selection, var(--iw-text));
+  --ui-action-hover-fill: var(--ui-action-fill);
+  --ui-action-hover-ink: var(--ui-action-ink);
+  color: var(--ui-action-ink);
+  background: var(--ui-selected-finish, var(--ui-active-finish, none)), var(--ui-action-fill);
+  border-color: var(--iw-focus, var(--iw-accent));
+  border-image: var(--ui-primary-frame, none);
+  box-shadow:
+    var(--ui-action-status-depth, 0 0 0 0 transparent),
+    var(--ui-selected-depth, inset 3px 0 var(--iw-focus, var(--iw-accent)));
+  text-decoration-thickness: 2px;
+}
+[data-theme-styled='true']
+  :where(button, .button, [role='button'], a, [role='tab']):is(
+    [aria-pressed='true'],
+    [aria-selected='true'],
+    [aria-current]:where(:not([aria-current='false'])),
+    .selected,
+    .active-tab
+  ):is(:active, [data-state='pressed']):not(:disabled, [aria-disabled='true']) {
+  background: var(--ui-active-finish, none), var(--ui-action-fill);
+  box-shadow:
+    var(--ui-action-status-depth, 0 0 0 0 transparent),
+    var(--ui-pressed-depth, inset 0 2px 3px #0005);
+}
+/* Busy paint is a stable progress rail, not a second label or a spinning
+   pseudo-element that could collide with a control's existing icon. */
+[data-theme-styled='true']
+  :where(button, .button, [role='button'], [data-ui-action])[aria-busy='true']:not(
+    :disabled,
+    [aria-disabled='true']
+  ) {
+  --ui-action-status-depth: inset 0 calc(-1 * var(--ui-loading-rail)) 0 currentColor;
+  cursor: progress;
+}
+[data-theme-styled='true']
+  :where(
+    button,
+    input,
+    select,
+    textarea,
+    a,
+    .button,
+    .button-link,
+    [role='button'],
+    [role='tab'],
+    [data-ui-action]
+  ):is(:disabled, [aria-disabled='true']) {
+  color: var(--iw-muted);
+  background: var(--iw-panel);
+  border-color: var(--iw-line);
+  border-style: dashed;
+  border-image: none;
+  opacity: 1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+[data-theme-styled='true']
+  :where(button, .button, [role='button'])
+  :where(span, strong, em, small) {
+  color: inherit;
+}
+
+/* Native value controls retain browser semantics and keyboard operation. */
+[data-theme-styled='true'] :where(input, select, textarea) {
+  color: var(--iw-input-text, var(--iw-text));
+  background: var(--ui-inset-finish, none), var(--iw-input, var(--iw-ink));
+  border: 2px solid var(--iw-control-line);
+  border-image: none;
+  border-radius: 0;
+  font-family: var(--iw-font-ui);
+  font-size: var(--iw-text-size);
+  accent-color: var(--iw-accent);
+  box-shadow: var(--ui-inset-depth, inset 0 1px 2px #0003);
+}
+[data-theme-styled='true']
+  :where(
+    select,
+    textarea,
+    input:not([type='checkbox'], [type='radio'], [type='range'], [type='color'])
+  ) {
+  min-height: var(--iw-target);
+  box-sizing: border-box;
+  padding: 6px 10px;
+}
+[data-theme-styled='true'] :where(input, textarea)::placeholder {
+  color: var(--iw-muted);
+  opacity: 1;
+}
+[data-theme-styled='true'] :where(option, optgroup) {
+  color: var(--iw-input-text, var(--iw-text));
+  background: var(--iw-input, var(--iw-ink));
+}
+[data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio']) {
+  appearance: none;
+  display: inline-grid;
+  place-content: center;
+  inline-size: 22px;
+  block-size: 22px;
+  min-inline-size: 22px;
+  min-block-size: 22px;
+  flex: 0 0 22px;
+  padding: 0;
+  vertical-align: middle;
+  background: var(--ui-inset-finish, none), var(--iw-ink);
+  border: 2px solid var(--iw-control-line);
+  border-image: none;
+  box-shadow: var(--ui-inset-depth, none);
+}
+[data-theme-styled='true'] input[type='radio'] {
+  border-radius: 50%;
+}
+[data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio'])::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: var(--iw-on-accent, var(--iw-ink));
+  transform: scale(0);
+  clip-path: polygon(0 43%, 17% 26%, 40% 51%, 83% 4%, 100% 20%, 41% 87%);
+}
+[data-theme-styled='true'] input[type='radio']::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  clip-path: none;
+}
+[data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio']):checked {
+  background: var(--ui-active-finish, none), var(--iw-accent);
+  border-color: var(--iw-accent);
+  outline: none;
+  box-shadow: var(--ui-inset-depth, none);
+}
+[data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio']):checked::before {
+  transform: scale(1);
+}
+[data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio']):disabled {
+  background: var(--ui-panel-finish, none), var(--iw-panel);
+  border-color: var(--iw-muted);
+  border-style: dashed;
+  cursor: not-allowed;
+}
+[data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio']):disabled::before {
+  background: var(--iw-muted);
+}
+[data-theme-styled='true'] input[type='checkbox']:indeterminate::before {
+  transform: scale(1);
+  clip-path: inset(40% 0);
+  background: var(--iw-accent);
+}
+[data-theme-styled='true'] label:has(> input:is([type='checkbox'], [type='radio'])) {
+  min-height: var(--iw-target);
+  align-items: center;
+  cursor: pointer;
+}
+[data-theme-styled='true'] input[type='range'] {
+  appearance: none;
+  min-height: var(--iw-target);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+[data-theme-styled='true'] input[type='range']::-webkit-slider-runnable-track {
+  height: 6px;
+  border: 1px solid var(--iw-control-line);
+  background: var(--iw-ink);
+  border-radius: 0;
+}
+[data-theme-styled='true'] input[type='range']::-moz-range-track {
+  height: 4px;
+  border: 1px solid var(--iw-control-line);
+  background: var(--iw-ink);
+  border-radius: 0;
+}
+[data-theme-styled='true'] input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -10px;
+  background: var(--ui-thumb-finish, none), var(--iw-accent);
+  border: 2px solid var(--iw-on-accent, var(--iw-ink));
+  border-radius: 0;
+  box-shadow: 0 0 0 1px var(--iw-control-line);
+}
+[data-theme-styled='true'] input[type='range']::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--ui-thumb-finish, none), var(--iw-accent);
+  border: 2px solid var(--iw-on-accent, var(--iw-ink));
+  border-radius: 0;
+  box-shadow: 0 0 0 1px var(--iw-control-line);
+}
+[data-theme-styled='true'] input[type='range']:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+[data-theme-styled='true'] :where(progress, meter) {
+  accent-color: var(--iw-accent);
+  color: var(--iw-accent);
+  background: var(--iw-ink);
+  border: 1px solid var(--iw-control-line);
+  border-image: none;
+  border-radius: 0;
+}
+[data-theme-styled='true'] progress::-webkit-progress-bar {
+  background: var(--iw-ink);
+}
+[data-theme-styled='true'] progress::-webkit-progress-value {
+  background: var(--ui-active-finish, none), var(--iw-accent);
+}
+[data-theme-styled='true'] progress::-moz-progress-bar {
+  background: var(--ui-active-finish, none), var(--iw-accent);
+}
+[data-theme-styled='true'] :where(*) {
+  scrollbar-color: var(--iw-control-line) var(--iw-ink);
+}
+[data-theme-styled='true'] ::-webkit-scrollbar-thumb {
+  background: var(--iw-control-line);
+  border: 2px solid var(--iw-ink);
+}
+[data-theme-styled='true'] ::-webkit-scrollbar-track {
+  background: var(--iw-ink);
+}
+
+/* Native controls share the same material authority as action buttons.
+   Errors mark the well; the entered value keeps its readable text pair. */
+[data-theme-styled='true']
+  :where(
+    select,
+    textarea,
+    input:not([type='range'], [type='checkbox'], [type='radio'], [type='color'])
+  ):is(:hover, [data-state='hover']):not(:disabled, [aria-disabled='true']) {
+  border-color: var(--iw-focus);
+  box-shadow: var(
+    --ui-input-hover-depth,
+    var(--ui-inset-depth, inset 0 0 0 1px var(--iw-control-line))
+  );
+}
+[data-theme-styled='true']
+  :where(input, select, textarea)[aria-invalid='true']:not(:disabled, [aria-disabled='true']) {
+  color: var(--iw-input-text, var(--iw-text));
+  border-color: var(--iw-hazard);
+  box-shadow:
+    inset 3px 0 0 var(--iw-hazard),
+    var(--ui-inset-depth, 0 0 0 0 transparent);
+}
+[data-theme-styled='true']
+  :where(input, select, textarea)[data-ui-validation='success']:not(
+    [aria-invalid='true'],
+    :disabled,
+    [aria-disabled='true']
+  ) {
+  border-color: var(--iw-safe);
+  box-shadow:
+    inset 3px 0 0 var(--iw-safe),
+    var(--ui-inset-depth, 0 0 0 0 transparent);
+}
+[data-theme-styled='true']
+  :where(input[type='checkbox'], input[type='radio']):is(:hover, [data-state='hover']):not(
+    :disabled,
+    [aria-disabled='true'],
+    [aria-invalid='true'],
+    [data-ui-validation='success']
+  ) {
+  border-color: var(--iw-focus);
+  box-shadow: var(--ui-input-hover-depth, var(--ui-inset-depth, none));
+}
+[data-theme-styled='true'] input[type='range']::-webkit-slider-runnable-track {
+  background: var(--ui-inset-finish, none), var(--iw-ink);
+  box-shadow: var(--ui-inset-depth, none);
+}
+[data-theme-styled='true'] input[type='range']::-moz-range-track {
+  background: var(--ui-inset-finish, none), var(--iw-ink);
+  box-shadow: var(--ui-inset-depth, none);
+}
+[data-theme-styled='true']
+  input[type='range']:is(:hover, :focus-visible, [data-state='hover'])::-webkit-slider-thumb {
+  box-shadow:
+    0 0 0 2px var(--iw-focus),
+    var(--ui-hover-depth, 0 0 0 0 transparent);
+}
+[data-theme-styled='true']
+  input[type='range']:is(:hover, :focus-visible, [data-state='hover'])::-moz-range-thumb {
+  box-shadow:
+    0 0 0 2px var(--iw-focus),
+    var(--ui-hover-depth, 0 0 0 0 transparent);
+}
+[data-theme-styled='true'] input[type='range']:disabled {
+  opacity: 1;
+}
+[data-theme-styled='true'] input[type='range']:disabled::-webkit-slider-thumb {
+  background: var(--iw-muted);
+  border: 2px dashed var(--iw-panel);
+  box-shadow: 0 0 0 1px var(--iw-line);
+}
+[data-theme-styled='true'] input[type='range']:disabled::-moz-range-thumb {
+  background: var(--iw-muted);
+  border: 2px dashed var(--iw-panel);
+  box-shadow: 0 0 0 1px var(--iw-line);
+}
+
+/* Compiled icon silhouettes are reusable geometry, never a fixed cyan pigment. */
+[data-theme-styled='true'] [data-presentation-icon]:not([data-menu-icon])::before {
+  color: inherit;
+  content: '';
+  display: inline-block;
+  inline-size: 24px;
+  block-size: 24px;
+  flex: 0 0 24px;
+  background: currentColor;
+  mask: var(--fk-current-icon, linear-gradient(transparent, transparent)) center / contain no-repeat;
+  -webkit-mask: var(--fk-current-icon, linear-gradient(transparent, transparent)) center / contain
+    no-repeat;
+  clip-path: none;
+  image-rendering: pixelated;
+}
+[data-theme-styled='true']
+  :where([data-presentation-control], [data-presentation-hud], [data-presentation-reward])::before {
+  background: currentColor;
+  color: inherit;
+  mask: var(--fk-current-glyph, linear-gradient(transparent, transparent)) center / contain
+    no-repeat;
+  -webkit-mask: var(--fk-current-glyph, linear-gradient(transparent, transparent)) center / contain
+    no-repeat;
+}
+[data-theme-styled='true'] :where([data-menu-icon])::before {
+  background: currentColor;
+  mask: var(--native-menu-icon, linear-gradient(transparent, transparent)) center / contain
+    no-repeat;
+  -webkit-mask: var(--native-menu-icon, linear-gradient(transparent, transparent)) center / contain
+    no-repeat;
+}
+[data-theme-styled='true'] :where(.meter > span, .launch-signal i) {
+  background: var(--iw-accent);
+}
+[data-theme-styled='true'] :where(.meter, [role='progressbar']) {
+  color: var(--iw-text);
+  background: var(--iw-ink);
+  border-color: var(--iw-control-line);
+  border-image: none;
+}
+
+/* Focus and state cues retain a shape in every palette. */
+[data-theme-styled='true'] :is(:focus-visible, .controller-focus, [data-state='focus']) {
+  outline: 3px solid var(--iw-focus, var(--iw-control-line));
+  outline-offset: 3px;
+  scroll-margin: 12px;
+}
+[data-theme-styled='true']
+  :where([aria-invalid='true']:not(input, select, textarea), .error, [data-ui-tone='danger']) {
+  color: var(--iw-hazard);
+  border-color: var(--iw-hazard);
+  border-image: none;
+}
+[data-theme-styled='true'] :where([data-ui-tone='success'], .success) {
+  color: var(--iw-safe);
+}
+[data-theme-styled='true'] :where([data-ui-tone='warning'], .warning) {
+  color: var(--iw-amber);
+}
+[data-theme-styled='true'] ::selection {
+  color: var(--iw-on-selection, var(--iw-ink));
+  background: var(--iw-selection, var(--iw-accent));
+}
+[data-theme-styled='true'] :where(dialog)::backdrop {
+  background: color-mix(in srgb, var(--iw-ink) 78%, transparent);
+}
+
+/* Source art stays intact; only its reading veil follows the interface. */
+[data-theme-styled='true'] .menu-scene::after {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--iw-ink) 94%, transparent),
+      color-mix(in srgb, var(--iw-ink) 75%, transparent) 28%,
+      color-mix(in srgb, var(--iw-ink) 22%, transparent) 63%,
+      transparent
+    ),
+    linear-gradient(0deg, color-mix(in srgb, var(--iw-ink) 65%, transparent), transparent 30%);
+}
+[data-theme-styled='true'] .menu-scene {
+  --scene-ink: var(--iw-ink);
+  --scene-accent: var(--iw-panel-raised);
+}
+[data-theme-styled='true'] :where(.menu-ornament, .menu-scene-decoration) {
+  color: var(--iw-line);
+}
+[data-theme-texture='off'] :where(.menu-ornament, .menu-scene-decoration, .menu-retune-layer) {
+  display: none;
+}
+/* Composed action shadows need a transparent zero, not `none`: a shadow
+   list containing `none` is invalid and would also remove semantic busy rails. */
+[data-theme-surface='flat'] {
+  --ui-panel-frame: none;
+  --ui-raised-frame: none;
+  --ui-primary-frame: none;
+  --ui-panel-depth: none;
+  --ui-action-depth: 0 0 0 0 transparent;
+  --ui-hover-depth: 0 0 0 0 transparent;
+  --ui-pressed-depth: 0 0 0 0 transparent;
+  --ui-selected-depth: 0 0 0 0 transparent;
+  --ui-gallery-depth: none;
+}
+[data-theme-hud='opaque']
+  :where(
+    .hud,
+    .hud-card,
+    .hud-panel,
+    .telemetry,
+    .sim-hud,
+    .flight-hud,
+    .flight-instruments,
+    .flight-coaching,
+    .flight-brief p,
+    .scene-heading,
+    #hud,
+    [data-hud]
+  ) {
+  background: var(--iw-ink);
+  color: var(--iw-text);
+  text-shadow: none;
+  backdrop-filter: none;
+  opacity: 1;
+}
+[data-theme-motion='reduced']
+  :where(
+    .menu-ornament,
+    .edition-propeller,
+    .theme-decoration,
+    .menu-scene-decoration,
+    .operation-status-signal i,
+    .win-picture-caption
+  ) {
+  animation: none;
+  transition: none;
+  transform: none;
+}
+[data-theme-motion='reduced'] .menu-retune-layer {
+  display: none;
+}
+[data-theme-text-size='large']:not([data-interface-theme='legacy'])
+  :where(p, label, button, select, input, textarea, .micro-note) {
+  font-size: max(18px, 1em);
+}
+
+.theme-family-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+  gap: 10px;
+  margin-block: 16px;
+  padding-block: 12px;
+  border-block: 1px solid var(--fk-line, #737c69);
+}
+/* Native select options must not widen the grid's implicit min-content track.
+   Keep help text and nested controls inside narrow settings panels. */
+.theme-family-controls > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.theme-family-controls > h4 {
+  margin: 2px 0 0;
+}
+.theme-family-controls label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+.theme-family-controls label:has(> input[type='checkbox']) {
+  justify-content: flex-start;
+  min-height: var(--iw-target, 44px);
+}
+.theme-family-controls select {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.theme-family-controls [role='status']:empty {
+  display: none;
+}
+.sim-appearance-controls {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  min-width: 0;
+  max-width: 100%;
+}
+.sim-appearance-controls label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  max-width: 100%;
+}
+.sim-appearance-controls select {
+  min-width: 0;
+  max-width: 100%;
+}
+.sim-appearance-controls [role='status'] {
+  flex-basis: 100%;
+}
+.sim-worlds .flight-controls > .sim-appearance-controls {
+  flex: 1 0 100%;
+  box-sizing: border-box;
+  margin-inline: 0;
+}
+[data-theme-styled='true'] .sim-worlds .flight-dialog > header {
+  z-index: 10;
+  background: var(--ui-panel-finish, none), var(--iw-panel);
+  box-shadow: 0 0 0 8px var(--iw-panel);
+}
+@media (pointer: coarse) {
+  [data-theme-density='studio'] {
+    --iw-target: 44px;
+  }
+}
+@media (orientation: portrait) {
+  [data-theme-styled='true'] .menu-scene::after {
+    background: linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--iw-ink) 94%, transparent),
+      color-mix(in srgb, var(--iw-ink) 73%, transparent) 35%,
+      color-mix(in srgb, var(--iw-ink) 23%, transparent) 80%
+    );
+  }
+}
+@media (forced-colors: active) {
+  [data-theme-family][data-theme-material] {
+    --ui-panel-finish: none;
+    --ui-control-finish: none;
+    --ui-hover-finish: none;
+    --ui-selected-finish: none;
+    --ui-active-finish: none;
+    --ui-inset-finish: none;
+    --ui-toolbar-finish: none;
+    --ui-thumb-finish: none;
+    --ui-scene-motif: none;
+  }
+  [data-theme-styled='true']
+    :where(button, .button, input, select, textarea, dialog, .panel, [data-ui-surface]) {
+    border-image: none;
+    box-shadow: none;
+    border-color: ButtonText;
+    forced-color-adjust: auto;
+  }
+  [data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio']) {
+    appearance: auto;
+  }
+  [data-theme-styled='true'] :where(input[type='checkbox'], input[type='radio'])::before {
+    display: none;
+  }
+  [data-theme-styled='true'] :is(:focus-visible, .controller-focus) {
+    outline-color: Highlight;
+  }
+}
+
+/* A filled raster swaps atomically. Interpolating its label separately can
+   briefly create dark-on-dark text while a selected tab changes state. */
+[data-theme-styled='true']
+  :where(button, .button, [role='button'], .native-menu-actions > a, .game-mode-choice > a) {
+  transition:
+    box-shadow 100ms ease,
+    outline-color 100ms ease,
+    translate 70ms ease-out;
+}
+[data-theme-styled='true']
+  :where(button, .button, [role='button'], .native-menu-actions > a, .game-mode-choice > a):is(
+    :active,
+    [data-state='pressed']
+  ):not(:disabled, [aria-disabled='true']) {
+  translate: var(--ui-press-travel);
+}
+/* The game's motion preference applies even when the operating system allows
+   animation. Keep this override after the common action transition recipe. */
+[data-theme-motion='reduced']
+  :where(button, .button, [role='button'], .native-menu-actions > a, .game-mode-choice > a) {
+  transition: none;
+  translate: none;
+}
+[data-theme-styled='true'] label:has(> input:is([type='checkbox'], [type='radio'])) {
+  color: var(--iw-text);
+  background-color: var(--iw-panel-raised);
+  border-color: var(--iw-line);
+  border-image: none;
+  border-radius: 0;
+}
+.theme-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 8px;
+}
+.theme-gallery .theme-preview-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  align-content: start;
+  min-width: 0;
+  text-align: left;
+  min-height: var(--iw-target, 44px);
+  padding: 8px 10px 9px;
+  border-image: var(--ui-raised-frame, none);
+  background: var(--ui-control-finish, none), var(--iw-panel, var(--fk-panel));
+  color: var(--iw-text, var(--fk-text));
+  box-shadow: var(--ui-gallery-depth, none);
+}
+.theme-preview-swatches {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--iw-control-line, var(--fk-line));
+}
+.theme-preview-swatches span {
+  display: block;
+  min-width: 0;
+  height: 28px;
+  border: 0;
+}
+.theme-preview-card strong {
+  line-height: 1.2;
+}
+.theme-preview-card small {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.32;
+  opacity: 0.9;
+}
+.theme-gallery
+  .theme-preview-card:hover:not(
+    [aria-pressed='true'],
+    :disabled,
+    [aria-disabled='true'],
+    :active,
+    [data-state='pressed']
+  ) {
+  background: var(--ui-control-finish, none), var(--ui-action-hover-fill);
+  color: var(--ui-action-hover-ink);
+  border-image: var(--ui-action-hover-frame, none);
+  box-shadow: var(--ui-hover-depth, none);
+}
+.theme-gallery .theme-preview-card[aria-pressed='true'] {
+  color: var(--iw-on-selection, var(--fk-text));
+  background: var(--ui-active-finish, none), var(--iw-selection, var(--fk-panel));
+  border-image: var(--ui-primary-frame, none);
+  outline: 2px solid var(--iw-focus, var(--fk-focus));
+  outline-offset: 2px;
+}
+.theme-gallery
+  .theme-preview-card:is(:active, [data-state='pressed']):not(:disabled, [aria-disabled='true']) {
+  color: var(--ui-action-pressed-ink);
+  background: var(--ui-active-finish, none), var(--ui-action-pressed-fill);
+  border-image: var(--ui-primary-frame, none);
+  box-shadow: var(--ui-pressed-depth, inset 0 2px 3px #0005);
+}
+.theme-gallery .theme-preview-card:is(:focus-visible, .controller-focus) {
+  outline: 3px solid var(--iw-focus, var(--fk-focus));
+  outline-offset: 5px;
+}
+.theme-gallery .theme-preview-card:is(:disabled, [aria-disabled='true']) {
+  color: var(--iw-muted);
+  background: var(--iw-panel);
+  border-image: none;
+  box-shadow: none;
+}
+.theme-preview-card[aria-pressed='true'] strong::after {
+  content: ' ✓';
+}
+/* Independent runtime specimens inside the chooser. Only the surrounding card
+   is interactive; its focus and selected frame remain outside the preview. */
+.theme-gallery .theme-preview-card:has([data-theme-card-preview]) {
+  gap: 8px;
+  padding: 10px;
+}
+.theme-preview-card:has([data-theme-card-preview]) .theme-preview-swatches {
+  height: 4px;
+}
+.theme-preview-card:has([data-theme-card-preview]) .theme-preview-swatches span {
+  height: 4px;
+}
+.theme-material-preview {
+  display: block;
+  min-width: 0;
+  padding: 14px;
+  background: var(--iw-ink);
+  color: var(--iw-text);
+  font-family: var(--iw-font-ui);
+  font-size: var(--iw-text-size, 16px);
+  text-align: left;
+  line-height: 1.35;
+  isolation: isolate;
+}
+.theme-material-preview .theme-material-panel {
+  display: grid;
+  min-width: 0;
+  gap: 12px;
+  padding: 14px;
+  color: var(--iw-text);
+}
+.theme-material-actions,
+.theme-material-states {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+}
+.theme-material-preview .theme-material-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0;
+  font-family: var(--iw-font-ui);
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--ui-action-ink);
+}
+.theme-material-preview .theme-material-action:is(:hover, [data-state='hover']) {
+  color: var(--ui-action-hover-ink);
+}
+.theme-material-preview .theme-material-action:is(:active, [data-state='pressed']) {
+  color: var(--ui-action-pressed-ink);
+}
+.theme-material-preview .theme-material-action:is(:disabled, [aria-disabled='true']) {
+  color: var(--iw-muted);
+}
+.theme-material-preview .theme-material-field {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  color: var(--iw-text);
+  margin: 0;
+}
+.theme-material-preview .theme-material-field select {
+  min-width: 0;
+  width: 100%;
+  font-size: inherit;
+}
+.theme-material-preview .theme-material-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 5px 8px;
+  border: 2px solid var(--iw-control-line);
+  background: var(--ui-inset-finish, none), var(--iw-input);
+  box-shadow: var(--ui-inset-depth, none);
+  color: var(--iw-input-text);
+}
+.theme-material-select::after {
+  content: '⌄';
+}
+.theme-material-preview .theme-material-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: var(--iw-panel-raised);
+  color: var(--iw-text);
+  margin: 0;
+}
+.theme-material-preview span.theme-material-checkbox {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  border: 2px solid var(--iw-accent);
+  background: var(--ui-active-finish, none), var(--iw-accent);
+  color: var(--iw-on-accent);
+  font-weight: 700;
+  line-height: 1;
+}
+.theme-material-preview[data-preview-compact='true'] {
+  padding: 8px;
+  font-size: 12px;
+  pointer-events: none;
+}
+.theme-material-preview[data-preview-compact='true'] .theme-material-panel {
+  gap: 7px;
+  padding: 10px;
+}
+.theme-material-preview[data-preview-compact='true'] .theme-material-action {
+  min-height: 30px;
+  min-width: 0;
+  padding: 5px 7px;
+  flex: 1 1 auto;
+}
+.theme-material-preview[data-preview-compact='true']
+  :is(.theme-material-actions, .theme-material-states) {
+  gap: 6px;
+}
+.theme-material-preview[data-theme-text-size='large'] {
+  font-size: 16px;
+}
+.theme-material-preview[data-theme-text-size='large'] .theme-material-field {
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+.theme-preview-card .theme-material-preview,
+.theme-preview-card .theme-material-preview .theme-material-panel {
+  color: var(--iw-text);
+}
+.theme-accessibility {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+.theme-family-controls > details {
+  padding: 12px;
+}
+.theme-family-controls > details > summary {
+  min-height: var(--iw-target, 44px);
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .theme-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* Compact Settings deliberately gives Back a fixed icon slot. Typography
+   overrides, including Large text, must not reveal its label over the arrow.
+   The real text/accessible name and the 44px target remain intact. */
+@media (max-width: 700px) {
+  [data-theme-styled='true'] .native-settings [data-menu-icon='back'] {
+    font-size: 0;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 8px;
+    gap: 0;
+  }
+}
+/* Keep the compiled icon-only controls' real labels available to assistive
+   technology without drawing fallback text beside their replacement glyphs. */
+[data-theme-styled='true']
+  :is(.dialog-close, .icon-button)[data-presentation-icon][aria-label]:not([data-menu-icon]),
+[data-theme-styled='true']
+  :is(
+    [data-presentation-control='up'],
+    [data-presentation-control='down'],
+    [data-presentation-control='left'],
+    [data-presentation-control='right']
+  )[aria-label] {
+  font-size: 0;
+  gap: 0;
+  min-inline-size: var(--iw-target);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-theme-styled='true']
+    :where(button, .button, [role='button'], .native-menu-actions > a, .game-mode-choice > a) {
+    transition: none;
+    translate: none;
+  }
+}
+
+[data-theme-styled='true'] [data-ui-surface='section-title'] {
+  color: var(--iw-muted);
+  background: var(--iw-ink);
+  border-color: var(--iw-line);
+  border-image: none;
+}
+
+/* Earned media keeps its authored picture. Only the overlaid reading and
+   control surfaces share the active interface's paired colors. */
+[data-theme-styled='true']
+  :where(
+    .story-controls,
+    .story-notice,
+    .story-dialog--immersive > p:not(:empty),
+    .win-picture-caption,
+    #demo-dialog[data-reward='expanded'] .demo-header,
+    #demo-dialog[data-reward='expanded'] .demo-panel
+  ) {
+  color: var(--iw-text);
+  background: var(--ui-panel-finish, none), var(--iw-panel);
+  border-color: var(--iw-line);
+  border-image: none;
+  border-radius: 0;
+  text-shadow: none;
+  backdrop-filter: none;
+}
+[data-theme-styled='true']
+  :where(.story-dialog--immersive, .creator-player[data-earned-view='on'] #earned) {
+  background: var(--iw-ink);
+  border: 0;
+  border-image: none;
+  box-shadow: none;
+}
+/* The image element fills the viewport, including its contain-fit letterbox.
+   Theme only that backing; the authored pixels and fitting remain unchanged. */
+[data-theme-styled='true'] .creator-player #earned-picture {
+  background-color: var(--iw-ink);
+}
+[data-theme-styled='true'] .win-picture-caption {
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+  margin-inline: auto;
+  padding: 12px 20px;
+  border: 1px solid var(--iw-line);
+}
+[data-theme-styled='true'] .win-picture-mark {
+  color: var(--iw-accent);
+}
+[data-theme-styled='true'] [data-win-picture] #shell-menu {
+  padding: 0;
+}
+[data-theme-styled='true'] [data-win-picture] #shell-menu::before {
+  color: inherit;
+}
+
+/* Status, badges and callouts are shared reading surfaces, including tools. */
+[data-theme-styled='true']
+  :where(
+    [role='status'],
+    [role='alert'],
+    .operation-status,
+    .callout,
+    .notice,
+    .pill,
+    .chip,
+    .status,
+    .skip-link,
+    pre
+  ) {
+  color: var(--iw-text);
+  background-color: var(--iw-panel);
+  border-color: var(--iw-line);
+  border-image: none;
+  border-radius: 0;
+}
+[data-theme-styled='true']
+  :where(.status-ready, [role='status'].success, [data-ui-tone='success']) {
+  color: var(--iw-safe);
+}
+[data-theme-styled='true']
+  :where(.status-building, [role='status'].warning, [data-ui-tone='warning']) {
+  color: var(--iw-amber);
+}
+[data-theme-styled='true']
+  :where(
+    [role='alert'],
+    [role='status'].error,
+    [role='status'][data-error='true'],
+    [data-ui-tone='danger']
+  ) {
+  color: var(--iw-hazard);
+}
+[data-theme-styled='true'] :where([role='status'][data-error='true'], [role='status'].error) {
+  border-inline-start: 3px solid var(--iw-hazard);
+  padding-inline-start: 0.75rem;
+}
+[data-theme-styled='true'] .operation-status[data-state='error'] {
+  color: var(--iw-hazard);
+  border-inline-start: 3px solid var(--iw-hazard);
+  padding-inline-start: 0.75rem;
+}
+[data-theme-styled='true'] .operation-status:is([data-state='cancelled'], [data-state='detached']) {
+  color: var(--iw-amber);
+}
+[data-theme-styled='true'] .operation-status .operation-status-label {
+  color: inherit;
+  background: transparent;
+}
+
+/* Deep dialogs and tool results are part of the same interface. Never leave a
+   legacy navy/teal well behind a newly resolved light-theme text color. */
+[data-theme-styled='true'] :where(.soundtrack-quick-status, .race-start-cue strong) {
+  color: var(--iw-on-accent);
+  background: var(--iw-accent);
+  border-color: var(--iw-accent);
+  border-image: none;
+}
+[data-theme-styled='true'] .journey-card-action {
+  color: var(--iw-on-accent);
+  background: var(--iw-accent);
+  border-color: var(--iw-accent);
+  font-size: 0.75rem;
+}
+[data-theme-styled='true'] .soundtrack-now-card::after {
+  background: var(--iw-accent);
+}
+[data-theme-styled='true'] .soundtrack-advanced-summary::after {
+  color: inherit;
+}
+[data-theme-styled='true'] .soundtrack-online-track {
+  border-color: var(--iw-line);
+}
+[data-theme-styled='true'] .soundtrack-online-track:is(:hover, :focus-within) {
+  color: var(--iw-text);
+  background: var(--iw-panel-raised);
+}
+[data-theme-styled='true'] :where(.soundtrack-online-style, .creator-poster-option):focus-within {
+  outline: 3px solid var(--iw-focus);
+  outline-offset: 2px;
+}
+[data-theme-styled='true'] :where(.batch-card-error, .creator-media-card-error) {
+  border-color: var(--iw-hazard);
+  border-image: none;
+}
+[data-theme-styled='true'] :where(.batch-card-preparing, .optional-world-current) {
+  outline: 2px solid var(--iw-focus);
+  outline-offset: 2px;
+}
+[data-theme-styled='true']
+  :where(
+    .asset-row.selected,
+    .candidate-entry.selected,
+    [aria-selected='true'],
+    [aria-pressed='true']
+  )
+  :where(.muted, .micro-note, small) {
+  color: inherit;
+}
+[data-theme-styled='true'] input[type='file']::file-selector-button {
+  color: var(--iw-text);
+  background: var(--ui-control-finish, none), var(--iw-panel-raised);
+  border: 1px solid var(--iw-control-line);
+  border-radius: 0;
+  box-shadow: var(--ui-action-depth, none);
+  min-height: var(--iw-target);
+  padding: 6px 10px;
+  margin-inline-end: 10px;
+  font: inherit;
+  cursor: pointer;
+}
+[data-theme-styled='true'] input[type='file']:not(:disabled)::file-selector-button:hover {
+  background:
+    var(--ui-hover-finish, var(--ui-control-finish, none)),
+    var(--ui-hover-face, var(--iw-panel-raised));
+  color: var(--ui-hover-ink, var(--iw-text));
+  box-shadow: var(--ui-hover-depth, none);
+}
+[data-theme-styled='true'] input[type='file']:not(:disabled)::file-selector-button:active {
+  background: var(--ui-active-finish, none), var(--iw-selection);
+  color: var(--iw-on-selection);
+  box-shadow: var(--ui-pressed-depth, none);
+}
+[data-theme-styled='true'] input[type='file']:disabled::file-selector-button {
+  color: var(--iw-muted);
+  background: var(--iw-panel);
+  border-style: dashed;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+/* Reading state belongs to the message, not a permanent empty painted bar. */
+[data-theme-styled='true'] :where([role='status'], [role='alert']):empty {
+  background: transparent;
+}
+[data-theme-styled='true'] label:has(> input:is([type='checkbox'], [type='radio'])) {
+  padding: 6px 10px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+[data-theme-styled='true'] :where(.soundtrack-dialog, .optional-worlds-dialog) .micro-note {
+  font-size: var(--fk-text-secondary);
+}
+/* Session transport is one control group. Its volume label must not run into
+   the last button when a long translation or enlarged text wraps the row. */
+[data-theme-styled='true'] [data-couch-music] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+[data-theme-styled='true'] [data-couch-music] > :where(h3, p, label, input, section, details) {
+  flex: 1 0 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+[data-theme-styled='true'] [data-couch-music] > :where(h3, p) {
+  margin-block: 8px;
+}
+[data-theme-styled='true'] [data-couch-music] > label {
+  margin-top: 8px;
+}
+[data-theme-styled='true'] #soundtrack-now-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-block: 12px;
+}
+[data-theme-styled='true'] :where(.page-head, .masthead) > a + a {
+  margin-inline-start: 12px;
+}
+
+[data-theme-styled='true'] :where(.asset-row.selected, .candidate-entry.selected) {
+  color: var(--iw-on-selection);
+  background: var(--iw-selection);
+  border-color: var(--iw-focus);
+  box-shadow: inset 3px 0 var(--iw-focus);
+}
+
+/* Only the application-owned menu backdrop changes with the interface. Authored
+   campaign/edition scenery and logos are separate content and remain visible. */
+[data-theme-styled='true'] .menu-scene[data-backdrop='interface'] {
+  background: var(--iw-ink);
+}
+[data-theme-styled='true']
+  .menu-scene[data-backdrop='interface']
+  > :where(.menu-scene-art-plane, .menu-scene-signal) {
+  display: none;
+}
+[data-theme-styled='true'] .menu-scene[data-backdrop='interface']::before {
+  content: '';
+  position: absolute;
+  inset: var(--ui-scene-inset);
+  inline-size: var(--ui-scene-width);
+  block-size: var(--ui-scene-height);
+  pointer-events: none;
+  background-image: var(--ui-scene-motif, none);
+  background-size: var(--ui-scene-motif-size, 48px 48px);
+  background-position: right top;
+  background-repeat: var(--ui-scene-repeat);
+  opacity: var(--ui-scene-opacity);
+}
+[data-theme-material='linen'] {
+  --ui-scene-motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' shape-rendering='crispEdges'%3E%3Cg fill='none' stroke='%23f48686' stroke-width='2'%3E%3Cpath d='M32 10l22 22-22 22L10 32zM24 24l16 16m0-16L24 40'/%3E%3C/g%3E%3Cpath fill='%23e1ddcf' d='M0 0h2v2H0zm62 0h2v2h-2zM0 62h2v2H0zm62 0h2v2h-2z'/%3E%3C/svg%3E");
+  --ui-scene-motif-size: 64px 64px;
+}
+[data-theme-material='porcelain'] {
+  --ui-scene-motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='96'%3E%3Cg fill='none' stroke='%230057b7'%3E%3Cpath d='M-30 24q30-28 60 0t60 0t60 0M-30 72q30-28 60 0t60 0t60 0'/%3E%3Cpath d='M60 30q-12 10 0 20q12-10 0-20m0 20v8'/%3E%3C/g%3E%3C/svg%3E");
+  --ui-scene-motif-size: 120px 96px;
+}
+[data-theme-material='brass'],
+[data-theme-material='copper'] {
+  --ui-scene-motif:
+    repeating-linear-gradient(90deg, transparent 0 95px, var(--iw-line) 95px 96px),
+    repeating-linear-gradient(0deg, transparent 0 95px, var(--iw-line) 95px 96px);
+  --ui-scene-motif-size: 96px 96px;
+}
+[data-theme-material='wood'] {
+  --ui-scene-motif:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 7px,
+      var(--iw-line) 7px 8px,
+      transparent 8px 62px,
+      var(--iw-line) 62px 64px
+    ),
+    repeating-linear-gradient(90deg, transparent 0 191px, var(--iw-line) 191px 192px);
+  --ui-scene-motif-size: 192px 64px;
+}
+[data-theme-material='composite'] {
+  --ui-scene-motif:
+    linear-gradient(30deg, transparent 0 48%, var(--iw-accent) 49% 50%, transparent 51%),
+    linear-gradient(150deg, transparent 0 48%, var(--iw-line) 49% 50%, transparent 51%);
+  --ui-scene-motif-size: 96px 64px;
+}
+[data-theme-material='classic'],
+[data-theme-material='terminal'],
+[data-theme-material='lcd'] {
+  --ui-scene-motif: none;
+}
+[data-theme-material='classic'] .menu-scene[data-backdrop='interface']::after,
+[data-theme-material='terminal'] .menu-scene[data-backdrop='interface']::after,
+[data-theme-material='lcd'] .menu-scene[data-backdrop='interface']::after {
+  background: none;
+}
+[data-theme-texture='off'] {
+  --ui-scene-motif: none;
+}
+
+/* BEGIN ORIGINAL MATERIAL GRAIN — generated by scripts/refresh-interface-material-grain.mjs */
+[data-theme-family] {
+  --ui-grain-powder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='128' shape-rendering='crispEdges'%3E%3Cpath fill='%23fff' opacity='.055' d='M68 16h2v1h-2zM166 44h2v1h-2zM150 5h2v1h-2zM69 90h1v1h-1zM154 30h2v1h-2zM113 37h1v1h-1zM101 58h1v1h-1zM167 80h1v1h-1zM131 76h1v1h-1zM81 23h2v1h-2zM58 109h2v1h-2zM167 78h2v1h-2zM183 84h2v1h-2zM17 46h2v1h-2zM141 20h2v1h-2zM30 100h2v1h-2zM21 69h1v1h-1zM94 102h1v1h-1zM66 101h1v1h-1zM109 34h2v1h-2zM143 6h2v1h-2zM14 89h1v1h-1zM8 100h2v1h-2zM25 29h1v1h-1zM173 68h1v1h-1zM144 79h1v1h-1zM38 28h2v1h-2zM102 90h2v1h-2zM49 26h2v1h-2zM9 40h1v1h-1zM186 17h2v1h-2zM175 119h1v1h-1zM154 115h1v1h-1zM101 3h1v1h-1zM173 62h1v1h-1zM29 13h1v1h-1zM17 79h2v1h-2zM117 41h2v1h-2zM145 20h2v1h-2zM176 86h1v1h-1zM46 56h2v1h-2zM137 82h2v1h-2zM157 96h1v1h-1zM186 84h1v1h-1zM160 6h1v1h-1zM96 33h2v1h-2zM90 123h2v1h-2zM131 110h2v1h-2zM152 119h2v1h-2zM150 92h1v1h-1zM178 69h2v1h-2zM151 21h1v1h-1zM110 12h2v1h-2zM76 31h1v1h-1zM116 63h2v1h-2zM160 2h1v1h-1z'/%3E%3Cpath fill='%23000' opacity='.09' d='M69 17h2v1h-2zM162 111h1v1h-1zM143 121h2v1h-2zM151 6h2v1h-2zM145 9h2v1h-2zM143 22h1v1h-1zM155 31h2v1h-2zM16 113h2v1h-2zM121 4h2v1h-2zM102 59h2v1h-2zM64 119h2v1h-2zM20 76h2v1h-2zM132 77h2v1h-2zM27 48h2v1h-2zM128 8h2v1h-2zM59 110h2v1h-2zM3 8h1v1h-1zM102 112h1v1h-1zM184 85h2v1h-2zM170 45h1v1h-1zM182 94h1v1h-1zM142 21h2v1h-2zM38 5h1v1h-1zM18 72h1v1h-1zM22 70h2v1h-2zM13 95h2v1h-2zM75 74h1v1h-1zM67 102h2v1h-2zM135 49h2v1h-2zM16 70h1v1h-1zM144 7h2v1h-2zM173 80h2v1h-2zM51 98h1v1h-1zM9 101h2v1h-2zM116 14h2v1h-2zM115 42h2v1h-2zM174 69h2v1h-2zM141 82h1v1h-1zM182 15h2v1h-2zM39 29h2v1h-2zM100 70h1v1h-1zM184 113h1v1h-1zM50 27h2v1h-2zM131 4h2v1h-2zM143 68h1v1h-1zM187 18h2v1h-2zM120 104h2v1h-2zM41 78h2v1h-2zM155 116h2v1h-2zM51 73h1v1h-1zM93 86h1v1h-1zM174 63h2v1h-2zM34 31h2v1h-2zM122 87h2v1h-2zM18 80h2v1h-2zM67 48h1v1h-1zM103 7h2v1h-2zM146 21h2v1h-2zM94 32h2v1h-2zM110 84h2v1h-2zM47 57h2v1h-2zM155 50h2v1h-2zM137 2h2v1h-2zM158 97h2v1h-2zM134 82h1v1h-1zM184 74h2v1h-2zM161 7h2v1h-2zM137 83h2v1h-2zM50 100h2v1h-2zM91 124h2v1h-2zM162 19h2v1h-2zM49 9h1v1h-1zM153 120h2v1h-2zM180 90h2v1h-2zM158 24h1v1h-1zM179 70h2v1h-2zM131 8h1v1h-1zM15 12h1v1h-1zM111 13h2v1h-2zM113 40h1v1h-1zM143 104h2v1h-2zM117 64h2v1h-2zM184 70h2v1h-2zM54 87h2v1h-2z'/%3E%3Cpath fill='%23000' opacity='.023' d='M132 15h18v2h-18zM134 17h15v2h-15zM121 51h9v2h-9zM123 53h6v2h-6zM111 13h6v2h-6zM113 15h3v2h-3zM14 91h12v2h-12zM16 93h9v2h-9zM65 54h16v2h-16zM67 56h13v2h-13zM64 17h13v2h-13zM66 19h10v2h-10zM68 93h7v2h-7zM70 95h4v2h-4zM141 56h15v2h-15zM143 58h12v2h-12zM28 11h18v2h-18zM30 13h15v2h-15zM141 81h18v2h-18zM143 83h15v2h-15zM153 15h14v2h-14zM155 17h11v2h-11zM134 60h8v2h-8zM136 62h5v2h-5zM90 108h17v2h-17zM92 110h14v2h-14zM146 27h17v2h-17zM148 29h14v2h-14zM22 77h17v2h-17zM24 79h14v2h-14zM152 86h10v2h-10zM154 88h7v2h-7zM94 5h9v2h-9zM96 7h6v2h-6zM147 6h11v2h-11zM149 8h8v2h-8z'/%3E%3C/svg%3E");
+  --ui-grain-brush: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='96' shape-rendering='crispEdges'%3E%3Cpath fill='%23fff' opacity='.045' d='M99 35h13v1h-13zM120 79h20v1h-20zM90 63h30v1h-30zM108 57h19v1h-19zM91 60h33v1h-33zM127 70h29v1h-29zM28 81h6v1h-6zM141 88h23v1h-23zM75 28h6v1h-6zM138 54h21v1h-21zM37 68h26v1h-26zM37 32h22v1h-22zM118 72h33v1h-33z'/%3E%3Cpath fill='%23000' opacity='.055' d='M56 73h18v1h-18zM127 41h29v1h-29zM124 72h27v1h-27zM99 53h6v1h-6zM118 51h17v1h-17zM86 83h12v1h-12zM53 53h9v1h-9zM15 9h20v1h-20zM34 36h23v1h-23zM53 84h13v1h-13zM117 62h14v1h-14zM107 45h6v1h-6zM59 86h21v1h-21z'/%3E%3C/svg%3E");
+  --ui-grain-thread: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' shape-rendering='crispEdges'%3E%3Cpath fill='%23fff' opacity='.021' d='M0 0h2v1h-2zM4 0h1v3h-1zM8 0h3v1h-3zM12 0h1v3h-1zM16 0h3v1h-3zM20 0h1v3h-1zM24 0h3v1h-3zM28 0h1v3h-1zM32 0h3v1h-3zM36 0h1v3h-1zM40 0h3v1h-3zM44 0h1v2h-1zM0 4h1v3h-1zM4 4h3v1h-3zM8 4h1v3h-1zM12 4h3v1h-3zM16 4h1v2h-1zM20 4h3v1h-3zM24 4h1v2h-1zM28 4h3v1h-3zM32 4h1v2h-1zM36 4h3v1h-3zM40 4h1v2h-1zM44 4h3v1h-3zM0 8h3v1h-3zM4 8h1v2h-1zM8 8h3v1h-3zM12 8h1v2h-1zM16 8h3v1h-3zM20 8h1v2h-1zM24 8h3v1h-3zM28 8h1v3h-1zM32 8h3v1h-3zM36 8h1v3h-1zM40 8h3v1h-3zM44 8h1v3h-1zM0 12h1v3h-1zM4 12h3v1h-3zM8 12h1v3h-1zM12 12h3v1h-3zM16 12h1v3h-1zM20 12h3v1h-3zM24 12h1v3h-1zM28 12h3v1h-3zM32 12h1v3h-1zM36 12h2v1h-2zM40 12h1v3h-1zM44 12h2v1h-2zM0 16h3v1h-3zM4 16h1v3h-1zM8 16h2v1h-2zM12 16h1v3h-1zM16 16h2v1h-2zM20 16h1v3h-1zM24 16h2v1h-2zM28 16h1v3h-1zM32 16h2v1h-2zM36 16h1v3h-1zM40 16h2v1h-2zM44 16h1v3h-1zM0 20h1v3h-1zM4 20h2v1h-2zM8 20h1v3h-1zM12 20h2v1h-2zM16 20h1v3h-1zM20 20h3v1h-3zM24 20h1v3h-1zM28 20h3v1h-3zM32 20h1v3h-1zM36 20h3v1h-3zM40 20h1v3h-1zM44 20h3v1h-3zM0 24h3v1h-3zM4 24h1v3h-1zM8 24h3v1h-3zM12 24h1v3h-1zM16 24h3v1h-3zM20 24h1v3h-1zM24 24h3v1h-3zM28 24h1v2h-1zM32 24h3v1h-3zM36 24h1v2h-1zM40 24h3v1h-3zM44 24h1v2h-1zM0 28h1v2h-1zM4 28h3v1h-3zM8 28h1v2h-1zM12 28h3v1h-3zM16 28h1v2h-1zM20 28h3v1h-3zM24 28h1v2h-1zM28 28h3v1h-3zM32 28h1v2h-1zM36 28h3v1h-3zM40 28h1v3h-1zM44 28h3v1h-3zM0 32h3v1h-3zM4 32h1v2h-1zM8 32h3v1h-3zM12 32h1v3h-1zM16 32h3v1h-3zM20 32h1v3h-1zM24 32h3v1h-3zM28 32h1v3h-1zM32 32h3v1h-3zM36 32h1v3h-1zM40 32h3v1h-3zM44 32h1v3h-1zM0 36h1v3h-1zM4 36h3v1h-3zM8 36h1v3h-1zM12 36h3v1h-3zM16 36h1v3h-1zM20 36h2v1h-2zM24 36h1v3h-1zM28 36h2v1h-2zM32 36h1v3h-1zM36 36h2v1h-2zM40 36h1v3h-1zM44 36h2v1h-2zM0 40h2v1h-2zM4 40h1v3h-1zM8 40h2v1h-2zM12 40h1v3h-1zM16 40h2v1h-2zM20 40h1v3h-1zM24 40h2v1h-2zM28 40h1v3h-1zM32 40h3v1h-3zM36 40h1v3h-1zM40 40h3v1h-3zM44 40h1v3h-1zM0 44h1v3h-1zM4 44h3v1h-3zM8 44h1v3h-1zM12 44h3v1h-3zM16 44h1v3h-1zM20 44h3v1h-3zM24 44h1v3h-1zM28 44h3v1h-3zM32 44h1v3h-1zM36 44h3v1h-3zM40 44h1v2h-1zM44 44h3v1h-3z'/%3E%3Cpath fill='%23000' opacity='.065' d='M2 2h1v2h-1zM6 2h2v1h-2zM10 2h1v2h-1zM14 2h2v1h-2zM18 2h1v2h-1zM22 2h2v1h-2zM26 2h1v2h-1zM30 2h2v1h-2zM34 2h1v2h-1zM38 2h2v1h-2zM42 2h1v2h-1zM46 2h2v1h-2zM2 6h2v1h-2zM6 6h1v2h-1zM10 6h2v1h-2zM14 6h1v2h-1zM18 6h2v1h-2zM22 6h1v2h-1zM26 6h2v1h-2zM30 6h1v2h-1zM34 6h2v1h-2zM38 6h1v2h-1zM42 6h2v1h-2zM46 6h1v2h-1zM2 10h1v2h-1zM6 10h2v1h-2zM10 10h1v2h-1zM14 10h2v1h-2zM18 10h1v2h-1zM22 10h2v1h-2zM26 10h1v2h-1zM30 10h2v1h-2zM34 10h1v2h-1zM38 10h2v1h-2zM42 10h1v2h-1zM46 10h2v1h-2zM2 14h2v1h-2zM6 14h1v2h-1zM10 14h2v1h-2zM14 14h1v2h-1zM18 14h2v1h-2zM22 14h1v2h-1zM26 14h2v1h-2zM30 14h1v2h-1zM34 14h2v1h-2zM38 14h1v2h-1zM42 14h2v1h-2zM46 14h1v2h-1zM2 18h1v2h-1zM6 18h2v1h-2zM10 18h1v2h-1zM14 18h2v1h-2zM18 18h1v2h-1zM22 18h2v1h-2zM26 18h1v2h-1zM30 18h2v1h-2zM34 18h1v2h-1zM38 18h2v1h-2zM42 18h1v2h-1zM46 18h2v1h-2zM2 22h2v1h-2zM6 22h1v2h-1zM10 22h2v1h-2zM14 22h1v2h-1zM18 22h2v1h-2zM22 22h1v2h-1zM26 22h2v1h-2zM30 22h1v2h-1zM34 22h2v1h-2zM38 22h1v2h-1zM42 22h2v1h-2zM46 22h1v2h-1zM2 26h1v2h-1zM6 26h2v1h-2zM10 26h1v2h-1zM14 26h2v1h-2zM18 26h1v2h-1zM22 26h2v1h-2zM26 26h1v2h-1zM30 26h2v1h-2zM34 26h1v2h-1zM38 26h2v1h-2zM42 26h1v2h-1zM46 26h2v1h-2zM2 30h2v1h-2zM6 30h1v2h-1zM10 30h2v1h-2zM14 30h1v2h-1zM18 30h2v1h-2zM22 30h1v2h-1zM26 30h2v1h-2zM30 30h1v2h-1zM34 30h2v1h-2zM38 30h1v2h-1zM42 30h2v1h-2zM46 30h1v2h-1zM2 34h1v2h-1zM6 34h2v1h-2zM10 34h1v2h-1zM14 34h2v1h-2zM18 34h1v2h-1zM22 34h2v1h-2zM26 34h1v2h-1zM30 34h2v1h-2zM34 34h1v2h-1zM38 34h2v1h-2zM42 34h1v2h-1zM46 34h2v1h-2zM2 38h2v1h-2zM6 38h1v2h-1zM10 38h2v1h-2zM14 38h1v2h-1zM18 38h2v1h-2zM22 38h1v2h-1zM26 38h2v1h-2zM30 38h1v2h-1zM34 38h2v1h-2zM38 38h1v2h-1zM42 38h2v1h-2zM46 38h1v2h-1zM2 42h1v2h-1zM6 42h2v1h-2zM10 42h1v2h-1zM14 42h2v1h-2zM18 42h1v2h-1zM22 42h2v1h-2zM26 42h1v2h-1zM30 42h2v1h-2zM34 42h1v2h-1zM38 42h2v1h-2zM42 42h1v2h-1zM46 42h2v1h-2zM2 46h2v1h-2zM6 46h1v2h-1zM10 46h2v1h-2zM14 46h1v2h-1zM18 46h2v1h-2zM22 46h1v2h-1zM26 46h2v1h-2zM30 46h1v2h-1zM34 46h2v1h-2zM38 46h1v2h-1zM42 46h2v1h-2zM46 46h1v2h-1z'/%3E%3Cpath fill='%23fff' opacity='.018' d='M1 0h2v1h-2zM21 8h1v2h-1zM41 16h2v1h-2zM13 20h2v1h-2zM33 28h1v2h-1zM5 32h1v2h-1zM25 40h2v1h-2z'/%3E%3C/svg%3E");
+  --ui-grain-glaze: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='192' shape-rendering='crispEdges'%3E%3Cpath fill='%23183858' opacity='.045' d='M19 27h1v1h-1zM107 68h1v1h-1zM214 21h1v1h-1zM64 143h1v1h-1zM182 155h1v1h-1zM236 108h1v1h-1z'/%3E%3Cpath fill='%23fff' opacity='.18' d='M20 28h1v1h-1zM108 69h1v1h-1zM215 22h1v1h-1zM65 144h1v1h-1zM183 156h1v1h-1zM237 109h1v1h-1z'/%3E%3C/svg%3E");
+  --ui-grain-timber: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='128' shape-rendering='crispEdges'%3E%3Cpath fill='none' stroke='%23000' stroke-opacity='.045' d='M81 15h9v3h17v3h13v2h14v1h7v-1h8v-2h10v-3h13v-3h11v-3'/%3E%3Cpath fill='none' stroke='%23000' stroke-opacity='.045' d='M15 105h17v-1h9v-1h8v-1h15v0h17v0h7v1h12v1h10v1'/%3E%3Cpath fill='none' stroke='%23000' stroke-opacity='.045' d='M73 99h14v1h13v1h10v1h15v1h9v0'/%3E%3Cpath fill='none' stroke='%23000' stroke-opacity='.045' d='M64 18h13v1h11v2h16v3'/%3E%3Cpath fill='none' stroke='%23000' stroke-opacity='.045' d='M25 7h16v-1h16v-1h17v0h17v1h17v1h15v1h9v0h15v0h14v-1h8v-1h16v-1'/%3E%3Cpath fill='none' stroke='%23000' stroke-opacity='.045' d='M60 25h15v0h12v1h15v1h13v1h12v1h14v0'/%3E%3Cpath fill='none' stroke='%23000' stroke-opacity='.045' d='M25 79h17v-3h17v-2h8v0h8v1h12v2'/%3E%3Cpath fill='none' stroke='%23fff' stroke-opacity='.028' d='M68 13h7v0h15v1h9v1h7v1h15v1h7v0h8v0h6v0'/%3E%3Cpath fill='none' stroke='%23fff' stroke-opacity='.028' d='M35 90h12v-3h6v-1h10v-1h8v1h10v2h13v3h14v3h7v2h8v2'/%3E%3Cpath fill='none' stroke='%23fff' stroke-opacity='.028' d='M13 94h16v-1h11v-1h6v-1h9v-1h6v0h10v0h16v1h7v1h15v1'/%3E%3Cpath fill='none' stroke='%23fff' stroke-opacity='.028' d='M51 100h12v0h8v0h8v1h10v1'/%3E%3Cpath fill='none' stroke='%23fff' stroke-opacity='.028' d='M55 83h6v0h11v0h10v2h17v3h7v3h11v2h15v1h17v-1h13v-3h6v-3'/%3E%3Cpath fill='none' stroke='%23fff' stroke-opacity='.028' d='M26 82h10v-1h15v-1h11v0h12v0h16v1h13v1h10v1'/%3E%3Cpath fill='none' stroke='%23fff' stroke-opacity='.028' d='M35 28h9v-1h9v-1h14v0h13v0'/%3E%3C/svg%3E");
+  --ui-grain-stone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='128' shape-rendering='crispEdges'%3E%3Cpath fill='%23fff' opacity='.028' d='M18 33h6v1h2v1h-7v-1h-1zM160 72h6v2h-6zM145 100h4v1h-4zM94 118h3v1h2v1h-4v-1h-1zM62 19h5v1h-5zM147 18h3v1h-3zM85 59h3v1h2v1h-4v-1h-1zM121 47h5v2h-5zM95 56h2v2h-2zM54 77h6v1h2v1h-7v-1h-1zM115 4h3v2h-3zM50 21h5v1h-5zM126 95h6v1h2v1h-7v-1h-1zM127 90h5v2h-5zM159 21h2v2h-2zM153 89h5v1h2v1h-6v-1h-1z'/%3E%3Cpath fill='%23000' opacity='.04' d='M146 23h2v2h-2zM179 84h3v1h2v1h-4v-1h-1zM12 16h5v2h-5zM151 77h5v1h-5zM31 104h5v1h2v1h-6v-1h-1zM137 43h5v1h-5zM70 81h5v2h-5zM124 10h6v1h2v1h-7v-1h-1zM20 118h4v2h-4zM90 69h6v2h-6zM118 30h3v1h2v1h-4v-1h-1zM36 86h2v2h-2zM82 103h4v1h-4zM61 16h3v1h2v1h-4v-1h-1zM115 58h2v1h-2zM106 98h3v2h-3z'/%3E%3C/svg%3E");
+  --ui-grain-fiber: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='128' shape-rendering='crispEdges'%3E%3Cpath fill='%23fff' opacity='.035' d='M137 49h8v1h-3v1h-2v-1h-2zM81 29h6v1h-3v1h-2v-1h-2zM82 31h3v1h-3v1h-2v-1h-2zM54 100h9v1h-3v1h-2v-1h-2zM114 57h4v1h-3v1h-2v-1h-2zM145 26h9v1h-3v1h-2v-1h-2zM129 105h8v1h-3v1h-2v-1h-2zM84 63h3v1h-3v1h-2v-1h-2zM37 44h9v1h-3v1h-2v-1h-2zM136 106h5v1h-3v1h-2v-1h-2zM142 46h8v1h-3v1h-2v-1h-2zM33 60h6v1h-3v1h-2v-1h-2zM16 13h3v1h-3v1h-2v-1h-2z'/%3E%3Cpath fill='%23000' opacity='.033' d='M108 55h4v1h-3v1h-2v-1h-2zM80 108h3v1h-3v1h-2v-1h-2zM36 44h8v1h-3v1h-2v-1h-2zM35 84h4v1h-3v1h-2v-1h-2zM39 91h5v1h-3v1h-2v-1h-2zM83 46h8v1h-3v1h-2v-1h-2zM134 114h9v1h-3v1h-2v-1h-2zM81 45h4v1h-3v1h-2v-1h-2zM75 15h9v1h-3v1h-2v-1h-2zM42 34h4v1h-3v1h-2v-1h-2zM156 90h4v1h-3v1h-2v-1h-2zM89 27h8v1h-3v1h-2v-1h-2z'/%3E%3C/svg%3E");
+  --ui-grain-machining: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='128' shape-rendering='crispEdges'%3E%3Cpath fill='%23000' opacity='.075' d='M12 18h34v1H12zM91 43h19v1H91zM164 12h47v1h-47zM37 95h31v1H37zM146 103h18v1h-18zM208 74h26v1h-26zM118 65h8v1h-8zM68 28h6v1h-6z'/%3E%3Cpath fill='%23fff' opacity='.045' d='M13 19h30v1H13zM92 44h16v1H92zM167 13h40v1h-40zM39 96h26v1H39zM147 104h15v1h-15zM209 75h22v1h-22z'/%3E%3C/svg%3E");
+  --ui-grain-edge-wear: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='6' shape-rendering='crispEdges'%3E%3Cpath fill='%23fff' opacity='.20' d='M7 1h12v1H7zM42 2h5v1h-5zM76 1h17v1H76zM111 2h8v1h-8z'/%3E%3Cpath fill='%23000' opacity='.26' d='M8 2h9v1H8zM42 3h4v1h-4zM78 2h13v1H78zM111 3h6v1h-6z'/%3E%3C/svg%3E");
+  --ui-grain-vent: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='8' shape-rendering='crispEdges'%3E%3Cpath fill='%23000' opacity='.45' d='M4 2h3v4h-3zM10 2h3v4h-3zM16 2h3v4h-3zM22 2h3v4h-3zM28 2h3v4h-3zM34 2h3v4h-3zM40 2h3v4h-3zM46 2h3v4h-3zM52 2h3v4h-3zM58 2h3v4h-3zM64 2h3v4h-3zM70 2h3v4h-3zM76 2h3v4h-3zM82 2h3v4h-3zM88 2h3v4h-3z'/%3E%3Cpath fill='%23fff' opacity='.14' d='M4 6h3v1h-3zM10 6h3v1h-3zM16 6h3v1h-3zM22 6h3v1h-3zM28 6h3v1h-3zM34 6h3v1h-3zM40 6h3v1h-3zM46 6h3v1h-3zM52 6h3v1h-3zM58 6h3v1h-3zM64 6h3v1h-3zM70 6h3v1h-3zM76 6h3v1h-3zM82 6h3v1h-3zM88 6h3v1h-3z'/%3E%3C/svg%3E");
+  --ui-grain-bulkhead: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='192' shape-rendering='crispEdges'%3E%3Cpath fill='%23000' opacity='.42' d='M0 0h256v2H0zM0 2h2v190H0z'/%3E%3Cpath fill='%23fff' opacity='.07' d='M2 2h254v1H2zM2 3h1v189H2z'/%3E%3Cpath fill='%23000' opacity='.32' d='M9 9h6v6H9zM241 9h6v6h-6zM9 177h6v6H9zM241 177h6v6h-6z'/%3E%3Cpath fill='%23fff' opacity='.12' d='M10 10h4v1h-4zM242 10h4v1h-4zM10 178h4v1h-4zM242 178h4v1h-4z'/%3E%3Cpath fill='%23fff' opacity='.055' d='M34 3h26v1H34zM186 3h39v1h-39zM3 88h1v12H3z'/%3E%3C/svg%3E");
+}
+/* END ORIGINAL MATERIAL GRAIN */
+
+/* Material finishes are independent of the immutable asset frames. The opaque
+   semantic base always supplies the text/state pair; these original, static
+   layers add restrained grain across the face and stronger light at its edges.
+   Grain is not stretched nine-slice art: it contains no screws, seams or labels. */
+@media (forced-colors: none) {
+  [data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-control-finish: linear-gradient(180deg, #ffffff0a, transparent 22%, #00000008);
+    --ui-active-finish: linear-gradient(180deg, #00000008, transparent 40%, #ffffff08);
+    --ui-inset-finish: linear-gradient(180deg, #00000012, transparent 12px);
+    --ui-inset-depth: inset 0 2px 3px #0005, inset 0 -1px 0 #ffffff0c;
+    --ui-toolbar-finish: linear-gradient(180deg, #ffffff08, transparent 8px, #00000008);
+    --ui-action-depth: inset 1px 1px 0 #ffffff20, inset -1px -1px 0 #0005, 0 2px 0 var(--ui-shadow);
+    --ui-hover-depth:
+      inset 0 0 0 1px var(--iw-accent), inset 0 2px 0 #ffffff20, 0 2px 0 var(--ui-shadow);
+    --ui-pressed-depth: inset 0 2px 3px #0005, inset 0 -1px 0 #ffffff14;
+    --ui-selected-depth: inset 3px 0 var(--iw-focus), inset 0 1px 0 #ffffff18, inset 0 -2px 0 #0003;
+    --ui-gallery-depth: var(--ui-action-depth);
+  }
+
+  /* Steel: powder-coated face, rolled edge, dark socket and amber activation.
+     Four riveted corners belong to frames; wear never crosses the label. */
+  :is(
+      [data-theme-material='steel'],
+      [data-theme-material='industrial-workshop']
+    )[data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-loading-rail: 7px;
+    --ui-grain:
+      var(--ui-grain-machining) 0 0 / 256px 128px repeat,
+      var(--ui-grain-powder) 17px 11px / 192px 128px repeat;
+    --ui-panel-finish:
+      var(--ui-grain-vent) right 18px top 7px / 96px 8px no-repeat,
+      var(--ui-grain-edge-wear) left 14px top 2px / 128px 6px repeat-x, var(--ui-grain),
+      linear-gradient(180deg, #ffffff18, transparent 7px, transparent calc(100% - 5px), #00000025);
+    --ui-control-finish:
+      var(--ui-grain-edge-wear) left 14px top 1px / 128px 6px repeat-x, var(--ui-grain),
+      linear-gradient(90deg, #ffffff14, transparent 4px, transparent calc(100% - 4px), #00000020),
+      linear-gradient(
+        180deg,
+        #ffffff38 0 1px,
+        #ffffff14 1px 3px,
+        transparent 6px,
+        transparent calc(100% - 5px),
+        #00000035 calc(100% - 2px),
+        #00000050
+      );
+    --ui-active-finish:
+      var(--ui-grain-edge-wear) left 14px bottom 1px / 128px 6px repeat-x, var(--ui-grain),
+      linear-gradient(180deg, #00000022, transparent 3px, transparent calc(100% - 2px), #ffffff20);
+    --ui-inset-finish:
+      var(--ui-grain-powder) 41px 27px / 192px 128px repeat,
+      linear-gradient(180deg, #00000048, transparent 6px, transparent calc(100% - 2px), #ffffff10);
+    --ui-toolbar-finish:
+      var(--ui-grain-edge-wear) left 14px top 1px / 128px 6px repeat-x, var(--ui-grain),
+      linear-gradient(180deg, #ffffff28, transparent 4px, transparent calc(100% - 4px), #00000025);
+    --ui-thumb-finish:
+      repeating-linear-gradient(90deg, transparent 0 3px, #0006 3px 4px, #fff4 4px 5px) center /
+        15px 60% no-repeat,
+      linear-gradient(180deg, #fff3, transparent 3px, transparent calc(100% - 3px), #0003);
+    --ui-panel-frame: var(--iw-material-panel) 6 / 6px / 0 repeat;
+    --ui-raised-frame: var(--iw-material-raised) 6 / 6px / 0 repeat;
+    --ui-primary-frame: var(--iw-material-primary) 6 / 6px / 0 repeat;
+    --ui-hover-frame: var(--ui-primary-frame);
+    --ui-hover-face: var(--iw-accent);
+    --ui-hover-ink: var(--iw-on-accent);
+    --ui-panel-depth:
+      inset 1px 1px 0 #ffffff18, inset -1px -2px 0 #0008, 0 0 0 1px #0007, 0 4px 0 var(--ui-shadow),
+      0 16px 28px #0006;
+    --ui-action-depth:
+      inset 0 2px 0 #ffffff25, inset 2px 0 0 #ffffff12, inset 0 -3px 0 #0006, inset -2px 0 0 #0003,
+      0 0 0 1px #0008, 0 4px 0 var(--ui-shadow), 0 5px 0 #0003;
+    --ui-hover-depth:
+      inset 0 2px 0 #ffffff65, inset 2px 0 0 #ffffff35, inset 0 -3px 0 #0005, inset -2px 0 0 #0002,
+      0 0 0 1px #0008, 0 4px 0 var(--ui-shadow),
+      0 0 6px color-mix(in srgb, var(--iw-accent) 18%, transparent);
+    --ui-pressed-depth:
+      inset 0 3px 4px #0006, inset 2px 0 0 #0003, inset 0 -1px 0 #ffffff50, 0 0 0 1px #0009,
+      0 1px 0 var(--ui-shadow);
+    --ui-selected-depth:
+      inset 0 2px 0 #ffffff45, inset 3px 0 0 #ffffff30, inset 0 -2px 0 #0004, 0 0 0 1px #0008,
+      0 2px 0 var(--ui-shadow);
+    --ui-inset-depth:
+      inset 0 3px 4px #0007, inset 1px 0 0 #0006, inset 0 -1px 0 #ffffff1c, 0 1px 0 #ffffff10;
+    --ui-scene-inset: 0;
+    --ui-scene-width: auto;
+    --ui-scene-height: auto;
+    --ui-scene-motif:
+      linear-gradient(
+        135deg,
+        transparent 35%,
+        color-mix(in srgb, var(--iw-accent) 7%, transparent)
+      ),
+      var(--ui-grain-bulkhead), var(--ui-grain-machining);
+    --ui-scene-motif-size: 100% 100%, 256px 192px, 256px 128px;
+    --ui-scene-repeat: no-repeat, repeat, repeat;
+    --ui-scene-opacity: 0.8;
+  }
+
+  /* Cloth keeps its stitches on the panel seam. Buttons are woven fabric,
+     never embroidered borders repeated through every navigation row. */
+  [data-theme-material='linen'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-weave: var(--ui-grain-thread) 1px 1px / 48px 48px repeat;
+    --ui-panel-finish:
+      repeating-linear-gradient(
+          90deg,
+          color-mix(in srgb, var(--iw-accent) 48%, transparent) 0 3px,
+          transparent 3px 9px
+        )
+        left 12px top 3px / calc(100% - 24px) 2px no-repeat,
+      var(--ui-weave), linear-gradient(180deg, #ffffff06, transparent 72px);
+    --ui-toolbar-finish: var(--ui-weave);
+    --ui-panel-depth:
+      inset 0 2px 0 color-mix(in srgb, var(--iw-accent) 65%, transparent),
+      inset 0 -1px 0 color-mix(in srgb, var(--iw-accent) 32%, transparent), 0 6px 14px #0004;
+    --ui-inset-finish: var(--ui-weave), linear-gradient(180deg, #00000024, transparent 5px);
+  }
+
+  /* Glaze and paper have different grain. Both keep their clean edge relief;
+     material identity is declared on this scope, including custom themes. */
+  [data-theme-material='porcelain'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-ceramic: var(--ui-grain-glaze) 0 0 / 256px 192px repeat;
+  }
+  [data-theme-material='sakura'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-ceramic: var(--ui-grain-fiber) 0 0 / 192px 128px repeat;
+  }
+  /* Porcelain: a glazed face and cobalt double lip. Sakura is warmer satin. */
+  :is(
+      [data-theme-material='porcelain'],
+      [data-theme-material='sakura']
+    )[data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish: var(--ui-ceramic), linear-gradient(180deg, #ffffff30, transparent 9px);
+    --ui-control-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #ffffff80, transparent 4px, transparent calc(100% - 4px), #00000015);
+    --ui-toolbar-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #ffffff30, transparent 4px, transparent calc(100% - 4px), #00000009);
+    --ui-panel-depth:
+      inset 0 0 0 2px color-mix(in srgb, var(--iw-accent) 24%, transparent),
+      inset 0 0 0 5px #ffffff24, 0 4px 0 color-mix(in srgb, var(--iw-line) 28%, transparent),
+      0 8px 18px #0001;
+    --ui-action-depth:
+      inset 0 2px 0 #ffffff80, inset 0 -2px 0 #00000018,
+      0 2px 0 color-mix(in srgb, var(--iw-line) 40%, transparent);
+    --ui-hover-depth:
+      inset 0 0 0 1px var(--iw-accent), inset 0 2px 0 #ffffff80,
+      0 2px 0 color-mix(in srgb, var(--iw-accent) 45%, transparent);
+    --ui-active-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #00000022, transparent 3px, transparent calc(100% - 2px), #ffffff20);
+    --ui-inset-finish: var(--ui-ceramic), linear-gradient(180deg, #00000012, transparent 4px);
+    --ui-pressed-depth: inset 0 2px 0 #00000028, inset 0 -1px 0 #ffffff70;
+  }
+  [data-theme-material='sakura'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish: var(--ui-ceramic), linear-gradient(180deg, #ffffff18, transparent 6px);
+    --ui-panel-depth:
+      inset 0 2px 0 color-mix(in srgb, var(--iw-accent) 42%, transparent), inset 0 -1px 0 #00000015,
+      0 4px 14px #0001;
+  }
+
+  /* Enamel and instrument copper: hairline inlays, directional satin, no
+     repeated chevrons. Obsidian overrides the enamel with cut stone below. */
+  :is(
+      [data-theme-material='brass'],
+      [data-theme-material='copper']
+    )[data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish: var(--ui-metal), linear-gradient(180deg, #ffffff08, transparent 8px);
+    --ui-control-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff30, transparent 4px, transparent calc(100% - 4px), #00000030);
+    --ui-toolbar-finish: var(--ui-metal);
+    --ui-panel-depth:
+      inset 0 1px 0 color-mix(in srgb, var(--iw-accent) 45%, transparent),
+      inset 0 0 0 4px #00000018,
+      inset 0 -1px 0 color-mix(in srgb, var(--iw-accent) 22%, transparent),
+      0 4px 0 var(--ui-shadow), 0 10px 20px #0003;
+    --ui-hover-depth:
+      inset 0 2px 0 var(--iw-accent), inset 0 -1px 0 #0005, 0 2px 0 var(--ui-shadow);
+    --ui-metal: var(--ui-grain-powder) 9px 19px / 192px 128px repeat;
+    --ui-active-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #00000022, transparent 3px, transparent calc(100% - 2px), #ffffff20);
+    --ui-inset-finish: var(--ui-metal), linear-gradient(180deg, #00000030, transparent 5px);
+    --ui-pressed-depth: inset 0 2px 0 #0006, inset 0 -1px 0 #ffffff30;
+  }
+  [data-theme-material='copper'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-scene-motif: repeating-radial-gradient(
+      circle at 100% 0,
+      transparent 0 27px,
+      var(--iw-accent) 28px 29px,
+      transparent 30px 44px
+    );
+    --ui-scene-motif-size: 192px 96px;
+    --ui-metal: var(--ui-grain-brush) 0 0 / 192px 96px repeat;
+  }
+
+  /* Fine timber grain remains broad and sparse enough for small labels. */
+  [data-theme-material='wood'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-woodgrain: var(--ui-grain-timber) 11px 3px / 192px 128px repeat;
+    --ui-panel-finish: var(--ui-woodgrain), linear-gradient(180deg, #ffffff12, transparent 6px);
+    --ui-panel-depth:
+      inset 0 3px 0 #ffffff20, inset 0 -4px 0 #00000022, inset 2px 0 0 #ffffff10,
+      0 4px 0 color-mix(in srgb, var(--iw-line) 50%, transparent), 0 8px 16px #0002;
+    --ui-active-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #00000022, transparent 3px, transparent calc(100% - 2px), #ffffff20);
+    --ui-inset-finish: var(--ui-woodgrain), linear-gradient(180deg, #00000025, transparent 4px);
+    --ui-pressed-depth: inset 0 2px 0 #0005, inset 0 -1px 0 #ffffff20;
+  }
+  [data-theme-material='composite'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish:
+      var(--ui-composite),
+      linear-gradient(135deg, #ffffff20 0 5px, transparent 5px) top left / 18px 18px no-repeat;
+    --ui-panel-depth:
+      inset 2px 0 0 color-mix(in srgb, var(--iw-accent) 28%, transparent), inset 0 1px 0 #ffffff12,
+      inset 0 -2px 0 #0004, 0 4px 0 var(--ui-shadow), 0 10px 24px #0003;
+    --ui-composite: var(--ui-grain-stone) 0 0 / 192px 128px repeat;
+    --ui-active-finish:
+      var(--ui-composite),
+      linear-gradient(180deg, #00000022, transparent 3px, transparent calc(100% - 2px), #ffffff20);
+    --ui-inset-finish: var(--ui-composite), linear-gradient(180deg, #00000030, transparent 4px);
+    --ui-pressed-depth: inset 0 2px 0 #0005, inset 0 -1px 0 #ffffff25;
+  }
+  [data-theme-material='lcd'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish:
+      repeating-linear-gradient(0deg, transparent 0 3px, #00000003 3px 4px),
+      repeating-linear-gradient(90deg, transparent 0 3px, #00000003 3px 4px);
+    --ui-panel-depth:
+      inset 0 3px 5px #0003, inset 0 -2px 0 #ffffff35,
+      0 0 0 3px color-mix(in srgb, var(--iw-line) 25%, transparent);
+    --ui-active-finish: linear-gradient(
+      180deg,
+      #00000028,
+      transparent 3px,
+      transparent calc(100% - 2px),
+      #ffffff25
+    );
+    --ui-inset-finish:
+      repeating-linear-gradient(0deg, transparent 0 3px, #00000006 3px 4px),
+      repeating-linear-gradient(90deg, transparent 0 3px, #00000006 3px 4px);
+    --ui-pressed-depth: inset 0 2px 0 #0005, inset 0 -1px 0 #ffffff20;
+  }
+
+  /* These variants are resolved from the interface basis, including Studio
+     descendants, rather than testing the current campaign or family name. */
+  [data-theme-finish='ember-foundry'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-grain:
+      var(--ui-grain-stone) 0 0 / 192px 128px repeat,
+      var(--ui-grain-powder) 17px 11px / 192px 128px repeat;
+    --ui-panel-finish:
+      var(--ui-grain-vent) right 18px top 7px / 96px 8px no-repeat,
+      linear-gradient(90deg, var(--iw-accent), transparent) left 12px bottom 5px / 72px 2px
+        no-repeat,
+      var(--ui-grain),
+      linear-gradient(180deg, #ffffff12, transparent 6px, transparent calc(100% - 5px), #0005);
+    --ui-toolbar-finish:
+      var(--ui-grain-brush) 0 0 / 192px 96px repeat,
+      linear-gradient(180deg, #ffffff25, transparent 4px, transparent calc(100% - 4px), #0005);
+    --ui-panel-depth:
+      inset 1px 1px 0 #ffffff20, inset -2px -3px 0 #0009, 0 0 0 1px #0008, 0 5px 0 var(--ui-shadow),
+      0 16px 28px #0006;
+  }
+  [data-theme-finish='polar-relay'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-grain: var(--ui-grain-brush) 0 0 / 192px 96px repeat;
+    --ui-panel-finish:
+      var(--ui-grain-vent) right 18px top 7px / 96px 8px no-repeat,
+      linear-gradient(
+          90deg,
+          var(--iw-accent) 0 5px,
+          transparent 5px 9px,
+          var(--iw-accent) 9px 14px,
+          transparent 14px 18px,
+          var(--iw-accent) 18px 23px
+        )
+        left 14px top 8px / 23px 2px no-repeat,
+      var(--ui-grain),
+      linear-gradient(180deg, #ffffff20, transparent 8px, transparent calc(100% - 4px), #0004);
+    --ui-control-finish:
+      var(--ui-grain),
+      linear-gradient(90deg, #ffffff18, transparent 3px, transparent calc(100% - 3px), #0003),
+      linear-gradient(
+        180deg,
+        #ffffff40 0 1px,
+        #ffffff12 1px 3px,
+        transparent 5px,
+        transparent calc(100% - 3px),
+        #0005
+      );
+    --ui-panel-depth:
+      inset 1px 1px 0 #ffffff30, inset -1px -2px 0 #0008, 0 0 0 1px #0007, 0 3px 0 var(--ui-shadow),
+      0 12px 24px #0005;
+  }
+  [data-theme-finish='obsidian-reliquary'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish:
+      var(--ui-metal),
+      linear-gradient(135deg, #ffffff20 0 8px, transparent 8px) top left / 24px 24px no-repeat,
+      linear-gradient(315deg, #0005 0 8px, transparent 8px) bottom right / 24px 24px no-repeat;
+    --ui-panel-depth:
+      inset 2px 2px 0 color-mix(in srgb, var(--iw-accent) 28%, transparent),
+      inset -3px -3px 0 #0006, 0 5px 0 var(--ui-shadow), 0 10px 20px #0005;
+    --ui-scene-motif: linear-gradient(
+      135deg,
+      transparent 42%,
+      var(--iw-accent) 43% 44%,
+      transparent 45% 52%,
+      var(--iw-accent) 53% 54%,
+      transparent 55%
+    );
+    --ui-scene-motif-size: 144px 96px;
+    --ui-metal: var(--ui-grain-stone) 23px 7px / 192px 128px repeat;
+    --ui-pressed-depth: inset 2px 2px 0 #0005, inset -1px -1px 0 #ffffff20;
+  }
+  [data-theme-finish='deep-space'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish: var(--ui-composite), linear-gradient(180deg, #ffffff18, transparent 4px);
+    --ui-panel-depth:
+      inset 0 2px 0 #ffffff18, inset 0 -3px 0 #0007, inset 3px 0 0 #0003, 0 3px 0 var(--ui-shadow),
+      0 8px 20px #0004;
+    --ui-scene-motif:
+      linear-gradient(0deg, transparent 0 46px, var(--iw-line) 46px 48px, transparent 48px),
+      linear-gradient(90deg, transparent 0 130px, var(--iw-accent) 130px 138px, transparent 138px);
+    --ui-scene-motif-size: 192px 96px;
+    --ui-composite: var(--ui-grain-brush) 23px 11px / 192px 96px repeat;
+  }
+  [data-theme-finish='moonlit-grove'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-woodgrain: var(--ui-grain-timber) 53px 47px / 192px 128px repeat;
+    --ui-panel-finish: var(--ui-woodgrain), linear-gradient(180deg, #ffffff12, transparent 6px);
+    --ui-panel-depth:
+      inset 1px 1px 0 #ffffff18, inset -2px -3px 0 #0006, 0 4px 0 var(--ui-shadow),
+      0 12px 24px #0003;
+    --ui-scene-motif:
+      radial-gradient(
+        ellipse at 75% 22%,
+        transparent 25px,
+        var(--iw-accent) 26px 28px,
+        transparent 29px
+      ),
+      linear-gradient(120deg, transparent 64%, var(--iw-line) 65% 66%, transparent 67%);
+    --ui-scene-motif-size: 144px 96px;
+  }
+
+  /* Texture-free systems still have intentional construction. Native desktop
+     bevels and terminal double rules are geometry, not decorative texture. */
+
+  [data-theme-material='terminal'][data-theme-contrast='normal'] {
+    --ui-hover-face: var(--iw-selection);
+    --ui-hover-ink: var(--iw-on-selection);
+  }
+}
+
+/* Material state finishes: grain belongs to the material, relief belongs to the
+   interaction. Faces remain quiet; focus, text and status colors retain their
+   semantic pairings. Existing steel recipes deliberately remain untouched. */
+@media (forced-colors: none) {
+  /* Woven patches compress rather than becoming metal plates. Red embroidery
+     remains on the existing outer panel seam, never on every button. */
+  [data-theme-material='linen'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-control-finish:
+      var(--ui-weave),
+      linear-gradient(180deg, #ffffff14, transparent 3px, transparent calc(100% - 3px), #0004);
+    --ui-hover-finish:
+      var(--ui-weave),
+      linear-gradient(180deg, #ffffff20, transparent 3px, transparent calc(100% - 3px), #0004);
+    --ui-active-finish:
+      var(--ui-weave),
+      linear-gradient(180deg, #0004, transparent 3px, transparent calc(100% - 2px), #ffffff18);
+    --ui-selected-finish:
+      var(--ui-weave),
+      linear-gradient(180deg, #ffffff18, transparent 2px, transparent calc(100% - 2px), #0003);
+    --ui-action-depth: inset 1px 1px 0 #ffffff16, inset -1px -1px 0 #0006, 0 2px 2px #0005;
+    --ui-hover-depth: inset 2px 0 0 currentColor, inset 0 1px 0 #ffffff25, 0 2px 3px #0005;
+    --ui-pressed-depth: inset 0 2px 3px #0006, inset 0 -1px 0 #ffffff20;
+    --ui-selected-depth: inset 2px 0 0 currentColor, inset 0 1px 0 #ffffff20, 0 1px 1px #0005;
+    --ui-inset-depth: inset 0 2px 3px #0007, inset 0 -1px 0 #ffffff14;
+    --ui-input-hover-depth: inset 0 2px 3px #0007, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish:
+      linear-gradient(90deg, transparent 0 44%, #0003 44% 48%, #ffffff25 48% 52%, transparent 52%)
+        center / 12px 65% no-repeat,
+      var(--ui-weave);
+  }
+
+  /* Glazed ceramic has a broad clean face with a hard rim and a small catch
+     light. The cobalt lip, not scratches, explains its construction. */
+  [data-theme-material='porcelain'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish:
+      var(--ui-ceramic),
+      linear-gradient(
+        180deg,
+        #ffffffb0 0 1px,
+        #ffffff45 1px 3px,
+        transparent 5px,
+        transparent calc(100% - 3px),
+        #00000018
+      );
+    --ui-hover-finish:
+      var(--ui-ceramic),
+      linear-gradient(
+        180deg,
+        #ffffffd0,
+        #ffffff50 2px,
+        transparent 5px,
+        transparent calc(100% - 3px),
+        #00000018
+      );
+    --ui-active-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #00000025, transparent 3px, transparent calc(100% - 2px), #ffffff60);
+    --ui-selected-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #ffffff55, transparent 3px, transparent calc(100% - 2px), #00000020);
+    --ui-action-depth:
+      inset 1px 1px 0 #ffffffa0, inset -1px -2px 0 #00000015,
+      0 2px 0 color-mix(in srgb, var(--iw-line) 45%, transparent), 0 3px 4px #0000000c;
+    --ui-hover-depth:
+      inset 0 0 0 1px currentColor, inset 0 2px 0 #ffffffb0,
+      0 2px 0 color-mix(in srgb, var(--iw-line) 55%, transparent), 0 3px 5px #00000012;
+    --ui-selected-depth: inset 0 1px 0 #ffffff65, inset 0 -2px 0 #0003, 0 1px 0 var(--ui-shadow);
+    --ui-inset-depth: inset 0 2px 3px #00000020, inset 0 -1px 0 #ffffffb0;
+    --ui-input-hover-depth: inset 0 2px 3px #00000020, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish:
+      linear-gradient(90deg, #ffffff90 0 1px, transparent 1px),
+      linear-gradient(180deg, #ffffff85, transparent 3px, transparent calc(100% - 2px), #0003);
+  }
+
+  /* Lacquered station signage: restrained satin, crisp printed edges and paper
+     fibers. It shares no glazed ceramic glare or industrial fasteners. */
+  [data-theme-material='sakura'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #ffffff65, transparent 2px, transparent calc(100% - 2px), #00000014);
+    --ui-hover-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #ffffff90, transparent 3px, transparent calc(100% - 2px), #00000016);
+    --ui-selected-finish:
+      var(--ui-ceramic),
+      linear-gradient(180deg, #ffffff30, transparent 2px, transparent calc(100% - 2px), #00000022);
+    --ui-toolbar-finish: var(--ui-ceramic), linear-gradient(180deg, #ffffff50, transparent 2px);
+    --ui-action-depth:
+      inset 0 1px 0 #ffffff80, inset 0 -1px 0 #00000016,
+      0 2px 0 color-mix(in srgb, var(--iw-line) 40%, transparent);
+    --ui-hover-depth:
+      inset 0 -2px 0 currentColor, inset 0 1px 0 #ffffff90,
+      0 2px 0 color-mix(in srgb, var(--iw-line) 45%, transparent);
+    --ui-pressed-depth: inset 0 2px 2px #00000025, inset 0 -1px 0 #ffffff50;
+    --ui-selected-depth: inset 0 -2px 0 currentColor, inset 0 1px 0 #ffffff35;
+    --ui-inset-depth: inset 0 1px 2px #00000024, inset 0 -1px 0 #ffffff70;
+    --ui-input-hover-depth: inset 0 1px 2px #00000024, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish: linear-gradient(
+      180deg,
+      #ffffff55,
+      transparent 2px,
+      transparent calc(100% - 2px),
+      #00000022
+    );
+  }
+
+  /* Enamel instrument keys sit in a brass surround. Edge highlights stop after
+     four pixels; there is no bright glaze crossing a label. */
+  [data-theme-material='brass'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish:
+      var(--ui-metal),
+      linear-gradient(
+        180deg,
+        #ffffff35 0 1px,
+        #ffffff14 1px 3px,
+        transparent 5px,
+        transparent calc(100% - 4px),
+        #0005
+      );
+    --ui-hover-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff50, transparent 4px, transparent calc(100% - 3px), #0005);
+    --ui-selected-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff45, transparent 3px, transparent calc(100% - 3px), #0004);
+    --ui-toolbar-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff20, transparent 3px, transparent calc(100% - 2px), #0004);
+    --ui-action-depth:
+      inset 1px 1px 0 #ffffff22, inset -1px -2px 0 #0006, 0 2px 0 var(--ui-shadow), 0 3px 3px #0003;
+    --ui-hover-depth:
+      inset 0 2px 0 currentColor, inset 1px 0 0 #ffffff20, inset 0 -2px 0 #0006,
+      0 2px 0 var(--ui-shadow);
+    --ui-selected-depth: inset 0 1px 0 #ffffff50, inset 0 -2px 0 #0004, 0 1px 0 var(--ui-shadow);
+    --ui-inset-depth: inset 0 3px 3px #0007, inset 0 -1px 0 #ffffff20;
+    --ui-input-hover-depth: inset 0 3px 3px #0007, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish:
+      linear-gradient(180deg, transparent 0 40%, #0005 40% 46%, #ffffff40 46% 52%, transparent 52%)
+        center / 65% 12px no-repeat,
+      linear-gradient(90deg, #ffffff45, transparent 3px, transparent calc(100% - 2px), #0004);
+  }
+
+  /* Brushed observatory controls have a narrow metal cap and a darker foot.
+     Directional grain is restrained and coherent with the instrument fascia. */
+  [data-theme-material='copper'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish:
+      var(--ui-metal),
+      linear-gradient(
+        180deg,
+        #ffffff45 0 1px,
+        #ffffff16 1px 3px,
+        transparent 5px,
+        transparent calc(100% - 4px),
+        #0005
+      );
+    --ui-hover-finish:
+      var(--ui-metal),
+      linear-gradient(
+        180deg,
+        #ffffff60 0 1px,
+        #ffffff25 1px 3px,
+        transparent 5px,
+        transparent calc(100% - 4px),
+        #0005
+      );
+    --ui-selected-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff45, transparent 3px, transparent calc(100% - 3px), #0004);
+    --ui-toolbar-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff20, transparent 3px, transparent calc(100% - 3px), #0004);
+    --ui-action-depth: inset 1px 1px 0 #ffffff28, inset -1px -2px 0 #0007, 0 3px 0 var(--ui-shadow);
+    --ui-hover-depth:
+      inset 0 1px 0 #ffffff60, inset 0 -2px 0 currentColor, 0 3px 0 var(--ui-shadow);
+    --ui-pressed-depth: inset 0 3px 3px #0007, inset 0 -1px 0 #ffffff35, 0 1px 0 #0005;
+    --ui-selected-depth: inset 0 1px 0 #ffffff45, inset 0 -2px 0 #0005, 0 1px 0 var(--ui-shadow);
+    --ui-inset-depth: inset 0 3px 4px #0007, inset 0 -1px 0 #ffffff20;
+    --ui-input-hover-depth: inset 0 3px 4px #0007, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish:
+      repeating-linear-gradient(90deg, transparent 0 3px, #0005 3px 4px, #ffffff35 4px 5px) center /
+        15px 55% no-repeat,
+      linear-gradient(180deg, #ffffff60, transparent 3px, transparent calc(100% - 2px), #0004);
+  }
+
+  /* Wood uses planed edges and quiet long fibers; a selected key feels like a
+     stained inlay rather than a metal switch. */
+  [data-theme-material='wood'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #ffffff40, transparent 3px, transparent calc(100% - 3px), #0000002a);
+    --ui-hover-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #ffffff60, transparent 3px, transparent calc(100% - 3px), #0000002a);
+    --ui-selected-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #00000022, transparent 2px, transparent calc(100% - 2px), #ffffff28);
+    --ui-toolbar-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #ffffff30, transparent 3px, transparent calc(100% - 3px), #00000020);
+    --ui-action-depth:
+      inset 1px 1px 0 #ffffff35, inset -1px -2px 0 #00000030,
+      0 3px 0 color-mix(in srgb, var(--iw-line) 60%, transparent);
+    --ui-hover-depth:
+      inset 0 2px 0 currentColor, inset 0 -2px 0 #00000030,
+      0 3px 0 color-mix(in srgb, var(--iw-line) 70%, transparent);
+    --ui-selected-depth: inset 0 2px 2px #0004, inset 0 -1px 0 #ffffff35, 0 1px 0 var(--ui-shadow);
+    --ui-inset-depth: inset 0 2px 3px #00000035, inset 0 -1px 0 #ffffff50;
+    --ui-input-hover-depth: inset 0 2px 3px #00000035, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #ffffff45, transparent 3px, transparent calc(100% - 2px), #0004);
+  }
+
+  /* Ruins use honed stone and small luminous edge inlays. Glow is an interaction
+     response and never sits behind type or repeats across every resting key. */
+  [data-theme-material='composite'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish:
+      var(--ui-composite),
+      linear-gradient(180deg, #ffffff25 0 1px, transparent 4px, transparent calc(100% - 3px), #0005);
+    --ui-hover-finish:
+      var(--ui-composite),
+      linear-gradient(180deg, #ffffff40, transparent 3px, transparent calc(100% - 3px), #0005);
+    --ui-selected-finish:
+      var(--ui-composite),
+      linear-gradient(180deg, #ffffff30, transparent 2px, transparent calc(100% - 2px), #0004);
+    --ui-toolbar-finish:
+      var(--ui-composite),
+      linear-gradient(180deg, #ffffff1a, transparent 3px, transparent calc(100% - 2px), #0004);
+    --ui-action-depth: inset 1px 1px 0 #ffffff1c, inset -1px -2px 0 #0006, 0 2px 0 var(--ui-shadow);
+    --ui-hover-depth:
+      inset 0 -2px 0 currentColor, inset 0 1px 0 #ffffff30, 0 2px 0 var(--ui-shadow),
+      0 2px 7px color-mix(in srgb, currentColor 12%, transparent);
+    --ui-selected-depth: inset 0 1px 0 #ffffff40, inset 0 -2px 0 #0004, 0 1px 0 var(--ui-shadow);
+    --ui-inset-depth: inset 0 2px 3px #0007, inset 0 -1px 0 #ffffff1c;
+    --ui-input-hover-depth: inset 0 2px 3px #0007, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish:
+      linear-gradient(180deg, #ffffff50, transparent 2px, transparent calc(100% - 2px), #0004),
+      linear-gradient(90deg, transparent 0 40%, #0004 40% 50%, transparent 50%) center / 10px 60%
+        no-repeat;
+  }
+
+  /* LCD controls are monochrome molded keys; the display pixel matrix stays
+     inside the recessed readout. No grain or fake bloom on text. */
+  [data-theme-material='lcd'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish: linear-gradient(
+      180deg,
+      #ffffff35,
+      transparent 2px,
+      transparent calc(100% - 3px),
+      #00000022
+    );
+    --ui-hover-finish: linear-gradient(
+      180deg,
+      #ffffff55,
+      transparent 2px,
+      transparent calc(100% - 3px),
+      #00000022
+    );
+    --ui-selected-finish: linear-gradient(
+      180deg,
+      #00000022,
+      transparent 2px,
+      transparent calc(100% - 2px),
+      #ffffff25
+    );
+    --ui-toolbar-finish: linear-gradient(
+      180deg,
+      #ffffff30,
+      transparent 2px,
+      transparent calc(100% - 2px),
+      #00000018
+    );
+    --ui-action-depth:
+      inset 1px 1px 0 #ffffff45, inset -1px -2px 0 #00000035,
+      0 2px 0 color-mix(in srgb, var(--iw-line) 70%, transparent);
+    --ui-hover-depth:
+      inset 0 0 0 1px currentColor, inset 0 1px 0 #ffffff45,
+      0 2px 0 color-mix(in srgb, var(--iw-line) 70%, transparent);
+    --ui-selected-depth: inset 0 2px 2px #0004, inset 0 -1px 0 #ffffff35;
+    --ui-inset-depth: inset 0 2px 3px #00000040, inset 0 -1px 0 #ffffff40;
+    --ui-input-hover-depth: inset 0 2px 3px #00000040, inset 0 -1px 0 var(--iw-control-line);
+    --ui-thumb-finish:
+      linear-gradient(180deg, #ffffff50, transparent 2px, transparent calc(100% - 2px), #0003),
+      linear-gradient(90deg, transparent 0 42%, #0004 42% 52%, transparent 52%) center / 10px 65%
+        no-repeat;
+  }
+
+  /* The variants inherit the full material contract but keep their own finish:
+     carved obsidian, anodized command consoles, and dark waxed timber. */
+  [data-theme-finish='obsidian-reliquary'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-control-finish:
+      var(--ui-metal), linear-gradient(135deg, #ffffff18 0 3px, transparent 3px),
+      linear-gradient(180deg, #ffffff20 0 2px, transparent 2px, transparent calc(100% - 3px), #0005);
+    --ui-hover-finish:
+      var(--ui-metal), linear-gradient(135deg, #ffffff30 0 3px, transparent 3px),
+      linear-gradient(180deg, #ffffff30 0 2px, transparent 3px, transparent calc(100% - 3px), #0005);
+    --ui-active-finish:
+      var(--ui-metal), linear-gradient(135deg, #0004 0 3px, transparent 3px),
+      linear-gradient(180deg, #0005, transparent 3px, transparent calc(100% - 2px), #ffffff25);
+    --ui-selected-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff30 0 2px, transparent 2px, transparent calc(100% - 2px), #0004);
+    --ui-toolbar-finish:
+      var(--ui-metal),
+      linear-gradient(180deg, #ffffff18 0 2px, transparent 2px, transparent calc(100% - 3px), #0005);
+    --ui-action-depth: inset 2px 2px 0 #ffffff18, inset -2px -2px 0 #0006, 0 3px 0 var(--ui-shadow);
+    --ui-hover-depth:
+      inset 2px 2px 0 currentColor, inset -2px -2px 0 #0007, 0 3px 0 var(--ui-shadow);
+    --ui-selected-depth:
+      inset 2px 2px 0 #ffffff35, inset -2px -2px 0 #0005, 0 1px 0 var(--ui-shadow);
+    --ui-thumb-finish:
+      linear-gradient(135deg, #ffffff40 0 3px, transparent 3px),
+      linear-gradient(180deg, #ffffff25, transparent 2px, transparent calc(100% - 2px), #0005);
+  }
+  [data-theme-finish='deep-space'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-control-finish:
+      var(--ui-composite),
+      linear-gradient(180deg, #ffffff30 0 1px, transparent 3px, transparent calc(100% - 3px), #0006);
+    --ui-hover-finish:
+      var(--ui-composite),
+      linear-gradient(180deg, #ffffff45, transparent 3px, transparent calc(100% - 3px), #0006);
+    --ui-action-depth: inset 0 1px 0 #ffffff25, inset 0 -2px 0 #0007, 0 2px 0 var(--ui-shadow);
+    --ui-hover-depth:
+      inset 0 -2px 0 currentColor, inset 0 1px 0 #ffffff40, 0 2px 0 var(--ui-shadow);
+    --ui-selected-depth: inset 0 1px 0 #ffffff40, inset 0 -2px 0 #0005, 0 1px 0 var(--ui-shadow);
+    --ui-thumb-finish:
+      linear-gradient(90deg, transparent 0 40%, #0006 40% 48%, #ffffff40 48% 56%, transparent 56%)
+        center / 12px 65% no-repeat,
+      linear-gradient(180deg, #ffffff55, transparent 2px, transparent calc(100% - 2px), #0005);
+  }
+  [data-theme-finish='moonlit-grove'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-control-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #ffffff25, transparent 3px, transparent calc(100% - 3px), #0005);
+    --ui-hover-finish:
+      var(--ui-woodgrain),
+      linear-gradient(180deg, #ffffff40, transparent 3px, transparent calc(100% - 3px), #0005);
+    --ui-action-depth: inset 1px 1px 0 #ffffff22, inset -1px -2px 0 #0006, 0 3px 0 var(--ui-shadow);
+    --ui-hover-depth: inset 0 2px 0 currentColor, inset 0 -2px 0 #0006, 0 3px 0 var(--ui-shadow);
+    --ui-selected-depth: inset 0 2px 2px #0005, inset 0 -1px 0 #ffffff30, 0 1px 0 var(--ui-shadow);
+    --ui-inset-depth: inset 0 2px 3px #0006, inset 0 -1px 0 #ffffff25;
+    --ui-input-hover-depth: inset 0 2px 3px #0006, inset 0 -1px 0 var(--iw-control-line);
+  }
+
+  /* Texture-free systems have structural states. These are not decoration and
+     remain when decorative detail is Off; high contrast has its own painter. */
+  [data-theme-material='classic'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-material-travel: 0 1px;
+    --ui-control-finish: none;
+    --ui-hover-finish: none;
+    --ui-active-finish: none;
+    --ui-selected-finish: none;
+    --ui-toolbar-finish: none;
+    --ui-thumb-finish: none;
+    --ui-panel-depth:
+      inset 1px 1px #fff, inset 2px 2px #dfdfdf, inset -1px -1px #000, inset -2px -2px #808080,
+      2px 2px 0 #0005;
+    --ui-action-depth:
+      inset 1px 1px #fff, inset 2px 2px #dfdfdf, inset -1px -1px #404040, inset -2px -2px #808080;
+    --ui-hover-depth: var(--ui-action-depth);
+    --ui-pressed-depth: inset 1px 1px #404040, inset 2px 2px #808080, inset -1px -1px #fff;
+    --ui-selected-depth: var(--ui-pressed-depth);
+    --ui-inset-depth: inset 1px 1px #808080, inset 2px 2px #404040, inset -1px -1px #fff;
+    --ui-input-hover-depth: var(--ui-inset-depth);
+    --ui-gallery-depth: var(--ui-action-depth);
+  }
+  [data-theme-material='terminal'][data-theme-contrast='normal'] {
+    --ui-control-finish: none;
+    --ui-hover-finish: none;
+    --ui-active-finish: none;
+    --ui-selected-finish: none;
+    --ui-inset-finish: none;
+    --ui-toolbar-finish: none;
+    --ui-thumb-finish: none;
+    --ui-panel-depth: inset 0 0 0 1px var(--iw-panel), inset 0 0 0 2px var(--iw-control-line);
+    --ui-action-depth: 0 0 0 0 transparent;
+    --ui-hover-depth: inset 2px 0 currentColor, inset -2px 0 currentColor;
+    --ui-pressed-depth: inset 0 0 0 1px currentColor;
+    --ui-selected-depth: inset 2px 0 currentColor, inset -2px 0 currentColor;
+    --ui-inset-depth: inset 0 -1px 0 var(--iw-control-line);
+    --ui-input-hover-depth: inset 0 -2px 0 var(--iw-control-line);
+    --ui-gallery-depth: none;
+  }
+  [data-theme-material='legacy'][data-theme-styled='true'][data-theme-contrast='normal'][data-theme-surface='bevel'] {
+    --ui-panel-finish: none;
+    --ui-control-finish: none;
+    --ui-hover-finish: none;
+    --ui-active-finish: none;
+    --ui-selected-finish: none;
+    --ui-toolbar-finish: none;
+    --ui-thumb-finish: none;
+    --ui-panel-depth:
+      inset 0 1px 0 #ffffff14, inset 0 -2px 0 #0006, 0 3px 0 var(--ui-shadow), 0 8px 16px #0003;
+    --ui-action-depth: inset 0 1px 0 #ffffff20, inset 0 -2px 0 #0005, 0 2px 0 var(--ui-shadow);
+    --ui-hover-depth:
+      inset 0 -2px 0 currentColor, inset 0 1px 0 #ffffff30, 0 2px 0 var(--ui-shadow);
+    --ui-pressed-depth: inset 0 2px 2px #0006, inset 0 -1px 0 #ffffff25;
+    --ui-selected-depth: inset 2px 0 currentColor, inset 0 -2px 0 #0004;
+    --ui-inset-depth: inset 0 2px 3px #0006, inset 0 -1px 0 #ffffff20;
+    --ui-input-hover-depth: inset 0 2px 3px #0006, inset 0 -1px 0 var(--iw-control-line);
+    --ui-gallery-depth: var(--ui-action-depth);
+  }
+}
+
+/* Mechanical travel is an input response, never an idle animation. Both
+   motion preferences opt in; nested flat/HC specimens keep their own reset. */
+@media (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+  [data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'][data-theme-motion='full'] {
+    --ui-press-travel: var(--ui-material-travel);
+  }
+  [data-theme-material='steel'][data-theme-texture='on'][data-theme-contrast='normal'][data-theme-surface='bevel'][data-theme-motion='full'] {
+    --ui-press-travel: 0 2px;
+  }
+}

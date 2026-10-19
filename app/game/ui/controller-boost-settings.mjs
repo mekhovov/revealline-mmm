@@ -1,4 +1,4 @@
-import { localizedText, t } from '../i18n/index.mjs';
+import { getLocale, localizedText, t } from '../i18n/index.mjs';
 import { resolveControllerBoostMode } from '../controller-boost.mjs';
 
 /** This select is an independent preference, outside the button-map draft.
@@ -43,17 +43,45 @@ export function attachControllerBoostSettings({ select, status, getMode, applyMo
   };
 }
 
-/** Update only changed text, so the live region does not announce every frame. */
+const cueText = new WeakMap();
+
+/** Keep polling independent of unchanged caption translation and live-region writes. */
 export function renderControllerBoostCue(element, state, buttonLabel, canToggle = false) {
-  const hidden = state.mode !== 'toggle';
-  const text = hidden
-    ? ''
-    : t('gameplay:controllerBoost2', {
-        value1: state.latched ? 'on' : 'off',
-        value2: canToggle
-          ? t('gameplay:toTurn', { value1: buttonLabel, value2: state.latched ? 'off' : 'on' })
-          : '',
-      });
+  const hidden = state.mode !== 'toggle',
+    locale = getLocale(),
+    latched = !!state.latched;
+  let cached = cueText.get(element);
+  const previous = cached;
+  if (
+    !cached ||
+    cached.hidden !== hidden ||
+    cached.locale !== locale ||
+    cached.latched !== latched ||
+    cached.buttonLabel !== buttonLabel ||
+    cached.canToggle !== canToggle
+  ) {
+    const translate = () =>
+      hidden
+        ? ''
+        : t('gameplay:controllerBoost2', {
+            value1: latched ? 'on' : 'off',
+            value2: canToggle
+              ? t('gameplay:toTurn', { value1: buttonLabel, value2: latched ? 'off' : 'on' })
+              : '',
+          });
+    const entry = { hidden, locale, latched, buttonLabel, canToggle, text: translate() };
+    entry.resolve = () => {
+      const nextLocale = getLocale();
+      if (entry.locale !== nextLocale) {
+        entry.locale = nextLocale;
+        entry.text = translate();
+      }
+      return entry.text;
+    };
+    cached = entry;
+    cueText.set(element, cached);
+  }
+  const { text } = cached;
   if (element.hidden !== hidden) element.hidden = hidden;
-  if (element.textContent !== text) localizedText(element, () => text);
+  if (previous !== cached || element.textContent !== text) localizedText(element, cached.resolve);
 }

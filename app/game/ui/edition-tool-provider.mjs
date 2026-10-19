@@ -1,6 +1,7 @@
 import { loadCompanyStartup } from './company-startup.mjs';
 import { mountEditionNavigation } from './edition-navigation.mjs';
 import { t, localizedText } from '../i18n/index.mjs';
+import { installThemeHost } from '../presentation/theme-host.mjs';
 
 /** Tools are one directory beneath game/. Resolve edition data through the
  * same validated canonical provider, including the compiled audience boundary. */
@@ -24,16 +25,21 @@ export async function loadEditionToolProvider({
   documentRef.body.dataset.brandId = provider.selection.brand.id;
   const palette = provider.theme.palette,
     root = documentRef.documentElement;
+  const themeHost = installThemeHost({
+    document: documentRef,
+    appearanceDefault: provider.appearanceDefault,
+    appearanceThemes: provider.appearanceThemes,
+  });
+  themeHost.setDefault(provider.appearanceDefault);
   for (const [key, value] of Object.entries(palette))
     root.style.setProperty(`--brand-${key}`, value);
-  for (const [key, value] of Object.entries({
+  const legacyTokens = {
     accent: palette.accent,
     bg: palette.ink,
     panel: palette.field,
     text: palette.paper,
     muted: palette.muted,
-  }))
-    if (value) root.style.setProperty(`--fk-${key}`, value);
+  };
   const win = documentRef.defaultView ?? globalThis.window;
   if (provider.selection.brand.fontAssetId && typeof win?.FontFace === 'function') {
     const font = new win.FontFace(
@@ -43,11 +49,29 @@ export async function loadEditionToolProvider({
     documentRef.fonts.add(await font.load());
     root.style.setProperty('--brand-font', '"Company Brand", system-ui, sans-serif');
   }
-  for (const name of ['pixel', 'display', 'ui'])
-    documentRef.body.style.setProperty(
-      `--fk-font-${name}`,
-      'var(--brand-font, system-ui, sans-serif)',
-    );
+  const brandFont = 'var(--brand-font, system-ui, sans-serif)';
+  const stopAppearance = themeHost.subscribe((appearance) => {
+    const legacy = appearance.interfaceId === 'legacy' && !appearance.accessibility.highContrast;
+    for (const [key, value] of Object.entries(legacyTokens)) {
+      if (legacy && value) root.style.setProperty(`--fk-${key}`, value);
+      else if (root.style.getPropertyValue(`--fk-${key}`) === value)
+        root.style.removeProperty(`--fk-${key}`);
+    }
+    for (const name of ['pixel', 'display', 'ui']) {
+      const key = `--fk-font-${name}`;
+      if (legacy && appearance.accessibility.textFace !== 'plain')
+        documentRef.body.style.setProperty(key, brandFont);
+      else if (documentRef.body.style.getPropertyValue(key) === brandFont)
+        documentRef.body.style.removeProperty(key);
+    }
+  });
+  const disposeAppearance = (event) => {
+    if (event?.persisted) return;
+    stopAppearance();
+    themeHost.dispose();
+    win?.removeEventListener?.('pagehide', disposeAppearance);
+  };
+  win?.addEventListener?.('pagehide', disposeAppearance);
   const toolKey = tool.pathname.includes('/controller-lab')
     ? 'interface:controllerPractice'
     : 'interface:replayTheater';

@@ -46,9 +46,11 @@ export function createCandidateVersusHost(
           candidate.levelId === manifest.level.id,
       );
       const theme = ownedThemes.find((candidate) => candidate.id === manifest.presentation.themeId);
+      required(theme, 'Candidate needs its exact authored theme.');
+      // A compiled null is an intentional greybox, never an unverified asset.
       required(
-        theme && manifest.background,
-        'Candidate needs its exact authored theme and original.',
+        manifest.background === null || typeof manifest.background === 'object',
+        'Candidate original must be a compiled asset revision or an explicit greybox.',
       );
       const row = freezeDesign({
         key: `${mission.id}/${entry.difficulty}`,

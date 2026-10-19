@@ -1,10 +1,13 @@
-/* Standalone return commands stay reachable beside each tool's own controls. */
-a[data-workshop-return] {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-}
-a[data-workshop-return]:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
+/* Legacy layout and paint share one cascade layer. Theme recipes own opt-in appearance. */
+@layer legacy {
+  /* Standalone return commands stay reachable beside each tool's own controls. */
+  a[data-workshop-return] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  a[data-workshop-return]:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
 }

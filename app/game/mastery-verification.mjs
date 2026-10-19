@@ -28,7 +28,7 @@ const abortIfNeeded = (signal) => {
  */
 export async function verifyMasteryRun(
   { replay, campaign, definition, runId, earnedAt },
-  { signal, onProgress, chunkTicks = 600 } = {},
+  { signal, onProgress, chunkTicks = 600, scheduleChunk } = {},
 ) {
   abortIfNeeded(signal);
   // Take all caller-owned data before the first asynchronous yield. Reuse the
@@ -76,6 +76,7 @@ export async function verifyMasteryRun(
     signal,
     onProgress,
     chunkTicks,
+    scheduleChunk,
     mastery: { definition: rule, campaignId: installed.id, campaignKey: key, runId: base.runId },
   });
   abortIfNeeded(signal);

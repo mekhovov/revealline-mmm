@@ -2,7 +2,8 @@ import { boundedJSON, exactKeys, required, stableId, dataIdentity } from '../dat
 import { campaignKey } from '../library.mjs';
 import { resolveContentJourney } from './journey.mjs';
 import { compileContentProject } from './project.mjs';
-import { freezeDesign, journeyPreset } from './catalogs.mjs';
+import { journeyPreset } from './catalogs.mjs';
+import { createContentExecutionEntry } from './execution-entry.mjs';
 
 /** Host-facing candidate executions. Each preset is resolved from authored source,
  * never projected from another execution (in particular, never Legacy Gentle).
@@ -40,19 +41,14 @@ export function createContentExecutionCatalog(source, options = {}) {
       );
       required(resolved, 'Preset campaign membership changed.');
       const executionKey = executionIdentity(resolved.runtime);
-      const entry = freezeDesign({
-        campaign: resolved.runtime,
-        baseCampaign: base.runtime,
+      const entry = createContentExecutionEntry({
+        standard,
+        base,
+        resolved,
+        difficulty,
         baseCampaignKey,
         executionKey,
-        difficulty,
-        policyVersion: standard.policyId,
-        sourceProjectId: standard.projectId,
-        sourcePackId: base.packId,
-        campaignId: base.campaignId,
-        manifests: resolved.manifests,
-        ...(campaignFeedback ? { campaignFeedback } : {}),
-        officialProgressEligible: false,
+        campaignFeedback,
       });
       entries.push(entry);
       const key = `${owner}/${executionKey}`;

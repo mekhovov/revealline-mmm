@@ -2,6 +2,10 @@ import { captureRecipe } from '../ui/feedback-cues.mjs';
 import { t } from '../i18n/index.mjs';
 import { drawActiveTrail, drawCapturePulse } from '../ui/actor-presentation.mjs';
 import { drawPresentationImage } from '../ui/presentation-draw-image.mjs';
+import {
+  INDUSTRIAL_MATERIAL_REVISION,
+  INDUSTRIAL_ENVIRONMENT_REVISION,
+} from '../presentation/industrial-materials.mjs';
 
 const CELL = 16;
 const CAPTURE_LIFE = 0.65;
@@ -88,9 +92,9 @@ export function drawCoopCaptureFeedback(ctx, effects, run, palette, reduced = fa
 
 /** Borrow one already prepared frame. A missing legacy binding remains optional;
  * an advertised but malformed frame must not replace the accepted presentation. */
-export function prepareCoopWall(snapshot) {
+export function prepareCoopWall(snapshot, slot = 'terrain.wall') {
   if (typeof snapshot?.image !== 'function') return null;
-  const tile = snapshot.image('terrain.wall');
+  const tile = snapshot.image(slot);
   if (tile == null) return null;
   const width = tile.image?.naturalWidth ?? tile.image?.width;
   const height = tile.image?.naturalHeight ?? tile.image?.height;
@@ -105,6 +109,29 @@ export function prepareCoopWall(snapshot) {
   )
     throw new TypeError(t('interface:teamTerrainNeedsItsPreparedImageAndNormalizedPivot'));
   return tile;
+}
+
+/** Only this explicitly selected sample gains new Team field decoration.
+ * Author-owned frames and released Team artwork retain their previous treatment. */
+export function prepareCoopMaterialSample(snapshot) {
+  return Object.freeze(
+    Object.fromEntries(
+      [
+        ['1', 'terrain.slow'],
+        ['2', 'terrain.lethal'],
+      ].map(([kind, slot]) => {
+        const frame = snapshot?.image?.(slot);
+        return [
+          kind,
+          [INDUSTRIAL_MATERIAL_REVISION, INDUSTRIAL_ENVIRONMENT_REVISION].includes(
+            frame?.materialReviewRevision,
+          )
+            ? prepareCoopWall(snapshot, slot)
+            : null,
+        ];
+      }),
+    ),
+  );
 }
 
 export function drawCoopWall(ctx, tile, x, y) {

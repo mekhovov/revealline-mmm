@@ -17,6 +17,7 @@ export function attachInput({
   arena,
   onPause = () => {},
   onActivity = () => {},
+  onSteer = () => {},
   onClear = () => {},
   tapMode = () => false,
   continuousSteering = () => false,
@@ -189,6 +190,7 @@ export function attachInput({
       latched = null;
       (pointer ? buttons : held).set(key, { direction, order: ++order, element });
     }
+    onSteer(direction);
     syncPressed();
   };
   const startBoost = (key, pointer = false, toggle = tapMode()) => {
@@ -506,8 +508,10 @@ export function attachInput({
       // Local events since the previous sample win an unobservable same-sample
       // tie. Consume the pad transition either way: an old hold never reclaims
       // the heading on a later poll. Physical release only rearms that source.
-      if (cmd.direction && cmd.direction !== lastPadDirection && !localDirectionPending)
+      if (cmd.direction && cmd.direction !== lastPadDirection && !localDirectionPending) {
         intentDirection = cmd.direction;
+        onSteer(cmd.direction);
+      }
       lastPadDirection = cmd.direction;
       localDirectionPending = false;
     }

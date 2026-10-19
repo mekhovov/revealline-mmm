@@ -1,3 +1,4 @@
+import { prepareTeamRunningEnemies } from '../hunt/team-running-enemies.mjs';
 import { exactKeys, required, stableId, dataIdentity } from '../data-json.mjs';
 import { validateCoopLevel, createCoop } from '../coop/core.mjs';
 import {
@@ -7,16 +8,83 @@ import {
   COOP_BONUS_LEVEL_VERSION,
   COOP_IMPACT_LEVEL_VERSION,
   COOP_SPECIALIST_LEVEL_VERSION,
+  COOP_HUNT_LEVEL_VERSION,
   journeyTeamPackEdition,
 } from '../coop/foundations.mjs';
+import { huntTargetKind, HUNT_RUNNER_TURN_TICKS } from '../hunt/rules.mjs';
 import { compileActor, freezeDesign } from './catalogs.mjs';
 import { inspectRuntimeTopology } from './diagnostics.mjs';
 import { TEAM_MISSION_FORMATS, teamRoleQualified } from './team-qualification.mjs';
+import { EXPEDITION_LEVEL, EXPEDITION_RULESET } from '../coop/expedition-version.mjs';
 
 /** Explicit Team qualification, not an automatic Solo-to-Team conversion.
  * Unsupported mechanics fail closed until their Team semantics are implemented. */
 export function resolveTeamMission(project, mission, map, difficulty) {
-  exactKeys(mission.team, ['format', 'spawnIds', 'supportRoles'], 'Team mission');
+  if (mission.team.format === 'TeamMissionV10') {
+    exactKeys(
+      mission.team,
+      ['format', 'spawnIds', 'supportRoles', 'environment'],
+      'Team expedition mission',
+    );
+    const { environment, ...team } = mission.team;
+    const base = resolveTeamMission(
+      project,
+      { ...mission, team: { ...team, format: 'TeamMissionV6' } },
+      map,
+      difficulty,
+    );
+    const level = {
+      ...structuredClone(base.level),
+      version: EXPEDITION_LEVEL,
+      environment: structuredClone(environment),
+    };
+    const validation = validateCoopLevel(level);
+    required(validation.valid, validation.errors.join(' '));
+    const topology = inspectRuntimeTopology(
+      createCoop(level, { seed: 1 }),
+      level,
+      map.geometry,
+      level.spawns,
+    );
+    const { id: _id, name: _name, revision: _revision, ...simulation } = level;
+    return freezeDesign({
+      ...base,
+      level,
+      topology,
+      diagnostics: [
+        ...map.geometry.diagnostics,
+        ...topology.diagnostics,
+        { severity: 'warning', code: 'team-candidate-not-playtested' },
+      ],
+      simulationIdentity: dataIdentity({
+        ruleset: EXPEDITION_RULESET,
+        policy: project.policy.id,
+        difficulty,
+        level: simulation,
+      }),
+    });
+  }
+  const stronghold = mission.team.format === 'TeamMissionV9';
+  exactKeys(
+    mission.team,
+    [
+      'format',
+      'spawnIds',
+      'supportRoles',
+      'lineImpact',
+      ...(stronghold ? ['strongholds', 'requiredCores'] : []),
+    ],
+    'Team mission',
+  );
+  if (stronghold)
+    required(
+      mission.pursuit &&
+        Array.isArray(mission.team.strongholds) &&
+        mission.team.strongholds.length > 0 &&
+        Array.isArray(mission.team.requiredCores) &&
+        mission.team.requiredCores.length > 0,
+      'Pursuit stronghold missions need explicit anchors, cores and required objectives.',
+    );
   required(
     TEAM_MISSION_FORMATS.includes(mission.team.format) &&
       Array.isArray(mission.team.spawnIds) &&
@@ -25,8 +93,18 @@ export function resolveTeamMission(project, mission, map, difficulty) {
       mission.team.spawnIds.every(stableId),
     'Team missions require two explicit named spawns.',
   );
+  const snake = mission.team.format === 'TeamMissionV8';
+  const hunting = snake || mission.team.format === 'TeamMissionV7';
+  required(snake === !!mission.snake, 'Team Snake missions require an explicit Snake definition.');
   required(
-    mission.team.format === 'TeamMissionV6'
+    hunting
+      ? typeof mission.team.lineImpact === 'boolean'
+      : !Object.hasOwn(mission.team, 'lineImpact'),
+    'Team hunt missions must explicitly retain their source trail impact behavior.',
+  );
+  required(
+    mission.team.format === 'TeamMissionV6' ||
+      (hunting && Object.hasOwn(mission.team, 'supportRoles'))
       ? Array.isArray(mission.team.supportRoles) &&
           mission.team.supportRoles.length === 2 &&
           new Set(mission.team.supportRoles).size === 2 &&
@@ -44,20 +122,32 @@ export function resolveTeamMission(project, mission, map, difficulty) {
       mission.objectives.length === 0 &&
       mission.bonuses.length === 0 &&
       (!Object.hasOwn(mission, 'timedBonuses') ||
-        ['TeamMissionV4', 'TeamMissionV5', 'TeamMissionV6'].includes(mission.team.format)) &&
+        [
+          'TeamMissionV4',
+          'TeamMissionV5',
+          'TeamMissionV6',
+          'TeamMissionV7',
+          'TeamMissionV8',
+        ].includes(mission.team.format)) &&
       mission.timeLimitSeconds === 0 &&
-      (mission.team.format !== 'TeamMissionV1' || (map.source.terrain ?? []).length === 0),
+      ((!stronghold && mission.team.format !== 'TeamMissionV1') ||
+        (map.source.terrain ?? []).length === 0),
     'Team candidates support only qualified actor roles and coverage, not unqualified terrain, bonuses, objectives or timers.',
   );
   required(
-    !['TeamMissionV4', 'TeamMissionV5', 'TeamMissionV6'].includes(mission.team.format) ||
+    !['TeamMissionV4', 'TeamMissionV5', 'TeamMissionV6', 'TeamMissionV7', 'TeamMissionV8'].includes(
+      mission.team.format,
+    ) ||
       (map.source.format === 'MapDesignV1' &&
         !Object.hasOwn(mission, 'encounter') &&
         !Object.hasOwn(mission, 'relayLinks')),
     'Team timed bonuses currently qualify foundation/terrain maps, not relay, directional or encounter mechanics.',
   );
   required(
-    !['TeamMissionV5', 'TeamMissionV6'].includes(mission.team.format) ||
+    !(
+      ['TeamMissionV5', 'TeamMissionV6'].includes(mission.team.format) ||
+      (hunting && mission.team.lineImpact)
+    ) ||
       (project.policy.lineImpact?.version === 'line-impact.v1' &&
         Number.isFinite(project.policy.lineImpact.speed)),
     'Team impact missions require the registered global Journey impact policy.',
@@ -71,22 +161,28 @@ export function resolveTeamMission(project, mission, map, difficulty) {
     Math.hypot(spawns[0].x - spawns[1].x, spawns[0].y - spawns[1].y) >= 1,
     'Team spawn bodies must have independent clearance.',
   );
-  const level = {
-    version:
-      mission.team.format === 'TeamMissionV6'
-        ? COOP_SPECIALIST_LEVEL_VERSION
-        : mission.team.format === 'TeamMissionV5'
-          ? COOP_IMPACT_LEVEL_VERSION
-          : mission.team.format === 'TeamMissionV4'
-            ? COOP_BONUS_LEVEL_VERSION
-            : mission.team.format === 'TeamMissionV3'
-              ? COOP_ROVER_LEVEL_VERSION
-              : mission.team.format === 'TeamMissionV2'
-                ? COOP_TERRAIN_LEVEL_VERSION
-                : COOP_FOUNDATION_LEVEL_VERSION,
-    ...(mission.team.format !== 'TeamMissionV1' ? { terrain: map.source.terrain ?? [] } : {}),
+  let level = {
+    version: snake
+      ? 'revealline-coop-level.v10'
+      : hunting
+        ? COOP_HUNT_LEVEL_VERSION
+        : mission.team.format === 'TeamMissionV6'
+          ? COOP_SPECIALIST_LEVEL_VERSION
+          : mission.team.format === 'TeamMissionV5'
+            ? COOP_IMPACT_LEVEL_VERSION
+            : mission.team.format === 'TeamMissionV4'
+              ? COOP_BONUS_LEVEL_VERSION
+              : mission.team.format === 'TeamMissionV3'
+                ? COOP_ROVER_LEVEL_VERSION
+                : mission.team.format === 'TeamMissionV2'
+                  ? COOP_TERRAIN_LEVEL_VERSION
+                  : COOP_FOUNDATION_LEVEL_VERSION,
+    ...(!stronghold && mission.team.format !== 'TeamMissionV1'
+      ? { terrain: map.source.terrain ?? [] }
+      : {}),
     ...(Object.hasOwn(mission, 'timedBonuses') ? { timedBonuses: mission.timedBonuses } : {}),
-    ...(['TeamMissionV5', 'TeamMissionV6'].includes(mission.team.format)
+    ...(['TeamMissionV5', 'TeamMissionV6'].includes(mission.team.format) ||
+    (hunting && mission.team.lineImpact)
       ? {
           lineImpact: {
             version: 'team-line-impact.v2',
@@ -94,7 +190,7 @@ export function resolveTeamMission(project, mission, map, difficulty) {
           },
         }
       : {}),
-    ...(mission.team.format === 'TeamMissionV6'
+    ...(mission.team.format === 'TeamMissionV6' || (hunting && mission.team.supportRoles)
       ? { supportRoles: structuredClone(mission.team.supportRoles) }
       : {}),
     id: mission.id,
@@ -106,17 +202,52 @@ export function resolveTeamMission(project, mission, map, difficulty) {
     spawns,
     walls: map.source.walls ?? [],
     safeRects: map.source.foundations ?? [],
-    enemies: mission.actors.map((source) => {
-      const actor = compileActor(source, difficulty, project.actors.id, project.difficulty.id);
-      return {
-        ...actor,
-        type: source.role === 'reclaimed-roamer' ? 'claimed-rover' : 'drifter',
-        radius: 0.25,
-      };
-    }),
-    goal: { coverage: mission.coverage },
+    ...(snake ? { snake: structuredClone(mission.snake) } : {}),
+    ...(hunting && mission.hunt ? { hunt: structuredClone(mission.hunt) } : {}),
+    ...(hunting && mission.combat
+      ? {
+          combatPatrols: {
+            version: 'combat-patrols.v1',
+            enabled: mission.combat?.enabled === true,
+            actors: mission.actors
+              .filter((actor) => ['optional-scout', 'optional-sentry'].includes(actor.role))
+              .map((source) => {
+                const actor = compileActor(
+                  source,
+                  difficulty,
+                  project.actors.id,
+                  project.difficulty.id,
+                );
+                if (huntTargetKind(mission.hunt, source.id) === 'runner') {
+                  actor.turnTicks = HUNT_RUNNER_TURN_TICKS;
+                  actor.speed = Number((project.policy.rules.moveSpeed * 0.7).toFixed(6));
+                }
+                return actor;
+              }),
+          },
+        }
+      : {}),
+    enemies: mission.actors
+      .filter((source) => !['optional-scout', 'optional-sentry'].includes(source.role))
+      .map((source) => {
+        const actor = compileActor(source, difficulty, project.actors.id, project.difficulty.id);
+        return {
+          ...actor,
+          type: source.role === 'reclaimed-roamer' ? 'claimed-rover' : 'drifter',
+          radius: 0.25,
+        };
+      }),
+    ...(stronghold ? { strongholds: structuredClone(mission.team.strongholds) } : {}),
+    goal: stronghold ? { cores: [...mission.team.requiredCores] } : { coverage: mission.coverage },
     rules: { moveSpeed: project.policy.rules.moveSpeed, boostMultiplier: 1 },
   };
+  if (mission.pursuit)
+    level = prepareTeamRunningEnemies(level, {
+      style: 'varied',
+      population: mission.pursuit.actors,
+      generation:
+        mission.pursuit.version === 'mission-pursuit.v2' ? 'pursuit-goals.v2' : 'pursuit-goals.v1',
+    });
   const result = validateCoopLevel(level);
   required(result.valid, result.errors.join(' '));
   const topology = inspectRuntimeTopology(

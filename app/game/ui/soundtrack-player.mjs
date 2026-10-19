@@ -1,3 +1,5 @@
+import { createMP3Inspector } from './mp3-inspector.mjs';
+import { createMediaPreparation } from './media-preparation.mjs';
 import { t } from '../i18n/index.mjs';
 import { boundedJSON, canonicalJSON, required } from '../data-json.mjs';
 import {
@@ -13,13 +15,12 @@ import {
   soundtrackOrder,
 } from '../soundtrack.mjs';
 import { validateTrack } from './music.mjs';
-import { inspectMP3, ownSoundtrackBlob, throwIfSoundtrackAborted } from '../mp3.mjs';
+import { ownSoundtrackBlob, throwIfSoundtrackAborted } from '../mp3.mjs';
 import { bindAudioMasterMedia } from './audio-master.mjs';
 import {
   fetchOnlineSoundtrackCatalogue,
   isResolvedOnlineSoundtrackTrack,
   onlineSoundtrackRecordingAllowed,
-  onlineSoundtrackRecordingURL,
 } from '../online-soundtrack-catalogue.mjs';
 
 import {
@@ -62,6 +63,7 @@ export function createSoundtrackPlayer({
   localPlayback = false,
   localRecordingIds = [],
   onlineCatalogueDownload = {},
+  onlineSourceManager = null,
 } = {}) {
   required(
     soundscape?.persistentMusic === true &&
@@ -130,12 +132,19 @@ export function createSoundtrackPlayer({
     media,
     url: null,
     ownedURL: false,
+    ownedBlobBytes: 0,
     listeners: [],
     resource: 0,
     weight: 0,
     remoteWatchdog: null,
     remoteProgress: 0,
+    activationMute: null,
   }));
+  const preparationQueue = soundscape.mediaPreparation ?? createMediaPreparation();
+  const ownsPreparationQueue = !soundscape.mediaPreparation;
+  const mp3Inspector = createMP3Inspector({ preparation: preparationQueue });
+  let failedRevocationCount = 0,
+    failedRevocationBytes = 0;
   const remoteDeck = decks[0];
   let activeDeck = decks[0];
   activeDeck.weight = 1;
@@ -163,7 +172,7 @@ export function createSoundtrackPlayer({
       ? bindAudioMasterMedia({ audioMaster, element: deck.media, volume: 0 })
       : null;
 
-  let library = emptySoundtrackLibrary(),
+  let library = resolveSoundtrackLibrary(emptySoundtrackLibrary()),
     context = {},
     override = null,
     playlist = null,
@@ -184,6 +193,8 @@ export function createSoundtrackPlayer({
   let savedPublicStyles = null,
     pendingPublicStyles = null,
     publicStyleLoad = null;
+  let sourceManager = null,
+    unsubscribeSources = null;
   let status = 'idle',
     error = null,
     desired = false,
@@ -199,7 +210,8 @@ export function createSoundtrackPlayer({
   let failed = new Set(),
     fallbackUsed = false,
     failureFallback = null;
-  let baseSelection = null;
+  let baseSelection = null,
+    selectionLibrary = null;
   const gainLeases = new Map();
   const tracks = () => [
     ...soundtrackTracks(library),
@@ -221,26 +233,34 @@ export function createSoundtrackPlayer({
         }
       : {}),
   });
-  const resolveBase = () => {
+  const resolveSelectionLibrary = () => {
+    if (selectionLibrary?.library === library && selectionLibrary.override === override)
+      return selectionLibrary.resolved;
+    let selected = library;
+    if (library.selection.playlistId !== override)
+      selected = { ...selected, selection: { playlistId: override } };
+    if (localPlayback && library.listening && !library.listening.installedOnly)
+      selected = { ...selected, listening: { ...library.listening, installedOnly: true } };
+    // Both the saved library and this policy-adjusted copy are resolver-owned
+    // and deeply frozen. Scene changes must not re-copy every track's metadata.
+    const resolved = resolveSoundtrackLibrary(selected);
+    selectionLibrary = { library, override, resolved };
+    return resolved;
+  };
+  const resolveBase = (value = context) => {
     if (
       cacheableCatalogue &&
       baseSelection?.library === library &&
-      baseSelection.context === context &&
+      baseSelection.context === value &&
       baseSelection.override === override
     )
       return baseSelection.selected;
-    const selectionLibrary =
-      library.selection.playlistId === override
-        ? library
-        : { ...library, selection: { playlistId: override } };
     const selected = resolveSoundtrackSelection(
-      localPlayback && library.listening
-        ? { ...selectionLibrary, listening: { ...library.listening, installedOnly: true } }
-        : selectionLibrary,
-      selectionContext(),
+      resolveSelectionLibrary(),
+      selectionContext(value),
       { catalogue: catalogue ?? undefined },
     );
-    if (cacheableCatalogue) baseSelection = { library, context, override, selected };
+    if (cacheableCatalogue) baseSelection = { library, context: value, override, selected };
     return selected;
   };
   const resolve = () => {
@@ -319,6 +339,7 @@ export function createSoundtrackPlayer({
             fileName: current.fileName ?? null,
             websites: current.websites ?? [],
             rights: current.rights ?? null,
+            sourceCredits: current.sourceCredits ?? Object.freeze([]),
           })
         : null,
       playlistId: playlist?.id ?? null,
@@ -345,14 +366,68 @@ export function createSoundtrackPlayer({
     }
   }
   function gains() {
-    const master = soundscape.getSettings().master;
+    const settings = soundscape.getSettings(),
+      master = settings.master;
     let factor = 1;
     for (const value of gainLeases.values()) factor = Math.min(factor, value);
-    soundscape.configure({ music: volume * fade * factor });
+    const music = volume * fade * factor;
+    if (settings.music !== music) soundscape.configure({ music });
     for (const deck of decks) {
-      const localVolume = Math.max(0, Math.min(1, master * volume * fade * factor * deck.weight));
-      if (deck.masterMedia) deck.masterMedia.setLocal({ volume: localVolume });
-      else deck.media.volume = localVolume;
+      const localVolume = Math.max(0, Math.min(1, master * music * deck.weight));
+      if (deck.masterMedia)
+        deck.masterMedia.setLocal({ volume: localVolume, muted: !!deck.activationMute });
+      else {
+        if (deck.activationMute) deck.media.muted = true;
+        if (deck.media.volume !== localVolume) deck.media.volume = localVolume;
+      }
+    }
+  }
+  function releaseActivationMute(deck, owner, pause = true) {
+    if (deck.activationMute !== owner || deck.resource !== owner.resource) return;
+    deck.activationMute = null;
+    if (pause) deck.media.pause();
+    if (deck.activationMute || deck.resource !== owner.resource) return;
+    if (deck.masterMedia) deck.masterMedia.setLocal({ muted: false });
+    else deck.media.muted = owner.muted;
+  }
+  async function playPublishedMedia(deck, token) {
+    if (deck.activationMute) releaseActivationMute(deck, deck.activationMute);
+    const owner = { resource: deck.resource, muted: !!deck.media.muted },
+      intent = intentGeneration;
+    deck.activationMute = owner;
+    const current = () =>
+      deck.activationMute === owner &&
+      deck.resource === owner.resource &&
+      activeDeck === deck &&
+      token === generation &&
+      intent === intentGeneration &&
+      !disposed &&
+      desired;
+    // Both calls belong to this activation turn. Keep independent media output
+    // silent until activation and playback succeed; a denied context must not
+    // leak audio. Observe both promises immediately, including cancellation.
+    const observed = (promise) =>
+      Promise.resolve(promise).then(
+        (value) => ({ ok: true, value }),
+        (error) => ({ ok: false, error }),
+      );
+    try {
+      gains();
+      if (!current()) return false;
+      const enabled = observed(soundscape.enable());
+      if (!current()) return false;
+      const playing = observed(deck.media.play());
+      const activation = await enabled;
+      if (!current()) return false;
+      if (!activation.ok) throw activation.error;
+      if (!activation.value) return false;
+      const playback = await playing;
+      if (!current()) return false;
+      if (!playback.ok) throw playback.error;
+      releaseActivationMute(deck, owner, false);
+      return true;
+    } finally {
+      releaseActivationMute(deck, owner);
     }
   }
   /** Temporary attenuation only; the player remains the owner of base volume/intent.
@@ -386,6 +461,7 @@ export function createSoundtrackPlayer({
     });
   }
   function clearDeck(deck) {
+    if (deck.activationMute) releaseActivationMute(deck, deck.activationMute);
     deck.resource++;
     clearTimeout(deck.remoteWatchdog);
     deck.remoteWatchdog = null;
@@ -399,10 +475,19 @@ export function createSoundtrackPlayer({
     if (deck.url !== null && deck.ownedURL) {
       try {
         URLImpl.revokeObjectURL(deck.url);
-      } catch {}
+      } catch {
+        // Keep the existing cleanup behavior, but do not report a failed
+        // revocation as confirmed browser release. No URL history is retained.
+        failedRevocationCount = Math.min(Number.MAX_SAFE_INTEGER, failedRevocationCount + 1);
+        failedRevocationBytes = Math.min(
+          Number.MAX_SAFE_INTEGER,
+          failedRevocationBytes + deck.ownedBlobBytes,
+        );
+      }
     }
     deck.url = null;
     deck.ownedURL = false;
+    deck.ownedBlobBytes = 0;
   }
   function cancelPreload(keep = null) {
     preloadOperation?.abort();
@@ -427,6 +512,8 @@ export function createSoundtrackPlayer({
   function cancel(keep = null) {
     cancelPublicStyleLoad();
     generation++;
+    for (const deck of decks)
+      if (deck.activationMute) releaseActivationMute(deck, deck.activationMute);
     operation?.abort();
     operation = null;
     cancelPreload(keep);
@@ -484,18 +571,69 @@ export function createSoundtrackPlayer({
       emit();
     }
     if (track.kind === 'remote') {
+      required(
+        isResolvedOnlineSoundtrackTrack(track),
+        t('interface:invalidOnlineSoundtrackRecording'),
+      );
       throwIfSoundtrackAborted(signal);
       installDeckURL(deck, track, track.url, { owned: false });
       return true;
     }
-    const original =
-      track.kind === 'published'
-        ? await track.readBlob({ signal })
-        : await readAsset(track.asset.sha256, {
-            signal,
-            purpose: 'playback',
-            localOnly: localOnly || localPlayback,
-          });
+    // Share inspection only within this acquisition and only for the exact Blob
+    // validated by our inspector. Local/custom readers that ignore the operation,
+    // or return another Blob, still receive ordinary validation below.
+    const loadGeneration = generation,
+      acquisitionController = new AbortController();
+    let acquisitionOpen = true,
+      inspected = null,
+      downloadInspection = null,
+      original;
+    const checkAcquisition = () => {
+      throwIfSoundtrackAborted(signal);
+      if (!acquisitionOpen || disposed || loadGeneration !== generation)
+        throw new DOMException(t('interface:musicTransitionCancelled'), 'AbortError');
+    };
+    const inspectDownloaded = async (source, { signal: sourceSignal = signal } = {}) => {
+      checkAcquisition();
+      throwIfSoundtrackAborted(sourceSignal);
+      const controller = new AbortController(),
+        cancelInspection = () => controller.abort();
+      signal?.addEventListener('abort', cancelInspection, { once: true });
+      sourceSignal?.addEventListener('abort', cancelInspection, { once: true });
+      acquisitionController.signal.addEventListener('abort', cancelInspection, { once: true });
+      try {
+        const actual = await mp3Inspector.inspect(source, { signal: controller.signal });
+        checkAcquisition();
+        throwIfSoundtrackAborted(sourceSignal);
+        inspected = { source, actual };
+        return actual;
+      } finally {
+        signal?.removeEventListener('abort', cancelInspection);
+        sourceSignal?.removeEventListener('abort', cancelInspection);
+        acquisitionController.signal.removeEventListener('abort', cancelInspection);
+      }
+    };
+    try {
+      original = await preparationQueue.run(
+        'fetch',
+        () =>
+          track.kind === 'published'
+            ? track.readBlob({ signal })
+            : readAsset(track.asset.sha256, {
+                signal,
+                purpose: 'playback',
+                localOnly: localOnly || localPlayback,
+                inspect: inspectDownloaded,
+              }),
+        { signal, priority: token === null ? 'demand' : 'required' },
+      );
+      checkAcquisition();
+      downloadInspection = inspected;
+    } finally {
+      acquisitionOpen = false;
+      acquisitionController.abort();
+      inspected = null;
+    }
     throwIfSoundtrackAborted(signal);
     if (localOnly && original == null) return false;
     const blob = track.kind === 'published' ? original : ownSoundtrackBlob(original);
@@ -516,7 +654,10 @@ export function createSoundtrackPlayer({
         };
         emit();
       }
-      const actual = await inspectMP3(blob, { signal });
+      const actual =
+        downloadInspection?.source === original
+          ? downloadInspection.actual
+          : await mp3Inspector.inspect(original, { signal });
       required(
         canonicalJSON(actual) === canonicalJSON(track.asset),
         t('interface:storedAudioBytesDoNotMatchThisTrack'),
@@ -524,13 +665,14 @@ export function createSoundtrackPlayer({
     }
     throwIfSoundtrackAborted(signal);
     if (disposed) throw new DOMException(t('interface:musicPlayerDisposed'), 'AbortError');
-    installDeckURL(deck, track, URLImpl.createObjectURL(blob));
+    installDeckURL(deck, track, URLImpl.createObjectURL(blob), { blobBytes: blob.size });
     return true;
   }
-  function installDeckURL(deck, track, ownedURL, { owned = true } = {}) {
+  function installDeckURL(deck, track, ownedURL, { owned = true, blobBytes = 0 } = {}) {
     clearDeck(deck);
     deck.url = ownedURL;
     deck.ownedURL = owned;
+    deck.ownedBlobBytes = owned ? blobBytes : 0;
     const resource = deck.resource,
       expectedURL = deck.url;
     const valid = () =>
@@ -594,13 +736,14 @@ export function createSoundtrackPlayer({
   function transferDeck(from, to, track) {
     const ownedURL = from.url;
     const ownsURL = from.ownedURL;
+    const blobBytes = from.ownedBlobBytes;
     required(ownedURL !== null, t('interface:preparedAudioIsNoLongerAvailable'));
     // Keep the object URL while moving playback to an already permitted element.
     from.url = null;
     from.ownedURL = false;
     clearDeck(from);
     from.weight = 0;
-    installDeckURL(to, track, ownedURL, { owned: ownsURL });
+    installDeckURL(to, track, ownedURL, { owned: ownsURL, blobBytes });
   }
   function prepareNext() {
     if (
@@ -629,7 +772,12 @@ export function createSoundtrackPlayer({
       .then(() => {
         if (controller.signal.aborted || disposed) return;
         preloadOperation = null;
-        preloaded = { deck, track, at };
+        const retainedAt = queue.indexOf(track.id);
+        if (retainedAt < 0) {
+          clearDeck(deck);
+          return;
+        }
+        preloaded = { deck, track, at: retainedAt };
         emit();
         maybeTransition();
       })
@@ -850,15 +998,14 @@ export function createSoundtrackPlayer({
           throwIfSoundtrackAborted(controller.signal);
           if (token !== generation || disposed) return false;
           if (desired) {
-            const enabled = soundscape.enable();
-            if (
-              current.kind === 'published' &&
-              (!(await enabled) || token !== generation || disposed || !desired)
-            )
-              return false;
-            watchCurrentRemote();
-            await activeDeck.media.play();
-            await enabled;
+            if (current.kind === 'published') {
+              if (!(await playPublishedMedia(activeDeck, token))) return false;
+            } else {
+              const enabled = soundscape.enable();
+              watchCurrentRemote();
+              await activeDeck.media.play();
+              await enabled;
+            }
             if (token !== generation || disposed || !desired) return false;
             status = 'playing';
           }
@@ -998,6 +1145,7 @@ export function createSoundtrackPlayer({
   /** Code-owned release fallback only; never enters the saved track library. */
   function setPublishedTrack(value) {
     if (disposed) return snapshot();
+    if (value === null && published === null) return snapshot();
     if (value !== null)
       required(
         value &&
@@ -1053,6 +1201,8 @@ export function createSoundtrackPlayer({
     }
     cancelPreload();
     library = next;
+    baseSelection = null;
+    selectionLibrary = null;
     if (remoteSelection && next.listening?.recordingMode) {
       const allowed = remoteTracks.filter(onlineSoundtrackRecordingAllowed),
         remoteIds = new Set(remoteTracks.map((track) => track.id)),
@@ -1104,6 +1254,12 @@ export function createSoundtrackPlayer({
         ids.every((id) => typeof id === 'string' && /^[a-z0-9][a-z0-9._-]{0,127}$/.test(id)),
       'Invalid local soundtrack identities.',
     );
+    if (
+      cacheableCatalogue &&
+      ids.length === localRecordingIds.length &&
+      ids.every((id, index) => id === localRecordingIds[index])
+    )
+      return snapshot();
     localRecordingIds = [...ids];
     if (!current) dirty = true;
     baseSelection = null;
@@ -1117,10 +1273,9 @@ export function createSoundtrackPlayer({
       maxDepth: 3,
       maxString: 512,
     });
-    resolveSoundtrackSelection(
-      { ...library, selection: { playlistId: override } },
-      selectionContext(owned),
-    );
+    // Validate and resolve before cancelling or changing the current context.
+    // The following resolve() can reuse this result for immutable catalogues.
+    resolveBase(owned);
     cancelPreload();
     const sceneChanged = (context.scene ?? 'gameplay') !== (owned.scene ?? 'gameplay');
     context = owned;
@@ -1225,7 +1380,7 @@ export function createSoundtrackPlayer({
       t('interface:chooseAtLeastOneOnlineSoundtrack'),
     );
     const ids = new Set();
-    const validated = owned.map((track) => {
+    const validated = owned.map((track, index) => {
       required(
         track?.kind === 'remote' &&
           /^online\.[a-f0-9]{64}$/.test(track.id) &&
@@ -1235,13 +1390,13 @@ export function createSoundtrackPlayer({
           [true, false, null, 'unknown'].includes(track.contentId) &&
           typeof track.recordingModeEligible === 'boolean' &&
           (!track.recordingModeEligible || track.contentId === false) &&
-          (track.delivery?.type === 'external-url' ||
-            onlineSoundtrackRecordingURL(track.url, track.sha256)) &&
           !ids.has(track.id),
         t('interface:invalidOnlineSoundtrackRecording'),
       );
       ids.add(track.id);
-      return Object.freeze({ ...track, websites: Object.freeze(track.websites ?? []) });
+      // Retain the immutable resolved object and its source-scoped provenance.
+      // A later catalogue refresh can then revoke a stale remote queue entry.
+      return value[index];
     });
     const eligibleTracks = library.listening?.recordingMode
       ? validated.filter(onlineSoundtrackRecordingAllowed)
@@ -1321,14 +1476,25 @@ export function createSoundtrackPlayer({
     request.promise = (async () => {
       try {
         Promise.resolve(soundscape.enable()).catch(() => {});
-        const catalogue = await fetchOnlineSoundtrackCatalogue({
-          ...onlineCatalogueDownload,
-          signal: request.controller.signal,
-        });
+        const catalogue = sourceManager
+          ? await sourceManager.refresh({ signal: request.controller.signal, preferCached: true })
+          : await fetchOnlineSoundtrackCatalogue({
+              ...onlineCatalogueDownload,
+              signal: request.controller.signal,
+            });
         if (!active()) return false;
         const selected = publicSoundtrackSelection(catalogue, styles, {
           recordingMode: Boolean(library.listening?.recordingMode),
         });
+        if (!selected.tracks.length && sourceManager && selected.mixWithLibrary) {
+          publicStyleLoad = null;
+          preparation = null;
+          pendingPublicStyles = null;
+          remoteSelection = null;
+          remoteTracks = [];
+          install(resolveBase());
+          return startAt(0, { localOnly: false });
+        }
         required(selected.tracks.length > 0, t('interface:soundtrack.chooseAtLeastOneStyle'));
         publicStyleLoad = null;
         preparation = null;
@@ -1396,14 +1562,17 @@ export function createSoundtrackPlayer({
           }
           soundscape.resumeMusic();
         } else {
-          const enabled = soundscape.enable();
-          if (
-            current.kind === 'published' &&
-            (!(await enabled) || token !== generation || disposed || !desired)
-          )
-            return false;
-          await activeDeck.media.play();
-          await enabled;
+          required(
+            current.kind !== 'remote' || isResolvedOnlineSoundtrackTrack(current),
+            t('interface:invalidOnlineSoundtrackRecording'),
+          );
+          if (current.kind === 'published') {
+            if (!(await playPublishedMedia(activeDeck, token))) return false;
+          } else {
+            const enabled = soundscape.enable();
+            await activeDeck.media.play();
+            await enabled;
+          }
         }
         if (token !== generation || !desired) return false;
         status = 'playing';
@@ -1456,8 +1625,8 @@ export function createSoundtrackPlayer({
   }
   /**
    * Clear a lifecycle suspension in the same event turn as a user gesture.
-   * Do not await this before play(): iOS Safari associates media permission
-   * with the synchronous call stack that contains the gesture.
+   * Request native media play in the originating user action before awaiting
+   * wake; activation lifetime and persistence vary across browsers.
    */
   function wake() {
     if (disposed) return false;
@@ -1563,10 +1732,86 @@ export function createSoundtrackPlayer({
     await enabled;
     return playing;
   }
+  function reconcileOnlineSources(state) {
+    if (disposed || !remoteSelection) return;
+    const allowed = new Map(
+      state.tracks
+        .filter(
+          (track) =>
+            isResolvedOnlineSoundtrackTrack(track) &&
+            (!library.listening?.recordingMode || onlineSoundtrackRecordingAllowed(track)),
+        )
+        .map((track) => [track.id, track]),
+    );
+    const oldIds = new Set(remoteTracks.map((track) => track.id));
+    const replacement = current?.kind === 'remote' ? allowed.get(current.id) : current;
+    const stopCurrent =
+      current?.kind === 'remote' && (!replacement || replacement.url !== current.url);
+    remoteTracks = remoteTracks.flatMap((track) =>
+      allowed.has(track.id) ? [allowed.get(track.id)] : [],
+    );
+    const retained = remoteSelection.playlist.trackIds.filter(
+      (id) => !oldIds.has(id) || allowed.has(id),
+    );
+    const oldQueue = queue,
+      oldIndex = index;
+    remoteSelection = {
+      ...remoteSelection,
+      playlist: { ...remoteSelection.playlist, trackIds: retained },
+    };
+    playlist = remoteSelection.playlist;
+    queue = queue.filter((id) => retained.includes(id));
+    index = current ? queue.indexOf(current.id) : -1;
+    if (stopCurrent) {
+      const continuePlaying = desired && !intentionallyPaused && !suspended;
+      cancel();
+      clearMedia();
+      soundscape.pauseMusic();
+      current = null;
+      pending = null;
+      dirty = false;
+      status = 'paused';
+      preparation = null;
+      const nextId = oldQueue.slice(oldIndex).find((id) => retained.includes(id));
+      const at = nextId ? queue.indexOf(nextId) : queue.length ? 0 : -1;
+      index = at - 1;
+      if (continuePlaying && at >= 0) void startAt(at, { localOnly: false });
+    } else {
+      if (current?.kind === 'remote') current = replacement;
+      if (
+        preloaded &&
+        (!retained.includes(preloaded.track.id) ||
+          (preloaded.track.kind === 'remote' && !isResolvedOnlineSoundtrackTrack(preloaded.track)))
+      )
+        cancelPreload();
+      else if (preloaded) preloaded.at = queue.indexOf(preloaded.track.id);
+    }
+    emit();
+  }
+  function setOnlineSourceManager(manager) {
+    required(
+      manager === null ||
+        (typeof manager.snapshot === 'function' &&
+          typeof manager.subscribe === 'function' &&
+          typeof manager.refresh === 'function'),
+      'Invalid soundtrack source manager.',
+    );
+    unsubscribeSources?.();
+    unsubscribeSources = null;
+    sourceManager = manager;
+    if (manager) {
+      unsubscribeSources = manager.subscribe(reconcileOnlineSources);
+      reconcileOnlineSources(manager.snapshot());
+    }
+    return snapshot();
+  }
   function dispose() {
+    mp3Inspector.close();
+    if (ownsPreparationQueue) preparationQueue.close();
     if (disposed) return;
     disposed = true;
     unsubscribeMaster?.();
+    unsubscribeSources?.();
     desired = false;
     cancel();
     soundscape.setSongEndHandler(null);
@@ -1587,7 +1832,9 @@ export function createSoundtrackPlayer({
     if (state.muted) cancelPreload();
     else prepareNext();
   });
+  if (onlineSourceManager) setOnlineSourceManager(onlineSourceManager);
   return Object.freeze({
+    setOnlineSourceManager,
     setLibrary,
     intentRevision: () => intentGeneration,
     setLocalRecordingIds,
@@ -1620,5 +1867,22 @@ export function createSoundtrackPlayer({
     resume,
     dispose,
     snapshot,
+    preparationDiagnostics: () => ({
+      admission: preparationQueue.snapshot(),
+      inspection: mp3Inspector.snapshot(),
+      // Compressed originals held through object URLs, not decoder/PCM memory.
+      // Build these rows only on the existing manual diagnostic export path.
+      playback: {
+        ownedBlobURLCount: decks.reduce((count, deck) => count + Number(deck.ownedURL), 0),
+        ownedBlobBytes: decks.reduce((bytes, deck) => bytes + deck.ownedBlobBytes, 0),
+        failedRevocationCount,
+        failedRevocationBytes,
+        decks: decks.map((deck, index) => ({
+          index,
+          ownedBlobURLCount: Number(deck.ownedURL),
+          ownedBlobBytes: deck.ownedBlobBytes,
+        })),
+      },
+    }),
   });
 }

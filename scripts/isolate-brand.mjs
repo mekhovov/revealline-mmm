@@ -8,7 +8,13 @@ import { parse as parseHTML, serialize } from "parse5";
 const encoder = (value) => Buffer.from(value);
 const json = (value) => encoder(JSON.stringify(value) + "\n");
 const hiddenIds = [
+  "first-flight-home-enter",
+  ...["", "race-", "coop-"].flatMap(prefix => ["enemy-remains", "enemy-remains-hint", "enemy-remains-status", "enemy-remains-retry", "journey-reactions-enabled", "journey-reactions-help", "journey-reactions-status", "journey-reactions-retry", "menu-palette", "menu-ornaments"].map(id => prefix + id)),
   "shell-home-fpv",
+  "enemy-remains", "enemy-remains-hint", "enemy-remains-status", "enemy-remains-retry",
+  "menu-actor-style", "menu-actor-note",
+  "coop-actor-style", "coop-actor-style-note", "race-actor-style", "race-actor-style-status",
+  "coop-pack-file", "coop-pack-cancel", "coop-pack-retry",
   "shell-home-practice",
   "shell-optional-practice",
   "shell-controller-lab",
@@ -61,6 +67,10 @@ const hiddenSelectors = [
   ".optional-practice-dialog",
   "[data-branded-unavailable]",
   "[data-language-control]",
+  'label:has([id$="enemy-remains"]), label:has([id$="journey-reactions-enabled"]), label:has([id$="menu-palette"]), label:has([id$="menu-ornaments"])',
+  '[id$="-tab-content"], [id$="-panel-content"], [data-global-setting="language"], [data-global-setting="appearance"]',
+  "label:has(#coop-actor-style)", "label:has(#race-actor-style)", "details:has(#coop-pack-file)",
+  "label:has(#enemy-remains)", "label:has(#menu-actor-style)",
 ];
 
 function walk(node, visit) {
@@ -149,9 +159,9 @@ export function assertBrandedLocation(href) {
 export function brandedHrefAllowed(href, baseHref) {
   try {
     const base = new URL(baseHref), target = new URL(href, base);
-    const root = new URL(base.pathname.includes('/couch/') ? '../' : './', base);
+    const root = new URL((base.pathname.includes('/couch/') || base.pathname.includes('/snake/') || base.pathname.includes('/collections/')) ? '../' : './', base);
     if (target.origin !== base.origin || target.username || target.password) return false;
-    if (!['', 'index.html', 'company.html', 'couch/', 'couch/index.html', 'couch/relay-rescue.html'].some((entry) => target.pathname === root.pathname + entry)) return false;
+    if (!['', 'index.html', 'company.html', 'couch/', 'couch/index.html', 'couch/relay-rescue.html', 'snake/index.html', 'snake/play.html', 'snake/', 'collections/index.html', 'collections/'].some((entry) => target.pathname === root.pathname + entry)) return false;
     assertBrandedLocation(target.href);
     return true;
   } catch { return false; }
@@ -193,6 +203,10 @@ function scopeStorage(source, repo) {
   // Storage keys, lock names and internal notification topics are deliberately
   // separate from portable format strings (revealline-*.vN), content IDs and pins.
   const names = [
+    "classic-snake",
+    "hunt-records", "reaction-presentation", "theme-family", "appearance",
+    "fpv.appearance", "curated-appearance-context", "accepted-appearance-context",
+    "team-contextual-teaching", "team.enemy-stats-continue", "team-arena", "team-hunt-attempt", "continuous-play",
     "actor-style",
     "audio-master",
     "company",
@@ -250,6 +264,8 @@ function scopeStorage(source, repo) {
       `${repo}.${name}`,
     );
   return source
+    .replace("export const ENEMY_STATS_KEY = ENEMY_STATS_FORMAT;", `export const ENEMY_STATS_KEY = '${repo}-enemy-stats.v1';`)
+    .replace('const key = `${ENEMY_STATS_SESSION_FORMAT}:host:${gameType}`;', 'const key = `' + repo + '-enemy-stats-session.v1:host:${gameType}`;')
     .replaceAll("startsWith('revealline.')", `startsWith('${repo}.')`)
     .replaceAll("revealline\\.", `${repo}\\.`)
     .replaceAll("revealline-journey-v1", `${repo}-journey-v1`)
@@ -271,6 +287,8 @@ function scopeStorage(source, repo) {
 function projectHTML(source, name, config, brandIconPath) {
   const document = parseHTML(source);
   const visit = (node) => {
+    if (node.nodeName === '#text' && !['script','style'].includes(node.parentNode?.tagName))
+      node.value = node.value.replace(/FPV\s*\/\s*LINE/g, 'Coupa Village').replace(/\bFPV\b/g, 'Coupa').replaceAll('Display & Language', 'Display');
     if (node.childNodes)
       node.childNodes = node.childNodes.filter(
         (child) =>
@@ -290,13 +308,24 @@ function projectHTML(source, name, config, brandIconPath) {
         node.attrs = node.attrs.filter((entry) => entry.name !== key);
         node.attrs.push({ name: key, value });
       };
+      if (['race-home','coop-home'].includes(attr('id')) || attr('data-i18n-rich') === 'interface:reveal') {
+        node.attrs = node.attrs.filter(entry => !entry.name.startsWith('data-i18n'));
+        node.childNodes = [{nodeName:'#text',value:'Coupa Village',parentNode:node}];
+      }
+      if (attr('data-i18n') === 'interface:sunflower' || attr('data-i18n') === 'interface:skyline') {
+        const label = attr('data-i18n') === 'interface:sunflower' ? 'Player 1' : 'Player 2';
+        node.attrs = node.attrs.filter(entry => !entry.name.startsWith('data-i18n'));
+        node.childNodes = [{nodeName:'#text',value:label,parentNode:node}];
+      }
+      if (attr('name') === 'revealline-access-title') add('content', 'Coupa Village');
+      if (attr('aria-label') === 'FPV / LINE') add('aria-label', 'Coupa Village');
       const blocked =
         hiddenIds.includes(attr("id")) ||
         ["packs", "saves"].includes(attr("data-library-panel")) ||
         attr("data-release-explorer") !== undefined ||
         attr("data-source-only") !== undefined ||
         attr("data-language-control") !== undefined;
-      if (node.tagName === "select" && attr("id") === "menu-actor-style")
+      if (node.tagName === "select" && ["menu-actor-style","coop-actor-style","race-actor-style"].includes(attr("id")))
         node.childNodes = node.childNodes.filter(
           (child) =>
             child.tagName !== "option" ||
@@ -344,6 +373,9 @@ function projectHTML(source, name, config, brandIconPath) {
             "/game/company.html",
             "/game/couch/index.html",
             "/game/couch/relay-rescue.html",
+            "/game/snake/index.html",
+            "/game/snake/play.html",
+            "/game/collections/index.html",
           ].includes(targetPath) ||
           blocked
         ) {
@@ -410,9 +442,16 @@ function projectAccessGate(files, config) {
     "game/company.html",
     "game/couch/index.html",
     "game/couch/relay-rescue.html",
+    "game/snake/index.html",
+    "game/snake/play.html",
+    "game/collections/index.html",
   ])
-    edit(files, name, (source) =>
-      once(
+    edit(files, name, (source) => {
+      source = source.replace(/ data-access-state="[^"]*"/g, "")
+        .replace(/<meta name="revealline-access-[^"]*" content="[^"]*"\s*\/?>(?:\s*)/g, "")
+        .replace(/<link[^>]*href="[^"]*access-gate\.css"[^>]*>/g, "")
+        .replace(/<script[^>]*src="[^"]*access-gate\.mjs"[^>]*><\/script>/g, "");
+      return once(
         once(
           source,
           "<html",
@@ -420,10 +459,10 @@ function projectAccessGate(files, config) {
           `${name} access state`,
         ),
         "<head>",
-        `<head>${head(name.includes("/couch/") ? "../" : "")}`,
+        `<head>${head(/\/(?:couch|snake|collections)\//.test(name) ? "../" : "")}`,
         `${name} access head`,
-      ),
-    );
+      );
+    });
   edit(files, "game/boot.mjs", (source) =>
     source.includes("RevealLineAccess?.ready")
       ? source
@@ -480,21 +519,6 @@ function projectLanding(files) {
       "logo.className = 'edition-home-logo';",
       "logo.className = 'edition-home-logo coupa-landing-logo';",
       "Coupa landing logo",
-    ),
-  );
-  edit(files, "game/ui/menu-scene-catalog.mjs", (source) =>
-    once(
-      source,
-      "if (!composition) return profile;",
-      `if (!composition) return {
-    ...profile,
-    landscape: '../editions/assets/coupa/wallpaper-network-2024.png',
-    portrait: '../editions/assets/coupa/wallpaper-network-2024.png',
-    landscapePosition: '72% 50%', portraitPosition: '82% 50%',
-    environment: [], portraitEnvironment: [], actorVisible: false,
-    signalOpacity: 0, signalPeakOpacity: 0,
-  };`,
-      "Coupa official wallpaper",
     ),
   );
   // The new CSS capture trails own ambient motion. Keep the upstream motion
@@ -641,8 +665,8 @@ export async function createStandaloneTeamEntry(id) {
   edit(files, "game/content-design/mode-href.mjs", (source) =>
     once(
       source,
-      "export const AUTHORED_JOURNEY_ROUTE_IDS = Object.freeze([\n  'opening',",
-      `export const AUTHORED_JOURNEY_ROUTE_IDS = Object.freeze([\n  ${JSON.stringify(config.editionId)},\n  'opening',`,
+      "export const AUTHORED_JOURNEY_ROUTE_IDS = Object.freeze([\n  'duel-expedition-v1',",
+      `export const AUTHORED_JOURNEY_ROUTE_IDS = Object.freeze([\n  ${JSON.stringify(config.editionId)},\n  'duel-expedition-v1',`,
       "Coupa authored route",
     ),
   );
@@ -686,9 +710,24 @@ export async function createStandaloneTeamEntry(id) {
   // The branded build retains the authored Coupa picture while omitting the
   // main game's optional presentation release. Candidate picture ownership
   // still needs a stable theme identity for its exact-attempt checks.
+  const dedicatedCoupaFlower = document.createElement('canvas');
+  dedicatedCoupaFlower.width = dedicatedCoupaFlower.height = 64;
+  const flowerContext = dedicatedCoupaFlower.getContext('2d');
+  flowerContext.translate(32,32);
+  for (let petal=0; petal<12; petal++) {
+    flowerContext.rotate(Math.PI/6); flowerContext.fillStyle='#5FD6FF';
+    flowerContext.beginPath(); flowerContext.moveTo(-3,-6); flowerContext.lineTo(-5,-27);
+    flowerContext.lineTo(6,-17); flowerContext.lineTo(3,-6); flowerContext.closePath(); flowerContext.fill();
+  }
+  flowerContext.fillStyle='#FFFFFF'; flowerContext.beginPath(); flowerContext.arc(0,0,6,0,Math.PI*2); flowerContext.fill();
   const dedicatedCoupaTeamPresentation = Object.freeze({
+    brandPolicy: 'coupa-clean-v1',
+    canvas: { palette: {ink:'#081D4D',paper:'#FFFFFF',muted:'#B8CAE5',accent:'#5FD6FF',safe:'#96EAAA',danger:'#FF9A88',field:'#081D4D',grid:'#193866',sky:'#D8F0FF',land:'#1565C0'}, motionScale: 1 },
+    fonts: {ui:'system-ui',numeric:'monospace'},
+    image: slot => slot.startsWith('player.scout') ? {image:dedicatedCoupaFlower,geometry:{frame:{width:dedicatedCoupaFlower.width,height:dedicatedCoupaFlower.height},pivot:{x:.5,y:.5},rotors:[]}} : null,
     resolved: Object.freeze({
       theme: Object.freeze({ id: 'fpv', revision: 1 }),
+      assets: Object.freeze({}),
       collection: null,
     }),
   });`,
@@ -750,6 +789,8 @@ export async function createStandaloneTeamEntry(id) {
     ),
   );
   edit(files, "game/couch/mode-entry.js", (source) => {
+    source = `(function(){const url=new URL(location.href);if(!url.searchParams.has('journey')){url.searchParams.set('journey',${JSON.stringify(config.editionId)});history.replaceState(null,'',url.href);}})();\n` + source;
+
     source = once(
       source,
       "  const authoredRoutes = [\n    'opening',",
@@ -923,7 +964,6 @@ export function isolateBrand(input, config) {
   });
   edit(files, "game/ui/game-shell.mjs", (source) => {
     source = removeImports(source, [
-      "../fpv-entry.mjs",
       "./optional-practice-panel.mjs",
       "../release-explorer.mjs",
     ]);
@@ -1056,6 +1096,7 @@ export const createLessonObserver = denyBrandedImport;
         name,
       ) ||
       /^game\/ui\/art\/identity\/fpv-line\//.test(name) ||
+      /^game\/presentation\/compiled\/assets\//.test(name) ||
       /^game\/demo-data\/.*\.replay\.json$/.test(name) ||
       /^game\/audio\/soundtracks\/.*\.mp3$/.test(name) ||
       /^game\/(?:fpv-entry|optional-practice[^/]*|ui\/optional-practice-panel)\.(?:mjs|css)$/.test(
@@ -1064,6 +1105,7 @@ export const createLessonObserver = denyBrandedImport;
     )
       files.delete(name);
   }
+  edit(files, "game/ui/mode-choice.css", source => once(source, "@import url('./optional-practice-panel.css');", '', 'optional practice stylesheet'));
   projectEnglishMultiplayer(files, config, catalog);
   for (const [name, bytes] of files) {
     if (/\.(?:mjs|js)$/.test(name))
@@ -1079,9 +1121,16 @@ export const createLessonObserver = denyBrandedImport;
         ),
       );
   }
+  edit(files, "game/snake/coupa-snake.mjs", source => `import { assertBrandedLocation, installBrandedIsolation } from '../branded-isolation.mjs';\nassertBrandedLocation(location.href);\ninstallBrandedIsolation();\n${source}`);
+  edit(files, "game/collections/coupa-collections.mjs", source => `import { assertBrandedLocation, installBrandedIsolation } from '../branded-isolation.mjs';\nassertBrandedLocation(location.href);\ninstallBrandedIsolation();\n${source}`);
+  for (const name of ['game/couch/couch.mjs', 'game/couch/relay-rescue.mjs'])
+    edit(files, name, source => `import { assertBrandedLocation, installBrandedIsolation, denyBrandedImport } from '../branded-isolation.mjs';\nassertBrandedLocation(location.href);\ninstallBrandedIsolation();\n${source}`);
+  edit(files, 'game/couch/relay-rescue.mjs', source => functionGuard(source, 'prepareImport', 'denyBrandedImport();'));
   projectLanding(files);
   projectAccessGate(files, config);
   pruneUnreachableModules(files);
+  for (const name of files.keys())
+    if (/^game\/(?:ui\/art\/reactions|audio\/reactions)\//.test(name)) files.delete(name);
   // The upstream compiler appends shared presentation ledger records, some of
   // which became unused after removing its public archive/default identity.
   // Remove only unowned runtime records; selected brand/campaign pins may never
@@ -1124,6 +1173,8 @@ export const createLessonObserver = denyBrandedImport;
       `<!doctype html><html lang="en" data-branded-app="${config.repo}" data-access-state="locked"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="revealline-access-id" content="${config.repo}"><meta name="revealline-access-title" content="Coupa Village"><meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ"><meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw"><link rel="stylesheet" href="game/access-gate.css"><script src="game/access-gate.mjs" defer></script><title>${title}</title></head><body><main><h1>${title}</h1><p id="entry-status">Opening your Coupa campaign…</p><a href="game/index.html?edition=${config.editionId}">Play ${title}</a></main><script type="module">import { assertBrandedLocation } from './game/branded-isolation.mjs'; await globalThis.RevealLineAccess?.ready; try { assertBrandedLocation(location.href); const target = new URL('game/index.html', location.href); target.search = location.search; target.hash = location.hash; location.replace(target); } catch (error) { document.getElementById('entry-status').textContent = error.message; }</script></body></html>`,
     ),
   );
+  for (const [name, bytes] of files) if (name.endsWith('.html'))
+    files.set(name, encoder(bytes.toString('utf8').replace(/[\t ]+$/gm, '')));
   // Journey's IndexedDB is now application-specific; keep logical profile and
   // content IDs unchanged so upstream updates retain compatibility.
   const dependencies = JSON.parse(files.get("runtime-dependencies.json"));
@@ -1164,6 +1215,9 @@ export function validateBrandIsolation(files, config) {
           "game/company.html",
           "game/couch/index.html",
           "game/couch/relay-rescue.html",
+          "game/snake/index.html",
+          "game/snake/play.html",
+    "game/collections/index.html",
         ].includes(name))
     )
       throw new Error(

@@ -286,29 +286,51 @@ function directionTo(a, b) {
 }
 
 /** Run only public commands against an owned candidate. Never publish a candidate state as live authority. */
-function evaluate(original, vertices, budget) {
+function evaluate(original, vertices, budget, { allowHazardLoss = false } = {}) {
   const state = structuredClone(original),
     segments = [];
   let localTicks = 0,
     closed = false,
     bends = 0,
-    priorDirection = null;
+    priorDirection = null,
+    exposedTicks = 0,
+    failure = null;
   function tick(direction) {
     if (localTicks >= BOT_LIMITS.candidateTicks || budget.ticks >= BOT_LIMITS.totalTicks)
       return false;
+    // Improvised performances must never manufacture a loss by retracing the
+    // live cable, including a queued turn under grid-center steering.
+    if (allowHazardLoss && state.player.cutting && direction) {
+      const heading = DIRECTIONS.find((d) => d.name === state.player.direction),
+        requested = DIRECTIONS.find((d) => d.name === direction);
+      if (heading.x * requested.x + heading.y * requested.y === -1) return false;
+    }
     localTicks++;
     budget.ticks++;
+    if (state.player.cutting) exposedTicks++;
     if (state.player.cutting && direction && priorDirection && direction !== priorDirection)
       bends++;
     if (direction) priorDirection = direction;
     stepRun(state, { direction }, FIXED_DT);
     append(segments, direction);
     if (
-      state.classic.livesLost !== original.classic.livesLost ||
+      state.lives !== original.lives ||
       state.status === 'lost' ||
       state.status === 'respawning'
-    )
+    ) {
+      const event = state.events.find((event) => event.type === 'player.failed');
+      // A plausible overreach: a real moving threat catches an already
+      // established cut. Never select self-contact, wall/terrain blunders,
+      // an idle death, or an immediate loss at departure.
+      if (
+        allowHazardLoss &&
+        !closed &&
+        exposedTicks >= 240 &&
+        ['enemy-trail', 'enemy-player', 'boss-lane', 'combat-projectile'].includes(event?.cause)
+      )
+        failure = event.cause;
       return false;
+    }
     if (state.events.some((e) => e.type === 'cut.closed')) closed = true;
     return true;
   }
@@ -324,7 +346,8 @@ function evaluate(original, vertices, budget) {
       const before = { ...state.player },
         remaining = (target[axis] - before[axis]) * sign;
       const queueTurn = state.turnPolicy === 'grid-center' && nextDirection && remaining < 1 - EPS;
-      if (!tick(queueTurn ? nextDirection : direction)) return null;
+      if (!tick(queueTurn ? nextDirection : direction))
+        return failure ? { state, segments, bends, ticks: localTicks, failure } : null;
       if (closed) break;
       if (queueTurn && state.player.direction === nextDirection) break;
       stagnant = distance(before, state.player) < EPS ? stagnant + 1 : 0;
@@ -340,6 +363,49 @@ function evaluate(original, vertices, budget) {
     for (let i = 0; i < 60; i++) if (!tick(null)) return null;
   }
   return { state, segments, bends, ticks: localTicks };
+}
+
+/** Prepare varied, purposeful recording inputs without widening live-bot
+ * qualification. Every route reconnects geometrically; only a late encounter
+ * with a real moving threat may be retained as a recoverable overreach. */
+export async function planImprovMacro(
+  original,
+  { plannerSeed = 1, decision = 0, allowRisk = false, preferSafe = false, signal } = {},
+) {
+  const check = () => {
+    if (signal?.aborted) throw new DOMException('Improvised demo cancelled.', 'AbortError');
+  };
+  check();
+  if (original.status !== 'running' || original.player.cutting) return null;
+  const random = randomFor((plannerSeed ^ Math.imul(decision + 1, 2654435761)) >>> 0),
+    { candidates, paths } = pathsFor(original, random, false),
+    budget = { ticks: 0 },
+    safe = [],
+    risky = [];
+  for (const candidate of candidates) {
+    if (budget.ticks >= BOT_LIMITS.totalTicks) break;
+    // Yield between bounded simulations so loading cancellation remains usable
+    // on mobile even though this fallback does not require a Worker.
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    check();
+    const trial = evaluate(original, waypointsFor(candidate, paths, original), budget, {
+      allowHazardLoss: true,
+    });
+    if (!trial) continue;
+    const score = trial.failure
+      ? candidate.advantage + candidate.jitter * 4
+      : (trial.state.coverage - original.coverage) * 60 +
+        Math.min(trial.bends, 2) * 2 -
+        trial.ticks / 400 +
+        candidate.jitter * 5;
+    (trial.failure ? risky : safe).push({ ...trial, score });
+  }
+  const choices =
+    allowRisk && risky.length && (!safe.length || (!preferSafe && random() < 0.25)) ? risky : safe;
+  choices.sort((a, b) => b.score - a.score);
+  // Seeded choice among good routes changes strategy rather than injecting
+  // steering jitter into a maneuver already in progress.
+  return choices[Math.floor(random() * Math.min(3, choices.length))] ?? null;
 }
 
 /** Deterministic finite planning. Intended for a Worker; tests may call it directly. */

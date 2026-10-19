@@ -136,6 +136,7 @@ export function attachArtworkMotion({
     currentVertical = Boolean(vertical),
     disposed = false,
     wanted = false,
+    pendingDraw = false,
     lost = false,
     ready = null,
     gl = null,
@@ -303,7 +304,11 @@ export function attachArtworkMotion({
     queue();
   }
   function prepare(force = false) {
-    if (disposed || lost) return;
+    if (disposed) return;
+    // Retain invalidation while stopped; only visible running admission may
+    // create handles, upload a bitmap, or submit a draw.
+    if (force) uploaded = '';
+    if (!wanted || lost) return;
     const key = source();
     if (current !== key) {
       stop();
@@ -321,7 +326,16 @@ export function attachArtworkMotion({
     }
     const signature = `${key}:${width}:${height}`;
     if (failed === key) return;
-    if (uploaded === signature && !force) {
+    if (uploaded === signature) {
+      if (pendingDraw) {
+        try {
+          draw();
+          pendingDraw = false;
+        } catch {
+          unavailable(key);
+          return;
+        }
+      }
       queue();
       return;
     }
@@ -355,6 +369,7 @@ export function attachArtworkMotion({
         if (scratch) scratch.width = scratch.height = 0;
       }
       draw();
+      pendingDraw = false;
       if (gl.getError() !== gl.NO_ERROR || gl.isContextLost())
         throw new Error('Artwork upload failed.');
       uploaded = signature;
@@ -398,15 +413,11 @@ export function attachArtworkMotion({
       const changed = nextProfile !== currentProfile || Boolean(nextVertical) !== currentVertical;
       currentProfile = nextProfile;
       currentVertical = Boolean(nextVertical);
-      if (changed) regionData = regions(currentProfile, currentVertical);
-      prepare();
-      if (changed && ready) {
-        try {
-          draw();
-        } catch {
-          unavailable(current);
-        }
+      if (changed) {
+        regionData = regions(currentProfile, currentVertical);
+        pendingDraw = true;
       }
+      prepare();
     },
     setRunning(value) {
       if (disposed || wanted === Boolean(value)) return;

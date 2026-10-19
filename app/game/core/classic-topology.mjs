@@ -1,3 +1,4 @@
+import { coverageCellCount } from './coverage.mjs';
 import { CELL } from './registry.mjs';
 import { cellIndex } from './movement.mjs';
 import { EPS } from './geometry.mjs';
@@ -149,7 +150,7 @@ export function commitClassicErosion(state) {
     }
   }
   if (erased.size) {
-    state.claimedCount -= erased.size;
+    state.claimedCount -= coverageCellCount(state, erased);
     state.coverage = state.claimedCount / state.totalClaimable;
     state.classic.topologyRevision++;
     state.events.push({

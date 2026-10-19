@@ -1,126 +1,145 @@
-<!DOCTYPE html><html data-edition-id="coupa-all" lang="en" data-build-version="v0.142.4" data-boot-state="loading" data-access-state="locked" data-branded-app="revealline-mmm"><head>
+<!DOCTYPE html><html data-edition-id="coupa-all" lang="en" data-build-version="v0.151.1" data-boot-state="loading" data-access-state="locked" data-branded-app="revealline-mmm"><head>
     <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#081D4D">
+    <!-- access-gate:start -->
     <meta name="revealline-access-id" content="revealline-mmm">
     <meta name="revealline-access-title" content="Coupa Village">
     <meta name="revealline-access-salt" content="bWVraG92b3YuZ2l0aHViLmlvL3JldmVhbGxpbmUtbW1tL2FjY2Vzcy92MQ">
     <meta name="revealline-access-verifier" content="1zbNkPra4ctJvw3ZJjCsoHQqwPRfKAxj-mV9WBUyLEw">
+    <style>
+      html:not([data-access-state='unlocked']) body > :not(#access-gate):not(script) {
+        display: none !important;
+      }
+    </style>
+    <link rel="stylesheet" href="./access-gate.css">
+    <script src="./access-gate.mjs" defer=""></script>
+    <!-- access-gate:end -->
+
+    <style>
+      @layer legacy {
+        html {
+          background: #070914;
+          color-scheme: dark;
+        }
+        body {
+          margin: 0;
+          background: #070914;
+          color: #edf2ff;
+        }
+        html:not([data-boot-state='ready'])
+          body
+          > :not(#boot-screen):not(#access-gate):not(script) {
+          display: none !important;
+        }
+        #boot-screen {
+          min-height: 100vh;
+          min-height: 100svh;
+          display: grid;
+          place-items: center;
+          box-sizing: border-box;
+          padding: 24px;
+          font:
+            18px/1.5 'Field Kit UI',
+            system-ui,
+            sans-serif;
+        }
+        #boot-screen .launch-card {
+          width: min(100%, 620px);
+          box-sizing: border-box;
+          padding: 24px;
+          background: #101923;
+          border: 2px solid #425563;
+        }
+        #boot-screen .fpv-line-wordmark {
+          display: block;
+          width: min(100%, 510px);
+          aspect-ratio: 5.7;
+          object-fit: cover;
+          object-position: center 42%;
+        }
+        #boot-screen .launch-signal {
+          display: flex;
+          gap: 6px;
+        }
+        #boot-screen .launch-signal i {
+          width: 8px;
+          height: 12px;
+          background: #78dce8;
+        }
+        html[data-boot-state='loading'] #boot-screen .launch-signal i {
+          animation: boot-signal 900ms steps(2, end) infinite;
+        }
+        #boot-screen .launch-signal i:nth-child(2) {
+          animation-delay: 150ms;
+        }
+        #boot-screen .launch-signal i:nth-child(3) {
+          animation-delay: 300ms;
+        }
+        @keyframes boot-signal {
+          50% {
+            transform: scaleY(1.5);
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          html[data-boot-state='loading'] #boot-screen .launch-signal i {
+            animation: none;
+          }
+        }
+        #boot-screen .launch-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+        #boot-screen .launch-action,
+        #boot-screen summary {
+          display: inline-flex;
+          align-items: center;
+          min-height: 44px;
+          padding: 0 8px;
+        }
+        #boot-screen a:focus-visible,
+        #boot-screen summary:focus-visible {
+          outline: 3px solid #78dce8;
+          outline-offset: 3px;
+        }
+        #boot-screen a {
+          color: #68d9fa;
+        }
+        #boot-screen [hidden] {
+          display: none !important;
+        }
+      }
+    </style>
+    <script src="presentation/theme-bootstrap.mjs" data-theme-density="player" type="application/x-revealline-locked" data-access-type=""></script>
+    <script src="snake/route.js" data-mode="solo" type="application/x-revealline-locked" data-access-type=""></script>
+    <link rel="stylesheet" href="presentation/industrial-workshop.css" data-industrial-workshop="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#081D4D">
+
     <!-- Safari uses these when a player adds the game to the Home Screen. -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Coupa Village / LINE</title>
-    <style>
-      html {
-        background: #070914;
-        color-scheme: dark;
-      }
-      body {
-        margin: 0;
-        background: #070914;
-        color: #edf2ff;
-      }
-      html:not([data-boot-state='ready']) body > :not(#boot-screen):not(#access-gate):not(script) {
-        display: none !important;
-      }
-      #boot-screen {
-        min-height: 100vh;
-        min-height: 100svh;
-        display: grid;
-        place-items: center;
-        box-sizing: border-box;
-        padding: 24px;
-        font:
-          18px/1.5 'Field Kit UI',
-          system-ui,
-          sans-serif;
-      }
-      #boot-screen .launch-card {
-        width: min(100%, 620px);
-        box-sizing: border-box;
-        padding: 24px;
-        background: #101923;
-        border: 2px solid #425563;
-      }
-      #boot-screen .fpv-line-wordmark {
-        display: block;
-        width: min(100%, 510px);
-        aspect-ratio: 5.7;
-        object-fit: cover;
-        object-position: center 42%;
-      }
-      #boot-screen .launch-signal {
-        display: flex;
-        gap: 6px;
-      }
-      #boot-screen .launch-signal i {
-        width: 8px;
-        height: 12px;
-        background: #78dce8;
-      }
-      html[data-boot-state='loading'] #boot-screen .launch-signal i {
-        animation: boot-signal 900ms steps(2, end) infinite;
-      }
-      #boot-screen .launch-signal i:nth-child(2) {
-        animation-delay: 150ms;
-      }
-      #boot-screen .launch-signal i:nth-child(3) {
-        animation-delay: 300ms;
-      }
-      @keyframes boot-signal {
-        50% {
-          transform: scaleY(1.5);
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html[data-boot-state='loading'] #boot-screen .launch-signal i {
-          animation: none;
-        }
-      }
-      #boot-screen .launch-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      #boot-screen .launch-action,
-      #boot-screen summary {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-        padding: 0 8px;
-      }
-      #boot-screen a:focus-visible,
-      #boot-screen summary:focus-visible {
-        outline: 3px solid #78dce8;
-        outline-offset: 3px;
-      }
-      #boot-screen a {
-        color: #68d9fa;
-      }
-      #boot-screen [hidden] {
-        display: none !important;
-      }
-    </style>
+
     <link rel="stylesheet" data-boot-href="./i18n/style.css">
-    <link rel="stylesheet" href="access-gate.css">
-    <script src="access-gate.mjs" defer=""></script>
-    <script src="./vendor/i18next-26.4.2.min.js"></script>
-    <script src="./i18n/catalogs.mjs"></script>
-    <script src="./i18n/bootstrap.mjs"></script>
+
+    <script src="./vendor/i18next-26.4.2.min.js" type="application/x-revealline-locked" data-access-type=""></script>
+    <script src="./i18n/catalogs.mjs" type="application/x-revealline-locked" data-access-type=""></script>
+    <script src="./i18n/bootstrap.mjs" type="application/x-revealline-locked" data-access-type=""></script>
 
     <link rel="stylesheet" data-boot-href="boot.css">
     <!-- Deferred classic scripts leave the static launch screen visible during downloads.
          Styles are requested by boot after error listeners are installed. -->
-    <script src="boot.mjs" defer=""></script>
+    <script src="boot.mjs" defer="" type="application/x-revealline-locked" data-access-type=""></script>
 
     <link rel="stylesheet" data-boot-href="style.css">
     <link rel="stylesheet" data-boot-href="ui/controller-settings.css">
     <link rel="stylesheet" data-boot-href="ui/game-shell.css">
-    
+
     <link rel="stylesheet" data-boot-href="ui/demo.css">
     <link rel="stylesheet" data-boot-href="ui/flight-information-details.css">
+    <link rel="stylesheet" data-boot-href="ui/capture-flight-limits.css">
     <link rel="stylesheet" data-boot-href="ui/mode-choice.css">
     <link rel="stylesheet" data-boot-href="ui/pixel-theme.css">
     <link rel="stylesheet" data-boot-href="ui/mission-picker.css">
@@ -147,17 +166,20 @@
     <link rel="stylesheet" data-boot-href="ui/edition-play.css">
     <link rel="stylesheet" data-boot-href="ui/menu-scenes.css">
     <link rel="stylesheet" data-boot-href="ui/native-menu.css">
-    
+    <link rel="stylesheet" data-boot-href="ui/pause-menu.css">
+    <link rel="stylesheet" data-boot-href="ui/win-picture.css">
+
+    <link rel="stylesheet" data-boot-href="ui/hunt-feedback.css">
   <style>@font-face{font-family:"Company Brand";src:url("../game/editions/assets/shared/Poppins-Regular.ttf") format("truetype");font-display:swap}:root{--brand-font:"Company Brand",system-ui,sans-serif}</style><link rel="icon" href="./editions/assets/coupa/icon-512.png"><link rel="apple-touch-icon" href="./editions/assets/coupa/icon-512.png"><style>:root{--accent:#5FD6FF;--danger:#FF9A88;--field:#081D4D;--grid:#193866;--ink:#081D4D;--land:#1565C0;--muted:#B8CAE5;--paper:#FFFFFF;--safe:#96EAAA;--sky:#D8F0FF;--panel:#193866}
-html[data-edition-id] body{--fk-bg:var(--ink);--fk-panel:var(--field,var(--ink));--fk-text:var(--paper);--fk-muted:var(--muted,var(--paper));--fk-cyan:var(--accent);--fk-line:var(--grid);--fk-font-ui:var(--brand-font,system-ui,sans-serif);--fk-font-display:var(--brand-font,system-ui,sans-serif)}
-html[data-edition-id][data-boot-state]:not([data-boot-state="ready"]),html[data-edition-id][data-boot-state]:not([data-boot-state="ready"]) body{background:var(--ink);color:var(--paper)}
-html[data-edition-id] #boot-screen{background:var(--ink);color:var(--paper);font-family:var(--brand-font,system-ui,sans-serif)}
-html[data-edition-id] #boot-screen .launch-card{background:var(--field,var(--ink));border-color:var(--grid)}
-html[data-edition-id] #boot-screen h1{color:var(--paper);font-family:var(--brand-font,system-ui,sans-serif)}
-html[data-edition-id] #boot-screen .launch-kicker,html[data-edition-id] #boot-screen a{color:var(--accent)}
-html[data-edition-id] #boot-screen .launch-signal i{background:var(--accent)}
+html[data-edition-id]:not([data-theme-styled="true"]) body{--fk-bg:var(--ink);--fk-panel:var(--field,var(--ink));--fk-text:var(--paper);--fk-muted:var(--muted,var(--paper));--fk-cyan:var(--accent);--fk-line:var(--grid);--fk-font-ui:var(--brand-font,system-ui,sans-serif);--fk-font-display:var(--brand-font,system-ui,sans-serif)}
+html[data-edition-id]:not([data-theme-styled="true"])[data-boot-state]:not([data-boot-state="ready"]),html[data-edition-id]:not([data-theme-styled="true"])[data-boot-state]:not([data-boot-state="ready"]) body{background:var(--ink);color:var(--paper)}
+html[data-edition-id]:not([data-theme-styled="true"]) #boot-screen{background:var(--ink);color:var(--paper);font-family:var(--brand-font,system-ui,sans-serif)}
+html[data-edition-id]:not([data-theme-styled="true"]) #boot-screen .launch-card{background:var(--field,var(--ink));border-color:var(--grid)}
+html[data-edition-id]:not([data-theme-styled="true"]) #boot-screen h1{color:var(--paper);font-family:var(--brand-font,system-ui,sans-serif)}
+html[data-edition-id]:not([data-theme-styled="true"]) #boot-screen .launch-kicker,html[data-edition-id]:not([data-theme-styled="true"]) #boot-screen a{color:var(--accent)}
+html[data-edition-id]:not([data-theme-styled="true"]) #boot-screen .launch-signal i{background:var(--accent)}
 html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:3rem;max-width:9rem;object-fit:contain;vertical-align:middle}
-</style><style>#shell-home-fpv,#shell-home-practice,#shell-optional-practice,#shell-controller-lab,#shell-replay-theater,#shell-release-explorer,#shell-catalogue,#shell-guide,#shell-asset-studio,#shell-playground,#shell-enemy-catalog,#shell-motion-lab,#shell-still-media,#shell-video-poster,#shell-design-atlas,#creator-tools,#native-diagnostics,#shell-offline,#settings-offline,#offline-button,#first-flight-help-enter,#first-flight-enter,#first-flight-entry,#library-packs,#library-saves,#pack-file,#pack-json,#install-pack,#save-file,#save-json,#import-save,#undo-library,#undo-backup,#shell-workshop,#settings-tab-content,#settings-panel-content,#settings-saves,#soundtrack-open,#race-library-switch,#coop-catalogue,#coop-more-catalogue,[data-library-panel="packs"],[data-library-panel="saves"],[data-release-explorer],[data-source-only],.workshop-tools,.edition-offline,.optional-practice-dialog,[data-branded-unavailable],[data-language-control]{display:none!important}</style><link rel="stylesheet" href="ui/coupa-landing.css"></head>
+</style><style>#first-flight-home-enter,#enemy-remains,#enemy-remains-hint,#enemy-remains-status,#enemy-remains-retry,#journey-reactions-enabled,#journey-reactions-help,#journey-reactions-status,#journey-reactions-retry,#menu-palette,#menu-ornaments,#race-enemy-remains,#race-enemy-remains-hint,#race-enemy-remains-status,#race-enemy-remains-retry,#race-journey-reactions-enabled,#race-journey-reactions-help,#race-journey-reactions-status,#race-journey-reactions-retry,#race-menu-palette,#race-menu-ornaments,#coop-enemy-remains,#coop-enemy-remains-hint,#coop-enemy-remains-status,#coop-enemy-remains-retry,#coop-journey-reactions-enabled,#coop-journey-reactions-help,#coop-journey-reactions-status,#coop-journey-reactions-retry,#coop-menu-palette,#coop-menu-ornaments,#shell-home-fpv,#enemy-remains,#enemy-remains-hint,#enemy-remains-status,#enemy-remains-retry,#menu-actor-style,#menu-actor-note,#coop-actor-style,#coop-actor-style-note,#race-actor-style,#race-actor-style-status,#coop-pack-file,#coop-pack-cancel,#coop-pack-retry,#shell-home-practice,#shell-optional-practice,#shell-controller-lab,#shell-replay-theater,#shell-release-explorer,#shell-catalogue,#shell-guide,#shell-asset-studio,#shell-playground,#shell-enemy-catalog,#shell-motion-lab,#shell-still-media,#shell-video-poster,#shell-design-atlas,#creator-tools,#native-diagnostics,#shell-offline,#settings-offline,#offline-button,#first-flight-help-enter,#first-flight-enter,#first-flight-entry,#library-packs,#library-saves,#pack-file,#pack-json,#install-pack,#save-file,#save-json,#import-save,#undo-library,#undo-backup,#shell-workshop,#settings-tab-content,#settings-panel-content,#settings-saves,#soundtrack-open,#race-library-switch,#coop-catalogue,#coop-more-catalogue,[data-library-panel="packs"],[data-library-panel="saves"],[data-release-explorer],[data-source-only],.workshop-tools,.edition-offline,.optional-practice-dialog,[data-branded-unavailable],[data-language-control],label:has([id$="enemy-remains"]), label:has([id$="journey-reactions-enabled"]), label:has([id$="menu-palette"]), label:has([id$="menu-ornaments"]),[id$="-tab-content"], [id$="-panel-content"], [data-global-setting="language"], [data-global-setting="appearance"],label:has(#coop-actor-style),label:has(#race-actor-style),details:has(#coop-pack-file),label:has(#enemy-remains),label:has(#menu-actor-style){display:none!important}</style><link rel="stylesheet" href="ui/coupa-landing.css"></head>
   <body class="field-kit">
     <section id="boot-screen" class="launch-screen" aria-labelledby="boot-title">
       <div class="launch-card">
@@ -180,6 +202,10 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           <a id="boot-retry" class="launch-action" data-i18n="interface:reloadGame" href="./index.html?edition=coupa-all">Reload game</a>
           <a id="boot-online" class="launch-action" data-i18n="interface:playOnline" hidden="" data-branded-unavailable="">Play online</a>
         </nav>
+        <section id="boot-updates" hidden="" aria-label="Game updates" data-i18n-aria-label="interface:updates.title">
+          <a id="boot-update-action" class="launch-action" data-i18n="interface:updates.check" hidden="" data-branded-unavailable="">Check for updates</a>
+          <p id="boot-update-status" class="launch-status" role="status"></p>
+        </section>
         <details id="boot-local" class="launch-help">
           <summary data-i18n="interface:playingADownloadedCopy">Playing a downloaded copy?</summary>
           <p data-i18n-rich="interface:openTheFolderContainingInATerminalThenStartA">
@@ -233,7 +259,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           <strong data-i18n="interface:addToHomeScreen" data-i18n-slot="slot1">Add to Home Screen</strong>.
         </li>
         <li data-i18n="interface:launchRevealLineFromItsNewHomeScreenIcon">
-          Launch FPV / LINE from its new Home Screen icon.
+          Launch Coupa Village from its new Home Screen icon.
         </li>
       </ol>
       <p class="field-kit-secondary" data-i18n="interface:safariTabsKeepTheirBrowserControlsTheHomeScreenGame">
@@ -247,18 +273,18 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
       </div>
     </dialog>
     <header class="masthead" data-boot-inert="" inert="">
-      <a class="wordmark" data-i18n-rich="interface:revealLine2" href="./?edition=coupa-all"><span class="brand-mark" aria-hidden="true" data-i18n-slot="slot0">◩</span> FPV
+      <a class="wordmark" data-i18n-rich="interface:revealLine2" href="./?edition=coupa-all"><span class="brand-mark" aria-hidden="true" data-i18n-slot="slot0">◩</span> Coupa
         <span class="slash" data-i18n-slot="slot1">/</span> LINE</a>
       <nav>
         <a data-i18n="interface:playground" hidden="" data-branded-unavailable="">Playground ↗</a><a data-i18n="interface:relayRescueCoOp" href="./couch/relay-rescue.html?journey=coupa-all&amp;return=solo">Relay Rescue · co-op</a><a data-i18n="interface:couchRace" href="./couch/index.html?journey=coupa-all&amp;return=solo">Couch race</a><a data-i18n="interface:buildInformation" hidden="" data-branded-unavailable="">Build information</a><button id="library-button" class="text-button" type="button" data-i18n="interface:librarySaves">
           Library &amp; saves</button><button id="settings-button" class="text-button" type="button" data-i18n="common:navigation.settings">
           Settings</button><button id="help-button" class="text-button" type="button" data-i18n="common:navigation.howToPlay">
-          How to play</button><span id="version" class="version">v0.142.4</span>
+          How to play</button><span id="version" class="version">v0.151.1</span>
       </nav>
     </header>
     <main data-boot-inert="" inert="" aria-busy="true">
       <div class="edition">
-        <span id="theme-caption" data-i18n="interface:fpvFrontDawnOverHome">FPV FRONT / DAWN OVER HOME</span><span id="mode-caption" data-i18n="interface:firstSignal0112">FIRST SIGNAL · 01 / 12</span>
+        <span id="theme-caption" data-i18n="interface:fpvFrontDawnOverHome">Coupa FRONT / DAWN OVER HOME</span><span id="mode-caption" data-i18n="interface:firstSignal0112">FIRST SIGNAL · 01 / 12</span>
       </div>
       <div class="game-layout">
         <section class="arena-panel" aria-label="Game" data-i18n-aria-label="interface:game">
@@ -301,6 +327,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                   <p id="overlay-difficulty" class="micro-note" hidden=""></p>
                   <div id="result-medals" class="result-medals" hidden=""></div>
                   <p id="mastery-overlay" class="mastery-note" hidden=""></p>
+                  <p id="capture-medal-goal" hidden=""></p>
                 </div>
                 <div class="reading-toolbar">
                   <div class="reading-actions">
@@ -315,6 +342,24 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                     Read without starting or resuming.
                   </p>
                 </div>
+                <details id="capture-flight-limits" class="capture-flight-limits" hidden="">
+                  <summary id="capture-flight-limits-summary"></summary>
+                  <p id="capture-recording-limit"></p>
+                  <p id="capture-collection-limit"></p>
+                  <p data-i18n="interface:flightLimits.beforeLeaving">
+                    Before closing the game, check your saved flight or export the current attempt
+                    in Saves &amp; recovery. A replay is for watching, not resuming. Home keeps this
+                    flight paused in this tab; it is not a backup.
+                  </p>
+                  <div class="capture-flight-limit-actions">
+                    <button id="capture-limit-saves" type="button" class="button secondary" data-i18n="interface:flightLimits.saves">
+                      Saves &amp; recovery
+                    </button>
+                    <button id="capture-limit-replay" type="button" class="button secondary" data-i18n="interface:flightLimits.replay">
+                      Export replay
+                    </button>
+                  </div>
+                </details>
                 <p id="flight-preparation-status" class="menu-progress-status" hidden=""></p>
                 <div class="overlay-actions">
                   <button id="flight-preparation-cancel" class="button secondary preparation-cancel-hook" hidden="" tabindex="-1" aria-hidden="true" data-i18n="common:actions.cancelPreparation">
@@ -327,6 +372,9 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                     <span data-i18n="interface:startMission">Start mission</span>
                     <span>↗</span></button><button id="next-button" class="button primary" type="button" hidden="" data-i18n="interface:nextMission">
                     Next mission →
+                  </button>
+                  <button id="result-random-level" class="button secondary" type="button" hidden="" data-i18n="interface:randomLevel">
+                    Random level
                   </button>
                   <button id="journey-save-options" class="button secondary journey-save-options" type="button" hidden="" data-i18n="interface:progressNotSavedSaveOptions">
                     Progress not saved · Save options
@@ -347,7 +395,9 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                     Learn by playing
                   </button>
                   <section class="pause-menu-section pause-missions-section" aria-labelledby="pause-missions-heading">
-                    <h3 id="pause-missions-heading" data-i18n="interface:missions">Missions</h3>
+                    <h3 data-ui-surface="section-title" id="pause-missions-heading" data-i18n="interface:missions">
+                      Missions
+                    </h3>
                     <div class="pause-action-grid">
                       <button id="overlay-restart" class="button secondary" type="button" hidden="" data-i18n="interface:restartMission">
                         Restart mission
@@ -355,11 +405,19 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                       <button id="journey-skip" class="button secondary" type="button" hidden="" data-i18n="interface:skipMission">
                         Skip mission
                       </button>
+                      <button id="overlay-random-level" class="button secondary" type="button" hidden="" data-i18n="interface:randomLevel">
+                        Random level
+                      </button>
                       <button id="overlay-missions" class="button secondary" type="button" hidden="" data-i18n="interface:chooseMission">
                         Choose mission
                       </button>
+                      <button id="copy-level-link" class="button secondary" type="button" hidden="" data-i18n="interface:copyLevelLink">
+                        Copy level link
+                      </button>
+                      <input id="played-level-link" type="url" readonly="" hidden="" aria-label="Level link" data-i18n-aria-label="interface:levelLink">
+                      <p id="level-link-status" role="status" aria-live="polite" hidden=""></p>
                       <details id="pause-mission-info" class="pause-mission-info" hidden="">
-                        <summary id="pause-mission-info-toggle" data-i18n="interface:missionInfo">
+                        <summary id="pause-mission-info-toggle" data-ui-action="secondary" data-i18n="interface:missionInfo">
                           Mission info
                         </summary>
                         <div>
@@ -375,7 +433,9 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                   </section>
                   <div class="pause-secondary-groups">
                     <section class="pause-menu-section pause-sound-section" aria-labelledby="pause-sound-heading">
-                      <h3 id="pause-sound-heading" data-i18n="interface:sound">Sound</h3>
+                      <h3 data-ui-surface="section-title" id="pause-sound-heading" data-i18n="interface:sound">
+                        Sound
+                      </h3>
                       <div class="pause-action-grid">
                         <button id="overlay-sound" class="button secondary" type="button" aria-pressed="false" hidden="" data-i18n="interface:soundOff">
                           Sound: off
@@ -386,7 +446,9 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                       </div>
                     </section>
                     <section class="pause-menu-section pause-options-section" aria-labelledby="pause-config-heading">
-                      <h3 id="pause-config-heading" data-i18n="interface:config">Config</h3>
+                      <h3 data-ui-surface="section-title" id="pause-config-heading" data-i18n="interface:config">
+                        Config
+                      </h3>
                       <div class="pause-action-grid">
                         <button id="overlay-settings" class="button secondary" type="button" hidden="" data-i18n="common:navigation.settings">
                           Settings
@@ -400,6 +462,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                   <button id="overlay-menu" class="button secondary" type="button" data-i18n="common:navigation.home">
                     Home
                   </button>
+                  <p id="result-auto-next" class="result-auto-next" role="status" aria-live="polite" aria-atomic="true" hidden=""></p>
                 </div>
                 <p id="overlay-footnote" class="overlay-footnote" data-i18n="interface:aShortFirstFlightArrowsWasdTouchControlsBelow">
                   A short first flight · arrows / WASD · touch controls below
@@ -407,8 +470,13 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
                 <p id="journey-reactions" class="overlay-footnote" hidden=""></p>
               </div>
             </div>
-            <button id="show-result" class="picture-return" type="button" hidden="" data-i18n="interface:results">
-              Results ↗
+            <div id="win-picture-caption" class="win-picture-caption" hidden="">
+              <span class="win-picture-mark" aria-hidden="true">✦</span>
+              <strong data-i18n="interface:winPictureComplete">Beautifully done.</strong>
+              <span data-i18n="interface:winPictureEnjoy">The whole picture is yours.</span>
+            </div>
+            <button id="show-result" class="picture-return" type="button" hidden="" data-i18n="interface:winPictureContinue" data-i18n-aria-label="interface:winPictureContinueLabel" aria-label="Continue to results">
+              Continue →
             </button>
             <button id="skip-celebration" class="picture-return" type="button" hidden="" data-i18n="interface:keepPicture">
               Keep picture →
@@ -423,6 +491,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
             <span id="encounter-instruction"></span>
             <span id="classic-summary" hidden=""></span>
           </div>
+          <div id="hunt-feedback" class="hunt-feedback"></div>
           <p id="appearance-unlock" class="appearance-unlock" hidden=""></p>
           <div class="play-controls">
             <div id="touch-surface" role="group" aria-label="Touch steering: drag to fly and turn" data-i18n-aria-label="interface:touchSteeringDragToFlyAndTurn">
@@ -451,7 +520,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           </div>
           <p id="game-now-playing" class="game-now-playing micro-note" hidden="">
             <span id="game-now-playing-title"></span>
-            <a id="game-now-playing-source" target="_blank" rel="noopener noreferrer" hidden="" data-i18n="interface:artistWebsite">Artist website ↗</a>
+            <span id="game-now-playing-source" hidden=""></span>
           </p>
           <div id="touch-indicator" aria-hidden="true" hidden=""><i></i></div>
           <section id="first-flight-panel" class="first-flight-panel" aria-label="First Flight course" hidden="" data-i18n-aria-label="interface:firstFlightCourse">
@@ -628,8 +697,8 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           <button id="flight-details-reading-done" type="button" aria-controls="flight-details-reading" disabled="" data-i18n="interface:doneReading">
             Done reading
           </button>
-          <button id="flight-details-back" class="button secondary" type="button" data-i18n="interface:backToPause">
-            Back to Pause
+          <button id="flight-details-back" class="button secondary" type="button" data-i18n="common:actions.back">
+            Back
           </button>
         </div>
       </div>
@@ -707,9 +776,10 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           </p>
           <p data-i18n-rich="interface:replayRecordingAndRecoverableSavesStopAfter30MinutesOf">
             <strong data-i18n="interface:longFlights" data-i18n-slot="slot0">Long flights:</strong>
-            Replay recording and recoverable saves stop after 30 minutes of play. A flight can
-            continue, but a completion after two hours cannot be kept in the collection. Pause when
-            taking a break, and export your library to keep a backup.
+            Replay recording and new recoverable saves stop after 30 minutes of play. Earlier
+            checkpoints may remain. Classic collection results have a two-hour limit; Journey clears
+            and pictures use their own progress store. Pause to check Flight saves and export before
+            leaving. A replay cannot resume a flight.
           </p>
         </div>
       </div>
@@ -1021,11 +1091,11 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
             </option>
             <option value="large" data-i18n="interface:large">Large</option>
           </select></label>
-        <label class="field"><span data-i18n="interface:uiSkin">UI skin</span><select id="menu-palette">
+        <label class="field"><span data-i18n="interface:uiSkin">UI skin</span><select id="menu-palette" hidden="" data-branded-unavailable="" disabled="">
             <option value="auto" data-i18n="interface:neonArcade">Neon Arcade</option>
             <option value="ukrainian">Field Kit</option>
           </select></label>
-        <label class="field"><span data-i18n="interface:menuOrnaments">Menu ornaments</span><select id="menu-ornaments">
+        <label class="field"><span data-i18n="interface:menuOrnaments">Menu ornaments</span><select id="menu-ornaments" hidden="" data-branded-unavailable="" disabled="">
             <option value="off" data-i18n="common:status.off">Off</option>
             <option value="subtle" data-i18n="interface:subtle">Subtle</option>
             <option value="rich" data-i18n="interface:rich">Rich</option>
@@ -1042,24 +1112,25 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           <span data-i18n="interface:showGridGuides">Show grid guides</span></label>
         <label><input id="settings-reduced-effects" type="checkbox">
           <span data-i18n="interface:reducedEffects">Reduced effects</span></label>
-        <label class="settings-check"><input id="enemy-remains" type="checkbox" aria-describedby="enemy-remains-hint"><span data-i18n="common:preferences.enemyRemains">Show enemy remains</span></label>
-        <p id="enemy-remains-hint" class="micro-note" data-i18n="common:preferences.enemyRemainsHint">
+        <label class="settings-check"><input id="enemy-remains" type="checkbox" aria-describedby="enemy-remains-hint" hidden="" data-branded-unavailable="" disabled=""><span data-i18n="common:preferences.enemyRemains">Show enemy remains</span></label>
+        <p id="enemy-remains-hint" class="micro-note" data-i18n="common:preferences.enemyRemainsHint" hidden="" data-branded-unavailable="">
           Show defeated optional enemies where supported. Warnings, shots and brief hit effects stay
           visible.
         </p>
-        <p id="enemy-remains-status" class="micro-note" role="status" hidden=""></p>
-        <button id="enemy-remains-retry" type="button" data-i18n="common:preferences.retryEncounterSave" hidden="">
+        <p id="enemy-remains-status" class="micro-note" role="status" hidden="" data-branded-unavailable=""></p>
+        <button id="enemy-remains-retry" type="button" data-i18n="common:preferences.retryEncounterSave" hidden="" data-branded-unavailable="" disabled="">
           Retry saving
         </button>
         <p id="display-system-reduction" class="micro-note"></p>
         <p id="display-preferences-status" class="micro-note" role="status"></p>
-        <label><input id="journey-reactions-enabled" type="checkbox" aria-describedby="journey-reactions-help">
+        <label><input id="journey-reactions-enabled" type="checkbox" aria-describedby="journey-reactions-help" hidden="" data-branded-unavailable="" disabled="">
           <span data-i18n="interface:characterReactions">Character reactions</span></label>
-        <p id="journey-reactions-help" class="micro-note" data-i18n="interface:optionalCaptionsAfterCompletedJourneyMissionsNoVoiceOrAnimation">
-          Optional captions after completed Journey missions. No voice or animation.
+        <p id="journey-reactions-help" class="micro-note" data-i18n="interface:optionalCaptionsAfterCompletedJourneyMissionsNoVoiceOrAnimation" hidden="" data-branded-unavailable="">
+          Optional character captions, sound and brief reactions during play and after Journey
+          missions. Sound follows your audio settings.
         </p>
-        <p id="journey-reactions-status" class="micro-note" role="status" hidden=""></p>
-        <button id="journey-reactions-retry" type="button" hidden="" data-i18n="interface:retrySavingReactions">
+        <p id="journey-reactions-status" class="micro-note" role="status" hidden="" data-branded-unavailable=""></p>
+        <button id="journey-reactions-retry" type="button" data-i18n="interface:retrySavingReactions" hidden="" data-branded-unavailable="" disabled="">
           Retry saving reactions
         </button>
         <p class="micro-note" data-i18n="interface:reducedEffectsSoftensMovementAndCelebrationEffectsEveryDirectionTap">
@@ -1098,7 +1169,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           <label><input id="demo-auto" type="checkbox"><span data-i18n="demo:auto">Show a demo after 60 seconds on the idle home screen</span></label>
           <label><input id="demo-collect" type="checkbox"><span data-i18n="demo:collect">Use my successful runs in demos</span></label>
           <label><input id="demo-hide-pictures" type="checkbox"><span data-i18n="demo:hidePictures">Hide every demo picture behind signal noise</span></label>
-          <label><input id="demo-show-all-pictures" type="checkbox"><span data-i18n="demo:showAllPictures">Show all demo pictures without noise</span></label>
+          <label><input id="demo-show-all-pictures" type="checkbox"><span data-i18n="demo:showAllPictures">Reveal all demo pictures (gameplay effects remain)</span></label>
           <p class="micro-note" data-i18n="demo:localOnly">
             Recordings stay on this device. The disposable demo cache holds up to 12 recordings / 32
             MiB and is separate from saved flights.
@@ -1440,16 +1511,28 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
       </div>
     </dialog>
     <dialog id="demo-dialog" class="demo-dialog" aria-labelledby="demo-level">
-      <header class="demo-header">
-        <div>
+      <header class="demo-header" data-ui-surface="toolbar">
+        <div class="demo-heading">
           <p class="eyebrow">
             <span data-i18n="demo:title">DEMO</span> · <span id="demo-source"></span>
           </p>
           <h2 id="demo-level"></h2>
         </div>
         <div class="demo-header-actions" data-demo-ui="">
-          <button id="demo-fullscreen" type="button" class="button secondary" data-demo-ui="" data-i18n="demo:enterFullscreen" hidden="">
-            Enter fullscreen
+          <button id="demo-watch-pause" class="button secondary" type="button" data-i18n="demo:pauseShort">
+            Pause
+          </button>
+          <button id="demo-next" class="button secondary" type="button" data-i18n="demo:nextShort">
+            Next level
+          </button>
+          <button id="demo-interrupt" data-demo-ui="" class="button primary" type="button" data-i18n="demo:playChoices">
+            Want to play?
+          </button>
+          <button id="demo-details-toggle" class="button secondary" type="button" data-demo-ui="" data-i18n="demo:details" data-i18n-aria-label="demo:details" aria-controls="demo-panel" aria-expanded="false">
+            Audio &amp; details
+          </button>
+          <button id="demo-fullscreen" type="button" class="button secondary" data-demo-ui="" data-i18n="demo:fullscreenShort" hidden="">
+            Fullscreen
           </button>
           <button id="demo-back" type="button" class="button secondary" data-demo-exit="" data-i18n="demo:back">
             Back
@@ -1459,25 +1542,39 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
       <div class="demo-board">
         <canvas id="demo-canvas" width="768" height="576" tabindex="0" data-i18n-aria-label="demo:canvas" aria-label="Live game demonstration"></canvas>
       </div>
-      <div class="demo-panel">
-        <div class="demo-transport" data-demo-ui="">
-          <button id="demo-watch-pause" class="button secondary" type="button" data-i18n="demo:pauseDemo">
-            Pause demo
-          </button>
-          <button id="demo-next" class="button secondary" type="button" data-i18n="demo:next">
-            Next demonstration
-          </button>
-          <button id="demo-interrupt" data-demo-ui="" class="button primary" type="button" data-i18n="demo:playChoices">
-            Want to play?
-          </button>
+      <section id="demo-audience" class="demo-audience" data-demo-ui="">
+        <div class="demo-commentary" data-ui-surface="toolbar">
+          <img id="demo-guide-portrait" width="48" height="48" alt="" aria-hidden="true" hidden="">
+          <div>
+            <p id="demo-guide-label" class="eyebrow" data-i18n="demo:guide">Flight guide</p>
+            <p id="demo-caption" class="demo-compact-caption"></p>
+            <p id="demo-status" class="demo-readout"></p>
+          </div>
         </div>
-        <div id="demo-audio" data-demo-ui=""></div>
-        <label class="demo-picture-setting" data-demo-ui=""><input id="demo-show-all-pictures-live" type="checkbox"><span data-i18n="demo:showAllPictures">Show all demo pictures without noise</span></label>
-        <div class="demo-notes">
-          <p id="demo-caption"></p>
-          <p id="demo-status"></p>
-          <p id="demo-picture-note"></p>
+        <div class="demo-listening" data-ui-surface="toolbar">
+          <p id="demo-music-state" class="eyebrow"></p>
+          <p id="demo-now-playing"></p>
+          <p id="demo-join-hint" data-i18n="demo:joinHint">
+            Steer to take over · practice, no rewards
+          </p>
         </div>
+      </section>
+      <div id="demo-panel" class="demo-panel" data-demo-ui="" hidden="">
+        <p id="demo-panel-caption"></p>
+        <p id="demo-panel-status"></p>
+        <button id="demo-details-close" type="button" class="button secondary" data-i18n="demo:closeDetails">
+          Close details
+        </button>
+        <details id="demo-details" data-demo-ui="" open="">
+          <summary>
+            <span data-i18n="demo:details">Audio &amp; details</span>
+          </summary>
+          <div id="demo-audio" data-demo-ui=""></div>
+          <label class="demo-picture-setting" data-demo-ui=""><input id="demo-show-all-pictures-live" type="checkbox"><span data-i18n="demo:showAllPictures">Reveal all demo pictures (gameplay effects remain)</span></label>
+          <div class="demo-notes">
+            <p id="demo-picture-note"></p>
+          </div>
+        </details>
         <div id="demo-actions" class="demo-actions" data-demo-ui="" hidden="">
           <button id="demo-fresh" class="button primary" type="button" data-i18n="demo:fresh">
             Play from beginning
@@ -1533,12 +1630,11 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
 
       <div class="home-content">
         <p id="shell-title-edition" class="eyebrow" data-i18n="interface:fpvFieldKitFlightReady">
-          FPV FIELD KIT / FLIGHT READY
+          Coupa FIELD KIT / FLIGHT READY
         </p>
-        <h1 id="shell-title" data-i18n-rich="interface:reveal">
-          FPV<span data-i18n="interface:line" data-i18n-slot="slot0">/ LINE</span>
-        </h1>
-        <nav id="shell-title-modes" aria-label="Choose play mode" data-i18n-aria-label="common:game.chooseMode">
+        <h1 id="shell-title">Coupa Village</h1>
+        <p id="shell-family-context" class="home-family-context" hidden=""></p>
+        <nav id="shell-title-modes" aria-label="Choose play mode" aria-describedby="shell-family-context" data-i18n-aria-label="common:game.chooseMode">
           <a id="shell-title-versus" data-i18n="common:game.couchVersus" href="./couch/index.html?journey=coupa-all&amp;return=solo">Couch Versus</a>
           <a id="shell-title-team" data-i18n="common:game.couchTeam" href="./couch/relay-rescue.html?journey=coupa-all&amp;return=solo">Couch Team</a>
         </nav>
@@ -1561,6 +1657,11 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
             <span data-field-kit-copy="navigation.continue" data-i18n="common:actions.continue">Continue</span>
             <span aria-hidden="true">→</span>
           </button>
+          <button id="first-flight-home-enter" type="button" class="button secondary" hidden="" data-branded-unavailable="" disabled="">
+            <span data-i18n="interface:firstFlight">First Flight</span>
+            <span aria-hidden="true"> · </span>
+            <span data-i18n="interface:learnByPlaying">Learn by playing</span>
+          </button>
           <button id="shell-play" type="button" class="button secondary" data-field-kit-copy="navigation.missions" data-i18n="interface:missions">
             Missions
           </button>
@@ -1581,7 +1682,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
             Full screen
           </button>
           <button id="shell-home-fpv" type="button" class="button secondary" data-i18n="interface:optionalPractice.fpvGameAction" hidden="" data-branded-unavailable="" disabled="">
-            FPV flight simulator
+            Coupa flight simulator
           </button>
           <button id="shell-home-practice" type="button" class="button secondary" data-i18n="interface:optionalPractice.homeAction" hidden="" data-branded-unavailable="" disabled="">
             Flight practice
@@ -1614,14 +1715,14 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
             <p id="menu-difficulty-note" class="micro-note" role="status"></p>
             <label class="field">
               <span data-i18n="interface:actors">Actors</span>
-              <select id="menu-actor-style" aria-describedby="menu-actor-note">
-                
+              <select id="menu-actor-style" aria-describedby="menu-actor-note" hidden="" data-branded-unavailable="" disabled="">
+
                 <option value="campaign" data-i18n="interface:campaignArtwork">
                   Campaign artwork
                 </option>
               </select>
             </label>
-            <p id="menu-actor-note" class="micro-note" role="status" data-i18n="interface:newMissionsUseThisStyleContinueAndRetryKeepThe">
+            <p id="menu-actor-note" class="micro-note" role="status" data-i18n="interface:newMissionsUseThisStyleContinueAndRetryKeepThe" hidden="" data-branded-unavailable="">
               New missions use this style. Continue and Retry keep the current style.
             </p>
             <p id="journey-artwork-availability" class="home-status" hidden="" data-i18n="interface:missionPicturesNeedAConnectionFullDownloadsIncludeThem">
@@ -1640,7 +1741,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
         </aside>
         <p id="shell-now-playing" class="game-now-playing micro-note" hidden="">
           <span id="shell-now-playing-title"></span>
-          <a id="shell-now-playing-source" target="_blank" rel="noopener noreferrer" hidden="" data-i18n="interface:artistWebsite2">Artist website</a>
+          <span id="shell-now-playing-source" hidden=""></span>
         </p>
       </div>
       <p class="home-art-caption" aria-hidden="true" data-i18n-rich="interface:hangar01">
@@ -1650,7 +1751,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
     <dialog id="shell-workshop-dialog" class="shell-workshop-dialog" aria-labelledby="shell-workshop-title">
       <div class="shell-dialog-heading">
         <div>
-          <p class="eyebrow" data-i18n="interface:revealLineMenu">FPV / LINE / MENU</p>
+          <p class="eyebrow" data-i18n="interface:revealLineMenu">Coupa Village / MENU</p>
           <h2 id="shell-workshop-title" data-i18n="common:navigation.more">More</h2>
         </div>
         <button type="button" class="button secondary" data-close="shell-workshop-dialog" data-i18n="common:actions.back">
@@ -1682,6 +1783,8 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
         <nav class="workshop-destinations" aria-label="Workshop tools" data-i18n-aria-label="interface:workshopTools">
           <a id="shell-asset-studio" class="button primary" data-i18n-rich="interface:assetStudio" hidden="" data-branded-unavailable="">Asset Studio
             <span data-i18n="interface:artThemesGenerationPrompts" data-i18n-slot="slot0">Art, themes &amp; generation prompts</span></a>
+          <a id="shell-theme-studio" class="button secondary" hidden="" data-branded-unavailable=""><span data-i18n="interface:themeStudio">Theme Studio</span>
+            <span data-i18n="interface:createManageAndPreviewThemes">Create, manage &amp; preview themes</span></a>
           <a id="shell-playground" class="button secondary" data-i18n-rich="interface:missionPlayground" hidden="" data-branded-unavailable="">Mission playground
             <span data-i18n="interface:buildAndTestAFlight" data-i18n-slot="slot0">Build and test a flight</span></a>
           <a id="shell-enemy-catalog" class="button secondary" data-i18n-rich="interface:enemyWorkshop2" hidden="" data-branded-unavailable="">Enemy workshop
@@ -1711,7 +1814,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
         </nav>
       </details>
       <p id="landing-version" class="landing-version" aria-label="Game version" data-i18n-aria-label="interface:gameVersion">
-        Version v0.142.4
+        Version v0.151.1
       </p>
       <button id="sound-button" hidden="" class="icon-button" type="button" aria-label="Enable sound" data-i18n="interface:toggleSound" data-i18n-aria-label="interface:enableSound">
         Toggle sound
@@ -1744,6 +1847,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
           <span class="field-kit-secondary" data-i18n="interface:soloFlightSelected">Solo flight selected</span>
           <a id="shell-team" class="button secondary" data-i18n="interface:relayRescue2PlayerCoOp" href="./couch/relay-rescue.html?journey=coupa-all&amp;return=solo">Relay Rescue · 2-player co-op</a>
           <a id="shell-versus" class="button secondary" data-i18n="interface:couchVersus2Players" href="./couch/index.html?journey=coupa-all&amp;return=solo">Couch Versus · 2 players</a>
+          <a class="button secondary" hidden="" data-branded-unavailable="">Private rooms preview / Приватні кімнати</a>
         </nav>
       </details>
       <div id="shell-mission-content"></div>
@@ -1765,7 +1869,7 @@ html[data-edition-id] .edition-boot-logo{display:inline-block;width:auto;height:
         </div>
       </div>
     </dialog>
-    <script id="boot-phaser" src="vendor/phaser-4.2.1.min.js" defer=""></script>
-  
+    <script id="boot-phaser" src="vendor/phaser-4.2.1.min.js" defer="" type="application/x-revealline-locked" data-access-type=""></script>
+
 
 </body></html>

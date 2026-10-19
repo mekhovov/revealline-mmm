@@ -1,11 +1,12 @@
 import { t } from '../i18n/index.mjs';
 import {
-  restoreSession,
-  saveSession,
-  snapshotSession,
-  suspendSession,
-  SESSION_STORAGE_BYTES,
-} from '../sessions.mjs';
+  restoreCaptureSession as restoreSession,
+  saveCaptureSession as saveSession,
+  snapshotCaptureSession as snapshotSession,
+  suspendCaptureSession as suspendSession,
+  nativeCaptureSession,
+} from '../capture-presentation-session.mjs';
+import { SESSION_STORAGE_BYTES } from '../sessions.mjs';
 import { authoritativeCheckpoint, exportReplay } from '../replay.mjs';
 import { canonicalJSON } from '../data-json.mjs';
 
@@ -31,6 +32,8 @@ export async function retainFlightForFirstFlight({
   presentationLevel,
   visualThemePin,
   actorAppearancePin,
+  classicRulesPictureSource,
+  attemptAppearance = null,
   mediaIdentityCatalog,
   storage,
   sessionKey,
@@ -78,8 +81,10 @@ export async function retainFlightForFirstFlight({
   });
   current();
   const session = suspendSession({
+    attemptAppearance,
     run,
     recorder,
+    campaign,
     campaignKey,
     themeId,
     bodyId,
@@ -87,11 +92,12 @@ export async function retainFlightForFirstFlight({
     continuation,
     presentationPins,
     presentationLevel,
+    ...(classicRulesPictureSource !== undefined ? { classicRulesPictureSource } : {}),
     ...(visualThemePin !== undefined ? { visualThemePin } : {}),
     ...(actorAppearancePin !== undefined ? { actorAppearancePin } : {}),
   });
   const checkpoint = canonicalJSON(authoritativeCheckpoint(run));
-  const recording = canonicalJSON(session.replay);
+  const recording = canonicalJSON(nativeCaptureSession(session).replay);
   const restored = await restoreSession(session, {
     campaign,
     campaignKey,

@@ -3,11 +3,12 @@ import { localizedText, t } from '../i18n/index.mjs';
 const primary = new Set([
   'next-button',
   'retry-button',
-  'view-picture',
   'journey-save-options',
   'flight-preparation-cancel',
   // Soundtrack controls are inserted after this anchor asynchronously.
   'start-button',
+  'result-flow-controls',
+  'overlay-menu',
 ]);
 
 /** Presentation-only composition of existing controls. Nodes, handlers and
@@ -84,7 +85,13 @@ export function createEarnedResultLayout({ document, reading, result }) {
           continue;
         move(node);
       }
-      for (const id of ['overlay-footnote', 'journey-reactions']) move(document.getElementById(id));
+      for (const id of [
+        'journey-best',
+        'overlay-difficulty',
+        'overlay-footnote',
+        'journey-reactions',
+      ])
+        move(document.getElementById(id));
       move(result.querySelector('.completion-reward-save-note'));
       more.hidden = ![...moved.keys()].some((node) => !node.hidden);
     },

@@ -71,7 +71,7 @@ test('both local two-player hosts compile all 30 missions from the isolated Coup
   globalThis.fetch = async (input) => {
     const url = new URL(input);
     const marker = '/app/';
-    const offset = url.pathname.indexOf(marker);
+    const offset = url.pathname.lastIndexOf(marker);
     assert.notEqual(offset, -1, `Unexpected multiplayer request: ${url}`);
     const relative = decodeURIComponent(url.pathname.slice(offset + marker.length));
     try {

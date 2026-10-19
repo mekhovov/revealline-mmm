@@ -1,11 +1,5 @@
 import { localizedText, t } from '../i18n/index.mjs';
 import { resolveEditionAssets } from '../editions/model.mjs';
-import { mountEditionNavigation } from './edition-navigation.mjs';
-import { mountEditionLessons } from './edition-lessons.mjs';
-import { mountEditionMastery } from './edition-mastery.mjs';
-import { mountEditionRewards } from './edition-rewards.mjs';
-import { mountEditionExpedition } from './edition-expedition.mjs';
-import { mountEditionPlayLayout } from './edition-play-layout.mjs';
 import { editionDisplayName, mountLandingBrand } from './brand-identity.mjs';
 import {
   prepareEditionOffline,
@@ -29,6 +23,7 @@ export async function mountEditionSoloUI({
   getJourneyProfile,
   getJourneyRevision,
   getJourneyDurable,
+  scheduleReplayChunk,
   getReducedMotion,
   audioMaster,
   musicDucker,
@@ -43,6 +38,23 @@ export async function mountEditionSoloUI({
   onPresentationChange,
   previewSession = null,
 }) {
+  // Ordinary Solo never mounts these optional edition panels. Keep their
+  // imports behind this already asynchronous, edition-owned preparation.
+  const [
+    { mountEditionNavigation },
+    { mountEditionLessons },
+    { mountEditionMastery },
+    { mountEditionRewards },
+    { mountEditionExpedition },
+    { mountEditionPlayLayout },
+  ] = await Promise.all([
+    import('./edition-navigation.mjs'),
+    import('./edition-lessons.mjs'),
+    import('./edition-mastery.mjs'),
+    import('./edition-rewards.mjs'),
+    import('./edition-expedition.mjs'),
+    import('./edition-play-layout.mjs'),
+  ]);
   const { selection, theme } = provider;
   let disposed = false;
   mountEditionNavigation({ provider, document: doc, href: win.location.href });
@@ -319,6 +331,7 @@ export async function mountEditionSoloUI({
   }
   const layout = mountEditionPlayLayout({ document: doc, window: win });
   const lessons = await mountEditionLessons({
+    scheduleReplayChunk,
     provider,
     document: doc,
     window: win,
@@ -330,6 +343,7 @@ export async function mountEditionSoloUI({
     previewSession,
   });
   const mastery = await mountEditionMastery({
+    scheduleReplayChunk,
     provider,
     document: doc,
     window: win,
@@ -473,6 +487,7 @@ export async function mountEditionSoloUI({
     pictureReady: lessons.pictureReady,
     cosmeticBodies: rewards.cosmeticBodies,
     closeResultDetails: rewards.closeResultDetails,
+    presentVictoryVideo: rewards.presentVictoryVideo,
     dispose() {
       if (disposed) return;
       disposed = true;

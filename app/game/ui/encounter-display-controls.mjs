@@ -1,3 +1,4 @@
+import { attachDestructionControls } from './destruction-controls.mjs';
 import { t, localizedText } from '../i18n/index.mjs';
 import { createEncounterDisplayPreferences } from '../encounter-display-preferences.mjs';
 
@@ -8,10 +9,29 @@ export function attachEncounterDisplayControls({
   getStorage = () => globalThis.localStorage,
   writable = () => true,
   prefix = '',
+  soundContainer,
+  destructionPreferences,
+  onChange = () => {},
 } = {}) {
   const checkbox = doc.getElementById(`${prefix}enemy-remains`),
     status = doc.getElementById(`${prefix}enemy-remains-status`),
     retry = doc.getElementById(`${prefix}enemy-remains-retry`);
+  const destruction = attachDestructionControls({
+    document: doc,
+    window: win,
+    getStorage,
+    writable,
+    prefix,
+    preferences: destructionPreferences,
+    onChange,
+    container: checkbox?.closest('section') ?? checkbox?.parentElement?.parentElement,
+    soundContainer:
+      soundContainer ??
+      doc.getElementById(`${prefix}settings-panel-audio`) ??
+      (prefix === 'overflight-'
+        ? doc.getElementById('volume')?.closest('label')?.parentElement
+        : null),
+  });
   const preferences = createEncounterDisplayPreferences({ window: win, getStorage, writable });
   const stop = preferences.subscribe((state) => {
     if (checkbox) checkbox.checked = state.showRemains;
@@ -20,6 +40,7 @@ export function attachEncounterDisplayControls({
       status.hidden = !state.warningKey;
     }
     if (retry) retry.hidden = state.warningKey !== 'common:preferences.encounterSaveFailed';
+    onChange();
   });
   const change = () => preferences.set(checkbox.checked);
   const save = () => preferences.retry();
@@ -27,7 +48,7 @@ export function attachEncounterDisplayControls({
   retry?.addEventListener('click', save);
   let disposed = false;
   return Object.freeze({
-    snapshot: preferences.snapshot,
+    snapshot: () => Object.freeze({ ...preferences.snapshot(), ...destruction.snapshot() }),
     dispose() {
       if (disposed) return;
       disposed = true;
@@ -35,6 +56,7 @@ export function attachEncounterDisplayControls({
       retry?.removeEventListener('click', save);
       stop();
       preferences.dispose();
+      destruction.dispose();
     },
   });
 }

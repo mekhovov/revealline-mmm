@@ -62,7 +62,7 @@ export function createStoryDialog({
   close.type = 'button';
   close.className = 'dialog-close';
   localizedText(close, () => '×');
-  close.setAttribute('aria-label', t('interface:closeStory'));
+  localizedAttribute(close, 'aria-label', () => t('interface:closeStory'));
   const feedback = createOperationStatus(notice);
   stage.className = 'story-stage';
   dialog.append(close, title, notice, stage);
@@ -101,7 +101,10 @@ export function createStoryDialog({
       presentation.setPreferences(next);
     }
   }
-  async function open({ pin: source, title: label, drawPoster }, { signal } = {}) {
+  async function open(
+    { pin: source, title: label, drawPoster },
+    { signal, immersive = false, autoplay = false } = {},
+  ) {
     required(!disposed, t('interface:theStoryViewIsClosed'));
     const pin = snapshotStoryPin(source);
     required(
@@ -124,9 +127,10 @@ export function createStoryDialog({
     signal?.addEventListener('abort', abort, { once: true });
     externalCleanup = () => signal?.removeEventListener('abort', abort);
     localizedText(title, () => label);
+    dialog.classList.toggle('story-dialog--immersive', immersive);
     stage.replaceChildren(canvas);
     const lease = feedback.begin({
-      message: t('interface:yourPictureIsReadyReadingOptionalStoryMetadata'),
+      message: () => t('interface:yourPictureIsReadyReadingOptionalStoryMetadata'),
       stage: 'reading',
       isCurrent: () => !disposed && generation === ticket && controller === own,
     });
@@ -148,7 +152,7 @@ export function createStoryDialog({
       const media = await readMedia({ signal: own.signal });
       if (!current()) return false;
       lease.update({
-        message: t('interface:checkingAndOpeningTheExactStoryOriginal'),
+        message: () => t('interface:checkingAndOpeningTheExactStoryOriginal'),
         stage: 'verifying',
       });
       const prepared = await acquire({ pin, media }, { signal: own.signal });
@@ -167,6 +171,8 @@ export function createStoryDialog({
         musicDucker,
         ...initial,
         audioMaster,
+        autoplay,
+        cinematicTransition: immersive,
         onChange(snapshot) {
           if (!current()) return;
           neutralize();
@@ -178,7 +184,10 @@ export function createStoryDialog({
               saveVolume(volume);
             } catch (error) {
               lease.finish({
-                message: `Cinematic preference could not be saved. ${error.message}`,
+                message: () =>
+                  t('gameplay:cinematicPreferenceCouldNotBeSaved', {
+                    value1: error instanceof Error ? error.message : String(error),
+                  }),
                 state: 'error',
               });
             }
@@ -196,7 +205,7 @@ export function createStoryDialog({
       return true;
     } catch (error) {
       if (current()) {
-        lease.finish({ message: failure(error), state: 'error' });
+        lease.finish({ message: () => failure(error), state: 'error' });
         dialog.dataset.storyState = 'unavailable';
         stage.setAttribute('aria-busy', 'false');
       }

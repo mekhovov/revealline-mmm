@@ -1,0 +1,309 @@
+/* One command layout for Solo, Team, Versus, Snake and SIM. */
+body :is(.shared-pause-menu, #shared-pause-menu):not([hidden]) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+body :is(.shared-pause-menu, #shared-pause-menu)[hidden] {
+  display: none !important;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 5px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-section > h3 {
+  margin: 0;
+  color: var(--fk-muted, #bec6c5);
+  font: 600 11px/1.2 var(--fk-font-ui, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  min-width: 0;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) [data-pause-group='missions'] .pause-command-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+body :is(.shared-pause-menu, #shared-pause-menu) :is(button, a, summary) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  width: 100%;
+  min-height: 44px;
+  height: auto;
+  margin: 0;
+  padding: 8px 6px;
+  font-size: 14px;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) [data-pause-group='missions'] :is(button, a) {
+  flex-direction: column;
+  gap: 4px;
+  font-size: clamp(11px, 2.8vw, 14px);
+  white-space: nowrap;
+  min-height: 58px;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) [data-menu-icon]::before,
+body .mission-current-actions [data-menu-icon]::before {
+  content: '';
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  color: inherit;
+  background: currentColor;
+  mask: var(--native-menu-icon) center / contain no-repeat;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-primary,
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-home {
+  min-height: 48px;
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-home {
+  margin-top: 2px;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) [hidden] {
+  display: none !important;
+}
+body .mission-current-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 8px;
+  min-width: 0;
+  margin: 12px 0;
+  padding-block-start: 12px;
+  border-top: 1px solid var(--fk-line, #46504f);
+}
+body .mission-current-actions > :is(input, p) {
+  width: 100%;
+  min-width: 0;
+}
+body .mission-current-actions :is(button, summary) {
+  min-height: 44px;
+}
+body
+  .game-overlay[data-kind='pause']
+  .overlay-actions.has-shared-pause-menu
+  > :is(.pause-menu-section, .pause-secondary-groups),
+body[data-coop-paused='true'] #coop-overlay .quick-music-controls,
+body[data-coop-paused='true'] #coop-pause-modes,
+body[data-coop-paused='true'] #coop-mode-actions,
+body[data-coop-paused='true'] #coop-lobby,
+body[data-couch-status='paused']
+  #race-main
+  > :is(.game-mode-choice, .game-mode-more, .native-menu-footer, .native-menu-utilities) {
+  display: none !important;
+}
+body[data-couch-status='paused'] #race-main.native-landing {
+  display: block !important;
+  min-height: 0;
+  width: min(680px, 100%);
+  margin-inline: auto;
+}
+body[data-couch-status='paused'] #race-main.native-landing .native-menu-actions {
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 319px) {
+  body
+    :is(.shared-pause-menu, #shared-pause-menu)
+    [data-pause-group='missions']
+    .pause-command-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+body[data-text-size='large']
+  :is(.shared-pause-menu, #shared-pause-menu)
+  [data-pause-group='missions']
+  .pause-command-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+body[data-text-size='large'] :is(.shared-pause-menu, #shared-pause-menu) :is(button, a, summary) {
+  font-size: 20px;
+}
+
+body.field-kit[data-coop-paused='true'] #coop-overlay {
+  padding: 8px;
+  overflow-y: auto;
+  align-items: safe center;
+  scroll-padding-block: 12px;
+}
+body.field-kit[data-coop-paused='true'] #coop-overlay > .overlay-card {
+  width: min(680px, 100%);
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  padding: 12px;
+  margin: auto;
+  overflow: visible;
+}
+body.field-kit[data-coop-paused='true'] #coop-overlay .overlay-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+body.field-kit[data-coop-paused='true'] #coop-overlay-title,
+body.field-kit[data-couch-status='paused'] #race-title {
+  margin: 0 0 12px;
+  font: 600 18px/1.25 var(--fk-font-ui, sans-serif);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+body.field-kit[data-coop-paused='true'] #coop-overlay :is(#coop-overlay-kicker, #coop-overlay-copy),
+body.field-kit[data-coop-paused='true'] #coop-pause-core:empty {
+  display: none;
+}
+@media (max-width: 380px) {
+  body.field-kit[data-coop-paused='true'] #coop-overlay > .overlay-card {
+    padding: 8px;
+  }
+  body :is(.shared-pause-menu, #shared-pause-menu) [data-pause-group='missions'] :is(button, a) {
+    padding-inline: 2px;
+    font-size: 11px;
+  }
+}
+
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-grid > :only-child {
+  grid-column: 1 / -1;
+}
+body.field-kit[data-coop-paused='true'] #coop-pause-core:not(:has(button:not([hidden]))) {
+  display: none;
+}
+
+body.field-kit[data-coop-paused='true'] #coop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: safe center;
+  padding: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right))
+    max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  background: rgb(4 9 14 / 94%);
+}
+body.field-kit[data-coop-paused='true'] #coop-overlay > .overlay-card {
+  max-height: calc(
+    100dvh - max(8px, env(safe-area-inset-top)) - max(8px, env(safe-area-inset-bottom))
+  );
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 12px;
+}
+body
+  :is(.shared-pause-menu, #shared-pause-menu)
+  [data-pause-group='config']
+  .pause-command-grid
+  > :first-child:nth-last-child(2):has(+ [hidden]) {
+  grid-column: 1 / -1;
+}
+
+body.field-kit[data-couch-status='paused'][data-couch-screen='main'] #race-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: safe center;
+  justify-content: center;
+  padding: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right))
+    max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  background: rgb(4 9 14 / 94%);
+  overflow-y: auto;
+}
+body.field-kit[data-couch-status='paused'] #race-main.native-landing {
+  flex: 0 1 680px;
+  width: min(680px, 100%);
+  height: auto;
+  max-width: 680px;
+  min-height: 0;
+  max-height: calc(
+    100dvh - max(8px, env(safe-area-inset-top)) - max(8px, env(safe-area-inset-bottom))
+  );
+  margin: auto;
+  padding: 12px;
+  border: 1px solid var(--fk-line, #46504f);
+  background: var(--fk-panel, #172126);
+  overflow-y: auto;
+  scroll-padding-block: 12px;
+}
+body.field-kit[data-couch-status='paused']
+  #race-main
+  :is(.menu-scene, .race-kicker, .race-seats, #race-journey-note, #race-summary) {
+  display: none !important;
+}
+body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-notice {
+  margin: 0;
+  min-height: 44px;
+  border: 1px solid var(--fk-line, #46504f);
+  background: transparent !important;
+  color: var(--fk-muted, #bec6c5) !important;
+  font-size: 12px;
+}
+body[data-text-size='large']
+  :is(.shared-pause-menu, #shared-pause-menu)
+  [data-pause-group='missions']
+  :is(button, a) {
+  font-size: 20px;
+  white-space: normal;
+}
+@media (forced-colors: active) {
+  body :is(.shared-pause-menu, #shared-pause-menu) [data-menu-icon]::before {
+    forced-color-adjust: none;
+    background: currentColor;
+  }
+}
+
+/* The viewport scrim is not a themed card; only its inner menu owns material. */
+body.field-kit[data-coop-paused='true'] #coop-overlay,
+body.field-kit[data-couch-status='paused'][data-couch-screen='main'] #race-shell {
+  max-width: none;
+  max-height: none;
+  border: 0;
+  border-image: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+  clip-path: none;
+}
+body.field-kit[data-coop-paused='true'] #coop-overlay::before,
+body.field-kit[data-coop-paused='true'] #coop-overlay::after,
+body.field-kit[data-couch-status='paused'][data-couch-screen='main'] #race-shell::before,
+body.field-kit[data-couch-status='paused'][data-couch-screen='main'] #race-shell::after {
+  content: none;
+}
+
+/* Modes with fewer mission actions share the available row evenly. */
+body
+  :is(.shared-pause-menu, #shared-pause-menu)
+  [data-pause-group='missions']
+  .pause-command-grid:has(> :nth-child(2):last-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+body:not([data-text-size='large'])
+  :is(.shared-pause-menu, #shared-pause-menu)
+  [data-pause-group='missions']
+  .pause-command-grid:has(> :nth-child(3):last-child) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

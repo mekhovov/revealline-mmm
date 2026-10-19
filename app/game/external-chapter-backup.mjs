@@ -6,10 +6,16 @@ import { PACK_LIMITS } from './packs.mjs';
 import { createExternalBackupAssets } from './external-backup-assets.mjs';
 import { LIBRARY_LIMITS } from './library.mjs';
 import { SESSION_IMPORT_BYTES } from './sessions.mjs';
+import { ENEMY_STATS_MAX_BYTES, inspectEnemyStatsBackup } from './enemy-stats.mjs';
 
 const own = (value) =>
   boundedJSON(value, {
-    maxBytes: PACK_LIMITS.libraryBytes + LIBRARY_LIMITS.maxBytes + SESSION_IMPORT_BYTES + 16384,
+    maxBytes:
+      PACK_LIMITS.libraryBytes +
+      LIBRARY_LIMITS.maxBytes +
+      SESSION_IMPORT_BYTES +
+      ENEMY_STATS_MAX_BYTES +
+      16384,
     maxString: 64 * 1024 * 1024,
     maxNodes: 3400000,
     maxDepth: 32,
@@ -181,7 +187,17 @@ export function createExternalChapterBackup({
           const before = await assets.snapshot({ signal });
           clear(before);
           const contents = own(getContents());
-          exactKeys(contents, ['library', 'packs', 'session'], 'current backup contents');
+          exactKeys(
+            contents,
+            [
+              'library',
+              'packs',
+              'session',
+              ...(Object.hasOwn(contents, 'enemyStats') ? ['enemyStats'] : []),
+            ],
+            'current backup contents',
+          );
+          if (Object.hasOwn(contents, 'enemyStats')) inspectEnemyStatsBackup(contents.enemyStats);
           const content = await catalog(before.packs, before.index, signal);
           required(
             equal(contents.packs, content.packs),

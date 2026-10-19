@@ -31,6 +31,7 @@ export async function mountEditionLessons({
   getRun,
   getRecorder,
   getPictureVisible,
+  scheduleReplayChunk,
   report,
 }) {
   if (!provider.lessons.length)
@@ -113,6 +114,7 @@ export async function mountEditionLessons({
     onError: (error) => storageReport(error.message),
   });
   const proofs = createCompanyLearningProofStore({
+    scheduleChunk: scheduleReplayChunk,
     editionId: provider.editionId,
     lessons: provider.lessons,
     acceptSimulation: (id, identity) => simulations.get(id)?.has(identity) === true,

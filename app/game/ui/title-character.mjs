@@ -26,14 +26,14 @@ export function mountTitleCharacter({ container, getCharacter, paint = paintChar
     update(dt, { visible, reduced = false }) {
       if (disposed) return;
       if (!visible) {
-        canvas.hidden = true;
+        if (!canvas.hidden) canvas.hidden = true;
         wasVisible = false;
         pending = 0;
         return;
       }
       const character = getCharacter();
       if (!character?.body || !character.recipe || (character.body.src && !character.image)) {
-        canvas.hidden = true;
+        if (!canvas.hidden) canvas.hidden = true;
         wasVisible = false;
         return;
       }
@@ -51,7 +51,7 @@ export function mountTitleCharacter({ container, getCharacter, paint = paintChar
       previous = character;
       wasVisible = true;
       lastReduced = reduced;
-      canvas.hidden = false;
+      if (canvas.hidden) canvas.hidden = false;
       if (reduced && !redraw) return;
       pending += Number.isFinite(dt) ? Math.min(0.05, Math.max(0, dt)) : 0;
       if (!redraw && pending < 1 / 30) return;

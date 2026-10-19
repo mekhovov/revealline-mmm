@@ -457,7 +457,7 @@ export function attachFlightDetails({
       doc.hasFocus?.() === false ||
       dialog.open ||
       !canOpen() ||
-      topDialog()
+      (topDialog() && !topDialog().contains(opener))
     )
       return false;
     const origin = doc.activeElement,
@@ -479,6 +479,7 @@ export function attachFlightDetails({
       revision: ++revision,
       owner: initial,
       origin,
+      parentDialog: topDialog(),
       information,
       context: {
         ...context,
@@ -507,7 +508,7 @@ export function attachFlightDetails({
         !ownerIsCurrent(ending.owner) ||
         doc.hidden ||
         doc.hasFocus?.() === false ||
-        topDialog()
+        (topDialog() && topDialog() !== ending.parentDialog)
       )
         return;
       const active = doc.activeElement;

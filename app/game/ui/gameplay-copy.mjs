@@ -85,9 +85,9 @@ const statusKeys = {
 export const gameplayStatusLabel = (status) =>
   statusKeys[status] ? t(statusKeys[status]) : status;
 
-export const gameplayStatsLabel = (run) =>
+export const gameplayStatsLabel = (run, { showTarget = false } = {}) =>
   [
-    `${formatNumber(run.coverage * 100, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`,
+    `${formatNumber(run.coverage * 100, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%${showTarget ? ` / ${formatNumber(run.level.goal.coverage * 100, { maximumFractionDigits: 1 })}%` : ''}`,
     t('gameplay:hud.lives', { count: run.lives }),
     t('gameplay:result.points', { count: run.score }),
   ].join(' · ');

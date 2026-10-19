@@ -1,11 +1,14 @@
 import { campaignKey } from './library.mjs';
 import { createDifficultyContext } from './campaign-difficulty.mjs';
+import { ownedContentExecutionLabel } from './content-design/execution-entry.mjs';
 import { t } from './i18n/index.mjs';
 
 const labelKeys = Object.freeze({
   standard: 'interface:missionLibrary.difficulty.standard',
   gentle: 'interface:missionLibrary.difficulty.gentle',
+  expert: 'interface:expert',
 });
+const difficultyOrder = Object.freeze({ standard: 0, gentle: 1, expert: 2 });
 const archivedLabelKey = 'interface:library.archivedDifficultyLabel';
 
 /** Resolve a semantic gallery context through the active locale on every read. */
@@ -22,7 +25,21 @@ export function createGalleryDifficultyResolver(entries) {
       let difficulty = 'standard',
         baseCampaignKey = key;
       if (entry.activity === 'challenge') difficulty = null;
-      else if (
+      else if (entry.baseCampaign === null) {
+        const context = ownedContentExecutionLabel(entry.campaign);
+        if (
+          !context ||
+          context.executionKey !== key ||
+          context.executionKey !== entry.executionKey ||
+          context.baseCampaignKey !== entry.baseCampaignKey ||
+          context.difficulty !== entry.difficulty ||
+          context.policyVersion !== entry.policyVersion ||
+          !Object.hasOwn(labelKeys, context.difficulty)
+        )
+          continue;
+        difficulty = context.difficulty;
+        baseCampaignKey = context.baseCampaignKey;
+      } else if (
         ['difficulty', 'baseCampaignKey', 'baseCampaign', 'executionKey', 'policyVersion'].some(
           (field) => Object.hasOwn(entry, field),
         )
@@ -93,7 +110,7 @@ export function createGalleryDifficultyResolver(entries) {
     return Object.freeze(
       [...groups.values()].map((entry) => {
         entry.variants.sort(
-          (a, b) => Number(a.difficulty === 'gentle') - Number(b.difficulty === 'gentle'),
+          (a, b) => (difficultyOrder[a.difficulty] ?? 0) - (difficultyOrder[b.difficulty] ?? 0),
         );
         return Object.freeze({
           ...entry,

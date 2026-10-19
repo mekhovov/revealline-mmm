@@ -17,6 +17,18 @@ export function authoredModeDestinations(mode, route) {
             team: 'relay-rescue.html?journey=legacy&return=versus',
           },
     );
+  if (route === 'snake-hunt-v1' && ['solo', 'versus'].includes(mode))
+    return Object.freeze(
+      mode === 'solo'
+        ? {
+            versus: 'couch/?journey=snake-hunt-v1&return=solo',
+            team: 'couch/relay-rescue.html?journey=snake-hunt-v1&return=solo',
+          }
+        : {
+            solo: '../?journey=snake-hunt-v1',
+            team: 'relay-rescue.html?journey=snake-hunt-v1&return=versus',
+          },
+    );
   if (!ROUTES.has(route) || !['solo', 'versus'].includes(mode)) return null;
   if (route === "coupa-all")
     return Object.freeze(mode === 'solo'
@@ -40,6 +52,24 @@ export function authoredModeDestinations(mode, route) {
 export function authoredTeamReturn(href) {
   try {
     const params = new URL(href).searchParams;
+    if (
+      params.getAll('journey').length === 1 &&
+      params.get('journey') === 'snake-hunt-v1' &&
+      params.getAll('return').length <= 1 &&
+      ![
+        'practice',
+        'return-token',
+        'return-token-v2',
+        'mode-return',
+        'mode-return-v2',
+        'journey-return',
+      ].some((key) => params.has(key))
+    )
+      return Object.freeze({
+        solo: '../?journey=snake-hunt-v1',
+        versus: './?journey=snake-hunt-v1',
+        origin: params.get('return') === 'versus' ? 'versus' : 'solo',
+      });
     const routes = params.getAll('journey-return'),
       origins = params.getAll('return');
     if (

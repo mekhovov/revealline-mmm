@@ -1,0 +1,48 @@
+@layer legacy {
+  .comfort-presets {
+    border: 1px solid var(--fk-border, #7b8491);
+    border-radius: 12px;
+    padding: 12px;
+    margin-block: 16px;
+    min-width: 0;
+  }
+  .comfort-presets :is(h4, h5, p, ul) {
+    margin-block: 8px;
+    overflow-wrap: anywhere;
+  }
+  .comfort-presets label {
+    display: grid;
+    gap: 6px;
+  }
+  .comfort-presets select {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .comfort-preset-sample {
+    border-inline-start: 3px solid currentColor;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .comfort-preset-sample[data-text-face='plain'] {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+  }
+  .comfort-preset-sample[data-text-size='large'] {
+    font-size: 22px;
+  }
+  .comfort-preset-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .comfort-preset-actions button {
+    white-space: normal;
+    min-height: 44px;
+    max-width: 100%;
+  }
+}
