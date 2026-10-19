@@ -1220,6 +1220,195 @@
       "sha256": "27e53508adbc6429ce1a0edb58e7f37ac0990c293b05daa615318617fd03c5a4",
       "bytes": 10593,
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "scripts/create-workshop-art-fixtures.mjs",
+      "destination": "content/archive/owned-source/scripts/create-workshop-art-fixtures.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "5764a4e52595ddec79a4f213af49eca7efb4228b",
+      "sha256": "f29d9d3f2b54cf2303a01ea16edeb04a03048151d03f758272b0c85c956e0377",
+      "bytes": 16506,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/build.mjs",
+      "destination": "content/archive/owned-source/authoring/library/four-worlds-chapters/build.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "94926a818d0f981c40b16dfb1eea59fb16048b91",
+      "sha256": "a6108eec0c75c6a015264b65ef2a02b86b5ac88749ff4b4d0b1a215ac96a7a7f",
+      "bytes": 11278,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/routes.json",
+      "destination": "content/archive/owned-source/authoring/library/four-worlds-chapters/routes.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "45f7221542fe310ee14706567cb1421297f6a1f6",
+      "sha256": "59aadd51431a76041b19c2a26624138220d7294a0b70e7cd2103989d6eb86233",
+      "bytes": 188847,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/fpv-route-choices/build.mjs",
+      "destination": "content/archive/owned-source/authoring/library/fpv-route-choices/build.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "24a1d423603fc2f45605f99d598a47eae470a6a9",
+      "sha256": "0cfb2f199db1db52468341aa0187d6e43aa8727a02ef397f96f423c81a26b63a",
+      "bytes": 13383,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/fpv-route-choices/routes.json",
+      "destination": "content/archive/owned-source/authoring/library/fpv-route-choices/routes.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "0259433274340178e38b8e80f2e8ca01e77051d8",
+      "sha256": "d6af87beb11f55b81cf33b6b07254c51d19923d8823d2d80c17606db0e4c1245",
+      "bytes": 239987,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/fpv-route-choices/distribution.json",
+      "destination": "content/archive/owned-source/authoring/library/fpv-route-choices/distribution.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "7a176a0b1d4f4200d36d01f8cedeff96ad35721d",
+      "sha256": "c85097a58e9c84037083907484cbac739592ccbebb5156ac6f27afab76fc1dab",
+      "bytes": 3446,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/content-offline/pilot.json",
+      "destination": "content/archive/owned-source/docs/content-offline/pilot.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "6c1fb129eb760961672e3347b4e7c1304208922d",
+      "sha256": "76817cf335b6b8b9a9f7d23cbd46c1736ff4014dfe7ce70686fcc4541a163522",
+      "bytes": 180683,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/replays/expansion-routes.json",
+      "destination": "content/archive/owned-source/game/replays/expansion-routes.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "e4711d9bc891014b95eebc2741d444d8ee40b08c",
+      "sha256": "22886cf439f716db31333b3b6d9fae0478f8007aff734632badc7c2f38dc53c8",
+      "bytes": 81574,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/README.md",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/README.md",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "1fde5d26a2f408e68806b850d4988f4286262981",
+      "sha256": "33234fd36c4213cbfda589c4efb6b850ada6b99c73dfb06518d07d7d59a0d82c",
+      "bytes": 3970,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/verification.json",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/verification.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "4b6eb8aad80b0a4d7380667625f3bc16a9e64172",
+      "sha256": "e06d202f7b5803ffa0eb3288b2a331d0f17ce9f4e95f965bd4e7305ee78c14f6",
+      "bytes": 19621,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/derivatives.json",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/derivatives.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "b317d94a9a48ca13fbd9efc5cd8eaa293be855c7",
+      "sha256": "4b09c8ec6e7f52d79d40db0fea3723eb6b8a31ed79f8ee4e94a08207bc95a827",
+      "bytes": 5698,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/tactical-challenges/build.mjs",
+      "destination": "content/archive/owned-source/authoring/library/tactical-challenges/build.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "fc49e3f9e920770f1dc7354fe0338347dd70ed67",
+      "sha256": "5286b9ad70c9db945579c63bb1e57de9ccefc4e45f4af0ecb3636f5bb72c3457",
+      "bytes": 7240,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/verify.mjs",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/verify.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "0509c31ac38dd53c1775b04aa03fcb18c8ec0de2",
+      "sha256": "0ec029c6fef09006b7bbc974b325250179673f3d47f6b048ac70f2d7b233e391",
+      "bytes": 10257,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/provenance.json",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/provenance.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "2dc116b89838bbbfc96d505eef5c94229360292c",
+      "sha256": "41f8d87480fa488bddcbd29f66b9dd239ece2acbf860c143f6eef82c6fc733e4",
+      "bytes": 20885,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/replays/sentinel-routes.json",
+      "destination": "content/archive/owned-source/game/replays/sentinel-routes.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "dc9e89d14a7136b74277440618fa772e5a95049b",
+      "sha256": "b704c71879c29810f42dca6e94857c6728d2439c08d1807edc008114bdb85a70",
+      "bytes": 256854,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-relay/proposedpack-source.json",
+      "destination": "content/archive/owned-source/authoring/library/sentinel-relay/proposedpack-source.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "e64108a6d169f75b6c6dddfd2b683588f6bcb6c4",
+      "sha256": "6ac74a29692029bd12b32f39b3a3017db7d78ff4484698a6a537a2f8d69d1787",
+      "bytes": 10390,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/content-offline/company-inventory.json",
+      "destination": "content/archive/owned-source/docs/content-offline/company-inventory.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "793df0c498bc967e7b88079fbb2d22adfb646665",
+      "sha256": "56a4096eab291fde4648eff4cb7cd5326ac49ac39e1431329eba4a1f5990d0a0",
+      "bytes": 1300408,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/content-offline/company-inventory.html",
+      "destination": "content/archive/owned-source/docs/content-offline/company-inventory.html",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "dd437d8c63f29073eeb78568882aa062ecd93d0f",
+      "sha256": "54d689c4bdddedbb4f3e4aed2ca698d9a8da0139461aa751d2f638379f1637c9",
+      "bytes": 2142864,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/build.mjs",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-chapters/build.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "413431503cc9f9dbc0ad3496b2c01a976a7a904c",
+      "sha256": "f9bbbdc43b0ae5ee65d16f4b7d558a71106e84ec71944f0c995bf580e4c43b35",
+      "bytes": 14533,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/editions.json",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-chapters/editions.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "5569d081cb0c9509499cdcad34657e963aead4ae",
+      "sha256": "307684266e4889ef2d9893085c7e4f7a328fd23868b028ee55fce16bd360501b",
+      "bytes": 5078,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/routes.json",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-chapters/routes.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "162ab23802fe937a77ead31fac90a5674b5ed674",
+      "sha256": "ad66965af506f95b33f778e07e46ce0c5260422e9b4430dd46d1db4d86ac3430",
+      "bytes": 779661,
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }

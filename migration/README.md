@@ -25,7 +25,7 @@ npm run verify:collections
 - `company-authoring-receipt.json` and `generator-fragment-receipt.json` record the executable local generators and the original mixed-generator excerpts.
 - `mixed-source-receipt.json` accounts for 2,241 structured entries from 105 mixed files. Original JSON pointers and source hashes distinguish extracted records from the original complete artifacts.
 - `code-fragment-receipt.json` records 146 excerpts from 71 source and documentation files.
-- `additional-owned-source-receipt.json` preserves 136 complete source, authoring and evidence files. These include the earlier Navi and Spend Network material and mixed originals needed to document the ownership split.
+- `additional-owned-source-receipt.json` preserves 157 complete source, authoring and evidence files. These include the earlier Navi and Spend Network material and mixed originals needed to document the ownership split.
 - `presentation-source-receipt.json` records 165 extracted records covering 33 owned slots, 33 recipe revisions and their bindings.
 - `owned-test-receipt.json` records the original owned regression suites and support files.
 - `historical-owned-object-receipt.json` preserves 336 named historical file versions from the verified backup graph. Of these, 244 already exist byte-for-byte in local content; 92 additional objects occupy about 3 MB under `content/archive/historical-objects/`. Tests verify the original Git object identity, SHA-256 and length of every version.

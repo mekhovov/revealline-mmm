@@ -1,0 +1,453 @@
+{
+  "format": "revealline-source-art-provenance.v1",
+  "scope": "Twelve original Countercurrent reward still candidates, three maps across four themes. No runtime, catalog, saved/earned binding, production count or release adoption.",
+  "baseCommit": "58f96f3fa0189d60230d4797b4d456b1804167fa",
+  "generatedOn": "2026-09-14",
+  "tool": "image_gen.imagegen built-in",
+  "calls": 12,
+  "editCalls": 0,
+  "referenceImages": [],
+  "rawOriginalsPreserved": true,
+  "pixelTransformations": [],
+  "generation": "Twelve independent text-only generation calls, in four groups of three. No generation retries, image edits, original crop/stretch/resampling/re-encoding. Separate review thumbnails are declared in derivatives.json.",
+  "rightsScope": "Original fictional AI-generated project illustrations. No input reference images, copied game art, named artist imitation or authentic historical/product representation. Ukraine uses broad material/craft cues; Retro equipment is invented. No exclusive-rights or human-quality certification.",
+  "layoutAuthority": {
+    "path": "authoring/library/countercurrent/layouts.json",
+    "sha256": "daaeb40b6260ada3632d602d42b41788fb0c36de109bcc0a1f648018112f3abc",
+    "source": "Separately owned Countercurrent worktree; layout cues provided by its author. Not a runtime dependency of this art batch.",
+    "limits": "Geometry cue only; no copied gameplay implementation or gameplay/native proof."
+  },
+  "contextPins": [
+    {
+      "path": ".gitattributes",
+      "bytes": 485,
+      "sha256": "367c1353565ebf4b355e01413a282349d799716976daf32147c20d5de858038f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 124,
+      "sha256": "38812e650ec5d06647adbf4a940526cb422f1b50ae44a73181ef35860c25b8d2"
+    },
+    {
+      "path": "authoring/library/four-worlds-chapters/verify-images.mjs",
+      "bytes": 3838,
+      "sha256": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "bytes": 1610,
+      "sha256": "418e718b4c0d2eff5092693fddebf57b553bfc45c1b40d9b5bfb144ea9447873"
+    },
+    {
+      "path": "game/campaign-contexts.mjs",
+      "bytes": 4403,
+      "sha256": "3243fc2fc9d0db9fb6cf913609a86105d87bf80270a24fde10ec3b46d5eb92b8"
+    },
+    {
+      "path": "game/campaign-difficulty.mjs",
+      "bytes": 7336,
+      "sha256": "7890880e30df503b69fef0e44e8d58bfa919243aa535ed33c6a1afaa83367b97"
+    },
+    {
+      "path": "game/content-launch.mjs",
+      "bytes": 9259,
+      "sha256": "cec26626541e3a7bb89ff07d7b787040668ff308c7833fd8e6636098d60c80a2"
+    },
+    {
+      "path": "game/content.mjs",
+      "bytes": 23214,
+      "sha256": "305dfa4d5fb4c4c27856b59abd0e71779d431f68221ac592989be8f828d75b38"
+    },
+    {
+      "path": "game/core/abilities.mjs",
+      "bytes": 3855,
+      "sha256": "bb7cb0df95beb6878878d77cac40b2cb6f2403f74e089db46432659098fb3cde"
+    },
+    {
+      "path": "game/core/arcade-actions.mjs",
+      "bytes": 848,
+      "sha256": "fa88d2371b6a6c889550ab196ac0cfbc5dced9ad8493cda126928f4cd53f2726"
+    },
+    {
+      "path": "game/core/capture.mjs",
+      "bytes": 8038,
+      "sha256": "960ebb9ecf19a656fd4fb0877cc5a1d967d1e83617b0262ba62dad4c2189aaef"
+    },
+    {
+      "path": "game/core/classic-contour.mjs",
+      "bytes": 7465,
+      "sha256": "39f096ad8a10605031eecf49227c06d77cf5032042325c0053439ed311ce5da8"
+    },
+    {
+      "path": "game/core/classic-definition.mjs",
+      "bytes": 7266,
+      "sha256": "fa49c1e2442a393b2be8e3d3b34a0eef188bbe158243f7c13cb824d18d1d3638"
+    },
+    {
+      "path": "game/core/classic-motion.mjs",
+      "bytes": 12271,
+      "sha256": "d593680e715467fd4ebfd50bf68bfdd2c3690e79ebbc579a64cdbab093c0a020"
+    },
+    {
+      "path": "game/core/classic-state.mjs",
+      "bytes": 2306,
+      "sha256": "1964712c73cbb2c793881ccf74a2899ef173eff6cc48251274cb738aa0473377"
+    },
+    {
+      "path": "game/core/classic-step.mjs",
+      "bytes": 16343,
+      "sha256": "c6078d7ce18dc8d5b4ecf3414bbf943bcb68dd80951d68e2cc7b8f1bf5b29fca"
+    },
+    {
+      "path": "game/core/classic-topology.mjs",
+      "bytes": 6357,
+      "sha256": "aae16753e999d4829dab13503f3ef603e42b73f4b44e782180881160651db3ff"
+    },
+    {
+      "path": "game/core/contacts.mjs",
+      "bytes": 5168,
+      "sha256": "aadd6aceee0380ff8e9389f305fe96b6642d553ee255ebfb7bcc1251c2c7c67b"
+    },
+    {
+      "path": "game/core/encounter.mjs",
+      "bytes": 8716,
+      "sha256": "7b98eb4ec29998ce902a62388b089a0a26b41675199bb9601e4b2a55f0df44ba"
+    },
+    {
+      "path": "game/core/enemy-pressure.mjs",
+      "bytes": 11725,
+      "sha256": "e66302eab2bc961c3328f0fc572f21d3ea67ee32132c4d0d8f15c1c08d04a2cb"
+    },
+    {
+      "path": "game/core/geometry.mjs",
+      "bytes": 3989,
+      "sha256": "8ca7877a89ea203f072fbf3b85f304844f3a3abcf992e8ba1a54f39957e6f331"
+    },
+    {
+      "path": "game/core/index.mjs",
+      "bytes": 17291,
+      "sha256": "787d7cdc759b04ae2a475e8d5ac49e0618dd26f153336ea71b5920232532e1a2"
+    },
+    {
+      "path": "game/core/level.mjs",
+      "bytes": 14178,
+      "sha256": "0a9fa39cdfa6bb6ed4c9b07a231491529777ab099f2cd6528c54fde84d5e41b8"
+    },
+    {
+      "path": "game/core/line-impact.mjs",
+      "bytes": 9000,
+      "sha256": "cf6e1b509d6789f3bd922f1374ba4ba7a80933bb8a117058dfe579bb95b547e6"
+    },
+    {
+      "path": "game/core/movement.mjs",
+      "bytes": 10912,
+      "sha256": "3f9ee5115eb94c001fe38595f39763b188ea276114ca21d1bc7a426be6e6922a"
+    },
+    {
+      "path": "game/core/registry.mjs",
+      "bytes": 6661,
+      "sha256": "ca7e365071ab3c49514343ea7683d8e552d2cd3f9fdbd0f317df64a57c0b7c2c"
+    },
+    {
+      "path": "game/core/systems.mjs",
+      "bytes": 4621,
+      "sha256": "ecfc946dbe6caf9feacab674730b8b1844e2f133c40566069d722206c6e546b6"
+    },
+    {
+      "path": "game/core/versions.mjs",
+      "bytes": 3074,
+      "sha256": "9bc39659dde70e76c63c9f9bfaa267b3cdfa07966d9096cc079383c71478eec3"
+    },
+    {
+      "path": "game/data-json.mjs",
+      "bytes": 4640,
+      "sha256": "e765ace4b34cc64d8948b73d896e5f8d4666ba5984385f6b2de81c1babefba0c"
+    },
+    {
+      "path": "game/mastery-catalog.mjs",
+      "bytes": 13632,
+      "sha256": "2d7d7679b084ff1dcf6c15579605a00dd71cf611f822b79e198703fc4ac045be"
+    },
+    {
+      "path": "game/mastery-equipment.mjs",
+      "bytes": 29233,
+      "sha256": "5d45dfb343754c728277ea83a6a32ff46547adf747da65eee5ec0aa30bd09d1a"
+    },
+    {
+      "path": "game/mastery.mjs",
+      "bytes": 16941,
+      "sha256": "2794850285f343ac3ea30dabd22bac1e80bc45e6a73734597e364272af9d8504"
+    },
+    {
+      "path": "game/media-library.mjs",
+      "bytes": 12188,
+      "sha256": "ed1f1abe0b95b9889741ec8929522f0fcaba29a5438b09df18016d3ffffc6eb4"
+    },
+    {
+      "path": "game/platform.mjs",
+      "bytes": 2524,
+      "sha256": "737f4e6dabcc08cd45ad5e5b1fb3b16792881897e89927ce5fe7fc609c0f3260"
+    },
+    {
+      "path": "game/ui/music.mjs",
+      "bytes": 7050,
+      "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1819,
+      "sha256": "fc95490babde1090db3de255b114fd4e4282eae162d77fbb55e5ce3f5a117500"
+    },
+    {
+      "path": "scripts/game-cli.mjs",
+      "bytes": 58005,
+      "sha256": "93805cedc9abe70298df782504eacf352c68f258bcfe74157bc58b1736365b2e"
+    },
+    {
+      "path": "scripts/pack-indexes.mjs",
+      "bytes": 5421,
+      "sha256": "34ecdb35caecd581a5477e3972130f1ef67004fcd7add7f055126cb65a52a35e"
+    }
+  ],
+  "review": {
+    "agent": "All twelve actual generated images inspected visually; per-image deviations retained. Small derivative readability is recorded separately.",
+    "root": "Independent root visual review remains separate; no approval is inferred from verification.",
+    "limits": "Source-art production only, no browser/partial-reveal/device/gameplay/animation or full-quality certification."
+  },
+  "images": [
+    {
+      "cellId": "countercurrent/offset-docks/fpv",
+      "themeId": "fpv",
+      "missionSlot": "offset-docks",
+      "sourceLevelId": "countercurrent-offset-docks",
+      "title": "Lanterns at the Offset Piers",
+      "path": "originals/offset-docks-fpv.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-4098b3e6-ed1d-43bf-9afe-991fcdd5344d.png",
+      "bytes": 2571756,
+      "sha256": "93a52b10713a088729964e86c14c2999325885f28825455f335ea1e6edff7842",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "8595d567ba529031105009bfa67e4c443df7afdaddb4679b7e8b288a1355c965",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "Opposing lit working piers surround broad blue water, with a subordinate ivory service drone on the near cradle.",
+        "topologyEcho": "Offset ends and open central water echo the two hooks; the foreground quay is additional scenic framing.",
+        "deviations": "Detailed lamps, cranes, distant skyline and several visible people exceed the sparse prompt. The drone has visible stylized propeller blades; this still is not an animated actor asset.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/fpv",
+      "themeId": "fpv",
+      "missionSlot": "sandbar-braid",
+      "sourceLevelId": "countercurrent-sandbar-braid",
+      "title": "The Four Sandbar Relays",
+      "path": "originals/sandbar-braid-fpv.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-b938b146-b408-4935-9a2f-ca670b930ca7.png",
+      "bytes": 2534483,
+      "sha256": "71c6ec5acd362215811107b783ea1e8942c8c45bee20f43002b00dfb3ed2e5b0",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "fafbdb73b269cc5557a629360699dd46e72087838d5150044f0a3cef40f61b16",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "Four broad sandy bands alternate across teal water with tiny weather shelters and a distant survey drone.",
+        "topologyEcho": "Four distinct horizontal bars remain the dominant rhythm.",
+        "deviations": "The perspective and flowing water are scenic; exact wall coordinates and traverse routes are not depicted.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/fpv",
+      "themeId": "fpv",
+      "missionSlot": "crossing-watch",
+      "sourceLevelId": "countercurrent-crossing-watch",
+      "title": "Two Quiet Signal Posts",
+      "path": "originals/crossing-watch-fpv.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-63055fba-cc9a-4f58-9251-cd2d468d5a98.png",
+      "bytes": 1953105,
+      "sha256": "6a191c14e5de093a69e5845af2e39c3246feac3f9eae1ed8e19341214a7a2811",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "fd8b2f2627bf563179f513fc2f3e4e4e885a58b3f71fa3a8d4a1572d8344a21d",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "A compact rocky antenna island at upper left faces a long warm-lit maintenance island at lower right beneath a bright moon.",
+        "topologyEcho": "Two unequal major landforms are separated by a broad clear channel.",
+        "deviations": "Small background islands and skyline are extra scenery. No fixed warning beams are shown.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/offset-docks/ukraine",
+      "themeId": "ukraine",
+      "missionSlot": "offset-docks",
+      "sourceLevelId": "countercurrent-offset-docks",
+      "title": "The Boatbuilders’ Morning",
+      "path": "originals/offset-docks-ukraine.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-d061af40-f386-4dab-9c17-8837f5eb60ce.png",
+      "bytes": 3047188,
+      "sha256": "697a6980465d20d93c6b5e51a38eb05855910d019b6d4a1ab8ce88081b5ba195",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "8f787376d33fa6f0721bf5c38593c86d9793103ee0a5c36f99d8fcc19d6ec2f5",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "A sheltered wooden boat, whitewashed workshop and two opposing landing yards frame a misty river at dawn.",
+        "topologyEcho": "Opposing pier ends echo the hooks without copying the collision geometry.",
+        "deviations": "Cloth ornament and distant church-like buildings are invented. Figures are larger than requested; no named place, authentic pattern or historical reconstruction is claimed.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/ukraine",
+      "themeId": "ukraine",
+      "missionSlot": "sandbar-braid",
+      "sourceLevelId": "countercurrent-sandbar-braid",
+      "title": "Four Gardens beside the River",
+      "path": "originals/sandbar-braid-ukraine.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-81d29ea2-e1d8-436b-8980-c62d7f29cc4d.png",
+      "bytes": 3007068,
+      "sha256": "6ffd72d30d946af28111434e666a86cf5977d81de2beb33d8d0c547a33c02a24",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "419d25bfdd43b087dc8039e9ce3b877e6ba48a4246fc5f779ddebad63d764da5",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "Four long orchard and garden islands span a sunlit river, with linen drying frames and a small shed.",
+        "topologyEcho": "Four separated bands are readable against blue water.",
+        "deviations": "A foreground gardener is larger than requested. Distant domed church-like architecture is invented; no specific monument or ceremonial meaning is assigned.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/ukraine",
+      "themeId": "ukraine",
+      "missionSlot": "crossing-watch",
+      "sourceLevelId": "countercurrent-crossing-watch",
+      "title": "The Ferry Lights Return",
+      "path": "originals/crossing-watch-ukraine.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-5a052cf3-84bc-4413-8972-e6e2e36d95df.png",
+      "bytes": 2447624,
+      "sha256": "2ac1edcab88ec92348e7c3118503b109724bb551f7a2a290532f2a0355ae29d4",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "759145189e9548e695c993ba86c49c0189abedec952ca11b795958da0d12b013",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "A small timber bell shelter and house on the left island face a long ferry shed and orchard on the right at blue hour.",
+        "topologyEcho": "Two unequal separated landforms carry the diagonal composition.",
+        "deviations": "Boat wake, background islands and distant church-like skyline are scenic additions; no exact ferry mechanism, authentic historical site or warning lane is implied.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/offset-docks/retro",
+      "themeId": "retro",
+      "missionSlot": "offset-docks",
+      "sourceLevelId": "countercurrent-offset-docks",
+      "title": "Records across the Canal",
+      "path": "originals/offset-docks-retro.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-1907e28a-c5dc-4165-a698-4a901937b59f.png",
+      "bytes": 2698820,
+      "sha256": "26fa92a40658fe2499655e7c4aa9ea29cd03060c9967d93945960d8f1c12c16e",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "e99722ac988c93e7c11172b28ab9765e04f556dd78ea6d154a217d5368e45831",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "A record arcade and a facing cabinet arcade glow over rain-dark canal paving at coral sunset.",
+        "topologyEcho": "Opposing curved shop ends and the central canal echo the open hooks.",
+        "deviations": "Cabinet and album marks are decorative, not copied games or readable product labels. People and foreground electronics are more detailed than requested.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/sandbar-braid/retro",
+      "themeId": "retro",
+      "missionSlot": "sandbar-braid",
+      "sourceLevelId": "countercurrent-sandbar-braid",
+      "title": "Last Platforms of Summer",
+      "path": "originals/sandbar-braid-retro.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-390902a3-0654-4489-b4e2-fe04a9d12492.png",
+      "bytes": 2489771,
+      "sha256": "1ebdd0087fa096feff52c568587c55a1c8a41aca95b7b3ccfa143d1aa7d1e3bf",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "57a5dae9781d06b6cf3d6a50e6e2ceb2e64c331c9351e1e5e91e7f8b96f51123",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "Four long warm-lit platform halls sit within a large sunset transit shed, with boxy CRTs near the balcony.",
+        "topologyEcho": "Four separated roof bands provide the main rhythm; their arrangement is more paired than alternating.",
+        "deviations": "A large clock contains numeral-like marks despite the no-text prompt. Tiny signs and screens have incidental marks; no timetable, product interface or authentic machine model is claimed.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    },
+    {
+      "cellId": "countercurrent/crossing-watch/retro",
+      "themeId": "retro",
+      "missionSlot": "crossing-watch",
+      "sourceLevelId": "countercurrent-crossing-watch",
+      "title": "After-Hours Rooftop Exchange",
+      "path": "originals/crossing-watch-retro.png",
+      "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-df51ae35-324b-414f-98d6-973dd0b0dd13.png",
+      "bytes": 2426061,
+      "sha256": "498dca62d17a4e59c486bbea7a023b9e8aa11cf69cba169092a4671d0fde8e99",
+      "width": 1774,
+      "height": 887,
+      "promptSha256": "2a6832370d2ea6b930b7eea7e58ca5971c080a12d01821d736055529bcca7021",
+      "requestedDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "runtimeBinding": null,
+      "sourceBytesEqual": true,
+      "observations": {
+        "scene": "A square upper-left creative club and a long lower-right repair studio overlook roof gardens and a coral city sunset.",
+        "topologyEcho": "Two unequal workshop masses are distinct across open planted space.",
+        "deviations": "The visible upper walkway ends without an obvious connection; it is fictional scenic construction, not a navigable route. Tiny screen marks and the skyline are invented.",
+        "style": "Modern generated pixel-art illustration with stepped silhouettes, dark structural masses and luminous practical light; not a certified hand-pixel grid."
+      }
+    }
+  ]
+}
