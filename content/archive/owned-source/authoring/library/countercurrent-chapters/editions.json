@@ -1,0 +1,101 @@
+{
+  "format": "revealline-countercurrent-editions.v1",
+  "editions": [
+    {
+      "themeId": "fpv",
+      "id": "countercurrent-fpv",
+      "artRoot": "authoring/library/countercurrent-art",
+      "provenanceSha256": "41f8d87480fa488bddcbd29f66b9dd239ece2acbf860c143f6eef82c6fc733e4",
+      "images": [
+        {
+          "sourceCellId": "countercurrent/offset-docks/fpv",
+          "sourceLevelId": "countercurrent-offset-docks",
+          "path": "originals/offset-docks-fpv.png",
+          "sha256": "93a52b10713a088729964e86c14c2999325885f28825455f335ea1e6edff7842",
+          "title": "Lanterns at the Offset Piers",
+          "description": "Opposing lit working piers surround broad blue water, with a subordinate ivory service drone on the near cradle."
+        },
+        {
+          "sourceCellId": "countercurrent/sandbar-braid/fpv",
+          "sourceLevelId": "countercurrent-sandbar-braid",
+          "path": "originals/sandbar-braid-fpv.png",
+          "sha256": "71c6ec5acd362215811107b783ea1e8942c8c45bee20f43002b00dfb3ed2e5b0",
+          "title": "The Four Sandbar Relays",
+          "description": "Four broad sandy bands alternate across teal water with tiny weather shelters and a distant survey drone."
+        },
+        {
+          "sourceCellId": "countercurrent/crossing-watch/fpv",
+          "sourceLevelId": "countercurrent-crossing-watch",
+          "path": "originals/crossing-watch-fpv.png",
+          "sha256": "6a191c14e5de093a69e5845af2e39c3246feac3f9eae1ed8e19341214a7a2811",
+          "title": "Two Quiet Signal Posts",
+          "description": "A compact rocky antenna island at upper left faces a long warm-lit maintenance island at lower right beneath a bright moon."
+        }
+      ]
+    },
+    {
+      "themeId": "ukraine",
+      "id": "countercurrent-ukraine",
+      "artRoot": "authoring/library/countercurrent-art",
+      "provenanceSha256": "41f8d87480fa488bddcbd29f66b9dd239ece2acbf860c143f6eef82c6fc733e4",
+      "images": [
+        {
+          "sourceCellId": "countercurrent/offset-docks/ukraine",
+          "sourceLevelId": "countercurrent-offset-docks",
+          "path": "originals/offset-docks-ukraine.png",
+          "sha256": "697a6980465d20d93c6b5e51a38eb05855910d019b6d4a1ab8ce88081b5ba195",
+          "title": "The Boatbuilders’ Morning",
+          "description": "A sheltered wooden boat, whitewashed workshop and two opposing landing yards frame a misty river at dawn."
+        },
+        {
+          "sourceCellId": "countercurrent/sandbar-braid/ukraine",
+          "sourceLevelId": "countercurrent-sandbar-braid",
+          "path": "originals/sandbar-braid-ukraine.png",
+          "sha256": "6ffd72d30d946af28111434e666a86cf5977d81de2beb33d8d0c547a33c02a24",
+          "title": "Four Gardens beside the River",
+          "description": "Four long orchard and garden islands span a sunlit river, with linen drying frames and a small shed."
+        },
+        {
+          "sourceCellId": "countercurrent/crossing-watch/ukraine",
+          "sourceLevelId": "countercurrent-crossing-watch",
+          "path": "originals/crossing-watch-ukraine.png",
+          "sha256": "2ac1edcab88ec92348e7c3118503b109724bb551f7a2a290532f2a0355ae29d4",
+          "title": "The Ferry Lights Return",
+          "description": "A small timber bell shelter and house on the left island face a long ferry shed and orchard on the right at blue hour."
+        }
+      ]
+    },
+    {
+      "themeId": "retro",
+      "id": "countercurrent-retro",
+      "artRoot": "authoring/library/countercurrent-art",
+      "provenanceSha256": "41f8d87480fa488bddcbd29f66b9dd239ece2acbf860c143f6eef82c6fc733e4",
+      "images": [
+        {
+          "sourceCellId": "countercurrent/offset-docks/retro",
+          "sourceLevelId": "countercurrent-offset-docks",
+          "path": "originals/offset-docks-retro.png",
+          "sha256": "26fa92a40658fe2499655e7c4aa9ea29cd03060c9967d93945960d8f1c12c16e",
+          "title": "Records across the Canal",
+          "description": "A record arcade and a facing cabinet arcade glow over rain-dark canal paving at coral sunset."
+        },
+        {
+          "sourceCellId": "countercurrent/sandbar-braid/retro",
+          "sourceLevelId": "countercurrent-sandbar-braid",
+          "path": "originals/sandbar-braid-retro.png",
+          "sha256": "1ebdd0087fa096feff52c568587c55a1c8a41aca95b7b3ccfa143d1aa7d1e3bf",
+          "title": "Last Platforms of Summer",
+          "description": "Four long warm-lit platform halls sit within a large sunset transit shed, with boxy CRTs near the balcony."
+        },
+        {
+          "sourceCellId": "countercurrent/crossing-watch/retro",
+          "sourceLevelId": "countercurrent-crossing-watch",
+          "path": "originals/crossing-watch-retro.png",
+          "sha256": "498dca62d17a4e59c486bbea7a023b9e8aa11cf69cba169092a4671d0fde8e99",
+          "title": "After-Hours Rooftop Exchange",
+          "description": "A square upper-left creative club and a long lower-right repair studio overlook roof gardens and a coral city sunset."
+        }
+      ]
+    }
+  ]
+}

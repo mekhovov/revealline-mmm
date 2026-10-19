@@ -1382,6 +1382,33 @@
       "sha256": "54d689c4bdddedbb4f3e4aed2ca698d9a8da0139461aa751d2f638379f1637c9",
       "bytes": 2142864,
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/build.mjs",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-chapters/build.mjs",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "413431503cc9f9dbc0ad3496b2c01a976a7a904c",
+      "sha256": "f9bbbdc43b0ae5ee65d16f4b7d558a71106e84ec71944f0c995bf580e4c43b35",
+      "bytes": 14533,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/editions.json",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-chapters/editions.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "5569d081cb0c9509499cdcad34657e963aead4ae",
+      "sha256": "307684266e4889ef2d9893085c7e4f7a328fd23868b028ee55fce16bd360501b",
+      "bytes": 5078,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/routes.json",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-chapters/routes.json",
+      "sourceRevision": "c00894649ff759d0895f45baec58b6183bdb2896",
+      "sourceGitBlob": "162ab23802fe937a77ead31fac90a5674b5ed674",
+      "sha256": "ad66965af506f95b33f778e07e46ce0c5260422e9b4430dd46d1db4d86ac3430",
+      "bytes": 779661,
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }
