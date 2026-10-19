@@ -1,0 +1,22 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "authoring/prompts/round-08-character-collections.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "5c5ad15740cc7e4eabf0f65da27a2dcc159d7560",
+  "sourceSHA256": "2384b05271a7026706eb310969b1407c27e286962802ff2201013446a9618153",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/prompts/0/prompt",
+      "value": "Author a character collection from {{CURRENT_COLLECTION}}, {{FAMILY_BRIEFS}} and {{TARGET_CONTEXTS}}. Separate stable character identity, cosmetic variant, source/derivative artwork, replaceable component recipe, context eligibility, acquisition rule and current selection. Preserve existing IDs when replacing an image or propeller treatment. Give each character a coherent reason to exist beyond a palette swap, while keeping movement, collider, capture, damage and scoring unchanged unless the user explicitly requests a separately reviewed rules change. Retain the four independent families: Ukrainian FPV equipment, specific Ukrainian cultural characters, wider 80s–90s nostalgia and Coupa-inspired business characters. Record body, portrait, rotor/wing/thruster/pulse and trail references only where useful and supported. Inspect the actual preview format before writing records; the collection is not automatically a content-pack or media-schema extension. Deliver a concise roster and recipe mapping with starter/earned intent, fallback choices and readiness evidence. Mark new images, unsupported selectors and unimplemented progression as planned rather than inventing working outputs."
+    },
+    {
+      "pointer": "/prompts/14/example_request",
+      "value": "Give the Ukrainian bird wings, retro craft a thruster and Navi a quiet pulse, with independent recipes and clean character switching."
+    },
+    {
+      "pointer": "/prompts/15/prompt",
+      "value": "Inspect {{SOURCE_ART}} and create only the requested {{STYLE_VARIATION}} while respecting {{COMPONENT_LOCKS}}. Preserve the original file, stable collection identity, subject, heading, center and accepted attachment relationships unless the user explicitly requested a change. Keep-source with a separate overlay remains valid; do not automatically pixelate a painting or photographic source. For a requested derived style, save a separate asset with its parent, effective prompt and actual dimensions. Keep skin detail independent from gameplay speed, collider, capture and earned state. Respect the active family: no Z markings on current FPV variants, specific Ukrainian cultural references, coherent 80s–90s vocabulary and correctly labeled Coupa/Navi identity without military imports. Use the built-in image-edit route with inspected references. Compare the result under an unchanged live-trail fixture and at the intended occupied-pixel scale. Report fidelity differences and inspect alpha/anchors before application; a completed style edit does not by itself prove a working animated or production-ready character."
+    }
+  ]
+}

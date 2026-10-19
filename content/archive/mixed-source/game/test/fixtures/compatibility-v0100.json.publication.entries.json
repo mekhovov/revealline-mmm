@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/test/fixtures/compatibility-v0100.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "7c8c24c2482caca6f91891f8e396e4935acf75cf",
+  "sourceSHA256": "b7b2d916ca95ae47e2df274502d5379cf9d532e648d8f095a2a535b9097ac94f",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/appearanceMilestones/0/bodyIds/4",
+      "value": "navi-auditor"
+    }
+  ]
+}

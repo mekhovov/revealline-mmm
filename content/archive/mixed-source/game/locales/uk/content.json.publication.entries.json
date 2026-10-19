@@ -1,0 +1,74 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/uk/content.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "4c82f2e9c4abc3393da8fba1f89cd591a215546d",
+  "sourceSHA256": "1e8b32b2eb9ed103d4f646eaffdb5a15b497da22d3be55e23832cedc3d025f2c",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/auditTrimGoldPulseBlink",
+      "value": "Оздоблення аудиту / золота пульсація + блимання"
+    },
+    {
+      "pointer": "/spendNetworkRouteChoices",
+      "value": "Мережа витрат · Вибір маршруту"
+    },
+    {
+      "pointer": "/spendNetworkSentinelCircuit",
+      "value": "Мережа витрат · Коло вартового"
+    },
+    {
+      "pointer": "/spendNetworkFractureLines",
+      "value": "Мережа витрат · Лінії розлому"
+    },
+    {
+      "pointer": "/spendNetworkCountercurrent",
+      "value": "Мережа витрат · Протитечія"
+    },
+    {
+      "pointer": "/spendNetworkSharedRoutes",
+      "value": "Мережа витрат · Спільні маршрути"
+    },
+    {
+      "pointer": "/spendNetwork",
+      "value": "Мережа витрат"
+    },
+    {
+      "pointer": "/threeOriginalProceduralPresentationsOfProvenEquipmentLayoutsUkrainianGarden",
+      "value": "Три оригінальні процедурні оформлення перевірених мап спорядження: українська садова спадщина, аркадна схема 1990-х і абстрактна мережа витрат. Додаткові відзнаки «Міцна нитка», «Силове коло» й «Безпечне узгодження» показують авторські цілі; кожну мапу можна пройти й звичайно."
+    },
+    {
+      "pointer": "/spendSprite",
+      "value": "Дух витрат"
+    },
+    {
+      "pointer": "/auditPulse",
+      "value": "Імпульс аудиту"
+    },
+    {
+      "pointer": "/spendSpritePulseBlink",
+      "value": "Дух витрат / пульсація + блимання"
+    },
+    {
+      "pointer": "/spendNetworkRouteChoicesTactical",
+      "value": "Мережа витрат · Вибір маршруту — Тактика"
+    },
+    {
+      "pointer": "/spendNetworkSentinelCircuitTactical",
+      "value": "Мережа витрат · Коло вартового — Тактика"
+    },
+    {
+      "pointer": "/spendNetworkFractureLinesArcade",
+      "value": "Мережа витрат · Лінії розлому — Аркада"
+    },
+    {
+      "pointer": "/spendNetworkCountercurrentArcade",
+      "value": "Мережа витрат · Протитечія — Аркада"
+    },
+    {
+      "pointer": "/motionLab.spendSpriteFictionalSpendReview",
+      "value": "Дух витрат · вигадана перевірка витрат"
+    }
+  ]
+}

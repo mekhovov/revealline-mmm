@@ -1,0 +1,89 @@
+{
+  "sourcePath": "game/test/still-workshop-build.test.mjs",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "813e6a6e0ce20c74485ecb9b650b38ca38b2fe7d663c40a45bbdad3242899d18",
+  "sourceGitBlob": "a0b75c6977c282363e1e454050cf8dfff09d270d",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 4029,
+      "end": 4087,
+      "source": "  'authoring/library/neon-artwork/backgrounds/coupa.jpg',\n"
+    },
+    {
+      "start": 7474,
+      "end": 7527,
+      "source": "  'authoring/library/neon-mosaic/coupa/preview.svg',\n"
+    },
+    {
+      "start": 7527,
+      "end": 7582,
+      "source": "  'authoring/library/neon-mosaic/coupa/scenario.json',\n"
+    },
+    {
+      "start": 17974,
+      "end": 18033,
+      "source": "  'authoring/library/route-worlds/descriptors/coupa.json',\n"
+    },
+    {
+      "start": 18552,
+      "end": 18630,
+      "source": "  'authoring/library/sentinel-theme-art/coupa/originals/listening-court.png',\n"
+    },
+    {
+      "start": 18630,
+      "end": 18709,
+      "source": "  'authoring/library/sentinel-theme-art/coupa/originals/open-the-circuit.png',\n"
+    },
+    {
+      "start": 18709,
+      "end": 18788,
+      "source": "  'authoring/library/sentinel-theme-art/coupa/originals/switchyard-gates.png',\n"
+    },
+    {
+      "start": 19324,
+      "end": 19394,
+      "source": "  'authoring/library/sentinel-theme-chapters/descriptors/coupa.json',\n"
+    },
+    {
+      "start": 19597,
+      "end": 19677,
+      "source": "  'authoring/library/spend-network-art/originals/city-savings-observatory.png',\n"
+    },
+    {
+      "start": 19677,
+      "end": 19752,
+      "source": "  'authoring/library/spend-network-art/originals/shared-value-harbor.png',\n"
+    },
+    {
+      "start": 19752,
+      "end": 19834,
+      "source": "  'authoring/library/spend-network-art/originals/thoughtful-market-workshop.png',\n"
+    },
+    {
+      "start": 19834,
+      "end": 19891,
+      "source": "  'authoring/library/spend-network-art/provenance.json',\n"
+    },
+    {
+      "start": 19891,
+      "end": 19959,
+      "source": "  'authoring/library/spend-route-art/originals/network-garden.png',\n"
+    },
+    {
+      "start": 19959,
+      "end": 20026,
+      "source": "  'authoring/library/spend-route-art/originals/shared-harbor.png',\n"
+    },
+    {
+      "start": 20026,
+      "end": 20093,
+      "source": "  'authoring/library/spend-route-art/originals/value-foundry.png',\n"
+    },
+    {
+      "start": 20093,
+      "end": 20148,
+      "source": "  'authoring/library/spend-route-art/provenance.json',\n"
+    }
+  ]
+}

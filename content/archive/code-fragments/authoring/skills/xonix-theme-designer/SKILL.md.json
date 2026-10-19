@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/skills/xonix-theme-designer/SKILL.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "e48fb7eac3bb4025774435415a7d3bdd4dc64aac1f1467ad265e940cef1cbf00",
+  "sourceGitBlob": "e7ebba6b45803a060c0a2c115100bfd912631588",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 0,
+      "end": 362,
+      "source": "---\nname: xonix-theme-designer\ndescription: 'Design or revise Xonix game themes and content packs, including Ukrainian FPV Front, Ukrainian culture and history, 1980s–1990s nostalgia, Coupa Navi Network, and new visual families. Use for theme bibles, palettes, image collections, character roles, progression concepts, or a reskin that preserves game rules.'\n---"
+    },
+    {
+      "start": 1595,
+      "end": 2233,
+      "source": "The active Reveal Line presentation direction is the approved [FPV Field Kit redesign](../../../docs/fpv-redesign-design.md), with [phase status](../../../docs/fpv-redesign-execution.md) and [interactive atlas](../../design-atlas/index.html). Use its ink/cyan/amber palette, readable Exo 2 interface, large Handjet accents and Plex telemetry. Future Ukrainian/Retro/Coupa collections remain separate from the first complete FPV delivery. The atlas is a review artifact; confirm which compiler/studio/runtime phase actually shipped before prescribing its interface. Existing campaign and saved-art ownership contracts remain authoritative."
+    },
+    {
+      "start": 6728,
+      "end": 7901,
+      "source": "- `fpv-front`: Main direction is Ukrainian FPV-drone arcade action in the Russian–Ukrainian war. Preserve the requested reveal of fictional invading Russian military presence. Painted vehicles are illustration; live enemy sprites carry collision and readable cues. W1 Daybreak Front is the current recommended style; W2 Night Signal and W3 Steel Horizon are chapter alternatives.\n- `ukraine-atlas`: Use identifiable places, periods, and traditions. Distinguish Petrykivka painting, embroidery, Kosiv ceramics, and Crimean Tatar Örnek. Avoid treating all regional motifs as interchangeable. Include contemporary Ukraine as well as heritage.\n- `retro-1994`: Broaden nostalgia beyond neon: warm computer rooms, DOS and demoscene colors, arcade cabinets, cassette artwork, space operas, and summer after-school scenes. Use original artwork and sound compositions.\n- `navi-network`: Convey spend visibility, savings, suppliers, and AI assistance as playable discoveries. Use verified Coupa/Navi references when supplied or found; otherwise label a temporary C-token as a placeholder. In-game savings and currency may be fictional; avoid presenting them as real customer results."
+    }
+  ]
+}

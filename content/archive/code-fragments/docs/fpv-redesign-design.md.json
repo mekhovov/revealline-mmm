@@ -1,0 +1,14 @@
+{
+  "sourcePath": "docs/fpv-redesign-design.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "4768c9b86f6a6255b9bee0683ce702282ab5e9ac2812c205c9bc417fad4161d0",
+  "sourceGitBlob": "f494a565fb811a085c12376018f1106d496ae272",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 36,
+      "end": 379,
+      "source": "Design specification and review atlas for the whole-game redesign. The selected production direction is **Pixel FPV Field Kit**: a complete original FPV presentation, supported by an extensible asset and theme framework. Ukrainian, Retro and Coupa remain future presentation collections; this redesign does not claim their artwork is complete."
+    }
+  ]
+}

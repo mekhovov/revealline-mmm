@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/CONTRACT.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "6b8fbaa01949fa6c37098cebe68a12137528880ca2a50150aeb79b02d99ebd60",
+  "sourceGitBlob": "da3ced1cb8fd30944f523b075b88284380ee66a9",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 2057,
+      "end": 3010,
+      "source": "- `schema/content-pack.schema.json`: Draft 2020-12 JSON Schema for the pack shape.\n- `schema/primitive-catalog.json`: registered fill, goal, enemy, modifier and effect IDs with parameter schemas and precise intended meaning.\n- `examples/fpv-front.pack.json`: main Ukrainian FPV military direction, image discovery and relay objectives.\n- `examples/ukraine-atlas.pack.json`: botanical illustration, relaxed timing, and a separately planned licensed photograph with pixel sprites.\n- `examples/retro-1994.pack.json`: pixel artwork, timed score pursuit and collectible disks.\n- `examples/navi-network.pack.json`: business-city illustration, cost-leak objectives and explicitly fictional savings.\n- `scripts/validate_pack.py`: dependency-free contract and semantic validator.\n- `scripts/build_contract.py`: maintainer regeneration utility. It overwrites the schema/catalog and four examples; do not run it over authored revisions without updating its source."
+    },
+    {
+      "start": 5264,
+      "end": 5522,
+      "source": "This separation permits a Ukrainian scene, scanned artwork, photograph, neon pixel image or Coupa city to use the same simulation. The theme can re-label a marker as a relay, flower, disk or invoice. Its capture effect remains an explicit catalog invocation."
+    }
+  ]
+}

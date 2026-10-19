@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/prompts/round-06-asset-variations.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "22ac8dbcb68967313788741971ea51dbffb9df7e2c79cae0fccf080a3ddafaf6",
+  "sourceGitBlob": "e7865be26c2ba1e3c5fdc71da5ed28eb895f234e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 703,
+      "end": 2787,
+      "source": "| ID | Use | Mode |\n|---|---|---|\n| `asset-variant-01-source-fidelity` | Inspect source, dimensions, focal details and the least disruptive adaptation. | Review |\n| `asset-variant-02-faithful-cleanup` | Make a specific correction while preserving composition and medium. | Requested image edit |\n| `asset-variant-03-pixel-derivative` | Create an optional pixel-art interpretation of the same scene. | Requested image edit |\n| `asset-variant-04-painted-derivative` | Create a requested watercolor, gouache or other painted derivative. | Requested image edit |\n| `asset-variant-05-photograph-preserve` | Keep photography intact; plan overlay, fit and crop separately. | Text plan |\n| `asset-variant-06-fpv-identity` | Correct entity identity and remove confusing markings. | Requested image edit |\n| `asset-variant-07-fpv-background` | Vary Daybreak, Winter, Night or another FPV chapter aesthetic. | Requested image edit |\n| `asset-variant-08-atlas-background` | Adapt a specific Ukrainian cultural chapter without mixing traditions. | Requested image edit |\n| `asset-variant-09-retro-background` | Explore a specific 80s/90s direction rather than imposing generic neon. | Requested image edit |\n| `asset-variant-10-navi-background` | Vary a business-network scene with appropriate character provenance. | Requested image edit |\n| `asset-variant-11-object-skins` | Turn `X`, `^` and other placeholders into interchangeable visual objects. | Requested image edit |\n| `asset-variant-12-avatar-variants` | Create cosmetic avatar options with the same logical footprint. | Requested image edit |\n| `asset-variant-13-terrain-skins` | Swap wall, slow and lethal materials while preserving their meanings. | Requested image edit |\n| `asset-variant-14-sprite-readiness` | Inspect dimensions, alpha, pivots, seams and animation evidence. | Review |\n| `asset-variant-15-partial-reveal-contrast` | Compare source and variants under the same actual gameplay overlay. | Review |\n| `asset-variant-16-provenance-register` | Prepare parent/variant records and honest readiness status. | Text handoff |"
+    }
+  ]
+}

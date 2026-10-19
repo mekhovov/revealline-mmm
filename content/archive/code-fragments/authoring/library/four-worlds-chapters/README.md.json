@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/library/four-worlds-chapters/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "518ee4e27649a84c47c6d8a9b626545e38de006c50f2f60319e67cafebbf91c0",
+  "sourceGitBlob": "9fa3551531dabf6e4d0be55040b9bc49401554f5",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 821,
+      "end": 1564,
+      "source": "| Optional pack                                            | Registered world | Formatted JSON bytes | Compact pack bytes |\n| -------------------------------------------------------- | ---------------- | -------------------: | -----------------: |\n| [Illustrated Pressure](packs/original-fpv-pressure.json) | `fpv`            |           10,719,959 |         10,711,106 |\n| [Woven Lines](packs/original-ukraine-atlas.json)         | `ukraine`        |           12,358,446 |         12,349,593 |\n| [After Hours](packs/original-retro-1994.json)            | `retro`          |           10,329,657 |         10,320,804 |\n| [Shared Routes](packs/original-spend-network.json)       | `coupa`          |           11,067,202 |         11,058,349 |"
+    },
+    {
+      "start": 1566,
+      "end": 2079,
+      "source": "The source catalog calls the Atlas artwork family `heritage`; the registered runtime theme ID is **`ukraine`**. The builder maps these explicitly. `coupa` and its existing body IDs are runtime registry names, not newly produced logos, Navi likenesses, endorsements or actual product functionality. The harbor's invented leaf emblems remain in its unchanged original and in the source observations. Ukrainian settings and motifs are imaginative interpretations rather than authenticated historical reconstructions."
+    }
+  ]
+}

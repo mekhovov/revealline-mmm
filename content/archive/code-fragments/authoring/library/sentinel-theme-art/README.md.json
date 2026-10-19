@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/library/sentinel-theme-art/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "eadccd93624f9a497733c0f01564a0b68fba15dd1ec05b5052ce37c271529147",
+  "sourceGitBlob": "2b6522a23338fb6077c9a6bf7621d86613abae8c",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 37,
+      "end": 333,
+      "source": "Nine new static originals cover the three existing Sentinel mission roles in\nUkraine Atlas, 1994 Forever and Spend Network. They add no geometry. These are\nsource candidates: the production seed, chapter descriptors, pack compilers,\nruntime catalogs, saved ownership and releases remain separate."
+    },
+    {
+      "start": 956,
+      "end": 2110,
+      "source": "| Theme         | Listening Court                                                   | Switchyard Gates                                                      | Open The Circuit                                                       |\n| ------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------- |\n| Ukraine Atlas | [Courtyard of quiet craft](ukraine/originals/listening-court.png) | [Carpathian station exchange](ukraine/originals/switchyard-gates.png) | [The mountain thread hall](ukraine/originals/open-the-circuit.png)     |\n| 1994 Forever  | [The radio-repair courtyard](retro/originals/listening-court.png) | [After-hours cassette dispatch](retro/originals/switchyard-gates.png) | [The hilltop night transmission](retro/originals/open-the-circuit.png) |\n| Spend Network | [The shared inventory court](coupa/originals/listening-court.png) | [The inland exchange yard](coupa/originals/switchyard-gates.png)      | [The illuminated exchange hall](coupa/originals/open-the-circuit.png)  |"
+    },
+    {
+      "start": 2653,
+      "end": 3424,
+      "source": "All nine actual images were visually inspected during generation. The Ukraine\nforge has a lit hearth despite the prompt's cold-forge request. Its rail and loom\nscenes use fictional mountainous geography; pointed snowy peaks are not an\nauthenticated Carpathian location. Textiles, sunburst forms and banner patterns\nare invented. Retro displays and wall marks are decorative pixels, not readable\nfrequencies, working schematics, a real operating system or certified 1994\nhardware. Spend banners and crates contain generated geometric emblems despite\nthe no-logo prompt. These are fictional set decoration, not real Coupa marks,\nproduct screens or endorsements. The raw outputs are retained with these\nqualifications, rather than being described as exact prompt compliance."
+    }
+  ]
+}

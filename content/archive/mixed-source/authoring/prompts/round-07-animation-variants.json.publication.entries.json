@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "authoring/prompts/round-07-animation-variants.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "bd14cfa70eb6553dc74f7e36b10ddcedd2e3c009",
+  "sourceSHA256": "0c784b5cf286c3b2443917128828e2a7f7f11ff4fcf447fba2779b948cc3f1c4",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/prompts/4/prompt",
+      "value": "Inspect {{ENEMY_REFERENCES}} and {{ROLE_DOMAIN_MAP}} before creating a separate {{FAMILY_STYLE}} keyframe study. Distinguish an open-field mover, a patrol on changing interior capture contours, an enemy crossing revealed ground and a territory eroder. Give each a stable silhouette and restrained motion signature rather than identical glowing balls. Keep the fill-blocker mark attached only to roles the selected policy designates. Motion diagrams illustrate the declared domain; they do not implement homing, erosion, internal-contour traversal or new behavior. Preserve anchors, collider references and role identity across frames. Current FPV examples use explicit Ukrainian/hostile-military/neutral identity and no Z markings anywhere; Coupa uses process-friction objects rather than military motifs. Use the built-in image editor for the requested derivative and preserve all references. Record generated keyframes as concepts; timing, loop seams, interruption and actual-size readability require subsequent assembled playback."
+    }
+  ]
+}

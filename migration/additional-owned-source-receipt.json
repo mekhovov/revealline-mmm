@@ -581,6 +581,114 @@
       "sha256": "3107b4b5a7eb20301ba578a6d429824b8cb02ceec434a8bde4155d7e88d74e58",
       "bytes": 7494,
       "disposition": "historical-artwork-regression-source; current local media hashes verified separately"
+    },
+    {
+      "sourcePath": "docs/company-editions-playtest.md",
+      "destination": "content/archive/owned-source/docs/company-editions-playtest.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "ca1f13e4b6aad6b0fbe623a34256a528b3525cb4",
+      "sha256": "6dda5e869cf0b8a9a46621d3556eecf66c28fa5ab6f9a90ca7861c4bef60059c",
+      "bytes": 45569,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/company-campaigns/README.md",
+      "destination": "content/archive/owned-source/game/company-campaigns/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "f4a93e30a39e82cfbfb02c3bcaa50de32a2c0e94",
+      "sha256": "abbc08b694bc27e4fbd08dc65f11940f396db3ecf48d4b262eb49e8cb673aa1a",
+      "bytes": 8319,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "docs/content-production-register.md",
+      "destination": "content/archive/owned-source/docs/content-production-register.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "9331a314c41f327597a256c6eaf35036fc45a6a6",
+      "sha256": "6fe58d618581d24ca4da17712d00815768191b60360bd394a1be8e7359dd07db",
+      "bytes": 14432,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/source-documents/8cb7ec2e3bf6cf334517ad056568110af4f7bc70a0143ad37bc33b10ff733d43.txt",
+      "destination": "content/archive/owned-source/authoring/production/source-documents/8cb7ec2e3bf6cf334517ad056568110af4f7bc70a0143ad37bc33b10ff733d43.txt",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "bf4289b797c98c440e3f7d9e7e1bc58badc02c7e",
+      "sha256": "8cb7ec2e3bf6cf334517ad056568110af4f7bc70a0143ad37bc33b10ff733d43",
+      "bytes": 13370,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/editions.test.mjs",
+      "destination": "content/archive/owned-source/game/test/editions.test.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "7cce86b6cc3af00bfe5afd3c9e8d3acb0b15d685",
+      "sha256": "32be4883dcec43ae164b9cb4634ba481c6ba23aef0027cc0a3a8bc8846c16d2d",
+      "bytes": 57987,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/mastery-journey.test.mjs",
+      "destination": "content/archive/owned-source/game/test/mastery-journey.test.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "580f86df479f07774edb4e8e4656a3cbc93b6cd2",
+      "sha256": "dbe2db332fa25bde782983801ff8b878b6d7cc1eb038fbc57d3d02ba79b4d846",
+      "bytes": 12884,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/edition-controller-practice.test.mjs",
+      "destination": "content/archive/owned-source/game/test/edition-controller-practice.test.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "2d6d28f10f7210f41dd405fd0dbe3f8d02fca3eb",
+      "sha256": "ddf0d243fab432aa956f7771177217081325f167172af6dbdf0c6a49327fd529",
+      "bytes": 10272,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/community-friendly-host.test.mjs",
+      "destination": "content/archive/owned-source/game/test/community-friendly-host.test.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "f5f9048106cd4fe3c0c6568f114890c8e1ed646a",
+      "sha256": "e307b32a1bac2ec24c0e8533603e4e1eab344163b52b0dede1b2511098436f73",
+      "bytes": 13408,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/company-studio-review.test.mjs",
+      "destination": "content/archive/owned-source/game/test/company-studio-review.test.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "810995657abe93903fb83f42f22c21ac28578d32",
+      "sha256": "17634af0d1c0f7f5da30dfaa1c7c698ad4b0a7c9332526bae3023f169081feac",
+      "bytes": 7707,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/source-documents/ee481bcaef80d86778fdda295f8660d0bfa2d6e0950bd24fddc59e051d463e88.txt",
+      "destination": "content/archive/owned-source/authoring/production/source-documents/ee481bcaef80d86778fdda295f8660d0bfa2d6e0950bd24fddc59e051d463e88.txt",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "5bd3fd8f82f79fce708d967e2c9cf436dfced900",
+      "sha256": "ee481bcaef80d86778fdda295f8660d0bfa2d6e0950bd24fddc59e051d463e88",
+      "bytes": 10172,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/neon-mosaic/overview.svg",
+      "destination": "content/archive/owned-source/authoring/library/neon-mosaic/overview.svg",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "9474d0f50ee0d10477e85075e3f37ba0b26c5de7",
+      "sha256": "16691ddf8060ef10f4b30f884b8a5cdaeeba73770c8c0e66b2ffed0105ace343",
+      "bytes": 371658,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/content/packs/equipment-workshop.json",
+      "destination": "content/archive/owned-source/game/content/packs/equipment-workshop.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "57b1cb9b7e4f2711a4b9f4009ff712439c0e1bfd",
+      "sha256": "a015f79c47d8bac6cd09ba04e50c0c98d759e523eea7d225edbe62a8a5254054",
+      "bytes": 11127024,
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }

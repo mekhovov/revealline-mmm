@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/library/reserve-illustrations-wave-1/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "4326407df98b28810777fcf22378bb2b156b69c9e6c2a18944f38a7458281ddc",
+  "sourceGitBlob": "fc7c87ca4695786834b3e2046a44ab030eda90ae",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 34,
+      "end": 334,
+      "source": "Four source illustrations for a future picture library: one each for FPV Front, Ukraine Atlas, 1994 Forever and the fictional Spend Network. This contributes four reserve works toward the planned forty. It does not add maps, register a pack, change runtime assets, or complete an animation milestone."
+    },
+    {
+      "start": 336,
+      "end": 1130,
+      "source": "| Theme | Original | Composition |\n| --- | --- | --- |\n| FPV Front | [Sunflower Signal](originals/fpv-sunflower-signal.png) | A foreground FPV camera and four motor hubs, blue/yellow battery straps, sunflowers, a fictional grain terminal and distant equipment. |\n| Ukraine Atlas | [Potter’s Light](originals/ukraine-potters-light.png) | Cream ceramics, invented bird/floral decoration, a blue courtyard gate, mountain village and warm kiln. |\n| 1994 Forever | [Rooftop Radio](originals/retro-rooftop-radio.png) | A cassette boombox and headphones on a rooftop table, sunset skyline and glowing greenhouse. |\n| Spend Network | [Circular Workshop](originals/spend-circular-workshop.png) | An original friendly robot sorting reusable materials, a brass balance and a bright cooperative workshop. |"
+    },
+    {
+      "start": 2224,
+      "end": 2718,
+      "source": "The Ukrainian pottery palette was informed by UNESCO’s [description of the tradition of Kosiv painted ceramics](https://ich.unesco.org/en/RL/tradition-of-kosiv-painted-ceramics-01456). The ornaments, architecture and scene are invented; they do not reproduce a named specimen or certify historical accuracy. The FPV scene is fictional equipment imagery without a real operation or current location. The Spend scene depicts a fictional reuse/procurement world, not actual Coupa product features."
+    }
+  ]
+}

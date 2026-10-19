@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/motion-lab/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "523b4def29292cf75d40bafb675cb94c1eea1214f780160ce3973429beb62871",
+  "sourceGitBlob": "ae7b397d16b32dfca3250e83dea11df26bbc340a",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 24318,
+      "end": 25307,
+      "source": "| Family        | Starter      | Earned cosmetic examples      | Source distinction                                                                                |\n| ------------- | ------------ | ----------------------------- | ------------------------------------------------------------------------------------------------- |\n| FPV Front     | Daybreak FPV | Skyline FPV; Night signal FPV | Three separate image bodies, each with its own motor rig                                          |\n| Ukraine Atlas | Atlas bird   | Falcon trim                   | Trim uses the same swallow body with a different wing palette; not a separate falcon illustration |\n| 1994 Forever  | Tape runner  | Vector trail                  | Shared craft body, alternate thruster palette                                                     |\n| Navi Network  | Spend Sprite | Audit pulse                   | Shared original helper body; not verified official Coupa Navi art                                 |"
+    },
+    {
+      "start": 26730,
+      "end": 27083,
+      "source": "| Family        | Wall / slow / danger material diagrams |\n| ------------- | -------------------------------------- |\n| FPV Front     | Concrete / mud / wire                  |\n| Ukraine Atlas | Stone / reeds / thorns                 |\n| 1994 Forever  | Circuit / static / plasma              |\n| Navi Network  | Archive / queue / alerts               |"
+    }
+  ]
+}

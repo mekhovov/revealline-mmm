@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/prompts/round-07-animation-variants.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "70fa7bc580e6b00756394ae31bc54e6d9b4f23892acf7a8c38fa57d022ffbec9",
+  "sourceGitBlob": "ccba164fcc3f885fff8f2f64d884aa6822f37ccc",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 945,
+      "end": 2984,
+      "source": "| ID | Purpose | Output mode |\n|---|---|---|\n| `animation-01-component-map` | Independently replaceable body, rotors, shadow, trail, effects, terrain, UI and sound. | Text plan |\n| `animation-02-state-contract` | State priority, interruption, looping, timebase, reduced motion and cleanup. | Text plan |\n| `animation-03-compact-fpv-body` | Smaller occupied FPV pixel silhouette with consistent attachments and collider reference. | Requested keyframe image edit |\n| `animation-04-fpv-rotor-response` | Modular rotors/body reacting to supplied velocity, direction and phases. | Text plan |\n| `animation-05-enemy-motion-signatures` | Distinct silhouettes for field, contour, exposed-ground and erosion roles. | Requested keyframe image edit |\n| `animation-06-atlas-motion` | Specific Ukrainian material/cultural motion with three appearance modes. | Text plan |\n| `animation-07-retro-motion` | Coherent 80s/90s motion economy, with neon and CRT effects optional. | Text plan |\n| `animation-08-navi-motion` | Friendly business-world animation and correctly identified brand placeholders. | Text plan |\n| `animation-09-terrain-appearance` | Microtile, detailed-object and hybrid materials on identical geometry. | Text plan |\n| `animation-10-trail-capture` | Independent active trail, capture pulse and event-cue timing. | Text plan |\n| `animation-11-hit-respawn` | Legible failure and recovery without inventing gameplay protection. | Text plan |\n| `animation-12-victory-gallery` | Skippable full-artwork reward with the actual score/percentage retained. | Text plan |\n| `animation-13-ui-states` | Focus, press, loading, error, pause, retry and gallery motion across inputs. | Text plan |\n| `animation-14-audio-event-timing` | Continuous layers, one-shot event identity, overlap, fade and mute rules. | Text plan |\n| `animation-15-responsive-budget` | Measured silhouette size and proposed effects/texture/audio budgets by device. | Text plan |\n| `animation-16-playback-review` | Actual clip inspection and honest readiness stages. | Review |"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "authoring/prompts/catalog.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "d618957567ee5207130c328e8ecfa7c6b132ea9d",
+  "sourceSHA256": "f958c787d2af470f457827ad498cb8f597efb720a279b7122d139a1796bab100",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/prompts/32/prompt",
+      "value": "Edit the supplied target image {{TARGET_IMAGE}}. Change only {{CHANGE_REQUEST}}. Treat {{LOCKED_FEATURES}} as locked: preserve their identity, position, proportions, facing direction, palette relationship and scene composition. Use the supplied style reference {{STYLE_REFERENCE}} only for pixel clustering, material language and lighting; do not copy its layout or add its subjects. Keep existing military subjects in FPV scenes, region/period identity in Atlas scenes and placeholder status in Navi scenes. Preserve the canvas ratio and all unaffected areas as closely as the editing tool permits. Return one edited concept and report any visible drift separately. If required target/reference images are absent, identify the missing input before editing. Do not claim pixel-perfect preservation without comparison."
+    },
+    {
+      "pointer": "/prompts/45/prompt",
+      "value": "Create a twelve-image reveal pack for {{FAMILY}} and {{CHAPTER}}. Give each image a stable proposed ID, evocative title, one-sentence subject, exact generation brief, focal anchor, palette deviation, discovery detail, gallery caption and suggested difficulty pairing. Compose a deliberate visual rhythm: three intimate scenes, three wide scenes, three object-focused compositions and three surprising reveals, all inside the chapter identity. Military packs retain invading military presence in every active-play reveal. Choose {{REVEAL_STYLE}} independently of the fixed gameplay overlay. Track each asset as planned, not generated; list required references and avoid identical scenes with only changed color. Keep image IDs separate from levels so the same art can support several challenges. For each image, distinguish active-play mask coverage from the proposed completed-gallery presentation. Plan to show the full artwork after ordinary victory while retaining the achieved capture percentage for scoring; gallery visibility does not enlarge captured territory. Treat this presentation as a proposal until implemented, and do not add unsupported fields to a valid pack. Let optional high-exposure mastery reward a separate record or medal rather than withholding the basic picture reward. Keep military content specific to military packs; cultural, retro and Coupa chapters retain their own subjects."
+    },
+    {
+      "pointer": "/prompts/48/prompt",
+      "value": "Design nine intermission module cards using the supported effects in {{RULESET_CATALOG}}. Group into route planning, safe movement and capture rewards. For every card give neutral mechanic ID, exact effect text with units, allowed stacking, incompatible combinations, one balancing risk and equivalent names/icon concepts in FPV FRONT, UKRAINE ATLAS, 1994 FOREVER and NAVI NETWORK. Use a path preview, short visible trail protection and capture-linked recharge only if those effects exist; otherwise mark extension proposals. Keep benefits readable in one sentence and selection outside live danger. Do not invent pay-to-win progression or require real-time AI calls. Output data-ready drafts with unvalidated balance status."
+    },
+    {
+      "pointer": "/prompts/50/prompt",
+      "value": "Review {{UI_COPY_AND_MOCKUPS}} for Ukrainian and English presentation. Check Ukrainian characters including Ґ, Є, І, Ї and apostrophe forms in the actual font; inspect uppercase, punctuation, numbers and mixed Latin/Cyrillic strings. Check that longer labels do not collide with controls or shrink below the measured target. Prefer clear Ukrainian names and document transliteration choices. For Navi, use supplied official Coupa terms where relevant; distinguish fictional game value points from product claims. Flag generated gibberish as placeholder text, not a typo to preserve. Report exact strings, suggested replacements and screenshot locations. Do not claim native-speaker review unless one occurred."
+    },
+    {
+      "pointer": "/prompts/51/prompt",
+      "value": "Create a marketing asset brief for {{THEME}} using accepted {{KEY_ART}}. Plan landscape hero, square social tile, portrait story, small library tile and wide banner with named safe areas, main subject placement, title slot and crop fallback. Treat dimensions as project briefs; verify current store requirements separately before claiming compliance. Produce three message angles: daring mastery, beautiful discoveries and tactical choices. Give five short copy variants per angle and a clean typographic hierarchy. Keep key art distinct from genuine gameplay captures. Preserve military context for FPV and explicit placeholder status for Navi. Deliver briefs and exact image-edit prompts, not fictional exported files or published advertisements."
+    },
+    {
+      "pointer": "/prompts/54/variations/3",
+      "value": "Navi: Savings City / Paper Circuit / AI Network / Value Factory"
+    }
+  ]
+}

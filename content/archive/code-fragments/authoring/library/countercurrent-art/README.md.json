@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/library/countercurrent-art/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "58f9b5ae620949b1070e0ba165e07bf5d776113f54f2ead53c7f2d412ec6bc66",
+  "sourceGitBlob": "611a9e305d42c2782c94509d48ea090d094e3b8e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 40,
+      "end": 490,
+      "source": "Twelve original static illustrations cover **Offset Docks, Sandbar Braid and Crossing Watch** in FPV Front, Ukraine Atlas, 1994 Forever and Spend Network themes. Every original is an untouched **1774 × 887 RGB PNG**, generated at the requested 2:1 aspect ratio. Together they occupy **31,692,501 bytes**; each stays below 4 MiB. These are source candidates: no runtime, catalog, saved/earned binding, production-count or release adoption is included."
+    },
+    {
+      "start": 917,
+      "end": 1631,
+      "source": "| Map            | FPV Front                    | Ukraine Atlas                 | 1994 Forever                 | Spend Network               |\n| -------------- | ---------------------------- | ----------------------------- | ---------------------------- | --------------------------- |\n| Offset Docks   | Lanterns at the Offset Piers | The Boatbuilders’ Morning     | Records across the Canal     | The Shared Receiving Courts |\n| Sandbar Braid  | The Four Sandbar Relays      | Four Gardens beside the River | Last Platforms of Summer     | Four Workshops, One Garden  |\n| Crossing Watch | Two Quiet Signal Posts       | The Ferry Lights Return       | After-Hours Rooftop Exchange | The Two Caretaker Houses    |"
+    },
+    {
+      "start": 2052,
+      "end": 3031,
+      "source": "All twelve generated images and the twelve 384 × 192 thumbnails were visually inspected by the authoring agent. Each theme has distinguishable compositions and lighting; dark structures remain legible against water, open paving or warm windows. Small machinery and figures lose detail at preview size, as expected. Several people are larger than prompted. Ukraine’s ornament and church-like background buildings are invented, without a named-site or historical-authenticity claim. Retro Sandbar has a clock with numeral-like marks despite the no-text prompt, and several screens/signs have incidental marks. Its four halls are more paired than staggered. Retro Crossing has a walkway without an obvious far connection. Coupa-theme scenes are fictional cooperative repair settings, with no actual product, interface, financial or measured sustainability claim. Full per-image deviations are retained in provenance. Root’s separate visual review is not inferred from source checks."
+    }
+  ]
+}

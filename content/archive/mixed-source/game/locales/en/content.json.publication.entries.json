@@ -1,0 +1,74 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/en/content.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "9da8f760e45a0dda4d3c4f85ad3949296b400965",
+  "sourceSHA256": "3bca53318ea0f46a9e0485f82c8e6c0582f1f82160c0cdf735a0e911d956f422",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/auditTrimGoldPulseBlink",
+      "value": "Audit trim / gold pulse + blink"
+    },
+    {
+      "pointer": "/spendNetworkRouteChoices",
+      "value": "Spend Network · Route Choices"
+    },
+    {
+      "pointer": "/spendNetworkSentinelCircuit",
+      "value": "Spend Network · Sentinel Circuit"
+    },
+    {
+      "pointer": "/spendNetworkFractureLines",
+      "value": "Spend Network · Fracture Lines"
+    },
+    {
+      "pointer": "/spendNetworkCountercurrent",
+      "value": "Spend Network · Countercurrent"
+    },
+    {
+      "pointer": "/spendNetworkSharedRoutes",
+      "value": "Spend Network · Shared Routes"
+    },
+    {
+      "pointer": "/spendNetwork",
+      "value": "Spend Network"
+    },
+    {
+      "pointer": "/threeOriginalProceduralPresentationsOfProvenEquipmentLayoutsUkrainianGarden",
+      "value": "Three original procedural presentations of proven equipment layouts: Ukrainian garden heritage, a 1990s arcade circuit, and an abstract spend network. Optional Steady Thread, Power Circuit and Safe Reconcile seals demonstrate authored goals; every map also supports ordinary clears."
+    },
+    {
+      "pointer": "/spendSprite",
+      "value": "Spend Sprite"
+    },
+    {
+      "pointer": "/auditPulse",
+      "value": "Audit pulse"
+    },
+    {
+      "pointer": "/spendSpritePulseBlink",
+      "value": "Spend Sprite / pulse + blink"
+    },
+    {
+      "pointer": "/spendNetworkRouteChoicesTactical",
+      "value": "Spend Network · Route Choices — Tactical"
+    },
+    {
+      "pointer": "/spendNetworkSentinelCircuitTactical",
+      "value": "Spend Network · Sentinel Circuit — Tactical"
+    },
+    {
+      "pointer": "/spendNetworkFractureLinesArcade",
+      "value": "Spend Network · Fracture Lines — Arcade"
+    },
+    {
+      "pointer": "/spendNetworkCountercurrentArcade",
+      "value": "Spend Network · Countercurrent — Arcade"
+    },
+    {
+      "pointer": "/motionLab.spendSpriteFictionalSpendReview",
+      "value": "Spend Sprite · fictional spend review"
+    }
+  ]
+}

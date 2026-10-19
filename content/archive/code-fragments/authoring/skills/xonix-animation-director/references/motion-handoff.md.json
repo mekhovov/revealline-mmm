@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/skills/xonix-animation-director/references/motion-handoff.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "6047ad42affca1afe4b8991c6aade50d6426ad5bcbd0da82a450664e278c944e",
+  "sourceGitBlob": "6beddc437b654c7283c3e77cada8de8ec3422246",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 7131,
+      "end": 7638,
+      "source": "`presentation.style` values remain `microtile`, `hybrid` and `props`. Preserve distinct four-theme shapes, not only palettes: FPV vehicles/rotors/radar, Ukrainian patterned creatures/botanical forms, retro robots/comets/glitches, and business invoices/parcels/linked blocks. The renderer maps theme families `fpv`, `atlas`, `retro`, `navi` to these existing treatments. Keep source crop, center and rotor anchors locked when making a cosmetic trim; an intentional crop requires a new measured anchor record."
+    }
+  ]
+}

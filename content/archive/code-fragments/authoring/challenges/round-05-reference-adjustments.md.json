@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/challenges/round-05-reference-adjustments.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "bd619b2f70ef804ee1f9aaf342220d4cd3c5e2a3c58908e7811d35e014500109",
+  "sourceGitBlob": "498eef38ed1c1779242f8513796765aec68ffc9b",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 15245,
+      "end": 16940,
+      "source": "| Neutral role | FPV FRONT — main | UKRAINE ATLAS | 1994 FOREVER | NAVI NETWORK |\n|---|---|---|---|---|\n| Player / trail | Ukrainian FPV drone / luminous signal trace | Firefly, craft shuttle or small bird, chosen per chapter / stitched trace | Microship / phosphor trace | Approved Coupa/Navi token / illuminated flow |\n| Regular field enemy | Fictional invading military patrol drone | Restless storm mote | Neon orb | Duplicate-charge sprite |\n| Contour patrol | Hostile perimeter crawler | Thorn runner | Circuit crawler | Fee ticker following the network edge |\n| Claimed-space enemy | Hostile scout on cleared sectors | Wandering gust on restored ground | Glitch roaming lit pixels | A recurring expense roaming visible operations |\n| Eroder | Fictional hostile interference unit | Encroaching shadow | Corruption diamond | Cost-leak unit reopening waste |\n| Slow terrain | Stylized interference haze | Marsh or dense thread | Magnetic tape drag | Approval backlog |\n| Lethal terrain | Clearly marked danger patch | Thorn/squall patch | Red short circuit | Red exception zone |\n| Wall | Abstract barrier blocks | Stone or geometric craft tiles | Circuit blocks | Closed ledger blocks |\n| Captured objective | Signal relay; artwork reveals fictional Russian invading military presence | Landmark, craft emblem or historical object | Disk, cartridge or radio station | Supplier node, invoice cluster or savings opportunity |\n| Reward image | Fictional Ukrainian military setting with invading equipment represented clearly | Region- and era-specific art, illustration, photograph or archive | Coherent period scene and hardware culture | Fictional client operations gaining visible savings |"
+    },
+    {
+      "start": 17398,
+      "end": 17783,
+      "source": "Use player, open-field enemy, contour enemy, claimed-space enemy, eroder, slow terrain, lethal terrain, wall and objective as distinct **semantic art roles**. The current schema has only generic field/boundary enemy visual roles, so this expanded role map is another presentation contract extension. Do not turn a Coupa logo or a red embroidered motif into a collision rule implicitly."
+    }
+  ]
+}

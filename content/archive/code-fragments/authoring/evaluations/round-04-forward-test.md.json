@@ -1,0 +1,44 @@
+{
+  "sourcePath": "authoring/evaluations/round-04-forward-test.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "1621f4df1b7903156c247e2cc05891f647cc0c328653107e5ef83ccf3196c63d",
+  "sourceGitBlob": "5b04aa92672fff35110d8a68b5a98cd45d85198e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 404,
+      "end": 906,
+      "source": "Read both `SKILL.md` files and their brief templates, `authoring/CONTRACT.md`, the primitive catalog, relevant schema definitions, Atlas/Navi example packs and selected catalog prompts. The contract and prompt CLI were initially absent while the kit was being assembled; both subsequently appeared. The contract was read and `python3 authoring/prompt.py list --family cross-family` was executed successfully before finalizing this report. These were assembly timing issues, not remaining skill defects."
+    },
+    {
+      "start": 908,
+      "end": 1206,
+      "source": "Executed `python3 authoring/scripts/validate_pack.py authoring/examples/ukraine-atlas.pack.json authoring/examples/navi-network.pack.json --mode draft --json`. Both passed. Atlas has 11 planned assets and Navi 10. Both reports explicitly warn that runtime primitives are specified, not implemented."
+    },
+    {
+      "start": 1320,
+      "end": 1841,
+      "source": "| Probe | Observed result |\n| --- | --- |\n| Atlas art direction changed to watercolor/archive; first reveal uses `style=\"illustration\"`, second `style=\"photograph\"`, both linear sampled | Pass; planned-asset/runtime warnings remain |\n| First reveal uses invented `style=\"watercolor\"` | Reject: style must be one of pixel-art, illustration, photograph, scanned-art |\n| Navi `completion.mode=\"sequence\"` | Reject: mode must be all or any |\n| Navi goal uses invented `goal.ordered-suppliers.v1` | Reject: unknown primitive |"
+    },
+    {
+      "start": 6021,
+      "end": 6159,
+      "source": "**Request:** “Make a Navi Network challenge where the player must reconnect suppliers in a required order, with a five-level progression.”"
+    },
+    {
+      "start": 6161,
+      "end": 6562,
+      "source": "**Proposed response:** Create the five-level design **Navi Network: Supply Chain**, while explicitly reporting that within-board supplier order is not expressible by the current contract. Its marker goal only counts captured markers; all/any goal composition and linear campaign order do not enforce a temporal supplier sequence. A counted-marker pack must not be presented as fulfilling this request."
+    },
+    {
+      "start": 6564,
+      "end": 7032,
+      "source": "**Actions and artifacts:** use the Navi example, `references/level-brief.md`, and an adapted `shared-15-challenge-author` prompt. Proposed outputs are a progression brief and a separate ordered-supplier extension brief under `authoring/drafts/navi-supply-chain/`. A draft of supported background/layout content could accompany those later, but the complete ordered challenge needs the extension. Do not add invented IDs to a pack claiming to pass the existing catalog."
+    },
+    {
+      "start": 9996,
+      "end": 12199,
+      "source": "1. **Good constraint handling:** both skills direct the agent to the actual catalog, distinguish specified from implemented behavior, support mixed reveal media, preserve geometry and forbid invented executable primitives. The negative probes confirm the validator reinforces those instructions.\n2. **Prompt adaptation needs explicit priority.** `atlas-02-reveal-art` is hardcoded to Petrykivka and pixel clusters; `shared-04-style-painterly` specifies gouache and requires an existing inspected source. Neither is directly a new Carpathian watercolor prompt. Adapt medium/region or write a derived prompt and record the change; do not follow a mismatched template literally. The parent has been notified and is adding explicit adaptation guidance.\n3. **Level prompt has scope drift.** `shared-15-challenge-author` prescribes six levels, named linked objectives, optional medals and a deterministic seed. This request asks for five levels; linked/ordered goals and automatic medals are not in the current contract, and a seed does not make a hand-authored level procedurally generated. The skill's catalog-first rule should be stated as overriding these prompt defaults.\n4. **Several requested handoff details belong in companion briefs today.** Palette and reveal filtering have fields; source derivatives, atlas pivots, audio stems, detailed typography and reward animations do not all have formal fields. The theme template acknowledges this. Keep those as proposed asset briefs and do not add unknown properties merely to make the deliverable seem complete.\n5. **Preservation needs a concrete review instruction.** The theme skill says keep rules independent and preserve topology/speed/collision, which is correct. A stronger reskin workflow would explicitly compare the source and resulting rulesets/geometry/entity positions so adaptation does not accidentally switch Atlas's largest-region fill to the military/Navi enemy-seeded fill.\n6. **Validation wording is appropriately limited.** Draft success certifies structure and static semantics only. The skills explicitly require separate runtime/playtest checks; the exercise found no instruction implying a schema-valid draft is playable or fun."
+    }
+  ]
+}

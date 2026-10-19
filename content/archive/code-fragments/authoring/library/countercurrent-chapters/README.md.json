@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/library/countercurrent-chapters/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "34b567e57e38d721c8927e5434cc75ffcce13f6e6df5984bf6efea78af424dc4",
+  "sourceGitBlob": "a821d79248e631cac82f41b1db4aafadf1792d35",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 460,
+      "end": 896,
+      "source": "This source-only candidate packages the three accepted Countercurrent layouts with twelve original reward illustrations in four independent owners: `countercurrent-fpv`, `countercurrent-ukraine`, `countercurrent-retro`, and `countercurrent-coupa`. It does not add a runtime catalog entry, production-register binding, release version, or quality approval. The current twelve-entry catalog ceiling remains a separate capability decision."
+    },
+    {
+      "start": 5548,
+      "end": 5890,
+      "source": "The other accepted theme arguments are `fpv`, `retro` and `coupa`. The writer refuses existing outputs, paths outside this worktree's cache, and symlink parents. It produces `descriptor.json`, `pack.json`, `media.rlmedia` and `inputs.json`; this ordinary-file contract does not claim protection against a hostile concurrent filesystem rename."
+    }
+  ]
+}

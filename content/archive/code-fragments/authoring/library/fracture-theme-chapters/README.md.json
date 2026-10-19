@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/library/fracture-theme-chapters/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "d8baa9e08d64493015f746846594d47b0f51898bec8babd15c4c0e9cdbc68468",
+  "sourceGitBlob": "814b79af208e5a3c5a0c02d9c84fce682c63d049",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 457,
+      "end": 936,
+      "source": "| Theme         | Owner                    | Original art and replacement guide               |\n| ------------- | ------------------------ | ------------------------------------------------ |\n| Ukraine Atlas | `fracture-lines-ukraine` | [Ukraine art](../fracture-ukraine-art/README.md) |\n| 1994 Forever  | `fracture-lines-retro`   | [Retro art](../fracture-retro-art/README.md)     |\n| Spend Network | `fracture-lines-coupa`   | [Spend art](../fracture-coupa-art/README.md)     |"
+    },
+    {
+      "start": 3201,
+      "end": 3642,
+      "source": "The [Ukraine](descriptors/ukraine.json), [Retro](descriptors/retro.json) and\n[Spend](descriptors/coupa.json) descriptors pin both body sizes and SHA-256 hashes,\nthe campaign key and all three exact poster records. Large paired bodies stay\nin the cache; only these small descriptors and [routes.json](routes.json) are\nsource artifacts. The six pair bodies total 25,448,150 bytes; this describes\npayload size, not available installation space."
+    },
+    {
+      "start": 3644,
+      "end": 4008,
+      "source": "| Owner                    | Compact gameplay bytes | `.rlmedia` bytes |\n| ------------------------ | ---------------------: | ---------------: |\n| `fracture-lines-ukraine` |                  9,311 |        8,734,108 |\n| `fracture-lines-retro`   |                  9,393 |        7,967,075 |\n| `fracture-lines-coupa`   |                  9,345 |        8,718,918 |"
+    }
+  ]
+}

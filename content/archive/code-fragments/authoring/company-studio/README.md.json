@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/company-studio/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "d656fd8d7ad8ddc3bd93455721fb655351955c258b3fa0bc255d7f37cc6815af",
+  "sourceGitBlob": "47f280aaf91d2117700b21e740d9231d850d0911",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 2841,
+      "end": 3200,
+      "source": "```sh\nnode scripts/company-studio.mjs import-draft --file coupa-adventure-draft.json --workspace .cache/coupa-source\nnode scripts/company-studio.mjs validate --workspace .cache/coupa-source --edition coupa-adventure\nnode scripts/company-studio.mjs preview --workspace .cache/coupa-source --edition coupa-adventure --out dist/company-previews/coupa-preview\n```"
+    },
+    {
+      "start": 3358,
+      "end": 4507,
+      "source": "Import the new v2 `dist/company-previews/coupa-preview.report.json` in step 06. Regenerate older reports with the current CLI. The report pins `edition-build.json`; the Studio checks that manifest, every admitted file’s byte count and SHA-256, and the compiled catalog and selected JSON against the applied draft before opening the full Solo game. The compiler’s ordinary theme projection is applied to both views, so focused editions omit unrelated campaign themes while edits to selected themes remain detectable. Only selected current media, exact media required by declared retained presentations, and the repository’s declared shared engine assets are admitted. Historical-only originals count in the report’s media totals and are not incorrectly labelled excluded. Changed report totals, exclusions, files, edition identity, invented review approval or an external preview URL are rejected. The “Source reference” link always opens the saved repository game and is explicitly separate from the draft preview. Preview output must use a visible directory: the development server intentionally does not serve `.cache` or other hidden directories."
+    }
+  ]
+}

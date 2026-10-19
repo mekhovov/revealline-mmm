@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/prompts/round-17-optional-mastery.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "9d1f8fb80e2d5c97a189e79ec94b955115d49ccc881158fc6b783df756ffe467",
+  "sourceGitBlob": "67a8c4b75a4ebcf254baafcef3120e8a7c7f950c",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 5699,
+      "end": 5765,
+      "source": "## 6. Future Supply Line for carrier/bomber and Coupa spend themes"
+    },
+    {
+      "start": 5767,
+      "end": 6578,
+      "source": "> Produce a design-and-test brief only for the proposed Supply Line seal. In fictional arcade terms, require two named refills, meaningful crossings of two suppressed fields and one accepted hangar switch within one winning attempt. Compare an equipment-supply presentation with a Coupa-inspired spend-management presentation using approved brand assets and abstract savings markers. Keep accounting claims fictional rather than claiming measured company savings. Identify the missing pickup/field-crossing/switch predicates, rejection cases, exact event-order needs and matched omission tests. The shipped definition validator supports only clean-win plus resistant-cut-cells; do not emit a supposedly valid Supply Line JSON, alter old campaign identities or implement it without a separately scoped extension."
+    }
+  ]
+}

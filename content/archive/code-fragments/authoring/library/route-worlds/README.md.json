@@ -1,0 +1,39 @@
+{
+  "sourcePath": "authoring/library/route-worlds/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "0febd26dc8ac4c32734cd4e89de17f8ef2117684cf1562e342afac9bdfa2a684",
+  "sourceGitBlob": "2f61a0ef57aa697339f2ddf805fdb524555b582e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 33,
+      "end": 482,
+      "source": "These source-only Tactical editions pair nine original reward pictures with the\nthree existing [FPV Route Choices](../fpv-route-choices/README.md) layouts. Ukraine\nAtlas, 1994 Forever and Spend Network each receive a distinct campaign, map and\nposter identity. They reuse the same three geometries; this is **not nine new\nlayouts**. They are teaching/challenge candidates with the existing fixed grades,\nnot an enjoyment or difficulty certification."
+    },
+    {
+      "start": 484,
+      "end": 1288,
+      "source": "| Layout reused | Tactical choice                                                               | Ukraine Atlas           | 1994 Forever      | Spend Network  |\n| ------------- | ----------------------------------------------------------------------------- | ----------------------- | ----------------- | -------------- |\n| Foundry       | Two exits around a warned interceptor; the direct route is a failure control. | Two Lanes, One Forge    | Midnight Workshop | Value Foundry  |\n| Depot         | Time the carrier field, or take the longer route without equipment.           | Crosswind Market Depot  | Crosswind Courier | Shared Harbor  |\n| Switchback    | Compare signal-resistant travel and cable exposure with the safe rim.         | Carpathian Thread Relay | Signal Thread     | Network Garden |"
+    },
+    {
+      "start": 2185,
+      "end": 2699,
+      "source": "[editions.json](editions.json) pins the full provenance records and ordered\noriginal assignments from [Ukraine art](../ukraine-route-art/README.md),\n[retro art](../retro-route-art/README.md) and\n[Spend art](../spend-route-art/README.md). Those folders retain the generated PNGs,\nexact prompts and provenance. Small pseudo-letter decorations and the other\nrecorded visual qualifications remain as documented there; these are fictional\nscenes, not copied product interfaces or authenticated historical illustrations."
+    },
+    {
+      "start": 2989,
+      "end": 3503,
+      "source": "| Edition                | Compact normalized gameplay JSON | Paired `.rlmedia` | Original PNG bytes |\n| ---------------------- | -------------------------------: | ----------------: | -----------------: |\n| `route-worlds-ukraine` |                            8,405 |         8,825,887 |          8,814,876 |\n| `route-worlds-retro`   |                            8,307 |         7,589,633 |          7,578,780 |\n| `route-worlds-coupa`   |                            8,317 |         8,280,993 |          8,270,167 |"
+    },
+    {
+      "start": 3505,
+      "end": 4024,
+      "source": "The compact pack contains no inline image or dependency. Its exact paired media\nfile includes the three originals, presentation assignments and retained owner.\nThe existing `revealline-external-chapter.v1` validator checks the complete pair\nbefore returning a prepared value. Descriptor hashes are in\n[ukraine.json](descriptors/ukraine.json), [retro.json](descriptors/retro.json) and\n[coupa.json](descriptors/coupa.json). Existing embedded readers and the 48 MiB\npack/index and 256 MiB managed-store caps are unchanged."
+    },
+    {
+      "start": 4087,
+      "end": 4486,
+      "source": "```sh\nmkdir -p .cache/route-worlds/outputs\nnode authoring/library/route-worlds/build.mjs ukraine .cache/route-worlds/outputs/ukraine\nnode authoring/library/route-worlds/build.mjs retro .cache/route-worlds/outputs/retro\nnode authoring/library/route-worlds/build.mjs coupa .cache/route-worlds/outputs/coupa\nnode authoring/library/route-worlds/verify.mjs\nnode --test game/test/route-worlds.test.mjs\n```"
+    }
+  ]
+}
