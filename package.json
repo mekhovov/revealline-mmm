@@ -12,11 +12,13 @@
     "test": "node --test test/*.test.mjs",
     "verify": "node scripts/verify-app.mjs",
     "build": "npm run verify && node scripts/build.mjs",
-    "sync:upstream": "node scripts/sync-upstream.mjs"
+    "sync:upstream": "node scripts/sync-upstream.mjs",
+    "verify:authoring": "node scripts/verify-owned-authoring.mjs"
   },
   "devDependencies": {
     "acorn": "8.18.0",
     "lz-string": "1.5.0",
-    "parse5": "8.0.1"
+    "parse5": "8.0.1",
+    "prettier": "3.6.2"
   }
 }
