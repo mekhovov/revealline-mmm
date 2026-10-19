@@ -689,6 +689,348 @@
       "sha256": "a015f79c47d8bac6cd09ba04e50c0c98d759e523eea7d225edbe62a8a5254054",
       "bytes": 11127024,
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/history/46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447.mjs",
+      "destination": "content/archive/owned-source/authoring/production/history/46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "ad9eb4659a16249934b6eefb8582f7b813b0c5b5",
+      "sha256": "46ce076af222227c5895bec7c8516f4e6e8098cfc81a9432d9fb0d6546e6c447",
+      "bytes": 5966,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/history/edbb5c4e73e03b7e516825575bf2fed6d234745cecc514241667097a3d3f8eca.json",
+      "destination": "content/archive/owned-source/authoring/production/history/edbb5c4e73e03b7e516825575bf2fed6d234745cecc514241667097a3d3f8eca.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "c2ed9db72e96ef18abdddec9619a989e94c01de8",
+      "sha256": "edbb5c4e73e03b7e516825575bf2fed6d234745cecc514241667097a3d3f8eca",
+      "bytes": 23077,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/history/e857a548bccaa9649d86ccb6443fbf9fd37f8ff4de8e3f6a7a7da900b92ed8cb.json",
+      "destination": "content/archive/owned-source/authoring/production/history/e857a548bccaa9649d86ccb6443fbf9fd37f8ff4de8e3f6a7a7da900b92ed8cb.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "0c903bd349620fafc1f5a959c33bf63ee19a2105",
+      "sha256": "e857a548bccaa9649d86ccb6443fbf9fd37f8ff4de8e3f6a7a7da900b92ed8cb",
+      "bytes": 36911,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/history/4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a.mjs",
+      "destination": "content/archive/owned-source/authoring/production/history/4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "98bb94616cc676d887309dfb91246b68a8162a3d",
+      "sha256": "4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a",
+      "bytes": 25033,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/production/history/4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a.source",
+      "destination": "content/archive/owned-source/authoring/production/history/4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a.source",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "98bb94616cc676d887309dfb91246b68a8162a3d",
+      "sha256": "4676dbca131440742815a3ed7a5e1e2ec89c121f813e5d8c0ff45f01360dde4a",
+      "bytes": 25033,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/motion-lab/test-collection.mjs",
+      "destination": "content/archive/owned-source/authoring/motion-lab/test-collection.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "2089fd70f6539e8fd07e4b6dec7a41e83eae6194",
+      "sha256": "c0dabc20bcc99e546299acdac5275eba48e1cdc7475c653ae1d04888ae14f625",
+      "bytes": 14124,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-1/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "765dfb0580419ceb01a6ecfc9dd120b14d53bbd0",
+      "sha256": "9146b999f957e605bef1ab9d1eb4c9d98bc7c28112569a3bdcc7b4a0082dbe21",
+      "bytes": 1672,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "74c4bd6a9a635812b2be9011ab26e9e7ab3bf9d3",
+      "sha256": "b872887c2ac2a061c029cee5a80554e9bfe2a68dbe802928d3876c23f078df31",
+      "bytes": 3440,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-3/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-3/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "a4e820709dd4f86ed4871440d1baa65a9598c4ac",
+      "sha256": "564f10ae8179674ae10be23f6d4bd25c2e3f78239820c51b098acff439e6e402",
+      "bytes": 4085,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-4/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-4/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "2a42acbb8b18db726c9e3441f00e35cb8259d2e0",
+      "sha256": "73288c00127f2b62e7c1720119c8275501974fcf27ee5ef9de715a498ef2aad2",
+      "bytes": 2391,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-5/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-5/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "1b3678e769638892dfa3262bc41434908b82056d",
+      "sha256": "2eff39d1d3a7c8d7e34efdc98858ae9013944ef5d08f017b2c607ee245c9e077",
+      "bytes": 2439,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-6/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-6/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "26d8a34bbf062e0c24e9decba48d66f2ddec1125",
+      "sha256": "41e5c9975d154b863c115fcdb1c6517132685812d8a4762d473ef134e270eafa",
+      "bytes": 3222,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-7/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-7/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "bfecc168582ae8328ff0329461b9a18169ea82c8",
+      "sha256": "960a509a66df952fff67e5ad36c68ab68b17c87d5dd6c640a76c5a1535d16e12",
+      "bytes": 3230,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-8/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-8/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "38707d018075173aa6c05562b5b7d7ca700b26e5",
+      "sha256": "0c2938a12b3e4c27afa0bd46065d9a84060c1a99324deaac3b1cfea2971f048c",
+      "bytes": 3197,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-9/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-9/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "9ab90decd654401512e5c98687c6eb4543ca6ba9",
+      "sha256": "88bcca1ce6ba4a4acf72fcb8fb4254e963f5b146299a781c662433a6b7d86d72",
+      "bytes": 3177,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/provenance/index.html",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-10/provenance/index.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "bd142b86f802c228e7b1aab28bca289607d2be7e",
+      "sha256": "9bc65cb0add3f67a901400764c89819bf76521492512e08ab433ada8b07501b7",
+      "bytes": 3219,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/audio/revealline-v1/audition.html",
+      "destination": "content/archive/owned-source/authoring/audio/revealline-v1/audition.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "937c7bf6c45bcc2aefb3097a01c3a35a1391918d",
+      "sha256": "380090abc11962a286e92a1c8a011cc48d235606e6fd85a83f586d59b4206a82",
+      "bytes": 7285,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "scripts/test-external-distribution.mjs",
+      "destination": "content/archive/owned-source/scripts/test-external-distribution.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "6ed6b9f842975971f3da5a3a2125c70ab406e2ed",
+      "sha256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "bytes": 10106,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "game/test/external-chapters-panel.test.mjs",
+      "destination": "content/archive/owned-source/game/test/external-chapters-panel.test.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "155550243cd3638ae70d16061eb9cd620e213f71",
+      "sha256": "4f3ab331a79fcf920c15c7c02a04d063ca7dbc764903ce504131cdfdab89184e",
+      "bytes": 13847,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/motion-lab/README.md",
+      "destination": "content/archive/owned-source/authoring/motion-lab/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "ae7b397d16b32dfca3250e83dea11df26bbc340a",
+      "sha256": "523b4def29292cf75d40bafb675cb94c1eea1214f780160ce3973429beb62871",
+      "bytes": 56331,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/evaluations/round-08-preview-checks.md",
+      "destination": "content/archive/owned-source/authoring/evaluations/round-08-preview-checks.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "1bfd0fe43b7c25de43b4870dc551558e66fd02bf",
+      "sha256": "0aaf3ec27d71769422af9ce184febd66627f764f0c3b81b8586075f9f4f44791",
+      "bytes": 6796,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/evaluations/round-08-authoring-checks.md",
+      "destination": "content/archive/owned-source/authoring/evaluations/round-08-authoring-checks.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "7177bb0f183655ad9a0bfc31fa8189e305c9c257",
+      "sha256": "38b163753fbbb7d2c6c9e3363a4c95e6e976b6de036840dda5b4c393c698dba1",
+      "bytes": 12759,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/fpv-development-preservation/README.md",
+      "destination": "content/archive/owned-source/authoring/fpv-development-preservation/README.md",
+      "sourceRevision": "596b93b24412a3b1cccd10f5eb81bff2ab7a151b",
+      "sourceGitBlob": "81bffab706bdfe2e22ed377306a380e600ea402c",
+      "sha256": "cb8dfa9577e9ce478a478734c7552b8aef25eaa23a4206620c594ebf41571842",
+      "bytes": 13682,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-catalog/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-catalog/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "41e08a06ace7502c7d5d23e9e94aecf8dd4fda39",
+      "sha256": "612a70e6246b6f31f161712fdd363fadbb423edd609ab04ca8ec8e1382616685",
+      "bytes": 4533,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-3/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-3/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "ed37a9b96ac19c6bf22f72733e1c0c4b62f67eb9",
+      "sha256": "7fbba5c734f043f6cc507c11373f58e4b866a0511b928276493d708ad3a4d4aa",
+      "bytes": 4611,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-4/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-4/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "f2dce7cd0c48eb507e61178aba72008c417974a3",
+      "sha256": "fb1039a06b1e003e338f8426420ce3ea23b83675ab1b862a530a80fc145de645",
+      "bytes": 3672,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-5/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-5/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "0530d7ea1f7124d20a7abb41c6dbbed1aeae83d7",
+      "sha256": "c25a986f70eb793a6dae6ff06b326a592895b84f3746823d04184149eac54548",
+      "bytes": 4185,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-6/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-6/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "5a5b6f3913e3dedcfa1b015be2bad2b2411fb818",
+      "sha256": "686925f83f9dbcdf82aca1ffb8337bd70cbc8ab4506cb1ae6a114472e0a8ad22",
+      "bytes": 4202,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-7/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-7/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "941a643076e1ee4ac5430364f080adf1a16f8fb2",
+      "sha256": "0d44f7aefe14720241947f485f5fc38298a4b9287867ef7b75712ce7d2e35e70",
+      "bytes": 4546,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-8/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-8/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "c2cd840737d262538f337ce0f2f7d237c93b1ddd",
+      "sha256": "3e768e9c3e73ab69249042de4feb41f672596bf5056195d5eb490dd68d367696",
+      "bytes": 4486,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-9/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-9/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "7d94bfb27cec1350ef47214d0f014dd9472c79ea",
+      "sha256": "975e14eba1dc6a0ddb7a1dbc8a227f499fcadfa63854bb875abb5176a6c75c14",
+      "bytes": 4029,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/README.md",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-10/README.md",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "a3899ec59385eebabd296941492603bbce5ee8ea",
+      "sha256": "beba623c201a03992309546909f4e99df0718fd2b3fc81bebaef7ca0eed8bb0b",
+      "bytes": 4357,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/provenance/originals.json",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/provenance/originals.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "14c2d641be78844871131da0a7c92d05c0ede6db",
+      "sha256": "4e7ece79365de460ad1e3cdfcf3f3508d7f9b918f9e2b72b5a6c240278613643",
+      "bytes": 5926,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/provenance/selected-originals.json",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/provenance/selected-originals.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "d52a40293d3d0bf4b6235656b6a979b856589f62",
+      "sha256": "7f67f507377bba8612121192047f5fe78c093eea1b9c3f1894cecc4195241dc0",
+      "bytes": 5642,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/provenance/tool-responses.json",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-1/provenance/tool-responses.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "faf98a0a152b20821aa4048a28bde7a0b81f865c",
+      "sha256": "8608351a440f16f1600e361579efeb3e869bac68ea756c0b022162540c73bab6",
+      "bytes": 12255,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/provenance/preparation.json",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-1/provenance/preparation.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "7adf101a8b4f623db3357346ec6046435b599225",
+      "sha256": "3d3e543f79274fd5495a453a74350ea10ef2002d4f95caa30f409adeceb7dbf5",
+      "bytes": 4535,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/equipment-workshop/pack-source.json",
+      "destination": "content/archive/owned-source/authoring/library/equipment-workshop/pack-source.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "984ea042d70c09d9f6ab293c4e30111fad5a0c8a",
+      "sha256": "932b0a68d74deda146939a4ce4c04550a0bfd3dcca6973676b67944ecbc7533a",
+      "bytes": 18389,
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/equipment-workshop/previous/equipment-workshop-1.0.0.json",
+      "destination": "content/archive/owned-source/authoring/library/equipment-workshop/previous/equipment-workshop-1.0.0.json",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "5fa93b9d0cfcb3baf5e57b6ceb96afe8143909d5",
+      "sha256": "91876d315417252a65a36b1a46f3f3e03737ec26ccc08224f52e9c376f76ea1a",
+      "bytes": 18389,
+      "disposition": "preserved-authoring-archive"
     }
   ]
 }

@@ -1,0 +1,642 @@
+{
+  "format": "xonix-pack.v2",
+  "id": "equipment-workshop",
+  "version": "1.0.0",
+  "name": "Equipment Workshop",
+  "description": "Three original procedural presentations of proven equipment layouts: Ukrainian garden heritage, a 1990s arcade circuit, and an abstract spend network. Optional Steady Thread, Power Circuit and Safe Reconcile seals demonstrate authored goals; every map also supports ordinary clears.",
+  "engine": "xonix-core.v2",
+  "dependencies": [],
+  "metadata": {
+    "author": "Reveal Line",
+    "license": "Original project content",
+    "rightsStatus": "Original project content; abstract spend theme is not an official Coupa product or endorsement."
+  },
+  "themes": [
+    {
+      "id": "ukraine",
+      "name": "Ukraine Atlas",
+      "subtitle": "Threads of belonging",
+      "family": "atlas",
+      "player": "ukrainian-bird",
+      "enemyShape": "moth",
+      "patrolShape": "spark",
+      "bossShape": "flower",
+      "scene": "heritage",
+      "labels": {
+        "objective": "Memory",
+        "supply": "Garden gate",
+        "enemy": "Thorn spirit",
+        "boss": "Winter bloom",
+        "currency": "Score",
+        "ability": "Gift"
+      },
+      "palette": {
+        "ink": "#29343c",
+        "paper": "#f3ecdf",
+        "muted": "#aaa18e",
+        "accent": "#e5ba6c",
+        "safe": "#90b7bf",
+        "danger": "#d98277",
+        "field": "#252d3e",
+        "grid": "#344154",
+        "sky": "#dcb894",
+        "land": "#697d73"
+      },
+      "classBodies": {
+        "scout": "ukrainian-bird",
+        "bomber": "ukrainian-bird",
+        "carrier": "ukrainian-bird",
+        "interceptor": "ukrainian-bird",
+        "fiber": "ukrainian-bird",
+        "impact": "ukrainian-bird",
+        "trapper": "ukrainian-bird"
+      }
+    },
+    {
+      "id": "retro",
+      "name": "1994 Forever",
+      "subtitle": "One more credit",
+      "family": "retro",
+      "player": "retro-craft",
+      "enemyShape": "orb",
+      "patrolShape": "spark",
+      "bossShape": "core",
+      "scene": "arcade",
+      "labels": {
+        "objective": "Cartridge",
+        "supply": "Dock",
+        "enemy": "Glitch",
+        "boss": "Mainframe",
+        "currency": "Score",
+        "ability": "Power-up"
+      },
+      "palette": {
+        "ink": "#242a41",
+        "paper": "#eee8df",
+        "muted": "#aaa1b1",
+        "accent": "#f5bf77",
+        "safe": "#7edacb",
+        "danger": "#f57d9b",
+        "field": "#171d35",
+        "grid": "#293050",
+        "sky": "#e49c95",
+        "land": "#565270"
+      },
+      "classBodies": {
+        "scout": "retro-craft",
+        "bomber": "retro-craft",
+        "carrier": "retro-craft",
+        "interceptor": "retro-craft",
+        "fiber": "retro-craft",
+        "impact": "retro-craft",
+        "trapper": "retro-craft"
+      }
+    },
+    {
+      "id": "coupa",
+      "name": "Spend Network",
+      "subtitle": "A clearer picture of spend",
+      "family": "navi",
+      "player": "navi-avatar",
+      "enemyShape": "cube",
+      "patrolShape": "spark",
+      "bossShape": "core",
+      "scene": "network",
+      "labels": {
+        "objective": "Opportunity",
+        "supply": "Sync point",
+        "enemy": "Exception",
+        "boss": "Complexity hub",
+        "currency": "Insight",
+        "ability": "AI assist"
+      },
+      "palette": {
+        "ink": "#173747",
+        "paper": "#edf2ed",
+        "muted": "#85a8b6",
+        "accent": "#e2c775",
+        "safe": "#87cbe0",
+        "danger": "#e69477",
+        "field": "#112b3e",
+        "grid": "#1e3d51",
+        "sky": "#bbdadd",
+        "land": "#689bb1"
+      },
+      "classBodies": {
+        "scout": "navi-avatar",
+        "bomber": "navi-avatar",
+        "carrier": "navi-avatar",
+        "interceptor": "navi-avatar",
+        "fiber": "navi-avatar",
+        "impact": "navi-avatar",
+        "trapper": "navi-avatar"
+      }
+    }
+  ],
+  "classRecipes": [
+    {
+      "id": "scout",
+      "label": "Scout",
+      "description": "Mark hidden objectives permanently; show enemy direction hints for four seconds. No slowing.",
+      "primitive": "scan",
+      "capacity": 0,
+      "cooldown": 6,
+      "duration": 4,
+      "radius": 48,
+      "revision": "1"
+    },
+    {
+      "id": "bomber",
+      "label": "Light carrier",
+      "description": "Pick up one charge at a supply pad; drop a field that stuns nearby field enemies.",
+      "primitive": "stun-field",
+      "capacity": 1,
+      "cooldown": 2,
+      "duration": 2.5,
+      "radius": 3,
+      "revision": "1"
+    },
+    {
+      "id": "carrier",
+      "label": "Heavy carrier",
+      "description": "Carry two charges; each creates the same temporary stun field.",
+      "primitive": "stun-field",
+      "capacity": 2,
+      "cooldown": 2,
+      "duration": 2.5,
+      "radius": 3,
+      "revision": "1"
+    },
+    {
+      "id": "interceptor",
+      "label": "Interceptor",
+      "description": "Absorb one enemy or lane contact: cancel the cut and recover at spawn without losing a life. Self-crossing remains dangerous.",
+      "primitive": "shield",
+      "capacity": 0,
+      "cooldown": 9,
+      "duration": 1.5,
+      "radius": 0,
+      "revision": "1"
+    },
+    {
+      "id": "fiber",
+      "label": "Fiber relay",
+      "description": "Ignore signal interference and scan for hidden relays. Your cable is the live trail: enemy contact still breaks it.",
+      "primitive": "scan",
+      "capacity": 0,
+      "cooldown": 7,
+      "duration": 3,
+      "radius": 30,
+      "signalResistance": true,
+      "moveSpeedMultiplier": 1,
+      "revision": "1"
+    },
+    {
+      "id": "impact",
+      "label": "Impact craft",
+      "description": "Release a close-range stun pulse, abandon the unfinished cut and redeploy at home without losing a life. The pulse never captures territory.",
+      "primitive": "impact-pulse",
+      "capacity": 0,
+      "cooldown": 10,
+      "duration": 3,
+      "radius": 5,
+      "revision": "1"
+    },
+    {
+      "id": "trapper",
+      "label": "Trapper",
+      "description": "Pick up one charge and place a four-second field that slows field enemies to one quarter speed.",
+      "primitive": "slow-field",
+      "capacity": 1,
+      "cooldown": 2,
+      "duration": 4,
+      "radius": 4,
+      "slowFactor": 0.25,
+      "revision": "1"
+    }
+  ],
+  "campaigns": [
+    {
+      "version": "xonix-campaign.v1",
+      "id": "equipment-workshop",
+      "revision": "1",
+      "title": "Equipment Workshop",
+      "themeId": "ukraine",
+      "musicId": "workshop-threads",
+      "levels": [
+        {
+          "version": "xonix-level.v1",
+          "revision": "1",
+          "width": 48,
+          "height": 36,
+          "themeId": "ukraine",
+          "musicId": "workshop-threads",
+          "id": "workshop-01",
+          "name": "Garden of Threads",
+          "spawn": {
+            "x": 24.5,
+            "y": 0.5
+          },
+          "walls": [],
+          "enemies": [
+            {
+              "id": "south-anchor",
+              "type": "bouncer",
+              "x": 8.5,
+              "y": 30.5,
+              "vx": 0.2,
+              "vy": 0,
+              "radius": 0.3
+            },
+            {
+              "id": "north-anchor",
+              "type": "bouncer",
+              "x": 38.5,
+              "y": 5.5,
+              "vx": -0.2,
+              "vy": 0,
+              "radius": 0.3
+            }
+          ],
+          "objectives": [
+            {
+              "id": "west-relay",
+              "x": 9.5,
+              "y": 10.5,
+              "required": true,
+              "hidden": false
+            },
+            {
+              "id": "east-relay",
+              "x": 38.5,
+              "y": 28.5,
+              "required": true,
+              "hidden": false
+            }
+          ],
+          "supplies": [],
+          "signalZones": [
+            {
+              "id": "broad-band",
+              "x": 1,
+              "y": 9,
+              "w": 46,
+              "h": 14,
+              "speedFactor": 0.25,
+              "disableBoost": true,
+              "lockAbility": true
+            }
+          ],
+          "goal": {
+            "coverage": 0.72
+          },
+          "rules": {
+            "lives": 3,
+            "moveSpeed": 8,
+            "boostMultiplier": 1.5,
+            "respawnSeconds": 0.65,
+            "graceSeconds": 1,
+            "playerRadius": 0.18,
+            "pointsPerCell": 10,
+            "objectivePoints": 500,
+            "timeMedals": [20, 50],
+            "cutTimeLimitSeconds": 12,
+            "maxTrailCells": 36,
+            "timeLimitSeconds": 90
+          },
+          "metadata": {
+            "title": "Garden of Threads",
+            "description": "Recommended: Fiber relay. Stitch both memory markers into the garden and reveal 72%. The broad-band region slows ordinary craft, while a resistant craft keeps its speed. For Steady Thread, close at least eight distinct live-cut cells inside active broad-band interference and finish without losing a life. A 12-second cut and 36-cell trail budget still apply.",
+            "author": "Reveal Line",
+            "license": "Original project content",
+            "rightsStatus": "Original teaching layout adapted from Homeward Skies; original procedural art and music."
+          }
+        },
+        {
+          "version": "xonix-level.v1",
+          "revision": "1",
+          "width": 48,
+          "height": 36,
+          "themeId": "retro",
+          "musicId": "workshop-neon",
+          "id": "workshop-02",
+          "name": "Neon Switchboard",
+          "spawn": {
+            "x": 0.5,
+            "y": 18.5
+          },
+          "walls": [
+            {
+              "x": 15,
+              "y": 7,
+              "w": 7,
+              "h": 2
+            },
+            {
+              "x": 14,
+              "y": 27,
+              "w": 8,
+              "h": 2
+            }
+          ],
+          "enemies": [
+            {
+              "id": "north-anchor",
+              "type": "bouncer",
+              "x": 42.5,
+              "y": 9.5,
+              "vx": 0,
+              "vy": 0.3,
+              "radius": 0.3
+            },
+            {
+              "id": "south-anchor",
+              "type": "bouncer",
+              "x": 42.5,
+              "y": 28.5,
+              "vx": 0,
+              "vy": -0.25,
+              "radius": 0.3
+            }
+          ],
+          "objectives": [
+            {
+              "id": "north-relay",
+              "x": 12.5,
+              "y": 5.5,
+              "required": true,
+              "hidden": false
+            },
+            {
+              "id": "south-relay",
+              "x": 12.5,
+              "y": 29.5,
+              "required": true,
+              "hidden": false
+            }
+          ],
+          "supplies": [
+            {
+              "id": "west-supply",
+              "x": 0.5,
+              "y": 18.5,
+              "radius": 2
+            },
+            {
+              "id": "south-supply",
+              "x": 30.5,
+              "y": 35.5,
+              "radius": 2
+            }
+          ],
+          "hangars": [
+            {
+              "id": "west-hangar",
+              "x": 0.5,
+              "y": 18.5,
+              "radius": 2
+            },
+            {
+              "id": "south-hangar",
+              "x": 30.5,
+              "y": 35.5,
+              "radius": 2
+            }
+          ],
+          "signalZones": [
+            {
+              "id": "west-emitter",
+              "x": 2,
+              "y": 16,
+              "w": 4,
+              "h": 5,
+              "speedFactor": 0.25,
+              "disableBoost": true,
+              "lockAbility": false
+            },
+            {
+              "id": "south-emitter",
+              "x": 28,
+              "y": 31,
+              "w": 5,
+              "h": 3,
+              "speedFactor": 0.25,
+              "disableBoost": true,
+              "lockAbility": false
+            }
+          ],
+          "goal": {
+            "coverage": 0.68
+          },
+          "rules": {
+            "lives": 3,
+            "moveSpeed": 8,
+            "boostMultiplier": 1.5,
+            "respawnSeconds": 0.65,
+            "graceSeconds": 1,
+            "playerRadius": 0.18,
+            "pointsPerCell": 10,
+            "objectivePoints": 500,
+            "timeMedals": [12, 25],
+            "cutTimeLimitSeconds": 6.5,
+            "maxTrailCells": 50,
+            "timeLimitSeconds": 65
+          },
+          "metadata": {
+            "title": "Neon Switchboard",
+            "description": "Recommended: Light carrier, then Heavy carrier. Reconnect both cartridge markers and reveal 68%. Power Circuit asks you to refill at both docks, close a cut through two suppressed cells in each emitter region, and switch to Heavy carrier at the southern hangar. Each cut has a 6.5-second budget. All classes can attempt an ordinary clear without this optional seal.",
+            "author": "Reveal Line",
+            "license": "Original project content",
+            "rightsStatus": "Original teaching layout adapted from Homeward Skies; original procedural art and music."
+          }
+        },
+        {
+          "version": "xonix-level.v1",
+          "revision": "1",
+          "width": 48,
+          "height": 36,
+          "themeId": "coupa",
+          "musicId": "workshop-ledger",
+          "id": "workshop-03",
+          "name": "Clear Ledger",
+          "spawn": {
+            "x": 24.5,
+            "y": 0.5
+          },
+          "walls": [
+            {
+              "x": 10,
+              "y": 22,
+              "w": 7,
+              "h": 2
+            },
+            {
+              "x": 32,
+              "y": 24,
+              "w": 6,
+              "h": 2
+            }
+          ],
+          "enemies": [
+            {
+              "id": "cable-cutter",
+              "type": "bouncer",
+              "x": 29.5,
+              "y": 3.5,
+              "vx": -4,
+              "vy": 0,
+              "radius": 0.3
+            }
+          ],
+          "objectives": [
+            {
+              "id": "recovery-relay",
+              "x": 38.5,
+              "y": 28.5,
+              "required": true,
+              "hidden": false
+            }
+          ],
+          "supplies": [],
+          "signalZones": [
+            {
+              "id": "recall-emitter",
+              "x": 22,
+              "y": 2,
+              "w": 5,
+              "h": 5,
+              "speedFactor": 0.5,
+              "disableBoost": false,
+              "lockAbility": false
+            }
+          ],
+          "goal": {
+            "coverage": 0.7
+          },
+          "rules": {
+            "lives": 3,
+            "moveSpeed": 8,
+            "boostMultiplier": 1.5,
+            "respawnSeconds": 0.65,
+            "graceSeconds": 1,
+            "playerRadius": 0.18,
+            "pointsPerCell": 10,
+            "objectivePoints": 500,
+            "timeMedals": [16, 25],
+            "cutTimeLimitSeconds": 6,
+            "maxTrailCells": 48,
+            "timeLimitSeconds": 35
+          },
+          "metadata": {
+            "title": "Clear Ledger",
+            "description": "Recommended: Impact craft. Uncover the opportunity marker and reveal 70% before the 35-second timer expires. Safe Reconcile asks you to pulse from a live cut of at least three cells, stun the cable-cutter, return home, then finish with every life. The pulse abandons the cut; it does not claim territory. An ordinary clear remains available.",
+            "author": "Reveal Line",
+            "license": "Original project content",
+            "rightsStatus": "Original teaching layout adapted from Homeward Skies; original procedural art and music."
+          }
+        }
+      ]
+    }
+  ],
+  "masteries": [
+    {
+      "version": "xonix-mastery-definition.v1",
+      "id": "workshop-steady-thread",
+      "revision": "1",
+      "campaignId": "equipment-workshop",
+      "levelId": "workshop-01",
+      "name": "Steady Thread",
+      "description": "Close one cut through eight distinct interference cells with signal resistance, then win without losing a life.",
+      "all": [
+        {
+          "type": "clean-win"
+        },
+        {
+          "type": "resistant-cut-cells",
+          "zoneId": "broad-band",
+          "minCells": 8
+        }
+      ]
+    },
+    {
+      "version": "xonix-mastery-definition.v2",
+      "id": "workshop-power-circuit",
+      "revision": "1",
+      "campaignId": "equipment-workshop",
+      "levelId": "workshop-02",
+      "name": "Power Circuit",
+      "description": "Refill at both supply pads, close a cut through two suppressed cells in each emitter region, switch to Heavy carrier at the southern hangar, then win.",
+      "all": [
+        {
+          "type": "supply-pickups",
+          "padIds": ["south-supply", "west-supply"]
+        },
+        {
+          "type": "suppressed-region-crossings",
+          "regions": [
+            {
+              "zoneId": "south-emitter",
+              "minCells": 2
+            },
+            {
+              "zoneId": "west-emitter",
+              "minCells": 2
+            }
+          ]
+        },
+        {
+          "type": "hangar-switch",
+          "hangarId": "south-hangar",
+          "classId": "carrier"
+        }
+      ]
+    },
+    {
+      "version": "xonix-mastery-definition.v2",
+      "id": "workshop-safe-reconcile",
+      "revision": "1",
+      "campaignId": "equipment-workshop",
+      "levelId": "workshop-03",
+      "name": "Safe Reconcile",
+      "description": "Use an impact pulse from a live cut of at least three cells to stun the cable-cutter, return home, then win without losing a life.",
+      "all": [
+        {
+          "type": "clean-win"
+        },
+        {
+          "type": "live-cut-impact",
+          "actorId": "cable-cutter",
+          "minTrailCells": 3
+        }
+      ]
+    }
+  ],
+  "visualOverrides": {},
+  "levelVisuals": [],
+  "music": [
+    {
+      "id": "workshop-threads",
+      "name": "Woven Morning",
+      "genre": "ambient",
+      "tempo": 88,
+      "root": 50,
+      "scale": "dorian"
+    },
+    {
+      "id": "workshop-neon",
+      "name": "After-School Arcade",
+      "genre": "chiptune",
+      "tempo": 132,
+      "root": 48,
+      "scale": "minor"
+    },
+    {
+      "id": "workshop-ledger",
+      "name": "Bright Balance",
+      "genre": "synthwave",
+      "tempo": 110,
+      "root": 55,
+      "scale": "major"
+    }
+  ]
+}

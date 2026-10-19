@@ -1,0 +1,22 @@
+# Reserve illustrations · wave 7
+
+Four original reward scenes follow [wave 6](../reserve-illustrations-wave-6/README.md). They are source illustrations, adding no runtime binding, playable level, animation, pack or release.
+
+| Theme | Original | Composition |
+| --- | --- | --- |
+| FPV Front | [Bluehour Coastal Relay](originals/fpv-bluehour-coastal-relay.png) | A compact four-arm quad against a cobalt cove and a lamplit headland, contrasting with the preceding golden balloon meadow. |
+| Ukraine Atlas | [Highland Embroidered Fair](originals/ukraine-highland-embroidered-fair.png) | Three large patterned textiles between timber stalls and open mountain ridges, contrasting with the preceding waterwheel and stream. |
+| 1994 Forever | [Apricot Tape Workshop](originals/retro-apricot-cassette-repair.png) | Foreground cassettes and an opened teal tape machine in a sunlit workshop, contrasting with the preceding outdoor bumper pavilion. |
+| Spend Network | [Citrus Parcel Hub](originals/spend-citrus-parcel-hub.png) | A parcel cart and three broad colored paths leading to matching cubbies, contrasting with the preceding warm bakery. |
+
+The four selected PNGs total **9,112,745 bytes**. Each returned original is **1774 × 887, RGB, 8-bit**, exactly **2:1**. Requested 1536 × 768 dimensions were a target; pixels are retained without resizing, cropping, recoloring or other local edits.
+
+Four separate built-in `image_gen.imagegen` calls used the exact [prompts](prompts/) with no reference images. All outputs were selected, with no rejected variants. [Tool responses](provenance/tool-responses.json) and [original records](provenance/originals.json) retain their source paths, hashes, prompt identities and observations. Tool originals remain unchanged; workspace copies are independent-inode APFS clones. The **36 MiB** wave budget counts both logical copies, raw Git additions and cache evidence without sharing credit. Production requires fresh free space of at least **3.5 GB**, preserving **3.4 GB** for other work.
+
+The author viewed every complete original with original-resolution image inspection. PNG chunk CRCs, Pillow verification and full decoding passed. The read-only [inspector](provenance/png-inspect.py) repeats those checks against the manifest. The scenes use modern stepped contours, geometric forms and selective clustered detail. Color variation remains richer than a fixed palette, so neither a uniform pixel grid nor a certified color count is claimed.
+
+The illustrated quad and relay are fictional scenic equipment, not real-world technical instructions or a particular drone model. The mountain fair uses invented textile decoration and an illustrative landscape, not verified geography or cultural reconstruction. Two foreground cassettes are recognizable, but the opened machine resembles simplified open-reel equipment rather than an accurate cassette deck; an extra cat, framed pictures and tiny illegible equipment marks are retained. The parcel hall adds three repeated generic person/box-like badge pictograms despite the prompt's request for blank, unbranded surfaces. No recognizable company emblem or legible wording was identified; this is not a claim that all decoration is blank. Colored paths illustrate sorting only and define no application routing or workflow.
+
+The [comparison page](provenance/index.html) places complete originals beside wave 6 at **320 × 160 CSS pixels**. The finite loopback [server](provenance/serve.py) exposes only that page and eight selected PNGs. Pass `--previous /absolute/path/to/reserve-illustrations-wave-6` to reuse prior originals without copying them. Root reviewed all four new subjects at that configured size and approved them as source illustrations. The author also viewed the three unmodified native captures; [inspection.json](provenance/inspection.json) binds their hashes and limitations. The full-page export is scaled down; top and bottom viewport captures show the configured small-view composition. Captures retain the earlier requested label “Apricot Cassette Repair”; the final displayed title “Apricot Tape Workshop” describes the observed open-reel apparatus and foreground cassettes. Its stable source ID, filename and exact prompt preserve the requested-versus-observed distinction.
+
+This accepted wave brings the source series to twenty-eight selected works. That is an illustration count, not playable-content coverage. Map crop, reveal-mask readability, reward timing, offline packaging and actual gameplay remain separate work.
