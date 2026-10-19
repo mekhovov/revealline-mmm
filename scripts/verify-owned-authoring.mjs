@@ -110,7 +110,7 @@ function references(node, found) {
       typeof value === 'string' &&
       !value.startsWith('/') &&
       !value.includes(':') &&
-      /\.(?:json|mjs|js|css|html|txt|png|jpg|webp)$/.test(value)
+      /\.(?:json|mjs|js|css|html|txt|png|jpg|webp|mp3|wav|ogg)$/.test(value)
     )
       found.push({ resource: value.startsWith('.') ? value : `./${value}` });
   }
@@ -238,6 +238,39 @@ try {
   );
   console.log(
     `Verified ${result.files.size} generated files, five chapters and four playtest fixtures using locally owned generators.`,
+  );
+  async function stageLocalContent(directory, prefix = '') {
+    for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+      const name = prefix + entry.name;
+      if (!safe(name) || entry.isSymbolicLink())
+        throw new Error(`Unsafe owned test content: ${name}`);
+      if (entry.isDirectory())
+        await stageLocalContent(path.join(directory, entry.name), `${name}/`);
+      else {
+        if (!entry.isFile() || /\.(?:mjs|js|html)$/.test(name))
+          throw new Error(`Expected owned data, not engine code: ${name}`);
+        const bytes = await fs.readFile(path.join(directory, entry.name));
+        if (bytes.length > 32 * 1024 * 1024)
+          throw new Error(`Oversized owned test content: ${name}`);
+        const destination = path.join(work, name);
+        await fs.mkdir(path.dirname(destination), { recursive: true });
+        await fs.writeFile(destination, bytes);
+      }
+    }
+  }
+  await stageLocalContent(path.join(root, 'content/files'));
+  for (const [name, bytes] of result.files) {
+    const destination = path.join(work, name);
+    await fs.mkdir(path.dirname(destination), { recursive: true });
+    await fs.writeFile(destination, bytes);
+  }
+  await fs.writeFile(
+    path.join(work, 'game/editions/assets.json'),
+    JSON.stringify(authoring.assets),
+  );
+  await fs.writeFile(
+    path.join(work, 'game/editions/artwork.json'),
+    JSON.stringify(authoring.artwork),
   );
   execFileSync(process.execPath, ['--test', ...ownedTests], { cwd: work, stdio: 'inherit' });
 } finally {
