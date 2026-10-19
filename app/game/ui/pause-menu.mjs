@@ -94,12 +94,14 @@ export function pauseMusicAction(doc, prefix) {
   const element = doc.createElement('button');
   element.id = `${prefix}-pause-next-song`;
   element.type = 'button';
-  localizedText(element, () => t('interface:quickMusic.next'));
+  const label = () => t('interface:quickMusic.next');
+  localizedText(element, label);
   element.onclick = () => doc.getElementById(`${prefix}-music-next`)?.click();
   return {
     element,
     icon: 'next',
     refresh() {
+      localizedText(element, label);
       const transport = doc.getElementById(`${prefix}-music-next`);
       element.hidden = !transport;
       element.disabled = !transport || transport.disabled;

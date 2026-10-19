@@ -877,8 +877,8 @@
     },
     {
       "path": "game/ui/field-kit-compiled.css",
-      "bytes": 640,
-      "sha256": "43712656adcfc9f643b51339d2a1ca25392a2f4428fa705917ea390207958eee"
+      "bytes": 996,
+      "sha256": "05f92b12ebbb125f7842821d82b67b826f35570a396a373c21e6dc4a3209c9d9"
     },
     {
       "path": "game/ui/menu-scene-catalog.mjs",
@@ -920,8 +920,8 @@
   },
   "repository": "mekhovov/revealline",
   "requestedRef": "codex/brand-content-extraction-20261019",
-  "commit": "39208aea3e2b31c8a62b8551ac18bd68c7da4d60",
-  "tree": "c2b393af7af61ec243d24dbe11261fe1c1c0e735",
+  "commit": "407572093c45f180122fd863950722fe8f01ad95",
+  "tree": "44c3d533be9e909abd7217f13b14d4025bb38506",
   "upstreamVersion": "0.151.1",
   "editionId": "coupa-all",
   "brandId": "coupa",
@@ -6025,8 +6025,8 @@
     },
     {
       "path": "game/ui/field-kit-compiled.css",
-      "bytes": 640,
-      "sha256": "43712656adcfc9f643b51339d2a1ca25392a2f4428fa705917ea390207958eee"
+      "bytes": 996,
+      "sha256": "05f92b12ebbb125f7842821d82b67b826f35570a396a373c21e6dc4a3209c9d9"
     },
     {
       "path": "game/ui/field-kit-components.css",
@@ -6630,8 +6630,8 @@
     },
     {
       "path": "game/ui/pause-menu.mjs",
-      "bytes": 3619,
-      "sha256": "fa2d081584b3a5ce947a65afe6af2e069901994e284bc6213b92114f171c8bc8"
+      "bytes": 3679,
+      "sha256": "c80f3b056a44e66be7a2b7ad59acac2c7b1f4ccd76ff5070041ade2d611e8ac8"
     },
     {
       "path": "game/ui/performance-session.mjs",
@@ -7135,7 +7135,7 @@
     {
       "path": "edition-build.json",
       "bytes": 178717,
-      "sha256": "ced320f788c3e77ef3ceb2a42772f30814f23700d05acba2d38412f1de792c27"
+      "sha256": "9366ff4fe66d2162a7449209936080e6b729701d735403a5bd509dd5041d155b"
     },
     {
       "path": "edition-catalog.json",
@@ -7240,7 +7240,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "33aad66c26abdaa4255959e1b8e97ae94edd5fe5b03be857336f7c4162c11d14"
+      "sha256": "2ac5adad99ab9ef8c376c46cfad3e0df3291b19dd4ffd7218f2951eea9e9f229"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -11114,8 +11114,8 @@
     },
     {
       "path": "game/ui/field-kit-compiled.css",
-      "bytes": 640,
-      "sha256": "43712656adcfc9f643b51339d2a1ca25392a2f4428fa705917ea390207958eee"
+      "bytes": 996,
+      "sha256": "05f92b12ebbb125f7842821d82b67b826f35570a396a373c21e6dc4a3209c9d9"
     },
     {
       "path": "game/ui/field-kit-components.css",
@@ -11699,8 +11699,8 @@
     },
     {
       "path": "game/ui/pause-menu.mjs",
-      "bytes": 3619,
-      "sha256": "fa2d081584b3a5ce947a65afe6af2e069901994e284bc6213b92114f171c8bc8"
+      "bytes": 3679,
+      "sha256": "c80f3b056a44e66be7a2b7ad59acac2c7b1f4ccd76ff5070041ade2d611e8ac8"
     },
     {
       "path": "game/ui/performance-session.mjs",

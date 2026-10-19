@@ -11,3 +11,10 @@
 }
 .field-kit :is(button,.button) { border-radius:6px; }
 .field-kit .home-art { background:linear-gradient(135deg,#071c47,#164b74); }
+/* Canvas palettes remain authored; page chrome uses light text on the branded
+   navy surface even when a historical theme supplies paper/ink variables. */
+body.field-kit {
+  --ink:#f6fbff!important; --paper:#071c47!important;
+  --muted:#b6d3e8!important; --line:#497ea6!important; --accent:#ffdc65!important;
+  color:#f6fbff; background-color:#071c47;
+}
