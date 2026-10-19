@@ -28,6 +28,26 @@ const summary = (run) =>
     combatOwner(run)?.hunt ?? run.hunt,
   );
 
+// These are cosmetic won-attempt milestones, shared by recording and display.
+// Keep the damage owner/order identical to the historical record contract.
+function milestones(run, stats) {
+  const damage =
+    run.classic?.livesLost ??
+    run.huntDowns ??
+    run.metrics?.downs ??
+    run.stats?.downs ??
+    (run.runningEnemies ? Math.max(0, run.rules.lives - run.lives) : 0);
+  return {
+    all: stats.remaining === 0,
+    contact: stats.touchKills === stats.total,
+    clean: damage === 0,
+  };
+}
+export function runHuntMilestones(run) {
+  const stats = summary(run);
+  return stats && run.status === 'won' ? milestones(run, stats) : null;
+}
+
 export function validateHuntRecords(source) {
   const value = boundedJSON(source, {
     maxBytes: 65536,
@@ -195,20 +215,12 @@ export function createHuntRecords({
       if (!stats || run.status !== 'won' || handled.has(run)) return null;
       required(['solo', 'versus', 'team'].includes(mode), 'Choose a supported Hunt record mode.');
       handled.add(run);
-      const key = keyFor(run, mode),
-        damage =
-          run.classic?.livesLost ??
-          run.huntDowns ??
-          run.metrics?.downs ??
-          run.stats?.downs ??
-          (run.runningEnemies ? Math.max(0, run.rules.lives - run.lives) : 0);
+      const key = keyFor(run, mode);
       const item = {
         key,
         score: stats.score,
         time: run.time,
-        all: stats.remaining === 0,
-        contact: stats.touchKills === stats.total,
-        clean: damage === 0,
+        ...milestones(run, stats),
       };
       records = merge(records, [item]);
       save();

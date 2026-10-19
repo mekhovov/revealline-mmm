@@ -142,6 +142,7 @@ export function paintCharacter(
     showRotors = true,
     pixel = 0.05,
     inspectionSlow = false,
+    bodyBackingOwner,
   },
 ) {
   const { width, height } = fittedBodySize(body, image, scale);
@@ -161,7 +162,7 @@ export function paintCharacter(
     ))
       drawEffect(ctx, component, animation, width, height, speedRatio, reducedMotion, pixel);
   if (image) {
-    paintBodyBacking(ctx, body, image, width, height);
+    paintBodyBacking(ctx, body, image, width, height, bodyBackingOwner);
     ctx.imageSmoothingEnabled = body.sampling === 'linear';
     ctx.shadowColor = colors.body;
     ctx.shadowBlur = 1.2;

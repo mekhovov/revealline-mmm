@@ -49,6 +49,7 @@ import { createAnimationState, advanceAnimation } from '../../authoring/motion-l
 import { fittedBodySize, paintCharacter } from '../../authoring/motion-lab/render-character.mjs';
 import { playerBodyOffset } from './player-body-layout.mjs';
 import { bodyMotionPose } from './body-motion.mjs';
+import { createBodyBackingOwner } from './body-backing.mjs';
 import { createSceneArt } from './scene-art.mjs';
 import { createEnemyBodyAssets } from './enemy-body-assets.mjs';
 import {
@@ -254,6 +255,7 @@ export class BoardPainter {
       onContextLoss: (event) => this.onContextLoss(event),
       onContextRestored: (event) => this.onContextRestored(event),
     };
+    this.bodyBacking = createBodyBackingOwner(contextCallbacks);
     this.layerCanvasFactory = layerCanvasFactory;
     this.layers = new Map();
     this.preparationGeneration = 0;
@@ -310,6 +312,7 @@ export class BoardPainter {
   dispose() {
     if (this.disposed) return;
     this.disposed = true;
+    this.bodyBacking.dispose();
     this.invalidate();
     ++this.preparationGeneration;
     this.battlefieldGround.clear();
@@ -342,6 +345,7 @@ export class BoardPainter {
   // source theme, picture, body preset or any simulation-owned reference.
   setPresentation(snapshot = null) {
     if (snapshot !== this.presentation) {
+      this.bodyBacking.clear();
       ++this.paintRevision;
       this.arcadeAdapter.clear();
       this.actorDefeats.reset();
@@ -363,6 +367,7 @@ export class BoardPainter {
     return this.lookReady;
   }
   async loadLook(theme, bodyId, overrides = {}) {
+    this.bodyBacking.clear();
     this.invalidate();
     ++this.preparationGeneration;
     this.pictureFilter.clear();
@@ -482,6 +487,8 @@ export class BoardPainter {
   }
   invalidate() {
     ++this.paintRevision;
+    // Loss callbacks may invalidate caches; keep their recovery obligation live.
+    this.bodyBacking.clear({ preserveLost: true });
     const retired = [...this.layers.entries()];
     this.layers.clear();
     for (const [name, layer] of retired) this.retireLayer(name, layer);
@@ -757,6 +764,7 @@ export class BoardPainter {
     level = {},
     { seed = 0, arcadeCollection = undefined, artRevision = runtimeActorArtRevision() } = {},
   ) {
+    this.bodyBacking.clear();
     this.invalidate();
     ++this.preparationGeneration;
     this.acceptEnemyArtwork({ artRevision, arcadeCollection });
@@ -1632,6 +1640,7 @@ export class BoardPainter {
         ctx.globalAlpha = reduced ? 0.6 : 0.35 + 0.35 * Math.sin(this.time * 15);
       paintCharacter(ctx, {
         ...playerPose,
+        bodyBackingOwner: this.bodyBacking,
         colors: { body: p.safe, accent: p.accent },
         x: state.player.x + bodyOffset.x,
         y: state.player.y + bodyOffset.y,

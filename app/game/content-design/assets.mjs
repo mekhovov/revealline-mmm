@@ -106,15 +106,35 @@ export function assetRevisionMime(source) {
 export function verifiedPreviewBackground(asset, media) {
   const pin = compileAssetRevision(asset);
   required(
-    verified.get(media) === dataIdentity(pin),
+    verified.get(media) === dataIdentity(pin) && typeof media.dataUrl === 'string',
     'Load and verify this exact asset revision before preview.',
   );
   return { dataUrl: media.dataUrl, fit: 'cover', name: pin.alt };
 }
 
-/** Same-origin, bounded bytes, exact digest and dimensions. Merely assigning an
- * asset ID never establishes that art exists, has loaded or is visually approved. */
-export async function loadPreviewArtwork(
+/** Only the privately verified immutable bytes may become an owned display URL. */
+export function verifiedArtworkBlob(asset, media) {
+  const pin = compileAssetRevision(asset);
+  required(
+    verified.get(media) === dataIdentity(pin) && media.blob instanceof Blob,
+    'Load and verify this exact asset revision before decoding.',
+  );
+  return media.blob;
+}
+
+/** Preserve the serialized preview/creator contract and its original deadline. */
+export function loadPreviewArtwork(source, options) {
+  return loadArtwork(source, options, true);
+}
+
+/** Runtime display preparation keeps verified pixels binary until image decode. */
+export function loadVerifiedArtwork(source, options) {
+  return loadArtwork(source, options, false);
+}
+
+/** Same-origin, bounded bytes, exact digest and dimensions. Both representations
+ * share every validation check and the same complete-operation deadline. */
+async function loadArtwork(
   source,
   {
     signal,
@@ -122,6 +142,7 @@ export async function loadPreviewArtwork(
     digest = (bytes) => crypto.subtle.digest('SHA-256', bytes),
     timeoutMs = CONTENT_ARTWORK_LOAD_TIMEOUT_MS,
   } = {},
+  serialize,
 ) {
   const asset = compileAssetRevision(source);
   required(
@@ -191,9 +212,13 @@ export async function loadPreviewArtwork(
             image.height === asset.height,
           'Artwork dimensions or raster header differ from its revision.',
         );
-        // Browser-native encoding avoids materializing a large JavaScript
-        // binary string. The source and its exact header are already verified.
-        const media = { dataUrl: await imageDataURL(bytes, mime, controller.signal) };
+        if (controller.signal.aborted)
+          throw new DOMException('Artwork preview cancelled.', 'AbortError');
+        const media = serialize
+          ? { dataUrl: await imageDataURL(bytes, mime, controller.signal) }
+          : { blob: new Blob([bytes], { type: mime }) };
+        if (controller.signal.aborted)
+          throw new DOMException('Artwork preview cancelled.', 'AbortError');
         verified.set(media, dataIdentity(asset));
         return Object.freeze(media);
       }),

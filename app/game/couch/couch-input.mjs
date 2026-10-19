@@ -3,24 +3,9 @@ import { attachTouchSteering } from '../ui/touch-steering.mjs';
 import { attachPlayfieldContextMenu } from '../ui/playfield-context-menu.mjs';
 import { gamepadCommand } from '../ui/input.mjs';
 import { neutralCommand } from '../multiplayer.mjs';
+import { couchKeyMap } from './keyboard-bindings.mjs';
 
 const directions = ['up', 'down', 'left', 'right'];
-const bindings = {
-  KeyW: [0, 'up'],
-  KeyA: [0, 'left'],
-  KeyS: [0, 'down'],
-  KeyD: [0, 'right'],
-  KeyQ: [0, 'action'],
-  KeyE: [0, 'pickup'],
-  ShiftLeft: [0, 'boost'],
-  ArrowUp: [1, 'up'],
-  ArrowLeft: [1, 'left'],
-  ArrowDown: [1, 'down'],
-  ArrowRight: [1, 'right'],
-  Enter: [1, 'action'],
-  Slash: [1, 'pickup'],
-  ShiftRight: [1, 'boost'],
-};
 const neutralPad = () => ({ ...neutralCommand(), pause: false });
 const emptyPad = (command) =>
   !command.direction && !command.boost && !command.action && !command.pickup && !command.pause;
@@ -42,11 +27,14 @@ export function attachCouchInput({
   steeringEdges = false,
   initialSlots = [null, null],
   controllerSession = null,
+  keyboardBindings = null,
+  keyboardMode = 'duel',
   onPause = () => {},
   onStop = () => {},
   onPads = () => {},
   onAcceptedInput = () => {},
 } = {}) {
+  let bindings = couchKeyMap(keyboardBindings, keyboardMode);
   if (typeof continuousSteering !== 'function')
     throw new TypeError('continuousSteering must be a function.');
   if (
@@ -565,6 +553,15 @@ export function attachCouchInput({
     clear,
     clearPlayer,
     clearPhysical,
+    setKeyboardBindings(value) {
+      const next = couchKeyMap(value, keyboardMode);
+      if (destroyed || JSON.stringify(next) === JSON.stringify(bindings)) return;
+      if (active()) throw new Error('Keyboard bindings can only change outside active play.');
+      // Keep accepted continuous steering; require a fresh physical press for
+      // the new map, including a key held while Settings captured it.
+      clearPhysical();
+      bindings = next;
+    },
     snapshotDirection: (player) => {
       requirePlayer(player);
       return continuous() && !destroyed ? players[player].direction : null;

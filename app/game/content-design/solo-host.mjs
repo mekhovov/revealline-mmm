@@ -9,9 +9,15 @@ import { createCandidateSequence } from './sequence.mjs';
  * controls this host path. Legacy catalogs and published media stay separate. */
 export function createCandidateSoloHost(
   source,
-  { themes, buildVersion, corePackIds = ['journey-opening'], optionalCampaignIds = [] } = {},
+  {
+    themes,
+    buildVersion,
+    corePackIds = ['journey-opening'],
+    optionalCampaignIds = [],
+    serializeArtwork = true,
+  } = {},
 ) {
-  const preparer = createContentAttemptPreparer(source, { themes, buildVersion });
+  const preparer = createContentAttemptPreparer(source, { themes, buildVersion, serializeArtwork });
   const entries = preparer.catalog.entries.map((entry) =>
     freezeDesign({
       ...entry,

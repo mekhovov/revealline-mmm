@@ -1,0 +1,23 @@
+@layer legacy {
+  .multiplayer-keyboard fieldset {
+    min-width: 0;
+    margin: 12px 0;
+  }
+  .couch-keyboard-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .couch-keyboard-row button {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .couch-keyboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
