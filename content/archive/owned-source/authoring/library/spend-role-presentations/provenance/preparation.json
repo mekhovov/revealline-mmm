@@ -1,0 +1,86 @@
+{
+  "format": "spend-role-source-preparation.v1",
+  "at": "2026-09-14T18:01:28.404898+00:00",
+  "base": "e9928cdaad2f55d912aadd2ef25f635fb99e938c",
+  "scope": "Only authoring/library/spend-role-presentations/**; seven source originals/prompts/provenance/inspection, no runtime or release change.",
+  "roles": [
+    {
+      "role": "scout",
+      "proposedName": "Savings Seeker",
+      "narrativePurpose": "Finding savings"
+    },
+    {
+      "role": "bomber",
+      "proposedName": "Value Dispatcher",
+      "narrativePurpose": "Dispatching value"
+    },
+    {
+      "role": "carrier",
+      "proposedName": "Supply Courier",
+      "narrativePurpose": "Carrying supplies"
+    },
+    {
+      "role": "interceptor",
+      "proposedName": "Waste Catcher",
+      "narrativePurpose": "Intercepting waste"
+    },
+    {
+      "role": "fiber",
+      "proposedName": "Workflow Linker",
+      "narrativePurpose": "Connecting workflows"
+    },
+    {
+      "role": "impact",
+      "proposedName": "Flow Opener",
+      "narrativePurpose": "Clearing bottlenecks"
+    },
+    {
+      "role": "trapper",
+      "proposedName": "Risk Cradle",
+      "narrativePurpose": "Containing risk"
+    }
+  ],
+  "narrativeQualification": "Names/purposes are art direction only; no new implemented mechanics, Navi likeness or official mascot authority.",
+  "sourceTextPins": [
+    {
+      "path": "game/content/themes.json",
+      "gitBlob": "ecf8ac03b979abd2228955522107254d4cd10491",
+      "bytes": 4266,
+      "sha256": "93582f7d9ba53753106df7b63928f086820fc0f68357d3c08f26c0b89fb84774"
+    },
+    {
+      "path": "authoring/skills/xonix-asset-creator/SKILL.md",
+      "gitBlob": "f446c231732949fe541228ab01c98a5112af1fb2",
+      "bytes": 14206,
+      "sha256": "c68a0e3138398c5277095c9698292a1bc194adcd0e152ed69bba48adf969b6a6"
+    },
+    {
+      "path": "authoring/skills/xonix-character-collection/SKILL.md",
+      "gitBlob": "df9cd7906843add6a6fa23beda614fd469a7b53d",
+      "bytes": 13952,
+      "sha256": "0c26407d96636a942d470fc84c56ef6635ce81db8df1c69f777981e6f09a093c"
+    },
+    {
+      "path": "authoring/library/countercurrent-art/prompts.json",
+      "gitBlob": "ac4ad5c04d83fed680773522c32c3a3061d64cf5",
+      "bytes": 27895,
+      "sha256": "02652252288ebb936463d2417733cefd07903f287b36fe5c91e8d214d646120f"
+    },
+    {
+      "path": "authoring/library/countercurrent-art/provenance.json",
+      "gitBlob": "5ac12022e7406ca64b33b145f7cd7ef1d0568f0e",
+      "bytes": 25236,
+      "sha256": "72137c0459d22aa1adc5acc53cb3ac95ca526d26fc53e76deca53552f107c435"
+    }
+  ],
+  "skills": "System imagegen and exact e992 project Asset Creator/Character Collection instructions already read in this conversation and applied. No original image editing.",
+  "viewedExistingSource": "Retained Spend Circular Workshop original, whole view_image original detail; fictional helper/materials vocabulary, no image pixels supplied to generation.",
+  "referenceAccess": "Owner and peer read official indexed documentation; direct open redirected to upgrade_browser. No official image pixels were viewed or copied.",
+  "generation": "Seven independent text-only image_gen.imagegen calls planned; actual outcomes preserved separately. No edits or reference inputs.",
+  "budget": {
+    "limitBytes": 33554432,
+    "accounting": "Retained tool originals + actual new Git objects + small text/screens/cache; exclusive APFS workspace clones share data initially. Before each additional output account raw equal-size future Git allowance and2MiB metadata/inspection reserve; stop if next result cannot fit.",
+    "freshFreeBeforeGeneration": 5388005376
+  },
+  "plannedCalls": 7
+}

@@ -1,0 +1,27 @@
+{
+  "status": "BOUNDED_OFFICIAL_TEXT_REFERENCE_ONLY",
+  "at": "2026-09-14T17:58:57.847469+00:00",
+  "sources": [
+    {
+      "url": "https://docs.coupa.com/en/coupa-glossary/overview/c",
+      "access": "Official indexed page text was returned by web search; direct open redirected to docs.coupa.com/upgrade_browser.",
+      "observations": [
+        "Navi is described as conversational AI for procurement questions, support and workflow guidance.",
+        "Navi Agent Studio is described as a place to discover and build specialized agents for business processes.",
+        "Relevant glossary concepts include carts, supplier catalogs, connected systems, workflow canvases, supplier verification and receipt storage."
+      ],
+      "visualAuthority": "The inspected glossary text establishes product vocabulary, not a mascot or game-character design."
+    },
+    {
+      "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/answer-csp-related-questions-with-csp-supplier-assistance-agent",
+      "access": "Official indexed page text and figure descriptions were returned; direct open redirected to upgrade_browser. Indexed page reports July 17, 2026 update.",
+      "observations": [
+        "The documented interaction is a Navi icon/button opening a movable chatbot window with prompt input, send control, help menu and referenced answers.",
+        "Its figure description identifies a chatbot user interface rather than a character design."
+      ],
+      "visualAuthority": "No image pixels were opened or downloaded. This is documentation-text evidence of product UI; it does not establish a mascot appearance."
+    }
+  ],
+  "designInference": "Use original fictional Spend Network craft informed by guidance, routing, catalogs, approvals and receipts. An assistant/nav motif is an interpretation, not an official Coupa/Navi mascot. Keep any game art provenance separate from these product references.",
+  "scope": "Two relevant official documentation pages; no broad research, image downloads, generation, body reads, tests, source edits or release actions."
+}

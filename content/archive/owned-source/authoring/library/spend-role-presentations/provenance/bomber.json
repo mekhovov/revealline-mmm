@@ -1,0 +1,55 @@
+{
+  "format": "spend-role-original.v1",
+  "at": "2026-09-14T18:04:43.918098+00:00",
+  "role": "bomber",
+  "proposedName": "Value Dispatcher",
+  "narrativePurpose": "Dispatching value",
+  "implementedMechanics": false,
+  "officialMascotClaim": false,
+  "tool": "image_gen.imagegen",
+  "generation": "One fresh text-only call; no image inputs",
+  "toolModel": "Not exposed; not inferred",
+  "toolOriginalPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-ed801605-721d-4b23-b325-f1826acb5e4a.png",
+  "original": {
+    "path": "originals/bomber.png",
+    "bytes": 751704,
+    "sha256": "9657e96d874439abee5e25edc74addfbc09251b29d94e4181cff519234cb06d1",
+    "width": 1254,
+    "height": 1254,
+    "bitDepth": 8,
+    "pngColorType": 6,
+    "pngChunks": [
+      "IHDR",
+      "caBX",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "allChunkCRCsValid": true
+  },
+  "prompt": {
+    "path": "prompts/bomber.txt",
+    "sha256": "a234da543ec92ebd02f64eab3c1ec3fcd3c206447b7df0f428876b5f9162d92d",
+    "formatting": "Exact request plus one final LF"
+  },
+  "copy": {
+    "method": "Exclusive APFS fclonefileat, no fallback",
+    "originalInode": 76094085,
+    "cloneInode": 76094115
+  },
+  "transformations": [],
+  "runtimeBinding": null,
+  "inspection": "Completed full-image and alpha checks in full-image-inspection.json and alpha-inspection.json; native CSS evidence and limitations in ../inspection/game-scale-receipt.json.",
+  "freshFreeBeforeClone": 5271375872,
+  "conservativeOriginalAndRawGitPlus2MiBReserveBytes": 4382398
+}

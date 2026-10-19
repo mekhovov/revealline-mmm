@@ -1,0 +1,50 @@
+{
+  "format": "spend-role-original.v1",
+  "at": "2026-09-14T18:09:59.774379+00:00",
+  "role": "impact",
+  "proposedName": "Flow Opener",
+  "narrativePurpose": "Clearing bottlenecks",
+  "implementedMechanics": false,
+  "officialMascotClaim": false,
+  "tool": "image_gen.imagegen",
+  "generation": "One fresh text-only call; no image inputs",
+  "toolModel": "Not exposed; not inferred",
+  "toolOriginalPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-dd5c0b9e-e953-460e-93a2-38bd07a1f832.png",
+  "original": {
+    "path": "originals/impact.png",
+    "bytes": 467205,
+    "sha256": "2d90408c213125725c49ab837cccc56d2fe53c873f0e895dd0f5bb6f6df82233",
+    "width": 1254,
+    "height": 1254,
+    "bitDepth": 8,
+    "pngColorType": 6,
+    "pngChunks": [
+      "IHDR",
+      "caBX",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "allChunkCRCsValid": true
+  },
+  "prompt": {
+    "path": "prompts/impact.txt",
+    "sha256": "f9977f68a4175017233f77eddb5e44d8b112b2ffa11fd4feebb3ed6c36949af1",
+    "formatting": "Exact request plus one final LF"
+  },
+  "copy": {
+    "method": "Exclusive APFS fclonefileat, no fallback",
+    "originalInode": 76097907,
+    "cloneInode": 76097991
+  },
+  "transformations": [],
+  "runtimeBinding": null,
+  "inspection": "Completed full-image and alpha checks in full-image-inspection.json and alpha-inspection.json; native CSS evidence and limitations in ../inspection/game-scale-receipt.json.",
+  "freshFreeBeforeClone": 4191653888,
+  "conservativeOriginalAndRawGitPlus2MiBReserveBytes": 8271994
+}

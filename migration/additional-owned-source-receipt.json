@@ -1,0 +1,529 @@
+{
+  "format": "revealline-owned-archive-receipt.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "scope": "Additional named archive ownership confirmed through the reserve catalog and the Navi/Spend Network authoring references. These files are not published in the app.",
+  "items": [
+    {
+      "sourcePath": "authoring/examples/navi-network.pack.json",
+      "sourceGitBlob": "6f97376dd5d603e5bf48d1f13a058cf4ae9e965a",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/examples/navi-network.pack.json",
+      "bytes": 10733,
+      "sha256": "baeb9445144ed6ac21877ee44dcd7f1e7d2d57c0ad8a7bcf1eee79ace604bc85",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/originals/spend-circular-workshop.png",
+      "sourceGitBlob": "c9549ff67bfe8b8d80ef679e1b8863ca2214c949",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-1/originals/spend-circular-workshop.png",
+      "bytes": 2820419,
+      "sha256": "d62070c73c86808cb43fdcc7117da98bcd625621aa44924ce9139c602bb5c6d5",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/prompts/spend-circular-workshop.txt",
+      "sourceGitBlob": "6642281a98a8f54016f1608c7547b51cde391b13",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-1/prompts/spend-circular-workshop.txt",
+      "bytes": 2346,
+      "sha256": "1e8e7e3e331341c003c8d252de67fef4bf8de100b1bb5012cb567d3b5fc58027",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/originals/spend-storybook-rail-depot.png",
+      "sourceGitBlob": "8ce158e3e1f758d52d5f62a5e5553ffab07186ea",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-10/originals/spend-storybook-rail-depot.png",
+      "bytes": 1803179,
+      "sha256": "f0dd68a9228b140047ca071e9526679cfeea3b29a921b7f0434120f3186e1ba0",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/prompts/spend-storybook-rail-depot.txt",
+      "sourceGitBlob": "122af812aaaaf2361f07b51e37fbc59dd782fbc7",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-10/prompts/spend-storybook-rail-depot.txt",
+      "bytes": 1673,
+      "sha256": "63b6e70e02f6e240598b45ac88decef95c25c1df341824a984565249a7b7a7f4",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange-clean.png",
+      "sourceGitBlob": "d21dd94089d762b11b437020a927731f17fb1649",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange-clean.png",
+      "bytes": 2549711,
+      "sha256": "560949cad2ee1031dd5f5edd9c5115db576db5d8133ae3712faa11243cee0971",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange.png",
+      "sourceGitBlob": "fb5d4e51d7324316e4c527efbbf44859635ea4ca",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange.png",
+      "bytes": 2656655,
+      "sha256": "6141755ee163d55f8e949488391238ff0f740d279406b74d3f5f91b60dcfa341",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange-cleanup.txt",
+      "sourceGitBlob": "631d7f685f41ac3b4b0a72ce30803f02add551b8",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange-cleanup.txt",
+      "bytes": 538,
+      "sha256": "8c6c7de6b21f9661636fa86b9e882681b8de23f656c33eb847e6ade400ef9c22",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange.txt",
+      "sourceGitBlob": "ee5cb1a19c28e05be3e9b66be6a64cb198be9b01",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange.txt",
+      "bytes": 2335,
+      "sha256": "af7b9acae0dfc51534dca1afb14303f45f1a2f3ac437a288e727b1383d988112",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-3/originals/spend-copper-kettle-bazaar.png",
+      "sourceGitBlob": "a7934688a039ca041531b7f314ff2406e58b908d",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-3/originals/spend-copper-kettle-bazaar.png",
+      "bytes": 2175587,
+      "sha256": "6114aefe292f9c5410ad27cfd4c959fb0054a0374cfb8794eb6144a6ba6f9edb",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-3/prompts/spend-copper-kettle-bazaar.txt",
+      "sourceGitBlob": "319525c5cff3d6d3045cbcf42eafe3b6351fd5c6",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-3/prompts/spend-copper-kettle-bazaar.txt",
+      "bytes": 2016,
+      "sha256": "30e04c040fa14958e1cf21751f33af07993691b53f389bf26a9c9c7a5147fce1",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-4/originals/spend-canal-parcel-crane.png",
+      "sourceGitBlob": "1bec62387488376fa5d979ac1e9063e224eb5ab0",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-4/originals/spend-canal-parcel-crane.png",
+      "bytes": 2670342,
+      "sha256": "407561c2a427e24175431c19d970f9581f9a6bab7d1adbcdbd69c87bb0e62f2b",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-4/prompts/spend-canal-parcel-crane.txt",
+      "sourceGitBlob": "28183fa9c193bded58c288707cd7bd740ccf1cda",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-4/prompts/spend-canal-parcel-crane.txt",
+      "bytes": 1742,
+      "sha256": "661f9f029c6c4dcd1b5224cae4a3b42812e3aeefb1842ade787a9889c5503be8",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-5/originals/spend-raincatcher-rooftops.png",
+      "sourceGitBlob": "bb324d769b31b94e236a56b8da6dcd114ec959f6",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-5/originals/spend-raincatcher-rooftops.png",
+      "bytes": 2520491,
+      "sha256": "f94b2fef94700d10a68d770e4b2ea89ec97905e4c992cf26c5901ef983dafaaf",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-5/prompts/spend-raincatcher-rooftops.txt",
+      "sourceGitBlob": "39c418372b3d1adf36e01461aa5f1865f83533ed",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-5/prompts/spend-raincatcher-rooftops.txt",
+      "bytes": 1839,
+      "sha256": "2f383f30a9a3c073fa6b590de71400684245d7fc02e7f4a6802816f9386d89d6",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-6/originals/spend-coral-dawn-bakery.png",
+      "sourceGitBlob": "f82426c7ebf15396ab6a74c06accea3533c2cdd9",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-6/originals/spend-coral-dawn-bakery.png",
+      "bytes": 2794201,
+      "sha256": "9c62a106d37c55e5b30cc9f4f12e34b1422e6fdc9bef2763e06c581d713861f0",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-6/prompts/spend-coral-dawn-bakery.txt",
+      "sourceGitBlob": "19f30087bf7573e562a0c2c45caf1605c9bd7c2d",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-6/prompts/spend-coral-dawn-bakery.txt",
+      "bytes": 2026,
+      "sha256": "76a5dd3a941ec9ba1fce072e061f75534af60d4eb377004123c3c5f2fe0ccc84",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-7/originals/spend-citrus-parcel-hub.png",
+      "sourceGitBlob": "dc6e4774ed3c4f40fc8ff947cc23212a166b1fd1",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-7/originals/spend-citrus-parcel-hub.png",
+      "bytes": 1916377,
+      "sha256": "a02df60240645d8a010619ae24e994646f71601cfb754db78d15a875bf301c52",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-7/prompts/spend-citrus-parcel-hub.txt",
+      "sourceGitBlob": "4e3a309f232f3248194f1a75f9743fdfcae2d642",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-7/prompts/spend-citrus-parcel-hub.txt",
+      "bytes": 2109,
+      "sha256": "2e27f658c027bf9f0e13ce21482c627a43e9fb26bcfece6e65bcb4e79a9b93a5",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-8/originals/spend-mint-canal-tram.png",
+      "sourceGitBlob": "74c96ee80d2e90e92afb3ffdd4fba38f35f77307",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-8/originals/spend-mint-canal-tram.png",
+      "bytes": 1501782,
+      "sha256": "a02eedd7fac88c0c1cceb07903b027bb6b3dc5739d7ffecf9906ecd38f963aba",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-8/prompts/spend-mint-canal-tram.txt",
+      "sourceGitBlob": "945d05ef5857dde8be2518ca1aa4ecf6e961111a",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-8/prompts/spend-mint-canal-tram.txt",
+      "bytes": 1737,
+      "sha256": "b0fdbcca43c6cc9fc14031f3635e21d83ab9c4e12a58f4b4c4e3ef988fc31df5",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-9/originals/spend-sunroof-market-house.png",
+      "sourceGitBlob": "caba9229dbcb8a8479ef1615b87fd21c898c86b1",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-9/originals/spend-sunroof-market-house.png",
+      "bytes": 2006763,
+      "sha256": "d0328adc0ce24e22afbcaf67e09d93c0eb03e7a805d30890532284ecc0a1f24c",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-9/prompts/spend-sunroof-market-house.txt",
+      "sourceGitBlob": "d1dda4e3174290ad2e3077207bd08f8d4461fc79",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-9/prompts/spend-sunroof-market-house.txt",
+      "bytes": 1763,
+      "sha256": "512c0afdf32685dae7af8b17cd5ba8e8bb8bc3e6be6d197a774f0dfa0e63b76d",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/README.md",
+      "sourceGitBlob": "b1f3f8ceace67910a0e8d1c00cb052891bc629d6",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/README.md",
+      "bytes": 6155,
+      "sha256": "2abbd725ccb89764549f85a13ef5cddccaa7b00e76dca4c28d0964da5d1e7693",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/east-pixelated.jpg",
+      "sourceGitBlob": "a0d9d8adfa790fea33537f6c54bea3dfb27a86b9",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/east-pixelated.jpg",
+      "bytes": 88305,
+      "sha256": "42847003fa5c4def715169fdce730554e90e47c71d01d1ae0bf35729864b4547",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/game-scale-receipt.json",
+      "sourceGitBlob": "c66dad4e2c3faab8741dbf101e0dc592789ce1ef",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/game-scale-receipt.json",
+      "bytes": 3399,
+      "sha256": "3696c92ead5bffe140b9bb4e09163bab48a059df0aa546ccd06e31eb05dd6df5",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/index.html",
+      "sourceGitBlob": "e47a31986fe475728fd411342e34d7533bb632d2",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/index.html",
+      "bytes": 3931,
+      "sha256": "02282f05a47d6f97ef890c403889b2c74fa3a2bbcbae78cff3b5263a67d94105",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/inspect-alpha.py",
+      "sourceGitBlob": "cc34e8cc1c7c18f0cd339c418a1b6bf62e9dc36e",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/inspect-alpha.py",
+      "bytes": 3079,
+      "sha256": "1e685fb19c5618fb3f4c12f00a4ec1ada1f401b3c23d46992f42ba8220d4c46e",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/north-auto.jpg",
+      "sourceGitBlob": "ebba6f901f1545376f10a81bcb09931cb6a18f6e",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/north-auto.jpg",
+      "bytes": 87538,
+      "sha256": "29eb99044437fbc2fab649ff1e3c15f9556a7e6165cf6d93d7e72718d5c55955",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/bomber.png",
+      "sourceGitBlob": "520004eb6bd8f5b33ab5d64b76be6fa5f3351c92",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/bomber.png",
+      "bytes": 751704,
+      "sha256": "9657e96d874439abee5e25edc74addfbc09251b29d94e4181cff519234cb06d1",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/carrier.png",
+      "sourceGitBlob": "1d17be7cd74f93649da56f44bbee96ba521a0a03",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/carrier.png",
+      "bytes": 557242,
+      "sha256": "319ca85aafe43a1e6d321c792386bd8d8773e5ab929eb0a2be8495b6a8d4cabc",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/fiber.png",
+      "sourceGitBlob": "9ef911a49ce6598fa19969e787ec9a5f307da372",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/fiber.png",
+      "bytes": 607264,
+      "sha256": "16dabc04250ffb1630c28bbc2c41372b837102445d27c9ce4a6f3bef3608d854",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/impact.png",
+      "sourceGitBlob": "e6c6594112e901abb91554effc08788b4636fbec",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/impact.png",
+      "bytes": 467205,
+      "sha256": "2d90408c213125725c49ab837cccc56d2fe53c873f0e895dd0f5bb6f6df82233",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/interceptor.png",
+      "sourceGitBlob": "05f6cc0ee24bd26a9de3f54ced680f7a60e23f9f",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/interceptor.png",
+      "bytes": 313087,
+      "sha256": "340674c4dfb4ae6a9b501bb1849d47edb7ca81af96f888fcf26a228f7eb7e9c0",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/scout.png",
+      "sourceGitBlob": "30df68edcd28cf3cafbcd267c10d495a0b808d15",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/scout.png",
+      "bytes": 390919,
+      "sha256": "fedd015335b836535d3078d4f819576344fa74a1c82e172d9b61047b68edf566",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/trapper.png",
+      "sourceGitBlob": "72f180d1fd1be519b0f4bff8651708e7df629b5d",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/trapper.png",
+      "bytes": 672321,
+      "sha256": "5fe7ef3796e27ab33d6e5ad7c1a748bee66e23fa28fa18293953fd7e72591015",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/bomber.txt",
+      "sourceGitBlob": "efc068eebb86884e6f9bdb174f53c57cba355c51",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/bomber.txt",
+      "bytes": 2280,
+      "sha256": "a234da543ec92ebd02f64eab3c1ec3fcd3c206447b7df0f428876b5f9162d92d",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/carrier.txt",
+      "sourceGitBlob": "6fbe54ab2da7a9bb909457120ded2c97781211cb",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/carrier.txt",
+      "bytes": 2274,
+      "sha256": "cf43d21843e4d474fff09f96a556205a85ab6567ea27c92fae6dc35fc4719406",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/fiber.txt",
+      "sourceGitBlob": "cb95f67a6aab0ebb8a26a4a0f24631833036cb30",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/fiber.txt",
+      "bytes": 2309,
+      "sha256": "3eba2134b6feefaad704f74946fbe1b3de51565890f6150d07d6769277195bde",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/impact.txt",
+      "sourceGitBlob": "e87f5b487ecb5e4f00bec29918f42b8e62ab1296",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/impact.txt",
+      "bytes": 2261,
+      "sha256": "f9977f68a4175017233f77eddb5e44d8b112b2ffa11fd4feebb3ed6c36949af1",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/interceptor.txt",
+      "sourceGitBlob": "928f95f483c1f46031d1aeb5edc3536464c82b2e",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/interceptor.txt",
+      "bytes": 2225,
+      "sha256": "d708ec5141cdab95924b2f795788815cb9ed12d1909bfac9d7bafb6226392d17",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/scout.txt",
+      "sourceGitBlob": "b6bdb976727a867f43117c7d5add3e841292df35",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/scout.txt",
+      "bytes": 2230,
+      "sha256": "a2d50c71013d4fefc70818fa5578b32ca2889c8f4bdfe3dd37dc10d5e48f46c1",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/trapper.txt",
+      "sourceGitBlob": "f7b38f5efdb7e4f7dd2fd3141a7e34ac1432df52",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/trapper.txt",
+      "bytes": 2325,
+      "sha256": "17c1fd7e483a17ef2361f04591f461d4217bd0ae951f885be3c142a947374179",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/alpha-inspection.json",
+      "sourceGitBlob": "e3b7d9f53d3d1980dec51931a7637d7d51ba57c8",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/alpha-inspection.json",
+      "bytes": 29365,
+      "sha256": "7fa98777c6f9743f54648a7dbc20b777099c5d6b5d1d90b6402fb3920f846594",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/bomber.json",
+      "sourceGitBlob": "ad436cf23a4e1b68ea37f0057a44c06335b36e09",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/bomber.json",
+      "bytes": 1717,
+      "sha256": "fc099ad967e381d17a859d237cfd727f76e16e0d054f0e373c83181f9efc3cca",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/carrier.json",
+      "sourceGitBlob": "5721fb44d9c2adf3d0026aacbd6bfeef359fe92e",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/carrier.json",
+      "bytes": 1676,
+      "sha256": "14ad7d974be7f6707813ff4a4d6e3ae1d6a121c6066aea7c22c4ac5818cff912",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/fiber.json",
+      "sourceGitBlob": "7babfe9a343ecb894cb59fe5403455245ca62334",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/fiber.json",
+      "bytes": 1674,
+      "sha256": "61f31db9c4e7be86e36eb0c9decf32efecf465f48c7bc1c523345d00307898ee",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/full-image-inspection.json",
+      "sourceGitBlob": "ac6b880e4ee1d1433f4c7d06f2f43bf476042e18",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/full-image-inspection.json",
+      "bytes": 6161,
+      "sha256": "05e714dd973b5579bd44852bb7b706337946ab251be849d4fdd006dee66c79c7",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/impact.json",
+      "sourceGitBlob": "e2b44ae5aa74a4656522eb20e25b0f15d0948c20",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/impact.json",
+      "bytes": 1645,
+      "sha256": "cf9e51cfd6c244a3aa59dfe2669e4741398b5d6aafbf1e687bdd07cc3d7e3ff6",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/interceptor.json",
+      "sourceGitBlob": "ceb891a07e25b94726ec4fc8310c59ebe8401545",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/interceptor.json",
+      "bytes": 1632,
+      "sha256": "695aa68689066193901ba09012f67796aaeeb1416110c5e9a8fe4f03ea98d961",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/official-reference.json",
+      "sourceGitBlob": "1955ff997db13c475bc73d1c406e870cf80c51fa",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/official-reference.json",
+      "bytes": 2130,
+      "sha256": "0df3bea6492851e8eddfa18cc570e4d373cb5e286d2350d9199bd1cc52aadbde",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/preparation.json",
+      "sourceGitBlob": "192130326fae651e90e8ed2b7257cc3e043988d1",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/preparation.json",
+      "bytes": 3641,
+      "sha256": "33b32c28b6a950052e105a1619a4a895eb815de52c3676897949f2b2cca2cb42",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/reference-theme.json",
+      "sourceGitBlob": "ca08583fc4eb0335afdec5631707e2d44b833c77",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/reference-theme.json",
+      "bytes": 1191,
+      "sha256": "07b0a59034ed14d5c3f9ecef17ff162624d205673ddaa5167541ac6c61a668bd",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/role-briefs.json",
+      "sourceGitBlob": "8e6b589e33f27c8c4f76b99ae80aaface5bfda5e",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/role-briefs.json",
+      "bytes": 21941,
+      "sha256": "c3c05c279c27f90ba9dbc615ab9c2adf41e9dae5ee9b320ac3fa48442c53f410",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/scout.json",
+      "sourceGitBlob": "7d620f7e984462bcb909c0cd5e6f8f64f10f1405",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/scout.json",
+      "bytes": 1626,
+      "sha256": "27d5c54fe92173f12ea069dc46b1766e89ced84996bb52a1d44c5da0e333ffd8",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/tool-responses.json",
+      "sourceGitBlob": "cdce56f915100e17e573606cfc7018560b20e412",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/tool-responses.json",
+      "bytes": 20512,
+      "sha256": "26983cfa80ba23a04cbfabadc5941390fd470f69099bb3b0a406aed438a787ff",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/trapper.json",
+      "sourceGitBlob": "d3573ab945a0142e16410f67e752cdaf0bdbf0eb",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/trapper.json",
+      "bytes": 1685,
+      "sha256": "0f3b41ab645b6457900d02379fa9cb55535e45e86714de085a58084edd85dee8",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/media/examples/navi-network.media.json",
+      "sourceGitBlob": "8d87b28756205543cc8948115ee833a08fe5318d",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/media/examples/navi-network.media.json",
+      "bytes": 16767,
+      "sha256": "f0d926d09fe4c0e7a6d5f964d7e1da8c9fd882281b32fdee353b13dac2ddf652",
+      "disposition": "preserved-authoring-archive"
+    }
+  ]
+}

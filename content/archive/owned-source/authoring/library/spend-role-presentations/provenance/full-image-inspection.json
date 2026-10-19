@@ -1,0 +1,157 @@
+{
+  "format": "spend-role-full-image-inspection.v1",
+  "at": "2026-09-14T18:14:08.100039+00:00",
+  "reviewer": "Lagrange",
+  "method": "Every one of seven saved originals individually viewed with view_image detail=original; read-only full alpha/Pillow inspection separately retained.",
+  "sourceBase": "e9928cdaad2f55d912aadd2ef25f635fb99e938c",
+  "rows": [
+    {
+      "role": "scout",
+      "path": "originals/scout.png",
+      "bytes": 390919,
+      "sha256": "fedd015335b836535d3078d4f819576344fa74a1c82e172d9b61047b68edf566",
+      "fullImageFinding": "Ivory pear/lens body with large gold search lens, cyan north wedge and attached side paddles. Complete, with substantially more transparent padding than the other roles; actual main body spans 53.0% width and60.6% height, below the75\u201380% brief.",
+      "visibleBodyAndAppendagesComplete": true,
+      "allNonzeroAlphaBoundsExclusive": [
+        97,
+        53,
+        1192,
+        1196
+      ],
+      "substantialBoundsExclusive": [
+        295,
+        228,
+        960,
+        988
+      ]
+    },
+    {
+      "role": "bomber",
+      "path": "originals/bomber.png",
+      "bytes": 751704,
+      "sha256": "9657e96d874439abee5e25edc74addfbc09251b29d94e4181cff519234cb06d1",
+      "fullImageFinding": "Connected triangular three-lobed parcel machine. Two broad round ivory drums sit below a cyan forward pod; complete. Actual substantial side margins99px are about7.9%, below requested10%.",
+      "visibleBodyAndAppendagesComplete": true,
+      "allNonzeroAlphaBoundsExclusive": [
+        0,
+        19,
+        1236,
+        1254
+      ],
+      "substantialBoundsExclusive": [
+        99,
+        147,
+        1155,
+        1107
+      ]
+    },
+    {
+      "role": "carrier",
+      "path": "originals/carrier.png",
+      "bytes": 557242,
+      "sha256": "319ca85aafe43a1e6d321c792386bd8d8773e5ab929eb0a2be8495b6a8d4cabc",
+      "fullImageFinding": "Rectangular two-block supply tray, side wheel pods and two complete gold forward forks with visible separation. Fork tips remain inside frame; north margin106px is about8.5%, below requested10%.",
+      "visibleBodyAndAppendagesComplete": true,
+      "allNonzeroAlphaBoundsExclusive": [
+        39,
+        21,
+        1208,
+        1228
+      ],
+      "substantialBoundsExclusive": [
+        217,
+        106,
+        1038,
+        1110
+      ]
+    },
+    {
+      "role": "interceptor",
+      "path": "originals/interceptor.png",
+      "bytes": 313087,
+      "sha256": "340674c4dfb4ae6a9b501bb1849d47edb7ca81af96f888fcf26a228f7eb7e9c0",
+      "fullImageFinding": "Narrow ivory/cyan dart with small swept gold fins and one gold rear socket. Clearly distinct slender axis and north nose; all parts complete. Narrow43.7% width is intentional relative to70.2% height.",
+      "visibleBodyAndAppendagesComplete": true,
+      "allNonzeroAlphaBoundsExclusive": [
+        41,
+        49,
+        1192,
+        1198
+      ],
+      "substantialBoundsExclusive": [
+        353,
+        162,
+        901,
+        1042
+      ]
+    },
+    {
+      "role": "fiber",
+      "path": "originals/fiber.png",
+      "bytes": 607264,
+      "sha256": "16dabc04250ffb1630c28bbc2c41372b837102445d27c9ce4a6f3bef3608d854",
+      "fullImageFinding": "Connected vertical figure-eight, upper smaller ring, lower gold ring and cyan north pointer. Both large openings and body complete. North margin48px is about3.8%, tighter than requested; rings and waist remain static painted source.",
+      "visibleBodyAndAppendagesComplete": true,
+      "allNonzeroAlphaBoundsExclusive": [
+        41,
+        21,
+        1194,
+        1230
+      ],
+      "substantialBoundsExclusive": [
+        325,
+        48,
+        929,
+        1144
+      ]
+    },
+    {
+      "role": "impact",
+      "path": "originals/impact.png",
+      "bytes": 467205,
+      "sha256": "2d90408c213125725c49ab837cccc56d2fe53c873f0e895dd0f5bb6f6df82233",
+      "fullImageFinding": "Dominant horizontal gold front roller, cyan forward marker, narrow stem, ivory utility body and two rear wheels. Clear blunt T-shaped machine/tool vocabulary; no impact effect or obstruction.",
+      "visibleBodyAndAppendagesComplete": true,
+      "allNonzeroAlphaBoundsExclusive": [
+        0,
+        52,
+        1192,
+        1214
+      ],
+      "substantialBoundsExclusive": [
+        127,
+        207,
+        1127,
+        1048
+      ]
+    },
+    {
+      "role": "trapper",
+      "path": "originals/trapper.png",
+      "bytes": 672321,
+      "sha256": "5fe7ef3796e27ab33d6e5ad7c1a748bee66e23fa28fa18293953fd7e72591015",
+      "fullImageFinding": "Broad U-shaped ivory protective cradle, blunt gold front tips, cyan inner guidance pod and two rear pads. Large north-opening negative space and complete arms; no captive object or deployed containment effect.",
+      "visibleBodyAndAppendagesComplete": true,
+      "allNonzeroAlphaBoundsExclusive": [
+        0,
+        17,
+        1194,
+        1254
+      ],
+      "substantialBoundsExclusive": [
+        146,
+        176,
+        1108,
+        1078
+      ]
+    }
+  ],
+  "qualifications": [
+    "The existing theme colors guide an ivory/light-blue/gold family; returned images are not an exact quantized palette. All have many RGBA values and intermediate alpha.",
+    "All seven nonzero-alpha modes are253, near opaque rather than exactly255. Outside/body edges retain faint alpha variation; Bomber, Impact and Trapper have low-alpha support touching at least one frame edge, while substantial masks are inset.",
+    "All visible body pieces fit the original canvas; requested occupancy/margins were not uniformly achieved. No cropping, resizing, re-encoding, background removal or palette editing occurred.",
+    "Friendly procurement/workflow/logistics purposes are art direction, not new implemented game mechanics. Official documentation text supplies vocabulary only; no official mascot appearance is claimed.",
+    "North and future paint pivot/articulation locations are design proposals. No runtime anchor, collision, animation, ability or loading metadata is produced.",
+    "Native CSS game-scale and background compositing observations are a separate receipt."
+  ]
+}

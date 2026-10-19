@@ -1,0 +1,52 @@
+{
+  "format": "spend-role-original.v1",
+  "at": "2026-09-14T18:05:54.516247+00:00",
+  "role": "carrier",
+  "proposedName": "Supply Courier",
+  "narrativePurpose": "Carrying supplies",
+  "implementedMechanics": false,
+  "officialMascotClaim": false,
+  "tool": "image_gen.imagegen",
+  "generation": "One fresh text-only call; no image inputs",
+  "toolModel": "Not exposed; not inferred",
+  "toolOriginalPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-6bf9c2d8-e08e-47c3-8493-9c2deb8cf28d.png",
+  "original": {
+    "path": "originals/carrier.png",
+    "bytes": 557242,
+    "sha256": "319ca85aafe43a1e6d321c792386bd8d8773e5ab929eb0a2be8495b6a8d4cabc",
+    "width": 1254,
+    "height": 1254,
+    "bitDepth": 8,
+    "pngColorType": 6,
+    "pngChunks": [
+      "IHDR",
+      "caBX",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "allChunkCRCsValid": true
+  },
+  "prompt": {
+    "path": "prompts/carrier.txt",
+    "sha256": "cf43d21843e4d474fff09f96a556205a85ab6567ea27c92fae6dc35fc4719406",
+    "formatting": "Exact request plus one final LF"
+  },
+  "copy": {
+    "method": "Exclusive APFS fclonefileat, no fallback",
+    "originalInode": 76094190,
+    "cloneInode": 76094232
+  },
+  "transformations": [],
+  "runtimeBinding": null,
+  "inspection": "Completed full-image and alpha checks in full-image-inspection.json and alpha-inspection.json; native CSS evidence and limitations in ../inspection/game-scale-receipt.json.",
+  "freshFreeBeforeClone": 5233106944,
+  "conservativeOriginalAndRawGitPlus2MiBReserveBytes": 5496882
+}
