@@ -7,7 +7,11 @@
     "game/test/company-learning-proofs.test.mjs",
     "game/test/company-evidence.test.mjs",
     "game/test/company-session.test.mjs",
-    "game/test/company-campaign-routes.test.mjs"
+    "game/test/company-campaign-routes.test.mjs",
+    "game/test/optional-learning-admission.test.mjs",
+    "game/test/company-learning-rewards.test.mjs",
+    "game/test/company-playtest-fixtures.test.mjs",
+    "game/test/edition-lessons.test.mjs"
   ],
   "items": [
     {
@@ -66,6 +70,46 @@
       "sha256": "21c5145e831fac2b65f8829a7ddf0def316308ed389b3bb6d188f3227a285739",
       "bytes": 11342,
       "scope": "Owned half of the mixed route suite; unchanged replay, topology, challenge-band and witness checks for all 30 owned missions. Other communities remain in the upstream suite."
+    },
+    {
+      "sourcePath": "game/test/optional-learning-admission.test.mjs",
+      "destination": "authoring/company/tests/game/test/optional-learning-admission.test.mjs",
+      "sourceSHA256": "0bce0bd0d5883c314a7410c82fb7d11d1bef06b3c13c8d9b112d16400f121698",
+      "sha256": "0bce0bd0d5883c314a7410c82fb7d11d1bef06b3c13c8d9b112d16400f121698",
+      "bytes": 7806,
+      "sourceGitBlob": "aad8ef815811853c2d873eb7094e90cae5b035ad"
+    },
+    {
+      "sourcePath": "game/test/company-learning-rewards.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-learning-rewards.test.mjs",
+      "sourceSHA256": "c5f4631698e71ea75790358e86f90837e687411fbff99d7761ee8e86fc7d6eed",
+      "sha256": "c5f4631698e71ea75790358e86f90837e687411fbff99d7761ee8e86fc7d6eed",
+      "bytes": 8788,
+      "sourceGitBlob": "452d1adc67e1e631e2a3a86ee07f3c48214a746b"
+    },
+    {
+      "sourcePath": "game/test/company-playtest-fixtures.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-playtest-fixtures.test.mjs",
+      "sourceSHA256": "f366635758dfa67d8eac2ac464abbc709b14b9105f19161cb9e1a41f7512773f",
+      "sha256": "55bacf6f6cfd164d30b09c420d20aaf80e1b1027db4cb7eff6c77d9972dc1ead",
+      "bytes": 3886,
+      "scope": "Owned fixture behavior preserved; the runtime exclusion check now runs against the actual generated app in ownership-receipts.test.mjs."
+    },
+    {
+      "sourcePath": "game/test/edition-lessons.test.mjs",
+      "destination": "authoring/company/tests/game/test/edition-lessons.test.mjs",
+      "sourceSHA256": "6fdd4ec48bc278e9430bae05fd5caa1101309ab9901510d24efc09ffef315ecc",
+      "sha256": "6fdd4ec48bc278e9430bae05fd5caa1101309ab9901510d24efc09ffef315ecc",
+      "bytes": 32091,
+      "sourceGitBlob": "2b81f02dea5f53b941dfe4add5c6ba8fa22f1c8b"
+    },
+    {
+      "sourcePath": "game/test/helpers/edition-provider-fixture.mjs",
+      "destination": "authoring/company/tests/game/test/helpers/edition-provider-fixture.mjs",
+      "sourceSHA256": "d28e3c7185a7b0287f517888e5d80fffb54696d1540e3d29d59a2b532d947482",
+      "sha256": "3b2a8bbdd6474da4f904bfa8438bb6f91c0c8ec08ddd16cf61583907e04cf8c2",
+      "bytes": 3601,
+      "scope": "Neutral source fixture using the generic workspace compiler; avoids an upstream brand registry dependency."
     }
   ]
 }

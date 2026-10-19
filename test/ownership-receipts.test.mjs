@@ -152,3 +152,13 @@ test('owned engine regressions and route proofs keep their recorded source ident
       .sort(),
   );
 });
+
+test('published runtime excludes authoring transfer answers and retains its QR dependencies', async () => {
+  for (const name of ['playtest-fixtures.mjs', 'lessons.mjs'])
+    await assert.rejects(
+      readFile(new URL(`../app/game/company-campaigns/${name}`, import.meta.url)),
+      { code: 'ENOENT' },
+    );
+  for (const name of ['qrcodegen-1.8.0.mjs', 'qrcodegen-1.8.0.json', 'QRCODEGEN-LICENSE.txt'])
+    assert.ok((await readFile(new URL(`../app/game/vendor/${name}`, import.meta.url))).length > 0);
+});
