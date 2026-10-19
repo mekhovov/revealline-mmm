@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-8/manifest.json",
+  "sourceGitBlob": "7855c1a294a9b47824038f732df977a7712a9ce4",
+  "sourceSHA256": "923b98c2e60b9318ef72ed40d371215ef3b968e83e14e5c8fccd0e70b9307d52",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-mint-canal-tram",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Mint Canal Tram",
+        "prompt": "prompts/spend-mint-canal-tram.txt",
+        "file": "originals/spend-mint-canal-tram.png",
+        "bytes": 1501782,
+        "sha256": "a02eedd7fac88c0c1cceb07903b027bb6b3dc5739d7ffecf9906ecd38f963aba",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

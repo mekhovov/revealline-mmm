@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/schema/content-pack.schema.json",
+  "sourceGitBlob": "a161cbdf9b8a4bbcf92aaa1cededf1a72a967b2b",
+  "sourceSHA256": "51d009694dc2d38920942c0e64559569e8b59e57241bc4eab05841fdf585357a",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/$defs/theme/properties/family/enum/3",
+      "value": "navi-network"
+    }
+  ]
+}

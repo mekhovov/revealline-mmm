@@ -1,0 +1,20 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/sentinel-relay/prompts.json",
+  "sourceGitBlob": "c2fbe6e95d99601336317209ad41e7794eb7a563",
+  "sourceSHA256": "f7ce393adef5b7ecbaff1ffd3b16e1d6fa5c796deaadcbebd3f72bd4766ec0b9",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/prompts/3",
+      "value": {
+        "id": "sentinel-business-cues",
+        "kind": "presentation",
+        "themeId": "coupa",
+        "title": "Connections restored",
+        "prompt": "Use the existing sentinel-relay-01 level and its registered two-stage descriptor. Keep 48x36 geometry, cardinal input, seven class recipes, eight distinct live FIELD cells for the timed release, and safe isolation fallback. Do not change rules through art, emit awards from the renderer, add code to JSON, invent a health bar, or claim physical hardware testing. Supply proposed changes separately from observed validation. Use the original Spend Sprite and business network scene. The shield relay becomes a connection checkpoint; the core is a blocked hub that opens to the existing savings-node finale. Keep the actual timed-cut/isolation rules explicit. Do not depict real financial transactions, claim quantified savings, use an official Navi identity, or infer new equipment effects from this skin."
+      }
+    }
+  ]
+}

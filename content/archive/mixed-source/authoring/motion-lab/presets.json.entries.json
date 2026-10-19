@@ -1,0 +1,124 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/motion-lab/presets.json",
+  "sourceGitBlob": "e958dea073c8da46b8ae374e75a2e16f1d657279",
+  "sourceSHA256": "c1ad73a04e31f63eaa1244b5a73ba076160960746f57bf0944c53ee28e85d7ba",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/characters/navi-avatar",
+      "value": {
+        "label": "Spend Sprite",
+        "src": "assets/navi-avatar.png",
+        "sourceStatus": "original image-generated helper; not verified official Coupa Navi artwork",
+        "widthCells": 1.25,
+        "heightCells": 1.25,
+        "headingOffsetDegrees": 0,
+        "sampling": "nearest",
+        "rotors": [],
+        "animationRecipe": "helper-guidance"
+      }
+    },
+    {
+      "pointer": "/characters/navi-auditor",
+      "value": {
+        "label": "Audit pulse",
+        "src": "assets/navi-avatar.png",
+        "sourceStatus": "shared original helper image; cosmetic pulse variant, not official Navi",
+        "widthCells": 1.25,
+        "heightCells": 1.25,
+        "headingOffsetDegrees": 0,
+        "sampling": "nearest",
+        "rotors": [],
+        "animationRecipe": "audit-guidance"
+      }
+    },
+    {
+      "pointer": "/terrainLayers/navi-materials",
+      "value": {
+        "label": "Navi · archive / queue / alerts",
+        "roles": {
+          "wall": {
+            "kind": "archive",
+            "microSrc": null,
+            "propSrc": null
+          },
+          "slow": {
+            "kind": "queue",
+            "microSrc": null,
+            "propSrc": null
+          },
+          "danger": {
+            "kind": "alert",
+            "microSrc": null,
+            "propSrc": null
+          }
+        }
+      }
+    },
+    {
+      "pointer": "/themes/navi-network",
+      "value": {
+        "label": "Navi Network / blue hours",
+        "colors": {
+          "arena": "#0d2535",
+          "grid": "#234253",
+          "accent": "#86daf2",
+          "body": "#eef9fb",
+          "wall": "#74b7cf",
+          "slow": "#a6b89d",
+          "danger": "#e4a065",
+          "dim": "#5d8598"
+        }
+      }
+    },
+    {
+      "pointer": "/animationRecipes/helper-guidance",
+      "value": {
+        "label": "Spend Sprite / pulse + blink",
+        "components": [
+          {
+            "id": "guidance",
+            "type": "pulse",
+            "anchors": [
+              [
+                0,
+                0.14
+              ]
+            ],
+            "radius": 0.38,
+            "amplitude": 0.05,
+            "frequencyHz": 0.8,
+            "opacity": 0.2,
+            "color": "#8bd4e4"
+          },
+          {
+            "id": "eyes",
+            "type": "blink",
+            "anchors": [
+              [
+                -0.085,
+                -0.005
+              ],
+              [
+                0.085,
+                -0.005
+              ]
+            ],
+            "frequencyHz": 0.8,
+            "dutyCycle": 0.18,
+            "size": 0.035,
+            "color": "#f0d66a"
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/familyLooks/navi-network",
+      "value": {
+        "terrainLayer": "navi-materials"
+      }
+    }
+  ]
+}

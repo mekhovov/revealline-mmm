@@ -1,0 +1,30 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/audio/revealline-v1/actor-movement-coverage.json",
+  "sourceGitBlob": "4707cf75d837578f9e37897ad75687fd25695aa0",
+  "sourceSHA256": "a659ca75959544faf6ac3df697d0ce2b8c6792115c2e3e8f88e81ccbd7f2cff6",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/players/navi-avatar",
+      "value": "grain"
+    },
+    {
+      "pointer": "/players/navi-auditor",
+      "value": "grain"
+    },
+    {
+      "pointer": "/worldEnemies/coupa",
+      "value": {
+        "bouncer": "grain",
+        "border-patrol": "grain",
+        "contour-patrol": "grain",
+        "claimed-rover": "wheels",
+        "eroder": "motor",
+        "lane-boss": "grain",
+        "relay-sentinel": "grain"
+      }
+    }
+  ]
+}

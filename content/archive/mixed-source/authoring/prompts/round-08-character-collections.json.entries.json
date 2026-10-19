@@ -1,0 +1,31 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/prompts/round-08-character-collections.json",
+  "sourceGitBlob": "5c5ad15740cc7e4eabf0f65da27a2dcc159d7560",
+  "sourceSHA256": "2384b05271a7026706eb310969b1407c27e286962802ff2201013446a9618153",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/prompts/5",
+      "value": {
+        "id": "collection-06-navi-character",
+        "family": "navi-network",
+        "asset_type": "character_variant_concept",
+        "mode": "image_edit",
+        "intent": "Adapt approved business character identity into a selectable cosmetic variant.",
+        "status": "template_not_executed",
+        "reference_requirements": [
+          "Actual inspected approved identity or explicitly labeled original placeholder, character variation brief and display target."
+        ],
+        "variables": [
+          "IDENTITY_REFERENCE",
+          "CHARACTER_BRIEF",
+          "DISPLAY_TARGET"
+        ],
+        "prompt": "Inspect {{IDENTITY_REFERENCE}} and create the requested NAVI NETWORK variation described by {{CHARACTER_BRIEF}} for {{DISPLAY_TARGET}}. Preserve the supplied identity accurately; if it is an original C-token or unverified mascot concept, retain that label and do not claim an exact official Coupa Navi reproduction. Keep the character friendly, compact and readable, with an independently replaceable pulse/accent or connection cue where supported. A starter guide and an earned auditor-themed cosmetic can differ in silhouette detail or material without implying real customer savings, changed speed or new AI capability. Keep process-friction obstacles abstract and introduce no military imagery or nationality-coded enemies. Preserve the original source, save a derived copy and record the complete prompt and parent asset. Generated labels should not replace actual localized UI. Inspect real output dimensions, alpha and small-size clarity, then apply the asset through the existing preview only when that step is requested and available. Report concept, applied visual and inspected motion readiness separately.",
+        "example_request": "Adapt the supplied Navi placeholder into an earned auditor look, retaining honest brand status and business imagery."
+      }
+    }
+  ]
+}

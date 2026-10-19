@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-7/manifest.json",
+  "sourceGitBlob": "2e078786ad5512f08256cc36ad8b5dabc72e8acd",
+  "sourceSHA256": "dcbf608693e12a21c831078eecbd7c3dcd1181c4e4bba00625af6d55fbaab64b",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-citrus-parcel-hub",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Citrus Parcel Hub",
+        "prompt": "prompts/spend-citrus-parcel-hub.txt",
+        "file": "originals/spend-citrus-parcel-hub.png",
+        "bytes": 1916377,
+        "sha256": "a02df60240645d8a010619ae24e994646f71601cfb754db78d15a875bf301c52",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

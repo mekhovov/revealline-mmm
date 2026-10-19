@@ -1,0 +1,35 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/equipment-workshop/prompts.json",
+  "sourceGitBlob": "de42755d739eb0855849f2b6d8fb12bfdf9e98d8",
+  "sourceSHA256": "357ee97869ac8219b95eaedca4f428566f448a2c099dcf512fa1feb86adc01f5",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/assets/2",
+      "value": {
+        "id": "workshop-03",
+        "title": "Clear Ledger",
+        "path": "backgrounds/workshop-03.png",
+        "prompt": "Create one original full-bleed 4:3 collectible background for a modern pixel-art territory-capture game. Prefer 1536×1152 output; actual file dimensions will be checked. Coherent visible pixel clusters, crisp silhouettes, selective dithering, restrained but luminous colors and a memorable central subject that remains readable at a 320-pixel-wide board. Design foreground, middle distance and background with rewarding small discoveries and quieter passages so a bright live cut stays readable during partial reveal. No UI, text, logos, score numbers, game markers, arrows, frame, collage, active player character or enemies. No screenshots, copied compositions or recognizable commercial game characters. Painted illumination may be rich; do not fake animation frames or promise interactive objects. Produce a finished single picture, not a concept sheet.\nScene: An optimistic miniature city at dawn, with a bright central exchange hall, small workshops, a warehouse and a tree-lined delivery canal. A few elegant illuminated routes suggest coordinated resources and useful connections; the city feels warm and understandable rather than a dashboard. Deep ink-blue architecture, clear cyan water, restrained coral accents and golden windows. Routes are decorative, do not resemble the game's exposed white line or hazard symbols. No corporate logos, currency figures, customer data or borrowed mascot.",
+        "generation": {
+          "tool": "built-in image_gen",
+          "route": "tools.image_gen__imagegen",
+          "createdAt": "2026-09-12",
+          "originalSource": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09328-21d8-7e93-9403-7e6793a4fac2/exec-23a0c167-3b00-4dbb-92ce-4df41911f746.png",
+          "parent": null
+        },
+        "review": {
+          "status": "source-inspected; in-game review pending",
+          "source": "Fictional miniature canal city with exchange hall, cargo boats and lit workshops. Fantasy architecture and static transport routes serve the coordination metaphor; this is not a depiction of Coupa software, customers or savings. No active gameplay actors or cut-line symbols.",
+          "preservation": "Copied exact generated PNG bytes without image editing. Actual dimensions and hashes are measured separately by the Workshop builder."
+        },
+        "rightsStatus": "ai-generated",
+        "author": "Reveal Line · AI-assisted original artwork",
+        "license": "Original project artwork",
+        "rightsDeclaration": "Original AI-generated project illustration; no third-party reference image supplied. This records provenance and intended use, not a legal certification."
+      }
+    }
+  ]
+}

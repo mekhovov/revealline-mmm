@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-9/manifest.json",
+  "sourceGitBlob": "4539229ea42bb6ab3df2a695360e3c0c392bd1ce",
+  "sourceSHA256": "3a4a59fa5607d0771bd48536890cb837863b8c982458f564e0e073c9c8cbee81",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-sunroof-market-house",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Sunroof Market House",
+        "prompt": "prompts/spend-sunroof-market-house.txt",
+        "file": "originals/spend-sunroof-market-house.png",
+        "bytes": 2006763,
+        "sha256": "d0328adc0ce24e22afbcaf67e09d93c0eb03e7a805d30890532284ecc0a1f24c",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

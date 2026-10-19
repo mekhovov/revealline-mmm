@@ -1,0 +1,141 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/prompts/catalog.json",
+  "sourceGitBlob": "d618957567ee5207130c328e8ecfa7c6b132ea9d",
+  "sourceSHA256": "f958c787d2af470f457827ad498cb8f597efb720a279b7122d139a1796bab100",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/families/3",
+      "value": "navi-network"
+    },
+    {
+      "pointer": "/prompts/24",
+      "value": {
+        "id": "navi-01-theme-bible",
+        "family": "navi-network",
+        "asset_type": "theme_bible",
+        "mode": "text_generate",
+        "intent": "Make Coupa-inspired value recovery playful and broad.",
+        "status": "template_not_executed",
+        "reference_requirements": [
+          "Official Coupa reference notes; supplied brand assets only if available."
+        ],
+        "variables": [
+          "REFERENCE_NOTES"
+        ],
+        "prompt": "Write a theme bible for NAVI NETWORK, a Coupa business-spend-management and AI-inspired territory-reveal arcade. The fantasy is helping a business network work better: reconnect suppliers, align order/receipt/invoice tokens, recover fictional savings and open productive districts. Use current official Coupa reference notes {{REFERENCE_NOTES}} for terminology. Hero remains an original cobalt C-token placeholder until supplied official Navi art is selected; never invent a supposedly official Navi mascot. Define three treatments: Savings City, AI Network and Paper Circuit. Propose cobalt/mint/ivory visual roles, friendly modular UI, role-based hazards such as duplicate records, bottlenecks, exception emitters and disruption clouds. Treat employees, customers and suppliers as the world being helped. Describe six objective ideas composed from supported capture/collect/link rules. Keep gameplay points explicitly fictional; this is an arcade metaphor, not an implementation of Coupa business processes.",
+        "variations": []
+      }
+    },
+    {
+      "pointer": "/prompts/25",
+      "value": {
+        "id": "navi-02-reveal-art",
+        "family": "navi-network",
+        "asset_type": "reveal_art",
+        "mode": "image_generate",
+        "intent": "Reveal a living business network instead of a spreadsheet.",
+        "status": "template_not_executed",
+        "reference_requirements": [],
+        "variables": [],
+        "prompt": "Create one original 4:3 pixel-art reveal illustration for NAVI NETWORK: a friendly miniature business district with supplier workshops, a small market, delivery routes, warehouse roofs and illuminated office windows. Cobalt structures, ivory paving, mint connection lines inside the illustration and warm coral accents. Compose three discoveries: a workshop becoming active, a delivery bridge and a shared plaza. This is an original Coupa-inspired game concept, not an official product screenshot. No actual financial data, company logos, generated text or real dashboard interface. Keep the illustration lower-contrast than future live game sprites; mint routes must be broad subdued scene details, not bright lines easily confused with an active capture trail. Full artwork only, no fog, game borders, live hazards or HUD.",
+        "variations": [
+          "Paper Circuit: folded document city with order, receipt and invoice station shapes; no text.",
+          "AI Network: elegant constellation of small helpful workshop islands joined by calm connection channels."
+        ]
+      }
+    },
+    {
+      "pointer": "/prompts/26",
+      "value": {
+        "id": "navi-03-player",
+        "family": "navi-network",
+        "asset_type": "player_character",
+        "mode": "image_generate",
+        "intent": "Explore a replaceable placeholder with human-friendly character.",
+        "status": "template_not_executed",
+        "reference_requirements": [],
+        "variables": [],
+        "prompt": "Design six original pixel-art avatar candidates for NAVI NETWORK, a Coupa-inspired arcade. Use a small cobalt circular token with a simple white C-like opening as the explicit placeholder direction, alongside two compact helpful guide-bot silhouettes and two folded-paper navigation tokens. None is represented as official Navi artwork. Warm friendly proportions, ivory outline, one mint accent, obvious facing notch, readable at a proposed 24–32 source pixels. Quiet navy background, consistent scale, no pseudo-official wordmarks. The token should look like an active cursor that guides a route, not a currency coin or a customer portrayed as an obstacle. Present enlarged views plus tiny silhouette tests; sprite construction and branding substitution happen later.",
+        "variations": []
+      }
+    },
+    {
+      "pointer": "/prompts/27",
+      "value": {
+        "id": "navi-04-enemies",
+        "family": "navi-network",
+        "asset_type": "enemy_family",
+        "mode": "image_generate",
+        "intent": "Turn spend friction into distinct abstract obstacles.",
+        "status": "template_not_executed",
+        "reference_requirements": [],
+        "variables": [],
+        "prompt": "Create a four-column pixel-art obstacle study for NAVI NETWORK, each with a tiny-size sample, enlarged shape and small route-domain diagram. Duplicate record: twin offset document blocks with a diamond center, an open-field bouncer confined to unrevealed territory. Bottleneck: a squat bar with an hourglass gap that follows the changing capture contour, including internal edges created by a cut. Rework ticket: a compact rounded document cart moving across revealed ground, with broad footprint geometry rather than a line-hugging silhouette. Scope leak: a notched paper-strip dispenser with a clearly telegraphed missing-tile footprint for proposed territory erosion. Use friendly toy-machine language, graphite cores with amber/coral accents, monochrome-readable shapes and a quiet cobalt or ivory background. The obstacles represent process friction, never customers, suppliers or employees. No military motifs, real invoice text, actual business claims or company logos. An exception emitter is a separate stationary capturable objective study, not a moving-role substitute. These are proposed visual role studies. Read the current primitive catalog before making pack bindings: enemy.bounce-field.v1 specifies the open-field bouncer and enemy.patrol-boundary.v1 specifies only the outer border. Interior-contour patrol, movement across revealed ground, and territory erosion need extensions unless a later catalog explicitly defines them. A rendered sprite does not implement a behavior. Show role status in the accompanying production brief, never as tiny baked-in image text. A shared fill-blocker mark belongs only to roles designated by the selected fill policy, not to every moving enemy. Keep a separate hollow-circle marker for capturable objectives. Add a separate three-symbol terrain key: a filled block with a barred-edge pattern for a solid wall blocking both player and enemies; spaced drag-chevron tracks for terrain that slows only the player while enemies remain unaffected; and an unmistakable hazard-cross pattern for terrain lethal to the player while enemies remain unaffected. Distinguish these by shape and texture, not color alone. Treat local slow/lethal terrain as proposed and extension-needed until the current contract supports their exact semantics; do not portray an ordinary solid wall as damaging.",
+        "variations": []
+      }
+    },
+    {
+      "pointer": "/prompts/28",
+      "value": {
+        "id": "navi-05-ui",
+        "family": "navi-network",
+        "asset_type": "menu_ui",
+        "mode": "image_generate",
+        "intent": "Create a game interface that feels clear and business-friendly.",
+        "status": "template_not_executed",
+        "reference_requirements": [],
+        "variables": [],
+        "prompt": "Create a polished NAVI NETWORK menu/intermission concept in modern pixel art. Cobalt and ivory panels, mint focus rings, warm small scene illustrations. Main center card has a large empty 4:3 arena placeholder for a measured game board to be composited later. Right rail shows three blank module cards with distinct icons for preview, connection and recovery. Top status has simple life pips, captured-area meter and fictional value-points icon; omit real currency claims and fabricated KPI text. A quiet footer shows blank controller-hint slots. Original C token is a placeholder hero badge, not an official Navi mascot. Use ample spacing, large clear visual groups and subtly playful geometry, avoiding a dense enterprise dashboard. Provide visual style only; real text and focus order are separate UI work. Provide a separate compact teaching-key study outside the arena: open-field mover, patrol on an interior captured contour, mover on revealed ground, and telegraphed territory eroder. Reserve each a different silhouette and route diagram. Show solid-wall, player-only slow-terrain and lethal-terrain symbols as three distinct material/shape treatments. The teaching key is an authoring study; select only supported roles for any actual level and label absent behaviors proposed/extension-needed in the production brief. Keep real wording in localization slots. Claimed ground must not be presented as safe from every enemy class.",
+        "variations": []
+      }
+    },
+    {
+      "pointer": "/prompts/29",
+      "value": {
+        "id": "navi-06-capture-fx",
+        "family": "navi-network",
+        "asset_type": "capture_fx",
+        "mode": "image_generate",
+        "intent": "Show a connection becoming useful when a region closes.",
+        "status": "template_not_executed",
+        "reference_requirements": [],
+        "variables": [],
+        "prompt": "Create a five-panel pixel-art capture-effect storyboard for NAVI NETWORK, fixed simple rectilinear closed region and placeholder C-token endpoint. The exposed ivory route connects; a tiny mint pulse appears at closure; recovered region fills with a quiet grid of light; supplier workshop windows illuminate inside the revealed picture; the boundary settles into a calm claimed-route edge. One optional matching-token pair gives a small separate icon sparkle after capture. Keep state order explicit and all geometry identical. No exploding dollar bills, full-screen bloom or fake business metric text. Show a sixth reduced-motion keyframe with immediate reveal and steady lit windows. This still sheet is an animation brief, not actual running UI or proof of economic results. Add a clearly separate proposed victory-to-gallery inset after gameplay: freeze active hazards, reveal the complete artwork as the completion reward, and keep the actual achieved capture percentage in a separate empty score slot for real UI text. Full artwork visibility must not silently change collision geometry or report 100% captured. Ordinary capture keyframes still reveal only the region allowed by the selected fill policy. Treat the full-artwork victory presentation as a proposed UI capability until implemented; the illustration alone does not prove it exists. Use claimed boundary for the completed route rather than implying universal safety from all enemy classes.",
+        "variations": []
+      }
+    },
+    {
+      "pointer": "/prompts/30",
+      "value": {
+        "id": "navi-07-soundtrack",
+        "family": "navi-network",
+        "asset_type": "soundtrack_brief",
+        "mode": "text_generate",
+        "intent": "Give Coupa-inspired play a warm, confident sound.",
+        "status": "template_not_executed",
+        "reference_requirements": [],
+        "variables": [],
+        "prompt": "Write an original composer brief for NAVI NETWORK. Use crisp marimba-like synth plucks, soft FM bass, restrained breakbeat and warm chord pads; make it playful and focused rather than corporate hold music. Propose one 116 BPM 64-bar loop with synchronized foundation, trail-tension and successful-connection stems. The bright closure cue should be a small upward resolution; an exception warning should remain clearly distinguishable without being harsh. Include a quieter planning/gallery arrangement and five short UI cue descriptions. Map sounds to neutral simulation event names so the same rules can use other theme packs. All value points are fictional game feedback. Output a written cue sheet and delivery specification, not fabricated audio or claims that a still image tool made music.",
+        "variations": []
+      }
+    },
+    {
+      "pointer": "/prompts/31",
+      "value": {
+        "id": "navi-08-promo",
+        "family": "navi-network",
+        "asset_type": "promotional_art",
+        "mode": "image_generate",
+        "intent": "Explain value recovery through an inviting illustrated city.",
+        "status": "template_not_executed",
+        "reference_requirements": [],
+        "variables": [],
+        "prompt": "Create original landscape pixel-art promotional key art for NAVI NETWORK. A cobalt C-token placeholder traces a clean ivory right-angle route across a dark blue field, revealing a lively connected business city with supplier workshops, delivery bridges and warm office windows. Mint light spreads into recovered districts, suggesting useful connections and fictional savings. Premium playful BSM/AI-platform mood, simple hero silhouette, strong central composition and plenty of quiet upper-left space for title typography. Do not invent an official Navi mascot or Coupa wordmark. No real monetary claims, customer names, fake app screenshots or generated text. This is concept key art; future official brand assets can replace the placeholder cleanly.",
+        "variations": []
+      }
+    }
+  ]
+}

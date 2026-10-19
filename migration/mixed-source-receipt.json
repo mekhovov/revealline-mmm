@@ -240,8 +240,312 @@
       "bytes": 5034,
       "sha256": "315278202573d0e597fd68e2b51890741086c932241cdf0283b02f88982dbfe3",
       "sourceSHA256": "d4d23aa92bdcc855eccbef263ac3e748e26b130a3b6a26f453072075ecb9b192"
+    },
+    {
+      "sourcePath": "authoring/audio/revealline-v1/actor-movement-coverage.json",
+      "destination": "content/archive/mixed-source/authoring/audio/revealline-v1/actor-movement-coverage.json.entries.json",
+      "entries": 3,
+      "sourceSHA256": "a659ca75959544faf6ac3df697d0ce2b8c6792115c2e3e8f88e81ccbd7f2cff6",
+      "sha256": "56aea8b9b773f8ccf3825ddfd7e679e4c03a557990563d448ac301511efbb398",
+      "bytes": 975
+    },
+    {
+      "sourcePath": "authoring/library/equipment-workshop/pack-source.json",
+      "destination": "content/archive/mixed-source/authoring/library/equipment-workshop/pack-source.json.entries.json",
+      "entries": 4,
+      "sourceSHA256": "932b0a68d74deda146939a4ce4c04550a0bfd3dcca6973676b67944ecbc7533a",
+      "sha256": "ffeec278c873ec49320eae9aa991a256c20f312a5be868e67e8ef8aee94b7a83",
+      "bytes": 5048
+    },
+    {
+      "sourcePath": "authoring/library/equipment-workshop/previous/equipment-workshop-1.0.0.json",
+      "destination": "content/archive/mixed-source/authoring/library/equipment-workshop/previous/equipment-workshop-1.0.0.json.entries.json",
+      "entries": 4,
+      "sourceSHA256": "91876d315417252a65a36b1a46f3f3e03737ec26ccc08224f52e9c376f76ea1a",
+      "sha256": "fa168d51f10fdcab7e752b5ccfb69923f53505a6d83d75a378f38ed4775f5207",
+      "bytes": 5070
+    },
+    {
+      "sourcePath": "authoring/library/equipment-workshop/prompts.json",
+      "destination": "content/archive/mixed-source/authoring/library/equipment-workshop/prompts.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "357ee97869ac8219b95eaedca4f428566f448a2c099dcf512fa1feb86adc01f5",
+      "sha256": "3d75927eae5ebca641597e07ce25ef4b30d967e76f534505388f259999f2425a",
+      "bytes": 3356
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/chapters.json",
+      "destination": "content/archive/mixed-source/authoring/library/four-worlds-chapters/chapters.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "8fd00b9607aa8b4dba2bd8151d560938ef705f061ce6d4068b2ce028d7c42920",
+      "sha256": "90e5d84afa1d3938c7bd2af1f100c7ece17b24cc7c343054978803e4f701d750",
+      "bytes": 2080
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/distribution.json",
+      "destination": "content/archive/mixed-source/authoring/library/four-worlds-chapters/distribution.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "11ad3664a02f7efdef01b601adadf62b4b275f7db6d03c37ae8d9e78f9e9bcb6",
+      "sha256": "56d5eaecb64e8b1f3b9b44b61a5a37b3749bf02f77f4741953d1fe3a68a63e6e",
+      "bytes": 1597
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/routes.json",
+      "destination": "content/archive/mixed-source/authoring/library/four-worlds-chapters/routes.json.entries.json",
+      "entries": 13,
+      "sourceSHA256": "a391d108c1a054ccbe44c4018b843bc777f4772f28633f83178079a09f43ffea",
+      "sha256": "21941f4b8c073b2085db9ef2db448c4c7c38403ad73cf4b650771c233a9a04c2",
+      "bytes": 68137
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-source/catalog.json",
+      "destination": "content/archive/mixed-source/authoring/library/four-worlds-source/catalog.json.entries.json",
+      "entries": 3,
+      "sourceSHA256": "dcc82dfcf403ad86e83e1d985e8c9ecd530fbfad1c7bf9d556eaff9ba0530d29",
+      "sha256": "62fa0404307ad9aee51f6953cf44b1dd86face975ccea37c6968bc5a52390bc8",
+      "bytes": 3822
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/aggregate-prompts.json",
+      "destination": "content/archive/mixed-source/authoring/library/menu-scenes/aggregate-prompts.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "3710449af6b58745edb00dbb592309c780363cc4959c8e7a868b7b4c88a787cc",
+      "sha256": "c3569a0a40654952fcd2c93e37bb7318d884dc2f40b5318d6cf438c139e859c7",
+      "bytes": 2520
+    },
+    {
+      "sourcePath": "authoring/library/neon-artwork/coverage-audit.json",
+      "destination": "content/archive/mixed-source/authoring/library/neon-artwork/coverage-audit.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "ca409fbc42ff81e828bb67930a0fbdaf694970261f56a0d3ef6e1e889b656a68",
+      "sha256": "89d75675acd466d05c601066d783ea7ca842007ef3cd6d3731e7b4f5dcfa98a3",
+      "bytes": 761
+    },
+    {
+      "sourcePath": "authoring/library/neon-artwork/prompts.json",
+      "destination": "content/archive/mixed-source/authoring/library/neon-artwork/prompts.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "aa16beeb7fa2522fcd57d81c16b1f90f39b286c3a307bc83a2ec6d01e768d7de",
+      "sha256": "7dd4d91dc24832e5bb0c469cec0a3dc4494bb40ac9a02dcd160c9314044f4dd2",
+      "bytes": 1911
+    },
+    {
+      "sourcePath": "authoring/library/neon-mosaic/designs.json",
+      "destination": "content/archive/mixed-source/authoring/library/neon-mosaic/designs.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "9a3407dd4dac60c9ab61dee24c8fc865fd21a8d2e0ab80f870e3d09c3310a229",
+      "sha256": "7c3713d93bd36753785c17374268ad90e1ffa62c3d6739d487244dc31bbf8bea",
+      "bytes": 660
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-catalog/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-catalog/manifest.json.entries.json",
+      "entries": 12,
+      "sourceSHA256": "2b6f772031c46a6c59784ea2fffdfb5459900d7913503f7415c5da9cc495b9d2",
+      "sha256": "e1441fe6740935d7d6dda78c60b77e05c66dbb744694b62e0a18def4edcb549f",
+      "bytes": 19886
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-10/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "c04510b854d77ddb9d7687ffa999b1e4e47af9f5860f0b4639df285ea696ff96",
+      "sha256": "6646d25a30000e29c813f8b6ea99543bacf8a247e7a114be6b9496b397008ee0",
+      "bytes": 1048
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/provenance/selected-inventory-40.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-10/provenance/selected-inventory-40.json.entries.json",
+      "entries": 12,
+      "sourceSHA256": "1e9c6ca11e7f2efcbcf8b1592eee1f785314b159d2f123773657585e1ae52ce6",
+      "sha256": "9e779bb48e8865ce21da98a3dec493332e8851725743eb02d0e6bef3c160d1a0",
+      "bytes": 6040
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-2/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "13a2bd888b7a3168c4b43834ade947246b846edcc0ffbb8f0f5f830a1cab25d3",
+      "sha256": "f049715ae8d8e033f5360becdf66a7daa58156dc1f9bd577bb1a75426f55a13d",
+      "bytes": 1123
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/provenance/tool-responses.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-2/provenance/tool-responses.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "d96c1ab7fd63b069f7170423d1c782b9d9f3e4ea309d18f9c7fb3509c01d1b29",
+      "sha256": "310b124d8e063e2bb813b7ba5ccb03894bac1638c8412e64de918115d7fb8587",
+      "bytes": 3964
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-3/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-3/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "8f6dda0112f7423cbd61c775e9f6285e435edfb2f9c0bce0ef6097af0ae3b527",
+      "sha256": "9d7203df7e3006e24c7ef0fe2ee5b582ebc1726651356ab9521ba07c60e17fce",
+      "bytes": 1047
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-4/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-4/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "5a668a1ed06a050e9e23183903c9f260576564a78cb5115bd0661fff9a3f5eac",
+      "sha256": "610aba1c986160fa013f93f50e6a759d99b87a26a2fc01913f7b03eb85103507",
+      "bytes": 1039
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-5/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-5/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "f927be97fd2ffe5eedcfa82a3a34ff8bc3fe081ceb69274598183ea4e021e19d",
+      "sha256": "d42f59d9f8b3e0190b1864328f75c12e44915853f9277fd16c501147401ece14",
+      "bytes": 1047
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-6/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-6/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "e3158c9edd414ad8ba1c0764e8f624a8ac8537e8d5eceb9002ff28118be59385",
+      "sha256": "8a233a9ea5d2df3b44a3d8828b7491e532902526ed9af30e965cbeddc2edd551",
+      "bytes": 1035
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-7/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-7/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "dcbf608693e12a21c831078eecbd7c3dcd1181c4e4bba00625af6d55fbaab64b",
+      "sha256": "74e94f9891166a47a29a0c2ac967e763de0601064e830743a18857fa23ad0c7c",
+      "bytes": 1035
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-8/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-8/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "923b98c2e60b9318ef72ed40d371215ef3b968e83e14e5c8fccd0e70b9307d52",
+      "sha256": "af4494e53dbea6ea342764d3469ac41c575699d58e82b808cb403bc44310839b",
+      "bytes": 1027
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-9/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/reserve-illustrations-wave-9/manifest.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "3a4a59fa5607d0771bd48536890cb837863b8c982458f564e0e073c9c8cbee81",
+      "sha256": "dd1b33635865060b9b349b62f15db70a3c5f9ac39273c72974c84e9b86a4c931",
+      "bytes": 1047
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-relay/prompts.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-relay/prompts.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "f7ce393adef5b7ecbaff1ffd3b16e1d6fa5c796deaadcbebd3f72bd4766ec0b9",
+      "sha256": "a38c2c35818720c8a6d97477e27e00cb8e2f6c2326e7e92fd1186bbf149ea4c8",
+      "bytes": 1541
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-relay/proposedpack-source.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-relay/proposedpack-source.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "de523b416fa5a107d8d831061b54277d53b63faf17e58ab828a87e28f0fe48f1",
+      "sha256": "8d71daa7af3303b9803c571af0a0cfd0acce7d365bc261af629656bfad5c6d66",
+      "bytes": 1717
+    },
+    {
+      "sourcePath": "authoring/motion-lab/ability-presets.json",
+      "destination": "content/archive/mixed-source/authoring/motion-lab/ability-presets.json.entries.json",
+      "entries": 11,
+      "sourceSHA256": "05e956de444eb4ff0ff9867f8438b5dcf18702868d42bf781a98ff7e92d7858a",
+      "sha256": "c9b54270d9d54ed30403d79540a70a3de7c93ab6dca140c57c5d77c1a2dd4425",
+      "bytes": 2294
+    },
+    {
+      "sourcePath": "authoring/motion-lab/collection-presets.json",
+      "destination": "content/archive/mixed-source/authoring/motion-lab/collection-presets.json.entries.json",
+      "entries": 5,
+      "sourceSHA256": "c553f4a554a5931a155bb231a477dffa49dd3d501db1cfe17e143d767ab654e8",
+      "sha256": "9a047b807f3fefee8781e2248a213397d664fac2067852fbc8c23760d80ec3b3",
+      "bytes": 3691
+    },
+    {
+      "sourcePath": "authoring/motion-lab/presets.json",
+      "destination": "content/archive/mixed-source/authoring/motion-lab/presets.json.entries.json",
+      "entries": 6,
+      "sourceSHA256": "c1ad73a04e31f63eaa1244b5a73ba076160960746f57bf0944c53ee28e85d7ba",
+      "sha256": "65976269a24b3a93e3c82bc4a9373b5164170d6d2ba3726d097e717623acdc61",
+      "bytes": 3352
+    },
+    {
+      "sourcePath": "authoring/production/register-countercurrent.json",
+      "destination": "content/archive/mixed-source/authoring/production/register-countercurrent.json.entries.json",
+      "entries": 76,
+      "sourceSHA256": "4ea8066a10cfb12ad5565a9f072399c901fafcb8c60a8c594ddccd010b8e9fe3",
+      "sha256": "4c162f77b563b3e04eba594499ead10a88c478affeda4bcd8bb53401e748374b",
+      "bytes": 52446
+    },
+    {
+      "sourcePath": "authoring/production/register-fracture-themes.json",
+      "destination": "content/archive/mixed-source/authoring/production/register-fracture-themes.json.entries.json",
+      "entries": 66,
+      "sourceSHA256": "d1ad89c5dcc730cd96f21e9e3e60c0c6d3f48c1da6d48cdec7b9bdc52886eddd",
+      "sha256": "c27987fb7d32af5bfccb10522d2c753457d8751711c753585a1c67806b439f6f",
+      "bytes": 43860
+    },
+    {
+      "sourcePath": "authoring/production/register-sentinel-themes.json",
+      "destination": "content/archive/mixed-source/authoring/production/register-sentinel-themes.json.entries.json",
+      "entries": 55,
+      "sourceSHA256": "caa03d95a74ac9c037095c89c5fd1f06edd681293b1d4bc53285d578f01fa0f2",
+      "sha256": "18ea4626b6cffa8cbf8cc5362ee674e5b3e2c5435c53b508ae29488d48bd42df",
+      "bytes": 35722
+    },
+    {
+      "sourcePath": "authoring/production/register.json",
+      "destination": "content/archive/mixed-source/authoring/production/register.json.entries.json",
+      "entries": 45,
+      "sourceSHA256": "057f86a1a60c873402f7145e0b6d46cb7d3583b4c9129a7bd755976dadc7369d",
+      "sha256": "b627b67f7041c06d08eca8ae757ce6b63033b971cdf27e90ec01c59e78e0e4ed",
+      "bytes": 27654
+    },
+    {
+      "sourcePath": "authoring/prompts/catalog.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/catalog.json.entries.json",
+      "entries": 9,
+      "sourceSHA256": "f958c787d2af470f457827ad498cb8f597efb720a279b7122d139a1796bab100",
+      "sha256": "dba6f9f31e063e95b9e20167738cb34f49661043009ec3b0d1c6eb146071900d",
+      "bytes": 13839
+    },
+    {
+      "sourcePath": "authoring/prompts/round-06-asset-variations.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/round-06-asset-variations.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "ac867d7ed63a455b08fc1c5ad16776f079a3530afb947cf0fa255ec0d8a2b09c",
+      "sha256": "2f33932f8d6a5590041707330b2995e095ca43ba45ea76dbd301e7a0f83e7bd8",
+      "bytes": 2730
+    },
+    {
+      "sourcePath": "authoring/prompts/round-07-animation-variants.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/round-07-animation-variants.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "0c784b5cf286c3b2443917128828e2a7f7f11ff4fcf447fba2779b948cc3f1c4",
+      "sha256": "84f31c1ad47cd5101ed0fa8435bb6a12508a69da096e73a462725a6fb3e03044",
+      "bytes": 2369
+    },
+    {
+      "sourcePath": "authoring/prompts/round-08-character-collections.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/round-08-character-collections.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "2384b05271a7026706eb310969b1407c27e286962802ff2201013446a9618153",
+      "sha256": "26f70e32cfd1e53ea9eae026b67adfd15b6c7ba57c347b775b21301a3e7cf2f9",
+      "bytes": 2478
+    },
+    {
+      "sourcePath": "authoring/schema/content-pack.schema.json",
+      "destination": "content/archive/mixed-source/authoring/schema/content-pack.schema.json.entries.json",
+      "entries": 1,
+      "sourceSHA256": "51d009694dc2d38920942c0e64559569e8b59e57241bc4eab05841fdf585357a",
+      "sha256": "4b9bbc3fa471f0e7173c6f6557f70b1ebb17275bd7d8f90c121d9f2558ad717b",
+      "bytes": 603
     }
   ],
   "verification": "Every extracted JSON pointer was compared with the exact original Git source object.",
-  "entries": 217
+  "entries": 564
 }

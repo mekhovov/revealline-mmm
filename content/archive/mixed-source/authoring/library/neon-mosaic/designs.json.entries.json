@@ -1,0 +1,20 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/neon-mosaic/designs.json",
+  "sourceGitBlob": "016fc2ea2db80a6ad15ca5c4ca5d2378212df558",
+  "sourceSHA256": "9a3407dd4dac60c9ab61dee24c8fc865fd21a8d2e0ab80f870e3d09c3310a229",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/3",
+      "value": {
+        "id": "coupa",
+        "title": "COUPA",
+        "lines": [
+          "COUPA"
+        ]
+      }
+    }
+  ]
+}

@@ -14,7 +14,7 @@ Verification covers every official Snake recipe in each of the three modes, expo
 
 The dedicated deployment must be verified before removing original-game content. Current-source removal, full authoring/history preservation, remote ref cutover, release/artifact cleanup, pending PR reconciliation, and synchronization against cleaned upstream are subsequent migration steps. Do not treat this app update or the candidate inventory as proof that historical removal is complete.
 
-Backup material and remote-ref/PR snapshots live outside both repositories on the Mac mini share. A local Git bundle preserves the original local graph, and a separate full remote mirror is being prepared. Original dirty worktrees are not reset or deleted. Historical rewriting must operate on a separate mirror, retain the old-to-new commit map outside the cleaned repository, and check expected remote refs before publication.
+Backup material and remote-ref/PR snapshots live outside both repositories on the Mac mini share. A local Git bundle preserves the original local graph, and a separate full remote-history bundle has been verified. Original dirty worktrees are not reset or deleted. Historical rewriting must operate on a separate mirror, retain the old-to-new commit map outside the cleaned repository, and check expected remote refs before publication.
 
 ## Current-source preservation receipts
 
@@ -33,7 +33,13 @@ The first application update was merged in PR #5 at `432ca959b6e5b6c88627ae71659
 `level-numbering-receipt.json` preserves the 47 previously assigned mission display numbers. The other three supplemental missions had no shared-registry number and retain that behavior. The dedicated app owns this small registry, so retiring its entries upstream cannot renumber local missions or expose another community through the registry.
 # Additional archive ownership
 
-`mixed-source-receipt.json` accounts for 217 owned records split from 30 shared registries and proof files. Each archive includes original JSON pointers, Git blob and source hashes. Every pointer was checked against the exact original committed JSON before the upstream cleanup. These are selected source records, not replacements presented as the original verified files.
+`mixed-source-receipt.json` accounts for 564 owned records split from 68 shared registries and proof files. Each archive includes original JSON pointers, Git blob and source hashes. Every pointer was checked against the exact original committed JSON before the upstream cleanup. These are selected source records, not replacements presented as the original verified files.
 
-`additional-owned-source-receipt.json` preserves 58 files found under the earlier Navi Network, reserve Spend Network, and Spend role-presentation names. It records exact Git blobs, SHA-256 hashes, source revisions, and local destinations. `content/archive/coupa-reserve-art.json` selects the ten Coupa reserve illustration records with their source provenance. These are authoring archives and do not add playable modes or prohibited presentation options to the published app.
+`additional-owned-source-receipt.json` preserves 64 files found under the earlier Navi Network, reserve Spend Network, and Spend role-presentation names. It records exact Git blobs, SHA-256 hashes, source revisions, and local destinations. `content/archive/coupa-reserve-art.json` selects the ten Coupa reserve illustration records with their source provenance. These are authoring archives and do not add playable modes or prohibited presentation options to the published app.
 
+
+## Owned regression coverage
+
+`owned-test-receipt.json` preserves five original learning and session suites, the owned part of the shared campaign route suite, and all 180 original Coupa route proofs. All 32 checks in this migrated suite pass. The authoring verifier assembles these local tests with the pinned generic engine and local chapter generators, so future engine updates must retain their behavior. The original game keeps the 234 other-community routes and its shared restoration and reward tests use a synthetic fixture.
+
+`presentation-source-receipt.json` records the 33 owned presentation slots, 33 recipe revisions and their bindings extracted from the original compiled authoring document. These source records stay outside the published game.

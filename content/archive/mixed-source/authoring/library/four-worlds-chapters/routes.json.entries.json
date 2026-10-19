@@ -1,0 +1,2153 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/four-worlds-chapters/routes.json",
+  "sourceGitBlob": "6fc5a15a1800039ec19239f5147754ac3b97c8b9",
+  "sourceSHA256": "a391d108c1a054ccbe44c4018b843bc777f4772f28633f83178079a09f43ffea",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/packs/3",
+      "value": {
+        "id": "original-spend-network",
+        "version": "1.0.0",
+        "sha256": "86088205a8335a6689370d9edcaa5759a217b6e0c469435f119add348d6aa610",
+        "themeId": "coupa"
+      }
+    },
+    {
+      "pointer": "/routes/36",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "standard",
+        "levelId": "original-spend-shared-harbor",
+        "turnPolicy": "immediate",
+        "campaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelSha256": "ef8fc94e5374d04ec795ae23d7e43737e4f54ca89e90783853b6e2952153e60c",
+        "sourceLevelId": "orchard-crossing",
+        "sourceSegmentsSha256": "c33c7604ed143c2cd69d3c36b6fcf0a2da000e8cb7af0d9ebac129a53f8faad3",
+        "segments": [
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 96,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-shared-harbor",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 653,
+          "time": 5.441666666666727,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 16140,
+          "coverage": 0.6885665529010239,
+          "claimedCount": 1614,
+          "totalClaimable": 2344,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "e0ed00d4053c6f3e",
+          "sections": {
+            "identity": "d0153a9948980cd9",
+            "configuration": "187d6be3a7626f13",
+            "board": "5e5b3140d2b2b696",
+            "player": "aff43edbcb68842e",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "1307fa6e0b75972c",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "506efe982a3a286e",
+            "continuation": "a9d828ced6380d30",
+            "result": "6ab589fe9f0c92ef",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "3b3ef60a37617558"
+          }
+        },
+        "savePrefix": {
+          "tick": 151,
+          "direction": "down",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "e6a7db53ed1ee1fc",
+            "sections": {
+              "identity": "d0153a9948980cd9",
+              "configuration": "187d6be3a7626f13",
+              "board": "41c355780ec9a68f",
+              "player": "e09a330b0e1f2fef",
+              "trail": "fd6502c476b6cda1",
+              "enemies": "1d4334ce176200df",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "a5db809ba5da3b19",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "e0751c81b17ccc90"
+            }
+          },
+          "sessionSha256": "b65fe6b58dcb6640dee087bd641236116500d9f3aaa56d5ffd00a6b82dbae8e3",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "e0ed00d4053c6f3e",
+            "sections": {
+              "identity": "d0153a9948980cd9",
+              "configuration": "187d6be3a7626f13",
+              "board": "5e5b3140d2b2b696",
+              "player": "aff43edbcb68842e",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "1307fa6e0b75972c",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "506efe982a3a286e",
+              "continuation": "a9d828ced6380d30",
+              "result": "6ab589fe9f0c92ef",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "3b3ef60a37617558"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 2,
+          "pressure.warning": 2,
+          "pressure.committed": 1,
+          "lineImpact.seeded": 2,
+          "pressure.cooldown": 1,
+          "lineImpact.cleared": 2,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "contour.routeChanged": 2,
+          "pressure.cancelled": 1,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/37",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "standard",
+        "levelId": "original-spend-shared-harbor",
+        "turnPolicy": "grid-center",
+        "campaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelSha256": "ef8fc94e5374d04ec795ae23d7e43737e4f54ca89e90783853b6e2952153e60c",
+        "sourceLevelId": "orchard-crossing",
+        "sourceSegmentsSha256": "c33c7604ed143c2cd69d3c36b6fcf0a2da000e8cb7af0d9ebac129a53f8faad3",
+        "segments": [
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 96,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-shared-harbor",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 653,
+          "time": 5.441666666666727,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 16140,
+          "coverage": 0.6885665529010239,
+          "claimedCount": 1614,
+          "totalClaimable": 2344,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "6fe4ca3f85fa85eb",
+          "sections": {
+            "identity": "3ea7c1d3fe47d6c0",
+            "configuration": "187d6be3a7626f13",
+            "board": "5e5b3140d2b2b696",
+            "player": "aff43edbcb68842e",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "1307fa6e0b75972c",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "506efe982a3a286e",
+            "continuation": "a9d828ced6380d30",
+            "result": "df1744fc26945c3e",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "3b3ef60a37617558"
+          }
+        },
+        "savePrefix": {
+          "tick": 151,
+          "direction": "down",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "64e31d8e5aa1bf25",
+            "sections": {
+              "identity": "3ea7c1d3fe47d6c0",
+              "configuration": "187d6be3a7626f13",
+              "board": "41c355780ec9a68f",
+              "player": "e09a330b0e1f2fef",
+              "trail": "fd6502c476b6cda1",
+              "enemies": "1d4334ce176200df",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "a5db809ba5da3b19",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "e0751c81b17ccc90"
+            }
+          },
+          "sessionSha256": "772d9705e30378f7ce594045eacb88eaebbb5d105e480f778e6e781cc0b49425",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "6fe4ca3f85fa85eb",
+            "sections": {
+              "identity": "3ea7c1d3fe47d6c0",
+              "configuration": "187d6be3a7626f13",
+              "board": "5e5b3140d2b2b696",
+              "player": "aff43edbcb68842e",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "1307fa6e0b75972c",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "506efe982a3a286e",
+              "continuation": "a9d828ced6380d30",
+              "result": "df1744fc26945c3e",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "3b3ef60a37617558"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 2,
+          "pressure.warning": 2,
+          "pressure.committed": 1,
+          "lineImpact.seeded": 2,
+          "pressure.cooldown": 1,
+          "lineImpact.cleared": 2,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "contour.routeChanged": 2,
+          "pressure.cancelled": 1,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/38",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "standard",
+        "levelId": "original-spend-city-wins",
+        "turnPolicy": "immediate",
+        "campaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelSha256": "217df3388a1fd50b5642fac562a2285752554e19d1ce23585157122a8a24db3b",
+        "sourceLevelId": "courtyard-exits",
+        "sourceSegmentsSha256": "bf7f193b91da897b75cd0f071e31d52a2f80f6c4db6b50e41ee43471baab680e",
+        "segments": [
+          {
+            "ticks": 144,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 328,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 104,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 308,
+            "input": {
+              "direction": "up"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-city-wins",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1165,
+          "time": 9.708333333333423,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 17680,
+          "coverage": 0.7647058823529411,
+          "claimedCount": 1768,
+          "totalClaimable": 2312,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "d5e5450d45d700c6",
+          "sections": {
+            "identity": "aa14eda95661c8b2",
+            "configuration": "41bb20bca7815f61",
+            "board": "e96161c4abf801be",
+            "player": "51ceb1b54bc88cfe",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "b8000b2897b3ef6f",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "bb9232cb15f0cdc5",
+            "continuation": "a9d828ced6380d30",
+            "result": "97956ee1fa1fc871",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "6ecee52dc90baa20"
+          }
+        },
+        "savePrefix": {
+          "tick": 1111,
+          "direction": "up",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "0e66de0f228ba005",
+            "sections": {
+              "identity": "aa14eda95661c8b2",
+              "configuration": "41bb20bca7815f61",
+              "board": "47dae726d58baf08",
+              "player": "97ce2631a30ee394",
+              "trail": "e65d86f08168c04a",
+              "enemies": "9af09b519ed1b676",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "00a3107794117382",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "051016766fd92478"
+            }
+          },
+          "sessionSha256": "152e78210aeb7e24d4fb6581045eb73f01ea279587b7e8a188df7c62a187b9a5",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "d5e5450d45d700c6",
+            "sections": {
+              "identity": "aa14eda95661c8b2",
+              "configuration": "41bb20bca7815f61",
+              "board": "e96161c4abf801be",
+              "player": "51ceb1b54bc88cfe",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "b8000b2897b3ef6f",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "bb9232cb15f0cdc5",
+              "continuation": "a9d828ced6380d30",
+              "result": "97956ee1fa1fc871",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "6ecee52dc90baa20"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 2,
+          "lineImpact.seeded": 3,
+          "lineImpact.cleared": 2,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "rover.warning": 1,
+          "rover.activated": 1,
+          "pressure.warning": 2,
+          "lineImpact.ended": 1,
+          "pressure.committed": 1,
+          "pressure.cancelled": 2,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/39",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "standard",
+        "levelId": "original-spend-city-wins",
+        "turnPolicy": "grid-center",
+        "campaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelSha256": "217df3388a1fd50b5642fac562a2285752554e19d1ce23585157122a8a24db3b",
+        "sourceLevelId": "courtyard-exits",
+        "sourceSegmentsSha256": "bf7f193b91da897b75cd0f071e31d52a2f80f6c4db6b50e41ee43471baab680e",
+        "segments": [
+          {
+            "ticks": 144,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 328,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 104,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 308,
+            "input": {
+              "direction": "up"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-city-wins",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1165,
+          "time": 9.708333333333423,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 17680,
+          "coverage": 0.7647058823529411,
+          "claimedCount": 1768,
+          "totalClaimable": 2312,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "a17523fc3d877ed3",
+          "sections": {
+            "identity": "893701fee2297767",
+            "configuration": "41bb20bca7815f61",
+            "board": "e96161c4abf801be",
+            "player": "51ceb1b54bc88cfe",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "b8000b2897b3ef6f",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "bb9232cb15f0cdc5",
+            "continuation": "a9d828ced6380d30",
+            "result": "6a13f6d1beaf065c",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "6ecee52dc90baa20"
+          }
+        },
+        "savePrefix": {
+          "tick": 1111,
+          "direction": "up",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "1a2d48b70486da0e",
+            "sections": {
+              "identity": "893701fee2297767",
+              "configuration": "41bb20bca7815f61",
+              "board": "47dae726d58baf08",
+              "player": "97ce2631a30ee394",
+              "trail": "e65d86f08168c04a",
+              "enemies": "9af09b519ed1b676",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "00a3107794117382",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "051016766fd92478"
+            }
+          },
+          "sessionSha256": "6acbaac9f704bbc07cc3144465d74b9b403a9b9e1cb711e1c5ccdb70c2017474",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "a17523fc3d877ed3",
+            "sections": {
+              "identity": "893701fee2297767",
+              "configuration": "41bb20bca7815f61",
+              "board": "e96161c4abf801be",
+              "player": "51ceb1b54bc88cfe",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "b8000b2897b3ef6f",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "bb9232cb15f0cdc5",
+              "continuation": "a9d828ced6380d30",
+              "result": "6a13f6d1beaf065c",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "6ecee52dc90baa20"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 2,
+          "lineImpact.seeded": 3,
+          "lineImpact.cleared": 2,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "rover.warning": 1,
+          "rover.activated": 1,
+          "pressure.warning": 2,
+          "lineImpact.ended": 1,
+          "pressure.committed": 1,
+          "pressure.cancelled": 2,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/40",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "standard",
+        "levelId": "original-spend-market-workshop",
+        "turnPolicy": "immediate",
+        "campaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelSha256": "274cd627cea74c9369c4a3a7bd31d1fe7820c1935f833a846c85449ec4bdd3ed",
+        "sourceLevelId": "night-crossfire",
+        "sourceSegmentsSha256": "d835c1ca6714047d68acdcf4c239254f41a6bf73252ba4ad2cfd555cd4d9be58",
+        "segments": [
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 224,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 224,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 128,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 220,
+            "input": {
+              "direction": "left"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-market-workshop",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1637,
+          "time": 13.641666666666532,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 18680,
+          "coverage": 0.802405498281787,
+          "claimedCount": 1868,
+          "totalClaimable": 2328,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "cd15d23969ea7f6e",
+          "sections": {
+            "identity": "6f3490acaf4a129d",
+            "configuration": "02a0777fd420571a",
+            "board": "5b1a62fd4eeff6c9",
+            "player": "2baedc1e9a493353",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "ab7ab15d2ce566c7",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "ee929faf92b5a439",
+            "continuation": "a9d828ced6380d30",
+            "result": "264e857fe1bab11d",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "7d1801fc92dd78b7"
+          }
+        },
+        "savePrefix": {
+          "tick": 1519,
+          "direction": "left",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "2a884262def9e1c3",
+            "sections": {
+              "identity": "6f3490acaf4a129d",
+              "configuration": "02a0777fd420571a",
+              "board": "5824d2cb0aa5c875",
+              "player": "fc3ed0f79706dde9",
+              "trail": "6952d1f6bf9cbd43",
+              "enemies": "8c423c346a004f28",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "e009e41b243aec27",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "e159dfb65674df04"
+            }
+          },
+          "sessionSha256": "6bd7ffa6b65f1b4f62c3e594bb8a053402e645fe7ba3b2ec0bd2bcebf035f8ed",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "cd15d23969ea7f6e",
+            "sections": {
+              "identity": "6f3490acaf4a129d",
+              "configuration": "02a0777fd420571a",
+              "board": "5b1a62fd4eeff6c9",
+              "player": "2baedc1e9a493353",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "ab7ab15d2ce566c7",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "ee929faf92b5a439",
+              "continuation": "a9d828ced6380d30",
+              "result": "264e857fe1bab11d",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "7d1801fc92dd78b7"
+            }
+          }
+        },
+        "eventCounts": {
+          "boss.warning": 2,
+          "cut.started": 2,
+          "powerup.collected": 1,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "pressure.warning": 2,
+          "pressure.committed": 2,
+          "lineImpact.seeded": 1,
+          "lineImpact.cleared": 1,
+          "contour.routeChanged": 1,
+          "pressure.cancelled": 2,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/41",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "standard",
+        "levelId": "original-spend-market-workshop",
+        "turnPolicy": "grid-center",
+        "campaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+        "levelSha256": "274cd627cea74c9369c4a3a7bd31d1fe7820c1935f833a846c85449ec4bdd3ed",
+        "sourceLevelId": "night-crossfire",
+        "sourceSegmentsSha256": "d835c1ca6714047d68acdcf4c239254f41a6bf73252ba4ad2cfd555cd4d9be58",
+        "segments": [
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 224,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 224,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 128,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 220,
+            "input": {
+              "direction": "left"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-market-workshop",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1637,
+          "time": 13.641666666666532,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 18680,
+          "coverage": 0.802405498281787,
+          "claimedCount": 1868,
+          "totalClaimable": 2328,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "df99462df4098b97",
+          "sections": {
+            "identity": "d2e4a061daed7dbc",
+            "configuration": "02a0777fd420571a",
+            "board": "5b1a62fd4eeff6c9",
+            "player": "2baedc1e9a493353",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "ab7ab15d2ce566c7",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "ee929faf92b5a439",
+            "continuation": "a9d828ced6380d30",
+            "result": "65025f1c2b3ab060",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "7d1801fc92dd78b7"
+          }
+        },
+        "savePrefix": {
+          "tick": 1519,
+          "direction": "left",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "e15eb428ee9a3924",
+            "sections": {
+              "identity": "d2e4a061daed7dbc",
+              "configuration": "02a0777fd420571a",
+              "board": "5824d2cb0aa5c875",
+              "player": "fc3ed0f79706dde9",
+              "trail": "6952d1f6bf9cbd43",
+              "enemies": "8c423c346a004f28",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "e009e41b243aec27",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "e159dfb65674df04"
+            }
+          },
+          "sessionSha256": "f0f945cf69b788998cc9d040df8d47946139f94c946601bfde96d34fab08b710",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "df99462df4098b97",
+            "sections": {
+              "identity": "d2e4a061daed7dbc",
+              "configuration": "02a0777fd420571a",
+              "board": "5b1a62fd4eeff6c9",
+              "player": "2baedc1e9a493353",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "ab7ab15d2ce566c7",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "ee929faf92b5a439",
+              "continuation": "a9d828ced6380d30",
+              "result": "65025f1c2b3ab060",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "7d1801fc92dd78b7"
+            }
+          }
+        },
+        "eventCounts": {
+          "boss.warning": 2,
+          "cut.started": 2,
+          "powerup.collected": 1,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "pressure.warning": 2,
+          "pressure.committed": 2,
+          "lineImpact.seeded": 1,
+          "lineImpact.cleared": 1,
+          "contour.routeChanged": 1,
+          "pressure.cancelled": 2,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/42",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "gentle",
+        "levelId": "original-spend-shared-harbor",
+        "turnPolicy": "immediate",
+        "campaignKey": "gentle-classic-v1-f4d463742113bfb4/1/67ffbf8079d4e52b",
+        "levelSha256": "bffec643fb3a912301a91b01a9b938a96eefa813be2a515eafee29225488d3d8",
+        "sourceLevelId": "orchard-crossing",
+        "sourceSegmentsSha256": "2a47ea3f0c2d76a89f4308fa7a46f894272245213dc815673f9db1886435c522",
+        "segments": [
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 168,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-shared-harbor",
+          "revision": "gentle-classic-v1-6c68be7c12fdd104",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1004,
+          "time": 8.366666666666832,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 16820,
+          "coverage": 0.7175767918088737,
+          "claimedCount": 1682,
+          "totalClaimable": 2344,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "f8b5f776afba1f5f",
+          "sections": {
+            "identity": "caa45395f0b8112d",
+            "configuration": "9befd1a63662581a",
+            "board": "d3e5e4b4e8f6115f",
+            "player": "8c7419260e9e95b4",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "e641a23ac388e4b5",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "a85a0457c5c066e6",
+            "continuation": "a9d828ced6380d30",
+            "result": "6eeac4d158ba3654",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "799dc0e00430af18"
+          }
+        },
+        "savePrefix": {
+          "tick": 871,
+          "direction": "up",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "ea71159001ecad33",
+            "sections": {
+              "identity": "caa45395f0b8112d",
+              "configuration": "9befd1a63662581a",
+              "board": "41c355780ec9a68f",
+              "player": "1241590f73619bc3",
+              "trail": "b9e93f9f89ec141c",
+              "enemies": "2ef06bef76953877",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "9947309a03d4196d",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "1d32356cb3b5ece1"
+            }
+          },
+          "sessionSha256": "012d5011d48886176c43b22a87fed82bf9cef1612a629231211928d2756cd06b",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "f8b5f776afba1f5f",
+            "sections": {
+              "identity": "caa45395f0b8112d",
+              "configuration": "9befd1a63662581a",
+              "board": "d3e5e4b4e8f6115f",
+              "player": "8c7419260e9e95b4",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "e641a23ac388e4b5",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "a85a0457c5c066e6",
+              "continuation": "a9d828ced6380d30",
+              "result": "6eeac4d158ba3654",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "799dc0e00430af18"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 1,
+          "pressure.warning": 1,
+          "pressure.committed": 1,
+          "lineImpact.seeded": 1,
+          "pressure.cooldown": 1,
+          "lineImpact.ended": 1,
+          "lineImpact.cleared": 1,
+          "cut.closed": 1,
+          "cells.claimed": 1,
+          "capture.stopped": 1,
+          "contour.routeChanged": 1,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/43",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "gentle",
+        "levelId": "original-spend-shared-harbor",
+        "turnPolicy": "grid-center",
+        "campaignKey": "gentle-classic-v1-f4d463742113bfb4/1/67ffbf8079d4e52b",
+        "levelSha256": "bffec643fb3a912301a91b01a9b938a96eefa813be2a515eafee29225488d3d8",
+        "sourceLevelId": "orchard-crossing",
+        "sourceSegmentsSha256": "2a47ea3f0c2d76a89f4308fa7a46f894272245213dc815673f9db1886435c522",
+        "segments": [
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 168,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-shared-harbor",
+          "revision": "gentle-classic-v1-6c68be7c12fdd104",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1004,
+          "time": 8.366666666666832,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 16820,
+          "coverage": 0.7175767918088737,
+          "claimedCount": 1682,
+          "totalClaimable": 2344,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "caa52b4951458e64",
+          "sections": {
+            "identity": "125b22375a7d004c",
+            "configuration": "9befd1a63662581a",
+            "board": "d3e5e4b4e8f6115f",
+            "player": "8c7419260e9e95b4",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "e641a23ac388e4b5",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "a85a0457c5c066e6",
+            "continuation": "a9d828ced6380d30",
+            "result": "56e807bfed3a3cd1",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "799dc0e00430af18"
+          }
+        },
+        "savePrefix": {
+          "tick": 871,
+          "direction": "up",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "7190e6702de9ee48",
+            "sections": {
+              "identity": "125b22375a7d004c",
+              "configuration": "9befd1a63662581a",
+              "board": "41c355780ec9a68f",
+              "player": "1241590f73619bc3",
+              "trail": "b9e93f9f89ec141c",
+              "enemies": "2ef06bef76953877",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "9947309a03d4196d",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "1d32356cb3b5ece1"
+            }
+          },
+          "sessionSha256": "dc4ff56aa89824a50132a707a05f9218e2e9158f9619ba6c22d22ed759977b88",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "caa52b4951458e64",
+            "sections": {
+              "identity": "125b22375a7d004c",
+              "configuration": "9befd1a63662581a",
+              "board": "d3e5e4b4e8f6115f",
+              "player": "8c7419260e9e95b4",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "e641a23ac388e4b5",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "a85a0457c5c066e6",
+              "continuation": "a9d828ced6380d30",
+              "result": "56e807bfed3a3cd1",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "799dc0e00430af18"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 1,
+          "pressure.warning": 1,
+          "pressure.committed": 1,
+          "lineImpact.seeded": 1,
+          "pressure.cooldown": 1,
+          "lineImpact.ended": 1,
+          "lineImpact.cleared": 1,
+          "cut.closed": 1,
+          "cells.claimed": 1,
+          "capture.stopped": 1,
+          "contour.routeChanged": 1,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/44",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "gentle",
+        "levelId": "original-spend-city-wins",
+        "turnPolicy": "immediate",
+        "campaignKey": "gentle-classic-v1-f4d463742113bfb4/1/67ffbf8079d4e52b",
+        "levelSha256": "4a8c3c6798a9b6de1652efa98cff6e3f290fb216a9b351b0cc41548b5cdd7287",
+        "sourceLevelId": "courtyard-exits",
+        "sourceSegmentsSha256": "f5bfe30f5a0b2890a26c61aaef8eef03989a7f4844ef5625a9f832baae5100bf",
+        "segments": [
+          {
+            "ticks": 136,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 272,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 296,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 152,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 324,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 8,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 292,
+            "input": {
+              "direction": "right"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-city-wins",
+          "revision": "gentle-classic-v1-3df89da33497fd87",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1766,
+          "time": 14.716666666666471,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 17200,
+          "coverage": 0.7439446366782007,
+          "claimedCount": 1720,
+          "totalClaimable": 2312,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "e48f98051740aece",
+          "sections": {
+            "identity": "71ff2b33db8b8228",
+            "configuration": "98dfbd29761f53c0",
+            "board": "473bc1f480d9d112",
+            "player": "2dcab07f5a3d6ca2",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "79802ac97c4bf679",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "f97b77c79d5d5b73",
+            "continuation": "a9d828ced6380d30",
+            "result": "552bd14315c98f1f",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "9f8df81b9335b0b3"
+          }
+        },
+        "savePrefix": {
+          "tick": 1291,
+          "direction": "left",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "9ccf0cc0d2f55e0e",
+            "sections": {
+              "identity": "71ff2b33db8b8228",
+              "configuration": "98dfbd29761f53c0",
+              "board": "99d81cf4d516a24b",
+              "player": "ac8442fd690a7d92",
+              "trail": "397b2b79fb067948",
+              "enemies": "f33743abd8ff71e4",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "80e13184923cedf8",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "ce4d62ac492527d1"
+            }
+          },
+          "sessionSha256": "5f689a688ae68dc85a057f0a64089a237fb8d38a5c2b2a1d66096d224b975ea6",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "e48f98051740aece",
+            "sections": {
+              "identity": "71ff2b33db8b8228",
+              "configuration": "98dfbd29761f53c0",
+              "board": "473bc1f480d9d112",
+              "player": "2dcab07f5a3d6ca2",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "79802ac97c4bf679",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "f97b77c79d5d5b73",
+              "continuation": "a9d828ced6380d30",
+              "result": "552bd14315c98f1f",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "9f8df81b9335b0b3"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 3,
+          "lineImpact.seeded": 3,
+          "lineImpact.cleared": 2,
+          "cut.closed": 3,
+          "cells.claimed": 3,
+          "capture.stopped": 3,
+          "rover.warning": 1,
+          "rover.activated": 1,
+          "pressure.warning": 4,
+          "pressure.committed": 2,
+          "pressure.cooldown": 2,
+          "pressure.cancelled": 2,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/45",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "gentle",
+        "levelId": "original-spend-city-wins",
+        "turnPolicy": "grid-center",
+        "campaignKey": "gentle-classic-v1-f4d463742113bfb4/1/67ffbf8079d4e52b",
+        "levelSha256": "4a8c3c6798a9b6de1652efa98cff6e3f290fb216a9b351b0cc41548b5cdd7287",
+        "sourceLevelId": "courtyard-exits",
+        "sourceSegmentsSha256": "f5bfe30f5a0b2890a26c61aaef8eef03989a7f4844ef5625a9f832baae5100bf",
+        "segments": [
+          {
+            "ticks": 136,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 272,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 296,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 152,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 324,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 8,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 292,
+            "input": {
+              "direction": "right"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-city-wins",
+          "revision": "gentle-classic-v1-3df89da33497fd87",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1766,
+          "time": 14.716666666666471,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 17200,
+          "coverage": 0.7439446366782007,
+          "claimedCount": 1720,
+          "totalClaimable": 2312,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "63fa35c6770d50fa",
+          "sections": {
+            "identity": "028a7fd3660ef391",
+            "configuration": "98dfbd29761f53c0",
+            "board": "473bc1f480d9d112",
+            "player": "2dcab07f5a3d6ca2",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "79802ac97c4bf679",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "f97b77c79d5d5b73",
+            "continuation": "a9d828ced6380d30",
+            "result": "b48c8bf80f7510ee",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "9f8df81b9335b0b3"
+          }
+        },
+        "savePrefix": {
+          "tick": 1291,
+          "direction": "left",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "90a06a768b652321",
+            "sections": {
+              "identity": "028a7fd3660ef391",
+              "configuration": "98dfbd29761f53c0",
+              "board": "99d81cf4d516a24b",
+              "player": "ac8442fd690a7d92",
+              "trail": "397b2b79fb067948",
+              "enemies": "f33743abd8ff71e4",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "80e13184923cedf8",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "ce4d62ac492527d1"
+            }
+          },
+          "sessionSha256": "4229b92bbc0ed52f10c58eabb25646aab46d54e433cdc3b20ba059a6cb3a4084",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "63fa35c6770d50fa",
+            "sections": {
+              "identity": "028a7fd3660ef391",
+              "configuration": "98dfbd29761f53c0",
+              "board": "473bc1f480d9d112",
+              "player": "2dcab07f5a3d6ca2",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "79802ac97c4bf679",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "f97b77c79d5d5b73",
+              "continuation": "a9d828ced6380d30",
+              "result": "b48c8bf80f7510ee",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "9f8df81b9335b0b3"
+            }
+          }
+        },
+        "eventCounts": {
+          "cut.started": 3,
+          "lineImpact.seeded": 3,
+          "lineImpact.cleared": 2,
+          "cut.closed": 3,
+          "cells.claimed": 3,
+          "capture.stopped": 3,
+          "rover.warning": 1,
+          "rover.activated": 1,
+          "pressure.warning": 4,
+          "pressure.committed": 2,
+          "pressure.cooldown": 2,
+          "pressure.cancelled": 2,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/46",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "gentle",
+        "levelId": "original-spend-market-workshop",
+        "turnPolicy": "immediate",
+        "campaignKey": "gentle-classic-v1-f4d463742113bfb4/1/67ffbf8079d4e52b",
+        "levelSha256": "23a31d4c999044a8ff0ec8616a286ca9378609984be14eda706cf3d0468ea0a8",
+        "sourceLevelId": "night-crossfire",
+        "sourceSegmentsSha256": "4a4309ae24705a3a80d7e8f98ed2c1095f9eef75c03733f45ec4c1fe55f80c4c",
+        "segments": [
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 200,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 112,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 196,
+            "input": {
+              "direction": "right"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-market-workshop",
+          "revision": "gentle-classic-v1-dcda20a0d7b4e9b0",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1349,
+          "time": 11.241666666666669,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 18740,
+          "coverage": 0.8049828178694158,
+          "claimedCount": 1874,
+          "totalClaimable": 2328,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "03164cb41a196270",
+          "sections": {
+            "identity": "3a9fab7abfab137f",
+            "configuration": "9a74a1034cd833db",
+            "board": "51143910bc41e9eb",
+            "player": "c97fb01a3d6c6c6e",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "6e7f043fe8e31888",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "8a28e4d8bf56880b",
+            "continuation": "a9d828ced6380d30",
+            "result": "0aafa5ea5faf24c5",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "176879dcabea1bdb"
+          }
+        },
+        "savePrefix": {
+          "tick": 859,
+          "direction": "up",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "8d5f5a08cb1d070e",
+            "sections": {
+              "identity": "3a9fab7abfab137f",
+              "configuration": "9a74a1034cd833db",
+              "board": "56b09213805b7a15",
+              "player": "6e6c25aa251fbcae",
+              "trail": "ccf927a580fad440",
+              "enemies": "96b44c1ea19f557a",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "c3e843e522dbcacd",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "17b7fed3c92908d0"
+            }
+          },
+          "sessionSha256": "5ecc23b58a8d21ccd26ac40574d2f33583e9f1d525f816f7a6d61759933594d9",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "03164cb41a196270",
+            "sections": {
+              "identity": "3a9fab7abfab137f",
+              "configuration": "9a74a1034cd833db",
+              "board": "51143910bc41e9eb",
+              "player": "c97fb01a3d6c6c6e",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "6e7f043fe8e31888",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "8a28e4d8bf56880b",
+              "continuation": "a9d828ced6380d30",
+              "result": "0aafa5ea5faf24c5",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "176879dcabea1bdb"
+            }
+          }
+        },
+        "eventCounts": {
+          "boss.warning": 1,
+          "cut.started": 2,
+          "pressure.warning": 4,
+          "pressure.committed": 3,
+          "lineImpact.seeded": 1,
+          "pressure.cooldown": 1,
+          "lineImpact.ended": 1,
+          "lineImpact.cleared": 1,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "contour.routeChanged": 2,
+          "pressure.cancelled": 3,
+          "run.completed": 1
+        }
+      }
+    },
+    {
+      "pointer": "/routes/47",
+      "value": {
+        "packId": "original-spend-network",
+        "difficulty": "gentle",
+        "levelId": "original-spend-market-workshop",
+        "turnPolicy": "grid-center",
+        "campaignKey": "gentle-classic-v1-f4d463742113bfb4/1/67ffbf8079d4e52b",
+        "levelSha256": "23a31d4c999044a8ff0ec8616a286ca9378609984be14eda706cf3d0468ea0a8",
+        "sourceLevelId": "night-crossfire",
+        "sourceSegmentsSha256": "4a4309ae24705a3a80d7e8f98ed2c1095f9eef75c03733f45ec4c1fe55f80c4c",
+        "segments": [
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "right"
+            }
+          },
+          {
+            "ticks": 280,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 200,
+            "input": {
+              "direction": "left"
+            }
+          },
+          {
+            "ticks": 276,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 1,
+            "input": {
+              "direction": null
+            }
+          },
+          {
+            "ticks": 4,
+            "input": {
+              "direction": "up"
+            }
+          },
+          {
+            "ticks": 112,
+            "input": {
+              "direction": "down"
+            }
+          },
+          {
+            "ticks": 196,
+            "input": {
+              "direction": "right"
+            }
+          }
+        ],
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "original-spend-market-workshop",
+          "revision": "gentle-classic-v1-dcda20a0d7b4e9b0",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-25103a34",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "2",
+              "loadoutHash": "loadout-v1-8360440c",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "2",
+          "loadoutHash": "loadout-v1-8360440c",
+          "status": "won",
+          "won": true,
+          "tick": 1349,
+          "time": 11.241666666666669,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 18740,
+          "coverage": 0.8049828178694158,
+          "claimedCount": 1874,
+          "totalClaimable": 2328,
+          "medal": "gold",
+          "objectives": {
+            "captured": 0,
+            "total": 0,
+            "required": 0
+          }
+        },
+        "checkpoint": {
+          "algorithm": "fnv1a64-state-v5",
+          "hash": "883418a33ccf50a9",
+          "sections": {
+            "identity": "04c6f1c3bf6ed172",
+            "configuration": "9a74a1034cd833db",
+            "board": "51143910bc41e9eb",
+            "player": "c97fb01a3d6c6c6e",
+            "trail": "f0ca473df9efdcc8",
+            "enemies": "6e7f043fe8e31888",
+            "objectives": "09612b07b5ecb5a5",
+            "supplies": "09612b07b5ecb5a5",
+            "ability": "1b2c860fdc20d639",
+            "clock": "8a28e4d8bf56880b",
+            "continuation": "a9d828ced6380d30",
+            "result": "bf2d28ac95c959f8",
+            "encounter": "5b9bc4ba528108e4",
+            "classic": "176879dcabea1bdb"
+          }
+        },
+        "savePrefix": {
+          "tick": 859,
+          "direction": "up",
+          "checkpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "5396f183df83e1df",
+            "sections": {
+              "identity": "04c6f1c3bf6ed172",
+              "configuration": "9a74a1034cd833db",
+              "board": "56b09213805b7a15",
+              "player": "6e6c25aa251fbcae",
+              "trail": "ccf927a580fad440",
+              "enemies": "96b44c1ea19f557a",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "c3e843e522dbcacd",
+              "continuation": "a1e7286b42b404e7",
+              "result": "5b9bc4ba528108e4",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "17b7fed3c92908d0"
+            }
+          },
+          "sessionSha256": "dbfdcef95bcf13cde51c72f7ea2638282de4665c0df670aa676d23b399b3868b",
+          "restoredCheckpoint": {
+            "algorithm": "fnv1a64-state-v5",
+            "hash": "883418a33ccf50a9",
+            "sections": {
+              "identity": "04c6f1c3bf6ed172",
+              "configuration": "9a74a1034cd833db",
+              "board": "51143910bc41e9eb",
+              "player": "c97fb01a3d6c6c6e",
+              "trail": "f0ca473df9efdcc8",
+              "enemies": "6e7f043fe8e31888",
+              "objectives": "09612b07b5ecb5a5",
+              "supplies": "09612b07b5ecb5a5",
+              "ability": "1b2c860fdc20d639",
+              "clock": "8a28e4d8bf56880b",
+              "continuation": "a9d828ced6380d30",
+              "result": "bf2d28ac95c959f8",
+              "encounter": "5b9bc4ba528108e4",
+              "classic": "176879dcabea1bdb"
+            }
+          }
+        },
+        "eventCounts": {
+          "boss.warning": 1,
+          "cut.started": 2,
+          "pressure.warning": 4,
+          "pressure.committed": 3,
+          "lineImpact.seeded": 1,
+          "pressure.cooldown": 1,
+          "lineImpact.ended": 1,
+          "lineImpact.cleared": 1,
+          "cut.closed": 2,
+          "cells.claimed": 2,
+          "capture.stopped": 2,
+          "contour.routeChanged": 2,
+          "pressure.cancelled": 3,
+          "run.completed": 1
+        }
+      }
+    }
+  ]
+}

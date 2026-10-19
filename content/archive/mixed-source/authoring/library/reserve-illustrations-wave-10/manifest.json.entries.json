@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-10/manifest.json",
+  "sourceGitBlob": "b3e40e40ee6928b99ade9b5906dbcc17e2ff908d",
+  "sourceSHA256": "c04510b854d77ddb9d7687ffa999b1e4e47af9f5860f0b4639df285ea696ff96",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-storybook-rail-depot",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Storybook Rail Depot",
+        "prompt": "prompts/spend-storybook-rail-depot.txt",
+        "file": "originals/spend-storybook-rail-depot.png",
+        "bytes": 1803179,
+        "sha256": "f0dd68a9228b140047ca071e9526679cfeea3b29a921b7f0434120f3186e1ba0",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

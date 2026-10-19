@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-6/manifest.json",
+  "sourceGitBlob": "d35f7a2d4799ceab4199d52eb9678063933f4298",
+  "sourceSHA256": "e3158c9edd414ad8ba1c0764e8f624a8ac8537e8d5eceb9002ff28118be59385",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "id": "spend-coral-dawn-bakery",
+        "themeId": "coupa",
+        "theme": "Spend Network",
+        "title": "Coral Dawn Bakery",
+        "prompt": "prompts/spend-coral-dawn-bakery.txt",
+        "file": "originals/spend-coral-dawn-bakery.png",
+        "bytes": 2794201,
+        "sha256": "9c62a106d37c55e5b30cc9f4f12e34b1422e6fdc9bef2763e06c581d713861f0",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "format": "revealline-owned-test-receipt.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "tests": [
+    "game/test/company-learning.test.mjs",
+    "game/test/company-learning-drafts.test.mjs",
+    "game/test/company-learning-proofs.test.mjs",
+    "game/test/company-evidence.test.mjs",
+    "game/test/company-session.test.mjs",
+    "game/test/company-campaign-routes.test.mjs"
+  ],
+  "items": [
+    {
+      "sourcePath": "game/test/company-learning.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-learning.test.mjs",
+      "sourceSHA256": "ee8a7cde214b6c135ae86844c9968408ccd38476a3560d12684e7d91fe767e2e",
+      "sha256": "ee8a7cde214b6c135ae86844c9968408ccd38476a3560d12684e7d91fe767e2e",
+      "bytes": 9778,
+      "sourceGitBlob": "254fd2a7c50dbf64cd2c59435289ac688a294bd1"
+    },
+    {
+      "sourcePath": "game/test/company-learning-drafts.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-learning-drafts.test.mjs",
+      "sourceSHA256": "7101899e39984c0c76e561a5a9280e066456efe71e2e07d893d9b57d5c369527",
+      "sha256": "7101899e39984c0c76e561a5a9280e066456efe71e2e07d893d9b57d5c369527",
+      "bytes": 7346,
+      "sourceGitBlob": "c97d6f4fb1e7dabcf36a6ada1a8885b6c35ffd8c"
+    },
+    {
+      "sourcePath": "game/test/company-learning-proofs.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-learning-proofs.test.mjs",
+      "sourceSHA256": "8938546f30c59a47b17a9545fabe5beafaeac94c4f80a72d1108b801fd2a0e37",
+      "sha256": "8938546f30c59a47b17a9545fabe5beafaeac94c4f80a72d1108b801fd2a0e37",
+      "bytes": 11490,
+      "sourceGitBlob": "7cdb8152aed704d324fd4f67dbd824043e0fc3d4"
+    },
+    {
+      "sourcePath": "game/test/company-evidence.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-evidence.test.mjs",
+      "sourceSHA256": "31b25dfe17516df34506fb9c78783f4a986abc49ab4150e1cbb8dbae225bb2be",
+      "sha256": "31b25dfe17516df34506fb9c78783f4a986abc49ab4150e1cbb8dbae225bb2be",
+      "bytes": 10677,
+      "sourceGitBlob": "7d6fb492c973a679187e49d5731c8ce698e6b839"
+    },
+    {
+      "sourcePath": "game/test/company-session.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-session.test.mjs",
+      "sourceSHA256": "71646f95dd8c476e1a164ee88bef8dfaa98361f55a0564696212b00be9d771e2",
+      "sha256": "71646f95dd8c476e1a164ee88bef8dfaa98361f55a0564696212b00be9d771e2",
+      "bytes": 8846,
+      "sourceGitBlob": "c34443e6a1409e536aa613fc8d52d5c463525d6d"
+    },
+    {
+      "sourcePath": "game/test/fixtures/company-campaign-routes.json",
+      "destination": "authoring/company/tests/game/test/fixtures/company-campaign-routes.json",
+      "sourceSHA256": "06989d91079a3b687c0dda974ac56717ef1ae8327c5024cf5b827dec519d4db5",
+      "sha256": "76efcd63f2a1dcb7c8b14ad13a222b674081c4904f398fcd863d62a2a641e967",
+      "bytes": 791522,
+      "selectedRows": 180,
+      "scope": "Only owned routes selected from the original mixed fixture; all retained row values are unchanged."
+    },
+    {
+      "sourcePath": "game/test/company-campaign-routes.test.mjs",
+      "destination": "authoring/company/tests/game/test/company-campaign-routes.test.mjs",
+      "sourceSHA256": "2b0df9bd214494942b3a2690750148909ca35cd7ee855a6826b686415e692e6c",
+      "sha256": "21c5145e831fac2b65f8829a7ddf0def316308ed389b3bb6d188f3227a285739",
+      "bytes": 11342,
+      "scope": "Owned half of the mixed route suite; unchanged replay, topology, challenge-band and witness checks for all 30 owned missions. Other communities remain in the upstream suite."
+    }
+  ]
+}

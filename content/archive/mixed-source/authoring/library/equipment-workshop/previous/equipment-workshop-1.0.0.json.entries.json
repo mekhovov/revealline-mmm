@@ -1,0 +1,170 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/equipment-workshop/previous/equipment-workshop-1.0.0.json",
+  "sourceGitBlob": "5fa93b9d0cfcb3baf5e57b6ceb96afe8143909d5",
+  "sourceSHA256": "91876d315417252a65a36b1a46f3f3e03737ec26ccc08224f52e9c376f76ea1a",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/themes/2",
+      "value": {
+        "id": "coupa",
+        "name": "Spend Network",
+        "subtitle": "A clearer picture of spend",
+        "family": "navi",
+        "player": "navi-avatar",
+        "enemyShape": "cube",
+        "patrolShape": "spark",
+        "bossShape": "core",
+        "scene": "network",
+        "labels": {
+          "objective": "Opportunity",
+          "supply": "Sync point",
+          "enemy": "Exception",
+          "boss": "Complexity hub",
+          "currency": "Insight",
+          "ability": "AI assist"
+        },
+        "palette": {
+          "ink": "#173747",
+          "paper": "#edf2ed",
+          "muted": "#85a8b6",
+          "accent": "#e2c775",
+          "safe": "#87cbe0",
+          "danger": "#e69477",
+          "field": "#112b3e",
+          "grid": "#1e3d51",
+          "sky": "#bbdadd",
+          "land": "#689bb1"
+        },
+        "classBodies": {
+          "scout": "navi-avatar",
+          "bomber": "navi-avatar",
+          "carrier": "navi-avatar",
+          "interceptor": "navi-avatar",
+          "fiber": "navi-avatar",
+          "impact": "navi-avatar",
+          "trapper": "navi-avatar"
+        }
+      }
+    },
+    {
+      "pointer": "/campaigns/0/levels/2",
+      "value": {
+        "version": "xonix-level.v1",
+        "revision": "1",
+        "width": 48,
+        "height": 36,
+        "themeId": "coupa",
+        "musicId": "workshop-ledger",
+        "id": "workshop-03",
+        "name": "Clear Ledger",
+        "spawn": {
+          "x": 24.5,
+          "y": 0.5
+        },
+        "walls": [
+          {
+            "x": 10,
+            "y": 22,
+            "w": 7,
+            "h": 2
+          },
+          {
+            "x": 32,
+            "y": 24,
+            "w": 6,
+            "h": 2
+          }
+        ],
+        "enemies": [
+          {
+            "id": "cable-cutter",
+            "type": "bouncer",
+            "x": 29.5,
+            "y": 3.5,
+            "vx": -4,
+            "vy": 0,
+            "radius": 0.3
+          }
+        ],
+        "objectives": [
+          {
+            "id": "recovery-relay",
+            "x": 38.5,
+            "y": 28.5,
+            "required": true,
+            "hidden": false
+          }
+        ],
+        "supplies": [],
+        "signalZones": [
+          {
+            "id": "recall-emitter",
+            "x": 22,
+            "y": 2,
+            "w": 5,
+            "h": 5,
+            "speedFactor": 0.5,
+            "disableBoost": false,
+            "lockAbility": false
+          }
+        ],
+        "goal": {
+          "coverage": 0.7
+        },
+        "rules": {
+          "lives": 3,
+          "moveSpeed": 8,
+          "boostMultiplier": 1.5,
+          "respawnSeconds": 0.65,
+          "graceSeconds": 1,
+          "playerRadius": 0.18,
+          "pointsPerCell": 10,
+          "objectivePoints": 500,
+          "timeMedals": [
+            16,
+            25
+          ],
+          "cutTimeLimitSeconds": 6,
+          "maxTrailCells": 48,
+          "timeLimitSeconds": 35
+        },
+        "metadata": {
+          "title": "Clear Ledger",
+          "description": "Recommended: Impact craft. Uncover the opportunity marker and reveal 70% before the 35-second timer expires. Safe Reconcile asks you to pulse from a live cut of at least three cells, stun the cable-cutter, return home, then finish with every life. The pulse abandons the cut; it does not claim territory. An ordinary clear remains available.",
+          "author": "Reveal Line",
+          "license": "Original project content",
+          "rightsStatus": "Original teaching layout adapted from Homeward Skies; original procedural art and music."
+        }
+      }
+    },
+    {
+      "pointer": "/masteries/2",
+      "value": {
+        "version": "xonix-mastery-definition.v2",
+        "id": "workshop-safe-reconcile",
+        "revision": "1",
+        "campaignId": "equipment-workshop",
+        "levelId": "workshop-03",
+        "name": "Safe Reconcile",
+        "description": "Use an impact pulse from a live cut of at least three cells to stun the cable-cutter, return home, then win without losing a life.",
+        "all": [
+          {
+            "type": "clean-win"
+          },
+          {
+            "type": "live-cut-impact",
+            "actorId": "cable-cutter",
+            "minTrailCells": 3
+          }
+        ]
+      }
+    },
+    {
+      "pointer": "/metadata/rightsStatus",
+      "value": "Original project content; abstract spend theme is not an official Coupa product or endorsement."
+    }
+  ]
+}

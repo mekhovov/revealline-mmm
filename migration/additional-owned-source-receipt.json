@@ -4,6 +4,22 @@
   "scope": "Additional named archive ownership confirmed through the reserve catalog and the Navi/Spend Network authoring references. These files are not published in the app.",
   "items": [
     {
+      "sourcePath": "authoring/company-studio/playtest.html",
+      "destination": "content/archive/owned-source/authoring/company-studio/playtest.html",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "4ee6b1c63365c71c3cb9697458b6994acda7e025",
+      "sha256": "71be3725c97b173d5aeff16bcccccab3a11037d70e23b4a2959eb7e21b8f1b18",
+      "bytes": 6577
+    },
+    {
+      "sourcePath": "authoring/company-studio/playtest.mjs",
+      "destination": "content/archive/owned-source/authoring/company-studio/playtest.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "5f2e5801b39b2bbe1aba7d8588ab3f2f161fd84a",
+      "sha256": "f18c8b8680343971ae978aec575c328317ff3a0bafdd2ab8672c767c2f951266",
+      "bytes": 5455
+    },
+    {
       "sourcePath": "authoring/examples/navi-network.pack.json",
       "sourceGitBlob": "6f97376dd5d603e5bf48d1f13a058cf4ae9e965a",
       "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
@@ -208,15 +224,6 @@
       "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-9/prompts/spend-sunroof-market-house.txt",
       "bytes": 1763,
       "sha256": "512c0afdf32685dae7af8b17cd5ba8e8bb8bc3e6be6d197a774f0dfa0e63b76d",
-      "disposition": "preserved-authoring-archive"
-    },
-    {
-      "sourcePath": "authoring/library/spend-role-presentations/README.md",
-      "sourceGitBlob": "b1f3f8ceace67910a0e8d1c00cb052891bc629d6",
-      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
-      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/README.md",
-      "bytes": 6155,
-      "sha256": "2abbd725ccb89764549f85a13ef5cddccaa7b00e76dca4c28d0964da5d1e7693",
       "disposition": "preserved-authoring-archive"
     },
     {
@@ -517,6 +524,15 @@
       "disposition": "preserved-authoring-archive"
     },
     {
+      "sourcePath": "authoring/library/spend-role-presentations/README.md",
+      "sourceGitBlob": "b1f3f8ceace67910a0e8d1c00cb052891bc629d6",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/README.md",
+      "bytes": 6155,
+      "sha256": "2abbd725ccb89764549f85a13ef5cddccaa7b00e76dca4c28d0964da5d1e7693",
+      "disposition": "preserved-authoring-archive"
+    },
+    {
       "sourcePath": "authoring/media/examples/navi-network.media.json",
       "sourceGitBlob": "8d87b28756205543cc8948115ee833a08fe5318d",
       "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
@@ -524,6 +540,38 @@
       "bytes": 16767,
       "sha256": "f0d926d09fe4c0e7a6d5f964d7e1da8c9fd882281b32fdee353b13dac2ddf652",
       "disposition": "preserved-authoring-archive"
+    },
+    {
+      "sourcePath": "authoring/motion-lab/assets/navi-avatar.png",
+      "destination": "content/archive/owned-source/authoring/motion-lab/assets/navi-avatar.png",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "7f48702f790f140cac56eab4b22fadb95ff1e3dc",
+      "sha256": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69",
+      "bytes": 384917
+    },
+    {
+      "sourcePath": "game/company-campaigns/learning-rewards.mjs",
+      "destination": "content/archive/owned-source/game/company-campaigns/learning-rewards.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "c0aea2e5acbeb4aa6a1d29216a888c7c2ab27306",
+      "sha256": "9c876f5629991b88489285594740b1497d4752881d0f4980a6081334af0771a5",
+      "bytes": 5196
+    },
+    {
+      "sourcePath": "game/company-campaigns/lessons.mjs",
+      "destination": "content/archive/owned-source/game/company-campaigns/lessons.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "d68acddb097bcd0796d030b0055696de32dbc340",
+      "sha256": "ea8bb610aa1c4f8c97966c02c32305fb7ac0f4ccb425d44f4081b17b1658ee57",
+      "bytes": 35798
+    },
+    {
+      "sourcePath": "game/company-campaigns/playtest-fixtures.mjs",
+      "destination": "content/archive/owned-source/game/company-campaigns/playtest-fixtures.mjs",
+      "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+      "sourceGitBlob": "67c2d2d9cb26c420def81584dd6994cffc46b0fa",
+      "sha256": "e3ea9d75ff3a8940d122242a335ef6ad8c4842cb03fbbcf3048d08430b0163fe",
+      "bytes": 8261
     }
   ]
 }

@@ -38,7 +38,15 @@ if (remote) {
 }
 if (git('rev-parse', `${revision}^{commit}`).toString().trim() !== revision)
   throw new Error('The checkout does not contain the pinned engine.');
+const enginePaths = new Set(
+  git('ls-tree', '-r', '--name-only', revision).toString().trim().split('\n'),
+);
 const authoredRoot = path.join(root, 'authoring/company/files');
+const testRoot = path.join(root, 'authoring/company/tests');
+const testReceipt = JSON.parse(
+  await fs.readFile(path.join(root, 'migration/owned-test-receipt.json'), 'utf8'),
+);
+const ownedTests = testReceipt.tests;
 const ownedModules = new Set([
   'scripts/produce-company-content.mjs',
   ...[
@@ -58,14 +66,22 @@ const safe = (name) =>
   !name.split('/').some((part) => !part || part === '.' || part === '..') &&
   !name.includes('\\');
 async function localFile(name) {
-  const file = path.join(authoredRoot, name);
+  const file = path.join(name.startsWith('game/test/') ? testRoot : authoredRoot, name);
   try {
     const stat = await fs.lstat(file);
     if (!stat.isFile() || stat.size > 32 * 1024 * 1024)
       throw new Error(`Invalid local authoring input: ${name}`);
-    return await fs.readFile(file);
+    const bytes = await fs.readFile(file);
+    const recorded = testReceipt.items.find((row) => row.sourcePath === name);
+    if (
+      recorded &&
+      (bytes.length !== recorded.bytes ||
+        createHash('sha256').update(bytes).digest('hex') !== recorded.sha256)
+    )
+      throw new Error(`Owned regression input changed without updating its receipt: ${name}`);
+    return bytes;
   } catch (error) {
-    if (error.code !== 'ENOENT' || ownedModules.has(name)) throw error;
+    if (error.code !== 'ENOENT' || ownedModules.has(name) || ownedTests.includes(name)) throw error;
     return null;
   }
 }
@@ -81,6 +97,23 @@ function references(node, found) {
     typeof node.source?.value === 'string'
   )
     found.push(node.source.value);
+  if (
+    node.type === 'NewExpression' &&
+    node.callee?.name === 'URL' &&
+    node.arguments?.[1]?.type === 'MemberExpression' &&
+    node.arguments[1].object?.type === 'MetaProperty' &&
+    node.arguments[1].object.meta?.name === 'import' &&
+    node.arguments[1].property?.name === 'url'
+  ) {
+    const value = node.arguments[0]?.value;
+    if (
+      typeof value === 'string' &&
+      !value.startsWith('/') &&
+      !value.includes(':') &&
+      /\.(?:json|mjs|js|css|html|txt|png|jpg|webp)$/.test(value)
+    )
+      found.push({ resource: value.startsWith('.') ? value : `./${value}` });
+  }
   for (const value of Object.values(node)) {
     if (Array.isArray(value)) value.forEach((child) => references(child, found));
     else if (value && typeof value === 'object') references(value, found);
@@ -99,6 +132,7 @@ try {
   const pending = [
     'scripts/produce-company-content.mjs',
     'game/company-campaigns/playtest-fixtures.mjs',
+    ...ownedTests,
   ];
   const seen = new Set(),
     inputs = [];
@@ -124,8 +158,24 @@ try {
         found,
       );
       for (const reference of found) {
-        if (reference.startsWith('.'))
-          pending.push(path.posix.normalize(path.posix.join(path.posix.dirname(name), reference)));
+        if (reference.resource) {
+          const resource = path.posix.normalize(
+            path.posix.join(path.posix.dirname(name), reference.resource),
+          );
+          // URL constructors also describe optional host files. Preserve their
+          // absence; only materialize files that the pinned inputs actually own.
+          if (
+            enginePaths.has(resource) ||
+            testReceipt.items.some((row) => row.sourcePath === resource) ||
+            ownedModules.has(resource)
+          )
+            pending.push(resource);
+        } else if (reference.startsWith('.'))
+          pending.push(
+            path.posix.normalize(
+              path.posix.join(path.posix.dirname(name), reference.split('?')[0]),
+            ),
+          );
         else if (
           !reference.startsWith('node:') &&
           !['prettier', 'lz-string', 'acorn', 'parse5'].includes(reference)
@@ -189,6 +239,7 @@ try {
   console.log(
     `Verified ${result.files.size} generated files, five chapters and four playtest fixtures using locally owned generators.`,
   );
+  execFileSync(process.execPath, ['--test', ...ownedTests], { cwd: work, stdio: 'inherit' });
 } finally {
   await fs.rm(work, { recursive: true, force: true });
   if (remote) await fs.rm(source, { recursive: true, force: true });

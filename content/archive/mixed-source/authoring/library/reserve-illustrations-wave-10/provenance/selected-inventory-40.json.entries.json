@@ -1,0 +1,172 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/reserve-illustrations-wave-10/provenance/selected-inventory-40.json",
+  "sourceGitBlob": "f5c5680c0c1c13057f5586dd4ed683af14678605",
+  "sourceSHA256": "1e9c6ca11e7f2efcbcf8b1592eee1f785314b159d2f123773657585e1ae52ce6",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/themes/coupa",
+      "value": 10
+    },
+    {
+      "pointer": "/otherRetainedOriginalOutputs/1",
+      "value": {
+        "path": "authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange.png",
+        "mode": "100644",
+        "gitBlob": "fb5d4e51d7324316e4c527efbbf44859635ea4ca",
+        "bytes": 2656655
+      }
+    },
+    {
+      "pointer": "/entries/3",
+      "value": {
+        "wave": 1,
+        "id": "spend-circular-workshop",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-1/originals/spend-circular-workshop.png",
+        "bytes": 2820419,
+        "sha256": "d62070c73c86808cb43fdcc7117da98bcd625621aa44924ce9139c602bb5c6d5",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "c9549ff67bfe8b8d80ef679e1b8863ca2214c949"
+      }
+    },
+    {
+      "pointer": "/entries/7",
+      "value": {
+        "wave": 2,
+        "id": "spend-cloud-cart-exchange",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange-clean.png",
+        "bytes": 2549711,
+        "sha256": "560949cad2ee1031dd5f5edd9c5115db576db5d8133ae3712faa11243cee0971",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "d21dd94089d762b11b437020a927731f17fb1649"
+      }
+    },
+    {
+      "pointer": "/entries/11",
+      "value": {
+        "wave": 3,
+        "id": "spend-copper-kettle-bazaar",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-3/originals/spend-copper-kettle-bazaar.png",
+        "bytes": 2175587,
+        "sha256": "6114aefe292f9c5410ad27cfd4c959fb0054a0374cfb8794eb6144a6ba6f9edb",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "a7934688a039ca041531b7f314ff2406e58b908d"
+      }
+    },
+    {
+      "pointer": "/entries/15",
+      "value": {
+        "wave": 4,
+        "id": "spend-canal-parcel-crane",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-4/originals/spend-canal-parcel-crane.png",
+        "bytes": 2670342,
+        "sha256": "407561c2a427e24175431c19d970f9581f9a6bab7d1adbcdbd69c87bb0e62f2b",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "1bec62387488376fa5d979ac1e9063e224eb5ab0"
+      }
+    },
+    {
+      "pointer": "/entries/19",
+      "value": {
+        "wave": 5,
+        "id": "spend-raincatcher-rooftops",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-5/originals/spend-raincatcher-rooftops.png",
+        "bytes": 2520491,
+        "sha256": "f94b2fef94700d10a68d770e4b2ea89ec97905e4c992cf26c5901ef983dafaaf",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "bb324d769b31b94e236a56b8da6dcd114ec959f6"
+      }
+    },
+    {
+      "pointer": "/entries/23",
+      "value": {
+        "wave": 6,
+        "id": "spend-coral-dawn-bakery",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-6/originals/spend-coral-dawn-bakery.png",
+        "bytes": 2794201,
+        "sha256": "9c62a106d37c55e5b30cc9f4f12e34b1422e6fdc9bef2763e06c581d713861f0",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "f82426c7ebf15396ab6a74c06accea3533c2cdd9"
+      }
+    },
+    {
+      "pointer": "/entries/27",
+      "value": {
+        "wave": 7,
+        "id": "spend-citrus-parcel-hub",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-7/originals/spend-citrus-parcel-hub.png",
+        "bytes": 1916377,
+        "sha256": "a02df60240645d8a010619ae24e994646f71601cfb754db78d15a875bf301c52",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "dc6e4774ed3c4f40fc8ff947cc23212a166b1fd1"
+      }
+    },
+    {
+      "pointer": "/entries/31",
+      "value": {
+        "wave": 8,
+        "id": "spend-mint-canal-tram",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-8/originals/spend-mint-canal-tram.png",
+        "bytes": 1501782,
+        "sha256": "a02eedd7fac88c0c1cceb07903b027bb6b3dc5739d7ffecf9906ecd38f963aba",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "74c96ee80d2e90e92afb3ffdd4fba38f35f77307"
+      }
+    },
+    {
+      "pointer": "/entries/35",
+      "value": {
+        "wave": 9,
+        "id": "spend-sunroof-market-house",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-9/originals/spend-sunroof-market-house.png",
+        "bytes": 2006763,
+        "sha256": "d0328adc0ce24e22afbcaf67e09d93c0eb03e7a805d30890532284ecc0a1f24c",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false,
+        "gitBlob": "caba9229dbcb8a8479ef1615b87fd21c898c86b1"
+      }
+    },
+    {
+      "pointer": "/entries/39",
+      "value": {
+        "wave": 10,
+        "id": "spend-storybook-rail-depot",
+        "themeId": "coupa",
+        "path": "authoring/library/reserve-illustrations-wave-10/originals/spend-storybook-rail-depot.png",
+        "bytes": 1803179,
+        "sha256": "f0dd68a9228b140047ca071e9526679cfeea3b29a921b7f0434120f3186e1ba0",
+        "width": 1774,
+        "height": 887,
+        "runtimeAdopted": false
+      }
+    }
+  ]
+}

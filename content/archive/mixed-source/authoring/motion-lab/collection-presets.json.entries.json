@@ -1,0 +1,121 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/motion-lab/collection-presets.json",
+  "sourceGitBlob": "02242b05e39608a1a6364ce2b0efaeb9ce9fb479",
+  "sourceSHA256": "c553f4a554a5931a155bb231a477dffa49dd3d501db1cfe17e143d767ab654e8",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/contexts/5",
+      "value": {
+        "id": "navi-spend-review",
+        "label": "Spend Sprite · fictional spend review",
+        "scope": {
+          "gameId": "reveal-lab",
+          "themeId": "navi-network",
+          "caseId": "spend-review",
+          "challengeId": "clean-ledger",
+          "levelId": "navi-l01",
+          "mapId": "supplier-routes"
+        }
+      }
+    },
+    {
+      "pointer": "/defaults/3",
+      "value": {
+        "scope": {
+          "themeId": "navi-network"
+        },
+        "characterId": "navi-avatar"
+      }
+    },
+    {
+      "pointer": "/characters/8",
+      "value": {
+        "id": "navi-avatar",
+        "label": "Spend Sprite",
+        "family": "navi-network",
+        "description": "Starter original business helper concept. This is not an official Coupa or Navi character.",
+        "availableIn": [
+          {
+            "themeId": "navi-network"
+          }
+        ],
+        "unlock": {
+          "starter": true
+        }
+      }
+    },
+    {
+      "pointer": "/characters/9",
+      "value": {
+        "id": "navi-auditor",
+        "label": "Audit pulse",
+        "family": "navi-network",
+        "description": "Earned shared-helper-body cosmetic with alternate attachments/effects. Fictional spend outcomes only.",
+        "availableIn": [
+          {
+            "themeId": "navi-network"
+          }
+        ],
+        "unlock": {
+          "anyOf": [
+            {
+              "allOf": [
+                {
+                  "id": "clean-case",
+                  "label": "Complete the spend-review case and resolve its anomaly",
+                  "type": "completed-levels",
+                  "scope": {
+                    "gameId": "reveal-lab",
+                    "themeId": "navi-network",
+                    "caseId": "spend-review",
+                    "challengeId": "clean-ledger"
+                  },
+                  "target": 1,
+                  "objectivesAll": [
+                    "anomaly-resolved"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "pointer": "/fixtures/5",
+      "value": {
+        "id": "navi-clean-case",
+        "label": "Simulate · fictional clean spend case",
+        "description": "Explicit test result for the isolated lab profile. No playable level has been completed and no real reward or business outcome is claimed.",
+        "event": {
+          "version": "1.0.0",
+          "id": "fixture-navi-clean-case.v1",
+          "runId": "preview-navi-clean-case.v1",
+          "type": "run.completed.v1",
+          "simulated": true,
+          "context": {
+            "gameId": "reveal-lab",
+            "themeId": "navi-network",
+            "caseId": "spend-review",
+            "challengeId": "clean-ledger",
+            "levelId": "navi-l01",
+            "mapId": "supplier-routes"
+          },
+          "result": {
+            "outcome": "won",
+            "stars": 2,
+            "coverage": 0.75,
+            "livesLost": 1,
+            "durationMs": 87000,
+            "objectives": [
+              "anomaly-resolved"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
