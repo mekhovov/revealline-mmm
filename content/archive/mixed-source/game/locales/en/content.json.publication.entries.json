@@ -69,6 +69,10 @@
     {
       "pointer": "/motionLab.spendSpriteFictionalSpendReview",
       "value": "Spend Sprite · fictional spend review"
+    },
+    {
+      "pointer": "/clearLedger",
+      "value": "Clear Ledger"
     }
   ]
 }

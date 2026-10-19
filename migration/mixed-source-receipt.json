@@ -786,22 +786,6 @@
       "sourceSHA256": "0c784b5cf286c3b2443917128828e2a7f7f11ff4fcf447fba2779b948cc3f1c4"
     },
     {
-      "sourcePath": "game/locales/en/content.json",
-      "destination": "content/archive/mixed-source/game/locales/en/content.json.publication.entries.json",
-      "entries": 16,
-      "bytes": 2486,
-      "sha256": "4038af1bde5dd5b9bab01bc8e4d5c06c750cb8bba16ce6f07e16a98cd82bcf75",
-      "sourceSHA256": "3bca53318ea0f46a9e0485f82c8e6c0582f1f82160c0cdf735a0e911d956f422"
-    },
-    {
-      "sourcePath": "game/locales/uk/content.json",
-      "destination": "content/archive/mixed-source/game/locales/uk/content.json.publication.entries.json",
-      "entries": 16,
-      "bytes": 3101,
-      "sha256": "3fad6c4b5020a2e8696573a6c6bb0a117e5dd3d15355ef797c5cbf1f8d7f5903",
-      "sourceSHA256": "1e8b32b2eb9ed103d4f646eaffdb5a15b497da22d3be55e23832cedc3d025f2c"
-    },
-    {
       "sourcePath": "game/locales/en/interface.json",
       "destination": "content/archive/mixed-source/game/locales/en/interface.json.publication.entries.json",
       "entries": 1,
@@ -840,8 +824,24 @@
       "bytes": 558,
       "sha256": "7321a4339b7e9e64df0de0e1cd2140400266c5a427173065baa8e298fa54cd7b",
       "sourceSHA256": "b7b2d916ca95ae47e2df274502d5379cf9d532e648d8f095a2a535b9097ac94f"
+    },
+    {
+      "sourcePath": "game/locales/en/content.json",
+      "destination": "content/archive/mixed-source/game/locales/en/content.json.publication.entries.json",
+      "entries": 17,
+      "bytes": 2562,
+      "sha256": "00717c8fc67caa99ee87f84f545836edf7e4748b9a646067fde22b093126d61a",
+      "sourceSHA256": "3bca53318ea0f46a9e0485f82c8e6c0582f1f82160c0cdf735a0e911d956f422"
+    },
+    {
+      "sourcePath": "game/locales/uk/content.json",
+      "destination": "content/archive/mixed-source/game/locales/uk/content.json.publication.entries.json",
+      "entries": 17,
+      "bytes": 3190,
+      "sha256": "7e41bb5b52c0eb0d1b4aca6fab2b8abd6046ef3e739d5fdc2f980500dfd420f1",
+      "sourceSHA256": "1e8b32b2eb9ed103d4f646eaffdb5a15b497da22d3be55e23832cedc3d025f2c"
     }
   ],
   "verification": "Every extracted JSON pointer was compared with the exact original Git source object.",
-  "entries": 2241
+  "entries": 2243
 }

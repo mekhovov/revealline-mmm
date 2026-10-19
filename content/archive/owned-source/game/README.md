@@ -1,0 +1,153 @@
+# Play and author RevealLine
+
+**New development edition:** [tap-to-steer controls](../docs/continuous-steering.md), exact paused continuation, a dark full-browser shell and session-owned synthesis are being verified for v0.22. The [roadmap](../docs/implementation-roadmap.md) tracks the subsequent wide chapter, uploaded music, tactical systems, content and release gates. Historical controls and verification below describe their named releases.
+
+Run `npm run dev` from the repository root and open [solo play](http://127.0.0.1:8768/game/). The page uses local Phaser 4.2.1 and a browser-independent [simulation core](core/README.md). The preserved [v0.21.0](http://127.0.0.1:8767/releases/v0.21.0/site/game/) release includes 29 maps: 12 base maps and 17 optional maps in six expansions. Homeward Skies and Equipment Workshop offer six original illustrated rewards; the other 23 maps retain procedural scenes. Three optional First Flight lessons are separate, and earlier releases remain independently preserved.
+
+v0.21 adds same-map [Standard and Gentle](../docs/campaign-difficulty.md) campaign play. All [six source gates](../docs/verification/round-30/v021-source-gates.md) pass **1,831 tests** on **371 unchanged inputs**, source `1250a8afdcf9594d87ed6a79ba29639d1225fa69`. The [independent rebuild](../docs/verification/round-30/v021-integrity.md) matches **152 packaged files**; the exact candidate’s [browser journey](../docs/verification/round-30/v021-browser.md) verifies **145 offline files / 32,077,079 bytes**, a saved Gentle continuation and the first offline couch visit. The [public-release guide](../docs/public-release.md) records deployment separately; physical-device behavior remains unverified.
+
+v0.18 introduced Pack and Level selectors and direct campaign launch links, and included the [gallery-clock repair](../docs/verification/round-28/gallery-clock.md). Its [archive verification](../docs/verification/round-28/v018-preservation.md) reproduces every output file. v0.19 introduced source-specific attempt exports and Cancel; read the [save guide](../docs/library-and-packs.md) for Ready, recovery and missing-pack behavior. The [source tests](../docs/verification/round-28/attempt-export.md) and [browser checks](../docs/verification/round-28/attempt-export-browser.md) record their own scopes; the [public-release guide](../docs/public-release.md) identifies frozen and deployed artifacts.
+
+Earlier v0.20 includes [shared couch controller menus](../docs/couch-controller-navigation.md): either assigned player can claim the menu, choose the race setup, start, pause, resume and play another round. Flight assignments remain separate; keyboard and touch stay available. [All six source gates](../docs/verification/round-29/v020-source-gates.md) pass 1,683 tests; the [146-file archive rebuild](../docs/verification/round-29/v020-integrity.md), [packaged browser observations](../docs/verification/round-29/v020-browser.md) and [public deployment](../docs/verification/round-29/v020-public.md) record their separate scopes. Controller integration tests and native browser actions do not establish physical-gamepad behavior.
+
+[Equipment Workshop 1.1.0](../docs/equipment-workshop.md) gives **Garden of Threads**, **Neon Switchboard** and **Clear Ledger** their own full-picture rewards. Install it through **Library & saves → Expansion packs** to update existing collection pictures while keeping the same maps, classes, music and optional equipment goals. Changing collection pictures clears the previous image while the selected picture loads. Reduced effects applies to gallery celebrations as well as live endings; short-landscape viewers place the picture beside the actions. [Source browser evidence](../docs/verification/round-27/source-browser.md) records the artwork, returning-player journeys and layout limits.
+
+Earlier release history: **v0.14.0** adds a lasting loss explanation and one retry tip, with a readable reset note in **Read details**. Reading or leaving that region keeps the attempt ended until a separate **Try again ↻**. See [Retry feedback](../docs/retry-feedback.md).
+
+The earlier **v0.15.0 frozen release** gives solo flight buttons a consistent 44px minimum, keeps short-landscape controls beside the board in normal page flow, and wraps long authored labels. Playground's manual **Control geometry** capture helps authors compare target rectangles, spacing and actual viewport conditions. See [Flight controls](../docs/flight-controls.md). Normal vertical scrolling may be needed; input bindings and simulation remain unchanged.
+
+The earlier **v0.16.0 frozen release**, source `8fb6b5782a6fee85211b9bbbfb3d13a1d1a60c43`, adds the optional [First Flight course](../docs/first-flight.md): **Close a line**, **Find the empty side** and **Bring the picture home**, with a checked saved-flight handoff and actual Playground/Controller Lab previews. Course progress and settings stay within the visit and grant no campaign rewards. [Source browser journeys](../docs/verification/round-26/source-browser.md) completed all three lessons in both steering modes and checked retained-flight return; [frozen browser checks](../docs/verification/round-26/frozen-browser.md) record the saved build's offline behavior separately.
+
+## The loop
+
+Leave claimed ground to start a vulnerable cut; return to claimed ground to close it. The cut and connected regions without a field enemy become revealed. Enemies on both sides can leave a trail-only capture. Permanent walls block movement and are excluded from the coverage denominator. A bright centerline and tile overlay identify the vulnerable cut.
+
+Reach the coverage target and capture required objectives. A failed cut costs a life and clears that cut while retaining earlier territory. Some maps add a mission deadline, a cut deadline or a maximum trail length; zero disables each limit. Other clocks only affect medals. Victory reveals the whole picture, plays a skippable celebration and retains the actual captured percentage in the result.
+
+An ended attempt shows its actual cause and **Try again ↻**. Retry immediately starts this mission again with its selected seed, steering mode and starting equipment; it resets this attempt's reveal and resources, retaining collected pictures and best results. A mid-run hangar switch does not replace the starting equipment. Reading or leaving the explanation never retries. A loss grants no campaign reward; recovering from a contact within an unfinished attempt still retains earlier territory. The [retry guide](../docs/retry-feedback.md) covers all seven causes, timers, safe-ground patrols and input clearing.
+
+Copper Orchard also offers the optional **Steady Signal** seal: close one cut through eight distinct active interference cells with signal-resistant equipment, then finish without losing a life. The goal tracks open-line and closed-cut progress separately, survives verified saved-flight restoration, and is replay-checked before being added to your collection. Each retained setup lists its class route, steering mode and seed. Ordinary wins still unlock the picture and next mission. See the [mastery guide](../docs/round-17-mastery-increment.md) for exact rules, local record limits and authoring boundaries.
+
+River Switchyard adds **Supply Line** for successful refills, closed suppressed crossings and a switch at the southern hangar. Home Beacon adds **Safe Return** for a live-cut impact pulse, completed recovery and clean finish. Pause shows named requirements, while flight keeps a compact summary. See [all three equipment seals](../docs/equipment-seals.md) for their distinct rules and supported authoring formats.
+
+The campaign introduces bouncers, border patrols, supplies, objectives, obstacles, a telegraphed lane boss, signal interference and hangars. FPV Front, Ukraine Atlas, 1994 Forever change presentation. Military classes use fictional arcade abilities rather than real operational specifications.
+
+## Solo controls and classes
+
+**Campaign difficulty** offers **Standard**, with authored rules and optional equipment seals, and **Gentle**, with the same pictures, more lives, slower moving hazards and fewer limits. Both modes share mission, picture and appearance access while retaining separate scores and medals. A choice during an unfinished flight applies to the next fresh attempt; Resume and Load preserve its current mode, while Retry starts over in the selected mode. The [guide](../docs/campaign-difficulty.md) explains exact context matching, grouped gallery results, the shared 1,000-score history and distinct 30-minute recorder / 7,200-second collection bounds. Couch, Challenges, First Flight and Practice keep their own rules.
+
+**Settings → Reduced effects** and **Tap steering** mirror the existing flight controls and remain reachable in short-landscape layouts. They use the same saved preferences; changing steering clears held movement without converting the current difficulty. Vertical scrolling may still be needed.
+
+| Input                    | Action                                                                                                                                                    |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Arrows / WASD            | Move in four directions; release to stop                                                                                                                  |
+| Shift                    | Boost while held                                                                                                                                          |
+| E                        | Use the active class ability                                                                                                                              |
+| R                        | Collect supplies when nearby and applicable                                                                                                               |
+| Escape / P               | Pause or resume                                                                                                                                           |
+| Touch direction buttons  | Hold to move; optional Tap steering latches direction, tap again or press Stop to clear                                                                   |
+| Standard gamepad         | Release then press a face button to join. D-pad / left stick moves; South ability, West supply, North hangar, East Stop, right shoulder boost, Menu pause |
+| G / Change craft control | Choose another available class while safely docked                                                                                                        |
+
+With the default map, D-pad moves menu focus, South confirms and East goes back. Selects and sliders preview a value before applying it; East cancels the edit. See [controller navigation](../docs/controller-navigation.md) and try the actual menus in [Controller practice](controller-lab/). **Settings → Controller controls** lets you change the complete flight/menu maps, choose position/Xbox/PlayStation labels, select or invert sticks and tune press/release thresholds. Apply adopts the whole draft; Cancel and closing Settings preserve the current layout. Help and edit previews use your selected labels. These solo preferences are not yet shared with couch play or Replay Theater. See [controller settings](../docs/controller-settings.md) and [forward-compatible profile transfer](../docs/controller-preference-migration.md). Pause and focus loss clear held input. Touch Boost follows hold or tap steering, and Stop clears it. Controller adapters and viewport fixtures do not certify particular hardware.
+
+**Settings → Solo controller Boost** offers default **Hold** and optional **Toggle**, separately from the button-map draft. Toggle uses a fresh press for on/off and displays the mapped button label. Stop, pause, reader/hangar entry and recovery clear it; release controls before turning it on again. Keyboard/touch Boost remains independent, direction still needs a hold, and Couch keeps Hold. The mode can be saved or exported; its live on/off state is never restored. New exports require a compatible newer reader. See [Solo controller Boost](../docs/controller-boost.md) for exact behavior and verification limits.
+
+**Read details** enters the mission/result overlay's text region. **Mission brief → Read mission brief** enters the full authored briefing, pausing an active flight first. Your configured menu Up/Down scroll only that region. Confirm, Back, Menu or **Done reading** exits without also starting, retrying or resuming; release before the next action. Keyboard and touch retain native scrolling and relinquish controller reading when used. These two readers do not extend to every Help, Library, couch or theater text area.
+
+The [Controller practice guide](../docs/controller-practice.md) covers the 18 choices present in frozen v0.15.0: 12 base maps, four Fieldcraft maps, Sentinel Relay and the local long-text **Reading practice / The patient route**. Frozen v0.16.0 adds the three First Flight lessons, for 21 choices. Reading practice and course lessons add no campaign reward or installable expansion. The lab includes 320 × 640 and 844 × 501 viewports and shows requested versus actual size. Practice remains non-awarding. Browser simulation does not reproduce a phone's safe areas, physical controller mapping or trusted activation for audio, fullscreen and file pickers.
+
+**Immediate** turns at the current position. **Grid + buffer** turns at cell centers and buffers the latest held direction. Releasing clears that buffer. The board remains 48 × 36 cells at every viewport size. Starting-class or steering changes in the flight deck start a fresh attempt; the in-flight hangar changes class within the existing attempt.
+
+| Class                     | Ability and tradeoff                                                                                        |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Scout                     | Scan marks objectives and briefly shows enemy direction hints                                               |
+| Light carrier (`bomber`)  | Collect one charge, then place a temporary enemy-stunning field                                             |
+| Heavy carrier (`carrier`) | Carry two charges of the same stun-field ability                                                            |
+| Interceptor               | A temporary shield can absorb one enemy/lane contact; it cancels the cut and recovers at home               |
+| Fiber relay               | Scan and ignore signal interference; the live cable/trail remains vulnerable                                |
+| Impact craft              | Stun nearby enemies, abandon the unfinished cut and redeploy without losing a life; no territory is granted |
+| Trapper                   | Collect a charge to place a slowing field                                                                   |
+
+A hangar switch requires safe ground, no live cut and the configured cooldown. Each class retains its ammunition and cooldown; switching does not refill it. Maps can disable switching by declaring no hangars. Body, palette, rotor animation and theme are separate from these gameplay recipes.
+
+## Keep progress and pictures
+
+Campaign clears award local progress, medals and cosmetic unlocks. **Collection** contains unlocked bodies and completed pictures; pictures can replay their celebration. Search the gallery and browse 12 pictures per page. **Library & saves → Local scores** searches results grouped by map and exact setup, including class changes, with ten setup groups per page. These are device-local records, not authenticated global rankings.
+
+The source increment after v0.9.0 makes chapter appearances attainable after one clear and after `min(4, campaign map count)` distinct clears. **Collection → Campaign appearances** shows each tier; a new unlock appears beside the completed picture. **Choose appearance** focuses the selector without restarting or auto-equipping. A compatible complete three-map profile qualifies immediately without a retrospective celebration. Appearances change presentation, not abilities, and access stays local to that campaign. Already-cleared missions remain replayable even when an earlier mission has no clear. The [chapter-reward guide](../docs/chapter-rewards.md) separates this implemented behavior from browser verification; frozen v0.9.0 retains its earlier behavior.
+
+For a complete transfer:
+
+1. Choose **Library & saves → Saves & loads → Export complete backup**. It includes the library, installed packs and a snapshot of the current unfinished campaign flight; without one, it includes the existing suspended flight if present.
+2. On the receiving browser, use **Load a saved JSON file**, or paste the JSON and choose **Load this JSON**. The complete backup replaces those three parts together after validation.
+3. Choose **Load suspended attempt** to continue the restored flight. **Undo complete backup import** restores the previous collection, packs and flight while this page remains open.
+
+Export before importing if you want to retain both collections after a reload. The separate library, installed-pack and attempt exports remain available. The [full-backup guide](../docs/full-backup.md) explains limits and interrupted-import recovery.
+
+One game tab owns saving for the profile. Additional tabs remain playable and exportable with session-only progress and settings. Close the owning tab, then reload the second to make it writable; export session changes first. The app displays a warning instead of letting the second tab overwrite the owner's preferences or progress.
+
+The capacity display in **Saves & loads** shows usage against 512 campaigns, 4,096 picture records and a 4 MiB profile budget. Old pictures are preserved. Export archives before capacity is reached; the interface will not silently delete earlier pictures to store a new collection.
+
+Attempt loading reconstructs and verifies recorded gameplay before adopting the run. A replay export by itself is a verification document; use an attempt export to resume. Storage errors are reported, and incompatible/corrupt data is preserved for recovery. Browser storage can be cleared or evicted, so downloaded backups matter. See [library/pack contracts](../docs/library-and-packs.md) and [replays and sessions](../docs/replays.md).
+
+Development and each archived release keep separate profiles. **Bring progress from an earlier release** reviews and explicitly copies a compatible collection on the same browser origin, preserving the earlier release. Copy checks the source again and requires a new review if it changed. Use a complete backup file for another browser, address, port, device or native origin. Earlier v0.1.x saves require an explicitly compatible migration. See [continuation and release copying](../docs/continuity-transfer.md).
+
+## Add variety
+
+In **Library & saves → Expansion packs**, install a bundled example, import a supported pack file or import an exported pack library. Pack v1 supplies ordinary content; explicit v2 adds finite optional goals; v3 supplies versioned encounter maps with an empty mastery list. Select its campaign to play its maps and earn its own progress. Invalid imports preserve the previous installed content; removing a pack retains player records so reinstalling can restore its pictures. Packs select supported rules and media; they cannot execute scripts, introduce an unregistered algorithm or fetch remote media.
+
+[Fieldcraft](../docs/fieldcraft-challenges.md) explores resistant signal crossing, bomber supply and emitter suppression with a hangar switch, an Impact recall and slowing nets. Its maps also retain ordinary completion routes for every built-in class. These are alternate approaches to playtest, not promises that one class is mandatory.
+
+**Challenges** provides date-selected Daily route, Open skies and Pressure run boards. Earlier dates remain playable; no login streak expires. Generated boards are candidates and are not all covered by the authored campaign completion fixtures.
+
+Settings offer synthwave, chiptune, rock, metal and ambient music, independent master/music/effects levels, a preview and Reduced effects. Sound requires user activation. All tracks use original oscillator/noise arrangements; expansion descriptors can select tempo, tonic and scale. The four world families have distinct picture finales. Read [audio and rewards](../docs/audio-and-rewards.md).
+
+## Watch a verified run
+
+Open [Replay Theater](http://127.0.0.1:8768/game/replay-theater/) to watch four recorded Fieldcraft examples: signal-resistant flight, supplies with a hangar switch, Impact recovery and a slowing net. It starts paused and stays silent. Choose **Play**, **Pause**, **Restart**, **Step 1 tick**, or **0.5× / 1× / 2×** speed. With the canvas focused, Space toggles playback and Right Arrow steps one tick. Four theme choices change only the presentation.
+
+Import your own `xonix-replay.v3` ordinary recording or `xonix-replay.v4` encounter recording, or paste JSON under **Import your own replay → Verify and load JSON**. Verification must finish before the new recording replaces the previous one; **Cancel load** cancels adoption. The theater reads no player library and awards no scores, pictures or progress. Its progress bar is a readout, with no arbitrary seeking or control over the recorded craft. To continue an unfinished flight yourself, use a saved attempt in the main game. See [Replay Theater](../docs/replay-theater.md) and [recording/export](../docs/replays.md).
+
+## Couch race
+
+Open [Couch race](http://127.0.0.1:8768/game/couch/) for two independent boards with the same map, class, seed and steering. Choose a 30-, 90- or 180-second round. First clear wins; simultaneous clears can draw. At timeout, coverage, lives and then score decide. A series is first to two points.
+
+| Action  | Player 1   | Player 2    |
+| ------- | ---------- | ----------- |
+| Move    | WASD       | Arrows      |
+| Ability | Q          | Enter       |
+| Supply  | E          | /           |
+| Boost   | Left Shift | Right Shift |
+
+Escape pauses both boards. **Focus boards** hides setup and secondary controls to prioritize the two arenas and their controls; compact windows or long hints can require normal vertical scrolling. **Show setup** reveals configuration and the Solo link, pausing a running round first. Starting a round enables focus automatically. Each side retains touch controls, and two standard controllers can drive separate players.
+
+The **v0.20 shared menu** has one deliberate owner while preserving those two flight assignments. Release controls, press a face button or Menu to join, then release again before using South to choose an action. East/Menu cancels a select preview or focuses the primary action; it never starts, resumes or advances a round by itself. **Release menu controller** allows either assigned player to join afresh. Fixed couch controls use position labels and held Boost, independently of solo remaps and Boost Toggle. The menu hint stays visible in Focus boards mode. See [Couch controller menus](../docs/couch-controller-navigation.md) for native handoff, disconnect behavior and current verification limits; the [public-release guide](../docs/public-release.md) identifies published versions.
+
+Couch results are separate from campaign rewards. This is a local race, with no shared-arena co-op or network connection. The [public-release guide](../docs/public-release.md) describes the future network boundary. Source checks, browser layout observations and physical-controller evidence remain distinct.
+
+## Create and share
+
+The [playground](http://127.0.0.1:8768/game/playground/) edits map/theme/class/rule JSON, paints signals and hangars, imports expansions, replaces eight image roles and exports playable scenarios or a new one-map expansion. Fiber, Bomber and Impact presets exercise their actual interactions. **Play configuration** uses the same engine in practice mode, which grants no campaign rewards. Its six embedded screen-size fixtures are layout tests, not device emulators. See [the playground workflow](../docs/playground-runtime.md).
+
+The separate motion lab, legacy draft packs and media library retain their own formats; they require an explicit adapter where their data differs. AI-assisted game changes should use [Runtime Maintainer](../authoring/skills/xonix-runtime-maintainer/SKILL.md) and [Expansion Author](../authoring/skills/xonix-expansion-author/SKILL.md) with the relevant art/design skill.
+
+The [authored-art workflow](../docs/authored-art.md) covers source preservation, optional AI styling, map-specific embedded pictures, pack rebuilds and actual reveal/gallery checks. Homeward Skies and Equipment Workshop provide six original illustrated examples with separate source files, effective prompts and read-only builder checks before deliberate output writes.
+
+The static distribution includes **Prepare offline play** in Settings. Preparation must finish online before an offline reopen; source previews do not register a worker. See [offline instructions](../docs/offline-release.md), [development](../docs/development.md), [public release](../docs/public-release.md) and [saved versions](../docs/versioning.md). Native store packages and physical phone/controller/audio/performance checks remain separate from browser layout and automated simulation evidence.
+
+The earlier frozen v0.17.1 source `efd5fe025a9fe3f1688a11f1be9400018f8e793d` passes [all six gates and 1,566 tests](../docs/verification/round-27-1/source-gates.md), with 343 unchanged inputs. Its archive [rebuilds all 142 output files identically](../docs/verification/round-27-1/integrity-notes.md). The [frozen offline check](../docs/verification/round-27-1/frozen-browser.md) prepared 135 files / 31,764,790 bytes on the first attempt, then installed both illustrated packs from cached assets after shutdown. A legal Immediate Garden finish reached 74.1%, 12,590 points and three lives; another offline reload retained the exact 8,927-byte library with four pictures, ten scores and one Steady Signal seal. The first offline Playground visit at 844×390 reported eleven targets at least 44×44 and no horizontal overflow. The same frozen browser report retains `Celebration dt must be finite and nonnegative` from gallery replay; celebration acceptance remains incomplete despite the successful static-picture, offline and saved-flight checks.
+
+This repairs the unchanged v0.17.0 release's [failed frozen offline installation](../docs/verification/round-27/frozen-offline-investigation.md). The [earlier v0.17.1 candidate](../docs/verification/round-27-1/candidate-browser.md) separately completed a Grid + buffer Neon route; its worker predates two formatting-only line wraps, so it is not the exact final-source artifact. Browser observations do not certify physical hardware, native execution or future browser storage retention.
+
+The earlier frozen v0.15.0 source passes [1,444 tests and all six final gates](../docs/verification/round-25/source-gates.md); its archived source [rebuilds all 135 outputs identically](../docs/verification/round-25/integrity-notes.md). The [offline check](../docs/verification/round-25/frozen-browser.md) verifies **128 files / 20,535,053 bytes**. After the server stopped, Grid + buffer First Signal won at 52.2%, three lives and 8,160 points. Reload retained the gold picture and first-clear rewards, and Play celebration worked. An initial offline Playground visit measured eleven flight targets at least 44×44 without horizontal overflow at 1280×720, 844×390 and 320×640. These are CSS/browser observations, not physical-device or native-package certification.
+
+The earlier frozen v0.14.0 source passes [1,439 tests and all six gates](../docs/verification/round-24/source-gates.md); its archived source [rebuilds all 134 outputs identically](../docs/verification/round-24/integrity-notes.md). The [offline browser check](../docs/verification/round-24/frozen-browser.md) verifies **127 files / 20,519,745 bytes**. With the server stopped, First Signal was lost, read, explicitly retried and completed at 52.2%, three lives and 8,160 points. An offline reload retained one golden picture, its first clear and one **3.75-second** local score. An offline Playground import also exercised a staged boss loss, reading and a fresh one-life Retry with both objectives reset at 320 × 640. These checks do not certify physical devices or native packages.
+
+The earlier frozen v0.13.0 source passes [1,406 tests](../docs/verification/round-23/source-gates.md), and its archived source [rebuilds all 133 outputs identically](../docs/verification/round-23/integrity-notes.md). The [offline check](../docs/verification/round-23/frozen-browser.md) verifies **126 files / 20,515,050 bytes**. With its server stopped, a live cut was saved, reloaded, restored paused and completed; another offline reload retained the picture and one 8,160-point score at **4.03 seconds**. The same offline origin loaded Controller practice and exercised Toggle, Stop and recovery. These are recorded browser results, not physical-device or native-build certification.
+
+## Author optional goals
+
+Use explicit pack v2 with supported finite `masteries`, or copy a campaign goal in the playground. Scenario v2 retains a full `masteryDefinition` or explicit null. The [pack contract](../docs/pack-mastery-contract.md) and [Equipment Workshop](../docs/equipment-workshop.md) describe the three themed examples, local-reference validation, practice, export and CLI inspection. Ordinary pictures and scores remain independent of seals. Revised or removed declarations preserve historical records; reinstalling the exact declaration restores its current label. The older v1 pack/scenario formats remain unchanged.
+
+The [Sentinel Relay guide](../docs/sentinel-relay.md) describes the new two-stage encounter, seven equipment interactions and editable versioned pack. Its warnings and openings use simulation ticks; presentation changes do not change the encounter schedule. New encounter maps use level.v2/core.v3/replay.v4; existing maps keep their original core.v2 identities.
