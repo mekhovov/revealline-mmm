@@ -14196,6 +14196,7 @@ try {
             host
               .select(mission, difficulty)
               ?.manifests.find((manifest) => manifest.missionId === mission.levelId);
+          trace?.mark('missions-solo-source-begin');
           const source = journeyLibrarySource({
             editionId: route.id,
             edition: route.id === DEFAULT_JOURNEY_ROUTES.solo ? 'New Journey' : route.label,
@@ -14211,6 +14212,8 @@ try {
             card: (mission) => host.card(mission, browsingJourneyPreferences.snapshot().difficulty),
             launch: launchSolo,
           });
+          trace?.mark('missions-solo-source-end');
+          trace?.mark('missions-versus-source-begin');
           const versusSource = journeyLibrarySource({
             editionId: route.id,
             edition: route.id === DEFAULT_JOURNEY_ROUTES.solo ? 'New Journey' : route.label,
@@ -14229,17 +14232,24 @@ try {
               versusPreview.card(mission, browsingJourneyPreferences.snapshot().difficulty),
             launch: (_mission, context) => departLibraryMission(context),
           });
+          trace?.mark('missions-versus-source-end');
+          trace?.mark('missions-remote-team-import-begin');
           const { createRemoteTeamLibrarySources } = await import(
             './mission-library/remote-team.mjs'
           );
+          trace?.mark('missions-remote-team-import-end');
           assertCurrent();
+          trace?.mark('missions-remote-team-sources-begin');
           const teamSources = createRemoteTeamLibrarySources({
             launch: departLibraryMission,
             difficulty: () => browsingJourneyPreferences.snapshot().difficulty,
           });
+          trace?.mark('missions-remote-team-sources-end');
+          trace?.mark('missions-prior-import-begin');
           const { createSpatialNextEditionSources } = await import(
             './mission-library/spatial-next-editions.mjs'
           );
+          trace?.mark('missions-prior-import-end');
           assertCurrent();
           trace?.mark('missions-prior-editions-begin');
           spatialEditions = await createSpatialNextEditionSources({
