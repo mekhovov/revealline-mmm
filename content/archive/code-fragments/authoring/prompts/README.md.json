@@ -1,0 +1,34 @@
+{
+  "sourcePath": "authoring/prompts/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "f5e679c73605688fa1835982b6a7995ff906378568bf8a7fb463b3d2ea41fbdb",
+  "sourceGitBlob": "6d3ec82aa1b6d2235d914c83c1df8042191ac50e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 1564,
+      "end": 1974,
+      "source": "The catalog supports four themed families (its NAVI NETWORK draft direction maps to the playable Spend Network world): **FPV FRONT** (main Ukrainian military theme), **UKRAINE ATLAS**, **1994 FOREVER**, and **NAVI NETWORK**. The same gameplay overlay can sit above pixel-art, flat illustration, painterly or photographic reveal images. Background art never defines collision geometry or actual enemy positions."
+    },
+    {
+      "start": 16605,
+      "end": 16631,
+      "source": "### Extend the Coupa theme"
+    },
+    {
+      "start": 16633,
+      "end": 17057,
+      "source": "Use `navi-01-theme-bible` with current official Coupa reference notes, then `shared-17-module-cards` with the actual supported effect catalog. Create a Paper Circuit image pack with `shared-14-image-pack`. The original C-token remains replaceable placeholder art; use `shared-01-reference-lock` when real selected Navi artwork is available. Keep inferred gameplay metaphors distinct from Coupa's documented product behavior."
+    },
+    {
+      "start": 20897,
+      "end": 20913,
+      "source": "### navi-network"
+    },
+    {
+      "start": 20915,
+      "end": 22034,
+      "source": "| ID                    | Mode             | Purpose                                                          |\n| --------------------- | ---------------- | ---------------------------------------------------------------- |\n| `navi-01-theme-bible` | `text_generate`  | Make Coupa-inspired value recovery playful and broad.            |\n| `navi-02-reveal-art`  | `image_generate` | Reveal a living business network instead of a spreadsheet.       |\n| `navi-03-player`      | `image_generate` | Explore a replaceable placeholder with human-friendly character. |\n| `navi-04-enemies`     | `image_generate` | Turn spend friction into distinct abstract obstacles.            |\n| `navi-05-ui`          | `image_generate` | Create a game interface that feels clear and business-friendly.  |\n| `navi-06-capture-fx`  | `image_generate` | Show a connection becoming useful when a region closes.          |\n| `navi-07-soundtrack`  | `text_generate`  | Give Coupa-inspired play a warm, confident sound.                |\n| `navi-08-promo`       | `image_generate` | Explain value recovery through an inviting illustrated city.     |"
+    }
+  ]
+}

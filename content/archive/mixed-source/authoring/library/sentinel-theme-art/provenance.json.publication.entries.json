@@ -1,0 +1,26 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "authoring/library/sentinel-theme-art/provenance.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "f51b0f8355055a0f73fb8a60d1a049eef650ef40",
+  "sourceSHA256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/contextPins/13",
+      "value": {
+        "path": "authoring/library/spend-route-art/prompts.json",
+        "bytes": 5088,
+        "sha256": "6ad44570fe6576f2880802e427f8c4fc793ab35061d1273a1061c6d00bd01c55"
+      }
+    },
+    {
+      "pointer": "/contextPins/14",
+      "value": {
+        "path": "authoring/library/spend-route-art/provenance.json",
+        "bytes": 5024,
+        "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+      }
+    }
+  ]
+}

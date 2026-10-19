@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/library/moving-edges-art/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "b04d2ea6e16f29170d2fe1e0fb099d1c26753212f4e9603f32b801ed6e799cf7",
+  "sourceGitBlob": "9f4b3433cca70f4f5ac08fed4e164048aa321fde",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 40,
+      "end": 394,
+      "source": "Twelve distinct original panoramas accompany the three authored Moving Edges layout designs across FPV, Ukraine Atlas, 1994 Forever and Coupa themes. The untouched PNGs total 34,526,635 bytes; each is below the existing 4 MiB image limit. These are source artwork candidates. They add no runtime chapters, production approvals, layouts or release claims."
+    },
+    {
+      "start": 807,
+      "end": 2542,
+      "source": "| Theme   | Layout cue        | Original                                                                    | Actual size |\n| ------- | ----------------- | --------------------------------------------------------------------------- | ----------- |\n| fpv     | terrace-stitch    | [The Hillside Flight Workshop](originals/terrace-stitch-fpv.png)            | 1774×887    |\n| fpv     | survey-wheel      | [Signals around the Old Depot](originals/survey-wheel-fpv.png)              | 1774×887    |\n| fpv     | breakwater-return | [The Coastal Watch Returns](originals/breakwater-return-fpv.png)            | 1774×887    |\n| ukraine | terrace-stitch    | [Threads above the Mountain River](originals/terrace-stitch-ukraine.png)    | 1774×887    |\n| ukraine | survey-wheel      | [The Potter's Spring Courtyard](originals/survey-wheel-ukraine.png)         | 1773×887    |\n| ukraine | breakwater-return | [Boats beneath the Stone Lanterns](originals/breakwater-return-ukraine.png) | 1774×887    |\n| retro   | terrace-stitch    | [Mixtapes on the Upper Walkways](originals/terrace-stitch-retro.png)        | 1774×887    |\n| retro   | survey-wheel      | [The Last Saturday at the Rotunda](originals/survey-wheel-retro.png)        | 1774×887    |\n| retro   | breakwater-return | [Summer's Last Lake Ferry](originals/breakwater-return-retro.png)           | 1774×887    |\n| coupa   | terrace-stitch    | [The Shared Goods Terraces](originals/terrace-stitch-coupa.png)             | 1774×887    |\n| coupa   | survey-wheel      | [The Repair Exchange Rotunda](originals/survey-wheel-coupa.png)             | 1774×887    |\n| coupa   | breakwater-return | [The Harbor Maintenance Round](originals/breakwater-return-coupa.png)       | 1774×887    |"
+    },
+    {
+      "start": 3432,
+      "end": 4072,
+      "source": "FPV uses Ukrainian drone crews, marked equipment and military/coastal watch settings without graphic violence. Ukraine Atlas draws on craft, textiles, pottery and boatbuilding; its invented architecture is not an exact historical reconstruction. Retro scenes use fictional CRTs, tapes, arcades and ferry culture. Coupa scenes show shared goods and repairs without depicting an actual product or asserting financial results. Several images contain larger foreground figures, incidental signs or more building volumes than requested; all deviations remain explicit in provenance. These scenic stills are not actor sprites or animation assets."
+    }
+  ]
+}

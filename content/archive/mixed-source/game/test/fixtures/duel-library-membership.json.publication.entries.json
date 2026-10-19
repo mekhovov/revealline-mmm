@@ -1,0 +1,294 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/test/fixtures/duel-library-membership.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "4027cbf7666cbc3b685434b38b0619d36a62395a",
+  "sourceSHA256": "2e315d80fa8dccf0821481d3514cecd92f67420c7bebc05fe8df4570f0591d71",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/classic/13/missions/3",
+      "value": [
+        "neon-coupa-pack",
+        "2"
+      ]
+    },
+    {
+      "pointer": "/classic/14/missions/3",
+      "value": [
+        "neon-coupa-pack",
+        "2"
+      ]
+    },
+    {
+      "pointer": "/classic/28",
+      "value": {
+        "owner": "[\"classic\",\"optional\",\"original-spend-network\",\"current-line-impact.v1\"]",
+        "edition": "5ab9a0c7362ca8e05819ff3d68c0a7246ab5057b4d796a063d3d69af115504ac:current-line-impact.v1",
+        "campaign": "original-spend-shared-routes/1/7a36efe129711f19::current-line-impact.v1",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "current",
+        "missions": [
+          [
+            "original-spend-shared-harbor",
+            "1"
+          ],
+          [
+            "original-spend-city-wins",
+            "1"
+          ],
+          [
+            "original-spend-market-workshop",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/29",
+      "value": {
+        "owner": "[\"classic\",\"optional\",\"original-spend-network\"]",
+        "edition": "5ab9a0c7362ca8e05819ff3d68c0a7246ab5057b4d796a063d3d69af115504ac",
+        "campaign": "original-spend-shared-routes/1/7a36efe129711f19",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "archive",
+        "missions": [
+          [
+            "original-spend-shared-harbor",
+            "1"
+          ],
+          [
+            "original-spend-city-wins",
+            "1"
+          ],
+          [
+            "original-spend-market-workshop",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/38",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"route-worlds-coupa\",\"current-line-impact.v1\"]",
+        "edition": "96d6c0e6612197a542ec28d31132a20e0e945c1e12407109ddedad04ac0b0813:current-line-impact.v1",
+        "campaign": "route-worlds-coupa/1/708c553521008c7d::current-line-impact.v1",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "current",
+        "missions": [
+          [
+            "route-worlds-coupa-foundry",
+            "1"
+          ],
+          [
+            "route-worlds-coupa-depot",
+            "1"
+          ],
+          [
+            "route-worlds-coupa-switchback",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/39",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"route-worlds-coupa\"]",
+        "edition": "96d6c0e6612197a542ec28d31132a20e0e945c1e12407109ddedad04ac0b0813",
+        "campaign": "route-worlds-coupa/1/708c553521008c7d",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "archive",
+        "missions": [
+          [
+            "route-worlds-coupa-foundry",
+            "1"
+          ],
+          [
+            "route-worlds-coupa-depot",
+            "1"
+          ],
+          [
+            "route-worlds-coupa-switchback",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/46",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"sentinel-circuit-coupa\",\"current-line-impact.v1\"]",
+        "edition": "0fc200adfd509d7a993f24c73432195e314b4450b2ef45fd601b523f62464c6c:current-line-impact.v1",
+        "campaign": "sentinel-circuit-coupa/1/8459eb3ba67608e6::current-line-impact.v1",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "current",
+        "missions": [
+          [
+            "sentinel-circuit-coupa-listening-court",
+            "1"
+          ],
+          [
+            "sentinel-circuit-coupa-switchyard-gates",
+            "1"
+          ],
+          [
+            "sentinel-circuit-coupa-open-circuit",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/47",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"sentinel-circuit-coupa\"]",
+        "edition": "0fc200adfd509d7a993f24c73432195e314b4450b2ef45fd601b523f62464c6c",
+        "campaign": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "archive",
+        "missions": [
+          [
+            "sentinel-circuit-coupa-listening-court",
+            "1"
+          ],
+          [
+            "sentinel-circuit-coupa-switchyard-gates",
+            "1"
+          ],
+          [
+            "sentinel-circuit-coupa-open-circuit",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/54",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"fracture-lines-coupa\",\"current-line-impact.v1\"]",
+        "edition": "d9e4ba55eddc55c15e690b590d7c7dbb34934227faa7fcff471fc82929c8dcd9:current-line-impact.v1",
+        "campaign": "fracture-lines-coupa/1/7366cdb1e5e3ed7e::current-line-impact.v1",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "current",
+        "missions": [
+          [
+            "fracture-lines-split-ring",
+            "1"
+          ],
+          [
+            "fracture-lines-fault-fan",
+            "1"
+          ],
+          [
+            "fracture-lines-frayed-causeway",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/55",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"fracture-lines-coupa\"]",
+        "edition": "d9e4ba55eddc55c15e690b590d7c7dbb34934227faa7fcff471fc82929c8dcd9",
+        "campaign": "fracture-lines-coupa/1/7366cdb1e5e3ed7e",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "archive",
+        "missions": [
+          [
+            "fracture-lines-split-ring",
+            "1"
+          ],
+          [
+            "fracture-lines-fault-fan",
+            "1"
+          ],
+          [
+            "fracture-lines-frayed-causeway",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/62",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"countercurrent-coupa\",\"current-line-impact.v1\"]",
+        "edition": "625879853cfd4e7b26deb252ba0505565efda8fe27891e68c167893149310ff5:current-line-impact.v1",
+        "campaign": "countercurrent-coupa/1/5f8155b60753cb07::current-line-impact.v1",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "current",
+        "missions": [
+          [
+            "countercurrent-offset-docks",
+            "1"
+          ],
+          [
+            "countercurrent-sandbar-braid",
+            "1"
+          ],
+          [
+            "countercurrent-crossing-watch",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      "pointer": "/classic/63",
+      "value": {
+        "owner": "[\"classic\",\"external\",\"countercurrent-coupa\"]",
+        "edition": "625879853cfd4e7b26deb252ba0505565efda8fe27891e68c167893149310ff5",
+        "campaign": "countercurrent-coupa/1/5f8155b60753cb07",
+        "modes": [
+          "solo",
+          "versus"
+        ],
+        "lifecycle": "archive",
+        "missions": [
+          [
+            "countercurrent-offset-docks",
+            "1"
+          ],
+          [
+            "countercurrent-sandbar-braid",
+            "1"
+          ],
+          [
+            "countercurrent-crossing-watch",
+            "1"
+          ]
+        ]
+      }
+    }
+  ]
+}

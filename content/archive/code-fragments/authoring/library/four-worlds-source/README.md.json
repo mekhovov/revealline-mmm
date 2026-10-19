@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/library/four-worlds-source/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "112a6c230d5bd81b2bffecce3078abafa331d7826ee733142b29f4b48dfb3a42",
+  "sourceGitBlob": "fb05faca17fbf05f485cae5dc0dd79557d50d3a3",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 372,
+      "end": 922,
+      "source": "| Theme | Source batch | Distinct subjects |\n| --- | --- | --- |\n| FPV Front | [Batch](../fpv-pressure-art/README.md) | Orchard crossing, workshop courtyard, night canal |\n| Ukraine Atlas | [Batch](../ukraine-atlas-art/README.md) | Carpathian textile/woodcraft, floral courtyard, autumn riverside settlement |\n| 1994 Forever | [Batch](../1994-forever-art/README.md) | CRT arcade, rainy video rental, cassette train journey |\n| Spend Network | [Batch](../spend-network-art/README.md) | Shared harbor, savings observatory, resourceful market workshop |"
+    },
+    {
+      "start": 1232,
+      "end": 1745,
+      "source": "The pictures were visually inspected as whole images. They still need per-map assignment, partial-reveal tests, actor/trail contrast checks on small screens, any requested image-tool refinements and explicit content packaging. The harbor has invented leaf emblems on cargo; these are not Coupa marks or a claimed Navi likeness. Ukrainian motifs and invented settlements are documented as interpretations rather than exact historical reconstructions. Static illustrations contain no independently animated objects."
+    }
+  ]
+}

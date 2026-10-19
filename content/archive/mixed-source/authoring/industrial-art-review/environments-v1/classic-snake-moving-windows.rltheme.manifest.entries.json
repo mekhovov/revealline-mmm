@@ -1,0 +1,3541 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/industrial-art-review/environments-v1/classic-snake-moving-windows.rltheme",
+  "sourceGitBlob": "358d5e9f87cf60be5b0ca7972ce47c1cb4fe7929",
+  "sourceSHA256": "15c7b9dfa877efe88aff30ae1aac878a3fcaa93f7be47d32b2ae8f0825021fdd",
+  "scope": "Pointers refer to the decoded RLTHM manifest of the original binary bundle; only removed owned entries are archived here. Full original bytes remain in the verified Git backup.",
+  "entries": [
+    {
+      "pointer": "/document/slots/138",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.0481ceb3eba28ea9",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Stone Lanes · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-04",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · stone lanes · spend network for slot picture.coupa.0481ceb3eba28ea9. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/139",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 1152
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 1152,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.05d993f4148d93fc",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Shared Routes · City of Small Wins · Spend Network",
+        "owner": {
+          "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+          "levelId": "original-spend-city-wins",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · shared routes · city of small wins · spend network for slot picture.coupa.05d993f4148d93fc. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1152 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/140",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.090b4ca5dc7ea7fa",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Night Patrol · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-05",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · night patrol · spend network for slot picture.coupa.090b4ca5dc7ea7fa. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/141",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 1152
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 1152,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.0ff486f1577a5fc7",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Shared Routes · Shared Value Harbor · Spend Network",
+        "owner": {
+          "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+          "levelId": "original-spend-shared-harbor",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · shared routes · shared value harbor · spend network for slot picture.coupa.0ff486f1577a5fc7. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1152 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/142",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.1b09bd3b6f1608be",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Sentinel Circuit · sentinel-circuit-coupa-listening-court",
+        "owner": {
+          "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · sentinel circuit · sentinel-circuit-coupa-listening-court for slot picture.coupa.1b09bd3b6f1608be. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/143",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.1f4ed16be3f1c6cc",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Fracture Lines · fracture-lines-frayed-causeway",
+        "owner": {
+          "baseCampaignKey": "fracture-lines-coupa/1/7366cdb1e5e3ed7e",
+          "levelId": "fracture-lines-frayed-causeway",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · fracture lines · fracture-lines-frayed-causeway for slot picture.coupa.1f4ed16be3f1c6cc. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/144",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.280ea068e8a16fac",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Sentinel Circuit · sentinel-circuit-coupa-switchyard-gates",
+        "owner": {
+          "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · sentinel circuit · sentinel-circuit-coupa-switchyard-gates for slot picture.coupa.280ea068e8a16fac. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/145",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 941,
+          "width": 1672
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 941,
+            "width": 1672,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.2a75ce6ea2ef63e0",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Route Choices · route-worlds-coupa-switchback",
+        "owner": {
+          "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+          "levelId": "route-worlds-coupa-switchback",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · route choices · route-worlds-coupa-switchback for slot picture.coupa.2a75ce6ea2ef63e0. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1672 by 941 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/146",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.3d671e7498b870e7",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Hidden Frequency · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-06",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · hidden frequency · spend network for slot picture.coupa.3d671e7498b870e7. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/147",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 1152
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 1152,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.3f2efe130aa97273",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Shared Routes · The Thoughtful Market · Spend Network",
+        "owner": {
+          "baseCampaignKey": "original-spend-shared-routes/1/7a36efe129711f19",
+          "levelId": "original-spend-market-workshop",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · shared routes · the thoughtful market · spend network for slot picture.coupa.3f2efe130aa97273. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1152 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/148",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.40f512bb0fb9c2b3",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Sentinel Circuit · sentinel-circuit-coupa-open-circuit",
+        "owner": {
+          "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · sentinel circuit · sentinel-circuit-coupa-open-circuit for slot picture.coupa.40f512bb0fb9c2b3. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/149",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.47c1d9559d9f2246",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · First Signal · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-01",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · first signal · spend network for slot picture.coupa.47c1d9559d9f2246. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/150",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.5686cf79f5ffe46d",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Equipment Workshop · Garden of Threads · Spend Network",
+        "owner": {
+          "baseCampaignKey": "equipment-workshop/1/3fc2cf073da368b4",
+          "levelId": "workshop-01",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit equipment workshop · garden of threads · spend network for slot picture.coupa.5686cf79f5ffe46d. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/151",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.5865540015dd327e",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Signal Garden · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-09",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · signal garden · spend network for slot picture.coupa.5865540015dd327e. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/152",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.691155cfa40084bf",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Fracture Lines · fracture-lines-split-ring",
+        "owner": {
+          "baseCampaignKey": "fracture-lines-coupa/1/7366cdb1e5e3ed7e",
+          "levelId": "fracture-lines-split-ring",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · fracture lines · fracture-lines-split-ring for slot picture.coupa.691155cfa40084bf. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/153",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.73d147ccabfbd137",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Short Fuse · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-11",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · short fuse · spend network for slot picture.coupa.73d147ccabfbd137. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/154",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.7b47f9c3630246d4",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Countercurrent · countercurrent-offset-docks",
+        "owner": {
+          "baseCampaignKey": "countercurrent-coupa/1/5f8155b60753cb07",
+          "levelId": "countercurrent-offset-docks",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · countercurrent · countercurrent-offset-docks for slot picture.coupa.7b47f9c3630246d4. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/155",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.918ad57613204cd4",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Sentinel Relay · Sentinel Relay · Spend Network",
+        "owner": {
+          "baseCampaignKey": "sentinel-relay/1/838c4e06647f7fd0",
+          "levelId": "sentinel-relay-01",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit sentinel relay · sentinel relay · spend network for slot picture.coupa.918ad57613204cd4. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/156",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.92819c6b51cb991c",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Equipment Workshop · Neon Switchboard · Spend Network",
+        "owner": {
+          "baseCampaignKey": "equipment-workshop/1/3fc2cf073da368b4",
+          "levelId": "workshop-02",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit equipment workshop · neon switchboard · spend network for slot picture.coupa.92819c6b51cb991c. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/157",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.9b4302b0e015b34a",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Relay Storm · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-12",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · relay storm · spend network for slot picture.coupa.9b4302b0e015b34a. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/158",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.9c36bbfb2cf2e14d",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Last Light · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-08",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · last light · spend network for slot picture.coupa.9c36bbfb2cf2e14d. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/159",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.a47222e499efa5eb",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Equipment Workshop · Clear Ledger · Spend Network",
+        "owner": {
+          "baseCampaignKey": "equipment-workshop/1/3fc2cf073da368b4",
+          "levelId": "workshop-03",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit equipment workshop · clear ledger · spend network for slot picture.coupa.a47222e499efa5eb. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/160",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.aa5451d69dc5c353",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Relay Orchard · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-02",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · relay orchard · spend network for slot picture.coupa.aa5451d69dc5c353. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/161",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 941,
+          "width": 1672
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 941,
+            "width": 1672,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.b2c793a221d65a11",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Route Choices · route-worlds-coupa-depot",
+        "owner": {
+          "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+          "levelId": "route-worlds-coupa-depot",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · route choices · route-worlds-coupa-depot for slot picture.coupa.b2c793a221d65a11. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1672 by 941 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/162",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.b80cf770ce6cb4a4",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Crosswind · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-03",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · crosswind · spend network for slot picture.coupa.b80cf770ce6cb4a4. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/163",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.c09c95e761808a54",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Fracture Lines · fracture-lines-fault-fan",
+        "owner": {
+          "baseCampaignKey": "fracture-lines-coupa/1/7366cdb1e5e3ed7e",
+          "levelId": "fracture-lines-fault-fan",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · fracture lines · fracture-lines-fault-fan for slot picture.coupa.c09c95e761808a54. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/164",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 941,
+          "width": 1672
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 941,
+            "width": 1672,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.c6000faa77b7d10e",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Route Choices · route-worlds-coupa-foundry",
+        "owner": {
+          "baseCampaignKey": "route-worlds-coupa/1/708c553521008c7d",
+          "levelId": "route-worlds-coupa-foundry",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · route choices · route-worlds-coupa-foundry for slot picture.coupa.c6000faa77b7d10e. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1672 by 941 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/165",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.cb4a704dd3086148",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · The Crossing · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-07",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · the crossing · spend network for slot picture.coupa.cb4a704dd3086148. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/166",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.d89ff114a5355b44",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Countercurrent · countercurrent-crossing-watch",
+        "owner": {
+          "baseCampaignKey": "countercurrent-coupa/1/5f8155b60753cb07",
+          "levelId": "countercurrent-crossing-watch",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · countercurrent · countercurrent-crossing-watch for slot picture.coupa.d89ff114a5355b44. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/167",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 887,
+          "width": 1774
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 887,
+            "width": 1774,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.d9bbb55300b07784",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Spend Network · Countercurrent · countercurrent-sandbar-braid",
+        "owner": {
+          "baseCampaignKey": "countercurrent-coupa/1/5f8155b60753cb07",
+          "levelId": "countercurrent-sandbar-braid",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit spend network · countercurrent · countercurrent-sandbar-braid for slot picture.coupa.d9bbb55300b07784. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/168",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.coupa.e9fe90c13e941598",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "First Signal · Supply Circuit · Spend Network",
+        "owner": {
+          "baseCampaignKey": "first-signal/2/88639f3aab7b6cc1",
+          "levelId": "signal-10",
+          "levelRevision": "1",
+          "themeId": "coupa"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit first signal · supply circuit · spend network for slot picture.coupa.e9fe90c13e941598. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/253",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.retro.e81b10a354214f55",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Equipment Workshop · Clear Ledger · 1994 Forever",
+        "owner": {
+          "baseCampaignKey": "equipment-workshop/1/3fc2cf073da368b4",
+          "levelId": "workshop-03",
+          "levelRevision": "1",
+          "themeId": "retro"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit equipment workshop · clear ledger · 1994 forever for slot picture.retro.e81b10a354214f55. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/slots/271",
+      "value": {
+        "alpha": "opaque",
+        "budget": {
+          "maxBytes": 4194304
+        },
+        "dependencies": [],
+        "dimensions": {
+          "height": 576,
+          "width": 768
+        },
+        "format": "revealline-asset-slot.v1",
+        "geometry": {
+          "frame": {
+            "height": 576,
+            "width": 768,
+            "x": 0,
+            "y": 0
+          },
+          "nineSlice": null,
+          "occupiedBounds": null,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotorAnchors": []
+        },
+        "group": "pictures",
+        "id": "picture.ukraine.579543192e929e8c",
+        "kinds": [
+          "image",
+          "recipe"
+        ],
+        "label": "Equipment Workshop · Clear Ledger · Ukraine Atlas",
+        "owner": {
+          "baseCampaignKey": "equipment-workshop/1/3fc2cf073da368b4",
+          "levelId": "workshop-03",
+          "levelRevision": "1",
+          "themeId": "ukraine"
+        },
+        "palette": [
+          "#070b12",
+          "#101923",
+          "#f3f0db",
+          "#78dce8",
+          "#f4bf62",
+          "#f07879",
+          "#9dbb7a",
+          "#a5b2bb"
+        ],
+        "prompt": "Create one original FPV Field Kit equipment workshop · clear ledger · ukraine atlas for slot picture.ukraine.579543192e929e8c. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+        "recipes": [
+          "scene.reveal.v1"
+        ],
+        "required": false,
+        "requirements": [
+          "This slot records the exact current map/world owner, not permission to rewrite a saved original.",
+          "Register a new asset/presentation revision; preserve saved flights and first-earned picture pins.",
+          "Keep gameplay geometry, active actors, text and trails outside the picture asset."
+        ],
+        "revision": 1,
+        "sampling": "nearest",
+        "screens": [
+          "flight",
+          "picture",
+          "collection",
+          "studio"
+        ],
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "pointer": "/document/assets/180",
+      "value": {
+        "description": "First Signal · Stone Lanes · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.0481ceb3eba28ea9.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · stone lanes · spend network for slot picture.coupa.0481ceb3eba28ea9. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/181",
+      "value": {
+        "description": "Spend Network · Shared Routes · City of Small Wins · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.05d993f4148d93fc.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · shared routes · city of small wins · spend network for slot picture.coupa.05d993f4148d93fc. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1152 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/182",
+      "value": {
+        "description": "First Signal · Night Patrol · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.090b4ca5dc7ea7fa.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · night patrol · spend network for slot picture.coupa.090b4ca5dc7ea7fa. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/183",
+      "value": {
+        "description": "Spend Network · Shared Routes · Shared Value Harbor · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.0ff486f1577a5fc7.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · shared routes · shared value harbor · spend network for slot picture.coupa.0ff486f1577a5fc7. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1152 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/184",
+      "value": {
+        "description": "Spend Network · Sentinel Circuit · sentinel-circuit-coupa-listening-court: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.1b09bd3b6f1608be.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · sentinel circuit · sentinel-circuit-coupa-listening-court for slot picture.coupa.1b09bd3b6f1608be. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/185",
+      "value": {
+        "description": "Spend Network · Fracture Lines · fracture-lines-frayed-causeway: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.1f4ed16be3f1c6cc.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · fracture lines · fracture-lines-frayed-causeway for slot picture.coupa.1f4ed16be3f1c6cc. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/186",
+      "value": {
+        "description": "Spend Network · Sentinel Circuit · sentinel-circuit-coupa-switchyard-gates: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.280ea068e8a16fac.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · sentinel circuit · sentinel-circuit-coupa-switchyard-gates for slot picture.coupa.280ea068e8a16fac. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/187",
+      "value": {
+        "description": "Spend Network · Route Choices · route-worlds-coupa-switchback: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.2a75ce6ea2ef63e0.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · route choices · route-worlds-coupa-switchback for slot picture.coupa.2a75ce6ea2ef63e0. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1672 by 941 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/188",
+      "value": {
+        "description": "First Signal · Hidden Frequency · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.3d671e7498b870e7.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · hidden frequency · spend network for slot picture.coupa.3d671e7498b870e7. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/189",
+      "value": {
+        "description": "Spend Network · Shared Routes · The Thoughtful Market · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.3f2efe130aa97273.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · shared routes · the thoughtful market · spend network for slot picture.coupa.3f2efe130aa97273. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1152 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/190",
+      "value": {
+        "description": "Spend Network · Sentinel Circuit · sentinel-circuit-coupa-open-circuit: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.40f512bb0fb9c2b3.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · sentinel circuit · sentinel-circuit-coupa-open-circuit for slot picture.coupa.40f512bb0fb9c2b3. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/191",
+      "value": {
+        "description": "First Signal · First Signal · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.47c1d9559d9f2246.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · first signal · spend network for slot picture.coupa.47c1d9559d9f2246. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/192",
+      "value": {
+        "description": "Equipment Workshop · Garden of Threads · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.5686cf79f5ffe46d.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit equipment workshop · garden of threads · spend network for slot picture.coupa.5686cf79f5ffe46d. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/193",
+      "value": {
+        "description": "First Signal · Signal Garden · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.5865540015dd327e.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · signal garden · spend network for slot picture.coupa.5865540015dd327e. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/194",
+      "value": {
+        "description": "Spend Network · Fracture Lines · fracture-lines-split-ring: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.691155cfa40084bf.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · fracture lines · fracture-lines-split-ring for slot picture.coupa.691155cfa40084bf. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/195",
+      "value": {
+        "description": "First Signal · Short Fuse · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.73d147ccabfbd137.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · short fuse · spend network for slot picture.coupa.73d147ccabfbd137. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/196",
+      "value": {
+        "description": "Spend Network · Countercurrent · countercurrent-offset-docks: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.7b47f9c3630246d4.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · countercurrent · countercurrent-offset-docks for slot picture.coupa.7b47f9c3630246d4. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/197",
+      "value": {
+        "description": "Sentinel Relay · Sentinel Relay · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.918ad57613204cd4.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit sentinel relay · sentinel relay · spend network for slot picture.coupa.918ad57613204cd4. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/198",
+      "value": {
+        "description": "Equipment Workshop · Neon Switchboard · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.92819c6b51cb991c.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit equipment workshop · neon switchboard · spend network for slot picture.coupa.92819c6b51cb991c. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/199",
+      "value": {
+        "description": "First Signal · Relay Storm · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.9b4302b0e015b34a.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · relay storm · spend network for slot picture.coupa.9b4302b0e015b34a. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/200",
+      "value": {
+        "description": "First Signal · Last Light · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.9c36bbfb2cf2e14d.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · last light · spend network for slot picture.coupa.9c36bbfb2cf2e14d. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/201",
+      "value": {
+        "description": "Equipment Workshop · Clear Ledger · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.a47222e499efa5eb.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit equipment workshop · clear ledger · spend network for slot picture.coupa.a47222e499efa5eb. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/202",
+      "value": {
+        "description": "First Signal · Relay Orchard · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.aa5451d69dc5c353.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · relay orchard · spend network for slot picture.coupa.aa5451d69dc5c353. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/203",
+      "value": {
+        "description": "Spend Network · Route Choices · route-worlds-coupa-depot: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.b2c793a221d65a11.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · route choices · route-worlds-coupa-depot for slot picture.coupa.b2c793a221d65a11. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1672 by 941 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/204",
+      "value": {
+        "description": "First Signal · Crosswind · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.b80cf770ce6cb4a4.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · crosswind · spend network for slot picture.coupa.b80cf770ce6cb4a4. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/205",
+      "value": {
+        "description": "Spend Network · Fracture Lines · fracture-lines-fault-fan: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.c09c95e761808a54.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · fracture lines · fracture-lines-fault-fan for slot picture.coupa.c09c95e761808a54. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/206",
+      "value": {
+        "description": "Spend Network · Route Choices · route-worlds-coupa-foundry: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.c6000faa77b7d10e.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · route choices · route-worlds-coupa-foundry for slot picture.coupa.c6000faa77b7d10e. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1672 by 941 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/207",
+      "value": {
+        "description": "First Signal · The Crossing · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.cb4a704dd3086148.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · the crossing · spend network for slot picture.coupa.cb4a704dd3086148. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/208",
+      "value": {
+        "description": "Spend Network · Countercurrent · countercurrent-crossing-watch: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.d89ff114a5355b44.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · countercurrent · countercurrent-crossing-watch for slot picture.coupa.d89ff114a5355b44. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/209",
+      "value": {
+        "description": "Spend Network · Countercurrent · countercurrent-sandbar-braid: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.d9bbb55300b07784.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit spend network · countercurrent · countercurrent-sandbar-braid for slot picture.coupa.d9bbb55300b07784. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 1774 by 887 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/210",
+      "value": {
+        "description": "First Signal · Supply Circuit · Spend Network: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.coupa.e9fe90c13e941598.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit first signal · supply circuit · spend network for slot picture.coupa.e9fe90c13e941598. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/295",
+      "value": {
+        "description": "Equipment Workshop · Clear Ledger · 1994 Forever: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.retro.e81b10a354214f55.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit equipment workshop · clear ledger · 1994 forever for slot picture.retro.e81b10a354214f55. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/assets/313",
+      "value": {
+        "description": "Equipment Workshop · Clear Ledger · Ukraine Atlas: registered baseline component; no new raster or audio production is claimed.",
+        "file": null,
+        "format": "revealline-asset-revision.v1",
+        "geometry": null,
+        "id": "picture.ukraine.579543192e929e8c.default",
+        "kind": "recipe",
+        "provenance": {
+          "creator": "Reveal Line",
+          "license": "Project-authored component; bundled font licenses remain separate",
+          "parent": null,
+          "prompt": "Create one original FPV Field Kit equipment workshop · clear ledger · ukraine atlas for slot picture.ukraine.579543192e929e8c. Use a restrained pixel-art style with deliberate square clusters, deep ink #070B12, panel #101923, warm text #F3F0DB, cyan #78DCE8, amber #F4BF62, hazard #F07879 and success #9DBB7A. Export exactly 768 by 576 pixels as PNG. Keep real text and functional gameplay cues separate. Preserve the slot purpose and every listed requirement. Do not reproduce reference game artwork, logos or lettering. Save the original and a separate derivative with the complete effective prompt and actual export dimensions; a prompt is not proof of a valid asset.",
+          "source": "Existing runtime presentation and Field Kit specification"
+        },
+        "quality": {
+          "evidence": [],
+          "stage": "source"
+        },
+        "recipe": {
+          "id": "scene.reveal.v1"
+        },
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.0481ceb3eba28ea9",
+      "value": {
+        "id": "picture.coupa.0481ceb3eba28ea9.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.05d993f4148d93fc",
+      "value": {
+        "id": "picture.coupa.05d993f4148d93fc.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.090b4ca5dc7ea7fa",
+      "value": {
+        "id": "picture.coupa.090b4ca5dc7ea7fa.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.0ff486f1577a5fc7",
+      "value": {
+        "id": "picture.coupa.0ff486f1577a5fc7.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.1b09bd3b6f1608be",
+      "value": {
+        "id": "picture.coupa.1b09bd3b6f1608be.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.1f4ed16be3f1c6cc",
+      "value": {
+        "id": "picture.coupa.1f4ed16be3f1c6cc.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.280ea068e8a16fac",
+      "value": {
+        "id": "picture.coupa.280ea068e8a16fac.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.2a75ce6ea2ef63e0",
+      "value": {
+        "id": "picture.coupa.2a75ce6ea2ef63e0.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.3d671e7498b870e7",
+      "value": {
+        "id": "picture.coupa.3d671e7498b870e7.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.3f2efe130aa97273",
+      "value": {
+        "id": "picture.coupa.3f2efe130aa97273.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.40f512bb0fb9c2b3",
+      "value": {
+        "id": "picture.coupa.40f512bb0fb9c2b3.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.47c1d9559d9f2246",
+      "value": {
+        "id": "picture.coupa.47c1d9559d9f2246.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.5686cf79f5ffe46d",
+      "value": {
+        "id": "picture.coupa.5686cf79f5ffe46d.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.5865540015dd327e",
+      "value": {
+        "id": "picture.coupa.5865540015dd327e.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.691155cfa40084bf",
+      "value": {
+        "id": "picture.coupa.691155cfa40084bf.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.73d147ccabfbd137",
+      "value": {
+        "id": "picture.coupa.73d147ccabfbd137.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.7b47f9c3630246d4",
+      "value": {
+        "id": "picture.coupa.7b47f9c3630246d4.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.918ad57613204cd4",
+      "value": {
+        "id": "picture.coupa.918ad57613204cd4.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.92819c6b51cb991c",
+      "value": {
+        "id": "picture.coupa.92819c6b51cb991c.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.9b4302b0e015b34a",
+      "value": {
+        "id": "picture.coupa.9b4302b0e015b34a.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.9c36bbfb2cf2e14d",
+      "value": {
+        "id": "picture.coupa.9c36bbfb2cf2e14d.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.a47222e499efa5eb",
+      "value": {
+        "id": "picture.coupa.a47222e499efa5eb.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.aa5451d69dc5c353",
+      "value": {
+        "id": "picture.coupa.aa5451d69dc5c353.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.b2c793a221d65a11",
+      "value": {
+        "id": "picture.coupa.b2c793a221d65a11.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.b80cf770ce6cb4a4",
+      "value": {
+        "id": "picture.coupa.b80cf770ce6cb4a4.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.c09c95e761808a54",
+      "value": {
+        "id": "picture.coupa.c09c95e761808a54.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.c6000faa77b7d10e",
+      "value": {
+        "id": "picture.coupa.c6000faa77b7d10e.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.cb4a704dd3086148",
+      "value": {
+        "id": "picture.coupa.cb4a704dd3086148.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.d89ff114a5355b44",
+      "value": {
+        "id": "picture.coupa.d89ff114a5355b44.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.d9bbb55300b07784",
+      "value": {
+        "id": "picture.coupa.d9bbb55300b07784.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.coupa.e9fe90c13e941598",
+      "value": {
+        "id": "picture.coupa.e9fe90c13e941598.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.retro.e81b10a354214f55",
+      "value": {
+        "id": "picture.retro.e81b10a354214f55.default",
+        "revision": 1
+      }
+    },
+    {
+      "pointer": "/document/themes/0/bindings/picture.ukraine.579543192e929e8c",
+      "value": {
+        "id": "picture.ukraine.579543192e929e8c.default",
+        "revision": 1
+      }
+    }
+  ]
+}

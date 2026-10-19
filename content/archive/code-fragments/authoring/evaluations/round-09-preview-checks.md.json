@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/evaluations/round-09-preview-checks.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "4652f44b898ddc7a17d7719a2f8e584485cc5ba094334d3b6259b94485ce8d9c",
+  "sourceGitBlob": "3549475d278ef81d0bb27847ec87a787145be426",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 2271,
+      "end": 3917,
+      "source": "| Flow | Observed result |\n|---|---|\n| Class/link discovery | Ten class options and independent Radio/Fiber choices loaded |\n| Empty light bomber | Action rejected with an empty-charge message |\n| Supply pickup / drop | Pickup filled 1/1; drop spent the charge and began cooldown. This browser drop was a miss at the pad; target filtering/hits are covered separately |\n| Heavy capacity | Pickup filled 2/2 |\n| Scan keyboard action | E revealed one nearby note and began the displayed cooldown |\n| Pause | An action while paused was rejected with a Play instruction |\n| Fiber selection and supply | Class/body stayed separate; 36/36 budget and refill availability were shown at the pad |\n| Immediate strike | Picked up a charge, established rightward travel through the autoplay control, then acted: a ground toy was tagged, one marker updated, the player returned to start and the charge was consumed |\n| Grid strike with fiber | The same flow landed/returned at policy-valid coordinates, cleared the buffer, updated one marker and showed 30.0/36 budget after the six-unit outbound dash |\n| Preferred appearance | Explicitly applied heavy, scout, fixed-wing and delta bodies through the class appearance button; class, link and turn policy remained independently selected |\n| Cross-theme vocabulary | Navi palette/family look showed Insight scout, Parcel/Batch/Express courier, Workflow filter and other business labels; Fiber became Budgeted link. The existing original Spend Sprite body loaded |\n| Final refresh | Updated study scope, cosmetic wording and links to the reference atlas and both preset files loaded without a visible load error |"
+    }
+  ]
+}

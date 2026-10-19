@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/library/reserve-illustrations-wave-2/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "dba680a7ffa2aa53749b8a4440e06d894928becbb39cb8dce93234ab7c814053",
+  "sourceGitBlob": "eba5bec43b754d3557d3f2fe18b1d1759733e9cc",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 355,
+      "end": 1638,
+      "source": "| Theme         | Selected illustration                                                    | New composition                                                                                                        |\n| ------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |\n| FPV Front     | [Reedwater Relay](originals/fpv-reedwater-relay.png)                     | A complete friendly FPV quadcopter, lantern and wet landing deck beside a quiet river pumping house at blue hour.      |\n| Ukraine Atlas | [Moonlit Loom](originals/ukraine-moonlit-loom.png)                       | A timber loom and cream/red/indigo cloth, yarn basket and invented string instrument, overlooking a moonlit valley.    |\n| 1994 Forever  | [Midnight Disk Station](originals/retro-midnight-disk-station-clean.png) | A cream CRT computer, starfield, floppy disks and unbranded gamepad; a rainy elevated railway and sleeping cat beyond. |\n| Spend Network | [Cloud Cart Exchange](originals/spend-cloud-cart-exchange-clean.png)     | An original friendly logistics cart carrying useful materials through a bright cooperative market plaza.               |"
+    },
+    {
+      "start": 3501,
+      "end": 4361,
+      "source": "The broad objects and warm/cool light provide connected foreground, middle and\ndistant discoveries. Fine reeds, woven threads, fittings and background windows\ncompress at small sizes. The style is pixel-art-inspired with stepped clusters,\nnot a measured fixed palette or uniform pixel grid. The loom and string\ninstrument are invented cultural imagery, without historical or construction\naccuracy claims. FPV equipment and locations are fictional and non-graphic.\nSpend's background figures are small fictional silhouettes, not identifiable\npeople; the cart is not an official Coupa/Navi mascot or a product feature claim.\nThe retro hardware evokes a general period rather than certifying a particular\nmachine or controller design. No legible text or branding is intended in the\nselected files; initial cleanup targets remain visible only in retained variants."
+    }
+  ]
+}

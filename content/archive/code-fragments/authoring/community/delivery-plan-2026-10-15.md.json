@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/community/delivery-plan-2026-10-15.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "e59c2e13a70e66acf4a91b93c53036d148f33d06b88ad6cecac248327c3db9e0",
+  "sourceGitBlob": "b654195371e8caa028424e9ec211020e2ab8f715",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 9152,
+      "end": 9802,
+      "source": "The focused video/intake/access-entry cohort passed **44/44**. The broad run exposed obsolete\nfixture assumptions, a missing authoring dependency and changed document hashes. Two Coupa\npicture-preparation cases also failed during that run, then passed without increased timeouts.\nAfter the repairs, all eight affected files passed together: **138/138** at concurrency two.\nThe final guide-integrity rerun passed **31/31** after the documentation update. Full\n`npm run validate`, changed-file ESLint and formatting passed. These reruns retain the actual\nbyte, hash, ownership and offline assertions; they do not relabel the earlier broad run as green."
+    }
+  ]
+}

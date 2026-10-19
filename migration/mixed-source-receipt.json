@@ -600,8 +600,248 @@
       "sourceSHA256": "2a22c9f31d8365208c7e1f5616f6a560d0cd8839087e0de0e57f0611d6c98ef9",
       "sha256": "f77b598dbb985db252b1a01b628ab3c5936478bc88b44cefc4805d9c30e6b3a4",
       "bytes": 951
+    },
+    {
+      "sourcePath": "authoring/motion-lab/presets.json",
+      "destination": "content/archive/mixed-source/authoring/motion-lab/presets.json.publication.entries.json",
+      "entries": 1,
+      "bytes": 1372,
+      "sha256": "3e87454555e2a1e0d13f5aa024d730b29287220d8ab73e74ea9e38d8470069aa",
+      "sourceSHA256": "c1ad73a04e31f63eaa1244b5a73ba076160960746f57bf0944c53ee28e85d7ba"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/provenance.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-theme-art/provenance.json.publication.entries.json",
+      "entries": 2,
+      "bytes": 969,
+      "sha256": "9065403e4ef14d9894bcad57c8e085224f2c4f76928d8dda281091f5a72b7785",
+      "sourceSHA256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/atlas-sample/industrial-bouncer.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/atlas-sample/industrial-bouncer.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145345,
+      "sha256": "5571d11528e5a853819c01056eae5b7477470981d043f644734577245b9f430d",
+      "sourceSHA256": "096254a8876e2152a93d8a2abccebf753ba9387a5016c1ad2d956ec3f6c7bab2"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/approach-windows.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/approach-windows.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145346,
+      "sha256": "d50c43e639ae53929d60c1df3496caca1dc07e116ec05dfbe2a6e738a1d47fd1",
+      "sourceSHA256": "d9f5533374149877e4e57e76dd56f545705f4ef5227228bf253682e37890362d"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/classic-snake-moving-windows.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/classic-snake-moving-windows.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145358,
+      "sha256": "fe5fe3aac53a80230631c77f9d6f72c0321e5a32b131f1d7116cd8ee8f549f0d",
+      "sourceSHA256": "15c7b9dfa877efe88aff30ae1aac878a3fcaa93f7be47d32b2ae8f0825021fdd"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/classic-snake-twin-intercepts.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/classic-snake-twin-intercepts.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145359,
+      "sha256": "b96cf5c1af03cf299ae6f7d52dc0b370f8bf8ed1aefa08b6fc8d084f2733a102",
+      "sourceSHA256": "62f1de335abe4e4d1fab5e11c5930c5e271be47bfa1a7a9e0a255ed32a8cfd4b"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/ground-routes.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/ground-routes.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145343,
+      "sha256": "ccbffecbd88a45d9d535d7d085cd565fae580a0d8f6b430f80e067736c252cf8",
+      "sourceSHA256": "23c3d55def77de150551327f3fece40d1154cb15beeb87086a85fb61bc0dffea"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-escape-lines.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-escape-lines.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145350,
+      "sha256": "16dab8505dfe5eddedf64aba0293239ceab65dafc9602abf4676c726a00f2158",
+      "sourceSHA256": "988950dd70dbdf7f6e9eaaf9547a588e684b4db9aad1cc49a08234478282ab8d"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-guarded-crossings.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-guarded-crossings.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145355,
+      "sha256": "2a792bb4ca8e808cf69148f453a6c14ab0f324472fb1bcb03860ca79c1cfe2b2",
+      "sourceSHA256": "a8db4031ec7e369972a33019b0a11067c84711e1e0e8e147f5c7dc58108e4f0c"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-patrol-district.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-patrol-district.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145353,
+      "sha256": "588803d9e1f51ed1c4a728f997e8ff4514b557774c656423c6b275df74191399",
+      "sourceSHA256": "6a538eb3cea4ec978fca6ef720cdef4b852016ea6c196f61cec353ca0730aa59"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-specialist-circuit.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-specialist-circuit.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145356,
+      "sha256": "989f11dffd2974cd77720e0ca8ad8cb4f49d1de820afd8c257440dba82f9e4f7",
+      "sourceSHA256": "92e426d99bdb454a7f6d16d5cd1b5a131e2d5063984b9d3653f7aba7d9a0abf4"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-team-material-exchange.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-team-material-exchange.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145360,
+      "sha256": "41f880a9deec2ec0e8d3d23c72f2da9e881cb58f097af815675c8702c465aca2",
+      "sourceSHA256": "f9f0f5c383600aa91a2df230c94debded70a0af63732b3a8c43498cb908a050e"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-team-pincer-grounds.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-team-pincer-grounds.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145357,
+      "sha256": "60be3669ab65daf13149a2b74f9479f3f52c9f4784e28521c6f1535f0247aa67",
+      "sourceSHA256": "211cdb781ee40b9ae49b95e475470289e9f4c67ec267d36c47baca64d9c714cd"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-team-return-workshop.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-team-return-workshop.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145358,
+      "sha256": "6bca4a0afdf0d3100f838c9a6bca5a22f5caeddb6fea4b006646b5d5f49854e3",
+      "sourceSHA256": "3af85a45db1a3df36721943e4718994e954b7eb5f73aaeb3bebb81d47c081993"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-team-shared-bearings.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-team-shared-bearings.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145358,
+      "sha256": "aaa67cda2337b90eced7f79dda2302c764ff9bbcddb889c101bf7946b6178b01",
+      "sourceSHA256": "056801f01925ab42541c65b0568e900455e836caa3e6cb36aeff81f343de08cd"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-team-two-pilot-finale.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-team-two-pilot-finale.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145359,
+      "sha256": "50853d642b3d69a0bf835802d9e6cfe15e0e87529466b4d97e533687857b9324",
+      "sourceSHA256": "57b90c3c1af027f881badca8028a782a86b013d15071e17f597d000a0b358c5a"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/environments-v1/pursuit-team-window-partners.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/environments-v1/pursuit-team-window-partners.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145358,
+      "sha256": "0950b9edfb1354744b52c542ef6ef3e73fb9ef9050995e230a8893fc33c444ac",
+      "sourceSHA256": "cb70bc35af8dcd92230cac814cc55eab897b73087308a1c438a4ad7c58377201"
+    },
+    {
+      "sourcePath": "authoring/industrial-art-review/machinery-v3/industrial-machinery.rltheme",
+      "destination": "content/archive/mixed-source/authoring/industrial-art-review/machinery-v3/industrial-machinery.rltheme.manifest.entries.json",
+      "entries": 99,
+      "bytes": 145347,
+      "sha256": "42cab4082d7da1af3d5f487ffc398f6e1dde1d4cff648e028c2c879177525610",
+      "sourceSHA256": "20022646d3929ee8a70e961f9c00684cda0483ffdcec2dd43a299118c7693575"
+    },
+    {
+      "sourcePath": "authoring/prompts/round-06-asset-variations.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/round-06-asset-variations.json.publication.entries.json",
+      "entries": 1,
+      "bytes": 2010,
+      "sha256": "76ed14ba4386d7136228d26f3e6d8d8c42f69cd4d4f181e7dd5f0e75448a6201",
+      "sourceSHA256": "ac867d7ed63a455b08fc1c5ad16776f079a3530afb947cf0fa255ec0d8a2b09c"
+    },
+    {
+      "sourcePath": "authoring/prompts/presentation-workflows.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/presentation-workflows.json.publication.entries.json",
+      "entries": 1,
+      "bytes": 3104,
+      "sha256": "08a8b33ab464f52b55f7f2748168f54b1350cbcab21e963a04c8b436959f58ec",
+      "sourceSHA256": "8a4da86a3b0db1a13f6ff674e896ecc7eaa069235fd5b2649c05304f0321c008"
+    },
+    {
+      "sourcePath": "authoring/prompts/catalog.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/catalog.json.publication.entries.json",
+      "entries": 6,
+      "bytes": 5347,
+      "sha256": "6b63d3c5f391a835995b1148a229c1ffda02d15fa7eb3d4775a851c9105e6c2a",
+      "sourceSHA256": "f958c787d2af470f457827ad498cb8f597efb720a279b7122d139a1796bab100"
+    },
+    {
+      "sourcePath": "authoring/prompts/round-08-character-collections.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/round-08-character-collections.json.publication.entries.json",
+      "entries": 3,
+      "bytes": 3143,
+      "sha256": "d78d2819fefdee79cd14d1d3536fbfc20ba9b22e6f1ffe247dc3633bcc8b0cf8",
+      "sourceSHA256": "2384b05271a7026706eb310969b1407c27e286962802ff2201013446a9618153"
+    },
+    {
+      "sourcePath": "authoring/prompts/round-07-animation-variants.json",
+      "destination": "content/archive/mixed-source/authoring/prompts/round-07-animation-variants.json.publication.entries.json",
+      "entries": 1,
+      "bytes": 1570,
+      "sha256": "a95b3fe2dd663c3a14143e2bac672ac1f1d010c8dadb7ca9ffc882b4d601fca3",
+      "sourceSHA256": "0c784b5cf286c3b2443917128828e2a7f7f11ff4fcf447fba2779b948cc3f1c4"
+    },
+    {
+      "sourcePath": "game/locales/en/content.json",
+      "destination": "content/archive/mixed-source/game/locales/en/content.json.publication.entries.json",
+      "entries": 16,
+      "bytes": 2486,
+      "sha256": "4038af1bde5dd5b9bab01bc8e4d5c06c750cb8bba16ce6f07e16a98cd82bcf75",
+      "sourceSHA256": "3bca53318ea0f46a9e0485f82c8e6c0582f1f82160c0cdf735a0e911d956f422"
+    },
+    {
+      "sourcePath": "game/locales/uk/content.json",
+      "destination": "content/archive/mixed-source/game/locales/uk/content.json.publication.entries.json",
+      "entries": 16,
+      "bytes": 3101,
+      "sha256": "3fad6c4b5020a2e8696573a6c6bb0a117e5dd3d15355ef797c5cbf1f8d7f5903",
+      "sourceSHA256": "1e8b32b2eb9ed103d4f646eaffdb5a15b497da22d3be55e23832cedc3d025f2c"
+    },
+    {
+      "sourcePath": "game/locales/en/interface.json",
+      "destination": "content/archive/mixed-source/game/locales/en/interface.json.publication.entries.json",
+      "entries": 1,
+      "bytes": 526,
+      "sha256": "d5fa6f5390103d26dda149094b2c72b7efc442621872f06290bff0ed6a649704",
+      "sourceSHA256": "497e25f4b4af215de23d9ef26d1f0626292223539837fe05ff45f6bd55891825"
+    },
+    {
+      "sourcePath": "game/locales/uk/interface.json",
+      "destination": "content/archive/mixed-source/game/locales/uk/interface.json.publication.entries.json",
+      "entries": 1,
+      "bytes": 538,
+      "sha256": "4829052671e1740b137a7ef80a3eed5a637bc3ab26d8a481994e74a312ef2de5",
+      "sourceSHA256": "92c9bbad58c48d26b2473b037578a8f771e8abcfd66ff6d04343e1179074b134"
+    },
+    {
+      "sourcePath": "game/test/fixtures/duel-library-membership.json",
+      "destination": "content/archive/mixed-source/game/test/fixtures/duel-library-membership.json.publication.entries.json",
+      "entries": 12,
+      "bytes": 7897,
+      "sha256": "7eccc6ff24193c43e5be987922319427a47615e6089aa39ccb6d5434294db910",
+      "sourceSHA256": "2e315d80fa8dccf0821481d3514cecd92f67420c7bebc05fe8df4570f0591d71"
+    },
+    {
+      "sourcePath": "game/test/fixtures/external-current-host-routes.json",
+      "destination": "content/archive/mixed-source/game/test/fixtures/external-current-host-routes.json.publication.entries.json",
+      "entries": 4,
+      "bytes": 3897,
+      "sha256": "f81cb6879f98f96a0b48d1b05bc82c34632b9a8833b43c8c64267826f2299915",
+      "sourceSHA256": "0a2823a35ac4251b86ec3e13adb26010b9f514698a287f73acce982560f31160"
+    },
+    {
+      "sourcePath": "game/test/fixtures/compatibility-v0100.json",
+      "destination": "content/archive/mixed-source/game/test/fixtures/compatibility-v0100.json.publication.entries.json",
+      "entries": 1,
+      "bytes": 558,
+      "sha256": "7321a4339b7e9e64df0de0e1cd2140400266c5a427173065baa8e298fa54cd7b",
+      "sourceSHA256": "b7b2d916ca95ae47e2df274502d5379cf9d532e648d8f095a2a535b9097ac94f"
     }
   ],
   "verification": "Every extracted JSON pointer was compared with the exact original Git source object.",
-  "entries": 591
+  "entries": 2241
 }

@@ -1,0 +1,147 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/test/fixtures/external-current-host-routes.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "e9715251e90af59dfd16a2af5367c8d72854e2e1",
+  "sourceSHA256": "0a2823a35ac4251b86ec3e13adb26010b9f514698a287f73acce982560f31160",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/bindings/4",
+      "value": {
+        "packId": "countercurrent-coupa",
+        "campaignId": "countercurrent-coupa",
+        "levelId": "countercurrent-offset-docks",
+        "index": 0,
+        "routeId": "countercurrent",
+        "authoredIdentity": "05033eae2029a32e",
+        "tunedIdentity": "f01af8b266279988",
+        "classIdentity": "7e227f8892b88ebd",
+        "expected": {
+          "status": "won",
+          "tick": 2922,
+          "score": 15740,
+          "lives": 3,
+          "livesLost": 0,
+          "coverage": 0.6879370629370629,
+          "trailCells": 0
+        },
+        "captures": [
+          {
+            "tick": 2106,
+            "count": 1042
+          },
+          {
+            "tick": 2922,
+            "count": 532
+          }
+        ],
+        "objectives": []
+      }
+    },
+    {
+      "pointer": "/bindings/9",
+      "value": {
+        "packId": "fracture-lines-coupa",
+        "campaignId": "fracture-lines-coupa",
+        "levelId": "fracture-lines-split-ring",
+        "index": 0,
+        "routeId": "fracture",
+        "authoredIdentity": "ae82ddb0ab26456c",
+        "tunedIdentity": "7d31857d075ed614",
+        "classIdentity": "7e227f8892b88ebd",
+        "expected": {
+          "status": "won",
+          "tick": 1704,
+          "score": 16320,
+          "lives": 3,
+          "livesLost": 0,
+          "coverage": 0.7338129496402878,
+          "trailCells": 0
+        },
+        "captures": [
+          {
+            "tick": 943,
+            "count": 578
+          },
+          {
+            "tick": 1704,
+            "count": 1054
+          }
+        ],
+        "objectives": []
+      }
+    },
+    {
+      "pointer": "/bindings/12",
+      "value": {
+        "packId": "route-worlds-coupa",
+        "campaignId": "route-worlds-coupa",
+        "levelId": "route-worlds-coupa-foundry",
+        "index": 0,
+        "routeId": "foundry",
+        "authoredIdentity": "0812156d3938edd2",
+        "tunedIdentity": "c4330991435198f1",
+        "classIdentity": "7e227f8892b88ebd",
+        "expected": {
+          "status": "won",
+          "tick": 686,
+          "score": 23040,
+          "lives": 1,
+          "livesLost": 0,
+          "coverage": 1,
+          "trailCells": 0
+        },
+        "captures": [
+          {
+            "tick": 686,
+            "count": 2304
+          }
+        ],
+        "objectives": []
+      }
+    },
+    {
+      "pointer": "/bindings/16",
+      "value": {
+        "packId": "sentinel-circuit-coupa",
+        "campaignId": "sentinel-circuit-coupa",
+        "levelId": "sentinel-circuit-coupa-listening-court",
+        "index": 0,
+        "routeId": "sentinel",
+        "authoredIdentity": "5634727fc2c5151d",
+        "tunedIdentity": "18cb06b27b502028",
+        "classIdentity": "7e227f8892b88ebd",
+        "expected": {
+          "status": "won",
+          "tick": 2988,
+          "score": 22360,
+          "lives": 3,
+          "livesLost": 0,
+          "coverage": 0.9545851528384279,
+          "trailCells": 0
+        },
+        "captures": [
+          {
+            "tick": 1330,
+            "count": 986
+          },
+          {
+            "tick": 2675,
+            "count": 813
+          },
+          {
+            "tick": 2988,
+            "count": 387
+          }
+        ],
+        "objectives": [
+          {
+            "tick": 2988,
+            "id": "court-listening-relay"
+          }
+        ]
+      }
+    }
+  ]
+}

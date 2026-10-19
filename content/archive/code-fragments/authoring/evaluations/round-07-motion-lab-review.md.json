@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/evaluations/round-07-motion-lab-review.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "b1f05556ef0bc4b0196ecaab2c502fd90f1e74c153302cce0d4ff118f3b0f384",
+  "sourceGitBlob": "22b425853c43d765e350c378b324871ab520185f",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 865,
+      "end": 2492,
+      "source": "- The generated FPV image decoded at 1254×1254. The default character uses a 1.25-cell square source box with alpha padding, separate rotor anchors and a compact center/rim. The image is a single concept body, not a frame atlas.\n- Autoplay visibly moved the craft along the orthogonal route. Body facing and the moving attachments changed between observations. This establishes working preview playback; it does not establish game capture, enemy behavior or input latency on hardware.\n- The reviewer paused the preview, selected Microtile, Props and Hybrid, and inspected the resulting terrain views. The same rectangles remained in their positions. Hybrid is the configured default.\n- Switching palette and terrain objects to Ukraine Atlas retained the selected FPV body. Retro and Navi palette/material selections also worked. Selecting the planned Navi avatar displayed the neutral marker with an explicit missing-image message; selecting the FPV source restored its decoded body.\n- Reduced motion paused on activation, reported frozen rotor detail and removed decorative particles. Playback could resume in reduced mode. The independent Rotors checkbox hid and restored that layer.\n- Arrow-key input took over from autoplay and changed the visible mode to Manual input. Escape changed the state to Paused and the transport action to Play. Reset and autoplay selection restored the demonstration route. Holding physical touch controls and gamepads were not exercised.\n- Switching browser tabs caused the lab to pause as designed. Its automatic route and cosmetics do not continue consuming hidden-tab elapsed time on return."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/skills/xonix-background-stylist/SKILL.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "1b351596e910f6832a5e453dde380bb05c9e19e67d1ba4aeb3f23d8b1f55c666",
+  "sourceGitBlob": "9ed9eece6b12758a83c358c7fc6b2ecaf698b0f2",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 6702,
+      "end": 7313,
+      "source": "For the current FPV FRONT direction, use **no Z markings anywhere in concepts or variants**. Ukrainian assets never receive hostile markings. Record Ukrainian, hostile-military or neutral allegiance explicitly in the authoring record, based on the supplied brief rather than guessing from visual style; mixed scenes need separate entity annotations. Unknown allegiance remains unconfirmed until resolved. This is a project-specific art direction, not a rule for unrelated games. Preserve invading military presence where the FPV reveal brief requests it. Coupa, cultural and retro packs retain their own themes."
+    }
+  ]
+}

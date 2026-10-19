@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/skills/xonix-audio-director/SKILL.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "f5c263a35315db6e59163317cb6a600b2199f557c19beb5a883f54cfb46d61a1",
+  "sourceGitBlob": "fe7a408b7f2d0db77de2782790c58fe59a18b15e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 0,
+      "end": 332,
+      "source": "---\nname: xonix-audio-director\ndescription: 'Design audio direction, music prompts, adaptive stems, event sound effects, menus, and audio asset plans for Xonix theme packs. Use for Ukrainian instrumentation, 1980s–1990s chip and synth moods, FPV arcade feedback, Coupa business themes, or audio variation and production review.'\n---"
+    }
+  ]
+}

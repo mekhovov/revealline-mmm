@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/production/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "80f3f4a7a50419162f70ac0fd8142cf8f10af8ca12b969f0234f49e8406b5b83",
+  "sourceGitBlob": "566fd6ba1c8c6783a5e858bb95d3a4c9458749fe",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 466,
+      "end": 1024,
+      "source": "The separately retained [Sentinel theme candidate](register-sentinel-themes.json) advances the register to revision 2. It binds nine new originals to the three existing Sentinel layout families across Ukraine Atlas, 1994 Forever and Spend Network. The baseline stays unchanged and remains the source view's default. Choose **Sentinel themes · revision 2** in the [source view](./?snapshot=sentinel-themes) to inspect its pictures. The two snapshot links select only these known repository files; they never accept arbitrary paths. Inspect the candidate with:"
+    }
+  ]
+}

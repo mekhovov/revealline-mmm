@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/skills/xonix-asset-creator/SKILL.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "3052a9edcc8f013a086546b3d49b37984e5bc46fcfcf756ebd09d366bbdbd6cb",
+  "sourceGitBlob": "bdc9e333b2859354f54ffe962fadab86e796190e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 4771,
+      "end": 7181,
+      "source": "1. Identify the role: reveal artwork, player, enemy, UI, effect, or marketing. Read intended dimensions, camera/view, frame scale, palette, and references. Preserve the difference between source-art size, runtime texture size, and gameplay cell coordinates.\n2. Inspect every supplied/local image being edited before the edit. Preserve reference provenance. Use the image tool's supported reference mechanism; ask for reattachment only when a required reference is inaccessible. Without a verified character sheet, call a new mascot a concept, not an exact Navi reproduction.\n3. Select and fill a prompt; record its ID, substitutions, full effective text, references, tool route, and output paths. Generate meaningful variations along one or two named axes such as daylight, regional motif, medium, or silhouette. Keep the rest consistent so the user can compare them.\n4. Generate or edit the art directly within scope. Keep military reveal subjects consistent with the requested FPV theme; keep illustrated subjects distinct from active threat indicators. For Ukrainian traditions and branded work, verify unfamiliar specifics with primary references before claiming authenticity.\n5. Preserve source images. Propose separate derived exports for each target; never destructively pixelate all media. Pixel sprite atlases need nearest filtering; smooth paintings/photographs belong in separate textures using their intended filtering. An atlas cannot assign a different filter to each frame.\n6. Inspect the resulting image. Assess focal subjects under partial reveal, quiet regions behind HUD, active-trail contrast, silhouette size, and whether the requested medium survived. Correct a substantive mismatch through the image tool. Do not certify exact arena geometry or touch usability from generated concept art.\n7. For sprites, distinguish an attractive sprite-sheet illustration from an inspected production sheet. Check equal frame cells, alpha, padding, consistent pivot, frame ordering, animation tags and timing. Use Aseprite's documented export pipeline when available and useful. Do not claim animation works until the frames were inspected and played or rendered.\n8. Save the asset handoff. Register media with planned/ready status according to the contract's actual checks, not the generator's confidence. Run pack validation if a pack changed; report visual review separately from file/schema checks."
+    }
+  ]
+}

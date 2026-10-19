@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "authoring/prompts/round-06-asset-variations.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "66e7c94b20d750a643d713af15644fdc1e11424e",
+  "sourceSHA256": "ac867d7ed63a455b08fc1c5ad16776f079a3530afb947cf0fa255ec0d8a2b09c",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/prompts/11/prompt",
+      "value": "Create requested avatar alternatives from {{SOURCE_IMAGE}} for {{AVATAR_IDENTITY}}, changing only {{VARIATION_AXES}}. Inspect the reference silhouette and retain facing, logical center, apparent role and the existing collision footprint. Variants may change body shape, palette, material or decorative fittings, but must not silently change speed, reach, weapon behavior or ability semantics. Give the player a distinct silhouette and a consistent live-state marker against both detailed and quiet backgrounds. Keep allegiance explicit for military avatars; Ukrainian assets receive no hostile markings, and current FPV concepts contain no Z anywhere. If this is a Coupa placeholder, distinguish concept identity from an authenticated Navi likeness. Preserve the source and save each alternative separately. Review tiny-size readability, direction consistency and cut-trail attachment; note alpha, frame alignment and animation as untested unless actually inspected. Inspect the supplied reference before use, preserve the original, and save any requested visual changes as separate derivatives linked to their parent asset. Use the built-in image tool for requested image editing; do not upload to public hosting or fall back to a third-party API/CLI automatically. Record the effective prompt, parent/source, tool route, actual output dimensions and manual review. Artwork never changes gameplay geometry, colliders or behavior. A concept is not a production-ready sprite."
+    }
+  ]
+}

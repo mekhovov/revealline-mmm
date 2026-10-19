@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/uk/interface.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "d7da260f435bd488e5c4fabe7594b83fc4cb7c3f",
+  "sourceSHA256": "92c9bbad58c48d26b2473b037578a8f771e8abcfd66ff6d04343e1179074b134",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/spendNetwork",
+      "value": "Мережа витрат"
+    }
+  ]
+}

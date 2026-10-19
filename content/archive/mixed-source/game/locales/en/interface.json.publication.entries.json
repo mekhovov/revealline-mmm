@@ -1,0 +1,14 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/en/interface.json",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceGitBlob": "24fbc937072fc1f7cfcd60b9cabbcc4e712c6089",
+  "sourceSHA256": "497e25f4b4af215de23d9ef26d1f0626292223539837fe05ff45f6bd55891825",
+  "scope": "Owned records extracted from a mixed source file. Pointers refer to the exact original revision.",
+  "entries": [
+    {
+      "pointer": "/spendNetwork",
+      "value": "Spend Network"
+    }
+  ]
+}

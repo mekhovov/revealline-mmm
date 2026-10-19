@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/library/sentinel-relay/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "0bf03aadecd645ab975561c97eac7fe2beb4ebe4a2c00cec6f2307e45f567669",
+  "sourceGitBlob": "6c8adff4f19473030a275e95dba7b4cadd9100f0",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 3181,
+      "end": 3646,
+      "source": "Use `prompts.json` as authoring requests, not runtime input or an executable behavior language. None of its examples was executed to generate new art in this increment. Theme IDs `fpv`, `ukraine`, `retro` and `coupa` select existing presentation families; the final two are original game concepts and do not imply official branding or measured business savings. All themes use map ID `sentinel-relay-01`; changing a theme does not create a separately proven layout."
+    }
+  ]
+}

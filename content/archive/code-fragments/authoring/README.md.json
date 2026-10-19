@@ -1,0 +1,19 @@
+{
+  "sourcePath": "authoring/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "dab617bba4d4cd39199b46d0df7028cc0aede56409fc92aea986d525d15b8392",
+  "sourceGitBlob": "b1c458cf514f571763a3752f38b7bdd322be929b",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 2902,
+      "end": 3910,
+      "source": "A reusable foundation for **FPV FRONT**, **UKRAINE ATLAS**, **1994 FOREVER**, **NAVI NETWORK**, and future families. It contains **13 AI-agent skills** and **124 shared CLI prompt templates** (56 base, 16 asset variations, 16 animation variants, 16 character-collection templates and 20 ability/world templates), plus four draft content packs, a versioned schema and primitive catalog. The base catalog also contains 28 additional variation options. Reference Importer has [10 prose examples](skills/xonix-reference-importer/references/import-and-style.md), the [library/pack guide](../docs/library-and-packs.md) adds 10 expansion/save workflow prompts, [audio/rewards](../docs/audio-and-rewards.md) adds four prompts, and [controller journeys](prompts/round-15-controller-journeys.md) adds 10 authoring/QA prompts. The [saved-flight workflows](prompts/round-28-attempt-exports.md) add five export, rescue and release-verification prompts. These prose examples are separate from the shared CLI's 124 entries."
+    },
+    {
+      "start": 16928,
+      "end": 17137,
+      "source": "> Use $xonix-level-designer to create a five-level Navi Network draft campaign about fictional cost leaks and savings, using only the current primitive catalog. Put unsupported mechanics in an extension brief."
+    }
+  ]
+}

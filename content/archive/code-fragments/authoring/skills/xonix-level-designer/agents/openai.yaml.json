@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/skills/xonix-level-designer/agents/openai.yaml",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "fad1efbd38fabe238d72ceca33cb926aedefba7e162bf6e1b8db4fce8bbebae6",
+  "sourceGitBlob": "6e599af27568529e552d8220be582badbcd8b2d2",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 124,
+      "end": 215,
+      "source": "  default_prompt: \"Use $xonix-level-designer to draft a five-level Navi Network campaign.\"\n"
+    }
+  ]
+}

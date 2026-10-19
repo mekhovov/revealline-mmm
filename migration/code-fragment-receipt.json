@@ -162,6 +162,414 @@
       "sha256": "c2de040817d388cf6dff396eadb70568f45b03328df1e3056ca406c2ca91b857",
       "bytes": 532,
       "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/README.md",
+      "destination": "content/archive/code-fragments/authoring/README.md.json",
+      "sourceSHA256": "dab617bba4d4cd39199b46d0df7028cc0aede56409fc92aea986d525d15b8392",
+      "sha256": "1196c7bbe6b628c11d296060b4de3a29371801b6ae2260fedfca88f67ae3bff6",
+      "bytes": 1702,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/media/README.md",
+      "destination": "content/archive/code-fragments/authoring/media/README.md.json",
+      "sourceSHA256": "b2f1bc036bc990e187ff0d5ee7f6cd720aa5b8e32c09231d27db1299f2bb96ce",
+      "sha256": "0dd37895b20c77eb394aceab187259ac548a40df8a2a20fa4c892b53ab00b7a5",
+      "bytes": 1083,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/community/delivery-plan-2026-10-15.md",
+      "destination": "content/archive/code-fragments/authoring/community/delivery-plan-2026-10-15.md.json",
+      "sourceSHA256": "e59c2e13a70e66acf4a91b93c53036d148f33d06b88ad6cecac248327c3db9e0",
+      "sha256": "611bd72a5dfabc5c005f4e43a8fac7e30f304e2ccd4d666fc5f9ecbdf085ce34",
+      "bytes": 1095,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/company-studio/README.md",
+      "destination": "content/archive/code-fragments/authoring/company-studio/README.md.json",
+      "sourceSHA256": "d656fd8d7ad8ddc3bd93455721fb655351955c258b3fa0bc255d7f37cc6815af",
+      "sha256": "06badda285a2a71e3d20ac4d39b701883c03f32d7f5008178c36070c2e5cf10e",
+      "bytes": 2022,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/library/neon-mosaic/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/neon-mosaic/README.md.json",
+      "sourceSHA256": "877bfd1a9ad35adcd8e61ee4c485628ecf217559b4cf2451735df0f63d4ef1ed",
+      "sha256": "e9fac1774983135845e9376e9b86b560cbcf7db4b1cd46297a1101a699b807b8",
+      "bytes": 3007,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "docs/fpv-redesign-design.md",
+      "destination": "content/archive/code-fragments/docs/fpv-redesign-design.md.json",
+      "sourceSHA256": "4768c9b86f6a6255b9bee0683ce702282ab5e9ac2812c205c9bc417fad4161d0",
+      "sha256": "99c17de2e8f30a9af713b7dcb58ec252b076db96a0a40231b2bafa32236412cc",
+      "bytes": 759,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/README.md",
+      "destination": "content/archive/code-fragments/game/README.md.json",
+      "sourceSHA256": "668dd88f7193f82125a9cfdce53adafe1910f8cbbdd3feb0a4fafabec3907a09",
+      "sha256": "dcb1f2d2dfd12b4bf46202586179c182b11287889f1e2b3d530697ed9d28b795",
+      "bytes": 832,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "game/test/still-workshop-build.test.mjs",
+      "destination": "content/archive/code-fragments/game/test/still-workshop-build.test.mjs.json",
+      "sourceSHA256": "813e6a6e0ce20c74485ecb9b650b38ca38b2fe7d663c40a45bbdad3242899d18",
+      "sha256": "99a5c7434bdbdb888daa7104e1a8fc42c6f61d74553f594ef0636794773f2631",
+      "bytes": 2635,
+      "fragments": 16
+    },
+    {
+      "sourcePath": "authoring/evaluations/round-09-preview-checks.md",
+      "destination": "content/archive/code-fragments/authoring/evaluations/round-09-preview-checks.md.json",
+      "sourceSHA256": "4652f44b898ddc7a17d7719a2f8e584485cc5ba094334d3b6259b94485ce8d9c",
+      "sha256": "6fb9036aa42375e45128b8cf1f9e3124c82c8b9dc6ad3d126ff3bd7a39a2864d",
+      "bytes": 2099,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/challenges/round-05-reference-adjustments.md",
+      "destination": "content/archive/code-fragments/authoring/challenges/round-05-reference-adjustments.md.json",
+      "sourceSHA256": "bd619b2f70ef804ee1f9aaf342220d4cd3c5e2a3c58908e7811d35e014500109",
+      "sha256": "fb943318a2b6c36fed6db3dd037295381ce1d3d8203a4c330e67ec093b35cd8e",
+      "bytes": 2615,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/evaluations/round-08-authoring-checks.md",
+      "destination": "content/archive/code-fragments/authoring/evaluations/round-08-authoring-checks.md.json",
+      "sourceSHA256": "38b163753fbbb7d2c6c9e3363a4c95e6e976b6de036840dda5b4c393c698dba1",
+      "sha256": "9842e0933c0f3db8101aa72b213ff0143becb7734dd567fad8db49f5523558c0",
+      "bytes": 1607,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/evaluations/round-04-forward-test.md",
+      "destination": "content/archive/code-fragments/authoring/evaluations/round-04-forward-test.md.json",
+      "sourceSHA256": "1621f4df1b7903156c247e2cc05891f647cc0c328653107e5ef83ccf3196c63d",
+      "sha256": "1d2e31bd0ccd5c300610898da7faab93f17a274b90f0805181e1701a74072813",
+      "bytes": 5421,
+      "fragments": 7
+    },
+    {
+      "sourcePath": "authoring/evaluations/round-07-motion-lab-review.md",
+      "destination": "content/archive/code-fragments/authoring/evaluations/round-07-motion-lab-review.md.json",
+      "sourceSHA256": "b1f05556ef0bc4b0196ecaab2c502fd90f1e74c153302cce0d4ff118f3b0f384",
+      "sha256": "d933d47d23523aa9002f8a18d4b6f1efe9c93b7bbb447bf70a49deb77c0a87e4",
+      "bytes": 2076,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/moving-edges-art/README.md.json",
+      "sourceSHA256": "b04d2ea6e16f29170d2fe1e0fb099d1c26753212f4e9603f32b801ed6e799cf7",
+      "sha256": "f47ac8cac6bf423a3f256e82178c7b6ad69415aa06372b014df4b00a59b9808a",
+      "bytes": 3330,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-asset-creator/SKILL.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-asset-creator/SKILL.md.json",
+      "sourceSHA256": "3052a9edcc8f013a086546b3d49b37984e5bc46fcfcf756ebd09d366bbdbd6cb",
+      "sha256": "eb2656fa4a0abb7fd016abb1c26d765289b7f8905dff997ed5a2c8dec6a997dd",
+      "bytes": 2854,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-audio-director/SKILL.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-audio-director/SKILL.md.json",
+      "sourceSHA256": "f5c263a35315db6e59163317cb6a600b2199f557c19beb5a883f54cfb46d61a1",
+      "sha256": "dd2a169515ea2918717db9258e800a82c55e44f202c94073a6519375cbb8075d",
+      "bytes": 771,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/community-art-cohort-v1/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/community-art-cohort-v1/README.md.json",
+      "sourceSHA256": "6fc2296da617557571d85bcab48427d493aabce517e3e54c3c9acd39826e25a2",
+      "sha256": "5bdc499be797d6ed949b2331f56fbe274511ea66c671669b84546098de7a9e34",
+      "bytes": 1269,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-animation-director/SKILL.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-animation-director/SKILL.md.json",
+      "sourceSHA256": "05cf35d86d6f6d54e8eb52b39fb031a4f05bd7259e0fb97bcc0dbb03a2904dba",
+      "sha256": "c222d4a1e37224ca4e46c92027a6c13752b887b5aadcdad0a81c22f455991481",
+      "bytes": 4436,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-animation-director/references/motion-handoff.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-animation-director/references/motion-handoff.md.json",
+      "sourceSHA256": "6047ad42affca1afe4b8991c6aade50d6426ad5bcbd0da82a450664e278c944e",
+      "sha256": "732d47a2b1df57e62887458923b49d20eeb72263c67d4c81b2d0f6c4439b6e89",
+      "bytes": 969,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/CONTRACT.md",
+      "destination": "content/archive/code-fragments/authoring/CONTRACT.md.json",
+      "sourceSHA256": "6b8fbaa01949fa6c37098cebe68a12137528880ca2a50150aeb79b02d99ebd60",
+      "sha256": "2c14c42ea9f794ab9d9e600fa5389b9ec7c7b16977137c3567f58bced574babd",
+      "bytes": 1703,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-background-stylist/SKILL.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-background-stylist/SKILL.md.json",
+      "sourceSHA256": "1b351596e910f6832a5e453dde380bb05c9e19e67d1ba4aeb3f23d8b1f55c666",
+      "sha256": "db945be8ebbd367094535f5af9c87b3b6f7fde89fc06badf899734009beb7523",
+      "bytes": 1053,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/prompts/round-08-character-collections.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-08-character-collections.md.json",
+      "sourceSHA256": "cd2fd965d03d89a6df6358adb4f1256e4c38fee365e127b65fb158e8f40ce3b7",
+      "sha256": "d3600c493296c3a69f1faaffafadbd9a792a9eb77bade7d2834d33feaf39baa5",
+      "bytes": 5662,
+      "fragments": 6
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-theme-designer/SKILL.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-theme-designer/SKILL.md.json",
+      "sourceSHA256": "e48fb7eac3bb4025774435415a7d3bdd4dc64aac1f1467ad265e940cef1cbf00",
+      "sha256": "92ebbacf69788e2fea740e65fad0ece2d3b76f9fab4f57db73ae61a842db6011",
+      "bytes": 2762,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-reference-importer/SKILL.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-reference-importer/SKILL.md.json",
+      "sourceSHA256": "0e599c96b962e2fe3c2113cbf7854a0ba54295d527e11f752da4acd3ab94c4a0",
+      "sha256": "f64089eabed722e1063ab4ac6077c65f09aade57eb1da4776583acedcae95936",
+      "bytes": 855,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-reference-importer/references/import-and-style.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-reference-importer/references/import-and-style.md.json",
+      "sourceSHA256": "caaa5028028dd364f994b788e807e021a84c6f8197ea400d6632f8a7db2cfb01",
+      "sha256": "9726529abf7a3fda32ac00aadf8aa4b832103f3b504b6f22eb33c91e24b1e8a5",
+      "bytes": 3717,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/prompts/round-18-equipment-goals.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-18-equipment-goals.md.json",
+      "sourceSHA256": "c926c8373341204498b2fa0f11474814f7fd4d2faabe475e5a670e99165240e4",
+      "sha256": "0b9edee590f0023b0a57d978e8ffeb25fc53132338baf77011e879f7771ee91f",
+      "bytes": 1260,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-character-collection/SKILL.md",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-character-collection/SKILL.md.json",
+      "sourceSHA256": "20fce7c90a8644ddf9223a658f33fba1a4cb3c30b7259aed16757e69b3d8a84d",
+      "sha256": "d3a4baa4ca0c454cbb1f52e5e27bd49bbd2025508166096be4b913a4b0ae5784",
+      "bytes": 3532,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/prompts/round-05-adjustments.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-05-adjustments.md.json",
+      "sourceSHA256": "a84c14e8c43a5660f907ccd47d19b78d050cd9336c0e88884aa3da7c706a9744",
+      "sha256": "9cf25045fba46a185ec1767a092e900f78c071f8aa100a9ea0540fb6e1460241",
+      "bytes": 5474,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/prompts/round-19-pack-goals.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-19-pack-goals.md.json",
+      "sourceSHA256": "992100e162c45ce0d729831d952cd28a31ad8784010fa8784c8ea42f2432d0a3",
+      "sha256": "c90764a835a20e8801582ccdd56d337662ab957e01956b0c939ee404da7767a6",
+      "bytes": 1339,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/prompts/round-17-optional-mastery.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-17-optional-mastery.md.json",
+      "sourceSHA256": "9d1f8fb80e2d5c97a189e79ec94b955115d49ccc881158fc6b783df756ffe467",
+      "sha256": "496cc2d72be3d6607efcd0cca38173c41566c0630c5e1d7341f487de3542385e",
+      "bytes": 1387,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/prompts/README.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/README.md.json",
+      "sourceSHA256": "f5e679c73605688fa1835982b6a7995ff906378568bf8a7fb463b3d2ea41fbdb",
+      "sha256": "f5fc25aa44e2cf76ab51940035fcb118b0c755c2b9811670829564224298b4f1",
+      "bytes": 2719,
+      "fragments": 5
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-chapters/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/sentinel-theme-chapters/README.md.json",
+      "sourceSHA256": "f01f3a9ebeefbbd1fa1d85ba16e0eab4d5cecf279f239d24d390f9f4148d0431",
+      "sha256": "b6cddffa0ce4eb0dadfaec0d581f8f860565daac253d3ea1942ddc8c5d8b9bb0",
+      "bytes": 1886,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/prompts/round-15-controller-journeys.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-15-controller-journeys.md.json",
+      "sourceSHA256": "40f9b5b8dc742d9a75e02a526a3c44a657b1534ad63fd7d2efe2132906796814",
+      "sha256": "9975e8946463fbe6b3e30de21d6c9a3d9b041e60bdd3e918b4b9530c3e93be91",
+      "bytes": 1087,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/prompts/round-07-animation-variants.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-07-animation-variants.md.json",
+      "sourceSHA256": "70fa7bc580e6b00756394ae31bc54e6d9b4f23892acf7a8c38fa57d022ffbec9",
+      "sha256": "02d69162f0337fcfb67aac4a0424694202dc3566bb6361fd0d19811e2dfa4f84",
+      "bytes": 2495,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/reserve-illustrations-wave-2/README.md.json",
+      "sourceSHA256": "dba680a7ffa2aa53749b8a4440e06d894928becbb39cb8dce93234ab7c814053",
+      "sha256": "bcdfc48c3d6922acbd9d462b5747e5318391d68bad1538a0fda72b0f80793890",
+      "bytes": 2677,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/prompts/round-06-asset-variations.md",
+      "destination": "content/archive/code-fragments/authoring/prompts/round-06-asset-variations.md.json",
+      "sourceSHA256": "22ac8dbcb68967313788741971ea51dbffb9df7e2c79cae0fccf080a3ddafaf6",
+      "sha256": "27a64b2e9e0184d3c413c91e55f3fa073957bd4fbce005d70ba3df2a1cb50f79",
+      "bytes": 2538,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-source/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/four-worlds-source/README.md.json",
+      "sourceSHA256": "112a6c230d5bd81b2bffecce3078abafa331d7826ee733142b29f4b48dfb3a42",
+      "sha256": "35714695caf5b9820bfacfe2166fa6492546552c50365133cb0d81f8a92d65e5",
+      "bytes": 1576,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/motion-lab/README.md",
+      "destination": "content/archive/code-fragments/authoring/motion-lab/README.md.json",
+      "sourceSHA256": "523b4def29292cf75d40bafb675cb94c1eea1214f780160ce3973429beb62871",
+      "sha256": "27522989cd80370c31e2a1295e01cc1a2900ff319980e64b2b34ac142f5f1f1c",
+      "bytes": 1850,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/four-worlds-chapters/README.md.json",
+      "sourceSHA256": "518ee4e27649a84c47c6d8a9b626545e38de006c50f2f60319e67cafebbf91c0",
+      "sha256": "ff8f94ef9167cc8c9cd585d0fbf0b1507304ceabb870701d952d8d20784ce1ad",
+      "bytes": 1772,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/countercurrent-art/README.md.json",
+      "sourceSHA256": "58f9b5ae620949b1070e0ba165e07bf5d776113f54f2ead53c7f2d412ec6bc66",
+      "sha256": "628cb81eefba60f670182471ab0bfaefbe57c2d602f55505786ddbbf1af7a4cd",
+      "bytes": 2733,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/route-worlds/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/route-worlds/README.md.json",
+      "sourceSHA256": "0febd26dc8ac4c32734cd4e89de17f8ef2117684cf1562e342afac9bdfa2a684",
+      "sha256": "7eff884da2273feabaae95a8864a8ce47b6bd522c110baaad488eadfdb091274",
+      "bytes": 4019,
+      "fragments": 6
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/sentinel-theme-art/README.md.json",
+      "sourceSHA256": "eadccd93624f9a497733c0f01564a0b68fba15dd1ec05b5052ce37c271529147",
+      "sha256": "04eede8cf1142aa30252ceea982040e8e5bc54656275bf37fb40f3423c154c4e",
+      "bytes": 2815,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/equipment-workshop/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/equipment-workshop/README.md.json",
+      "sourceSHA256": "3f9ed673b0d06db3a4a3c4daa0011a2ba1d4e266272e1254b8d275129ee40f0f",
+      "sha256": "8c59bfb226419fa76142dfa81d8282c31bedc4cb2a1fc32f5cba79342507ca44",
+      "bytes": 1256,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/reserve-illustrations-wave-1/README.md.json",
+      "sourceSHA256": "4326407df98b28810777fcf22378bb2b156b69c9e6c2a18944f38a7458281ddc",
+      "sha256": "5a6b47377418495925378d1cb1e460253df433acf934cd035141bb0230873051",
+      "bytes": 2185,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/countercurrent-chapters/README.md.json",
+      "sourceSHA256": "34b567e57e38d721c8927e5434cc75ffcce13f6e6df5984bf6efea78af424dc4",
+      "sha256": "7eb6b04a0924f99c93f7cf45f32d38fc20ba167f9c82a1b1daf74e9b7abe5b4a",
+      "bytes": 1291,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/library/fracture-theme-chapters/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/fracture-theme-chapters/README.md.json",
+      "sourceSHA256": "d8baa9e08d64493015f746846594d47b0f51898bec8babd15c4c0e9cdbc68468",
+      "sha256": "46fdc17e2de89fb6693b9619dd4a6a0efaca5835cfc00fd9e6d440518db421d5",
+      "bytes": 1882,
+      "fragments": 3
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-relay/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/sentinel-relay/README.md.json",
+      "sourceSHA256": "0bf03aadecd645ab975561c97eac7fe2beb4ebe4a2c00cec6f2307e45f567669",
+      "sha256": "e39e2851e6a4fbb2c4ab332b575c4999768a7a22d4e4c104925dfce91037c9ce",
+      "bytes": 899,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-chapters/README.md",
+      "destination": "content/archive/code-fragments/authoring/library/moving-edges-chapters/README.md.json",
+      "sourceSHA256": "33d164c50e27bc3fba96735af335a367a4d4f39319026ccccd9e61b717690a17",
+      "sha256": "d828149400d7eb440b9bc244c247260d87e5c677201036566b6f34d16046d3a1",
+      "bytes": 1176,
+      "fragments": 2
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-level-designer/agents/openai.yaml",
+      "destination": "content/archive/code-fragments/authoring/skills/xonix-level-designer/agents/openai.yaml.json",
+      "sourceSHA256": "fad1efbd38fabe238d72ceca33cb926aedefba7e162bf6e1b8db4fce8bbebae6",
+      "sha256": "2d15a7a43d8e43369f4f56ecd3c6a7bde28de0eb17604e300413c8cf4dd15038",
+      "bytes": 540,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "authoring/production/README.md",
+      "destination": "content/archive/code-fragments/authoring/production/README.md.json",
+      "sourceSHA256": "80f3f4a7a50419162f70ac0fd8142cf8f10af8ca12b969f0234f49e8406b5b83",
+      "sha256": "b9fe3dfc408682d397c9595307402112d9c63be9f69cd259facb7ce26261c7ee",
+      "bytes": 980,
+      "fragments": 1
+    },
+    {
+      "sourcePath": "docs/feature-delivery-workflow.md",
+      "destination": "content/archive/code-fragments/docs/feature-delivery-workflow.md.json",
+      "sourceSHA256": "860650c2250f20040c3c8af15ca311289f2238eb35796b1b9aa0445be5e033c3",
+      "sha256": "7d96a6477d3444c75d9edd94dd7a2c96fffe62a3a41fed99c5a43ecfb539d130",
+      "bytes": 1234,
+      "fragments": 1
     }
   ]
 }

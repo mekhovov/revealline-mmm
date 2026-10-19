@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/prompts/round-18-equipment-goals.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "c926c8373341204498b2fa0f11474814f7fd4d2faabe475e5a670e99165240e4",
+  "sourceGitBlob": "321953e27b09d7ed9081b956808857c2d7ecb935",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 7187,
+      "end": 8008,
+      "source": "> Prepare four presentation briefs for the same supported Supply Line or Safe Return rule: fictional Ukrainian FPV equipment, Ukrainian embroidery/history, an original 80–90s arcade cabinet aesthetic, and a Coupa-inspired spend-management scene with original or approved branding. Keep core actors, pad/region/hangar references, geometry, class recipes and goal facts identical. A character or image swap grants no resistance, ammunition or stun. Use an original small seal motif that stays legible with static/reduced effects and text labels. Separate ordinary display captions from definition metadata: changing a definition's name or description changes its hash and needs reviewed exact-content registration. Preserve provenance and existing records; do not claim real combat effectiveness or measured client savings."
+    }
+  ]
+}

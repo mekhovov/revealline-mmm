@@ -1,0 +1,39 @@
+{
+  "sourcePath": "authoring/prompts/round-08-character-collections.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "cd2fd965d03d89a6df6358adb4f1256e4c38fee365e127b65fb158e8f40ce3b7",
+  "sourceGitBlob": "e0113bd48a09e573a43a3826a744a578e4089468",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 1729,
+      "end": 3689,
+      "source": "| ID | Purpose | Output mode |\n|---|---|---|\n| `collection-01-roster-recipe` | Stable identity, cosmetic variants, component references and collection scope. | Text plan |\n| `collection-02-fpv-body-variants` | Compact Ukrainian FPV bodies with independently replaceable propellers. | Requested image edit |\n| `collection-03-three-blade-recipe` | Hub/blade count, phase, anchors and visual-rate review. | Text plan |\n| `collection-04-atlas-character` | A specific Ukrainian cultural/material character. | Requested image generation |\n| `collection-05-retro-character` | Original 80s–90s craft with a clear small silhouette. | Requested image generation |\n| `collection-06-navi-character` | A business character variation with honest brand identity. | Requested image edit |\n| `collection-07-exchange-asset` | Apply an actual replacement and verify the displayed switch. | Asset execution |\n| `collection-08-context-selection` | Eligibility, selection and fallback across supported scopes. | Text plan |\n| `collection-09-earned-reward-fixtures` | Understandable cosmetic rewards and duplicate-safe simulated results. | Text plan |\n| `collection-10-selection-interface` | Preview/equip/locked/missing-art/focus states across inputs. | Text plan |\n| `collection-11-applied-comparison` | Inspect actual swaps at normal and small viewport sizes. | Review |\n| `collection-12-collection-readiness` | Separate data, media, application, motion and progress evidence. | Review |\n| `collection-13-cosmetics-and-stats` | Identify explicit gameplay-class proposals without silently adding stats. | Text plan |\n| `collection-14-gameplan-review` | Check the deeper game plan before implementing more logic. | Review |\n| `collection-15-nonrotor-recipes` | Distinct wing, thruster and pulse behavior with clean cancellation. | Text plan |\n| `collection-16-source-faithful-style` | Preserve accepted character identity through optional style derivatives. | Requested image edit |"
+    },
+    {
+      "start": 4001,
+      "end": 4517,
+      "source": "| Family | Starter | Earned cosmetics |\n|---|---|---|\n| FPV FRONT | `fpv-body` — Daybreak FPV | `fpv-racer` — Skyline FPV; `fpv-night` — Night signal FPV |\n| UKRAINE ATLAS | `ukrainian-bird` — Atlas bird | `ukrainian-falcon` — Falcon trim, currently a shared-bird-body trim |\n| 1994 FOREVER | `retro-craft` — Tape runner | `retro-vector` — Vector trail, currently a shared-craft-body treatment |\n| NAVI NETWORK | `navi-avatar` — Spend Sprite | `navi-auditor` — Audit pulse, currently a shared-helper-body treatment |"
+    },
+    {
+      "start": 4519,
+      "end": 4865,
+      "source": "`neutral-marker` is the globally available diagnostic fallback. Spend Sprite is an **original business helper, not an official Coupa or Navi character**. Racer/night names confer no speed, stealth, collision or handling advantage. Current FPV concepts use no Z markings and distinguish Ukrainian, hostile-military and neutral identity explicitly."
+    },
+    {
+      "start": 6636,
+      "end": 7111,
+      "source": "The six authored context IDs are `fpv-first-flight`, `fpv-precision`, `atlas-heritage`, `retro-first`, `retro-second` and `navi-spend-review`. Scope records support `gameId`, `themeId`, `caseId`, `challengeId`, `levelId` and `mapId`; omitted fields are unrestricted within that scope. Selection uses the evaluator's documented matching and specificity, not an invented rule such as “the last context always wins.” Distinguish selected, eligible, unlocked and actually loaded."
+    },
+    {
+      "start": 7353,
+      "end": 8092,
+      "source": "| Fixture ID | Authored example |\n|---|---|\n| `fpv-first-clear` | One distinct FPV clear; satisfies Skyline FPV's first-clear condition. |\n| `fpv-clean-map` | Relay Islands clear with zero lives lost and `relay-restored`; satisfies Night signal FPV's clean-relay alternative. |\n| `atlas-heritage` | Heritage clear with `heritage-fragment`; satisfies Falcon trim's condition. |\n| `retro-first-clear` | Two stars on `retro-l01`; insufficient alone for Vector trail's five-star alternative. |\n| `retro-second-clear` | Three stars on different level `retro-l02`; together with the first fixture reaches five best-result stars. |\n| `navi-clean-case` | A fictional spend-review clear with `anomaly-resolved`; satisfies Audit pulse's condition. |"
+    },
+    {
+      "start": 8943,
+      "end": 9697,
+      "source": "```sh\npython3 authoring/prompt.py show collection-03-three-blade-recipe\npython3 authoring/prompt.py render collection-08-context-selection \\\n  --set 'COLLECTION_DATA=authoring/motion-lab/collection-presets.json and its current evaluator' \\\n  --set 'CONTEXT_CASES=fpv-first-flight, fpv-precision and navi-spend-review' \\\n  --set 'PROGRESS_FIXTURE=isolated lab profile; fpv-first-clear, fpv-clean-map and navi-clean-case'\npython3 authoring/prompt.py render collection-14-gameplan-review \\\n  --set 'GAMEPLAY_PLAN=docs/round-08-gameplay-plan.md' \\\n  --set 'COLLECTION_PROPOSAL=docs/round-08-character-collection.md' \\\n  --set 'IMPLEMENTED_CAPABILITIES=inspect the current authoring tools and motion-lab README; territory game logic remains unimplemented'\n```"
+    }
+  ]
+}

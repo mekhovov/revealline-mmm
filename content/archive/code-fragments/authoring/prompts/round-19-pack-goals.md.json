@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/prompts/round-19-pack-goals.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "992100e162c45ce0d729831d952cd28a31ad8784010fa8784c8ea42f2432d0a3",
+  "sourceGitBlob": "ccfcbb9a73f43ac9708e0c57faa2aa9b1f83d1a3",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 6416,
+      "end": 7321,
+      "source": "> Carry the selected definition through theme, image, music and presentation edits in the practice model. Prepare one Ukrainian FPV presentation, one Ukrainian embroidery/history presentation, one original 80–90s arcade presentation and one Coupa-inspired business presentation using original or authorized assets. Keep physical geometry, stable reference IDs and equipment rules intact; an image swap grants no capability. Explain when a requested text edit changes definition or campaign identity under existing hashing. For an edited scenario exported as a new one-map campaign, construct the actual export context first and visibly retarget any mismatched definition campaign ID; recompute its identity and call it a new declaration. Exporting the original catalog pack must preserve its original identity and format instead. Never silently drop the goal or export an invalid cross-campaign reference."
+    }
+  ]
+}

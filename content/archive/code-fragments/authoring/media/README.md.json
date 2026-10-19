@@ -1,0 +1,14 @@
+{
+  "sourcePath": "authoring/media/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "b2f1bc036bc990e187ff0d5ee7f6cd720aa5b8e32c09231d27db1299f2bb96ce",
+  "sourceGitBlob": "2dff2a80dc5885f869073b688cdebd130b331e4b",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 897,
+      "end": 1561,
+      "source": "- [FPV FRONT](examples/fpv-front.media.json): realistic FPV avatar with an optional pixel derivative, fictional invading infantry/equipment variants, concrete/mud/wire terrain objects, and uploaded scene originals.\n- [UKRAINE ATLAS](examples/ukraine-atlas.media.json): bird/charm avatar, researched cultural materials, folkloric threats, landscape/artwork/photo originals.\n- [1994 FOREVER](examples/retro-1994.media.json): original arcade craft, robots, cassette/circuit/CRT objects, retro scenes.\n- [NAVI NETWORK](examples/navi-network.media.json): planned approved Navi/brand artwork, fictional spend-leak agents, paperwork/archive objects, business-city images."
+    }
+  ]
+}

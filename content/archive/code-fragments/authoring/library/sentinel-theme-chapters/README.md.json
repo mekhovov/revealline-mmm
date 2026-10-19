@@ -1,0 +1,24 @@
+{
+  "sourcePath": "authoring/library/sentinel-theme-chapters/README.md",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourceSHA256": "f01f3a9ebeefbbd1fa1d85ba16e0eab4d5cecf279f239d24d390f9f4148d0431",
+  "sourceGitBlob": "d0254d9d351d48e205d98417dc3cb14e18b0f22e",
+  "encoding": "UTF-8; offsets are Unicode code-point offsets",
+  "fragments": [
+    {
+      "start": 45,
+      "end": 444,
+      "source": "This compiler pairs the nine [Sentinel theme originals](../sentinel-theme-art/README.md)\nwith the three existing [Sentinel missions](../sentinel-circuit/README.md), creating\nindependent Ukraine Atlas, 1994 Forever and Spend Network Tactical editions.\nThere are **three reused layouts and zero new geometries**. The older FPV edition,\nall original images and its saved/earned owners remain unchanged."
+    },
+    {
+      "start": 446,
+      "end": 920,
+      "source": "| Theme         | New chapter ID             | Authored campaign key                         |\n| ------------- | -------------------------- | --------------------------------------------- |\n| Ukraine Atlas | `sentinel-circuit-ukraine` | `sentinel-circuit-ukraine/1/2c5a77757c64c4d1` |\n| 1994 Forever  | `sentinel-circuit-retro`   | `sentinel-circuit-retro/1/e8edd91a796a9b65`   |\n| Spend Network | `sentinel-circuit-coupa`   | `sentinel-circuit-coupa/1/8459eb3ba67608e6`   |"
+    },
+    {
+      "start": 3214,
+      "end": 3633,
+      "source": "| Descriptor                          | Compact gameplay bytes | `.rlmedia` bytes |\n| ----------------------------------- | ---------------------: | ---------------: |\n| [Ukraine](descriptors/ukraine.json) |                  9,440 |        8,175,624 |\n| [Retro](descriptors/retro.json)     |                  9,404 |        7,553,086 |\n| [Spend](descriptors/coupa.json)     |                  9,427 |        7,416,321 |"
+    }
+  ]
+}
