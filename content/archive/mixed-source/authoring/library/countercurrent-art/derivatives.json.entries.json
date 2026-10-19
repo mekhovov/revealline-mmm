@@ -1,0 +1,55 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/countercurrent-art/derivatives.json",
+  "sourceGitBlob": "04fcb7658968620d8103b8b8d57f93b85cbb2567",
+  "sourceSHA256": "b0224ff32cc1885504323184bb575409e696a44b556c451afebe3de35858bbe4",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/images/9",
+      "value": {
+        "cellId": "countercurrent/offset-docks/coupa",
+        "originalPath": "originals/offset-docks-coupa.png",
+        "originalSha256": "87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997",
+        "path": "thumbnails/offset-docks-coupa.jpg",
+        "mime": "image/jpeg",
+        "width": 384,
+        "height": 192,
+        "bytes": 45676,
+        "sha256": "bc47dc7fd4f7b5132077dbc70590c2d7a78e74cbc4df532795778db8119d55d2",
+        "decodedRGBASha256": "d7a8bcd1d2f9203bc72734bb2a5fa2641b5f7fa4522ab0a5fd7705bef8cef33c"
+      }
+    },
+    {
+      "pointer": "/images/10",
+      "value": {
+        "cellId": "countercurrent/sandbar-braid/coupa",
+        "originalPath": "originals/sandbar-braid-coupa.png",
+        "originalSha256": "ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14",
+        "path": "thumbnails/sandbar-braid-coupa.jpg",
+        "mime": "image/jpeg",
+        "width": 384,
+        "height": 192,
+        "bytes": 46852,
+        "sha256": "c2870239d20c489a6417da903e37d531f3445e34ffb656d37d122a02543b8c26",
+        "decodedRGBASha256": "523bbd9157a26214dc4023c29248091ee5e4a85ca99675f63ba12a1bb9a87045"
+      }
+    },
+    {
+      "pointer": "/images/11",
+      "value": {
+        "cellId": "countercurrent/crossing-watch/coupa",
+        "originalPath": "originals/crossing-watch-coupa.png",
+        "originalSha256": "1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5",
+        "path": "thumbnails/crossing-watch-coupa.jpg",
+        "mime": "image/jpeg",
+        "width": 384,
+        "height": 192,
+        "bytes": 44732,
+        "sha256": "b6bc9c072444320cbcf432866371b67507df9f8635045f704bb252c12994470b",
+        "decodedRGBASha256": "458ced6ba0c3251dd84944cc67a60d343d5c80a689d5188c8a694ca6737428ff"
+      }
+    }
+  ]
+}

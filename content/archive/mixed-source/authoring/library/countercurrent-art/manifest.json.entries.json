@@ -1,0 +1,73 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/countercurrent-art/manifest.json",
+  "sourceGitBlob": "75cb7c15c3adf86a89f77452267c9e658c85f995",
+  "sourceSHA256": "27f31bdaa91db438066107e221ed77f16ad5325873b1512566edb7881475e6b1",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/images/9",
+      "value": {
+        "cellId": "countercurrent/offset-docks/coupa",
+        "themeId": "coupa",
+        "missionSlot": "offset-docks",
+        "sourceLevelId": "countercurrent-offset-docks",
+        "title": "The Shared Receiving Courts",
+        "path": "originals/offset-docks-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-571e81c9-b9e9-412b-8098-4fcdeca3e1a6.png",
+        "bytes": 2735312,
+        "sha256": "87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "8fd1c220eb19b48d933dfbeb8e3916cf31f569ec814a9c59ac812b1fbffc8ec4",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        }
+      }
+    },
+    {
+      "pointer": "/images/10",
+      "value": {
+        "cellId": "countercurrent/sandbar-braid/coupa",
+        "themeId": "coupa",
+        "missionSlot": "sandbar-braid",
+        "sourceLevelId": "countercurrent-sandbar-braid",
+        "title": "Four Workshops, One Garden",
+        "path": "originals/sandbar-braid-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-41a76607-5a06-48bb-9cab-4b876fbd9677.png",
+        "bytes": 2884014,
+        "sha256": "ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "94f0d764ee7e10fb16d708d72e2e9b61479f51d1891cecfa3185bf2291ad8b7a",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        }
+      }
+    },
+    {
+      "pointer": "/images/11",
+      "value": {
+        "cellId": "countercurrent/crossing-watch/coupa",
+        "themeId": "coupa",
+        "missionSlot": "crossing-watch",
+        "sourceLevelId": "countercurrent-crossing-watch",
+        "title": "The Two Caretaker Houses",
+        "path": "originals/crossing-watch-coupa.png",
+        "originalToolPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09357-2b06-77f1-b001-1afd50d8bc73/exec-9fb6c495-6fca-448a-889d-e604371a55b9.png",
+        "bytes": 2897299,
+        "sha256": "1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5",
+        "width": 1774,
+        "height": 887,
+        "promptSha256": "7d3a3410ce67fcd292e82df3fe8530250057fdd071a12c20b93a570ee10e538d",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/countercurrent-art/prompts.json",
+  "sourceGitBlob": "ac4ad5c04d83fed680773522c32c3a3061d64cf5",
+  "sourceSHA256": "02652252288ebb936463d2417733cefd07903f287b36fe5c91e8d214d646120f",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/prompts/9",
+      "value": {
+        "cellId": "countercurrent/offset-docks/coupa",
+        "themeId": "coupa",
+        "missionSlot": "offset-docks",
+        "sourceLevelId": "countercurrent-offset-docks",
+        "title": "The Shared Receiving Courts",
+        "path": "originals/offset-docks-coupa.png",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "prompt": "Use case: stylized-concept. Asset type: ONE original static reward panorama for RevealLine / Countercurrent. Create a full-bleed 1774 by 887 pixel landscape, exact 2:1 composition from the outset, no frame or letterboxing. Modern luminous pixel-art painting: deliberate square pixel clusters, crisp stepped silhouettes, selective dithering, strong coherent shadow masses and a clear near/middle/far depth structure. Scenic detail must support three or four large readable forms at thumbnail size, not become all-over visual noise. Rich, emotionally inviting revealed reward art, original fictional composition. No writing, letters, numbers, logos, watermarks, user interface, grid, route arrows or map overlay. No copied game art, named artist imitation, identifiable real product or photographic rendering. No gore, injury or violent scene. This is reward scenery echoing the topology, never a literal collision map, fixed warning lane, working-machine blueprint or gameplay claim. Spend Network theme inspired only by cooperative business spending and reuse: a fictional community supply-and-repair campus after a spring shower. TWO opposing hook-shaped low workshop courts frame a broad open central delivery lane diagonally, with their offset ends clearly visible. One courtyard receives plain reusable crates; the other repairs bicycles, lamps and household tools under a covered bench. A tiny electric cargo cart waits quietly, and a few small distant colleagues sort materials. Broad architecture, planted edges and wet paving lead the eye, no flow arrows or logistics diagram. Deep forest teal, warm mustard lamps, pale stone and soft rose sky; friendly, luminous and practical. No actual Coupa logo, trademarked UI, financial metric, savings claim, currency icon, brand or text. All people/equipment fictional; no warehouse photorealism.",
+        "promptSha256": "8fd1c220eb19b48d933dfbeb8e3916cf31f569ec814a9c59ac812b1fbffc8ec4"
+      }
+    },
+    {
+      "pointer": "/prompts/10",
+      "value": {
+        "cellId": "countercurrent/sandbar-braid/coupa",
+        "themeId": "coupa",
+        "missionSlot": "sandbar-braid",
+        "sourceLevelId": "countercurrent-sandbar-braid",
+        "title": "Four Workshops, One Garden",
+        "path": "originals/sandbar-braid-coupa.png",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "prompt": "Use case: stylized-concept. Asset type: ONE original static reward panorama for RevealLine / Countercurrent. Create a full-bleed 1774 by 887 pixel landscape, exact 2:1 composition from the outset, no frame or letterboxing. Modern luminous pixel-art painting: deliberate square pixel clusters, crisp stepped silhouettes, selective dithering, strong coherent shadow masses and a clear near/middle/far depth structure. Scenic detail must support three or four large readable forms at thumbnail size, not become all-over visual noise. Rich, emotionally inviting revealed reward art, original fictional composition. No writing, letters, numbers, logos, watermarks, user interface, grid, route arrows or map overlay. No copied game art, named artist imitation, identifiable real product or photographic rendering. No gore, injury or violent scene. This is reward scenery echoing the topology, never a literal collision map, fixed warning lane, working-machine blueprint or gameplay claim. Spend Network theme inspired only by shared resources and thoughtful purchasing: a fictional civic maker campus with FOUR long low workshop-and-greenhouse bands staggered across a broad rain garden. Clear alternating left/right ends and generous planted passages make four major silhouettes easy to read. One band repairs furniture, one tends seedlings, one stores reusable containers and one hosts a quiet fabric workbench, suggested with only a few readable props. Tiny collaborating figures stay in the distance. Verdigris roofs, deep blue-green foliage, terracotta paving, warm cream interior light and muted coral dusk; large calm shadows rather than all-over sparkle. No product interface, Coupa logo, text, money, chart, performance claim or recognizable branded equipment. Scenic architecture echoes the four bars without pretending to be an exact level map.",
+        "promptSha256": "94f0d764ee7e10fb16d708d72e2e9b61479f51d1891cecfa3185bf2291ad8b7a"
+      }
+    },
+    {
+      "pointer": "/prompts/11",
+      "value": {
+        "cellId": "countercurrent/crossing-watch/coupa",
+        "themeId": "coupa",
+        "missionSlot": "crossing-watch",
+        "sourceLevelId": "countercurrent-crossing-watch",
+        "title": "The Two Caretaker Houses",
+        "path": "originals/crossing-watch-coupa.png",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "prompt": "Use case: stylized-concept. Asset type: ONE original static reward panorama for RevealLine / Countercurrent. Create a full-bleed 1774 by 887 pixel landscape, exact 2:1 composition from the outset, no frame or letterboxing. Modern luminous pixel-art painting: deliberate square pixel clusters, crisp stepped silhouettes, selective dithering, strong coherent shadow masses and a clear near/middle/far depth structure. Scenic detail must support three or four large readable forms at thumbnail size, not become all-over visual noise. Rich, emotionally inviting revealed reward art, original fictional composition. No writing, letters, numbers, logos, watermarks, user interface, grid, route arrows or map overlay. No copied game art, named artist imitation, identifiable real product or photographic rendering. No gore, injury or violent scene. This is reward scenery echoing the topology, never a literal collision map, fixed warning lane, working-machine blueprint or gameplay claim. Spend Network theme inspired only by collaborative stewardship and repair: a fictional urban commons after rain at blue hour. TWO unequal raised workshop plazas sit diagonally across a generous dark planted garden: a compact square material-library pavilion at upper left, and an elongated repair-and-refurbishment hall at lower right. Distinct broad footprints, open separation, slender ordinary garden footpaths and warm window reflections define the image. A few reusable crates and one repaired bicycle suggest careful reuse; tiny distant caretakers prepare to close. Ink green and midnight blue, ivory stone, amber interiors and silver rainwater, restrained luminous pixel clusters. No literal warning beams, fixed cross lanes or map markings. No actual Coupa products/logos, text, currency, dashboards, financial or sustainability-performance claims; a fictional humane scene rather than an advertisement.",
+        "promptSha256": "7d3a3410ce67fcd292e82df3fe8530250057fdd071a12c20b93a570ee10e538d"
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/sentinel-theme-art/verification.json",
+  "sourceGitBlob": "afe60f2125a5b4b6390471b31d601bf431d2d5f3",
+  "sourceSHA256": "fec9f3868ecf0166feda5b32281923637b935e438fc86bf7a5a5484c16e3e55c",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/files/11",
+      "value": {
+        "path": "coupa/originals/listening-court.png",
+        "bytes": 2767187,
+        "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+      }
+    },
+    {
+      "pointer": "/files/12",
+      "value": {
+        "path": "coupa/originals/switchyard-gates.png",
+        "bytes": 2187660,
+        "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+      }
+    },
+    {
+      "pointer": "/files/13",
+      "value": {
+        "path": "coupa/originals/open-the-circuit.png",
+        "bytes": 2449288,
+        "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+      }
+    },
+    {
+      "pointer": "/decoded/6",
+      "value": {
+        "cellId": "sentinel-circuit/listening-court/coupa",
+        "naturalWidth": 1774,
+        "naturalHeight": 887,
+        "pixelBytes": 4720614,
+        "pixelsSha256": "c8eedc5a63f2c0dd8ed57864b156ac564da1858858fc1adc3ced4b031edeb0ef",
+        "bytes": 2767187,
+        "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+      }
+    },
+    {
+      "pointer": "/decoded/7",
+      "value": {
+        "cellId": "sentinel-circuit/switchyard-gates/coupa",
+        "naturalWidth": 1774,
+        "naturalHeight": 887,
+        "pixelBytes": 4720614,
+        "pixelsSha256": "624e5a77af08bc5c7cb3ca498c498cd356e920fb6f3b1caa662864c678c496e3",
+        "bytes": 2187660,
+        "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+      }
+    },
+    {
+      "pointer": "/decoded/8",
+      "value": {
+        "cellId": "sentinel-circuit/open-the-circuit/coupa",
+        "naturalWidth": 1774,
+        "naturalHeight": 887,
+        "pixelBytes": 4720614,
+        "pixelsSha256": "7e7766a64402eeeaf456f839d100eba9306bf5819e80bb708f5987386251c94f",
+        "bytes": 2449288,
+        "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+      }
+    }
+  ]
+}

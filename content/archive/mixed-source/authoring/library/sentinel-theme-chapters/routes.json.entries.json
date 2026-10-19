@@ -1,0 +1,4755 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/sentinel-theme-chapters/routes.json",
+  "sourceGitBlob": "af517b60f947c7e17ff4bcc3c723ea78b3071f7c",
+  "sourceSHA256": "bb22f80c9cccbc2776c7840de6856d117c4658a6656007447519a6e54dd061b9",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/themeOrder/2",
+      "value": "coupa"
+    },
+    {
+      "pointer": "/editions/2/descriptor/originals/0",
+      "value": {
+        "assetId": "sentinel-circuit-coupa-poster-1",
+        "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+        "levelId": "sentinel-circuit-coupa-listening-court",
+        "levelRevision": "1",
+        "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+        "bytes": 2767187,
+        "mime": "image/png",
+        "width": 1774,
+        "height": 887
+      }
+    },
+    {
+      "pointer": "/editions/2/descriptor/originals/1",
+      "value": {
+        "assetId": "sentinel-circuit-coupa-poster-2",
+        "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+        "levelId": "sentinel-circuit-coupa-switchyard-gates",
+        "levelRevision": "1",
+        "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+        "bytes": 2187660,
+        "mime": "image/png",
+        "width": 1774,
+        "height": 887
+      }
+    },
+    {
+      "pointer": "/editions/2/descriptor/originals/2",
+      "value": {
+        "assetId": "sentinel-circuit-coupa-poster-3",
+        "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+        "levelId": "sentinel-circuit-coupa-open-circuit",
+        "levelRevision": "1",
+        "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+        "bytes": 2449288,
+        "mime": "image/png",
+        "width": 1774,
+        "height": 887
+      }
+    },
+    {
+      "pointer": "/editions/2/inputPins/6",
+      "value": {
+        "path": "authoring/library/sentinel-theme-art/coupa/originals/listening-court.png",
+        "bytes": 2767187,
+        "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+      }
+    },
+    {
+      "pointer": "/editions/2/inputPins/7",
+      "value": {
+        "path": "authoring/library/sentinel-theme-art/coupa/originals/switchyard-gates.png",
+        "bytes": 2187660,
+        "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+      }
+    },
+    {
+      "pointer": "/editions/2/inputPins/8",
+      "value": {
+        "path": "authoring/library/sentinel-theme-art/coupa/originals/open-the-circuit.png",
+        "bytes": 2449288,
+        "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+      }
+    },
+    {
+      "pointer": "/routes/112",
+      "value": {
+        "id": "coupa/standard/immediate/court-upper",
+        "sourceRouteId": "standard/immediate/court-upper",
+        "sourceSegmentsSha256": "5c7070f2619cfad35024810d2a7cea0cc351bc286302cfa227edd4525393b2a1",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1172,
+          "time": 9.766666666666753,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 14900,
+          "coverage": 0.62882096069869,
+          "claimedCount": 1440,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "9ca8e5a485676525ea63f29c2a7648c7fd9386b240ed970860bfcb4b4994b4d0",
+        "metricsSha256": "4c959d32913ea3369f4f5502348a215a524f2f78e76b0b0809a72e310ff05761",
+        "replaySha256": "3a083e6589775958e11438bd122a19df5d5f3b09edd149432c6a03b4bce9e7a6",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6191,
+          "sha256": "2ae49ac96a7b9629d06773c888d802640e966e7244c90dd51b478c0a291adecd",
+          "checkpointSha256": "841553646f5729c367ba9db4d1aaaf650561f883d4414be5e6f05c6dbb954b68",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/113",
+      "value": {
+        "id": "coupa/standard/immediate/court-lower",
+        "sourceRouteId": "standard/immediate/court-lower",
+        "sourceSegmentsSha256": "b2adfd3a6be819da2233003ce0e0a604ea3545182228d94396219bab27496424",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1170,
+          "time": 9.750000000000087,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 15240,
+          "coverage": 0.6436681222707423,
+          "claimedCount": 1474,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "d00c8852ba84aa3c8e4ec7153ea5f76dd4c399cefe27ab520905c8324fcbd8a4",
+        "metricsSha256": "ee5870ed78aa56acfa38ecbf5e5134d91d18cbf4a8a1c9a190063099f458f6e1",
+        "replaySha256": "6b36398a9740a244e8d51a9ffd9ab3ec81143e07ae9976a75fb3a257afa053af",
+        "savedPrefix": {
+          "tick": 823,
+          "format": "xonix-session.v4",
+          "bytes": 6320,
+          "sha256": "7f76fe43662e8fcf54e0fc39d978aca339a60e869755ba06dd1d3ca6bc17a067",
+          "checkpointSha256": "0e2c7db243fc23234da26319cd41a4861f27050d3a76be48d137067aa5c5e582",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/114",
+      "value": {
+        "id": "coupa/standard/immediate/yard-field",
+        "sourceRouteId": "standard/immediate/yard-field",
+        "sourceSegmentsSha256": "2976061bd060d1b900b54abf309f09eca8aeb4f4ca3fd8c4bfee811e0de98a06",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "fe22b823164266f5920ee5b402e93deae45fcfe51c3f4f13f6c0a4bf8cdc1693",
+        "classId": "bomber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "won",
+          "won": true,
+          "tick": 415,
+          "time": 3.4583333333333237,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 12040,
+          "coverage": 0.5039301310043668,
+          "claimedCount": 1154,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "ef504c724fbb029d1b99d60694a7aea021dda9a3f7d6856a22d6e4a36c4061c4",
+        "metricsSha256": "a2ee03867f270bdb2f3dc4369773105d977a46ea843063bb49eba85e76829f07",
+        "replaySha256": "4f8aa1d284bf605abe89665dfceca321103cca599fd522022cdeee4aa0245544",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6270,
+          "sha256": "6345db0a4d6c6c59d91ffced8794af44d57015e0d8526df4edf2398d8b83f1e8",
+          "checkpointSha256": "9b305af775917edda41901b0db9baa3af0d16047e41feca285512e66aa98752b",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/115",
+      "value": {
+        "id": "coupa/standard/immediate/yard-rim",
+        "sourceRouteId": "standard/immediate/yard-rim",
+        "sourceSegmentsSha256": "bb7b98f0c5a3e59a01b6d7f9cc8fad8b030e47b2abfc6f104c53cf63a6070ea1",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1350,
+          "time": 11.250000000000002,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 11320,
+          "coverage": 0.4724890829694323,
+          "claimedCount": 1082,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "a28ad83404f4522408e01741ccea2d25e458e9650e794b76aa2828fdc132c2ec",
+        "metricsSha256": "d4990f35fea348d971a7bbac3caaa9341accd8b049d96a0000a0b9173b1dfdb0",
+        "replaySha256": "8e44dd7694a7e70112682b3f8cf681ca341ad6f513244c7713bd6ea3083eb0e1",
+        "savedPrefix": {
+          "tick": 595,
+          "format": "xonix-session.v4",
+          "bytes": 6155,
+          "sha256": "1c76e3e2a5f8cb0ad1fff58e9e56d61ef5bc67eb1435c3c38880767220f71183",
+          "checkpointSha256": "be43e8772a11085c476ad191a1b30a7a0e3ee0a56698a8c1bbd7ced092ed6009",
+          "continuation": {
+            "direction": "left"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/116",
+      "value": {
+        "id": "coupa/standard/immediate/boss-fiber",
+        "sourceRouteId": "standard/immediate/boss-fiber",
+        "sourceSegmentsSha256": "0fd2552e79ad5b10e1634023e7c75f1c85eed53a52097e1dc52d22c555399fad",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 1742,
+          "time": 14.516666666666483,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "2fce01a728323368ae042c3c569b43a889061606a26c9069d0a2b2265f659c96",
+        "metricsSha256": "8f410b3d881f58a1fc38acb48d0d4aefc8a4139dba9970f7ff64a2bb616212dc",
+        "replaySha256": "798a72463000e4a1fe1d060e30190c0b6bf23caa748f8a703ae0eeaf88ea05c1",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6884,
+          "sha256": "82b61663405c894a97b83fe03f23647ad01ed87e46dfed710cd3fe781e54e347",
+          "checkpointSha256": "ec1464bd89abaae02151039b80baeeb644a3a2381d27ff3969ccb0329e9e816a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/117",
+      "value": {
+        "id": "coupa/standard/immediate/boss-rim",
+        "sourceRouteId": "standard/immediate/boss-rim",
+        "sourceSegmentsSha256": "337cee3df0b318f1ef5c502daec2915e27d4d973bc78e83d7afd40a01d8abbfe",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1694,
+          "time": 14.116666666666505,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "404bc03aebc2df7bca9aab1bb850cb9c867dc65c1981e54c1cc2c4809ed2f8eb",
+        "metricsSha256": "fda2f5114f51316382f01d84ad2835d964533c628d9a19c4e0ab176fb2a479f3",
+        "replaySha256": "85b9ee1de3c1dda7c8d803b4b5eccc3fc2f2ef025199b2435c2e9f772195dbde",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6883,
+          "sha256": "b06ad4c9a83cd41f046f2f8a11f35f3444dad87774f7ca4b0d02866f851401b2",
+          "checkpointSha256": "cc3630b04c1675b90bfda2fdf6a356eef0c2e97fbde27bb4e3384ccf4398b10a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/118",
+      "value": {
+        "id": "coupa/standard/immediate/court-blocked",
+        "sourceRouteId": "standard/immediate/court-blocked",
+        "sourceSegmentsSha256": "1674e08599c403eccade3193089b81192c3710f35711f9f87c0837f12639be77",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "cut-timeout",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 1447,
+          "time": 12.05833333333329,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "c71fd42ba040279a31ec8c13deac5de55ec9f140e1c8cd4c67ce61b0a38c0211",
+        "metricsSha256": "b02495c26273cef20534f814bd704a93706dc78e5c2f65f905e03010726ef8a7",
+        "replaySha256": "fc4a374339c6195be889d14635641efd71df7994b31e5e271b594007778b3fc3",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6193,
+          "sha256": "b5ca552ae95a778d1555ab77e7a8ce7db01b2d6d2f88d5d400ff9e9b0c5f22fe",
+          "checkpointSha256": "841553646f5729c367ba9db4d1aaaf650561f883d4414be5e6f05c6dbb954b68",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/119",
+      "value": {
+        "id": "coupa/standard/immediate/yard-empty",
+        "sourceRouteId": "standard/immediate/yard-empty",
+        "sourceSegmentsSha256": "f3fc7b4ffa15ebc406fd6d366fe7a7dd01f12ebab1e0fbd7c3ea178e558cb8cb",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "fe22b823164266f5920ee5b402e93deae45fcfe51c3f4f13f6c0a4bf8cdc1693",
+        "classId": "bomber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 195,
+          "time": 1.6249999999999967,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "fe75420a9a4d3dbe102f18101ae76ba904310e47d3efe2cdb0e76441e11c7a2b",
+        "metricsSha256": "06774242caf11b3b75b12acf047ad12d5ed1cc1920448b82a885b8c80353802e",
+        "replaySha256": "196d8633677b99076ec96712e648a87d4531e3a7ac2febb4364e861916831a68",
+        "savedPrefix": {
+          "tick": 67,
+          "format": "xonix-session.v4",
+          "bytes": 6147,
+          "sha256": "f80341dc05cc8cd0d8573f3964165d6c2144cc01ac5fa22999e301b509c008e7",
+          "checkpointSha256": "c2787da5cfda8c0fe32b2822b81a3ba2bc68f318e4eb8a1aa9efa28fc0edef52",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/120",
+      "value": {
+        "id": "coupa/standard/immediate/yard-early",
+        "sourceRouteId": "standard/immediate/yard-early",
+        "sourceSegmentsSha256": "38fa36c22b1092ea49003295880815b79c729a6b9fc29213bb648d9715658d99",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "fe22b823164266f5920ee5b402e93deae45fcfe51c3f4f13f6c0a4bf8cdc1693",
+        "classId": "bomber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 195,
+          "time": 1.6249999999999967,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "624085a9910dcddc818915b10abaedc1372f08f8b1d12c9af1aece630a502763",
+        "metricsSha256": "346d4420f65803736bc63d8220c5e47df28c68b426c65174ee27ea1a3eba70f9",
+        "replaySha256": "38048c2e567353884a7e06f361062ddab003724c5da44744db5ae5ef0f9ed6f9",
+        "savedPrefix": {
+          "tick": 69,
+          "format": "xonix-session.v4",
+          "bytes": 6146,
+          "sha256": "ea9b949fa8a57dce0e7a02803234cc14dfe34abb8bfa0599bf352ab6aaf8c083",
+          "checkpointSha256": "9b37e3ff4e534fba36af2ad1aa0da8228702ca78010d996be0bb8f024eb72059",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/121",
+      "value": {
+        "id": "coupa/standard/immediate/boss-scout-band",
+        "sourceRouteId": "standard/immediate/boss-scout-band",
+        "sourceSegmentsSha256": "ab791fad6a13bf4ba81065a3b70cb5644513eee2305044cdb7eed7874e77909d",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 1201,
+          "time": 10.008333333333406,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "476ac2bc0aafb51e4e225a4d755ade79241b0d46428964a6413b62821cbb054b",
+        "metricsSha256": "dcdcb69535c9aa977ff1820e030fae9ab8e8d225340245547fd46380a07a5d7b",
+        "replaySha256": "cf116294e7bf809993d55e9acb492844eb22768241c96607d3d00c5da0fa3b92",
+        "savedPrefix": {
+          "tick": 665,
+          "format": "xonix-session.v4",
+          "bytes": 6890,
+          "sha256": "038f8297350bdf99a31092e3617de9178606bed03ffbf7431a862df79c893e90",
+          "checkpointSha256": "1de40cfe7c185d339f58cf7b7bcfe2512c6612fb8e555fab79c7b0e8dca27e06",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/122",
+      "value": {
+        "id": "coupa/standard/immediate/boss-short",
+        "sourceRouteId": "standard/immediate/boss-short",
+        "sourceSegmentsSha256": "731859cb9098464ec62bbb80009dc51f811a12a047220f3313bf384dcbd73d2a",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 1557,
+          "time": 12.974999999999904,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 10400,
+          "coverage": 0.4376657824933687,
+          "claimedCount": 990,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "af6fe255afdc3f6d802552f9933c4ebf677c0826cd4972f91dfcf890b7669066",
+        "metricsSha256": "1d19a10cc7d19e7b9a1a5d90995ac85290ad258eb76ed73df4f0917527abde08",
+        "replaySha256": "27fc23900061e65f8f32227a3350263182a5a2fd27665071d3725ceb2d73170e",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6884,
+          "sha256": "429eb0fd4714f32d9c0fbac19ef0365db7a6e7ab0d0eb79109ea9834a13466a3",
+          "checkpointSha256": "ec1464bd89abaae02151039b80baeeb644a3a2381d27ff3969ccb0329e9e816a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/123",
+      "value": {
+        "id": "coupa/standard/immediate/boss-early",
+        "sourceRouteId": "standard/immediate/boss-early",
+        "sourceSegmentsSha256": "228ff038a5c182161222eef2fd0d49c78485a7a8cdaca6d11c3663e47416d6f9",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 1371,
+          "time": 11.424999999999992,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 10590,
+          "coverage": 0.44606542882404954,
+          "claimedCount": 1009,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "60f176e430c4791fa50259d0ffecfbac265fabac8c544daa22743d6f9b95b3a4",
+        "metricsSha256": "476b859740fbf373590e761975057022960fb2a15638797298f47e4af0389d86",
+        "replaySha256": "1aa68baebc3eff26d1fa6802ef37f48892efbabdc87aa902959f51756ebb1d7f",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6884,
+          "sha256": "82f52948dcb3fd06696634cb6fbf04de32b64f935cd5a372be66909a46fba76b",
+          "checkpointSha256": "ec1464bd89abaae02151039b80baeeb644a3a2381d27ff3969ccb0329e9e816a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/124",
+      "value": {
+        "id": "coupa/standard/immediate/boss-missed",
+        "sourceRouteId": "standard/immediate/boss-missed",
+        "sourceSegmentsSha256": "eb587d41fc74940f687f9654ab296d49add1bc604dc3a039814c8c744ac39086",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 2546,
+          "time": 21.216666666666104,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "bb28b91efa3740b38856f402805e8932e0785b8fe1607b04940add92681fb210",
+        "metricsSha256": "889881838ca99c43e5f866bcec3c800a1b56cfc7e6f8ac752b73b99e239c1780",
+        "replaySha256": "ed14f030ee3f8cfb097319b0ac82a048687bbdcccc4cd4a3e5ec7163624f1943",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6885,
+          "sha256": "cae96b33ff74cf7fe64312da3141faae3b2128ad80d98d959f73098ecea8491f",
+          "checkpointSha256": "ec1464bd89abaae02151039b80baeeb644a3a2381d27ff3969ccb0329e9e816a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/125",
+      "value": {
+        "id": "coupa/standard/immediate/boss-recovered",
+        "sourceRouteId": "standard/immediate/boss-recovered",
+        "sourceSegmentsSha256": "6139859418ec1071c40491ca327e676dcdbf751ad9905e8c9d002433099d4657",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 2546,
+          "time": 21.216666666666104,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "silver",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "6e6e37bfe579c13df7b683758cfbfb43654f179da8ff3e7565de654d58d4967e",
+        "metricsSha256": "b7bf627da0ada9035ec88ca1fde8fe6ef5e4198c0d54a575e3481ee04816599f",
+        "replaySha256": "cdcd0f7f26326966c6b755d87be730356f846e34f930423724918bf12d11db84",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6888,
+          "sha256": "a0bcf34aa23936ebbe3816a4975a9429ff548215ec2bd599c20c8997550cba71",
+          "checkpointSha256": "ec1464bd89abaae02151039b80baeeb644a3a2381d27ff3969ccb0329e9e816a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/126",
+      "value": {
+        "id": "coupa/standard/grid-center/court-upper",
+        "sourceRouteId": "standard/grid-center/court-upper",
+        "sourceSegmentsSha256": "5c7070f2619cfad35024810d2a7cea0cc351bc286302cfa227edd4525393b2a1",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1172,
+          "time": 9.766666666666753,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 14900,
+          "coverage": 0.62882096069869,
+          "claimedCount": 1440,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "8003e4032c8539ea7f182b02e5941d3fddbac8c82c2f477251153224fafa0e9b",
+        "metricsSha256": "93f5e195590fc0ccd96ddc3a0721e678aa39548340f0d2d2ddc018f8ca6172bf",
+        "replaySha256": "db3d03c739c27d8382c02c27dc52a701a52325fcc90a8d55e4dd98f8859dc3fa",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6197,
+          "sha256": "a20f02b71a6ba33b8d5dbdb9e41e7929fd87c70046fe46513d03205afa814e90",
+          "checkpointSha256": "e3be22eedfdf40d875b44d7dbd21d588c7d6249a93d37ffa295537d827a51d4a",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/127",
+      "value": {
+        "id": "coupa/standard/grid-center/court-lower",
+        "sourceRouteId": "standard/grid-center/court-lower",
+        "sourceSegmentsSha256": "b2adfd3a6be819da2233003ce0e0a604ea3545182228d94396219bab27496424",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1170,
+          "time": 9.750000000000087,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 15240,
+          "coverage": 0.6436681222707423,
+          "claimedCount": 1474,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "6d38eee7168c35d8aac595ddc0a89776c17109f84fabf27bde08a30b1e80b2d5",
+        "metricsSha256": "8fe1adc6946ac13ed2387645469cd300afdacfc67562e9ba4d3cad8a9f5c90d1",
+        "replaySha256": "701ca1196e13f63387a8f429da86b8908e851b65af390ee32622b99c9806bf80",
+        "savedPrefix": {
+          "tick": 823,
+          "format": "xonix-session.v4",
+          "bytes": 6326,
+          "sha256": "62db80b7532dbf4f71e7598c935877fbe864825937d95524dbb15d59aa94eddd",
+          "checkpointSha256": "813bcd9f5575093aaceb1e67eaf0e01c70ddfd54d700f8ed24c88d7fc60eabe3",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/128",
+      "value": {
+        "id": "coupa/standard/grid-center/yard-field",
+        "sourceRouteId": "standard/grid-center/yard-field",
+        "sourceSegmentsSha256": "2976061bd060d1b900b54abf309f09eca8aeb4f4ca3fd8c4bfee811e0de98a06",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "29ba3ff9f4abd14d60cd9536876c79dab41c65555ba2dcbd1c5a7a2d8e550295",
+        "classId": "bomber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "won",
+          "won": true,
+          "tick": 415,
+          "time": 3.4583333333333237,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 12040,
+          "coverage": 0.5039301310043668,
+          "claimedCount": 1154,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "e182f4d1329471672cf2f3c840a3233fdd7a1e7e5fd080259469aca09a5cbe52",
+        "metricsSha256": "f10f66e17db85eacb003796b91def4cbe42d5f3254404c391cd7b5a638a6e19a",
+        "replaySha256": "3cd4fe021adf82f5fdf78888721b650ee3ad74b4f67c9f55f113874be89adedd",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6276,
+          "sha256": "35b80001d8cf455f55a60475884af3143a07a976290db958bb42252fbedaa060",
+          "checkpointSha256": "5ad85cc528991541e38d641a1333adec14aa57a5d2692897caa855934e38faa9",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/129",
+      "value": {
+        "id": "coupa/standard/grid-center/yard-rim",
+        "sourceRouteId": "standard/grid-center/yard-rim",
+        "sourceSegmentsSha256": "bb7b98f0c5a3e59a01b6d7f9cc8fad8b030e47b2abfc6f104c53cf63a6070ea1",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1350,
+          "time": 11.250000000000002,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 11320,
+          "coverage": 0.4724890829694323,
+          "claimedCount": 1082,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "c40df4819c1ce35dec6c066fb9dcee6dd81cdc8a0bc0e17cb4c08d2e29049a57",
+        "metricsSha256": "fa386ad5ead890e32c17de44884fab5e3f69a3ad6dc3f3104cbec71b70bdd122",
+        "replaySha256": "87f8080c197f113536ee4eab4990a758b7b6b189069cd22c441fd4f563464676",
+        "savedPrefix": {
+          "tick": 595,
+          "format": "xonix-session.v4",
+          "bytes": 6161,
+          "sha256": "566f51f246bf1e1c59e048854c23bd43ceab0a9017247703f17098e9fb38e8ed",
+          "checkpointSha256": "8119eb304b5331375b136444c0bfca8e1e2b63bb13e18906dcf48b0ce3972e07",
+          "continuation": {
+            "direction": "left"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/130",
+      "value": {
+        "id": "coupa/standard/grid-center/boss-fiber",
+        "sourceRouteId": "standard/grid-center/boss-fiber",
+        "sourceSegmentsSha256": "0fd2552e79ad5b10e1634023e7c75f1c85eed53a52097e1dc52d22c555399fad",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 1742,
+          "time": 14.516666666666483,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "bc9592364c558cbc2e873ac8206e72d7ca227fed3f758fe1d1fb9bd4b8f052ed",
+        "metricsSha256": "be2f23c1dc78d2b62a0d37a3ecb83d882e67e31c87533492e4968c86158c992c",
+        "replaySha256": "531b142f399a9cec265087eecedf6d52cb1a43d46c816a749fccac1df1545753",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6890,
+          "sha256": "9a723ced1a64432982492b9d204e303c80225e7985f60d443a3cf27394d05f3b",
+          "checkpointSha256": "586cc9c0411e8e6b0ed0c8c9f327da722d55574cdcaafa021cc6dd65cb76bbeb",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/131",
+      "value": {
+        "id": "coupa/standard/grid-center/boss-rim",
+        "sourceRouteId": "standard/grid-center/boss-rim",
+        "sourceSegmentsSha256": "337cee3df0b318f1ef5c502daec2915e27d4d973bc78e83d7afd40a01d8abbfe",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1694,
+          "time": 14.116666666666505,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "fc440926d659c2ae70a52708ac8388c373be82a7fb61b7f0da502fccb3f15e60",
+        "metricsSha256": "be17d52fc62d884660705dd49f659f005ca49b657617b4e99f246785e04c46cd",
+        "replaySha256": "e7620d169103a5a0d2f9f37b250d29063946424753b284713c98d6459f94c9ca",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6889,
+          "sha256": "43e3d2ebe358b4ed620eb91823fbf1551af6cf865045b7fb4ee4101ad5fce2e1",
+          "checkpointSha256": "0190ace46aef943c423f91def2f6b273c831d5ca046780c869234ef096226c01",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/132",
+      "value": {
+        "id": "coupa/standard/grid-center/court-blocked",
+        "sourceRouteId": "standard/grid-center/court-blocked",
+        "sourceSegmentsSha256": "1674e08599c403eccade3193089b81192c3710f35711f9f87c0837f12639be77",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "cut-timeout",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 1447,
+          "time": 12.05833333333329,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "2eb9127b16f705c459a2a4c1d337994fbebf085f404581b724811a7e9cfc1f30",
+        "metricsSha256": "b02495c26273cef20534f814bd704a93706dc78e5c2f65f905e03010726ef8a7",
+        "replaySha256": "38148105fb7f110199e596b339d1a62f0ba604ef4d0dec054e7a816fc69e8286",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6199,
+          "sha256": "ca09b80ffb0b4365b5223735a44eb7e8b3a3a1710b22faab7eedc38929408125",
+          "checkpointSha256": "e3be22eedfdf40d875b44d7dbd21d588c7d6249a93d37ffa295537d827a51d4a",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/133",
+      "value": {
+        "id": "coupa/standard/grid-center/yard-empty",
+        "sourceRouteId": "standard/grid-center/yard-empty",
+        "sourceSegmentsSha256": "f3fc7b4ffa15ebc406fd6d366fe7a7dd01f12ebab1e0fbd7c3ea178e558cb8cb",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "29ba3ff9f4abd14d60cd9536876c79dab41c65555ba2dcbd1c5a7a2d8e550295",
+        "classId": "bomber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 195,
+          "time": 1.6249999999999967,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "3d34e6482e948cb98a84a70f7ea3a2fa833035974a43a1af3db80af44e2991c7",
+        "metricsSha256": "06774242caf11b3b75b12acf047ad12d5ed1cc1920448b82a885b8c80353802e",
+        "replaySha256": "e77df161bb39afa6b74e6274e955a0ba7b76cd6471567af8a66eca2d489d0873",
+        "savedPrefix": {
+          "tick": 67,
+          "format": "xonix-session.v4",
+          "bytes": 6153,
+          "sha256": "e8b41aa8c1833999aa6cb00ed5f77a1bf299b741196bf0ee72fe75db1e7a0988",
+          "checkpointSha256": "034e0933a39a8ea9a0447f8f42184b23562135ff73daad01ec4cdcbc16bf3d23",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/134",
+      "value": {
+        "id": "coupa/standard/grid-center/yard-early",
+        "sourceRouteId": "standard/grid-center/yard-early",
+        "sourceSegmentsSha256": "38fa36c22b1092ea49003295880815b79c729a6b9fc29213bb648d9715658d99",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "29ba3ff9f4abd14d60cd9536876c79dab41c65555ba2dcbd1c5a7a2d8e550295",
+        "classId": "bomber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 195,
+          "time": 1.6249999999999967,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "217ba46070ebf7c1687842c8c4a9d745fc3cd7c75fd185a33048796990e2c493",
+        "metricsSha256": "346d4420f65803736bc63d8220c5e47df28c68b426c65174ee27ea1a3eba70f9",
+        "replaySha256": "6cfecc465af3e7d9b37d7b2d7ac4606274c54e7f5a8700058b686c2114217274",
+        "savedPrefix": {
+          "tick": 69,
+          "format": "xonix-session.v4",
+          "bytes": 6152,
+          "sha256": "0a621e8fb9ba16f4dcb1e4ee7b1d3e215f4ac3c819dcba612f34a1171e373fe1",
+          "checkpointSha256": "3af2ef71184002131ffc38711c7c84635c8ba664b6e5b9a6a544549183a905a6",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/135",
+      "value": {
+        "id": "coupa/standard/grid-center/boss-scout-band",
+        "sourceRouteId": "standard/grid-center/boss-scout-band",
+        "sourceSegmentsSha256": "ab791fad6a13bf4ba81065a3b70cb5644513eee2305044cdb7eed7874e77909d",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 1201,
+          "time": 10.008333333333406,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "160ffbca71b4568fd0a09f2ccd228e97ae6afda08f0b039cacbad527887c958c",
+        "metricsSha256": "dcdcb69535c9aa977ff1820e030fae9ab8e8d225340245547fd46380a07a5d7b",
+        "replaySha256": "8e861d5bdcfb2df8075ef232efb1e00d170a10b560595e91cbf0b3cc34377d78",
+        "savedPrefix": {
+          "tick": 665,
+          "format": "xonix-session.v4",
+          "bytes": 6896,
+          "sha256": "1ae362449551183e04e4d501e0901499580e7efbb2cd7fa8344a59bb2561c125",
+          "checkpointSha256": "96a2291050273f482e8d6a636ed177bb7afcc2d6294258f9d764adc7d239682d",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/136",
+      "value": {
+        "id": "coupa/standard/grid-center/boss-short",
+        "sourceRouteId": "standard/grid-center/boss-short",
+        "sourceSegmentsSha256": "731859cb9098464ec62bbb80009dc51f811a12a047220f3313bf384dcbd73d2a",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 1557,
+          "time": 12.974999999999904,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 10400,
+          "coverage": 0.4376657824933687,
+          "claimedCount": 990,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "7d0420cd0789f9bf83f74c27bd1b1f9fbcfbc9fea48c5977a14d8511d4a1201a",
+        "metricsSha256": "1d19a10cc7d19e7b9a1a5d90995ac85290ad258eb76ed73df4f0917527abde08",
+        "replaySha256": "49b87a0843e45b37faa91c422594a422df47cfa6e4a09225347db1837ba844f5",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6890,
+          "sha256": "8e2c9b4910e6863e2cc2af5f698d3eb042e731d059a8a9019e9af580bfe9fc81",
+          "checkpointSha256": "586cc9c0411e8e6b0ed0c8c9f327da722d55574cdcaafa021cc6dd65cb76bbeb",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/137",
+      "value": {
+        "id": "coupa/standard/grid-center/boss-early",
+        "sourceRouteId": "standard/grid-center/boss-early",
+        "sourceSegmentsSha256": "228ff038a5c182161222eef2fd0d49c78485a7a8cdaca6d11c3663e47416d6f9",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 1371,
+          "time": 11.424999999999992,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 10590,
+          "coverage": 0.44606542882404954,
+          "claimedCount": 1009,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "bb8d3707b49c052300a7b17b715a28ea893cc4f8eccdf13fbed3a4b3cb94a22a",
+        "metricsSha256": "476b859740fbf373590e761975057022960fb2a15638797298f47e4af0389d86",
+        "replaySha256": "4f6eee8cc38788061e04211dc92431ac464b21b47dbccd691b78b7bb497605f5",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6890,
+          "sha256": "e646f1524bc39e466c99c6bfac527bc471eac25976a0c752c3220df8d089bb3e",
+          "checkpointSha256": "586cc9c0411e8e6b0ed0c8c9f327da722d55574cdcaafa021cc6dd65cb76bbeb",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/138",
+      "value": {
+        "id": "coupa/standard/grid-center/boss-missed",
+        "sourceRouteId": "standard/grid-center/boss-missed",
+        "sourceSegmentsSha256": "eb587d41fc74940f687f9654ab296d49add1bc604dc3a039814c8c744ac39086",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 2546,
+          "time": 21.216666666666104,
+          "lives": 3,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "b0a4e65eaf24945f6a14e5dfa3252de14790f538014406d1f9a83d1a468a3734",
+        "metricsSha256": "c6f101d3c51d606e9b5deef99b0ddf64f60f59d54a17901fbca84a55dcd41fac",
+        "replaySha256": "d29bfa4e29d14febc4391d2b9b40a21eb5359e8f529258d8eb7d40c976de571c",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6891,
+          "sha256": "c34a4bad331083a18fe370bd15bb563001134c45e8ec00c7070fc166fecca4c1",
+          "checkpointSha256": "586cc9c0411e8e6b0ed0c8c9f327da722d55574cdcaafa021cc6dd65cb76bbeb",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/139",
+      "value": {
+        "id": "coupa/standard/grid-center/boss-recovered",
+        "sourceRouteId": "standard/grid-center/boss-recovered",
+        "sourceSegmentsSha256": "6139859418ec1071c40491ca327e676dcdbf751ad9905e8c9d002433099d4657",
+        "themeId": "coupa",
+        "difficulty": "standard",
+        "executionKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "1",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 2546,
+          "time": 21.216666666666104,
+          "lives": 2,
+          "livesLost": 1,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "silver",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "192b734d4890e155e81752dddedb10f5ccbd970779f6c3146baae3dd87a8a46f",
+        "metricsSha256": "fd1ee729efe6097aaee3c424ccfbf21e0d218e25cbbfc5b0735624c978809308",
+        "replaySha256": "33928f97a517eb25514be1bc76889491ed99b4dfb22d8d14567191d56637fca5",
+        "savedPrefix": {
+          "tick": 632,
+          "format": "xonix-session.v4",
+          "bytes": 6894,
+          "sha256": "ccdc901d26229596d4350f2fc8a1c30035882006b2771c4a5cea5dc71356009e",
+          "checkpointSha256": "586cc9c0411e8e6b0ed0c8c9f327da722d55574cdcaafa021cc6dd65cb76bbeb",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/140",
+      "value": {
+        "id": "coupa/gentle/immediate/court-upper",
+        "sourceRouteId": "gentle/immediate/court-upper",
+        "sourceSegmentsSha256": "5c7070f2619cfad35024810d2a7cea0cc351bc286302cfa227edd4525393b2a1",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "gentle-classic-v1-59419ab73aa4575a",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1172,
+          "time": 9.766666666666753,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 14900,
+          "coverage": 0.62882096069869,
+          "claimedCount": 1440,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "81dfdcdd3ddceabd7a79e1bc24bc51c21610d263375d5d82f2406eee2711289c",
+        "metricsSha256": "5d98ab2928ae45a0d9ca779f09c322c3d15e0d7c10ef909fdc289985bfc83bf4",
+        "replaySha256": "50d02e64665ad2c22075e142711ca3debceb1dbc35e9ddc844846d91f772c331",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6308,
+          "sha256": "12536fed288b2685284dd8ae667c9a5edde96555a7ec5a2d7ce58032a9dd1533",
+          "checkpointSha256": "63c119cbb4d4906847bd03deab47c7c3219178ea53f98b2615caa0c4f0060e9b",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/141",
+      "value": {
+        "id": "coupa/gentle/immediate/court-lower",
+        "sourceRouteId": "gentle/immediate/court-lower",
+        "sourceSegmentsSha256": "b2adfd3a6be819da2233003ce0e0a604ea3545182228d94396219bab27496424",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "gentle-classic-v1-59419ab73aa4575a",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1170,
+          "time": 9.750000000000087,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 15240,
+          "coverage": 0.6436681222707423,
+          "claimedCount": 1474,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "c6ea92af84e679446102834453bbcd9f2a7038f02b9584dd3866e013f7d56585",
+        "metricsSha256": "b0eefd72a6beaf13aecf0263296f5727f101d1463c755d961fb5f5f32fc94af7",
+        "replaySha256": "662db61418a23a9f51b3bbde91761ce10e6f23adc8450f6e340f70efccaa4df7",
+        "savedPrefix": {
+          "tick": 823,
+          "format": "xonix-session.v4",
+          "bytes": 6437,
+          "sha256": "3c5deb5296746d8ea6ba62735a396c2437e7f7fbc7d68c32bcc2bcbfe236a617",
+          "checkpointSha256": "5c20e79c485888e5297eaf791b5dc8d2717f8357aaf6479df73e2860bcba517d",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/142",
+      "value": {
+        "id": "coupa/gentle/immediate/yard-field",
+        "sourceRouteId": "gentle/immediate/yard-field",
+        "sourceSegmentsSha256": "2976061bd060d1b900b54abf309f09eca8aeb4f4ca3fd8c4bfee811e0de98a06",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "fe22b823164266f5920ee5b402e93deae45fcfe51c3f4f13f6c0a4bf8cdc1693",
+        "classId": "bomber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "won",
+          "won": true,
+          "tick": 415,
+          "time": 3.4583333333333237,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 12040,
+          "coverage": 0.5039301310043668,
+          "claimedCount": 1154,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "c1c816d1766ba674eebccea46ecc632e695225d5b7a60dbf4ca1f70b84269321",
+        "metricsSha256": "8ce7e0a929479ea83549169ce6e45ce90652c5acd95b360ace3703af48db071b",
+        "replaySha256": "0c0ab9a364131ca1503ed1e42077abedfba1bb0671480c8fe9c90231a2ac7835",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6388,
+          "sha256": "ece227fcafc71225aba16ba317d8c8ad3736fce38c94be59cd20a90cd4ed3f23",
+          "checkpointSha256": "bf03e9da607cde48297fa4671b8b88cdc39a6c9f4ee3ba0f65fbb17b51cd9317",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/143",
+      "value": {
+        "id": "coupa/gentle/immediate/yard-rim",
+        "sourceRouteId": "gentle/immediate/yard-rim",
+        "sourceSegmentsSha256": "bb7b98f0c5a3e59a01b6d7f9cc8fad8b030e47b2abfc6f104c53cf63a6070ea1",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1350,
+          "time": 11.250000000000002,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 11320,
+          "coverage": 0.4724890829694323,
+          "claimedCount": 1082,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "ff4b44deb3b391a5427e9128cc9340e9673982c6f809c764c4522d7785ca8075",
+        "metricsSha256": "f363b015ce0cef7b8b0a382772691b19884f2ecea82d3188929b0b701c2543d8",
+        "replaySha256": "fb30e96507bf17532d76861bf03c496be535d93f8b8640212e25db29432f1cdd",
+        "savedPrefix": {
+          "tick": 595,
+          "format": "xonix-session.v4",
+          "bytes": 6273,
+          "sha256": "b54d25c59f0797162f28b26945c2d26ea67ee0ab83ec5447ade6d65ff4c14e72",
+          "checkpointSha256": "5767328db783b6c4249aeeff9c7d8c473ae7e6ed8ada0d6e1ece2ede0d75a7ab",
+          "continuation": {
+            "direction": "left"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/144",
+      "value": {
+        "id": "coupa/gentle/immediate/boss-fiber",
+        "sourceRouteId": "gentle/immediate/boss-fiber",
+        "sourceSegmentsSha256": "d2e138787ed822c03e27fd7ecf05f0e2c8b5508d174d3bbb5c76e17249b5d166",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 2222,
+          "time": 18.516666666666257,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "667a7d0e757069ecdce59c259aac27134500ecde2120e956cc8c45c7c43595f0",
+        "metricsSha256": "7c07f7af819a320d3c59ea6cebcd176a5471cdc7dac6f2b6dc988d93a9b9217c",
+        "replaySha256": "0cdada013bfecee1593be3304f747898f1b2034ff382e4eb6d4db42dd0d4c251",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7000,
+          "sha256": "ee90e69d3dc5693e5c1faca457dc609f111afdffdcef8108567c1dff4696de5e",
+          "checkpointSha256": "cddb5e89f1e98dea005ed4739c394dca5cb4828c5b886467f7df27e1d16ad66a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/145",
+      "value": {
+        "id": "coupa/gentle/immediate/boss-rim",
+        "sourceRouteId": "gentle/immediate/boss-rim",
+        "sourceSegmentsSha256": "69f73815488d30292e92940fb023e89975845815502b39b3f16e624ad09f59a2",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 2174,
+          "time": 18.11666666666628,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "190021efc348eca659b8378c6e2256d50da72b2837884c306c1bcdac057d4bf2",
+        "metricsSha256": "ae1e1f19a39e5cce3280ec8a31e41c537c4c2afae9d6ffee2c203fa8e64bec1d",
+        "replaySha256": "d53470c454ccd7ce3c525fb8a1bbf81f65f55cc0028d77486ed14020e00890f4",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 6999,
+          "sha256": "d2a3a5574ea04d6aad5ddd08b45917c4ca1b10ec2224e5c26831853d33f75908",
+          "checkpointSha256": "826bc1c10eb172579a865e584f4edcddb8ff7cc069f24b61d73dc7dee4be2939",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/146",
+      "value": {
+        "id": "coupa/gentle/immediate/court-blocked",
+        "sourceRouteId": "gentle/immediate/court-blocked",
+        "sourceSegmentsSha256": "1a4e1bd468758a0fb460460d5012be0abf8b7e4c036ee60ca404ed3134e68e71",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "gentle-classic-v1-59419ab73aa4575a",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 9628,
+          "time": 80.23333333334325,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "577074e7caf13da8f7d55471c949df5cd6d19cad0cb4725fa1390ebf38275a8d",
+        "metricsSha256": "6775ccb2d07eab4db3c32cc402d499cf8554e6edfe5941de5b6230f51eca27c2",
+        "replaySha256": "c4b1d8b8652389ba479774da67465f60e819b2ecd1fe1ec130604973592a8431",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6310,
+          "sha256": "40f3cf142f57b1dded8ad73f38bb511ba32cd3f7292d639ab9e39bbd40e8df68",
+          "checkpointSha256": "63c119cbb4d4906847bd03deab47c7c3219178ea53f98b2615caa0c4f0060e9b",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/147",
+      "value": {
+        "id": "coupa/gentle/immediate/yard-empty",
+        "sourceRouteId": "gentle/immediate/yard-empty",
+        "sourceSegmentsSha256": "17672e526634dd7555a1a1d6b0fe72a201616f80aeff8f32035d498fa9ef49ec",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "fe22b823164266f5920ee5b402e93deae45fcfe51c3f4f13f6c0a4bf8cdc1693",
+        "classId": "bomber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 325,
+          "time": 2.7083333333333264,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "c7ad568b534fb231834ce3fd443d2b01495bd40525b24db6267006f2bd18660a",
+        "metricsSha256": "64205062eba74a47763ee6135e34d2922db7d1c6c8ea94ca99220e528fabfd2d",
+        "replaySha256": "a8ea1a88733190ab27032a83bfac08557355390cec65f463ab51c792db510cdc",
+        "savedPrefix": {
+          "tick": 67,
+          "format": "xonix-session.v4",
+          "bytes": 6265,
+          "sha256": "4b4388c627a375759ea0e3886f08235517ffb0ab1a7ea926eb9f07e9e72577c6",
+          "checkpointSha256": "9cb21fe6491a566ab0d251ce8e98fd7119229270aeca02020c9c01c76c007407",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/148",
+      "value": {
+        "id": "coupa/gentle/immediate/yard-early",
+        "sourceRouteId": "gentle/immediate/yard-early",
+        "sourceSegmentsSha256": "32c6a81a96489c6f4d6a38ce20f37dc3d3a3adad74b127950541dd1af5f1030c",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "fe22b823164266f5920ee5b402e93deae45fcfe51c3f4f13f6c0a4bf8cdc1693",
+        "classId": "bomber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 325,
+          "time": 2.7083333333333264,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "c4cc32d06fa755374a5a58e2c1b84b84d3e74aa677f2b646d9bfbf71dd500248",
+        "metricsSha256": "226b1e78101583070726e05f56727e2746c5d009e5c909097c742e992b71f683",
+        "replaySha256": "744ffb175e392d7a95d02b092627a77151e1d791f26902aef4bc92c802473fa0",
+        "savedPrefix": {
+          "tick": 69,
+          "format": "xonix-session.v4",
+          "bytes": 6264,
+          "sha256": "d6f0d9ed26cb700fb73426ebfb813b93518a3a945b66ffdfa6dddd7f6a58ac66",
+          "checkpointSha256": "6447d93ff967992bf7f1e7f0c173841ae406a0f5e9c993006b9528f3c9835c51",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/149",
+      "value": {
+        "id": "coupa/gentle/immediate/boss-scout-band",
+        "sourceRouteId": "gentle/immediate/boss-scout-band",
+        "sourceSegmentsSha256": "0ac19ec3f9b8ab75cf6d069f71731b2440144f24681cab7bdfaf3c2692ccd0bc",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "0cd06563d3066f4c451ff88262049f94c0efe0404b14a0000c6e5eae03b0601a",
+        "classId": "scout",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 2077,
+          "time": 17.308333333332993,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "c7c986cae3fb5024b16493d799ef9912259806dca69ec01163d3457669e5044e",
+        "metricsSha256": "b15bfbc33e55488aabbe72e69e75af9f08ac54ff453246e6798bbfbab029bd0e",
+        "replaySha256": "5e460144cea41ada4a344fb3b66266b417dc588cf482cf88d8dd65b36939962b",
+        "savedPrefix": {
+          "tick": 905,
+          "format": "xonix-session.v4",
+          "bytes": 7006,
+          "sha256": "566ec47c238352d13a42352e322badd3dd2193013d5de5452ab8ceead42bef7b",
+          "checkpointSha256": "07dc96a2a2a350a80f951e092454981b294a7673befb4e735b06b8ccc5bc9016",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/150",
+      "value": {
+        "id": "coupa/gentle/immediate/boss-short",
+        "sourceRouteId": "gentle/immediate/boss-short",
+        "sourceSegmentsSha256": "ce113eab2760420c5cca77b93a17e09db5db4dd52e1d3447400ad9567340b51d",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 2037,
+          "time": 16.974999999999678,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 10400,
+          "coverage": 0.4376657824933687,
+          "claimedCount": 990,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "55055cbb2d965a470af61b297148365f25f3f1dbe080099f45b96d432f3082de",
+        "metricsSha256": "41f8a3538055a7de0dfe07c7bb3ed08782cde11fde1420fde8a13daeb335ce6f",
+        "replaySha256": "fa4a53a55dd6cfb51ec3c196e07455f55531ad49d2a121b3f592a226c0443e05",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7000,
+          "sha256": "2a94a7d7f4b981b2bf469583e5f61b3f5f425402f7794f8a3b8750725e7fbb6b",
+          "checkpointSha256": "cddb5e89f1e98dea005ed4739c394dca5cb4828c5b886467f7df27e1d16ad66a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/151",
+      "value": {
+        "id": "coupa/gentle/immediate/boss-early",
+        "sourceRouteId": "gentle/immediate/boss-early",
+        "sourceSegmentsSha256": "8dd31e4eb7e9206941c535282a91488a8b3434018ce0b0e4a630d27bbac09595",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 1611,
+          "time": 13.424999999999878,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 10590,
+          "coverage": 0.44606542882404954,
+          "claimedCount": 1009,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "314a9a6bf316f0ecc1ccbc88ec629e88fe0b3c169e68a96827c9206120dd5f7d",
+        "metricsSha256": "792ea48b3c7f58fe7836b0e063509fb39b75d3d113c276ee9865e830fdf6462b",
+        "replaySha256": "86e2f313c06e072da6c73bf45a62ec574e191e3f8b7885c2a422a8f89c58d5c3",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7000,
+          "sha256": "54536b38dfaf650e913ade03c0714a39b41ee2a0bc08f053ab5902b05fbe9f53",
+          "checkpointSha256": "cddb5e89f1e98dea005ed4739c394dca5cb4828c5b886467f7df27e1d16ad66a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/152",
+      "value": {
+        "id": "coupa/gentle/immediate/boss-missed",
+        "sourceRouteId": "gentle/immediate/boss-missed",
+        "sourceSegmentsSha256": "8efbb6c0134e3a53db5ae5d1fc056a1a674647e37853ea717efc124e7fa90d6c",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 3746,
+          "time": 31.216666666665535,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "8df4f2f6935f1ea40d6ef3ee8b2df754b9d4b9c2b4944ee667f57e34bf708752",
+        "metricsSha256": "f081864a58725d4658cff7394c825f9abf0524715d2c9fdd5f57e254089bf90a",
+        "replaySha256": "b4b35b876801105753c1fdb34db489d703b2e050c47472a5b94a3ccc3c26f876",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7001,
+          "sha256": "04342d8f78a4f31507889fda3c6e8faac87a7276a39b0fecc1454aa1fc37a888",
+          "checkpointSha256": "cddb5e89f1e98dea005ed4739c394dca5cb4828c5b886467f7df27e1d16ad66a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/153",
+      "value": {
+        "id": "coupa/gentle/immediate/boss-recovered",
+        "sourceRouteId": "gentle/immediate/boss-recovered",
+        "sourceSegmentsSha256": "64de5adbeaee7af0549a445f1a76a0b559813d2f99500350e25906d47ff70e09",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "04a4994fc7151e5ba699dd00c08a0123a05e2477a94c4a625a4d26f36af7c4ba",
+        "classId": "fiber",
+        "turnPolicy": "immediate",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "immediate",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 3746,
+          "time": 31.216666666665535,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "silver",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "454511ff8d0ec6cbfc6a4b0be54dae9e2166fcb41d6a025e74edeff68071b6ce",
+        "metricsSha256": "6e1fb23a70ee842e1075ceda85a0cc4fe22b4076adb1e4c597fc21299f956de6",
+        "replaySha256": "8606f00103ca754ddfc89ddaa49b7e10f591a566b4e133c793dcd5b710346779",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7004,
+          "sha256": "1dde8b347fceb388cad08beadd902fd775e6ebe63da5194f9ed35e77c3e853d0",
+          "checkpointSha256": "cddb5e89f1e98dea005ed4739c394dca5cb4828c5b886467f7df27e1d16ad66a",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/154",
+      "value": {
+        "id": "coupa/gentle/grid-center/court-upper",
+        "sourceRouteId": "gentle/grid-center/court-upper",
+        "sourceSegmentsSha256": "5c7070f2619cfad35024810d2a7cea0cc351bc286302cfa227edd4525393b2a1",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "gentle-classic-v1-59419ab73aa4575a",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1172,
+          "time": 9.766666666666753,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 14900,
+          "coverage": 0.62882096069869,
+          "claimedCount": 1440,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "5c29b564bfef853cff5f2e736c852df859cf50566fe47ed4144fddd7c8bdfc1f",
+        "metricsSha256": "4d0fb240818053caa8529299688eb86e062b5b7b7732624b1715951cdaaeb3c2",
+        "replaySha256": "6ca486f3375960bf6da58b0800fc15749fa7d9503c6e8e9ff0bc767e95bddf9c",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6314,
+          "sha256": "788907a5bda5dc13362196a42ec743180cc0e1ce51269ad9956cf270a950c1f6",
+          "checkpointSha256": "2db2eb6643f2ef28a736491c74c00d312d5ffd6a303932105727b43d194e82ae",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/155",
+      "value": {
+        "id": "coupa/gentle/grid-center/court-lower",
+        "sourceRouteId": "gentle/grid-center/court-lower",
+        "sourceSegmentsSha256": "b2adfd3a6be819da2233003ce0e0a604ea3545182228d94396219bab27496424",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "gentle-classic-v1-59419ab73aa4575a",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1170,
+          "time": 9.750000000000087,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 15240,
+          "coverage": 0.6436681222707423,
+          "claimedCount": 1474,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "ba8f94f1d532e6583d110f5dae10697ac34da8ef556775db27d81a3f6ae90844",
+        "metricsSha256": "058a954001b347419856f97d2bff21a1338da7a5c76b431b6098a8add9a116bd",
+        "replaySha256": "19a176769bc6000da6c757484ae27cda300627dbf04a2c77698ebe741dcf1f87",
+        "savedPrefix": {
+          "tick": 823,
+          "format": "xonix-session.v4",
+          "bytes": 6443,
+          "sha256": "9447f7f9bad63af59b0f9602b7fc105340ec750eceea6a298e19884d294b09ed",
+          "checkpointSha256": "768587a10d271b27bec624dfb9b0d90b3611edfe3415afc3da2bf585181e223b",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/156",
+      "value": {
+        "id": "coupa/gentle/grid-center/yard-field",
+        "sourceRouteId": "gentle/grid-center/yard-field",
+        "sourceSegmentsSha256": "2976061bd060d1b900b54abf309f09eca8aeb4f4ca3fd8c4bfee811e0de98a06",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "29ba3ff9f4abd14d60cd9536876c79dab41c65555ba2dcbd1c5a7a2d8e550295",
+        "classId": "bomber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "won",
+          "won": true,
+          "tick": 415,
+          "time": 3.4583333333333237,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 12040,
+          "coverage": 0.5039301310043668,
+          "claimedCount": 1154,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "97df69e1b518249dd4374dbf16ac88b76ec2906268646108927dd40e9741fbe8",
+        "metricsSha256": "c743ad936c6cdc736e2faf541e829f033adf7e0e56acff576f6a08af482271e5",
+        "replaySha256": "d7bef17310c0c7ef16aef50dffee529f516e69b5adff0aba56f4ea88e2b44aae",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6394,
+          "sha256": "33786b3da23673779569c9948e1375d51d30df428afc878f3c03c5f9fd02d913",
+          "checkpointSha256": "b9e47ad6af26dbae9713eba7455686e4f2e6b749e2e326013425c51b5922120b",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/157",
+      "value": {
+        "id": "coupa/gentle/grid-center/yard-rim",
+        "sourceRouteId": "gentle/grid-center/yard-rim",
+        "sourceSegmentsSha256": "bb7b98f0c5a3e59a01b6d7f9cc8fad8b030e47b2abfc6f104c53cf63a6070ea1",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 1350,
+          "time": 11.250000000000002,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 11320,
+          "coverage": 0.4724890829694323,
+          "claimedCount": 1082,
+          "totalClaimable": 2290,
+          "medal": "gold",
+          "objectives": {
+            "captured": 1,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "474830e745c34f29ad9a277aed1dfa84b03c72c9f5a545fc50ad11cbc11e9f59",
+        "metricsSha256": "8e0cf597042c23420aa15e6fbe0146fb95fdceb4c48c94dac1e87e011bf40bfd",
+        "replaySha256": "284636f41ed679c4f5bf20f1a0c0c7d63931fc33ffb8b3fe9290d00332cd89c4",
+        "savedPrefix": {
+          "tick": 595,
+          "format": "xonix-session.v4",
+          "bytes": 6279,
+          "sha256": "028e2fdf9e9f36357617208c155e1ac53bfb24db5b5bce3d60f9726c5154f5b6",
+          "checkpointSha256": "6c6fa818a687904543be2b3b68f3a7ea5b4148e6ac7b9b4b332f8497ad6a1e2f",
+          "continuation": {
+            "direction": "left"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/158",
+      "value": {
+        "id": "coupa/gentle/grid-center/boss-fiber",
+        "sourceRouteId": "gentle/grid-center/boss-fiber",
+        "sourceSegmentsSha256": "d2e138787ed822c03e27fd7ecf05f0e2c8b5508d174d3bbb5c76e17249b5d166",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 2222,
+          "time": 18.516666666666257,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "ae82e95164b8bdec9f5b09ed9527d4fe0080e1bb5b3ac25989c24c767307e593",
+        "metricsSha256": "00ea30b95f6c71e668189a95a162ada838dc8f58142389cf8d2399c484a51fc3",
+        "replaySha256": "7ca9ea6b53c56c1df72051580a36751fe1b1bcab0f277f82649146f533c53257",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7006,
+          "sha256": "c6ba6bbedff81c725521746f42f204eab254131eae3abba022033060d9d5b1c8",
+          "checkpointSha256": "8311bd829c9341d68f04ef79b2b620defd3500001923764c61310fea9a037449",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/159",
+      "value": {
+        "id": "coupa/gentle/grid-center/boss-rim",
+        "sourceRouteId": "gentle/grid-center/boss-rim",
+        "sourceSegmentsSha256": "69f73815488d30292e92940fb023e89975845815502b39b3f16e624ad09f59a2",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "won",
+          "won": true,
+          "tick": 2174,
+          "time": 18.11666666666628,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "9152d736c5ad8071c9c018764fd9579a8f505ac0662bdf2258e48c867d0bcd06",
+        "metricsSha256": "37c1fdac96a8f534fa005c988fb332b9e037b1031af59f6d13e270b5287be8f6",
+        "replaySha256": "56b021a483328ba09dc3acd2209f17a517ae838d26f0eda943c4e5f208b6fcc0",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7005,
+          "sha256": "a2ac96e166b187dae5c6fa94b544ec508a0fcb45b5d2d5ec4d49cd88b890c09d",
+          "checkpointSha256": "c9eadcd7309ea271b2cf0bdbf493af05bf36bb893fd2a0ad984b64d4e290df88",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/160",
+      "value": {
+        "id": "coupa/gentle/grid-center/court-blocked",
+        "sourceRouteId": "gentle/grid-center/court-blocked",
+        "sourceSegmentsSha256": "b552900984cf45ffe15a097e1fdc63f99f4d1c51c15b85b2a6614c6390f6d33a",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-listening-court",
+          "revision": "gentle-classic-v1-59419ab73aa4575a",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 10143,
+          "time": 84.52500000001334,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "2586e87ab6fa9a0af438729063d4e10bb127b78575543571f69c6086ee4cb060",
+        "metricsSha256": "ec33fc6a97f6b10a577d8a4c66e404b467c215ae76f6563da01d1dbdfae0468e",
+        "replaySha256": "a6441ce26433957daa6154ae245902285afea2ff031e32566bf91d41563888ad",
+        "savedPrefix": {
+          "tick": 68,
+          "format": "xonix-session.v4",
+          "bytes": 6316,
+          "sha256": "8b0789a36ea6e7bc8c223ed540e46d95f3d421b93a1483f044b005eea09dba22",
+          "checkpointSha256": "2db2eb6643f2ef28a736491c74c00d312d5ffd6a303932105727b43d194e82ae",
+          "continuation": {
+            "direction": "right"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-1",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/161",
+      "value": {
+        "id": "coupa/gentle/grid-center/yard-empty",
+        "sourceRouteId": "gentle/grid-center/yard-empty",
+        "sourceSegmentsSha256": "17672e526634dd7555a1a1d6b0fe72a201616f80aeff8f32035d498fa9ef49ec",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "29ba3ff9f4abd14d60cd9536876c79dab41c65555ba2dcbd1c5a7a2d8e550295",
+        "classId": "bomber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 325,
+          "time": 2.7083333333333264,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "94015122224a996d67e485843101b8dad8e849b87b7530828368331298af7edd",
+        "metricsSha256": "64205062eba74a47763ee6135e34d2922db7d1c6c8ea94ca99220e528fabfd2d",
+        "replaySha256": "1484591817160c7843f03f323658248aaa501369b7f82b82f32fc76da59e227d",
+        "savedPrefix": {
+          "tick": 67,
+          "format": "xonix-session.v4",
+          "bytes": 6271,
+          "sha256": "04f7f481ded8447ee01a0eac932bc75731b66ff7b01c00a89b0fe72bcb4e91ab",
+          "checkpointSha256": "5687511ec5030d3ff286189cdc173354d14ac90936abcb8ffdbb3fb23fa907f4",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/162",
+      "value": {
+        "id": "coupa/gentle/grid-center/yard-early",
+        "sourceRouteId": "gentle/grid-center/yard-early",
+        "sourceSegmentsSha256": "32c6a81a96489c6f4d6a38ce20f37dc3d3a3adad74b127950541dd1af5f1030c",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "29ba3ff9f4abd14d60cd9536876c79dab41c65555ba2dcbd1c5a7a2d8e550295",
+        "classId": "bomber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-switchyard-gates",
+          "revision": "gentle-classic-v1-b26dba056390fcce",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "bomber",
+          "activeClassId": "bomber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "bomber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-341623c5",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "enemy-trail",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-341623c5",
+          "status": "respawning",
+          "won": false,
+          "tick": 325,
+          "time": 2.7083333333333264,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2290,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 1,
+            "required": 1
+          }
+        },
+        "checkpointSha256": "ababaf2bb183722a1690151c7a59c2c51a67733e88e2f83e8ccf50354712c6a5",
+        "metricsSha256": "226b1e78101583070726e05f56727e2746c5d009e5c909097c742e992b71f683",
+        "replaySha256": "81d563a1cd4e90b1fdbe36022b963c11c4a91e6d1b754a80c9ade383b155c7cc",
+        "savedPrefix": {
+          "tick": 69,
+          "format": "xonix-session.v4",
+          "bytes": 6270,
+          "sha256": "720c2bd59e5df32dd3e69d4dcb668c4cd268b13eef6cf0ce30a32844c58fd345",
+          "checkpointSha256": "ac20af5764cc3cd07179f1cea4d55f9dda14d1b9ce9fa507d8ba2da629231620",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-2",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/163",
+      "value": {
+        "id": "coupa/gentle/grid-center/boss-scout-band",
+        "sourceRouteId": "gentle/grid-center/boss-scout-band",
+        "sourceSegmentsSha256": "0ac19ec3f9b8ab75cf6d069f71731b2440144f24681cab7bdfaf3c2692ccd0bc",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "a71fc983ff9286594c6f2ee31ae744e52c498c20194f91f51ae95941a01b93a7",
+        "classId": "scout",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "scout",
+          "activeClassId": "scout",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "scout",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-aaa4aadd",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-aaa4aadd",
+          "status": "respawning",
+          "won": false,
+          "tick": 2077,
+          "time": 17.308333333332993,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 0,
+          "coverage": 0,
+          "claimedCount": 0,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 0,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "41b18ce1e8e4ce0effd7e7c24fa888f1950b64922929ac8dcbdb9c89af3f345b",
+        "metricsSha256": "b15bfbc33e55488aabbe72e69e75af9f08ac54ff453246e6798bbfbab029bd0e",
+        "replaySha256": "143fb44a0a31b768c26e84347dab90ac27d82e1b560349dae81652798d105121",
+        "savedPrefix": {
+          "tick": 905,
+          "format": "xonix-session.v4",
+          "bytes": 7012,
+          "sha256": "ac382681b8022be7d85db83d791fc61cac393d99d6def9ec71709596df0527c7",
+          "checkpointSha256": "3a05b2b025770576c992ed96194538f8886cb058aab4f37cf4bd2842f74d6573",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/164",
+      "value": {
+        "id": "coupa/gentle/grid-center/boss-short",
+        "sourceRouteId": "gentle/grid-center/boss-short",
+        "sourceSegmentsSha256": "ce113eab2760420c5cca77b93a17e09db5db4dd52e1d3447400ad9567340b51d",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 2037,
+          "time": 16.974999999999678,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 10400,
+          "coverage": 0.4376657824933687,
+          "claimedCount": 990,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "d32c45c3ee10057496a73e3ba1c041e26af25242ea367b498d30136469f45aaa",
+        "metricsSha256": "41f8a3538055a7de0dfe07c7bb3ed08782cde11fde1420fde8a13daeb335ce6f",
+        "replaySha256": "127d03023323c33096f23f082e8d1848013e4466cfe5f1a749262b80c25ed464",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7006,
+          "sha256": "50bfbfbca79f1b2a57e9f86e03b5507ca5984513b03d6a7385044e961b9efa20",
+          "checkpointSha256": "8311bd829c9341d68f04ef79b2b620defd3500001923764c61310fea9a037449",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/165",
+      "value": {
+        "id": "coupa/gentle/grid-center/boss-early",
+        "sourceRouteId": "gentle/grid-center/boss-early",
+        "sourceSegmentsSha256": "8dd31e4eb7e9206941c535282a91488a8b3434018ce0b0e4a630d27bbac09595",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "running",
+          "won": false,
+          "tick": 1611,
+          "time": 13.424999999999878,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 10590,
+          "coverage": 0.44606542882404954,
+          "claimedCount": 1009,
+          "totalClaimable": 2262,
+          "medal": null,
+          "objectives": {
+            "captured": 1,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "104aff0321dd297dd0b712237694023e48bf11ae28ea141564c3fbf7839ab585",
+        "metricsSha256": "792ea48b3c7f58fe7836b0e063509fb39b75d3d113c276ee9865e830fdf6462b",
+        "replaySha256": "f984d2560ecc815ee90fba9525a9b46d2d7d7bbb8d2bda753c85d9605e6a4263",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7006,
+          "sha256": "949d5d41582f4d24d33d96a60777f3ad370802d699da0a38251863d4f20d4a12",
+          "checkpointSha256": "8311bd829c9341d68f04ef79b2b620defd3500001923764c61310fea9a037449",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/166",
+      "value": {
+        "id": "coupa/gentle/grid-center/boss-missed",
+        "sourceRouteId": "gentle/grid-center/boss-missed",
+        "sourceSegmentsSha256": "8efbb6c0134e3a53db5ae5d1fc056a1a674647e37853ea717efc124e7fa90d6c",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": null,
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 3746,
+          "time": 31.216666666665535,
+          "lives": 5,
+          "livesLost": 0,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "gold",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "e88b32791d19ae0039fced158fd474c453500fb646abd71a5f0b41e625c81abf",
+        "metricsSha256": "72dee2031d9c78113f2d0b6b4bb78ae422a3387e4741fbcb0d8946aeb2b7cd02",
+        "replaySha256": "61b818c2b08336c379d5aa6f3e3f3f23b1c04caecf741b8f273aa15035622ff3",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7007,
+          "sha256": "8f16976d573bec9b56b0dcda3476b9e41723973cd96c77f6c74e5146addbb6d1",
+          "checkpointSha256": "8311bd829c9341d68f04ef79b2b620defd3500001923764c61310fea9a037449",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/routes/167",
+      "value": {
+        "id": "coupa/gentle/grid-center/boss-recovered",
+        "sourceRouteId": "gentle/grid-center/boss-recovered",
+        "sourceSegmentsSha256": "64de5adbeaee7af0549a445f1a76a0b559813d2f99500350e25906d47ff70e09",
+        "themeId": "coupa",
+        "difficulty": "gentle",
+        "executionKey": "gentle-classic-v1-f8c3c3b018824f35/1/5067ebfac0a70c6e",
+        "authoredKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+        "setupSha256": "c114fa0a5c7602f21a0c4f551b1aaa1573e59f3492402bec8e533d49de33310b",
+        "classId": "fiber",
+        "turnPolicy": "grid-center",
+        "expected": {
+          "ruleset": "xonix-core.v5",
+          "levelId": "sentinel-circuit-coupa-open-circuit",
+          "revision": "gentle-classic-v1-ecc7e33d0dac1a71",
+          "seed": 1,
+          "turnPolicy": "grid-center",
+          "classId": "fiber",
+          "activeClassId": "fiber",
+          "rosterHash": "roster-v1-e159e435",
+          "classHistory": [
+            {
+              "classId": "fiber",
+              "classRevision": "1",
+              "loadoutHash": "loadout-v1-85870cc1",
+              "tick": 0
+            }
+          ],
+          "switches": 0,
+          "failureCause": "boss-lane",
+          "classRevision": "1",
+          "loadoutHash": "loadout-v1-85870cc1",
+          "status": "won",
+          "won": true,
+          "tick": 3746,
+          "time": 31.216666666665535,
+          "lives": 4,
+          "livesLost": 1,
+          "score": 23620,
+          "coverage": 1,
+          "claimedCount": 2262,
+          "totalClaimable": 2262,
+          "medal": "silver",
+          "objectives": {
+            "captured": 2,
+            "total": 2,
+            "required": 2
+          }
+        },
+        "checkpointSha256": "fcbdd48b1d82703b9ec80f7f19bbffda1a596e5b3cf247ad3dd1fb8c2607c639",
+        "metricsSha256": "0502c4f4bfbe473b385b82b150fe47c0ba010e3c4268edbb3017ce7fd001ae80",
+        "replaySha256": "d688e7029df5e83720fde49ebef8471221112c9e6efa2737e1ac09cb0ee58ed8",
+        "savedPrefix": {
+          "tick": 872,
+          "format": "xonix-session.v4",
+          "bytes": 7010,
+          "sha256": "d7440dc1bd9651531b98b559d1601cb5ec4b301868fe84fbd514fc0eec241b76",
+          "checkpointSha256": "8311bd829c9341d68f04ef79b2b620defd3500001923764c61310fea9a037449",
+          "continuation": {
+            "direction": "up"
+          },
+          "picturePin": {
+            "kind": "still",
+            "identity": {
+              "baseCampaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "themeId": "coupa"
+            },
+            "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+            "presentationRevision": 1,
+            "assetId": "sentinel-circuit-coupa-poster-3",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          },
+          "storyPin": null,
+          "replaySuffixByteIdentical": true
+        }
+      }
+    },
+    {
+      "pointer": "/editions/2",
+      "value": {
+        "descriptor": {
+          "format": "revealline-external-chapter.v1",
+          "id": "sentinel-circuit-coupa",
+          "revision": 1,
+          "source": {
+            "id": "sentinel-circuit",
+            "bytes": 8943,
+            "sha256": "cf6009eeadef504d033de0dd27f33aa3d6405caf1954a6417cbdfc09bc566b40"
+          },
+          "pack": {
+            "bytes": 9427,
+            "sha256": "0fc200adfd509d7a993f24c73432195e314b4450b2ef45fd601b523f62464c6c"
+          },
+          "media": {
+            "bytes": 7416321,
+            "sha256": "185e104975706717deb11ad6e4dc91b1cedc6680755fa9174583ceec0660da16"
+          },
+          "campaignKey": "sentinel-circuit-coupa/1/8459eb3ba67608e6",
+          "themeId": "coupa",
+          "originals": [
+            {
+              "assetId": "sentinel-circuit-coupa-poster-1",
+              "presentationId": "sentinel-circuit-coupa-poster-1-presentation",
+              "levelId": "sentinel-circuit-coupa-listening-court",
+              "levelRevision": "1",
+              "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+              "bytes": 2767187,
+              "mime": "image/png",
+              "width": 1774,
+              "height": 887
+            },
+            {
+              "assetId": "sentinel-circuit-coupa-poster-2",
+              "presentationId": "sentinel-circuit-coupa-poster-2-presentation",
+              "levelId": "sentinel-circuit-coupa-switchyard-gates",
+              "levelRevision": "1",
+              "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+              "bytes": 2187660,
+              "mime": "image/png",
+              "width": 1774,
+              "height": 887
+            },
+            {
+              "assetId": "sentinel-circuit-coupa-poster-3",
+              "presentationId": "sentinel-circuit-coupa-poster-3-presentation",
+              "levelId": "sentinel-circuit-coupa-open-circuit",
+              "levelRevision": "1",
+              "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+              "bytes": 2449288,
+              "mime": "image/png",
+              "width": 1774,
+              "height": 887
+            }
+          ]
+        },
+        "inputPins": [
+          {
+            "path": "authoring/library/sentinel-circuit/build.mjs",
+            "bytes": 9256,
+            "sha256": "e76f204cbe240bdedac79f2d92c85ab767846be32cfae50cd76ef983340c4d41"
+          },
+          {
+            "path": "authoring/library/sentinel-circuit-external/build.mjs",
+            "bytes": 10172,
+            "sha256": "ee481bcaef80d86778fdda295f8660d0bfa2d6e0950bd24fddc59e051d463e88"
+          },
+          {
+            "path": "authoring/library/sentinel-circuit/routes.json",
+            "bytes": 1296963,
+            "sha256": "eb235f9bc26ea3670137f3f7d7ac86ac5e8c4b56b98502b8ef61f0ad98d95e70"
+          },
+          {
+            "path": "game/content/themes.json",
+            "bytes": 4266,
+            "sha256": "93582f7d9ba53753106df7b63928f086820fc0f68357d3c08f26c0b89fb84774"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-art/provenance.json",
+            "bytes": 16174,
+            "sha256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-chapters/editions.json",
+            "bytes": 8414,
+            "sha256": "1e14923784d75f59f2537cf9a14fa2c127b92ad77b3feaebfb80658e88136b88"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-art/coupa/originals/listening-court.png",
+            "bytes": 2767187,
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-art/coupa/originals/switchyard-gates.png",
+            "bytes": 2187660,
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a"
+          },
+          {
+            "path": "authoring/library/sentinel-theme-art/coupa/originals/open-the-circuit.png",
+            "bytes": 2449288,
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793"
+          }
+        ],
+        "images": [
+          {
+            "levelId": "sentinel-circuit-coupa-listening-court",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+            "bytes": 2767187,
+            "fit": "contain",
+            "naturalWidth": 1774,
+            "naturalHeight": 887,
+            "pixelBytes": 4720614,
+            "pixelsSha256": "c8eedc5a63f2c0dd8ed57864b156ac564da1858858fc1adc3ced4b031edeb0ef"
+          },
+          {
+            "levelId": "sentinel-circuit-coupa-switchyard-gates",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+            "bytes": 2187660,
+            "fit": "contain",
+            "naturalWidth": 1774,
+            "naturalHeight": 887,
+            "pixelBytes": 4720614,
+            "pixelsSha256": "624e5a77af08bc5c7cb3ca498c498cd356e920fb6f3b1caa662864c678c496e3"
+          },
+          {
+            "levelId": "sentinel-circuit-coupa-open-circuit",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+            "bytes": 2449288,
+            "fit": "contain",
+            "naturalWidth": 1774,
+            "naturalHeight": 887,
+            "pixelBytes": 4720614,
+            "pixelsSha256": "7e7766a64402eeeaf456f839d100eba9306bf5819e80bb708f5987386251c94f"
+          }
+        ]
+      }
+    }
+  ]
+}

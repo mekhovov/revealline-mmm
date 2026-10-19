@@ -1,0 +1,31 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "game/editions/art-prompts-post-playtest-01.json",
+  "sourceGitBlob": "7f37ca0474a1cf8b8d11d37d139e68c8d5340331",
+  "sourceSHA256": "42c5cb8d67aa27de7f3bb5c5bd95096b2d759894cebec07911103769a0354553",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/assets/0",
+      "value": {
+        "id": "coupa-source-to-pay-02",
+        "prompt": "Use case: stylized-concept. Asset type: finished ultra-wide 2:1 mission reward illustration for the fictional Coupa Village arcade game, mission Choose Together. Create one premium cinematic miniature supplier market seen from a high oblique overhead viewpoint: three distinct elegant open pavilions display neatly arranged blank supply cases, wrapped delivery parcels and crafted household goods. The friendly pavilions have different roof silhouettes but equally welcoming status. Two calm connected porcelain plazas occupy the central upper and central lower regions; generous blue canal side lanes run beside planted white retaining walls. Sweeping white ribbon arches and luminous blue glass connect the pavilions, with small budget-ledger books showing blank pages as decorative motifs only. Palette navy #081D4D, royal blue #1565C0, white, restrained cyan, pistachio foliage and lilac accents. Tactile matte ceramic, anodized blue metal, frosted glass, warm late-afternoon light, sophisticated beautifully detailed 3D editorial game art with inviting architectural depth. Coherent big shapes at thumbnail size, rich discoverable detail at full size. Fill the opaque 2:1 rectangular frame; no panels or montage. Keep central return plazas visually quiet. No text, letters, numbers, logos, flower emblems, UI, game enemies, grid or capture trails, product screens, realistic employees or watermark. This is clearly a fictional illustrative world, not a real Coupa event; no pavilion indicates a correct answer."
+      }
+    },
+    {
+      "pointer": "/assets/1",
+      "value": {
+        "id": "coupa-product-operations-02",
+        "prompt": "Use case: stylized-concept. Asset type: finished ultra-wide 2:1 mission reward illustration for the fictional Coupa Village arcade game, mission Repair the Draft. One premium cinematic cutaway request workshop with sculptural white ribbon arches and blue glass skylights. An inviting large central round review desk holds a few oversized blank paper cards, a blue folder with visibly empty slots and orderly supply objects; a small quiet side shelf and lower-left resting alcove balance the scene. On the left a loose handful of blank cards awaits arrangement, on the right the same kind of objects form a beautifully coherent physical draft model, without a literal answer or fake product interface. Upper workstations form two separated dividers, leaving broad clear circulation space around the central desk and lower alcove. Small houseplants, brass clips, folded blank envelopes and textured fabric pinboards provide satisfying discoveries. High oblique elevated camera, refined tactile 3D editorial game illustration, matte white porcelain, navy cabinetry, royal-blue metal, cyan glass, restrained pistachio and lilac; palette #081D4D and #1565C0 with warm late afternoon skylight. Strong simple masses, quiet central and lower-left floor areas, architectural depth, beautiful and playful rather than flat or generic office stock art. Fill entire opaque 2:1 landscape frame. No words, letters, numbers, logos, flower marks, realistic people, screens, UI, tiny paper lines, capture trails, active enemies, panel montage or watermarks. Clearly fictional Coupa-themed architecture, never a documented real office."
+      }
+    },
+    {
+      "pointer": "/assets/2",
+      "value": {
+        "id": "coupa-developer-integration-02",
+        "prompt": "Use case: stylized-concept. Asset type: finished ultra-wide 2:1 mission reward illustration for fictional Coupa Village campaign Connect the Network, mission Scoped Access. One spectacular yet welcoming reference-data garden within a luminous blue archive conservatory. Two calm circular white collection plazas sit near the upper-middle and lower-middle of the composition, surrounded by different inviting groves of neatly shelved large closed books, translucent blue reference drawers and frosted glass catalog tiles. A sculptural canopy of sweeping white and royal-blue ribbons frames the garden. Small open blank reading books and brass bookmarks suggest thoughtful selective reading without any doors, locks, credentials, code or executable details. Gentle pale-blue paths embedded softly in the floor connect the reading groves; avoid bright thin lines that might resemble gameplay trails. Plants and small lilac blossoms soften precise architectural forms. Elevated oblique camera with extraordinary miniature-world depth, premium tactile 3D editorial game illustration, navy #081D4D, royal blue #1565C0, white, controlled cyan and pistachio with tiny amber reading lamps. Daylight through glass, coherent architectural masses and generous quiet plazas, fine discoverable craft detail. Fill the opaque 2:1 landscape rectangle with one composition, no panels. No text, digits, symbols, logos, flower emblems, UI, real product screens, enemies, grid, magical effects, identifiable people or watermark. Clearly fictional illustrative architecture, not a photo or a real Coupa facility."
+      }
+    }
+  ]
+}

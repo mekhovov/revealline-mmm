@@ -1,0 +1,40 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/sentinel-theme-art/prompts.json",
+  "sourceGitBlob": "26dd517163022bf02ab28922bcfe93f36b523632",
+  "sourceSHA256": "5f2a12f075dc6f9c2480ee46824a4366d86be7a76dbd6ee510f406883d088987",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/prompts/6",
+      "value": {
+        "cellId": "sentinel-circuit/listening-court/coupa",
+        "themeId": "coupa",
+        "missionSlot": "listening-court",
+        "title": "The shared inventory court",
+        "prompt": "Use case: stylized-concept. Asset type: one new original static reward panorama for RevealLine. Create a single full-bleed approximately 2:1 landscape, matching the existing Sentinel panoramic family rather than changing a map. Premium modern detailed pixel art: deliberate square clusters, stepped silhouettes, restrained dithering, broad readable value groups, small environmental subjects, clear foreground/middle/distant layers. Keep detail rewarding at full reveal and large forms readable through partial black cover. Deep navy foundations with the specified theme accents. No text, numbers, logos, watermark, frame, HUD, grid, collision-map diagrams, weapon instructions, graphic injury, or copied game art. Scenery does not encode actual routes, active hazards, shields or objective positions. This is a new independent composition; no existing artwork is an edit target. Scene: Spend Network fictional civic logistics cloister at cool dawn: low glass-and-brick workshops ring an open paved court, with clearly grouped unlabelled materials visible through two broad passages. One small friendly cobalt helper robot accompanies a person comparing abstract sample tiles at a modest bench. Rooftop greenery, translucent teal storage screens, warm windows and a distant city. Navy/cobalt, pale turquoise and restrained amber. A lived-in place, not a dashboard, chart or factory-floor clone of Value Foundry. No actual Coupa UI, mascot, company logo, currency symbols, performance claims or readable labels."
+      }
+    },
+    {
+      "pointer": "/prompts/7",
+      "value": {
+        "cellId": "sentinel-circuit/switchyard-gates/coupa",
+        "themeId": "coupa",
+        "missionSlot": "switchyard-gates",
+        "title": "The inland exchange yard",
+        "prompt": "Use case: stylized-concept. Asset type: one new original static reward panorama for RevealLine. Create a single full-bleed approximately 2:1 landscape, matching the existing Sentinel panoramic family rather than changing a map. Premium modern detailed pixel art: deliberate square clusters, stepped silhouettes, restrained dithering, broad readable value groups, small environmental subjects, clear foreground/middle/distant layers. Keep detail rewarding at full reveal and large forms readable through partial black cover. Deep navy foundations with the specified theme accents. No text, numbers, logos, watermark, frame, HUD, grid, collision-map diagrams, weapon instructions, graphic injury, or copied game art. Scenery does not encode actual routes, active hazards, shields or objective positions. This is a new independent composition; no existing artwork is an edit target. Scene: Spend Network fictional inland rail exchange at amber dusk. Two substantial loading gates, short converging tracks and a wide pedestrian-safe crossing connect orderly cobalt modular parcels, a low cooperative depot and a glass waiting shelter. Tiny workers and one modest cart robot provide scale; lantern-like practical lights create a readable rhythm across navy/teal shadows. Show no canal, harbor bridge or rooftop garden from the earlier set. No financial chart, logos, authentic product claims, labelled boxes or armed machinery."
+      }
+    },
+    {
+      "pointer": "/prompts/8",
+      "value": {
+        "cellId": "sentinel-circuit/open-the-circuit/coupa",
+        "themeId": "coupa",
+        "missionSlot": "open-the-circuit",
+        "title": "The illuminated exchange hall",
+        "prompt": "Use case: stylized-concept. Asset type: one new original static reward panorama for RevealLine. Create a single full-bleed approximately 2:1 landscape, matching the existing Sentinel panoramic family rather than changing a map. Premium modern detailed pixel art: deliberate square clusters, stepped silhouettes, restrained dithering, broad readable value groups, small environmental subjects, clear foreground/middle/distant layers. Keep detail rewarding at full reveal and large forms readable through partial black cover. Deep navy foundations with the specified theme accents. No text, numbers, logos, watermark, frame, HUD, grid, collision-map diagrams, weapon instructions, graphic injury, or copied game art. Scenery does not encode actual routes, active hazards, shields or objective positions. This is a new independent composition; no existing artwork is an edit target. Scene: Spend Network fictional hilltop exchange hall at indigo blue hour. A large circular glass-and-timber pavilion on the right frames one calm amber light sculpture; low service rooms and a sheltered foreground workbench lead toward it across a broad terrace. Thin decorative cyan connection lines trace planters and step edges, with one small helper and a person opening the public hall for the evening. Distant city lights, pale horizon and generous dark shape groups make the completed vista rewarding. This is a new circular hall, not the earlier rooftop network garden or real enterprise interface. No logos, cash, numerical results, UI or claims of artificial intelligence performance."
+      }
+    }
+  ]
+}

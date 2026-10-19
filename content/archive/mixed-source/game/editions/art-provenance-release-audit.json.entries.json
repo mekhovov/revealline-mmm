@@ -1,0 +1,115 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "game/editions/art-provenance-release-audit.json",
+  "sourceGitBlob": "0db0ab0d3e1ff0418f18039bc139880d3094a760",
+  "sourceSHA256": "a7ab28620cb85e1b6d1ec3e875a546656d617ea019c5b17e3c218516c2aa4059",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/assets/0",
+      "value": {
+        "id": "coupa-inside-village-key",
+        "path": "game/editions/assets/coupa/coupa-inside-village-key.png",
+        "bytes": 1997148,
+        "sha256": "50cf52f3ff6faeef17171a44acb83bf8b80e7090dcfa5fad512496676c18eb0f",
+        "originalSha256": "d085af036454de02dd244643210140fbc4522706d853955b2881673b7a95709c",
+        "prompt": "Use case: illustration-story. Asset type: final 3:2 landscape campaign key art for Coupa's fictional employee-culture game campaign 'Inside the Village'. Create a distinct polished, playful game illustration: an open circular Mediterranean-inspired white-stone village courtyard with vivid cobalt and azure roof tiles, arched meeting nooks, a collaborative makers' table, welcoming garden pathways, tiny flower planters, bridges connecting small workspaces, and an uplifting turquoise sea glimpse beyond. This is a sunny people-centred welcome scene at courtyard height, NOT an aerial harbour view. A varied community of clearly stylized adult cartoon characters with simplified friendly faces, rounded proportions and painted clothing collaborate in small groups: two listening on a bench, a team building an abstract prototype, another sharing sketches, an accessible wide path and a wheelchair user joining the circle. Main focal point a whimsical abstract six-petal pale-blue flower fountain sculpture, not a recognizable logo; official Coupa logo stays in the separate game interface. Style: high-quality hand-painted storybook game illustration with bold simplified silhouettes, crisp readable shapes and selective paper texture; characters visibly illustrated, not realistic portraits, not a photo, not photorealism, no complex skin detail. Palette: Coupa-inspired saturated blues #0076CE and #003B71, white architectural surfaces, teal water, mint foliage and warm golden sunlight; nuanced blue shadows. Composition: generous upper-left calm pale sky for UI, detailed activities in the centre and lower two thirds, near objects large enough to read, plenty of breathing space. Original fictional illustration, no words, no letters, no captions, no watermark, no generated company logos, no screenshots, no fake product interface. Convey listening, belonging, ownership and shared invention without a sales-poster feel.",
+        "kind": "generated",
+        "tool": "image_gen.imagegen",
+        "width": 1280,
+        "height": 853,
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "derivative": "sips --resampleWidth 1280; original preserved",
+        "publication": "public",
+        "approved": true,
+        "review": "Inspected final generated scene: stylized fictional illustration, no generated logo or text, no weapons or misleading product interface."
+      }
+    },
+    {
+      "pointer": "/assets/4",
+      "value": {
+        "id": "coupa-source-to-pay-key",
+        "path": "game/editions/assets/coupa/coupa-source-to-pay-key.png",
+        "bytes": 2021650,
+        "sha256": "bbfb32e28c42863a2c444de4c42d5843f107ae8573d8f773817abe9488801f3b",
+        "originalSha256": "7a94642150a76f271fb16bfb613445545d5d42ca441aaf47f95fc8e3233950e4",
+        "prompt": "Use case: illustration-story. Final landscape 3:2 campaign key illustration for a fictional Coupa Village learning game. A beautiful azure supplier market and canal of white-stone bridges, different friendly stallholders, three small wooden stands with abstract sample boxes, a central comparison worktable with blank papers, a delivery dock at right. Compose a broad visual path from a needs notebook at left through market collaboration and stone contract bridge to receiving dock. Sunny white architecture, cobalt roofs, sparkling blue water; no lettering. Premium hand-painted storybook adventure game, crisp readable shapes, clean isometric architecture, cheerful small rounded cartoon adults with simplified faces, visibly illustrative and never a real employee photograph. Consistent Coupa-inspired palette navy #081D4D royal blue #1565C0 white, restrained cyan #5FD6FF pistachio #96EAAA and lilac #B5A4FC. Calm upper-left space for overlay, interesting discoverable details. No words, letters, numbers, text, logos, watermark, product screenshots, fake UI or realistic portraits. Official logo is separate in the game. Fictional welcoming world of shared work.",
+        "kind": "generated",
+        "tool": "image_gen.imagegen",
+        "width": 1280,
+        "height": 853,
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "derivative": "sips --resampleWidth 1280; original preserved",
+        "publication": "public",
+        "approved": true,
+        "review": "Draft generated environment; fictional flower ornaments are not the Coupa identity. Human pacing/content/art review pending."
+      }
+    },
+    {
+      "pointer": "/assets/5",
+      "value": {
+        "id": "coupa-product-operations-key",
+        "path": "game/editions/assets/coupa/coupa-product-operations-key.png",
+        "bytes": 2105228,
+        "sha256": "371ab48050bb585c118346bcbbf97e8cdec3234415c3f41b16859874bda83604",
+        "originalSha256": "a73162a7071902c60458e79f4394113edbbc3259b3519749aee52947372f4aeb",
+        "prompt": "Use case: illustration-story. Final landscape 3:2 campaign key illustration for a fictional Coupa Village learning game. A charming cutaway white-stone village workshop building with five connected arched rooms: a tidy shared task desk, document repair desk, calm review table, small receiving dock with half-filled crates, and bright exception-resolution corner. Multiple friendly stylized adults collaborating, large readable blank papers and harmless supplies. Warm afternoon sunlight; close view that reads as a living dollhouse of connected work. Premium hand-painted storybook adventure game, crisp readable shapes, clean isometric architecture, cheerful small rounded cartoon adults with simplified faces, visibly illustrative and never a real employee photograph. Consistent Coupa-inspired palette navy #081D4D royal blue #1565C0 white, restrained cyan #5FD6FF pistachio #96EAAA and lilac #B5A4FC. Calm upper-left space for overlay, interesting discoverable details. No words, letters, numbers, text, logos, watermark, product screenshots, fake UI or realistic portraits. Official logo is separate in the game. Fictional welcoming world of shared work.",
+        "kind": "generated",
+        "tool": "image_gen.imagegen",
+        "width": 1280,
+        "height": 853,
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "derivative": "sips --resampleWidth 1280; original preserved",
+        "publication": "public",
+        "approved": true,
+        "review": "Draft generated environment; fictional flower ornaments are not the Coupa identity. Human pacing/content/art review pending."
+      }
+    },
+    {
+      "pointer": "/assets/6",
+      "value": {
+        "id": "coupa-developer-integration-key",
+        "path": "game/editions/assets/coupa/coupa-developer-integration-key.png",
+        "bytes": 1972536,
+        "sha256": "66c68f803aeb5d8590dcb29e05863d9147c12dbe7a5afebe6522a97b82b508ce",
+        "originalSha256": "54353018fe44d117d86900678355c7a33d2b4aff5dbf3a903707cb909fadaf7f",
+        "prompt": "Use case: illustration-story. Final landscape 3:2 campaign key illustration for a fictional Coupa Village learning game. An imaginative white-stone village communications observatory and blue canal network seen at twilight. Six connected little towers represent a resource atlas, scoped key room, pagination conveyor with distinct blank trays, reference library, draft validation bench and tidy run ledger. Friendly tiny illustrated adults tend glowing blue connections. The village forms an elegant network under a navy starless sky; luminous cyan paths, mint gardens, no symbols implying real API interfaces. Premium hand-painted storybook adventure game, crisp readable shapes, clean isometric architecture, cheerful small rounded cartoon adults with simplified faces, visibly illustrative and never a real employee photograph. Consistent Coupa-inspired palette navy #081D4D royal blue #1565C0 white, restrained cyan #5FD6FF pistachio #96EAAA and lilac #B5A4FC. Calm upper-left space for overlay, interesting discoverable details. No words, letters, numbers, text, logos, watermark, product screenshots, fake UI or realistic portraits. Official logo is separate in the game. Fictional welcoming world of shared work.",
+        "kind": "generated",
+        "tool": "image_gen.imagegen",
+        "width": 1280,
+        "height": 853,
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "derivative": "sips --resampleWidth 1280; original preserved",
+        "publication": "public",
+        "approved": true,
+        "review": "Draft generated environment; fictional flower ornaments are not the Coupa identity. Human pacing/content/art review pending."
+      }
+    },
+    {
+      "pointer": "/assets/7",
+      "value": {
+        "id": "coupa-home",
+        "path": "game/editions/assets/coupa/home.png",
+        "sha256": "23fde0cc8d4af4cacb906bdd5c3a7146d24e436a129c221d7535171bee72fbb9",
+        "bytes": 2072920,
+        "publication": "public",
+        "approved": true,
+        "dependencies": [],
+        "kind": "generated",
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: illustration-story. Asset: landscape 1536x1024 game campaign home artwork for Coupa Spend in Motion. Create a beautifully crafted crisp isometric miniature village built around a welcoming central connection plaza, supplier market stalls, a small logistics dock, bridges and collaborative workshop buildings, tiny friendly stylized people. This is a fictional playful Coupa Village, not a real office. Clean flat/isometric editorial illustration with rich geometric detail and restrained soft shadows, premium corporate game art, not generic neon sci-fi. Palette strongly navy #081D4D and royal blue #1565C0, white architecture, sparing cyan #5FD6FF pistachio #96EAAA lilac #B5A4FC. Wide layered city view, lively right-side focal plaza, quiet darker upper-left area for UI title overlay. Warm hopeful morning. No text, no letters, no wordmarks, no logos, no watermark. The official Coupa logo will be added in the UI separately. Distinct landmarks and routes should reward looking closely.",
+        "width": 1280,
+        "height": 853,
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "derivative": "sips --resampleWidth 1280; original preserved",
+        "review": "Fictional illustrated setting. Candidate for human art review."
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "game/editions/art-prompts-2026-09-26.json",
+  "sourceGitBlob": "fe68ca0e1308bd9e9bf6b1a33bf6389da06675eb",
+  "sourceSHA256": "bd2364cc4864ed2ea9723a8206671f3767e6f1e2344bd2fc1afab514cee71d60",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/assets/0",
+      "value": {
+        "path": "game/editions/assets/coupa/spend-city-v2.png",
+        "prompt": "Use case: stylized-concept. Asset type: a finished wide 2:1 game reward background for a Coupa branded territory-reveal arcade game, not a website mockup. Create one rich, cinematic illustrated miniature city of blue ribbons and flowing connections: sweeping bridges weave between sculptural white collaboration halls, deep blue canals, sunlit pocket gardens, and an elegant luminous central square. Architecture uses broad diagonal X-like structural rhythms and curved ribbons, not flower shapes. Elevated oblique camera, spectacular depth and compelling focal points, sophisticated crafted 3D illustration with tactile matte porcelain, anodized blue metal and frosted glass. Navy #081D4D, royal blue #1565C0, white, restrained cyan and pistachio details. Bright confident late afternoon light; beautiful and inviting rather than dark fantasy. Many rewarding details at large size but strong coherent masses visible at thumbnail size. Fill the entire opaque rectangular frame; broad composition intended for a 2:1 game board. No text, logos, flower marks, people, UI, borders, capture lines, active game enemies or watermarks. This is a fictional illustrative world, not a depiction of a real Coupa event. Generate a single composition, not a montage."
+      }
+    },
+    {
+      "pointer": "/assets/1",
+      "value": {
+        "path": "game/editions/assets/coupa/network-atlas-v2.png",
+        "prompt": "Use case: stylized-concept. Asset type: one wide 2:1 premium illustrated game reward scene for Coupa's Connect the Network campaign. A luminous resource atlas rendered as a richly detailed physical miniature: a sweeping stepped navy archive with tall translucent blue data shelves, precisely organized golden reference drawers, clean porcelain bridges linking document stations and circular routing hubs, softly lit fiber paths running through the floor beneath glass. The central structure is an elegant network junction and immense blue fan-shaped glass canopy; no globes, telescopes, astronomy, flower emblems or fantasy magic. Framing: cinematic elevated oblique view, real architectural depth, satisfying discoveries across the scene, refined soft volumetric daylight from a high skylight. Colors: #081D4D navy, #1565C0 blue, white, restrained cyan and lilac, tiny amber practical lights. Materials: frosted glass, matte blue ceramic, brass drawer pulls, translucent data tiles. Fictional conceptual illustration, polished tactile 3D editorial art, visibly not a real facility photograph. Maintain coherent large shapes and useful quiet areas, readable at thumbnail size. Entire opaque rectangular frame; intended game board aspect 2:1. No text, digits, lettering, logos, employee faces, UI, game enemies, capture lines, panel montage or watermarks."
+      }
+    }
+  ]
+}

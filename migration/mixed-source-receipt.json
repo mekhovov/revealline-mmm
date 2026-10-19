@@ -1,0 +1,247 @@
+{
+  "format": "revealline-owned-fragments-index.v1",
+  "items": [
+    {
+      "sourcePath": "game/content/recovery-catalogs.json",
+      "destination": "content/archive/mixed-source/game/content/recovery-catalogs.json.entries.json",
+      "entries": 18,
+      "bytes": 35588,
+      "sha256": "1df88d4342b3655d1c437e07e69e193354258fded42d76f99e8796ac448ff5d0",
+      "sourceSHA256": "d7ee8ce41428960520907e29e7550b6f4dad8ad7a7d21686db6677f2f293e02a"
+    },
+    {
+      "sourcePath": "game/editions/art-prompts-2026-09-26.json",
+      "destination": "content/archive/mixed-source/game/editions/art-prompts-2026-09-26.json.entries.json",
+      "entries": 2,
+      "bytes": 3417,
+      "sha256": "fd42e6e2744531471a95c7d8e5618dcb5f503c930a36eb51745bff078ab3074e",
+      "sourceSHA256": "bd2364cc4864ed2ea9723a8206671f3767e6f1e2344bd2fc1afab514cee71d60"
+    },
+    {
+      "sourcePath": "game/editions/art-prompts-post-playtest-01.json",
+      "destination": "content/archive/mixed-source/game/editions/art-prompts-post-playtest-01.json.entries.json",
+      "entries": 3,
+      "bytes": 5629,
+      "sha256": "4995ec49cbd0368e85921ac63efcdbb6b5b4df14dc50ceb2e442a504ed83aa55",
+      "sourceSHA256": "42c5cb8d67aa27de7f3bb5c5bd95096b2d759894cebec07911103769a0354553"
+    },
+    {
+      "sourcePath": "game/editions/art-provenance-release-audit.json",
+      "destination": "content/archive/mixed-source/game/editions/art-provenance-release-audit.json.entries.json",
+      "entries": 5,
+      "bytes": 11171,
+      "sha256": "9a6fb2cf08f0f2372a795400f3a9b92a4e84b2ee1849fcff46abc023653efa1b",
+      "sourceSHA256": "a7ab28620cb85e1b6d1ec3e875a546656d617ea019c5b17e3c218516c2aa4059"
+    },
+    {
+      "sourcePath": "authoring/library/route-worlds/editions.json",
+      "destination": "content/archive/mixed-source/authoring/library/route-worlds/editions.json.entries.json",
+      "entries": 1,
+      "bytes": 1240,
+      "sha256": "2b7d2f4270ca4502fc65b8502199f5e79a2cabd4ccbbca44c372b86c7e9dd49a",
+      "sourceSHA256": "f1cf474b1f02b48bcbafb60fbab080416afc9c2c135c68a2def2ae90865300fc"
+    },
+    {
+      "sourcePath": "authoring/library/route-worlds/routes.json",
+      "destination": "content/archive/mixed-source/authoring/library/route-worlds/routes.json.entries.json",
+      "entries": 46,
+      "bytes": 316042,
+      "sha256": "d5a4d989501a2c49c295d9c4a62c0e0d446d64f4be5f58e3e738cd1c8cce4e08",
+      "sourceSHA256": "0e27c353c8ac160979944bc6d2e385007db19c0703eae76525b5eea49c77fd32"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-chapters/editions.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-theme-chapters/editions.json.entries.json",
+      "entries": 1,
+      "bytes": 3364,
+      "sha256": "4fc16555194ea8ae4414209aff670f6eda2f06b457ef9f26d179f4a86b5d60fb",
+      "sourceSHA256": "1e14923784d75f59f2537cf9a14fa2c127b92ad77b3feaebfb80658e88136b88"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-chapters/routes.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-theme-chapters/routes.json.entries.json",
+      "entries": 64,
+      "bytes": 181632,
+      "sha256": "4a446907a6a58ff3a0ecaac92ed7eb6998de54fe3f35c75871f3a8595f2e5443",
+      "sourceSHA256": "bb22f80c9cccbc2776c7840de6856d117c4658a6656007447519a6e54dd061b9"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-theme-chapters/editions.json",
+      "destination": "content/archive/mixed-source/authoring/library/fracture-theme-chapters/editions.json.entries.json",
+      "entries": 1,
+      "bytes": 2547,
+      "sha256": "904909a4136d2abd7f0963e139590013eb49737c21ad81518852126fd1ed58f4",
+      "sourceSHA256": "15375a267c864634722f505b8f4f6897df4e8710714fd343fde51c55df229db7"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-theme-chapters/routes.json",
+      "destination": "content/archive/mixed-source/authoring/library/fracture-theme-chapters/routes.json.entries.json",
+      "entries": 3,
+      "bytes": 266968,
+      "sha256": "68d1534c9a4a51f801656562480130ca07bd71cb94ee82c7ecb2bbc238b595b1",
+      "sourceSHA256": "49fc67c5af81a3fc51431294fd2b567eb6b07cc9fc17fc5a086f4acbeb2bea86"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/editions.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-chapters/editions.json.entries.json",
+      "entries": 1,
+      "bytes": 2271,
+      "sha256": "71a9888a7a763da09e2df3b771c7d418a3b3e49db4ea5dec789fa6080866cbbf",
+      "sourceSHA256": "242ed154276212f8928e81d0b3e4619bc3b5a6dd1d769573f58c63d984e992c6"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/routes.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-chapters/routes.json.entries.json",
+      "entries": 1,
+      "bytes": 270885,
+      "sha256": "bb8ccbcc620c23c5ac438bc401b8c32395ba10ba69ecd97a75479bbbd0eb92fd",
+      "sourceSHA256": "692670fe982ae31c15c9b2b94cd1faf2b08ea68e3cab69cff0b8c0897e4ce0a8"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-chapters/editions.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-chapters/editions.json.entries.json",
+      "entries": 1,
+      "bytes": 2570,
+      "sha256": "584c571b78f38a8c955d95e57985a3f873f0b5c1eaf6f9324db86d0f50db13b7",
+      "sourceSHA256": "f62fc13b531bf8e0c1839dff0eb4e3994c9d3c00d73e87da43444d3dde12ea2d"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-chapters/routes.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-chapters/routes.json.entries.json",
+      "entries": 1,
+      "bytes": 319113,
+      "sha256": "ade1ec81ae11acb266ccd279c1c3c28dc7a66921ada4322757e645734e4593f6",
+      "sourceSHA256": "4e94a41feb9dc61e7eb57d3e8ff9c05b41c7bd3a8536473b1a4b8fe57b76718f"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/provenance.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-theme-art/provenance.json.entries.json",
+      "entries": 3,
+      "bytes": 4361,
+      "sha256": "cfd7d10dd591f98a38da127cb2745289b8686d945c758273deaf22374089b94f",
+      "sourceSHA256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/generation-results.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-theme-art/generation-results.json.entries.json",
+      "entries": 3,
+      "bytes": 4245,
+      "sha256": "b702e0478e68515e814453634efc2b6607bf0ab2b244686fbc81af206146870a",
+      "sourceSHA256": "e71c446707c05e5c3be658fbc10e8c045f05615165399a6ae3ab0e6d25602079"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/prompts.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-theme-art/prompts.json.entries.json",
+      "entries": 3,
+      "bytes": 5822,
+      "sha256": "2158ef942223684265e458d4813516b725adc72ab362d6d91e8c7b7ac11ebdf7",
+      "sourceSHA256": "5f2a12f075dc6f9c2480ee46824a4366d86be7a76dbd6ee510f406883d088987"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/verification.json",
+      "destination": "content/archive/mixed-source/authoring/library/sentinel-theme-art/verification.json.entries.json",
+      "entries": 6,
+      "bytes": 2490,
+      "sha256": "7b7ab3a2145fe5c06de8877778aca039b6dd9bba3916790c6b3150160197973a",
+      "sourceSHA256": "fec9f3868ecf0166feda5b32281923637b935e438fc86bf7a5a5484c16e3e55c"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/provenance.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-art/provenance.json.entries.json",
+      "entries": 3,
+      "bytes": 5146,
+      "sha256": "e645a2c6a781640cb0987a146023a8d3ef1357ae047c1459ffa9aace3e92df04",
+      "sourceSHA256": "72137c0459d22aa1adc5acc53cb3ac95ca526d26fc53e76deca53552f107c435"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-art/manifest.json.entries.json",
+      "entries": 3,
+      "bytes": 3077,
+      "sha256": "87cfa9f2ec4e64626ff7412837bc3e56726effcca4ad1440340b933dd5720472",
+      "sourceSHA256": "27f31bdaa91db438066107e221ed77f16ad5325873b1512566edb7881475e6b1"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/derivatives.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-art/derivatives.json.entries.json",
+      "entries": 3,
+      "bytes": 2358,
+      "sha256": "4d4a7fea79e8e7b6a0d79b80689696e7d3088c9181ff0f2df7777ba453808eaa",
+      "sourceSHA256": "b0224ff32cc1885504323184bb575409e696a44b556c451afebe3de35858bbe4"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/generation-results.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-art/generation-results.json.entries.json",
+      "entries": 3,
+      "bytes": 4846,
+      "sha256": "1319305571587a5ccbae55b125b1064c14bdc2e93d456ae40d89cc16012978f2",
+      "sourceSHA256": "31a1785c53536964a548b483b48f0250041d0d42090b520d1f5ecef44ee2e8fc"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/prompts.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-art/prompts.json.entries.json",
+      "entries": 3,
+      "bytes": 7768,
+      "sha256": "3904416f1b112a936cdfadb7a6dbd7682aa6811becd7bee40c450f125e187214",
+      "sourceSHA256": "02652252288ebb936463d2417733cefd07903f287b36fe5c91e8d214d646120f"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/verification.json",
+      "destination": "content/archive/mixed-source/authoring/library/countercurrent-art/verification.json.entries.json",
+      "entries": 12,
+      "bytes": 5024,
+      "sha256": "2ebb46cc3ca5075efb4b59b01ba5c2c9f1d31350ae50d97c81b86e2bedf5e679",
+      "sourceSHA256": "3e4a2a27326cfd43b86439c243ccdcab9ffc813b02dcffa4ea5f19c125911686"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/provenance.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-art/provenance.json.entries.json",
+      "entries": 3,
+      "bytes": 4997,
+      "sha256": "b5c7eff30b560d748e68fdc28f7ba32a7873efa4ee41a0e2a72e2f52738337a3",
+      "sourceSHA256": "bdaac5fc8776c83a9e2201f36409b576478b835c708e97e335c8c2d7ee9006e1"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/manifest.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-art/manifest.json.entries.json",
+      "entries": 3,
+      "bytes": 3082,
+      "sha256": "b6dc4fb288c6b5ea9cd5d95ee163d75408bc4e3b5956f5ef011bf9a70c212037",
+      "sourceSHA256": "c16bfec962cc8afa7e8717f4e39e1719b3ec9caa7911d54d409c067bdbb601e1"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/derivatives.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-art/derivatives.json.entries.json",
+      "entries": 3,
+      "bytes": 2362,
+      "sha256": "1467f77d30ccdd876aa9e2c12cc8952e055b7309caaa9d40b4b1a23ffd3e5868",
+      "sourceSHA256": "4a88240c4e61cead1f209069977a1f8a506c2429401e64f121afb46424a458c4"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/generation-results.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-art/generation-results.json.entries.json",
+      "entries": 3,
+      "bytes": 4850,
+      "sha256": "a86878bed9325571b32dffcf45634461a45dd808bd4a8db2de751b20037b5e85",
+      "sourceSHA256": "a5f18cc48667235bbee8472b9729dbcb0f16806e7ff49c0cba838da1ed65eb87"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/prompts.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-art/prompts.json.entries.json",
+      "entries": 3,
+      "bytes": 7359,
+      "sha256": "194ac64292e62e119533de1035da0ab71759cb8abef516de0f1f34cb05e7fe90",
+      "sourceSHA256": "8a8fc29d73d5981c5185e6f3eeaae30b1efdd87841797a6479264c47b41b30b7"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/verification.json",
+      "destination": "content/archive/mixed-source/authoring/library/moving-edges-art/verification.json.entries.json",
+      "entries": 12,
+      "bytes": 5034,
+      "sha256": "315278202573d0e597fd68e2b51890741086c932241cdf0283b02f88982dbfe3",
+      "sourceSHA256": "d4d23aa92bdcc855eccbef263ac3e748e26b130a3b6a26f453072075ecb9b192"
+    }
+  ],
+  "verification": "Every extracted JSON pointer was compared with the exact original Git source object.",
+  "entries": 217
+}

@@ -1,0 +1,43 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/sentinel-theme-chapters/editions.json",
+  "sourceGitBlob": "335d70ded234104fe5a7b8b8112089f4fcbc1a08",
+  "sourceSHA256": "1e14923784d75f59f2537cf9a14fa2c127b92ad77b3feaebfb80658e88136b88",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/editions/2",
+      "value": {
+        "themeId": "coupa",
+        "id": "sentinel-circuit-coupa",
+        "images": [
+          {
+            "sourceCellId": "sentinel-circuit/listening-court/coupa",
+            "sourceLevelId": "sentinel-circuit-listening-court",
+            "path": "coupa/originals/listening-court.png",
+            "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+            "title": "The shared inventory court",
+            "description": "Recommended: Scout. Scan reveals the hidden opportunity and shows enemy direction hints; it does not slow enemies or capture territory. Reveal 45% and the opportunity. Read the two open courtyards before choosing the upper survey loop or lower outer approach. The center throat ends at a wall: walls cannot reconnect a cut. An enemy warns before committing to its target. A known route without Scan remains possible."
+          },
+          {
+            "sourceCellId": "sentinel-circuit/switchyard-gates/coupa",
+            "sourceLevelId": "sentinel-circuit-switchyard-gates",
+            "path": "coupa/originals/switchyard-gates.png",
+            "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+            "title": "The inland exchange yard",
+            "description": "Recommended: Light carrier. Collect one charge at home, then move Up about five cells and drop the temporary field before the enemy reaches your cable. The field stuns nearby enemies for 2.5 seconds; it is not a delivery or damage action. Reveal 45% and the eastern opportunity. Empty or early equipment leaves the crossing exposed. A longer route follows the eastern safe edge, cuts left above the enemy, then returns through the upper gate."
+          },
+          {
+            "sourceCellId": "sentinel-circuit/open-the-circuit/coupa",
+            "sourceLevelId": "sentinel-circuit-open-circuit",
+            "path": "coupa/originals/open-the-circuit.png",
+            "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+            "title": "The illuminated exchange hall",
+            "description": "Recommended: Fiber relay. Signal resistance keeps movement and equipment working through the band; your live cable can still break. Other classes can use the western and southern detour. Capture the visible shield objective first. The Complexity hub warns horizontally, then after that objective warns vertically. Wait for the active stripe to end; during the opening close a cut with at least twelve new field cells. An early or short cut keeps ordinary gains but does not open the core. Missed openings repeat. If at most twelve field cells remain, wait safely outside a cut for an opening. This encounter has a shielded stage and an exposed stage."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourceRevision": "eb39e198d5f230e8e6cbd613952d52cd745fb8ae",
+  "sourcePath": "authoring/library/moving-edges-art/prompts.json",
+  "sourceGitBlob": "ca61105e8b6b48b10b47b915b89d020fb8d64830",
+  "sourceSHA256": "8a8fc29d73d5981c5185e6f3eeaae30b1efdd87841797a6479264c47b41b30b7",
+  "scope": "Owned records extracted from a mixed source file. JSON pointers refer to the exact source revision; this is not the complete original file.",
+  "entries": [
+    {
+      "pointer": "/prompts/9",
+      "value": {
+        "cellId": "moving-edges/terrace-stitch/coupa",
+        "themeId": "coupa",
+        "missionSlot": "terrace-stitch",
+        "sourceLevelId": "moving-edges-terrace-stitch",
+        "title": "The Shared Goods Terraces",
+        "path": "originals/terrace-stitch-coupa.png",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "prompt": "Use case: stylized-concept. Asset type: an original still reward panorama for a territory-capture game, not a map or interface.\nGenerate ONE complete landscape image at exactly 1774 x 887 pixels, 2:1 aspect. Full-frame opaque RGB PNG. Modern luminous pixel-art: deliberate crisp pixel clusters, readable large silhouettes, detailed but ordered surfaces, cinematic depth, natural atmosphere, richly colored light and shadow. Match the series' restrained navy/teal shadows and warm light, with the distinct palette specified below. A beautiful meaningful scene must remain understandable as a 384 x 192 thumbnail. No artificial stretching, panels, collage, text, UI, arrows, borders, watermarks, game screenshots or copied assets. Small people only as scale/story cues, never dominant portraits. All structures and equipment are original fictional designs; do not claim exact real architecture or product reconstruction.\nScene: a fictional cooperative receiving and repair district with three unequal stepped brick courtyards linked by a central ramp-and-stair route. One terrace has a small tool-sharing workshop, another careful parcel sorting with simple unbranded crates, and the upper terrace a sunlit community greenhouse. Small workers pass an object hand-to-hand near a clear worktable. Spend Network / Coupa theme as human cooperation and stewardship, not an actual Coupa product, interface, financial claim or measured sustainability result. No logos, text, charts or readable ledgers.\nLighting/palette: clear spring late afternoon, terracotta brick, fresh sage plants, warm cream walls and cool teal shade. Strong unequal terrace volumes and welcoming pools of light; useful daily work, not a fantasy luxury market.",
+        "promptSha256": "2ce4db9ff2a53f2d895def86797819aa787e0576f8a2ff79607d8152196da0c8"
+      }
+    },
+    {
+      "pointer": "/prompts/10",
+      "value": {
+        "cellId": "moving-edges/survey-wheel/coupa",
+        "themeId": "coupa",
+        "missionSlot": "survey-wheel",
+        "sourceLevelId": "moving-edges-survey-wheel",
+        "title": "The Repair Exchange Rotunda",
+        "path": "originals/survey-wheel-coupa.png",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "prompt": "Use case: stylized-concept. Asset type: an original still reward panorama for a territory-capture game, not a map or interface.\nGenerate ONE complete landscape image at exactly 1774 x 887 pixels, 2:1 aspect. Full-frame opaque RGB PNG. Modern luminous pixel-art: deliberate crisp pixel clusters, readable large silhouettes, detailed but ordered surfaces, cinematic depth, natural atmosphere, richly colored light and shadow. Match the series' restrained navy/teal shadows and warm light, with the distinct palette specified below. A beautiful meaningful scene must remain understandable as a 384 x 192 thumbnail. No artificial stretching, panels, collage, text, UI, arrows, borders, watermarks, game screenshots or copied assets. Small people only as scale/story cues, never dominant portraits. All structures and equipment are original fictional designs; do not claim exact real architecture or product reconstruction.\nScene: a fictional circular neighborhood repair exchange with an off-center common parts depot and four separated radial workshop wings. Broad uneven paved sectors allow people to move between bicycle repair, textile mending, shared tools and a small reuse-materials yard. Clearly original unbranded objects and small collaborative human figures; no screens, logos, accounting graphics, readable labels or claims about a real company's software. A warm central work lamp gathers the scene while each wing has a distinct silhouette.\nLighting/palette: crisp winter dusk, muted warm rose brick, ivory snow edges, dark evergreen and petrol-blue shadows, amber and soft aqua workshop light. Calm ordered activity, asymmetrical radial composition, emotional sense of a community keeping things useful.",
+        "promptSha256": "d830f9b7eebed06318303d626097047e7235aad569ec4d2a00890c4a4a340ff8"
+      }
+    },
+    {
+      "pointer": "/prompts/11",
+      "value": {
+        "cellId": "moving-edges/breakwater-return/coupa",
+        "themeId": "coupa",
+        "missionSlot": "breakwater-return",
+        "sourceLevelId": "moving-edges-breakwater-return",
+        "title": "The Harbor Maintenance Round",
+        "path": "originals/breakwater-return-coupa.png",
+        "requestedDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "prompt": "Use case: stylized-concept. Asset type: an original still reward panorama for a territory-capture game, not a map or interface.\nGenerate ONE complete landscape image at exactly 1774 x 887 pixels, 2:1 aspect. Full-frame opaque RGB PNG. Modern luminous pixel-art: deliberate crisp pixel clusters, readable large silhouettes, detailed but ordered surfaces, cinematic depth, natural atmosphere, richly colored light and shadow. Match the series' restrained navy/teal shadows and warm light, with the distinct palette specified below. A beautiful meaningful scene must remain understandable as a 384 x 192 thumbnail. No artificial stretching, panels, collage, text, UI, arrows, borders, watermarks, game screenshots or copied assets. Small people only as scale/story cues, never dominant portraits. All structures and equipment are original fictional designs; do not claim exact real architecture or product reconstruction.\nScene: a fictional working harbor cooperative at night: two offset long low service piers shelter a spacious bay, a small cove contains a boat-repair hall, and a clear open return lane leads toward distant lights. A few small people carry unbranded replacement parts to a moored service boat; neatly stored tools, warm windows and one modest planted courtyard. Spend-management theme expressed through thoughtful coordination, never a real product, financial interface or quantified environmental benefit. No logos, text or diagrams. Keep broad open water and long offset forms easy to read.\nLighting/palette: deep marine-blue water, soft sea-green reflections, honey-gold work lights and a faint cool peach horizon. Detailed pixel surfaces but restrained lighting; a feeling of reliable work and safe return.",
+        "promptSha256": "92e3a0abe7e7c7cc39b62698238acca9bbd393170344575615ccf6fc4a460e61"
+      }
+    }
+  ]
+}

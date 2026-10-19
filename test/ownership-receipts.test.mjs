@@ -49,3 +49,24 @@ test('additional owned archives retain exact bytes and every selected reserve or
   for(const prompt of entry.prompts)assert.ok(paths.has(prompt.path),prompt.path);
  }
 });
+
+test('mixed source fragments retain their verified source pointers and archive hashes', async () => {
+ const receipt=await json('migration/mixed-source-receipt.json');
+ let count=0;
+ for(const row of receipt.items){
+  assert.ok(row.destination.startsWith('content/archive/mixed-source/'));
+  assert.ok(!row.destination.split('/').includes('..'));
+  const bytes=await readFile(new URL(row.destination,root));
+  assert.equal(bytes.length,row.bytes,row.sourcePath);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),row.sha256,row.sourcePath);
+  const archive=JSON.parse(bytes);
+  assert.equal(archive.sourcePath,row.sourcePath);
+  assert.equal(archive.sourceSHA256,row.sourceSHA256);
+  assert.equal(archive.entries.length,row.entries);
+  assert.match(archive.sourceRevision,/^[a-f0-9]{40}$/);
+  assert.match(archive.sourceGitBlob,/^[a-f0-9]{40}$/);
+  for(const entry of archive.entries){assert.ok(entry.pointer.startsWith('/'));assert.ok(Object.hasOwn(entry,'value'));}
+  count+=archive.entries.length;
+ }
+ assert.equal(count,receipt.entries);
+});
