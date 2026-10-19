@@ -756,6 +756,11 @@
       "sha256": "e98854a3aa3b9335f1bc2cb15e6ee1307375b53e5821a170ce75c844615cfb0f"
     },
     {
+      "path": "game/level-numbering.mjs",
+      "bytes": 5046,
+      "sha256": "45018d79289b7f081cb8f31467d6c3d503e1c756b29ca321e79520f77689ec51"
+    },
+    {
       "path": "game/menu-style-preferences.mjs",
       "bytes": 332,
       "sha256": "7f1af9a792a9907deca6567968c39f89db8e7bafacd680888026b175eaad6f64"
@@ -4210,8 +4215,8 @@
     },
     {
       "path": "game/level-numbering.mjs",
-      "bytes": 27023,
-      "sha256": "de761d310d1441fd5c06f3cab769504b086867c82a5c8e8386d3c1748f88e59a"
+      "bytes": 5046,
+      "sha256": "45018d79289b7f081cb8f31467d6c3d503e1c756b29ca321e79520f77689ec51"
     },
     {
       "path": "game/library.mjs",
@@ -7134,8 +7139,8 @@
     },
     {
       "path": "edition-build.json",
-      "bytes": 178718,
-      "sha256": "59e1804414fc8a65e4d0039fd1779bb5266dc0bf6ed95a7a27822ca999e4f503"
+      "bytes": 178717,
+      "sha256": "bc5fdc15aa17df23e121e3c47a535b55825740d1ef7137d1a3bf13a82caf7fc8"
     },
     {
       "path": "edition-catalog.json",
@@ -9419,8 +9424,8 @@
     },
     {
       "path": "game/level-numbering.mjs",
-      "bytes": 27023,
-      "sha256": "de761d310d1441fd5c06f3cab769504b086867c82a5c8e8386d3c1748f88e59a"
+      "bytes": 5046,
+      "sha256": "45018d79289b7f081cb8f31467d6c3d503e1c756b29ca321e79520f77689ec51"
     },
     {
       "path": "game/library.mjs",

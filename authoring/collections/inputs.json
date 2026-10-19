@@ -1,0 +1,89 @@
+{
+  "format": "owned-native-authoring.v1",
+  "collections": [
+    {
+      "id": "countercurrent-coupa",
+      "source": "content/archive/supplemental/countercurrent/original-pack.json",
+      "sourceSHA256": "74818e6f9076a6c46421891b84573146c810c266917a86bcd2c2915507e26c3a",
+      "output": "content/files/game/collections/countercurrent/recipes.json",
+      "levelIds": [
+        "countercurrent-offset-docks",
+        "countercurrent-sandbar-braid",
+        "countercurrent-crossing-watch"
+      ]
+    },
+    {
+      "id": "fracture-lines-coupa",
+      "source": "content/archive/supplemental/fracture/original-pack.json",
+      "sourceSHA256": "db616dbc6f4d8885b6a269780dfe1b989ca7abd62b3c354e15c0553d4aadf57c",
+      "output": "content/files/game/collections/fracture/recipes.json",
+      "levelIds": [
+        "fracture-lines-split-ring",
+        "fracture-lines-fault-fan",
+        "fracture-lines-frayed-causeway"
+      ]
+    },
+    {
+      "id": "moving-edges-coupa",
+      "source": "content/archive/supplemental/moving/original-pack.json",
+      "sourceSHA256": "baf8739f16e7215f579e1e0b284d78d1678ec99e8a579f32fe90ae625d0626f7",
+      "output": "content/files/game/collections/moving/recipes.json",
+      "levelIds": [
+        "moving-edges-terrace-stitch",
+        "moving-edges-survey-wheel",
+        "moving-edges-breakwater-return"
+      ]
+    },
+    {
+      "id": "sentinel-circuit-coupa",
+      "source": "content/archive/supplemental/sentinel/original-pack.json",
+      "sourceSHA256": "9bc9e7c3b54af2b79b84188258a4301fe0d69171d2cd6e6d788f17d1467c21a7",
+      "output": "content/files/game/collections/sentinel/recipes.json",
+      "levelIds": [
+        "sentinel-circuit-coupa-listening-court",
+        "sentinel-circuit-coupa-switchyard-gates",
+        "sentinel-circuit-coupa-open-circuit"
+      ]
+    },
+    {
+      "id": "route-worlds-coupa",
+      "source": "content/archive/supplemental/routes/original-pack.json",
+      "sourceSHA256": "fb6292604d378b642e86d5d1eb334b76eea3a2b14428c7e93e82b9bd67853ce7",
+      "output": "content/files/game/collections/routes/recipes.json",
+      "levelIds": [
+        "route-worlds-coupa-foundry",
+        "route-worlds-coupa-depot",
+        "route-worlds-coupa-switchback"
+      ]
+    },
+    {
+      "id": "original-spend-network",
+      "source": "content/archive/supplemental/spend/original-pack.json",
+      "sourceSHA256": "6beb21e53d8ca04bf916d224ea7ae4001015b5b3d43f8e1c8a22f8be284f565d",
+      "output": "content/files/game/collections/spend/recipes.json",
+      "levelIds": [
+        "original-spend-shared-harbor",
+        "original-spend-city-wins",
+        "original-spend-market-workshop"
+      ]
+    },
+    {
+      "id": "neon-mosaic-pack",
+      "source": "content/archive/supplemental/neon/original-pack.json",
+      "sourceSHA256": "8350e1fa05d7f61381c4fdcd1edccccad7fbb2f3cdc6f3cf93dc963ab3047f61",
+      "output": "content/files/game/collections/neon/recipes.json",
+      "levelIds": [
+        "neon-coupa-pack"
+      ]
+    },
+    {
+      "id": "equipment-workshop",
+      "source": "content/archive/supplemental/workshop/original-pack.json",
+      "sourceSHA256": "7d88283450ef55226b481b027719cdb04781815c56cc378eee5f227bdfc34a09",
+      "output": "content/files/game/collections/workshop/recipes.json",
+      "levelIds": [
+        "workshop-03"
+      ]
+    }
+  ]
+}

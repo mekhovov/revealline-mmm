@@ -13,7 +13,8 @@
     "verify": "node scripts/verify-app.mjs",
     "build": "npm run verify && node scripts/build.mjs",
     "sync:upstream": "node scripts/sync-upstream.mjs",
-    "verify:authoring": "node scripts/verify-owned-authoring.mjs"
+    "verify:authoring": "node scripts/verify-owned-authoring.mjs",
+    "verify:collections": "node scripts/verify-owned-collections.mjs"
   },
   "devDependencies": {
     "acorn": "8.18.0",

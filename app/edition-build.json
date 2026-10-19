@@ -2596,8 +2596,8 @@
     },
     {
       "path": "game/level-numbering.mjs",
-      "bytes": 27023,
-      "sha256": "de761d310d1441fd5c06f3cab769504b086867c82a5c8e8386d3c1748f88e59a"
+      "bytes": 5046,
+      "sha256": "45018d79289b7f081cb8f31467d6c3d503e1c756b29ca321e79520f77689ec51"
     },
     {
       "path": "game/library.mjs",

@@ -1,0 +1,199 @@
+{
+  "format": "retained-owned-level-numbers.v1",
+  "sourceRevision": "407572093c45f180122fd863950722fe8f01ad95",
+  "entries": [
+    {
+      "key": "[\"mission\",\"equipment-workshop\",\"equipment-workshop\",\"workshop-03\"]",
+      "number": 139
+    },
+    {
+      "key": "[\"mission\",\"original-spend-network\",\"original-spend-shared-routes\",\"original-spend-shared-harbor\"]",
+      "number": 162
+    },
+    {
+      "key": "[\"mission\",\"original-spend-network\",\"original-spend-shared-routes\",\"original-spend-city-wins\"]",
+      "number": 163
+    },
+    {
+      "key": "[\"mission\",\"original-spend-network\",\"original-spend-shared-routes\",\"original-spend-market-workshop\"]",
+      "number": 164
+    },
+    {
+      "key": "[\"mission\",\"route-worlds-coupa\",\"route-worlds-coupa\",\"route-worlds-coupa-foundry\"]",
+      "number": 177
+    },
+    {
+      "key": "[\"mission\",\"route-worlds-coupa\",\"route-worlds-coupa\",\"route-worlds-coupa-depot\"]",
+      "number": 178
+    },
+    {
+      "key": "[\"mission\",\"route-worlds-coupa\",\"route-worlds-coupa\",\"route-worlds-coupa-switchback\"]",
+      "number": 179
+    },
+    {
+      "key": "[\"mission\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa-listening-court\"]",
+      "number": 189
+    },
+    {
+      "key": "[\"mission\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa-switchyard-gates\"]",
+      "number": 190
+    },
+    {
+      "key": "[\"mission\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa\",\"sentinel-circuit-coupa-open-circuit\"]",
+      "number": 191
+    },
+    {
+      "key": "[\"mission\",\"fracture-lines-coupa\",\"fracture-lines-coupa\",\"fracture-lines-split-ring\"]",
+      "number": 201
+    },
+    {
+      "key": "[\"mission\",\"fracture-lines-coupa\",\"fracture-lines-coupa\",\"fracture-lines-fault-fan\"]",
+      "number": 202
+    },
+    {
+      "key": "[\"mission\",\"fracture-lines-coupa\",\"fracture-lines-coupa\",\"fracture-lines-frayed-causeway\"]",
+      "number": 203
+    },
+    {
+      "key": "[\"mission\",\"countercurrent-coupa\",\"countercurrent-coupa\",\"countercurrent-offset-docks\"]",
+      "number": 213
+    },
+    {
+      "key": "[\"mission\",\"countercurrent-coupa\",\"countercurrent-coupa\",\"countercurrent-sandbar-braid\"]",
+      "number": 214
+    },
+    {
+      "key": "[\"mission\",\"countercurrent-coupa\",\"countercurrent-coupa\",\"countercurrent-crossing-watch\"]",
+      "number": 215
+    },
+    {
+      "key": "[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-01\"]",
+      "number": 216
+    },
+    {
+      "key": "[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-02\"]",
+      "number": 217
+    },
+    {
+      "key": "[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-03\"]",
+      "number": 218
+    },
+    {
+      "key": "[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-04\"]",
+      "number": 219
+    },
+    {
+      "key": "[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-05\"]",
+      "number": 220
+    },
+    {
+      "key": "[\"company\",\"coupa-spend-in-motion\",\"coupa-spend-in-motion-06\"]",
+      "number": 221
+    },
+    {
+      "key": "[\"company\",\"coupa-inside-village\",\"coupa-inside-village-01\"]",
+      "number": 222
+    },
+    {
+      "key": "[\"company\",\"coupa-inside-village\",\"coupa-inside-village-02\"]",
+      "number": 223
+    },
+    {
+      "key": "[\"company\",\"coupa-inside-village\",\"coupa-inside-village-03\"]",
+      "number": 224
+    },
+    {
+      "key": "[\"company\",\"coupa-inside-village\",\"coupa-inside-village-04\"]",
+      "number": 225
+    },
+    {
+      "key": "[\"company\",\"coupa-inside-village\",\"coupa-inside-village-05\"]",
+      "number": 226
+    },
+    {
+      "key": "[\"company\",\"coupa-inside-village\",\"coupa-inside-village-06\"]",
+      "number": 227
+    },
+    {
+      "key": "[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-01\"]",
+      "number": 228
+    },
+    {
+      "key": "[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-02\"]",
+      "number": 229
+    },
+    {
+      "key": "[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-03\"]",
+      "number": 230
+    },
+    {
+      "key": "[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-04\"]",
+      "number": 231
+    },
+    {
+      "key": "[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-05\"]",
+      "number": 232
+    },
+    {
+      "key": "[\"company\",\"coupa-source-to-pay\",\"coupa-source-to-pay-06\"]",
+      "number": 233
+    },
+    {
+      "key": "[\"company\",\"coupa-product-operations\",\"coupa-product-operations-01\"]",
+      "number": 234
+    },
+    {
+      "key": "[\"company\",\"coupa-product-operations\",\"coupa-product-operations-02\"]",
+      "number": 235
+    },
+    {
+      "key": "[\"company\",\"coupa-product-operations\",\"coupa-product-operations-03\"]",
+      "number": 236
+    },
+    {
+      "key": "[\"company\",\"coupa-product-operations\",\"coupa-product-operations-04\"]",
+      "number": 237
+    },
+    {
+      "key": "[\"company\",\"coupa-product-operations\",\"coupa-product-operations-05\"]",
+      "number": 238
+    },
+    {
+      "key": "[\"company\",\"coupa-product-operations\",\"coupa-product-operations-06\"]",
+      "number": 239
+    },
+    {
+      "key": "[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-01\"]",
+      "number": 240
+    },
+    {
+      "key": "[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-02\"]",
+      "number": 241
+    },
+    {
+      "key": "[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-03\"]",
+      "number": 242
+    },
+    {
+      "key": "[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-04\"]",
+      "number": 243
+    },
+    {
+      "key": "[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-05\"]",
+      "number": 244
+    },
+    {
+      "key": "[\"company\",\"coupa-developer-integration\",\"coupa-developer-integration-06\"]",
+      "number": 245
+    },
+    {
+      "key": "[\"mission\",\"neon-mosaic-pack\",\"neon-mosaic\",\"neon-coupa-pack\"]",
+      "number": 294
+    }
+  ],
+  "previouslyUnnumbered": [
+    "[\"mission\",\"moving-edges-coupa\",\"moving-edges-coupa\",\"moving-edges-terrace-stitch\"]",
+    "[\"mission\",\"moving-edges-coupa\",\"moving-edges-coupa\",\"moving-edges-survey-wheel\"]",
+    "[\"mission\",\"moving-edges-coupa\",\"moving-edges-coupa\",\"moving-edges-breakwater-return\"]"
+  ]
+}
