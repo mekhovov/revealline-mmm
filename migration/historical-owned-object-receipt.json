@@ -1,0 +1,2360 @@
+{
+  "format": "revealline-named-history-preservation.v1",
+  "sourceRepository": "mekhovov/revealline",
+  "sourceGraphRefsSHA256": "568b50ecaa208bc5416a3c58c1c2b10e43a654afd2c5d449e3bcfbd1f3d03312",
+  "scope": "Exact named community-owned blob versions in the verified preserved Git graph. Each source path is one observed historical path; this is not a complete mixed-source or alias inventory. Archived artifacts retain their original bytes and are excluded from the playable app.",
+  "items": [
+    {
+      "sourcePath": "authoring/examples/navi-network.pack.json",
+      "sourceGitBlob": "6f97376dd5d603e5bf48d1f13a058cf4ae9e965a",
+      "bytes": 10733,
+      "sha256": "baeb9445144ed6ac21877ee44dcd7f1e7d2d57c0ad8a7bcf1eee79ace604bc85",
+      "destination": "content/archive/owned-source/authoring/examples/navi-network.pack.json"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/originals/crossing-watch-coupa.png",
+      "sourceGitBlob": "5a27c5be5bc6686ed65a2e08703ad91f437ad129",
+      "bytes": 2897299,
+      "sha256": "1615b543d0fd311343d586fb70c877b22f9399c12dae7342101a491f6ae6f5e5",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/originals/crossing-watch-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/originals/offset-docks-coupa.png",
+      "sourceGitBlob": "68af138eecd9fab195a5a509142abdb8b64f7e58",
+      "bytes": 2735312,
+      "sha256": "87b28d2fec477a7572f10c83e9ec6e2ed7ef3386818f21d651e1d1897df30997",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/originals/offset-docks-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/originals/sandbar-braid-coupa.png",
+      "sourceGitBlob": "21661cc316260c655fe0100f780b6c25a3b73859",
+      "bytes": 2884014,
+      "sha256": "ea643aa1735edba5f5ba8c6ca0cb3ee3d671cb37534a06966e505f42d938fe14",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/originals/sandbar-braid-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/thumbnails/crossing-watch-coupa.jpg",
+      "sourceGitBlob": "85fd5e10115b1640832ce152719f4681b40e8d1d",
+      "bytes": 44732,
+      "sha256": "b6bc9c072444320cbcf432866371b67507df9f8635045f704bb252c12994470b",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/thumbnails/crossing-watch-coupa.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/thumbnails/offset-docks-coupa.jpg",
+      "sourceGitBlob": "609f871c9d40d7ec81e8eab3f5593da47cb15dbe",
+      "bytes": 45676,
+      "sha256": "bc47dc7fd4f7b5132077dbc70590c2d7a78e74cbc4df532795778db8119d55d2",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/thumbnails/offset-docks-coupa.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-art/thumbnails/sandbar-braid-coupa.jpg",
+      "sourceGitBlob": "9d6a2a66e60e7e2368639e5c99b1d45e54718f52",
+      "bytes": 46852,
+      "sha256": "c2870239d20c489a6417da903e37d531f3445e34ffb656d37d122a02543b8c26",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-art/thumbnails/sandbar-braid-coupa.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/countercurrent-chapters/descriptors/coupa.json",
+      "sourceGitBlob": "371654ec93ab7dfba3e11a455dc270ea69b905e0",
+      "bytes": 1744,
+      "sha256": "82210b6f6f025fb97d7cd5c66516b3cea2b5c2668d3ba522fe64fbdf00b6dba1",
+      "destination": "content/archive/owned-source/authoring/library/countercurrent-chapters/descriptors/coupa.json"
+    },
+    {
+      "sourcePath": "authoring/library/four-worlds-chapters/packs/original-spend-network.json",
+      "sourceGitBlob": "394ea4aef0bd0f67fe3a064d78f43298f9156085",
+      "bytes": 11067202,
+      "sha256": "5ab9a0c7362ca8e05819ff3d68c0a7246ab5057b4d796a063d3d69af115504ac",
+      "destination": "content/archive/owned-source/authoring/library/four-worlds-chapters/packs/original-spend-network.json"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/README.md",
+      "sourceGitBlob": "51b2d205a7e627538e3de223aabbda4c2f2d090c",
+      "bytes": 4647,
+      "sha256": "3ea1b43fc5a89aba625e9a189980d3ca9102caafe20f447a41657f9d51e174d8",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/README.md"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/generation-results.json",
+      "sourceGitBlob": "6879c82fc2349340b0781a36efe9f091330250dd",
+      "bytes": 3923,
+      "sha256": "931c5ecb516924a19c9ea12717bece9b6e895443606b0335ba27237a54a680e4",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/generation-results.json"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/originals/fault-fan-coupa.png",
+      "sourceGitBlob": "59329e81b2d7db7203f64aa19fd3e03cd60d7a30",
+      "bytes": 2950816,
+      "sha256": "e857e9fe8f6876c1bdf628e39606dde1b9c6efa987d913cec2064b86bc530d70",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/originals/fault-fan-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/originals/frayed-causeway-coupa.png",
+      "sourceGitBlob": "7fe7ae344dbc127f154bedfd1e5c851c7009f824",
+      "bytes": 2698848,
+      "sha256": "b4b5d78c29a5bfa1345297baf28d8851fb81a51acbc86bd1926e428e4b9d23cb",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/originals/frayed-causeway-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/originals/split-ring-coupa.png",
+      "sourceGitBlob": "fa63c6f8292cfe392bf68cf81d8dae026b225137",
+      "bytes": 3057159,
+      "sha256": "d914da1caf4b59d1892603154514fc865db460595ce8929d43841f1fd94d4362",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/originals/split-ring-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/prompts.json",
+      "sourceGitBlob": "3ec3cad913d60fb58fa749f355624a36684c697a",
+      "bytes": 8641,
+      "sha256": "a349bf22d7f5c02b9a06b790e64178f166fee5fabb5fc3151aa8cf4143ba8834",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/prompts.json"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/provenance.json",
+      "sourceGitBlob": "4fa84d1dfe089dee1561fb7c26dd5f95e9b19069",
+      "bytes": 9538,
+      "sha256": "3709b1a56f5e88f2335c8fcd50b82c3f7efa4de8f89585db6b6af3325c7898d8",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/provenance.json"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/verification.json",
+      "sourceGitBlob": "4ac9ec36cb47b6b434e9f69051f3084728f43f9e",
+      "bytes": 6022,
+      "sha256": "1b650b1c5baca22815146de493c429ecf6e04dc143844df4a4a6efe26d9e7c83",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/verification.json"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-coupa-art/verify.mjs",
+      "sourceGitBlob": "7ca1e609034fd6af10f1ddaa406f3261716a253e",
+      "bytes": 10070,
+      "sha256": "112a243591864dd4338dd0ba59bbc798d064474600c8be33adc979a024ff05b3",
+      "destination": "content/archive/owned-source/authoring/library/fracture-coupa-art/verify.mjs"
+    },
+    {
+      "sourcePath": "authoring/library/fracture-theme-chapters/descriptors/coupa.json",
+      "sourceGitBlob": "718af0deba145dffa373dbebe2cf7a6dd3d38409",
+      "bytes": 1739,
+      "sha256": "44f8208565215c4494916107494f55bd9f16b7e1c3adff9a764381597dc0ee1e",
+      "destination": "content/archive/owned-source/authoring/library/fracture-theme-chapters/descriptors/coupa.json"
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-portrait-draft-v1.png",
+      "sourceGitBlob": "a10ffba33131ee0755d2a825add3d7d91969a8d1",
+      "bytes": 2145766,
+      "sha256": "a6b9b7b3a52f131ef6f6068b85eb0c935afcb7201732c94c6010d57e411894c2",
+      "destination": "content/archive/owned-source/authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-portrait-draft-v1.png"
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-portrait-v1.png",
+      "sourceGitBlob": "dea310e7999ad4e0cfc19b3f3f8a2ff294953963",
+      "bytes": 2081126,
+      "sha256": "029755aadb33607acfcfdf0e96c2bb08181ef742f47d19f94179979d8a382e32",
+      "destination": "content/archive/owned-source/authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-portrait-v1.png"
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-v1.png",
+      "sourceGitBlob": "b2db437dafe2f6d395fbe099304acb2c5f24fd3e",
+      "bytes": 1979735,
+      "sha256": "2db87ceb4d9633c34b363a7f675c382421c542e58e8ee15a0627601f4d723977",
+      "destination": "content/archive/owned-source/authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-team-v1.png"
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-portrait-v1.png",
+      "sourceGitBlob": "0316e6bc1b5dd6d63c1159a6b18504a6ff692292",
+      "bytes": 2002546,
+      "sha256": "a2208f8167939c73bde30635ccb83820fa7c02900221593ca8398d136c0dae85",
+      "destination": "content/archive/owned-source/authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-portrait-v1.png"
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-v1.png",
+      "sourceGitBlob": "c96c8ce65d9570d189fc4f479b12d117569a0730",
+      "bytes": 2025194,
+      "sha256": "750068532ca11c1c110fe662d9668b59a215c5d7619ad766e2af4810ed8f9312",
+      "destination": "content/archive/owned-source/authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/coupa-versus-v1.png"
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/prompts.json",
+      "sourceGitBlob": "99660f155d14e67ca3127ae0f466baf3b5b3ac91",
+      "bytes": 13580,
+      "sha256": "e346ee4f8c7feef5da79d9e805766bdd8ba1883b5cc80b90693fd721dbf51d1c",
+      "destination": "content/archive/owned-source/authoring/library/menu-scenes/coupa-mode-scenes-2026-09-29/prompts.json"
+    },
+    {
+      "sourcePath": "authoring/library/menu-scenes/coupa-overview-v1.png",
+      "sourceGitBlob": "568ccc02ad41716fad2de1b78e7cf580a22f584a",
+      "bytes": 2771009,
+      "sha256": "f384e0ad3c45ada1672bbf150e3c1f18563d4256a354f41f6ea3f2df619a4134",
+      "destination": "content/archive/owned-source/authoring/library/menu-scenes/coupa-overview-v1.png"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/originals/breakwater-return-coupa.png",
+      "sourceGitBlob": "44e664ba3c6e2d6ed5c3730e498678538c0bee4c",
+      "bytes": 2635887,
+      "sha256": "e2eb3e89295a695f85d27d034457abd398749e7c1dc27ec07a9bdf7ed86cf56f",
+      "destination": "content/archive/owned-source/authoring/library/moving-edges-art/originals/breakwater-return-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/originals/survey-wheel-coupa.png",
+      "sourceGitBlob": "9a62b7c2f8399a4ebabc9002a729b4bd3f14d581",
+      "bytes": 3151700,
+      "sha256": "d2e32f910fe3831f81be3a5f0a4985ab95f0b13f9f83bae098123dd344f5b753",
+      "destination": "content/archive/owned-source/authoring/library/moving-edges-art/originals/survey-wheel-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/originals/terrace-stitch-coupa.png",
+      "sourceGitBlob": "2283db32171cd3a969d3b5bb4d9679a22ae2e7c3",
+      "bytes": 2844215,
+      "sha256": "24d887954886059a5eacfe133e94caf59011fdef79cd98324581038c55b1c65f",
+      "destination": "content/archive/owned-source/authoring/library/moving-edges-art/originals/terrace-stitch-coupa.png"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/thumbnails/breakwater-return-coupa.jpg",
+      "sourceGitBlob": "d6c4f432b46fc055728cc1d6e16ba0aa34aa6ed1",
+      "bytes": 39875,
+      "sha256": "28d3fbf4cc72949e38a01e836c5a0eaf7ec1a6d8d15ee921108926e3b9476da0",
+      "destination": "content/archive/owned-source/authoring/library/moving-edges-art/thumbnails/breakwater-return-coupa.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/thumbnails/survey-wheel-coupa.jpg",
+      "sourceGitBlob": "98b880292d8eeb26498f4bb5cba874395ca291e1",
+      "bytes": 48660,
+      "sha256": "216da47b7285cd6d57edcc499d9f735d59cc87a1eaecec392deae5c0c958644a",
+      "destination": "content/archive/owned-source/authoring/library/moving-edges-art/thumbnails/survey-wheel-coupa.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-art/thumbnails/terrace-stitch-coupa.jpg",
+      "sourceGitBlob": "3858b818a1a58c0d6f59584551f3c6e9adf4a871",
+      "bytes": 47195,
+      "sha256": "fc6cc12f655cfaa778bd30584ae2b0c1e0698df95d639b1a03c5a6349b98496f",
+      "destination": "content/archive/owned-source/authoring/library/moving-edges-art/thumbnails/terrace-stitch-coupa.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/moving-edges-chapters/descriptors/coupa.json",
+      "sourceGitBlob": "d4ea3239f46f5af7ef5ab87cc5b208863f8dcced",
+      "bytes": 1724,
+      "sha256": "bf3162e289bd1cdca8f8b88a0143e7f4a4118be6a4370fe3cb31696f6d7454fd",
+      "destination": "content/archive/owned-source/authoring/library/moving-edges-chapters/descriptors/coupa.json"
+    },
+    {
+      "sourcePath": "authoring/library/neon-artwork/backgrounds/coupa.jpg",
+      "sourceGitBlob": "74d0431ddb5fe10147de0c3e81bce4487d2b6e3f",
+      "bytes": 315948,
+      "sha256": "e1d6aea7e2c9d2ffeb1f48e79ab82a901a981963851ed6ae381757d3fd7bf98d",
+      "destination": "content/archive/owned-source/authoring/library/neon-artwork/backgrounds/coupa.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/neon-mosaic/coupa/preview.svg",
+      "sourceGitBlob": "d79870c69933c09a865731b17b7f464f0b3aeb60",
+      "bytes": 5038,
+      "sha256": "6a0228ff94bd2e6c9d898faeec6c27d272bc82b99dc4e9a8fa4b52fd7b7c7b8b",
+      "destination": "content/archive/owned-source/authoring/library/neon-mosaic/coupa/preview.svg"
+    },
+    {
+      "sourcePath": "authoring/library/neon-mosaic/coupa/scenario.json",
+      "sourceGitBlob": "c7f702c3d2d81d081ce7ebc135e804b7828775cd",
+      "bytes": 435057,
+      "sha256": "e182d14f626e4a27466595e78d868e31fa9acd471b0de7113e674baecf8e50f4",
+      "destination": "content/archive/owned-source/authoring/library/neon-mosaic/coupa/scenario.json"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/originals/spend-circular-workshop.png",
+      "sourceGitBlob": "c9549ff67bfe8b8d80ef679e1b8863ca2214c949",
+      "bytes": 2820419,
+      "sha256": "d62070c73c86808cb43fdcc7117da98bcd625621aa44924ce9139c602bb5c6d5",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-1/originals/spend-circular-workshop.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-1/prompts/spend-circular-workshop.txt",
+      "sourceGitBlob": "6642281a98a8f54016f1608c7547b51cde391b13",
+      "bytes": 2346,
+      "sha256": "1e8e7e3e331341c003c8d252de67fef4bf8de100b1bb5012cb567d3b5fc58027",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-1/prompts/spend-circular-workshop.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/originals/spend-storybook-rail-depot.png",
+      "sourceGitBlob": "8ce158e3e1f758d52d5f62a5e5553ffab07186ea",
+      "bytes": 1803179,
+      "sha256": "f0dd68a9228b140047ca071e9526679cfeea3b29a921b7f0434120f3186e1ba0",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-10/originals/spend-storybook-rail-depot.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-10/prompts/spend-storybook-rail-depot.txt",
+      "sourceGitBlob": "122af812aaaaf2361f07b51e37fbc59dd782fbc7",
+      "bytes": 1673,
+      "sha256": "63b6e70e02f6e240598b45ac88decef95c25c1df341824a984565249a7b7a7f4",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-10/prompts/spend-storybook-rail-depot.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange-clean.png",
+      "sourceGitBlob": "d21dd94089d762b11b437020a927731f17fb1649",
+      "bytes": 2549711,
+      "sha256": "560949cad2ee1031dd5f5edd9c5115db576db5d8133ae3712faa11243cee0971",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange-clean.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange.png",
+      "sourceGitBlob": "fb5d4e51d7324316e4c527efbbf44859635ea4ca",
+      "bytes": 2656655,
+      "sha256": "6141755ee163d55f8e949488391238ff0f740d279406b74d3f5f91b60dcfa341",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/originals/spend-cloud-cart-exchange.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange-cleanup.txt",
+      "sourceGitBlob": "631d7f685f41ac3b4b0a72ce30803f02add551b8",
+      "bytes": 538,
+      "sha256": "8c6c7de6b21f9661636fa86b9e882681b8de23f656c33eb847e6ade400ef9c22",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange-cleanup.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange.txt",
+      "sourceGitBlob": "ee5cb1a19c28e05be3e9b66be6a64cb198be9b01",
+      "bytes": 2335,
+      "sha256": "af7b9acae0dfc51534dca1afb14303f45f1a2f3ac437a288e727b1383d988112",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-2/prompts/spend-cloud-cart-exchange.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-3/originals/spend-copper-kettle-bazaar.png",
+      "sourceGitBlob": "a7934688a039ca041531b7f314ff2406e58b908d",
+      "bytes": 2175587,
+      "sha256": "6114aefe292f9c5410ad27cfd4c959fb0054a0374cfb8794eb6144a6ba6f9edb",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-3/originals/spend-copper-kettle-bazaar.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-3/prompts/spend-copper-kettle-bazaar.txt",
+      "sourceGitBlob": "319525c5cff3d6d3045cbcf42eafe3b6351fd5c6",
+      "bytes": 2016,
+      "sha256": "30e04c040fa14958e1cf21751f33af07993691b53f389bf26a9c9c7a5147fce1",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-3/prompts/spend-copper-kettle-bazaar.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-4/originals/spend-canal-parcel-crane.png",
+      "sourceGitBlob": "1bec62387488376fa5d979ac1e9063e224eb5ab0",
+      "bytes": 2670342,
+      "sha256": "407561c2a427e24175431c19d970f9581f9a6bab7d1adbcdbd69c87bb0e62f2b",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-4/originals/spend-canal-parcel-crane.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-4/prompts/spend-canal-parcel-crane.txt",
+      "sourceGitBlob": "28183fa9c193bded58c288707cd7bd740ccf1cda",
+      "bytes": 1742,
+      "sha256": "661f9f029c6c4dcd1b5224cae4a3b42812e3aeefb1842ade787a9889c5503be8",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-4/prompts/spend-canal-parcel-crane.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-5/originals/spend-raincatcher-rooftops.png",
+      "sourceGitBlob": "bb324d769b31b94e236a56b8da6dcd114ec959f6",
+      "bytes": 2520491,
+      "sha256": "f94b2fef94700d10a68d770e4b2ea89ec97905e4c992cf26c5901ef983dafaaf",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-5/originals/spend-raincatcher-rooftops.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-5/prompts/spend-raincatcher-rooftops.txt",
+      "sourceGitBlob": "39c418372b3d1adf36e01461aa5f1865f83533ed",
+      "bytes": 1839,
+      "sha256": "2f383f30a9a3c073fa6b590de71400684245d7fc02e7f4a6802816f9386d89d6",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-5/prompts/spend-raincatcher-rooftops.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-6/originals/spend-coral-dawn-bakery.png",
+      "sourceGitBlob": "f82426c7ebf15396ab6a74c06accea3533c2cdd9",
+      "bytes": 2794201,
+      "sha256": "9c62a106d37c55e5b30cc9f4f12e34b1422e6fdc9bef2763e06c581d713861f0",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-6/originals/spend-coral-dawn-bakery.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-6/prompts/spend-coral-dawn-bakery.txt",
+      "sourceGitBlob": "19f30087bf7573e562a0c2c45caf1605c9bd7c2d",
+      "bytes": 2026,
+      "sha256": "76a5dd3a941ec9ba1fce072e061f75534af60d4eb377004123c3c5f2fe0ccc84",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-6/prompts/spend-coral-dawn-bakery.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-7/originals/spend-citrus-parcel-hub.png",
+      "sourceGitBlob": "dc6e4774ed3c4f40fc8ff947cc23212a166b1fd1",
+      "bytes": 1916377,
+      "sha256": "a02df60240645d8a010619ae24e994646f71601cfb754db78d15a875bf301c52",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-7/originals/spend-citrus-parcel-hub.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-7/prompts/spend-citrus-parcel-hub.txt",
+      "sourceGitBlob": "4e3a309f232f3248194f1a75f9743fdfcae2d642",
+      "bytes": 2109,
+      "sha256": "2e27f658c027bf9f0e13ce21482c627a43e9fb26bcfece6e65bcb4e79a9b93a5",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-7/prompts/spend-citrus-parcel-hub.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-8/originals/spend-mint-canal-tram.png",
+      "sourceGitBlob": "74c96ee80d2e90e92afb3ffdd4fba38f35f77307",
+      "bytes": 1501782,
+      "sha256": "a02eedd7fac88c0c1cceb07903b027bb6b3dc5739d7ffecf9906ecd38f963aba",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-8/originals/spend-mint-canal-tram.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-8/prompts/spend-mint-canal-tram.txt",
+      "sourceGitBlob": "945d05ef5857dde8be2518ca1aa4ecf6e961111a",
+      "bytes": 1737,
+      "sha256": "b0fdbcca43c6cc9fc14031f3635e21d83ab9c4e12a58f4b4c4e3ef988fc31df5",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-8/prompts/spend-mint-canal-tram.txt"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-9/originals/spend-sunroof-market-house.png",
+      "sourceGitBlob": "caba9229dbcb8a8479ef1615b87fd21c898c86b1",
+      "bytes": 2006763,
+      "sha256": "d0328adc0ce24e22afbcaf67e09d93c0eb03e7a805d30890532284ecc0a1f24c",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-9/originals/spend-sunroof-market-house.png"
+    },
+    {
+      "sourcePath": "authoring/library/reserve-illustrations-wave-9/prompts/spend-sunroof-market-house.txt",
+      "sourceGitBlob": "d1dda4e3174290ad2e3077207bd08f8d4461fc79",
+      "bytes": 1763,
+      "sha256": "512c0afdf32685dae7af8b17cd5ba8e8bb8bc3e6be6d197a774f0dfa0e63b76d",
+      "destination": "content/archive/owned-source/authoring/library/reserve-illustrations-wave-9/prompts/spend-sunroof-market-house.txt"
+    },
+    {
+      "sourcePath": "authoring/library/route-worlds/descriptors/coupa.json",
+      "sourceGitBlob": "a8add696cfe8dc2aa8f27a6130e3c98df94e91e1",
+      "bytes": 1730,
+      "sha256": "38849fc20068802638304d14b2df6fbcefdca1a6f76fdeb6a2520464b5612503",
+      "destination": "content/archive/owned-source/authoring/library/route-worlds/descriptors/coupa.json"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/coupa/originals/listening-court.png",
+      "sourceGitBlob": "84548d040b6271c89f6cd268499d8ca046862d0c",
+      "bytes": 2767187,
+      "sha256": "8aab2381420f0b127eb98b402de8c7b2af2fc24d471a61ce6180b0f17910959d",
+      "destination": "content/archive/owned-source/authoring/library/sentinel-theme-art/coupa/originals/listening-court.png"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/coupa/originals/open-the-circuit.png",
+      "sourceGitBlob": "fd26bfd5703dfc561275785623ce16a3faa16608",
+      "bytes": 2449288,
+      "sha256": "c3251eca67f94f7e27c75e0c4ac8d1ade6a81b009ee3c154ec276578eb2a8793",
+      "destination": "content/archive/owned-source/authoring/library/sentinel-theme-art/coupa/originals/open-the-circuit.png"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-art/coupa/originals/switchyard-gates.png",
+      "sourceGitBlob": "553e3885221fa6f484367bf35b2a4f2bdd97d5b8",
+      "bytes": 2187660,
+      "sha256": "1395c68c2742d979eeb811be85dbf1352dfb78f114c1352112fac9937ec5e96a",
+      "destination": "content/archive/owned-source/authoring/library/sentinel-theme-art/coupa/originals/switchyard-gates.png"
+    },
+    {
+      "sourcePath": "authoring/library/sentinel-theme-chapters/descriptors/coupa.json",
+      "sourceGitBlob": "9adc1a486dbfb7d55e18f56def4489d8a77c58be",
+      "bytes": 1790,
+      "sha256": "7642e1a75ed6a1956a280c37a4602ab5d9a3f88c566f9a4740d2313514dd7c37",
+      "destination": "content/archive/owned-source/authoring/library/sentinel-theme-chapters/descriptors/coupa.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/README.md",
+      "sourceGitBlob": "f866b26282eee9dd4e103dcfa03c88e612578c49",
+      "bytes": 4541,
+      "sha256": "d468d08687452868f1d70e377516b3b50cc9360d4bbd7807c85b2ffa6cb739f3",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/README.md"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/originals/city-savings-observatory.png",
+      "sourceGitBlob": "1cf9389f405fecf7f529db51b23134380fb8b5f4",
+      "bytes": 2702090,
+      "sha256": "71e39606ce0283c0bb6fe120f22e2429415aba1d9dac0d412f629b686ba82175",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/originals/city-savings-observatory.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/originals/shared-value-harbor.png",
+      "sourceGitBlob": "58673a9204dcbd7c6b330785696bbf2a93101afa",
+      "bytes": 2577915,
+      "sha256": "d80e371a2bc008ce1b893268725add92a5b9a18bc8589e7b5145cbb4a75b46fa",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/originals/shared-value-harbor.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/originals/thoughtful-market-workshop.png",
+      "sourceGitBlob": "121f171f155916467cb7f7c750f2e021d1b5eae3",
+      "bytes": 3005071,
+      "sha256": "4f64115023245871c5ae126ddc8f711e9b0b48d130316045a1ba3baf08934fa0",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/originals/thoughtful-market-workshop.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/prompts/city-savings-observatory.txt",
+      "sourceGitBlob": "ef17dfb3b44fef8ecf3c0baaa8063ef929d87e71",
+      "bytes": 3222,
+      "sha256": "5fea4a3a2396fab0e8cf4b9275f751b304ec495adefaf7f26cd1c82122da6ef1",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/prompts/city-savings-observatory.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/prompts/shared-value-harbor.txt",
+      "sourceGitBlob": "ea657f43ec08203acbed70a2e502dc2e15ac61d5",
+      "bytes": 3155,
+      "sha256": "34a21f7b4e3f84c63eb30c0f2467db93cec95c96bd408e4115da072a355fc124",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/prompts/shared-value-harbor.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/prompts/thoughtful-market-workshop.txt",
+      "sourceGitBlob": "359baea6b508ec46cf5a959531bf0465a979b3c7",
+      "bytes": 3262,
+      "sha256": "670f880aae5703032aaffbff5984cdf0a7864d8a1d77879cfe83f79e45aacbd1",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/prompts/thoughtful-market-workshop.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/provenance.json",
+      "sourceGitBlob": "f25f9eb1b7234802e2c9fd7c8ddb07f8fb89e42b",
+      "bytes": 8373,
+      "sha256": "e9210678ac08512c8962a15b11f01bd98ea3a626379c246d442e35d2cc8d3cf6",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/provenance.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/tool-requests.json",
+      "sourceGitBlob": "4ac2ce5246d89c1ab706686180cb71a717d0f50b",
+      "bytes": 10133,
+      "sha256": "3115fe77ecb6ee0cf371fec277e9621a96a8904445814185db63c0451061b9eb",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/tool-requests.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-network-art/tool-responses.json",
+      "sourceGitBlob": "a10abd3c61096737810d6d53346cd90ad3d4f027",
+      "bytes": 2818,
+      "sha256": "d42fc8a7170fdb221b1f75e2fd8470940090cacbf607392f030003b2dc960feb",
+      "destination": "content/archive/owned-source/authoring/library/spend-network-art/tool-responses.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/README.md",
+      "sourceGitBlob": "b1f3f8ceace67910a0e8d1c00cb052891bc629d6",
+      "bytes": 6155,
+      "sha256": "2abbd725ccb89764549f85a13ef5cddccaa7b00e76dca4c28d0964da5d1e7693",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/README.md"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/east-pixelated.jpg",
+      "sourceGitBlob": "a0d9d8adfa790fea33537f6c54bea3dfb27a86b9",
+      "bytes": 88305,
+      "sha256": "42847003fa5c4def715169fdce730554e90e47c71d01d1ae0bf35729864b4547",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/east-pixelated.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/game-scale-receipt.json",
+      "sourceGitBlob": "c66dad4e2c3faab8741dbf101e0dc592789ce1ef",
+      "bytes": 3399,
+      "sha256": "3696c92ead5bffe140b9bb4e09163bab48a059df0aa546ccd06e31eb05dd6df5",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/game-scale-receipt.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/index.html",
+      "sourceGitBlob": "e47a31986fe475728fd411342e34d7533bb632d2",
+      "bytes": 3931,
+      "sha256": "02282f05a47d6f97ef890c403889b2c74fa3a2bbcbae78cff3b5263a67d94105",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/index.html"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/inspect-alpha.py",
+      "sourceGitBlob": "cc34e8cc1c7c18f0cd339c418a1b6bf62e9dc36e",
+      "bytes": 3079,
+      "sha256": "1e685fb19c5618fb3f4c12f00a4ec1ada1f401b3c23d46992f42ba8220d4c46e",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/inspect-alpha.py"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/inspection/north-auto.jpg",
+      "sourceGitBlob": "ebba6f901f1545376f10a81bcb09931cb6a18f6e",
+      "bytes": 87538,
+      "sha256": "29eb99044437fbc2fab649ff1e3c15f9556a7e6165cf6d93d7e72718d5c55955",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/inspection/north-auto.jpg"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/bomber.png",
+      "sourceGitBlob": "520004eb6bd8f5b33ab5d64b76be6fa5f3351c92",
+      "bytes": 751704,
+      "sha256": "9657e96d874439abee5e25edc74addfbc09251b29d94e4181cff519234cb06d1",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/bomber.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/carrier.png",
+      "sourceGitBlob": "1d17be7cd74f93649da56f44bbee96ba521a0a03",
+      "bytes": 557242,
+      "sha256": "319ca85aafe43a1e6d321c792386bd8d8773e5ab929eb0a2be8495b6a8d4cabc",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/carrier.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/fiber.png",
+      "sourceGitBlob": "9ef911a49ce6598fa19969e787ec9a5f307da372",
+      "bytes": 607264,
+      "sha256": "16dabc04250ffb1630c28bbc2c41372b837102445d27c9ce4a6f3bef3608d854",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/fiber.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/impact.png",
+      "sourceGitBlob": "e6c6594112e901abb91554effc08788b4636fbec",
+      "bytes": 467205,
+      "sha256": "2d90408c213125725c49ab837cccc56d2fe53c873f0e895dd0f5bb6f6df82233",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/impact.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/interceptor.png",
+      "sourceGitBlob": "05f6cc0ee24bd26a9de3f54ced680f7a60e23f9f",
+      "bytes": 313087,
+      "sha256": "340674c4dfb4ae6a9b501bb1849d47edb7ca81af96f888fcf26a228f7eb7e9c0",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/interceptor.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/scout.png",
+      "sourceGitBlob": "30df68edcd28cf3cafbcd267c10d495a0b808d15",
+      "bytes": 390919,
+      "sha256": "fedd015335b836535d3078d4f819576344fa74a1c82e172d9b61047b68edf566",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/scout.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/originals/trapper.png",
+      "sourceGitBlob": "72f180d1fd1be519b0f4bff8651708e7df629b5d",
+      "bytes": 672321,
+      "sha256": "5fe7ef3796e27ab33d6e5ad7c1a748bee66e23fa28fa18293953fd7e72591015",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/originals/trapper.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/bomber.txt",
+      "sourceGitBlob": "efc068eebb86884e6f9bdb174f53c57cba355c51",
+      "bytes": 2280,
+      "sha256": "a234da543ec92ebd02f64eab3c1ec3fcd3c206447b7df0f428876b5f9162d92d",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/bomber.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/carrier.txt",
+      "sourceGitBlob": "6fbe54ab2da7a9bb909457120ded2c97781211cb",
+      "bytes": 2274,
+      "sha256": "cf43d21843e4d474fff09f96a556205a85ab6567ea27c92fae6dc35fc4719406",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/carrier.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/fiber.txt",
+      "sourceGitBlob": "cb95f67a6aab0ebb8a26a4a0f24631833036cb30",
+      "bytes": 2309,
+      "sha256": "3eba2134b6feefaad704f74946fbe1b3de51565890f6150d07d6769277195bde",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/fiber.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/impact.txt",
+      "sourceGitBlob": "e87f5b487ecb5e4f00bec29918f42b8e62ab1296",
+      "bytes": 2261,
+      "sha256": "f9977f68a4175017233f77eddb5e44d8b112b2ffa11fd4feebb3ed6c36949af1",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/impact.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/interceptor.txt",
+      "sourceGitBlob": "928f95f483c1f46031d1aeb5edc3536464c82b2e",
+      "bytes": 2225,
+      "sha256": "d708ec5141cdab95924b2f795788815cb9ed12d1909bfac9d7bafb6226392d17",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/interceptor.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/scout.txt",
+      "sourceGitBlob": "b6bdb976727a867f43117c7d5add3e841292df35",
+      "bytes": 2230,
+      "sha256": "a2d50c71013d4fefc70818fa5578b32ca2889c8f4bdfe3dd37dc10d5e48f46c1",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/scout.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/prompts/trapper.txt",
+      "sourceGitBlob": "f7b38f5efdb7e4f7dd2fd3141a7e34ac1432df52",
+      "bytes": 2325,
+      "sha256": "17c1fd7e483a17ef2361f04591f461d4217bd0ae951f885be3c142a947374179",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/prompts/trapper.txt"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/alpha-inspection.json",
+      "sourceGitBlob": "e3b7d9f53d3d1980dec51931a7637d7d51ba57c8",
+      "bytes": 29365,
+      "sha256": "7fa98777c6f9743f54648a7dbc20b777099c5d6b5d1d90b6402fb3920f846594",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/alpha-inspection.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/bomber.json",
+      "sourceGitBlob": "ad436cf23a4e1b68ea37f0057a44c06335b36e09",
+      "bytes": 1717,
+      "sha256": "fc099ad967e381d17a859d237cfd727f76e16e0d054f0e373c83181f9efc3cca",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/bomber.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/carrier.json",
+      "sourceGitBlob": "5721fb44d9c2adf3d0026aacbd6bfeef359fe92e",
+      "bytes": 1676,
+      "sha256": "14ad7d974be7f6707813ff4a4d6e3ae1d6a121c6066aea7c22c4ac5818cff912",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/carrier.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/fiber.json",
+      "sourceGitBlob": "7babfe9a343ecb894cb59fe5403455245ca62334",
+      "bytes": 1674,
+      "sha256": "61f31db9c4e7be86e36eb0c9decf32efecf465f48c7bc1c523345d00307898ee",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/fiber.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/full-image-inspection.json",
+      "sourceGitBlob": "ac6b880e4ee1d1433f4c7d06f2f43bf476042e18",
+      "bytes": 6161,
+      "sha256": "05e714dd973b5579bd44852bb7b706337946ab251be849d4fdd006dee66c79c7",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/full-image-inspection.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/impact.json",
+      "sourceGitBlob": "e2b44ae5aa74a4656522eb20e25b0f15d0948c20",
+      "bytes": 1645,
+      "sha256": "cf9e51cfd6c244a3aa59dfe2669e4741398b5d6aafbf1e687bdd07cc3d7e3ff6",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/impact.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/interceptor.json",
+      "sourceGitBlob": "ceb891a07e25b94726ec4fc8310c59ebe8401545",
+      "bytes": 1632,
+      "sha256": "695aa68689066193901ba09012f67796aaeeb1416110c5e9a8fe4f03ea98d961",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/interceptor.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/official-reference.json",
+      "sourceGitBlob": "1955ff997db13c475bc73d1c406e870cf80c51fa",
+      "bytes": 2130,
+      "sha256": "0df3bea6492851e8eddfa18cc570e4d373cb5e286d2350d9199bd1cc52aadbde",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/official-reference.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/preparation.json",
+      "sourceGitBlob": "192130326fae651e90e8ed2b7257cc3e043988d1",
+      "bytes": 3641,
+      "sha256": "33b32c28b6a950052e105a1619a4a895eb815de52c3676897949f2b2cca2cb42",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/preparation.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/reference-theme.json",
+      "sourceGitBlob": "ca08583fc4eb0335afdec5631707e2d44b833c77",
+      "bytes": 1191,
+      "sha256": "07b0a59034ed14d5c3f9ecef17ff162624d205673ddaa5167541ac6c61a668bd",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/reference-theme.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/role-briefs.json",
+      "sourceGitBlob": "8e6b589e33f27c8c4f76b99ae80aaface5bfda5e",
+      "bytes": 21941,
+      "sha256": "c3c05c279c27f90ba9dbc615ab9c2adf41e9dae5ee9b320ac3fa48442c53f410",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/role-briefs.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/scout.json",
+      "sourceGitBlob": "7d620f7e984462bcb909c0cd5e6f8f64f10f1405",
+      "bytes": 1626,
+      "sha256": "27d5c54fe92173f12ea069dc46b1766e89ced84996bb52a1d44c5da0e333ffd8",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/scout.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/tool-responses.json",
+      "sourceGitBlob": "cdce56f915100e17e573606cfc7018560b20e412",
+      "bytes": 20512,
+      "sha256": "26983cfa80ba23a04cbfabadc5941390fd470f69099bb3b0a406aed438a787ff",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/tool-responses.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-role-presentations/provenance/trapper.json",
+      "sourceGitBlob": "d3573ab945a0142e16410f67e752cdaf0bdbf0eb",
+      "bytes": 1685,
+      "sha256": "0f3b41ab645b6457900d02379fa9cb55535e45e86714de085a58084edd85dee8",
+      "destination": "content/archive/owned-source/authoring/library/spend-role-presentations/provenance/trapper.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/README.md",
+      "sourceGitBlob": "3ec4a7b2f82ac5b1b359f8df7cc99d61e46cdc23",
+      "bytes": 4027,
+      "sha256": "feb2ed590334a1e8cdb8ce34e0ffb16c57721cead74705d9f58f06595e86a132",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/README.md"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/generation-results.json",
+      "sourceGitBlob": "382dc545093beba71d485581f33da5d2a29510b0",
+      "bytes": 3217,
+      "sha256": "54af970b2bbb79bff440dd6101194572483ef500dd7accebe1c77a11e21011ae",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/generation-results.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/originals/network-garden.png",
+      "sourceGitBlob": "b548eaeacbec7ec2bf031a7f6f2011d5741b75f0",
+      "bytes": 2858095,
+      "sha256": "65d18bb0e98d901b9ba4820e62724dfbe32da6cd31c5580fe03096eedbfd39f0",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/originals/network-garden.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/originals/shared-harbor.png",
+      "sourceGitBlob": "db7acded5da57ca1f79c64fbcf3c7eea386b6914",
+      "bytes": 2686912,
+      "sha256": "8abf21258aef8cee936909fe7d2d8c4eb86a9eb8aff61c6fae6e6f918f5a8e3d",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/originals/shared-harbor.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/originals/value-foundry.png",
+      "sourceGitBlob": "dac73dc20b9ea2007913e6a3bf8eb9cf4580ca84",
+      "bytes": 2725160,
+      "sha256": "0f0c8022f3b80732c24131324ce3ecf404219f5de6546ead11ff825e3dbed518",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/originals/value-foundry.png"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/prompts.json",
+      "sourceGitBlob": "08acc7135dd8dcba4e3b16178c2bd78aeb0a98d7",
+      "bytes": 5088,
+      "sha256": "6ad44570fe6576f2880802e427f8c4fc793ab35061d1273a1061c6d00bd01c55",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/prompts.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/provenance.json",
+      "sourceGitBlob": "4e21e5cc6d2a27f8ac309ec5a0bd930f78daf4a1",
+      "bytes": 5024,
+      "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/provenance.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/verification.json",
+      "sourceGitBlob": "41ba7686ed510462495282fdc77f8e4527b52d50",
+      "bytes": 3587,
+      "sha256": "9a883fb9c5b4523882706de469c88dad7f5263d2fd9f168cdecc5c90a05a509c",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/verification.json"
+    },
+    {
+      "sourcePath": "authoring/library/spend-route-art/verify.mjs",
+      "sourceGitBlob": "048a27edb9cb445c4601c0ebb28afa009455c2f0",
+      "bytes": 4494,
+      "sha256": "563631894e8cd249990c9dcab0e51d04138f1bcb7ef30b71e5a1aea33dc07501",
+      "destination": "content/archive/owned-source/authoring/library/spend-route-art/verify.mjs"
+    },
+    {
+      "sourcePath": "authoring/media/examples/navi-network.media.json",
+      "sourceGitBlob": "8d87b28756205543cc8948115ee833a08fe5318d",
+      "bytes": 16767,
+      "sha256": "f0d926d09fe4c0e7a6d5f964d7e1da8c9fd882281b32fdee353b13dac2ddf652",
+      "destination": "content/archive/owned-source/authoring/media/examples/navi-network.media.json"
+    },
+    {
+      "sourcePath": "authoring/motion-lab/assets/navi-avatar.png",
+      "sourceGitBlob": "7f48702f790f140cac56eab4b22fadb95ff1e3dc",
+      "bytes": 384917,
+      "sha256": "3bc265ce6af451a76bc9ab2e9c5c8991c69e43d3d57efbc47c0dea2728e9ff69",
+      "destination": "content/archive/owned-source/authoring/motion-lab/assets/navi-avatar.png"
+    },
+    {
+      "sourcePath": "docs/offline-pwa/evidence/sim-community-20261002/coupa-offline.jpg",
+      "sourceGitBlob": "4960d5a93fa5bc2818d04ec8012bdffdf66981a2",
+      "bytes": 60204,
+      "sha256": "9963863eaf5b82dcdbf67c6cd4711d941975446f0d28adc512b391a88b7c8873",
+      "destination": "content/archive/owned-source/docs/offline-pwa/evidence/sim-community-20261002/coupa-offline.jpg"
+    },
+    {
+      "sourcePath": "docs/research/round-03-coupa.md",
+      "sourceGitBlob": "1584aad93e40ceb314d64fcc7df9eb690c7cce89",
+      "bytes": 16179,
+      "sha256": "a3e4b549768f514f76645cb345f33b70f0abb15e0504f177a0e4f614f5fa99b4",
+      "destination": "content/archive/owned-source/docs/research/round-03-coupa.md"
+    },
+    {
+      "sourcePath": "docs/verification/coupa-mode-scenes-2026-09-29.md",
+      "sourceGitBlob": "1e168c468c360f538dd179948a35de55fc41548b",
+      "bytes": 8295,
+      "sha256": "e3ae0353ea65734c057fd457526ad935d0c106614bca587cba89cbf216d0060d",
+      "destination": "content/archive/owned-source/docs/verification/coupa-mode-scenes-2026-09-29.md"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-adventure.edition-build.json",
+      "sourceGitBlob": "53ad2d89e7e116ade3197427563026ea1ae12ab2",
+      "bytes": 82712,
+      "sha256": "b7312c277adb928f62cfc29b172c616a20e9e897facbfb4426abb14c0b34d1db",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-adventure.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-adventure.offline-cache.json",
+      "sourceGitBlob": "985506c2ca529ab339b88f29191e42631ec5a3ff",
+      "bytes": 82457,
+      "sha256": "bf21cb48cd496677c024d126b2c1c34d9edae0cdc68a92890a534a3bc69f1b7e",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-adventure.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-all.edition-build.json",
+      "sourceGitBlob": "408414696e315e8120502531be39586276ed62d5",
+      "bytes": 87926,
+      "sha256": "1113e55496474249b863991b03f27a78386c082a59dec5c7fffe758b201af34b",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-all.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-all.offline-cache.json",
+      "sourceGitBlob": "8a4fff3eeb99ab672c0e6efbc1cfa0ababc4dde4",
+      "bytes": 87671,
+      "sha256": "5944b4e691525c020fbf9376689ab4aa10a09681bd7cd0712d7624322670c5cd",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-all.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-culture.edition-build.json",
+      "sourceGitBlob": "977337ea3e05c4e2895a685abe933cdc1426fa3e",
+      "bytes": 82863,
+      "sha256": "0c7553227c4c2a7235615012cc917f6dd27af662fa955b4b946e2da00d97e0b8",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-culture.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-culture.offline-cache.json",
+      "sourceGitBlob": "e5c60d4aaee5b2d61fda4f4c3a1f328b1ccf81fa",
+      "bytes": 82608,
+      "sha256": "8e12fcbb35545395867e1679e899f54d52570e9a6ae3ba0a0c926a19f8e326cf",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-culture.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-developers.edition-build.json",
+      "sourceGitBlob": "a4da3fe51468af04b81f31c0a147e432855104ba",
+      "bytes": 83044,
+      "sha256": "8a28c9c165fde2ec16b0a0dfeee472fbac444b9bb4e415681a5fe9f1f281a04c",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-developers.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-developers.offline-cache.json",
+      "sourceGitBlob": "552dc1a343ac4bb5cda3a0937bc049e07ff21e1b",
+      "bytes": 82789,
+      "sha256": "d85389071c04bda456abd761ec8905944049e26603fe9a98196da1d34c289555",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-developers.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-foundations.edition-build.json",
+      "sourceGitBlob": "8b1c23595f7bd60cd88856e1b55db9e3800a1dbf",
+      "bytes": 83033,
+      "sha256": "90aa287126e4970798b682a3303cd6c6ab336ead57406cdb5f4cfe4a403a3871",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-foundations.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-foundations.offline-cache.json",
+      "sourceGitBlob": "71213286f037b360ba695e0b72e00717c264c460",
+      "bytes": 82778,
+      "sha256": "ce13c5efff8a2fa443f9ed1e778e83c339350aeed50c366545203146e2c849f9",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-foundations.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-operations.edition-build.json",
+      "sourceGitBlob": "d4428eb22d42e6a76b35fd83607b4f38955731ef",
+      "bytes": 83060,
+      "sha256": "0bfd5c5f1d9bdf1cafc1a1ed4aebe79985fa05f1bf388e975c54f1afcfc9a99a",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-operations.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-operations.offline-cache.json",
+      "sourceGitBlob": "abe103a35b5c59d0f708ca840ebda28e486e610c",
+      "bytes": 82805,
+      "sha256": "81f4d3ec28b9fbac7a9378c859a2f10388d120bb5b2f4fe7c6719503204d64f2",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/edition-inventories/coupa-operations.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-adventure.edition-build.json",
+      "sourceGitBlob": "e87f974f0f1c9eeed105e17adfe332f533ef5d12",
+      "bytes": 82712,
+      "sha256": "26c986d6b1d3e163da29948baabd0e92e3690d1041e9c60e11789d43d0ad27f7",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-adventure.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-adventure.offline-cache.json",
+      "sourceGitBlob": "8c92e19d488330e2955660d63016d32775553398",
+      "bytes": 82457,
+      "sha256": "5d2f5c5ed6369caa31d1da1783b0d1c4085cade1366ab06d318e4abf3eb4bd14",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-adventure.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-all.edition-build.json",
+      "sourceGitBlob": "35ed77c5d040de6b9fcb81456c13d370e2dde0c1",
+      "bytes": 87926,
+      "sha256": "171d8d3c3fb802687d31c72185747d2ce254997b23782e8a02db2454cfd8af38",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-all.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-all.offline-cache.json",
+      "sourceGitBlob": "6e680489fd7b6c353aa519b38ffd38a5fc268e26",
+      "bytes": 87671,
+      "sha256": "a7bdf46bcb07dc7794509c4e77f18963560d3b2c5163ca0884ef383609e81c84",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-all.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-culture.edition-build.json",
+      "sourceGitBlob": "337e0f37e82aa9c3cce7df43b422dce3c4eb919c",
+      "bytes": 82863,
+      "sha256": "e201b11eccff6078313c17079ff0de7c590ba57291b91da0ea2ace8dc0363b78",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-culture.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-culture.offline-cache.json",
+      "sourceGitBlob": "b468655e54c3f038c4470d2147654e217fc14ced",
+      "bytes": 82608,
+      "sha256": "52afe68456cbc64f699aec5c05cec58cd5f0add529f9c7deda92cecd4464e85b",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-culture.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-developers.edition-build.json",
+      "sourceGitBlob": "d65a36e1099ec774510ba31eefbaf416cc8a0ae0",
+      "bytes": 83044,
+      "sha256": "6a04833c0fbb524a84ae5ce4ab3fcdf17e6c37a147e2dba6134a25fd6c0deca1",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-developers.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-developers.offline-cache.json",
+      "sourceGitBlob": "ce14047afd9992b5303cce9c52b2a35982f7c52c",
+      "bytes": 82789,
+      "sha256": "ba57d5fc99953d72e818b5abd8f9f68a4cfb02e581513023decdae3e0eeed3de",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-developers.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-foundations.edition-build.json",
+      "sourceGitBlob": "f81b1f8d6faecaf9c66c874fc3ee292d94aff2ae",
+      "bytes": 83033,
+      "sha256": "61c52b1c134c350d55f39119d252b3ce0c6bd049f3043c1d3baeff29526a4114",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-foundations.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-foundations.offline-cache.json",
+      "sourceGitBlob": "ac755ba4be5f1122d12cf8dad9b24318cb77be95",
+      "bytes": 82778,
+      "sha256": "9cc9f0102c50a472b24013d5cc2564c8ed5d49553bcaf3a86e8e395c96cc5e4b",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-foundations.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-operations.edition-build.json",
+      "sourceGitBlob": "b45644fece1f5ed373219c870aaf8ecea0bc7fe4",
+      "bytes": 83060,
+      "sha256": "143a59dd7dd0212d20220a5c36a3d2271e3bdb83292becb4f4d5bbd9a499ba44",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-operations.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-operations.offline-cache.json",
+      "sourceGitBlob": "53d52d868f1390e5f4d4ebbfeb4c8f5ffbcb7c9f",
+      "bytes": 82805,
+      "sha256": "e329d194cdb7d89168c2e3abb14dcde85133e4bcf3b1c92baa60e1d29683b046",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/final/edition-inventories/coupa-operations.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-adventure.edition-build.json",
+      "sourceGitBlob": "8e4d7f3754ad6abf27cf0f215c3a7b1eb78ccbab",
+      "bytes": 82712,
+      "sha256": "601b49a67ade5f1c5fafbf775496dd9ae7ebddd8227b8bfc89df9bd070c64ee7",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-adventure.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-adventure.offline-cache.json",
+      "sourceGitBlob": "051ee727a1533e2bba10e19899ddf8d0f3c5f9cc",
+      "bytes": 82457,
+      "sha256": "74d3090cac4af39f669803bd7fd9a3fb6efda6966d0ad772dea316df2cca0773",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-adventure.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-all.edition-build.json",
+      "sourceGitBlob": "e47f792fb48cb1c08762c2fe07136d7a2f1a0379",
+      "bytes": 87926,
+      "sha256": "c0eefad720a68338ccf3aa639da4fe9edd33dcd6c7a1c1d6500273b032ad84e2",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-all.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-all.offline-cache.json",
+      "sourceGitBlob": "4e14ea06ea59e1fa8c0858969d110dffa2fb1faa",
+      "bytes": 87671,
+      "sha256": "e05a77f7b92e08cfb514c9bad22cf4e1269d80daa29faabae714d5a5019c120f",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-all.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-culture.edition-build.json",
+      "sourceGitBlob": "348c192117cbb501c32f47704220a816f2d1a2d3",
+      "bytes": 82863,
+      "sha256": "4efb9476cb98c3e28ac51e07b5f267924d5ecf0198a1532406842125e6d4e8eb",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-culture.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-culture.offline-cache.json",
+      "sourceGitBlob": "3a09dfc21d7484b4af9d64335eff950be3f0f25f",
+      "bytes": 82608,
+      "sha256": "d47707fb39c4b88fec1825968860855d1d9a008cc6c6d12a1aaa857ce27ed034",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-culture.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-developers.edition-build.json",
+      "sourceGitBlob": "ba30a999918b726db9fa9c153a85f256e89e3874",
+      "bytes": 83044,
+      "sha256": "99000f2347d0d6b7dc1a28b2ea1ddba8cd4a7e668a31d0bc587db5d73fd46dca",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-developers.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-developers.offline-cache.json",
+      "sourceGitBlob": "bb5b396b509a6f7566210ac4a57db494e6dbca4d",
+      "bytes": 82789,
+      "sha256": "5f33782e2b5483592f22e497c0bd708343ff26870d9ae7771eecca538e652cef",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-developers.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-foundations.edition-build.json",
+      "sourceGitBlob": "7e331de8ea16440566e1ec536adadb721952d648",
+      "bytes": 83033,
+      "sha256": "5526425daa928751defc8708f87cafe179a2604d09121fcac1fcf5404ef9b9ef",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-foundations.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-foundations.offline-cache.json",
+      "sourceGitBlob": "d58608c7b43020ded032280c282a18cbac916f8c",
+      "bytes": 82778,
+      "sha256": "7b9072c968b1e9fac48412aa988c0b5c87a5fa53549a505aad7519cb0ba9e62c",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-foundations.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-operations.edition-build.json",
+      "sourceGitBlob": "516d6068b9783e7d3495f44abbd5876eaf3e1a18",
+      "bytes": 83060,
+      "sha256": "e93b658feba9c1ff88774e3f2296438765e0aecdc7f46679eee38152a4062ec6",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-operations.edition-build.json"
+    },
+    {
+      "sourcePath": "docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-operations.offline-cache.json",
+      "sourceGitBlob": "ad06f0f2732e8122cdb1c103658dda58f2f5e0ef",
+      "bytes": 82805,
+      "sha256": "440dbcee34fc068bbd6e670e7ce4812b7696b321da4d4dc5d9136d29728b1ffa",
+      "destination": "content/archive/owned-source/docs/verification/demo-qualification-2026-09-29/packaging/integrated-c5e3419ee/edition-inventories/coupa-operations.offline-cache.json"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-line-brand-2026-09-29/coupa-developers-390-corrected.jpg",
+      "sourceGitBlob": "7d85c8d19eac7be07561231d11d47b94834503aa",
+      "bytes": 53801,
+      "sha256": "da51fe35a4d0355b39783f54da088b92ccf51cc56199bfad3e366ddb4cc57b93",
+      "destination": "content/archive/owned-source/docs/verification/fpv-line-brand-2026-09-29/coupa-developers-390-corrected.jpg"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-line-brand-2026-09-29/coupa-developers-390.jpg",
+      "sourceGitBlob": "f7c6fdb4109f226a4b70e883aaf36acebbf152bc",
+      "bytes": 57249,
+      "sha256": "37554676ad8a4ce75e66a2f5a5b195737afd6311424fab28564d2726b6661d7e",
+      "destination": "content/archive/owned-source/docs/verification/fpv-line-brand-2026-09-29/coupa-developers-390.jpg"
+    },
+    {
+      "sourcePath": "docs/verification/round-10/spend-network-v0.1.2.png",
+      "sourceGitBlob": "f6237ea66daa9e7e2303248d93e78b707e94a65e",
+      "bytes": 98516,
+      "sha256": "661755b7e78db0d1f526c59aba10fc88a4cc0a0059ec7472e2847cf1646174fe",
+      "destination": "content/archive/owned-source/docs/verification/round-10/spend-network-v0.1.2.png"
+    },
+    {
+      "sourcePath": "game/communities/coupa/index.html",
+      "sourceGitBlob": "3368e61c5ec1a06c4cfc0ef9f5aa9483898e237a",
+      "bytes": 2591,
+      "sha256": "c4aeab32f5b05c5ad6af2d00f3a509f138a03aa499d586d16724f64b1057bffe",
+      "destination": "content/archive/owned-source/game/communities/coupa/index.html"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/archives.json",
+      "sourceGitBlob": "1a3cee792305d8f580793797309de67a922dcfd4",
+      "bytes": 49,
+      "sha256": "1ea74a6b13c74781fba202bacdcd5832e0e5170b888f46a31d5bf86681ed6b50",
+      "destination": "content/files/game/content/company-boot/coupa-adventure/archives.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/campaign.json",
+      "sourceGitBlob": "46b856434330c493d6f45989a4cbdb3fffc9bef3",
+      "bytes": 11221,
+      "sha256": "1e7cbceb30377bd9ffd1a8a23e07dc5954d9ccc3c2e9a151c2fb001b9029f77e",
+      "destination": "content/files/game/content/company-boot/coupa-adventure/campaign.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/classes.json",
+      "sourceGitBlob": "0c21251f7c02bc599fbfae23cf232518f00e8b36",
+      "bytes": 2227,
+      "sha256": "410a8e205346ed00e27856a6b727f1ed980db7fa26ed599a7201578962e363c0",
+      "destination": "content/files/game/content/company-boot/coupa-adventure/classes.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/presets.json",
+      "sourceGitBlob": "7a3b02fea0590a23c1e43766a58f74f27cd64bda",
+      "bytes": 1011,
+      "sha256": "64eb4dc5e0b8a91f65e3c7233a306039448af3c5ba781d4eab423f512b44b7bf",
+      "destination": "content/files/game/content/company-boot/coupa-adventure/presets.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/themes.json",
+      "sourceGitBlob": "0a953a18b198dc59143d1eca738c9374c901b149",
+      "bytes": 10021,
+      "sha256": "ab584882c6cc0b8a88d79473c565a7672d612f0afe0555042b26b31ffb91d2fb",
+      "destination": "content/files/game/content/company-boot/coupa-adventure/themes.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-culture/campaign.json",
+      "sourceGitBlob": "e7d54bd0f26a159496b3b3d733fde4418fbaaf03",
+      "bytes": 13772,
+      "sha256": "0995f8aff694c374eadfe2880156c1f7873650431ac436a54a254e824edc87b0",
+      "destination": "content/files/game/content/company-boot/coupa-culture/campaign.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-developers/campaign.json",
+      "sourceGitBlob": "095b8993307732bbdc0b495c1a62ee714fda9349",
+      "bytes": 15610,
+      "sha256": "5c9e81b6e7cb8946a7e471bb3a1ccd9a1ac6ebe61af24f77fb6fe1b0696c6cfd",
+      "destination": "content/files/game/content/company-boot/coupa-developers/campaign.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-foundations/campaign.json",
+      "sourceGitBlob": "a42788bbfb19614c2be71a30ec97e6e271071e69",
+      "bytes": 13878,
+      "sha256": "8bdc0f2a0687c0a6f3334e2091fa267dcdc570366eacadc44ddb8d09e50d4363",
+      "destination": "content/files/game/content/company-boot/coupa-foundations/campaign.json"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-operations/campaign.json",
+      "sourceGitBlob": "241ef61d0079f5d751c80fa3c4c5aa74dcc7e52f",
+      "bytes": 16221,
+      "sha256": "8bfc77fe8f32279d061197eed33bfd62663f86cd7fabf61d00b150ca4c506480",
+      "destination": "content/files/game/content/company-boot/coupa-operations/campaign.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.json",
+      "sourceGitBlob": "03d83b5ae5eb72511a5989957cb4e9c09bfb6cb3",
+      "bytes": 26234,
+      "sha256": "1baebc02667516bf1c8aaf7cc4f0a394254e599e671f6d2f0526b341d6640ae0",
+      "destination": "content/files/game/content/company-campaigns/coupa-developer-integration.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.lessons.json",
+      "sourceGitBlob": "864e5d0507c7bf26e48b8782e430a110d38221c6",
+      "bytes": 14655,
+      "sha256": "b7518328e989823c59da74709831e86e8dca55edcc139abb4a5d14eeab475f86",
+      "destination": "content/files/game/content/company-campaigns/coupa-developer-integration.lessons.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-inside-village.json",
+      "sourceGitBlob": "b35f9eb6508346edd47e65ea3572de6da68b266e",
+      "bytes": 24215,
+      "sha256": "584fdb801dcc747de97d01b0cd6992e20d87ae67e610218ee137403d16c36a36",
+      "destination": "content/files/game/content/company-campaigns/coupa-inside-village.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-inside-village.lessons.json",
+      "sourceGitBlob": "b664cadbad11312dd264c940431d1e14f8e21c5e",
+      "bytes": 13261,
+      "sha256": "d9a7a65c5643a2915aa714c9640c30f14b0645ef5f65ae3d2b54b7a5ac8f1106",
+      "destination": "content/files/game/content/company-campaigns/coupa-inside-village.lessons.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.json",
+      "sourceGitBlob": "76aab9e121ff7305c47d3adc7d865d3b3c5b24b8",
+      "bytes": 24577,
+      "sha256": "c31d0285ff6b24dd3a2bce30c4b0877b457a4ae3870ee6fb8f7996c8454668d8",
+      "destination": "content/files/game/content/company-campaigns/coupa-product-operations.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.lessons.json",
+      "sourceGitBlob": "1eefb7e766db653acd9476edfb14a5466987684f",
+      "bytes": 14323,
+      "sha256": "5041d09618f4bd9cc7c424dce2b3d840973dbb7dc2358f36a545075bf1d1dadb",
+      "destination": "content/files/game/content/company-campaigns/coupa-product-operations.lessons.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.json",
+      "sourceGitBlob": "c03f91757196201b129609756575d64894835533",
+      "bytes": 25031,
+      "sha256": "385ef30f002cd5f2fc11e2e080d877538cd83f6862ec6c440ed23fb75eab537e",
+      "destination": "content/files/game/content/company-campaigns/coupa-source-to-pay.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.lessons.json",
+      "sourceGitBlob": "04868d48592acdef4e1e39271d52959e32692ece",
+      "bytes": 14462,
+      "sha256": "82e91fae0b85c8aae6584c89c51d8c40a06d7ebb932375a003611d5426ee6707",
+      "destination": "content/files/game/content/company-campaigns/coupa-source-to-pay.lessons.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.rewards.json",
+      "sourceGitBlob": "df2edd0c38833900f22e9f7d67149c5f08b9f295",
+      "bytes": 4938,
+      "sha256": "f81e54560992325853f030b3a926a96c6bf19d62d0d32bcc05a1394a765d0b29",
+      "destination": "content/files/game/content/company-campaigns/coupa-source-to-pay.rewards.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-spend-in-motion.json",
+      "sourceGitBlob": "310dcc2759d94fd67b19dfdb61af1ccc8a34128f",
+      "bytes": 19730,
+      "sha256": "571a8f1c11344300de9e715b6490daf17a1087c9742efdf87ce38566e82f308a",
+      "destination": "content/files/game/content/company-campaigns/coupa-spend-in-motion.json"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-spend-in-motion.rewards.json",
+      "sourceGitBlob": "5e0b423fed42c5ee550d830ec7aeda1015514139",
+      "bytes": 34903,
+      "sha256": "cb85acdb99639a27117a49c80337f10c0f5ae4f1dfa093a2c024c86927a6ad7e",
+      "destination": "content/files/game/content/company-campaigns/coupa-spend-in-motion.rewards.json"
+    },
+    {
+      "sourcePath": "game/editions/art-prompts-coupa-bulk-02.json",
+      "sourceGitBlob": "6ba77fa4b4bc33a81581fb079c7e9603a8741b69",
+      "bytes": 92770,
+      "sha256": "55515e309d9fc90412e2ca4b2576e1e65be7d4c3e57963a74f1f1e984ff7dda6",
+      "destination": "content/archive/owned-source/game/editions/art-prompts-coupa-bulk-02.json"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/all-of-us-v1.png",
+      "sourceGitBlob": "436d6d88b20e73d5d66237e9d28465244325fb37",
+      "bytes": 997763,
+      "sha256": "556af50d368e0912547dc03f9b6854b43b13cea825fe5d3d0ad0979ab8e00f3b",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/all-of-us-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/beyond-page-one-v1.png",
+      "sourceGitBlob": "48e94363a5a85332f094c2ec8d9287517e14a1bd",
+      "bytes": 876039,
+      "sha256": "783a1086fa752ca083f2239fb424ba8c014436c6a8838a647ec129fe71464f55",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/beyond-page-one-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/build-tomorrow-v1.png",
+      "sourceGitBlob": "f0b5166c2ad3a4f8eeb4c0b4f3d73a877c8a2777",
+      "bytes": 914825,
+      "sha256": "f44ca426cec434334b31cadddab96a036c365f2a0492a39d935c73fe2475c14f",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/build-tomorrow-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/clear-the-exception-v1.png",
+      "sourceGitBlob": "d816bf32b375bf513fb09e6bcce2bad631066a0f",
+      "bytes": 896391,
+      "sha256": "54555dc7657f068e77b902f2f474baff16f344bc3b7e933bc40a07a9c2fa38a2",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/clear-the-exception-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/close-the-loop-v1.png",
+      "sourceGitBlob": "96794f3f3981adf77d80b5845b73a3189aeafba5",
+      "bytes": 994506,
+      "sha256": "176b93f6ec0c0ba5bd34e85cc733e8c918e8eb3087604f600f7bd542b6ba8f51",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/close-the-loop-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/draft-validate-explain-v1.png",
+      "sourceGitBlob": "7fe836f35d6a494d1d04d6ea38cff23a05a35c26",
+      "bytes": 925292,
+      "sha256": "3b3671602b4bab7cc611d84fd208c7c2b72b62bb97288274599e09d8eda6e2bd",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/draft-validate-explain-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/handle-the-change-v1.png",
+      "sourceGitBlob": "e5b229a5e7672b1d8532c1f594a8824f346fa125",
+      "bytes": 792498,
+      "sha256": "1dd7123f8cb633625226f096f5c5da7a848fd3532f04e4796ce70aeb7687d2a2",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/handle-the-change-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/known-references-v1.png",
+      "sourceGitBlob": "cf078afeee89e72c06508adcb9affa0f9e4d9c29",
+      "bytes": 886581,
+      "sha256": "dc64a854959590085d322a7d9e9f6dab1a477f6c651ad1d6271e39e058c2b0dc",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/known-references-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/listen-then-link-v1.png",
+      "sourceGitBlob": "51df44e745d510effd05ccca710a08bf5572edd8",
+      "bytes": 953677,
+      "sha256": "66d93ec13abcc1e3095c435278e7a4599ace4618724c93acdfd4ce0277f8b4d5",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/listen-then-link-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/make-room-for-tomorrow-v1.png",
+      "sourceGitBlob": "30906af667a8bf4c5193de50bdbc80ef6ddf4cc5",
+      "bytes": 987441,
+      "sha256": "83d2875d09e4c0685980c5be1e1a147f1325ab8eff44b7097f054c2e17e64296",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/make-room-for-tomorrow-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/own-the-handoff-v1.png",
+      "sourceGitBlob": "18279acbfdad2d21013720e13b9ae78455b79234",
+      "bytes": 929184,
+      "sha256": "d8d385fabf56624d69362f0287deb5236f081994b24dbcabe8af7e96e3bc11cd",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/own-the-handoff-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/paper-jam-v1.png",
+      "sourceGitBlob": "b2838abf7bfc387e3dc726325b0217af82c5b403",
+      "bytes": 934944,
+      "sha256": "27ce16100d34d2c9675dda83ba044413e949324e5fa2aaf5ab895142419f11b8",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/paper-jam-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/quarter-end-weather-v1.png",
+      "sourceGitBlob": "3aeeb4b6a67a5e4c44b5b566985ce90708aebb16",
+      "bytes": 940778,
+      "sha256": "1cf77eb26a6b2347e95fc5e65e59ecd8391cefd7af1f703dcf7122e84f393f3d",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/quarter-end-weather-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/received-in-part-v1.png",
+      "sourceGitBlob": "e6870c88ee59278c086ee6eed4f457f75c95f67d",
+      "bytes": 927662,
+      "sha256": "f60c7a5f9ab780e052cf5c43fe73ca05f4b6e48383c84a3dbf446ca672ddcda3",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/received-in-part-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/record-the-delivery-v1.png",
+      "sourceGitBlob": "fed7f90311ff7f5c10790e628946c7e53415516b",
+      "bytes": 829094,
+      "sha256": "b5d544d7eb6c299976bd102b4c7e63e41337cf23b317dd12a09cccc74e2f23f3",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/record-the-delivery-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/request-to-order-v1.png",
+      "sourceGitBlob": "a194a20d86b4a2931df0bab03492a7804f3cc647",
+      "bytes": 941689,
+      "sha256": "24e38468dc0836f5cd6f189a074f3e4857628b8a613e4b2009e5ab55d05c38d9",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/request-to-order-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/review-the-request-v1.png",
+      "sourceGitBlob": "11de3cb5e08e20b8c5fd62babc0a70f28b73bef9",
+      "bytes": 823416,
+      "sha256": "6815b2caaf6b65230d7efc90e57fd357e72f20eb6c3978164ba03668d943d431",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/review-the-request-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/room-for-everyone-v1.png",
+      "sourceGitBlob": "df87439966600981ed344b6382aed6c15faaf17a",
+      "bytes": 883373,
+      "sha256": "6939aa6f3ed8253504639cbd8db3d3449f160029211be4d30fc3dac6ce97b3b7",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/room-for-everyone-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/run-ledger-v1.png",
+      "sourceGitBlob": "f443ba4bbb6339533169100ff1941e0336967eb7",
+      "bytes": 969855,
+      "sha256": "7a9f66fb74c22ce6cdcc435e2f03dd85bfa4592e79ed53c33b03283edd780752",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/run-ledger-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/shared-routes-v1.png",
+      "sourceGitBlob": "fd9d2fb92d51bfe100a01559f97267a516d25541",
+      "bytes": 911169,
+      "sha256": "17ac9b2b0ddbe1810eba1940080b346b7840bd97ac01c18cdf9783039e7b3a64",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/shared-routes-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/supplier-square-v1.png",
+      "sourceGitBlob": "504f14d2d74fd4363ae1fc1ef70e9898c1f32279",
+      "bytes": 1008350,
+      "sha256": "0d539a4f1fc673b5c28622eb29aab7c124f29dc947646829cd00e839f246bd81",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/supplier-square-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/bulk-02/terms-bridge-v1.png",
+      "sourceGitBlob": "b250173705adfd2765cac3feb4c31e21eef7d039",
+      "bytes": 938978,
+      "sha256": "774f33dfce5bb1c62c3cb5ff46ff64cf8c6624b1d5d0e92feba7faaac3cca998",
+      "destination": "content/files/game/editions/assets/coupa/bulk-02/terms-bridge-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/choose-together-v1.png",
+      "sourceGitBlob": "0708bccd1c1e2574669911db94c7b5f5417045fb",
+      "bytes": 3209122,
+      "sha256": "9fc3d2f24f59dc49d7ea72f5ae7e201b511da5a0ab9607f094f782919ebbe7b6",
+      "destination": "content/files/game/editions/assets/coupa/choose-together-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/coupa-developer-integration-key.png",
+      "sourceGitBlob": "e4a16f6a44169f35a981ba689c812596610bed37",
+      "bytes": 1972536,
+      "sha256": "66c68f803aeb5d8590dcb29e05863d9147c12dbe7a5afebe6522a97b82b508ce",
+      "destination": "content/archive/owned-source/game/editions/assets/coupa/coupa-developer-integration-key.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/coupa-inside-village-key.png",
+      "sourceGitBlob": "bf66199fab4fd1d0e060e91894e5a729c3e44a02",
+      "bytes": 1997148,
+      "sha256": "50cf52f3ff6faeef17171a44acb83bf8b80e7090dcfa5fad512496676c18eb0f",
+      "destination": "content/files/game/editions/assets/coupa/coupa-inside-village-key.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/coupa-product-operations-key.png",
+      "sourceGitBlob": "77763bfd8bbb630793f993de7a0b6c4825e1fb34",
+      "bytes": 2105228,
+      "sha256": "371ab48050bb585c118346bcbbf97e8cdec3234415c3f41b16859874bda83604",
+      "destination": "content/files/game/editions/assets/coupa/coupa-product-operations-key.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/coupa-source-to-pay-key.png",
+      "sourceGitBlob": "91416a3aa6ee2a596aea7b45993ffc5ee316a419",
+      "bytes": 2021650,
+      "sha256": "bbfb32e28c42863a2c444de4c42d5843f107ae8573d8f773817abe9488801f3b",
+      "destination": "content/files/game/editions/assets/coupa/coupa-source-to-pay-key.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/flower-blue.png",
+      "sourceGitBlob": "a82e61e981cb0317a28c3527fd64c87e43189a92",
+      "bytes": 58489,
+      "sha256": "17fd8f43ad6d9c471badf9c3363d27fa646b1ec369d104fc8de4d8e006ac0a43",
+      "destination": "content/files/game/editions/assets/coupa/flower-blue.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/home.png",
+      "sourceGitBlob": "126c4e4ee643a2f5d9030c53ca0cd643d732b531",
+      "bytes": 2072920,
+      "sha256": "23fde0cc8d4af4cacb906bdd5c3a7146d24e436a129c221d7535171bee72fbb9",
+      "destination": "content/archive/owned-source/game/editions/assets/coupa/home.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/icon-192.png",
+      "sourceGitBlob": "162f85abbe4ce3c06f8bedad77787bc52d17d669",
+      "bytes": 15807,
+      "sha256": "68af331acfc75aa497e7c7576fd6c1ccc7daadc4e29a871e18aa3ccfe028332f",
+      "destination": "content/files/game/editions/assets/coupa/icon-192.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/icon-512.png",
+      "sourceGitBlob": "856661e2c30a63256c55e05fa5a18ad37283dc4a",
+      "bytes": 47962,
+      "sha256": "360d780522b6a81f0e83be086c52e962e0dfce7f0e1d4ee4e3559eb9391cd7b0",
+      "destination": "content/files/game/editions/assets/coupa/icon-512.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/network-atlas-v2.png",
+      "sourceGitBlob": "bfae045a6d084884bb87bcd58e1239156cf24b7a",
+      "bytes": 2918671,
+      "sha256": "aa6a581b04384b06e730e36399c0c75a03145b501c96dcb1247ec29f24b3d518",
+      "destination": "content/files/game/editions/assets/coupa/network-atlas-v2.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/repair-the-draft-v1.png",
+      "sourceGitBlob": "7f70bd44019074fe23901b14bb51b0b56a82a8d2",
+      "bytes": 2698028,
+      "sha256": "a1edf3bae43ddeb0c1694dea868a0327ccfed038f64162d08839e84585e1e5e0",
+      "destination": "content/files/game/editions/assets/coupa/repair-the-draft-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/scoped-access-v1.png",
+      "sourceGitBlob": "b4623ea8ab21ab0593ae9d3156b3d12f30219078",
+      "bytes": 3180834,
+      "sha256": "05865bd2f0a028ab582889736574e776876d0735a91c377dff3c89f04ff9b2a0",
+      "destination": "content/files/game/editions/assets/coupa/scoped-access-v1.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/spend-city-v2.png",
+      "sourceGitBlob": "4394367c1007e9ebfd801b88557faa03a8f6cb5b",
+      "bytes": 3134778,
+      "sha256": "fb468b9b308377d0e83517c64c34c6df4492d7909add3f3e700e03cfaf039d18",
+      "destination": "content/files/game/editions/assets/coupa/spend-city-v2.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/wallpaper-center-2024.png",
+      "sourceGitBlob": "f49d294144af4cf38586d3d608e1f99e284f6d37",
+      "bytes": 303927,
+      "sha256": "f4e686a06ac0b4d36b6974797bab06fc5a80b3e69fbcc4ab99f98e3c37af4177",
+      "destination": "content/files/game/editions/assets/coupa/wallpaper-center-2024.png"
+    },
+    {
+      "sourcePath": "game/editions/assets/coupa/wallpaper-network-2024.png",
+      "sourceGitBlob": "48f97639f28a29f99d9e0db1b6287f0a4947a855",
+      "bytes": 271090,
+      "sha256": "dc3564fbd91d1bd745f3e3cdbc8a09de56868e846ecae9fbd6598ddebd3f6e3a",
+      "destination": "content/files/game/editions/assets/coupa/wallpaper-network-2024.png"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-adventure-before-discovery-rewards.json",
+      "sourceGitBlob": "74586c2ddd7fde74bdc078224daa2d7a603788a8",
+      "bytes": 33391,
+      "sha256": "e251352b441ac1352802030be0bd6e9e2aed6a48e38dff8eee572c1d26221902",
+      "destination": "content/files/game/editions/retained/coupa-adventure-before-discovery-rewards.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-adventure-fb207466c.json",
+      "sourceGitBlob": "140a2308099ad5d8cfe74f652fe69f239dfa0ece",
+      "bytes": 29600,
+      "sha256": "ef9a0bf6562fa74ab643d9b214bf1deb1338a1694337cdd822d9cb3cd3c26937",
+      "destination": "content/files/game/editions/retained/coupa-adventure-fb207466c.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-all-before-discovery-rewards.json",
+      "sourceGitBlob": "3d3f266ee9606b47bc78b560814e69acf9087910",
+      "bytes": 165206,
+      "sha256": "4d79d4b009d3496712fe6919bb02730dc6fbe4c3d7191908bf75db75a989865b",
+      "destination": "content/files/game/editions/retained/coupa-all-before-discovery-rewards.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-all-before-learning-bonus.json",
+      "sourceGitBlob": "c2173e3c858f1fb9d622f0ef664efe76dd494142",
+      "bytes": 191970,
+      "sha256": "de8370665d5c99e953326e1861f0817afb3dfc511f0629cdec6f50c6d4b5c709",
+      "destination": "content/files/game/editions/retained/coupa-all-before-learning-bonus.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-all-fb207466c.json",
+      "sourceGitBlob": "a7d855859e720964cf6b52ebc9a1b8e11b536c6f",
+      "bytes": 148510,
+      "sha256": "680c7f4fdb23619aed0627ea47444c7040a7f208104e4c2abc1a3d486adbe636",
+      "destination": "content/files/game/editions/retained/coupa-all-fb207466c.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-all.json",
+      "sourceGitBlob": "82077ca929167380386d3f6a7fc0c96a2b02bee4",
+      "bytes": 146284,
+      "sha256": "a48dc47e3e788046de0094c7d34bd74eda0c8776f271131254e26f5ec12e5706",
+      "destination": "content/files/game/editions/retained/coupa-all.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-culture-fb207466c.json",
+      "sourceGitBlob": "b1a4a495014d8827cb242d1b875d7dc177cc0d9d",
+      "bytes": 44733,
+      "sha256": "12dbf430730aff337133b19e1140efc2c107cc18351b07048eef59c19593bcba",
+      "destination": "content/files/game/editions/retained/coupa-culture-fb207466c.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-developers-fb207466c.json",
+      "sourceGitBlob": "27d5da3d4b639339f3faf17a3e9f7bec24c92279",
+      "bytes": 50786,
+      "sha256": "d4bc46ff2c873a07325b9efec577e1df854b85479f3ba10a89ceb2a0db019d9a",
+      "destination": "content/files/game/editions/retained/coupa-developers-fb207466c.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-developers.json",
+      "sourceGitBlob": "aeda75a14576d5ae00dd22e23c9f13f49ca408a3",
+      "bytes": 50046,
+      "sha256": "ee4d10212133066658ae5543883a5e1def3602a5bc840874223b90bdccac9c06",
+      "destination": "content/files/game/editions/retained/coupa-developers.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-foundations-before-learning-bonus.json",
+      "sourceGitBlob": "4984a7ac160eca58670ce447dd537c481892c233",
+      "bytes": 50235,
+      "sha256": "0ee0079828321ec31cfc6f0683f76ec5a8e90d7065008626793e33195f6a1187",
+      "destination": "content/files/game/editions/retained/coupa-foundations-before-learning-bonus.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-foundations-fb207466c.json",
+      "sourceGitBlob": "6185514f0738de81a9b5089c5119aee7730d80c9",
+      "bytes": 47276,
+      "sha256": "e6694057707e69a8a134836d91bc1879f3555b39f6fc58622a15073454bf7432",
+      "destination": "content/files/game/editions/retained/coupa-foundations-fb207466c.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-foundations.json",
+      "sourceGitBlob": "18c0444d29e6925065e15c063835f1bf9776b093",
+      "bytes": 46542,
+      "sha256": "98d2a026fc89b48cbd76c2d2c2d74d491f666583ae819324f855ebd7f309dd90",
+      "destination": "content/files/game/editions/retained/coupa-foundations.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-operations-fb207466c.json",
+      "sourceGitBlob": "11daf46f5fd05af53b7563c9f8c68772f8f9c003",
+      "bytes": 48443,
+      "sha256": "b00276030dd4642756c75e15120f2d415e07e85dc90b0eacf99cf0ee71574c3d",
+      "destination": "content/files/game/editions/retained/coupa-operations-fb207466c.json"
+    },
+    {
+      "sourcePath": "game/editions/retained/coupa-operations.json",
+      "sourceGitBlob": "f02f55289752c1700ae441178148baffe540f412",
+      "bytes": 47693,
+      "sha256": "716bcbd296e6053ca6628b8b55dada9c0489a8893c1044cbc24854899caf6e20",
+      "destination": "content/files/game/editions/retained/coupa-operations.json"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-developer-integration-theme.webp",
+      "sourceGitBlob": "2ad496bf03d6788b803782bdcac61c3f96c012e9",
+      "bytes": 612326,
+      "sha256": "1da45a8b55412741155b8d10bb85e6a339cd95304eb253276669c2f8e707cadb",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-developer-integration-theme.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-inside-village-theme.webp",
+      "sourceGitBlob": "17fe92cb4c67a4c8879de49e1188f77ad6d0eea8",
+      "bytes": 356686,
+      "sha256": "01b291d818f0839722c02c5b72592ee752e0fda4d605a4cd048be43c7a21b34a",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-inside-village-theme.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-product-operations-theme.webp",
+      "sourceGitBlob": "a2d5fddbf8bd50b74ebe59a60353f4e32356e636",
+      "bytes": 405702,
+      "sha256": "2a58390914ff3bba6b21d68026a6cd21c5505de37d443f3e6760caba29deb401",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-product-operations-theme.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-source-to-pay-theme.webp",
+      "sourceGitBlob": "e6e23b86ac02a2f048eb37bdab5bac23406b096d",
+      "bytes": 375148,
+      "sha256": "fd4b66a8df11db0504aa05fb6000511c307e46b8bac68e461e3ad396bb8a6066",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-source-to-pay-theme.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-spend-in-motion-theme.webp",
+      "sourceGitBlob": "6184ccc12ea5fa1e81a71f5f61d0f5734f782a5c",
+      "bytes": 700570,
+      "sha256": "22a53a8e40d2b7c8788d89d264ac946b0465895eb8e407b7b0745f5efdc0eff8",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-spend-in-motion-theme.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-team-portrait.webp",
+      "sourceGitBlob": "69b1fbf5f943bb64733601b2482aa9c4742845b4",
+      "bytes": 1744888,
+      "sha256": "41c42fefb39048fd1dadd790ef14225275ca99333c8b6383e8fc09f9763d0de7",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-team-portrait.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-team.webp",
+      "sourceGitBlob": "2915d166bed5de1a054c8ae5bd36174e2bc0a249",
+      "bytes": 1580074,
+      "sha256": "be7f79098d17957e598e7fd4a96004f2656a7459a08980b0bcd8ac757c30f136",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-team.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-versus-portrait.webp",
+      "sourceGitBlob": "255f01454669d6e2c22106e9d07324a13f1d1a9b",
+      "bytes": 1669344,
+      "sha256": "5e5aa3c392527b45757f4175639919544be598ad4140959f8c7297297e0af8e6",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-versus-portrait.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-versus.webp",
+      "sourceGitBlob": "08ffdb4699137b4f3fd487e6e7e443177a47884c",
+      "bytes": 1620118,
+      "sha256": "7c10b3469f5bbabd6a704abb0900f9c9afd1d8755b830f2f0229c3370cf051dd",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-versus.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa-village.webp",
+      "sourceGitBlob": "e89226a921e703806a508a171f4e497b21facb08",
+      "bytes": 540732,
+      "sha256": "b7a4113a200a956e207188e5e66a472539bbe5d29b7009039bc79e90ca551192",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa-village.webp"
+    },
+    {
+      "sourcePath": "game/ui/art/menu-scenes/coupa.webp",
+      "sourceGitBlob": "d3af70fbe8ff4ee7c5f2ed4c003e7cbedd77389e",
+      "bytes": 389078,
+      "sha256": "393ebd9f3cf395598a79a43cd1277adfe4381cee177549be38fc027ec76afdc1",
+      "destination": "content/files/game/ui/art/menu-scenes/coupa.webp"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-adventure-envelope.json",
+      "sourceGitBlob": "07981e83a37c08f7222bf9a3d47288d2757f622b",
+      "bytes": 1026,
+      "sha256": "6376d1ca57a97d1824d11e1d4c8c5434f198cceb225dfcbd51d6b40c38a7e252",
+      "destination": "content/archive/historical-objects/07981e83a37c08f7222bf9a3d47288d2757f622b.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-adventure-verification.json",
+      "sourceGitBlob": "7b48f8b4573685c5ad59444b400bdea25b91814f",
+      "bytes": 1561,
+      "sha256": "28033db03c99e3923753cb8fae2d7e6ffb5594721236797fd58ebad7419a3a85",
+      "destination": "content/archive/historical-objects/7b48f8b4573685c5ad59444b400bdea25b91814f.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-adventure.log.txt",
+      "sourceGitBlob": "2abb3931744995ce5f2749f07710283fd4eaa211",
+      "bytes": 557,
+      "sha256": "407f0486d6dea3a72b873794df8eb9212069085bfda430ea69bb6465015e12b5",
+      "destination": "content/archive/historical-objects/2abb3931744995ce5f2749f07710283fd4eaa211.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-all-envelope.json",
+      "sourceGitBlob": "4440df91d420cfc7265fc5dd781d4f9f46ccebc0",
+      "bytes": 1490,
+      "sha256": "48b4f43a16fc47c0c19cead7f4fc235c5d02bdcbbbb363910262bc2deb9dbdc1",
+      "destination": "content/archive/historical-objects/4440df91d420cfc7265fc5dd781d4f9f46ccebc0.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-all-verification.json",
+      "sourceGitBlob": "13d0a6c2e5e27123786f768dd5262672b79b2733",
+      "bytes": 1745,
+      "sha256": "da3e89accf2e523668a2bc5cad630ea12eebb0f8060f007e5c186dfc71c789c1",
+      "destination": "content/archive/historical-objects/13d0a6c2e5e27123786f768dd5262672b79b2733.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-all.log.txt",
+      "sourceGitBlob": "983e6db8b233b42cd8995e85e39c7f95cdbf8a2d",
+      "bytes": 545,
+      "sha256": "b3a32e5e03e8807e9edd6471a26fa7cf13cf4e5f2c980d1cfea96530dd644a53",
+      "destination": "content/archive/historical-objects/983e6db8b233b42cd8995e85e39c7f95cdbf8a2d.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-culture-envelope.json",
+      "sourceGitBlob": "e43743dad9e387f1dd48a2ece44dbaf041c8580a",
+      "bytes": 1015,
+      "sha256": "a5ce3b35b47f7e0671bc70a7778ca531d9dc493d4e74a8ca26c2f90d260c2889",
+      "destination": "content/archive/historical-objects/e43743dad9e387f1dd48a2ece44dbaf041c8580a.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-culture-verification.json",
+      "sourceGitBlob": "abb8918c997a13c7d829c891bda8fccfff4fea63",
+      "bytes": 1459,
+      "sha256": "31ed951b1200ad5277b8115c8205fd51ba77e9008b54b093b4487712c18d5848",
+      "destination": "content/archive/historical-objects/abb8918c997a13c7d829c891bda8fccfff4fea63.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-culture.log.txt",
+      "sourceGitBlob": "ee54e80bbcce46e9d6664731b7e46b6edb819253",
+      "bytes": 553,
+      "sha256": "adc08567f5ff36d23dda66e8e3a5fe819d2390063a1e2369ab14b4d7baf9b649",
+      "destination": "content/archive/historical-objects/ee54e80bbcce46e9d6664731b7e46b6edb819253.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-developers-envelope.json",
+      "sourceGitBlob": "4e5abecfe1ce0ea4f83945545e32ff710edac9e4",
+      "bytes": 1037,
+      "sha256": "e1ed711411c1a5b4f15126faf93502f190701668accc6e18218caa76156c31f3",
+      "destination": "content/archive/historical-objects/4e5abecfe1ce0ea4f83945545e32ff710edac9e4.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-developers-verification.json",
+      "sourceGitBlob": "52aee441e3b99c112485d543e1d4d48b7feeb2ef",
+      "bytes": 1563,
+      "sha256": "7c5a8000d94c80afe8913471e3ffcc3953a12d6ae0b7776e83758b75227ca075",
+      "destination": "content/archive/historical-objects/52aee441e3b99c112485d543e1d4d48b7feeb2ef.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-developers.log.txt",
+      "sourceGitBlob": "ed4c3b5ef16e9c488493fc91bee93495be121b9d",
+      "bytes": 559,
+      "sha256": "daf684aa3782fb9febcf4a4df519abb358f57c5df7edef161223ae786baac430",
+      "destination": "content/archive/historical-objects/ed4c3b5ef16e9c488493fc91bee93495be121b9d.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-foundations-envelope.json",
+      "sourceGitBlob": "8edde83e291d58dd043ccde5d6bdc580fba13c66",
+      "bytes": 1034,
+      "sha256": "716e9a3e7100974014d2b8b44d4044a06f34f58a5f506f17bb670d62f6da59bc",
+      "destination": "content/archive/historical-objects/8edde83e291d58dd043ccde5d6bdc580fba13c66.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-foundations-verification.json",
+      "sourceGitBlob": "6f6c2c93e844c12f2bc1c18e49a9a2109fb9233a",
+      "bytes": 1663,
+      "sha256": "f40118579a6ac60352a5d2c8e0e80a50a98ba15335b6133e954be2405fc05bf6",
+      "destination": "content/archive/historical-objects/6f6c2c93e844c12f2bc1c18e49a9a2109fb9233a.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-foundations.log.txt",
+      "sourceGitBlob": "52827363ea88d05263e163ad883dcd8c41801854",
+      "bytes": 561,
+      "sha256": "42b61307d3320f9d96e4e4cfeac355e0a03e535ff2c30477ba079958845e40cf",
+      "destination": "content/archive/historical-objects/52827363ea88d05263e163ad883dcd8c41801854.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-operations-envelope.json",
+      "sourceGitBlob": "60969b3ee6c9c86c17b0418660781f16f71c4262",
+      "bytes": 1034,
+      "sha256": "53d5595a993aa02743d2bc4bad26db0fd8b46764256c312c92fccaf77284dc30",
+      "destination": "content/archive/historical-objects/60969b3ee6c9c86c17b0418660781f16f71c4262.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-operations-verification.json",
+      "sourceGitBlob": "e00691ccfea3c6eeeaa907cf4a33d7c86d77a850",
+      "bytes": 1563,
+      "sha256": "499e9d878d452d215fc3bbaf9538e8a36b764136b4b757f573f9375d8ad25f54",
+      "destination": "content/archive/historical-objects/e00691ccfea3c6eeeaa907cf4a33d7c86d77a850.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-9dcff0588/company-coupa-operations.log.txt",
+      "sourceGitBlob": "585d4071e05ac9f9b4ac87326cb6f8a84861de21",
+      "bytes": 559,
+      "sha256": "d1cd984541b24c3b1c8f4da84474ca2ba4ac0bb70a9eb16355c3c06ef5462fa3",
+      "destination": "content/archive/historical-objects/585d4071e05ac9f9b4ac87326cb6f8a84861de21.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-adventure/candidate-verification.json",
+      "sourceGitBlob": "8e2c7f115df24c2dad0d1f114693c1e410c85a66",
+      "bytes": 1561,
+      "sha256": "10528ad32800b98790484974d09a3059145dd63fbb3f91836ec258dd4d661841",
+      "destination": "content/archive/historical-objects/8e2c7f115df24c2dad0d1f114693c1e410c85a66.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-adventure/editions.json",
+      "sourceGitBlob": "b761a3c0c3300d5980754382c3e11230a9b415d8",
+      "bytes": 1026,
+      "sha256": "f3ea374d030d15da216f2f3b52d4b1b05224f8b9f2839893f82ca046e4965db0",
+      "destination": "content/archive/historical-objects/b761a3c0c3300d5980754382c3e11230a9b415d8.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-all/candidate-verification.json",
+      "sourceGitBlob": "9035fd19a6525713fc9d46e67b4dbefcf0789eae",
+      "bytes": 1745,
+      "sha256": "4e7d404f8e32a9fed99504294309ef0b8db338f9604674a65a4ebafd9286e17b",
+      "destination": "content/archive/historical-objects/9035fd19a6525713fc9d46e67b4dbefcf0789eae.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-all/editions.json",
+      "sourceGitBlob": "f549e346b4769f666e2ccad5fcabd58a1f0aa08b",
+      "bytes": 1490,
+      "sha256": "95333d2e27cffe9c62f4d7a782f2851245193f6b8d4c8565e14b528c6c562c4b",
+      "destination": "content/archive/historical-objects/f549e346b4769f666e2ccad5fcabd58a1f0aa08b.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-culture/candidate-verification.json",
+      "sourceGitBlob": "352091241ac700c623348cc469e419afdd50915e",
+      "bytes": 1459,
+      "sha256": "538b470f740d4cb7113a3e0e6831a08c9f7f8b489eb013ddd82689d308397562",
+      "destination": "content/archive/historical-objects/352091241ac700c623348cc469e419afdd50915e.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-culture/editions.json",
+      "sourceGitBlob": "422178355e044c53e4c7a93faa78c61d6fc01b64",
+      "bytes": 1015,
+      "sha256": "be55646f91d5deb82e4cc4005d957c7b1955301e3dfc12e5a52962157d412a81",
+      "destination": "content/archive/historical-objects/422178355e044c53e4c7a93faa78c61d6fc01b64.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-developers/candidate-verification.json",
+      "sourceGitBlob": "0963d048f4552df35a51280d48878c269f0ca273",
+      "bytes": 1563,
+      "sha256": "c9e9e4e0e2fb5a02d747f33e7bedfa1eb8d573b2162d432b105ebdfe02fe7745",
+      "destination": "content/archive/historical-objects/0963d048f4552df35a51280d48878c269f0ca273.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-developers/editions.json",
+      "sourceGitBlob": "d1385273ce47a92e79b4cf3a0319ce00418ed142",
+      "bytes": 1037,
+      "sha256": "ec0fbbc7a2372720192403f1755d9b23262aea311833fdd87f9f02a1fb50974c",
+      "destination": "content/archive/historical-objects/d1385273ce47a92e79b4cf3a0319ce00418ed142.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-foundations/candidate-verification.json",
+      "sourceGitBlob": "06ab4395c087b76b30804cef74178a1b6fc12cdb",
+      "bytes": 1663,
+      "sha256": "3b43e9ffad476147d73451a231e042b4a44f1299f4003f0e1d2582cf394ede8f",
+      "destination": "content/archive/historical-objects/06ab4395c087b76b30804cef74178a1b6fc12cdb.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-foundations/editions.json",
+      "sourceGitBlob": "ad1818226c30a2bd3e3c45076c9c951dee1b3feb",
+      "bytes": 1034,
+      "sha256": "ee8fc34e7b7a5afa7cf5c9c0fa720a33e9ed1d393f9bc550116af8f77476efe5",
+      "destination": "content/archive/historical-objects/ad1818226c30a2bd3e3c45076c9c951dee1b3feb.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-operations/candidate-verification.json",
+      "sourceGitBlob": "f4538f44859f6d9f957ab4a73fc5abb26dd20954",
+      "bytes": 1563,
+      "sha256": "1a9a1b64688b992e0b7abe64a97f0b95970ca289df5a08d6c0a6f1b75b5aa331",
+      "destination": "content/archive/historical-objects/f4538f44859f6d9f957ab4a73fc5abb26dd20954.blob"
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/packaging-candidates-b4688ca219/company-coupa-operations/editions.json",
+      "sourceGitBlob": "95e7fea743f86856db51aee0019ca4e2815ac245",
+      "bytes": 1034,
+      "sha256": "5d0eeff9ec37fc1d18763fcc341e1e5a31d7b118d5a790c4a1ff516aa3380553",
+      "destination": "content/archive/historical-objects/95e7fea743f86856db51aee0019ca4e2815ac245.blob"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-library-preservation-20261016/archive-preservation/cloud-provenance/12023586313/payloads/manifest-coupa-adventure.json",
+      "sourceGitBlob": "7da6e7f9d3f48a1130e3196f0194b5a5edd4b3b7",
+      "bytes": 144166,
+      "sha256": "e96fe17f5ab559b5aecb243c0fb08724b307dd962092ac17d0fa38e2a8aa4ca2",
+      "destination": "content/archive/historical-objects/7da6e7f9d3f48a1130e3196f0194b5a5edd4b3b7.blob"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-library-preservation-20261016/archive-preservation/cloud-provenance/12023586313/payloads/manifest-coupa-all.json",
+      "sourceGitBlob": "2a6a819ca8919a3b90a2e04b82749a711ed3010c",
+      "bytes": 149701,
+      "sha256": "52c6d102c95be5672f48025d89914b27ec68fec77c4b1e15cc419078bb0bc479",
+      "destination": "content/archive/historical-objects/2a6a819ca8919a3b90a2e04b82749a711ed3010c.blob"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-library-preservation-20261016/archive-preservation/cloud-provenance/12023586313/payloads/manifest-coupa-culture.json",
+      "sourceGitBlob": "5e2ec48016b71325f45cc916e83c181199405df8",
+      "bytes": 143980,
+      "sha256": "0cb50019f804d0194bd3676fff31ceedd2e1532d28dff46279ac1ecb06372599",
+      "destination": "content/archive/historical-objects/5e2ec48016b71325f45cc916e83c181199405df8.blob"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-library-preservation-20261016/archive-preservation/cloud-provenance/12023586313/payloads/manifest-coupa-developers.json",
+      "sourceGitBlob": "8a79d2c4d647f8a1a2d19f6d0ed32d28554a8a4d",
+      "bytes": 144161,
+      "sha256": "0f4ad267de7dba8a5d7b2efb854ee52bd9ada938170e76cd28823e45dd91a6ed",
+      "destination": "content/archive/historical-objects/8a79d2c4d647f8a1a2d19f6d0ed32d28554a8a4d.blob"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-library-preservation-20261016/archive-preservation/cloud-provenance/12023586313/payloads/manifest-coupa-foundations.json",
+      "sourceGitBlob": "67f5b80ed7a5b9017ac8283d09dd4799f2f8b7fc",
+      "bytes": 144483,
+      "sha256": "1c5bb3bfc2730b4d7283fe53a2fed26ed86e2bd4b57883300b01e5e11b712b5b",
+      "destination": "content/archive/historical-objects/67f5b80ed7a5b9017ac8283d09dd4799f2f8b7fc.blob"
+    },
+    {
+      "sourcePath": "docs/verification/fpv-library-preservation-20261016/archive-preservation/cloud-provenance/12023586313/payloads/manifest-coupa-operations.json",
+      "sourceGitBlob": "830e4378c0958114439eab3b341cfa4f5690ab26",
+      "bytes": 144177,
+      "sha256": "5252593b7e191fb6cae438a7682af4e8a5dce1eb040ae38d8108b7715b211663",
+      "destination": "content/archive/historical-objects/830e4378c0958114439eab3b341cfa4f5690ab26.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-continuation-2026-10-16/coupa-final.json",
+      "sourceGitBlob": "682676e422653cddffcee30b1a6a2907fdf4772d",
+      "bytes": 82984,
+      "sha256": "4dd76824ca773896c3692f40db6af81284991accd40a9f1e779a349bc413da61",
+      "destination": "content/archive/historical-objects/682676e422653cddffcee30b1a6a2907fdf4772d.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-continuation-2026-10-16/coupa-final.log",
+      "sourceGitBlob": "43333c92403ff242349924e8b2450a0f9b595338",
+      "bytes": 28268,
+      "sha256": "b4591a025e28a261961d424ddf1f6e2ada74a133c781484d0c8522b8f446228f",
+      "destination": "content/archive/historical-objects/43333c92403ff242349924e8b2450a0f9b595338.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-followup-2026-10-15/coupa-inventory.json",
+      "sourceGitBlob": "710533e8a1e51fff2d8f5e2945fb8d2fe33672a7",
+      "bytes": 37762,
+      "sha256": "9888d3cad64caa01d2ade03e95fd9125b2c94c67d1e23bb0cb7c73349081dd80",
+      "destination": "content/archive/historical-objects/710533e8a1e51fff2d8f5e2945fb8d2fe33672a7.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/coupa-before.json.gz",
+      "sourceGitBlob": "8767a760dc9f66cf82568684dc8d8790df0d1074",
+      "bytes": 40441,
+      "sha256": "913623e5026aa3dbe3af5f3729cb7d73b86a30f331b652b45280304914bc8eab",
+      "destination": "content/archive/historical-objects/8767a760dc9f66cf82568684dc8d8790df0d1074.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/coupa-fallback-diagnostic.json.gz",
+      "sourceGitBlob": "54d110da53e6dfde93f1a61ca5e4baa9061a0742",
+      "bytes": 39944,
+      "sha256": "4399ad2cee86f45adbe25415b49bdf7263f0764643d829f35a43fa7b32011202",
+      "destination": "content/archive/historical-objects/54d110da53e6dfde93f1a61ca5e4baa9061a0742.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/coupa-fallback-diagnostic.log",
+      "sourceGitBlob": "c71bdc27a8c5a1490c2712d72ffeb61f4fc87efe",
+      "bytes": 1609,
+      "sha256": "fab04b72ac221689cea0592a127b6b001119cf566ccb8dbbb93de369372cf4f2",
+      "destination": "content/archive/historical-objects/c71bdc27a8c5a1490c2712d72ffeb61f4fc87efe.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/coupa-final.json",
+      "sourceGitBlob": "7bcfdb4d8b5a06aba4bf0747bbac653927cf69da",
+      "bytes": 82660,
+      "sha256": "435d3fb419c2c6023443cb32d08079e9b226767ecf8ec2374b6fb220b8482cc7",
+      "destination": "content/archive/historical-objects/7bcfdb4d8b5a06aba4bf0747bbac653927cf69da.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/coupa-final.log",
+      "sourceGitBlob": "68f2e6a87c951e0038aef707f1a95ee171b7bbe7",
+      "bytes": 28287,
+      "sha256": "55a75f3dcf61842d3a3a47473b7e392e357565dd84dda600fad52f12d21853b7",
+      "destination": "content/archive/historical-objects/68f2e6a87c951e0038aef707f1a95ee171b7bbe7.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/coupa-safe-escape-prototype.json.gz",
+      "sourceGitBlob": "9b5f1888bf24998a721c797c5c0b5fb93c6ec870",
+      "bytes": 40466,
+      "sha256": "846d3736880d598346d55fe24c284528baa0f8bfd131416c5fa22f6b7ea4df42",
+      "destination": "content/archive/historical-objects/9b5f1888bf24998a721c797c5c0b5fb93c6ec870.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/coupa-safe-escape-prototype.log",
+      "sourceGitBlob": "f85a20ed4ee038948038a1b208dafb9cbe53b162",
+      "bytes": 1626,
+      "sha256": "c6d9dce2583e767322cdf8bff040569a8bfb3daf6fd956d85e42282406dc64f5",
+      "destination": "content/archive/historical-objects/f85a20ed4ee038948038a1b208dafb9cbe53b162.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/final-requalification/coupa-final.json",
+      "sourceGitBlob": "cbd6013f3c0584f3436d309b3debb2282553703c",
+      "bytes": 83046,
+      "sha256": "322c1818b88b07f147dffa69029f78781c835085e8c3f32f61d24f310317ed7b",
+      "destination": "content/archive/historical-objects/cbd6013f3c0584f3436d309b3debb2282553703c.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-gap-recovery-2026-10-15/final-requalification/coupa-final.log",
+      "sourceGitBlob": "649da981c9241bba2ed92094b8386ae7cef54de6",
+      "bytes": 28232,
+      "sha256": "7872bdc9cb727104606da94be010de2178259058dfe4e925dfd652a35f59da75",
+      "destination": "content/archive/historical-objects/649da981c9241bba2ed92094b8386ae7cef54de6.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-live-recovery-2026-10-15/coupa-grid-center-playback.json",
+      "sourceGitBlob": "f2759c9283f3e56709694f3a00763937f512e936",
+      "bytes": 48578,
+      "sha256": "8d728b30871ee40cbcab5512ab3075cae01a4011f438b161c5fcb90f62bcc64c",
+      "destination": "content/archive/historical-objects/f2759c9283f3e56709694f3a00763937f512e936.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-live-recovery-2026-10-15/coupa-grid-center-playback.log",
+      "sourceGitBlob": "bbc0954542978c6699f45af2ab45dac1c7fb28e4",
+      "bytes": 14191,
+      "sha256": "792219ba5035f44e8c2ca9776eb6537431b56a1d4dc68bf80049d91b456eb64c",
+      "destination": "content/archive/historical-objects/bbc0954542978c6699f45af2ab45dac1c7fb28e4.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-live-recovery-2026-10-15/coupa-immediate-playback.json",
+      "sourceGitBlob": "d54f369898eeb4a537fa903f42a17fbed6273a08",
+      "bytes": 48495,
+      "sha256": "b815e02558d086d4c4547f8b16a3dc4f578f343a3be51cdf956166749cd4143a",
+      "destination": "content/archive/historical-objects/d54f369898eeb4a537fa903f42a17fbed6273a08.blob"
+    },
+    {
+      "sourcePath": "docs/verification/demo-live-recovery-2026-10-15/coupa-immediate-playback.log",
+      "sourceGitBlob": "bb79a35d0e27350ad94b339c5fe1a812ded65b5f",
+      "bytes": 14060,
+      "sha256": "1ef1edb6bd94dfb19ff9d15e98f854cc16b411149f73338a407d993c25354ac1",
+      "destination": "content/archive/historical-objects/bb79a35d0e27350ad94b339c5fe1a812ded65b5f.blob"
+    },
+    {
+      "sourcePath": "game/communities/coupa/index.html",
+      "sourceGitBlob": "aba882c6923f0ce9c58173719cba3e6fbf121504",
+      "bytes": 1665,
+      "sha256": "75eda383ad47b61e372d258baa1d7267b29ea134c981354697d447f95c9ed1f4",
+      "destination": "content/archive/historical-objects/aba882c6923f0ce9c58173719cba3e6fbf121504.blob"
+    },
+    {
+      "sourcePath": "game/communities/coupa/index.html",
+      "sourceGitBlob": "ba023a5f06d7dd21968d45dc1a41a10a6478edde",
+      "bytes": 1642,
+      "sha256": "b27cfa0f7fe7ccf8f6e5e795c74c01f29aec0ed9d0684c82d2d12bb125b51af4",
+      "destination": "content/archive/historical-objects/ba023a5f06d7dd21968d45dc1a41a10a6478edde.blob"
+    },
+    {
+      "sourcePath": "game/communities/coupa/index.html",
+      "sourceGitBlob": "9072a24503c70491b70e7c1f803643c95aab4cca",
+      "bytes": 1236,
+      "sha256": "d6125ae0435cbe6638b96b890b892cc20645a4c4fbaa2ffa5ae6e1c10ab4759b",
+      "destination": "content/archive/historical-objects/9072a24503c70491b70e7c1f803643c95aab4cca.blob"
+    },
+    {
+      "sourcePath": "authoring/library/neon-mosaic/coupa/scenario.json",
+      "sourceGitBlob": "ba8478b3f44d7761ef85778af2c41a2956301777",
+      "bytes": 434987,
+      "sha256": "ebb80ba1ae876d8fb0110cd7747d0591917b3fd8667232f7cbc0b58724a61ad6",
+      "destination": "content/archive/historical-objects/ba8478b3f44d7761ef85778af2c41a2956301777.blob"
+    },
+    {
+      "sourcePath": "authoring/library/neon-mosaic/coupa/scenario.json",
+      "sourceGitBlob": "db4e2cb687c9a01069eb74ef9ad619cb5e52e83a",
+      "bytes": 13188,
+      "sha256": "47554f5dedc08ed6ad8df6b612946068a07e983e10996887b9fc5f137cab1ff1",
+      "destination": "content/archive/historical-objects/db4e2cb687c9a01069eb74ef9ad619cb5e52e83a.blob"
+    },
+    {
+      "sourcePath": "docs/verification/company-community-directory-scoped-2026-09-29/coupa.txt",
+      "sourceGitBlob": "ea09df9c41a50ecad5bc8c17f1aaf74eebcc3003",
+      "bytes": 1981,
+      "sha256": "a74baaaa1e839a1146b577022e886b6c687077ce3008aa393ff0a2b6822ea87a",
+      "destination": "content/archive/historical-objects/ea09df9c41a50ecad5bc8c17f1aaf74eebcc3003.blob"
+    },
+    {
+      "sourcePath": "docs/verification/company-community-directory-2026-09-29/coupa-campaigns.txt",
+      "sourceGitBlob": "4fbd4f431679555564e3150313c0fcefe5c08e20",
+      "bytes": 3017,
+      "sha256": "bfcc72d6b80ceb0e6fde71e25b0f80c3765ae9a111787e0bf188c63730e3e989",
+      "destination": "content/archive/historical-objects/4fbd4f431679555564e3150313c0fcefe5c08e20.blob"
+    },
+    {
+      "sourcePath": "docs/research/coupa-wallpapers/2020-zoom_bg_v1.png",
+      "sourceGitBlob": "7063c7ce0b50c8a66833731a7d08ad96c35ec962",
+      "bytes": 594299,
+      "sha256": "78799017076a4b51907f3d523a6c9c9aeb04ac38e3cb6b4cf6eef1bccab559c1",
+      "destination": "content/archive/historical-objects/7063c7ce0b50c8a66833731a7d08ad96c35ec962.blob"
+    },
+    {
+      "sourcePath": "docs/research/coupa-wallpapers/2020-zoom_bg_v3.png",
+      "sourceGitBlob": "da820d5c48575db13b4e9eaadfee7fe35e65468f",
+      "bytes": 88002,
+      "sha256": "6a630e1877cfef19b3a349e3fbdacb54eb3b000fef6525adcc7467dfb1d68d2d",
+      "destination": "content/archive/historical-objects/da820d5c48575db13b4e9eaadfee7fe35e65468f.blob"
+    },
+    {
+      "sourcePath": "game/editions/art-prompts-coupa-bulk-02.json",
+      "sourceGitBlob": "90f3adaa82df015385f55330918606ad6e3d18cc",
+      "bytes": 90504,
+      "sha256": "1cc49a0be076e2dca7d102a4c8291f8b71a311359ffc494983566608e822b606",
+      "destination": "content/archive/historical-objects/90f3adaa82df015385f55330918606ad6e3d18cc.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.json",
+      "sourceGitBlob": "8ece31e43855b52308e8a6bd1614861be15f4b10",
+      "bytes": 23858,
+      "sha256": "a30e6772306f507645334ca0724210eb2d145cf8138e81dde6f1e53164f572b2",
+      "destination": "content/archive/historical-objects/8ece31e43855b52308e8a6bd1614861be15f4b10.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-inside-village.json",
+      "sourceGitBlob": "e49a02e13b24c6cfdaa8e0c195ac3469eebfcaaf",
+      "bytes": 21343,
+      "sha256": "6e0ebde52b157bd444817a0c54753ea8bb9bbb2a1eb5891321da407c5cad495e",
+      "destination": "content/archive/historical-objects/e49a02e13b24c6cfdaa8e0c195ac3469eebfcaaf.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.json",
+      "sourceGitBlob": "289a5bef0dcedb0e7b937afa21187c471bb4aab8",
+      "bytes": 22240,
+      "sha256": "2f41f239951a2f12b0cc565a23cacde2ec50ac482e2e00597cda08c7d1490e17",
+      "destination": "content/archive/historical-objects/289a5bef0dcedb0e7b937afa21187c471bb4aab8.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.json",
+      "sourceGitBlob": "08cc5bc79f2259885d579844a9a5259a49a4f283",
+      "bytes": 22759,
+      "sha256": "c39979ff8d33c14b8a79c4cd7cdcad4f8ce4b93627f95b28d165b614b636b69f",
+      "destination": "content/archive/historical-objects/08cc5bc79f2259885d579844a9a5259a49a4f283.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-spend-in-motion.json",
+      "sourceGitBlob": "337fb0294afff12a64c56a9aa92af853ad3d8866",
+      "bytes": 16824,
+      "sha256": "ab3ea0c6754fba19112fd57755b2f03ad1c736bf3e2a2a5427e61540805061cc",
+      "destination": "content/archive/historical-objects/337fb0294afff12a64c56a9aa92af853ad3d8866.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.json",
+      "sourceGitBlob": "4c7a55c402bd2081790fa73a23172964daceb366",
+      "bytes": 23260,
+      "sha256": "34428828ef98172d8df130513ad07c4acf736e9a40b70ac1a869af9e090e98ed",
+      "destination": "content/archive/historical-objects/4c7a55c402bd2081790fa73a23172964daceb366.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.json",
+      "sourceGitBlob": "afa6ce66fa05fc1c5476aec46bf205cf57ff2737",
+      "bytes": 21641,
+      "sha256": "056b1840c2a25e1b42f94e360cb0a54115dba9c66b1feaa87f0381633279c178",
+      "destination": "content/archive/historical-objects/afa6ce66fa05fc1c5476aec46bf205cf57ff2737.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.json",
+      "sourceGitBlob": "d11de980cc40dd2f2c218896cbdcd5eb700c26bb",
+      "bytes": 22173,
+      "sha256": "4d958b2678f0192c3bbafa2557ad99b4834fef8221240728776cc1e676663ffd",
+      "destination": "content/archive/historical-objects/d11de980cc40dd2f2c218896cbdcd5eb700c26bb.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/campaign.json",
+      "sourceGitBlob": "50c707b25b5cd84c66b9dd6e952e8b40ddfa70df",
+      "bytes": 10810,
+      "sha256": "7ad4dcf5c815e76f11d7cfc3ef36dcb68d7063b8a377e51130515d32fc90deb8",
+      "destination": "content/archive/historical-objects/50c707b25b5cd84c66b9dd6e952e8b40ddfa70df.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/presets.json",
+      "sourceGitBlob": "a162a5a5e0fd9053b707dde97f03bef564352856",
+      "bytes": 898,
+      "sha256": "585b94997bafcc2ccee80deb990fdee3847b29a0ab9f4d028f0a3795c30c51c4",
+      "destination": "content/archive/historical-objects/a162a5a5e0fd9053b707dde97f03bef564352856.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-adventure/themes.json",
+      "sourceGitBlob": "d605c1b1309e5200d94a92dca6b9e110d1fff065",
+      "bytes": 1696,
+      "sha256": "0e624c22c58b502a4da250231da4693832d399dfbd7a90b15b176ffdb14e92c0",
+      "destination": "content/archive/historical-objects/d605c1b1309e5200d94a92dca6b9e110d1fff065.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-culture/campaign.json",
+      "sourceGitBlob": "ad11d629ac5b83ac32520f242b3789d64437a519",
+      "bytes": 11049,
+      "sha256": "6451e8307cf9877c6f2fe319d91f87dc739d00af0e635e878f1537e2f887e09f",
+      "destination": "content/archive/historical-objects/ad11d629ac5b83ac32520f242b3789d64437a519.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-developers/campaign.json",
+      "sourceGitBlob": "d7909497623f8e5f99a44a2a38e94bbe052a545e",
+      "bytes": 11204,
+      "sha256": "48ca30bb0f936c5da222bf2f9e04be7f12bd518d46e1853bad214615c5c484a5",
+      "destination": "content/archive/historical-objects/d7909497623f8e5f99a44a2a38e94bbe052a545e.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-foundations/campaign.json",
+      "sourceGitBlob": "f081a14fe566da02af8f2b25adfd7ffd2a2fc16d",
+      "bytes": 10945,
+      "sha256": "871a38ff66853284f5aec6e419ef53e3630d2bab2eff50813e7561fcf02798f3",
+      "destination": "content/archive/historical-objects/f081a14fe566da02af8f2b25adfd7ffd2a2fc16d.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-operations/campaign.json",
+      "sourceGitBlob": "053096ed3ffcc1a4e5e7cd2c5e06d627862b9b4c",
+      "bytes": 11099,
+      "sha256": "06a5d64964dfa7b7334b3071049b3e94975d446705772be3c8e9f9d32051cab2",
+      "destination": "content/archive/historical-objects/053096ed3ffcc1a4e5e7cd2c5e06d627862b9b4c.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.json",
+      "sourceGitBlob": "782d0d09f15c3d858ff916dbcf3b7cdc019481f2",
+      "bytes": 17372,
+      "sha256": "07632631bfb640e688a4ff2fcf4bf907cca0d9e3109e2ed08fb4501c712648f6",
+      "destination": "content/archive/historical-objects/782d0d09f15c3d858ff916dbcf3b7cdc019481f2.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-inside-village.json",
+      "sourceGitBlob": "c0ee25872c4b85f5b8f77a1d608cecf16cd32b8e",
+      "bytes": 17013,
+      "sha256": "b7252432d3990bacd6676554e6f6c079e20ed3733c8c2041bf3c367ebe6f5bbd",
+      "destination": "content/archive/historical-objects/c0ee25872c4b85f5b8f77a1d608cecf16cd32b8e.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.json",
+      "sourceGitBlob": "bc1dd64a4d3969c430d078d1e1497f8ab862502d",
+      "bytes": 17184,
+      "sha256": "fe36d19bbb89f966c07c39ab7b1bf2cc301282f393d216a434cff20cd18ddec1",
+      "destination": "content/archive/historical-objects/bc1dd64a4d3969c430d078d1e1497f8ab862502d.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.json",
+      "sourceGitBlob": "46363ee6c7ba72f3ebaae01d3befc87550a3406a",
+      "bytes": 16876,
+      "sha256": "94d880bb19501c9fbae5e8a4cdd595c0a84e13bb7f694bee42088937955e4dd7",
+      "destination": "content/archive/historical-objects/46363ee6c7ba72f3ebaae01d3befc87550a3406a.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-spend-in-motion.json",
+      "sourceGitBlob": "56c86ebdbb8d9655899369b6c0eed6af7de67896",
+      "bytes": 16727,
+      "sha256": "c646e1bc366ceec8ba82baf311ddd3c57cf2b4b793667c290bedaa113ca37ee6",
+      "destination": "content/archive/historical-objects/56c86ebdbb8d9655899369b6c0eed6af7de67896.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-developers/campaign.json",
+      "sourceGitBlob": "1fdf8b9d4e8ca66bde00242af794b39c82c14b4b",
+      "bytes": 11204,
+      "sha256": "f789caff35e2735cae7e524fdb8d7a13b7751bb3d7e4658408ae54fe4032d0c9",
+      "destination": "content/archive/historical-objects/1fdf8b9d4e8ca66bde00242af794b39c82c14b4b.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-foundations/campaign.json",
+      "sourceGitBlob": "becdd37bba82ed6437a73fb9c2226878c99a5b69",
+      "bytes": 10945,
+      "sha256": "12289919f6ea1217f330632028c84bea461950d4a8ba3375d960e02d8a3a73e0",
+      "destination": "content/archive/historical-objects/becdd37bba82ed6437a73fb9c2226878c99a5b69.blob"
+    },
+    {
+      "sourcePath": "game/content/company-boot/coupa-operations/campaign.json",
+      "sourceGitBlob": "48d571723049889a6ae70509b213279e37a93e1f",
+      "bytes": 11099,
+      "sha256": "13d0882b7a1d4643b6a5225d3689ed6ba13560be2d70135b0ac664ecee4f9d83",
+      "destination": "content/archive/historical-objects/48d571723049889a6ae70509b213279e37a93e1f.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.json",
+      "sourceGitBlob": "d95f5cee2090f9b7517640943fdbf0e520fbc604",
+      "bytes": 17372,
+      "sha256": "14b254bc836c9081c63757839cbf829ffcfa12979fcab6ef91c9590954f1fec3",
+      "destination": "content/archive/historical-objects/d95f5cee2090f9b7517640943fdbf0e520fbc604.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-developer-integration.lessons.json",
+      "sourceGitBlob": "abcfb7c9ba8dd8adacd29ed020d542701c14fdfd",
+      "bytes": 13651,
+      "sha256": "993ac2dd38b064e4837e053ef55c155a50a691a7c868dfade64837af6d0c1e35",
+      "destination": "content/archive/historical-objects/abcfb7c9ba8dd8adacd29ed020d542701c14fdfd.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.json",
+      "sourceGitBlob": "0460fca9518558dafa777ef40b732942e5ef35e0",
+      "bytes": 17184,
+      "sha256": "b0d29ee1b89d2d30e88cdf7d08c91561401c6e2e2a4518e942daf278f5efad33",
+      "destination": "content/archive/historical-objects/0460fca9518558dafa777ef40b732942e5ef35e0.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-product-operations.lessons.json",
+      "sourceGitBlob": "01b9e91caf53eca02d663235f89ea9a089b89c57",
+      "bytes": 13226,
+      "sha256": "44f2c2de5db9543b54bde7c5fcdbf74f59e62bcb359d6706025a7ca85231965d",
+      "destination": "content/archive/historical-objects/01b9e91caf53eca02d663235f89ea9a089b89c57.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.json",
+      "sourceGitBlob": "694e7bdff14e796c5cbe237214b89c8cf74b6ed8",
+      "bytes": 16876,
+      "sha256": "cd9d90f29cda8ce6d8a2d288c7aed46390cf7900e3b67106552874a93a025b2a",
+      "destination": "content/archive/historical-objects/694e7bdff14e796c5cbe237214b89c8cf74b6ed8.blob"
+    },
+    {
+      "sourcePath": "game/content/company-campaigns/coupa-source-to-pay.lessons.json",
+      "sourceGitBlob": "d0e7528844a91a82329aad2d90e08a89493da85b",
+      "bytes": 13237,
+      "sha256": "7aceda2003229bcf64302af668ef7d157529dc58b4d5856270bf13ef925e7afa",
+      "destination": "content/archive/historical-objects/d0e7528844a91a82329aad2d90e08a89493da85b.blob"
+    },
+    {
+      "sourcePath": "authoring/library/route-worlds/descriptors/coupa.json",
+      "sourceGitBlob": "4863a0c3e6cf82b9f2a2d571241ee6988d493a36",
+      "bytes": 1730,
+      "sha256": "fc43dfca85e525cc2e1fb885f0cb680e637cdf690eb25960bfbcd23167c8d11d",
+      "destination": "content/archive/historical-objects/4863a0c3e6cf82b9f2a2d571241ee6988d493a36.blob"
+    }
+  ]
+}

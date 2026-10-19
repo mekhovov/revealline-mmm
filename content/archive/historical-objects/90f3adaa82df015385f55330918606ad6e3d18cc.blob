@@ -1,0 +1,961 @@
+{
+  "format": "revealline-art-prompts.v1",
+  "tool": "image_gen.imagegen",
+  "date": "2026-09-26",
+  "review": "Candidate artwork; original and mechanical PNG export inspected by the agent; in-game crop/contrast review and human artwork approval pending.",
+  "assets": [
+    {
+      "id": "coupa-inside-village-02",
+      "missionId": "coupa-inside-village-02",
+      "title": "Listen, Then Link",
+      "alt": "Two blue listening pavilions face a sunlit collaboration garden with quiet porcelain courtyards.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Listen, Then Link. Two equally welcoming listening pavilions face each other across a bright shared collaboration garden. The left pavilion has an open blank notebook, two empty chairs and a tall blue curved canopy; the right has a few blank handoff cards and a broad reading bench under a white ribbon roof. Planting and wide stepping terraces suggest understanding both perspectives. A central pair of separated slim planted architectural piers frames open movement through the garden; the spaces feel connected without a literal linking line. Keep generous quiet pale floor areas centered near29% horizontal/43% vertical and65%/57%. Leave a small quiet upper-left area near17%/24%. Rich afternoon depth, friendly substantial silhouettes and calm collaboration atmosphere.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-c3bf9d6a-cdf6-4b0d-bdb6-dd3ed34f9344.png",
+        "sha256": "1a49b1073b27dbffd66dc483d9a31db33b097dace38235321dc439340d4a9563",
+        "bytes": 2950275,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/listen-then-link-v1.png",
+        "sha256": "66d93ec13abcc1e3095c435278e7a4599ace4618724c93acdfd4ce0277f8b4d5",
+        "bytes": 953677,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-c3bf9d6a-cdf6-4b0d-bdb6-dd3ed34f9344.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/listen-then-link-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, text, logos, UI or enemies.",
+        "selected": "Inspected exact native PNG export at 960x480; composition and empty papers remain legible, smooth tones preserved, no visible text, people, logos, UI or enemies. In-game overlays not yet reviewed.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-inside-village-03",
+      "missionId": "coupa-inside-village-03",
+      "title": "Room for Everyone",
+      "alt": "A generous blue community conservatory surrounds a central gathering table and two welcoming quiet contribution nooks.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Room for Everyone. An expansive luminous community conservatory holds a shared low central gathering table and two smaller, equally inviting contribution nooks. Blank question cards, closed navy notebooks, varied empty seating, plants, softened skylight and small brass lamps suggest ways to contribute at different times. Two tall blue glass divider groves stand left-of-center and right-of-center, creating three connected zones without closing any entrance. Make the upper-left nook floor at20%/31%, the central floor at50%/49%, and the lower-right floor at80%/69% broad and visually quiet; place the furniture just beside these regions. Keep17%/24% quiet too. Distinct welcoming architecture, not a classroom or generic office, no identity or disability inferred.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-33d58453-7251-466e-962a-54e38fe1e594.png",
+        "sha256": "179d027602f0f6070c3d5d84804a6ae82f11282352c9be83e74bc2d1d0adfc57",
+        "bytes": 2728190,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/room-for-everyone-v1.png",
+        "sha256": "6939aa6f3ed8253504639cbd8db3d3449f160029211be4d30fc3dac6ce97b3b7",
+        "bytes": 883373,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-33d58453-7251-466e-962a-54e38fe1e594.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/room-for-everyone-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, text, logos, UI or enemies.",
+        "selected": "Inspected exact native PNG export at 960x480; composition and empty papers remain legible, smooth tones preserved, no visible text, people, logos, UI or enemies. In-game overlays not yet reviewed.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending",
+        "compositionNote": "The central gathering table occupies part of the central return region; verify partial-reveal and safe-surface overlay contrast in the actual board."
+      }
+    },
+    {
+      "id": "coupa-inside-village-04",
+      "missionId": "coupa-inside-village-04",
+      "title": "Own the Handoff",
+      "alt": "Two crafted blue workshop stations share blank folders and parcel trays across a calm central handoff courtyard.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Own the Handoff. Two crafted workshop stations share a small clearly arranged set of blank folders and matching parcel trays. The upper-left workshop is a long open blue-roofed studio; the lower-right workshop is a long low white receiving counter. A central pair of quiet porcelain landing courts and broad open circulation make the handoff feel deliberate. A written blank reference on one station and an inviting empty walkthrough alcove on the other are equally plausible approaches. Leave clear low-contrast floor centers at47%/38% and50%/68%, plus small quiet areas at17%/24%,77%/68%,49%/26%. Warm morning light, smooth geometric craft and planted edges. No stamps/checkmarks/approval symbols and no piles resembling pickups.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-65b56ade-b57b-4319-9831-53ee3537fd92.png",
+        "sha256": "40a59a97b751958bed3a34cfa172869dc6cca06fedb76a755e78f2f4cae5d06d",
+        "bytes": 2889959,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/own-the-handoff-v1.png",
+        "sha256": "d8d385fabf56624d69362f0287deb5236f081994b24dbcabe8af7e96e3bc11cd",
+        "bytes": 929184,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-65b56ade-b57b-4319-9831-53ee3537fd92.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/own-the-handoff-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, text, logos, UI or enemies.",
+        "selected": "Inspected exact native PNG export at 960x480; composition and empty papers remain legible, smooth tones preserved, no visible text, people, logos, UI or enemies. In-game overlays not yet reviewed.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-source-to-pay-03",
+      "missionId": "coupa-source-to-pay-03",
+      "title": "Terms Bridge",
+      "alt": "A broad porcelain bridge joins a friendly supplier pavilion and a blue contract library above a calm canal.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Terms Bridge. A spectacular broad porcelain bridge joins an elegant friendly supplier pavilion on the left with a luminous navy-and-blue contract library on the right above a calm canal. The supplier pavilion displays a handful of plain crafted supply cases; the library has oversized closed books, rolled blank sheets and brass bookends. A generous horizontal bridge landing crosses the middle, while a smaller quiet lower-left stair terrace rests beside the water. Upper-left and lower-right low archive shelves echo separated architectural dividers. Keep a long clear pale surface near52%/44%, smaller quiet floor near20%/67%, and clear pockets near17%/24% and77%/71%. Late-afternoon sunlight through a sweeping white ribbon arch. The bridge represents agreed scope and understanding, never a signature, approval stamp or legal instruction.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-3740efa7-639b-4187-85d6-df9367fcca27.png",
+        "sha256": "1867a8c563574fbfbc40d0de9ded4e0f3d72a1342326797d30919b134be23755",
+        "bytes": 2874437,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/terms-bridge-v1.png",
+        "sha256": "774f33dfce5bb1c62c3cb5ff46ff64cf8c6624b1d5d0e92feba7faaac3cca998",
+        "bytes": 938978,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-3740efa7-639b-4187-85d6-df9367fcca27.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/terms-bridge-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; landmark/story distinctions and smooth tones preserved, no legible text, people, identifiable logos, UI or enemies. In-game crop/overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-source-to-pay-04",
+      "missionId": "coupa-source-to-pay-04",
+      "title": "Request to Order",
+      "alt": "Three connected blue village pavilions suggest preparation, review and dispatch around calm handoff courtyards.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Request to Order. Three distinct connected blue village pavilions form a graceful diagonal from upper-left to lower-right: a small request-preparation atelier with blank folded cards; a central review terrace with closed reference books and a simple empty table; a far-right dispatch studio with orderly plain parcel trays. Their architectural silhouettes differ, while broad ivory walks and planted spaces tie them together. Two narrow blue-glass garden dividers sit between the neighborhoods, one lower-left of center and one upper-right. Keep quiet floor pockets near21%/36%,49%/53%,79%/67%, with small quiet areas17%/24% and77%/74%. Charming miniature city, luminous morning light, no labels and no pipeline arrows. This is illustrative progression through different records, no automatic approved or paid status.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-8ddd8130-39e5-409b-9111-e6f448c00d1f.png",
+        "sha256": "ad8496b3f83ab235dabc1adbca09e1da724963b5e19755f3ffc0c5febb872c95",
+        "bytes": 2808308,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/request-to-order-v1.png",
+        "sha256": "24e38468dc0836f5cd6f189a074f3e4857628b8a613e4b2009e5ab55d05c38d9",
+        "bytes": 941689,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-8ddd8130-39e5-409b-9111-e6f448c00d1f.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/request-to-order-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; landmark/story distinctions and smooth tones preserved, no legible text, people, identifiable logos, UI or enemies. In-game crop/overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-source-to-pay-05",
+      "missionId": "coupa-source-to-pay-05",
+      "title": "Received in Part",
+      "alt": "Two blue canal delivery docks show arrived parcels and a waiting berth with a quiet receiving terrace.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Received in Part. A beautiful miniature canal harbor contains two different delivery docks: left dock holds a modest group of plain already-arrived parcels and an open blank ledger on a sheltered shelf; the right dock has a waiting empty berth, neatly arranged empty receiving trays and a small distant unmanned cargo barge. Arrival and waiting are visibly different without numbers or a solved business answer. Two offset narrow royal-blue canopy piers frame a calm central water passage. Quiet pale landing floors centered near25%/53% and75%/39%, a broad softer low-contrast lower-middle passage near48%/68%, small quiet pockets17%/24% and77%/71%. Fresh overcast morning with warm lamps, reflective blue water and crafted white stone, tactile cinematic depth. No literal stock dashboard, no arrows or completion badge.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-a3d59214-9125-4e37-8339-49d84d352e8b.png",
+        "sha256": "0f77e22ae950b1b8e08c52c522bf332bee75373c8cf2f6e88141cefa139fff7e",
+        "bytes": 2763724,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/received-in-part-v1.png",
+        "sha256": "f60c7a5f9ab780e052cf5c43fe73ca05f4b6e48383c84a3dbf446ca672ddcda3",
+        "bytes": 927662,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-a3d59214-9125-4e37-8339-49d84d352e8b.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/received-in-part-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; landmark/story distinctions and smooth tones preserved, no legible text, people, identifiable logos, UI or enemies. In-game crop/overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending",
+        "compositionNote": "Decorative marks in the small open ledger are not legible instructions; canal water occupies the middle and requires actual-overlay contrast review."
+      }
+    },
+    {
+      "id": "coupa-product-operations-03",
+      "missionId": "coupa-product-operations-03",
+      "title": "Review the Request",
+      "alt": "A blue glass review room connects two document alcoves around a quiet upper review terrace.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Review the Request. Create an intimate yet spectacular cutaway review library, clearly an interior rather than a village harbor. Two side document alcoves hold oversized closed blue folios, plain white supporting cards and tactile fabric folders. A raised upper-middle review desk sits beneath a domed frosted-blue skylight. Two slim vertical archive partitions frame a generous central corridor, with empty polished porcelain landing floors at22%/53%,49%/33%,79%/53%. Keep small quiet upper-left17%/24% and lower-right77%/71% spaces too. Soft overhead daylight, blue glass reflections, subtle brass desk lamps and planted window boxes. Evidence is gathered together thoughtfully; show neither approval nor rejection, no judge symbolism, check marks or dramatic conflict.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-a9f66413-7231-4c3c-be9d-0d5f2a452d92.png",
+        "sha256": "eb192e909176e6cf273750b48659c485e66efb6548ae71a931328a97ea73af52",
+        "bytes": 2456641,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/review-the-request-v1.png",
+        "sha256": "6815b2caaf6b65230d7efc90e57fd357e72f20eb6c3978164ba03668d943d431",
+        "bytes": 823416,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-a9f66413-7231-4c3c-be9d-0d5f2a452d92.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/review-the-request-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; clear major masses, smooth blue/ivory gradients and distinct task stations; no legible text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-product-operations-04",
+      "missionId": "coupa-product-operations-04",
+      "title": "Handle the Change",
+      "alt": "A blue buyer studio and a supplier dock frame two calm terraces around a blank change folder.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Handle the Change. One architectural scene joins a left-side sheltered supplier dock to a right-side elevated buyer studio. Long horizontal dock shelves and a long lower-right blue awning create an offset composition. A single open blue folder with one blank cream insert rests on a side shelf, visibly waiting beside other closed folders; plain delivery cases stay orderly, no rejection markings. Leave two broad quiet porcelain courts at50%/33% and50%/69%, joined by open floor; keep17%/24% and77%/71% calm. Early-evening rose-gray sky through a broad glazed roof, navy cabinetry, warm task lamps, water reflections only at extreme left. Inviting model-world engineering, a considered handoff awaiting review rather than an already approved change.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/coupa-product-operations-04-builtin-output.png",
+        "sha256": "72ef968ba00fb2bdd7a00ae7400c6a26296aaead67546a136a6fd9eceabff0c2",
+        "bytes": 2368361,
+        "width": 1774,
+        "height": 887,
+        "preservation": "Tool returned a PNG data URL without a saved-path hint; exact decoded tool bytes were preserved unchanged in the built-in generated_images directory."
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/handle-the-change-v1.png",
+        "sha256": "1dd7123f8cb633625226f096f5c5da7a848fd3532f04e4796ce70aeb7687d2a2",
+        "bytes": 792498,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/coupa-product-operations-04-builtin-output.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/handle-the-change-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; clear major masses, smooth blue/ivory gradients and distinct task stations; no legible text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-product-operations-05",
+      "missionId": "coupa-product-operations-05",
+      "title": "Record the Delivery",
+      "alt": "A spacious blue receiving hall separates arrived parcels, a central counting desk and empty future-delivery shelves.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Record the Delivery. A beautiful spacious receiving hall, cutaway dollhouse architecture with a lofty ribbed royal-blue roof and skylights. Low left-side arrived-goods bay has a modest group of plain cream parcels; the far upper-right bay has empty blue tray slots waiting for a later delivery. A small central counting desk with an open blank notebook sits just beside a broad clear central floor. Tall offset blue glass storage dividers create left and right edges but leave a generous path. Calm landing areas at22%/72%,49%/47%,79%/28%; broad muted lower-central floor near48%/65%; quiet17%/24% and77%/71% pockets. Tiny potted plants, brass shelf brackets, tactile blue fabric baskets. Everything fictional; no numbers, barcode-like marks or business answer encoded in exact parcel counts.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-f11f81bf-f4c1-4a81-93a1-c75cb73a2998.png",
+        "sha256": "6ea40b6f24c592bd4bfdc6244e19ce9f2c3efb2d9029592fe11f6c0eb16a3b26",
+        "bytes": 2489637,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/record-the-delivery-v1.png",
+        "sha256": "b5d544d7eb6c299976bd102b4c7e63e41337cf23b317dd12a09cccc74e2f23f3",
+        "bytes": 829094,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-f11f81bf-f4c1-4a81-93a1-c75cb73a2998.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/record-the-delivery-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; clear major masses, smooth blue/ivory gradients and distinct task stations; no legible text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-developer-integration-03",
+      "missionId": "coupa-developer-integration-03",
+      "title": "Beyond Page One",
+      "alt": "Three stepped blue archive terraces unfold across a luminous library, with blank page trays and clear reading landings.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Beyond Page One. A wondrous miniature data archive becomes three successive stepped library terraces, each with a distinct curving royal-blue shelf filled with clean unlettered book spines, blank page trays and translucent blue storage tiles. Unfurled blank paper sculptures curl gently above the far shelves, never across the main floor. The continuing architecture visibly extends beyond the first archive rather than treating it as the whole world. Quiet pale landing surfaces at20%/58%,49%/42%,81%/42%; quiet pockets17%/24% and77%/71%. Two offset slender blue-glass dividers sit upper-left of center and lower-right of center. Cool daylight with little warm reading lamps, layered depth, no numbered shelves, literal code, graph arrows, progress bar or countable lesson-answer pattern.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-6c30f718-9631-409a-9e68-e3a76bc4cf34.png",
+        "sha256": "e020b9562eb4eeb1132aae10f574cd57860f1a61479b53655d2fc872521cc0c5",
+        "bytes": 2585916,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/beyond-page-one-v1.png",
+        "sha256": "783a1086fa752ca083f2239fb424ba8c014436c6a8838a647ec129fe71464f55",
+        "bytes": 876039,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-6c30f718-9631-409a-9e68-e3a76bc4cf34.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/beyond-page-one-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; archive/workshop landmarks and blue gradients preserved, no people, legible task text, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending",
+        "compositionNote": "The upper paper sculpture has faint non-legible decorative rows; no real code or lesson answer. Inspect that detail and floor-trim contrast in game."
+      }
+    },
+    {
+      "id": "coupa-developer-integration-04",
+      "missionId": "coupa-developer-integration-04",
+      "title": "Known References",
+      "alt": "A blue reference observatory brings three physical model collections around calm central archive terraces.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Known References. A spectacular high-roofed reference observatory joins three physical model collections around a central archive hub: miniature supplier pavilions on a side shelf, plain profile folders on a second shelf, and blank ceramic accounting tiles on a third. These are charming tactile metaphor objects, not real personal data or software UI. Two tall blue archive bookends at the left and right sides create a deep central vista. Three calm ivory floor landings stack near49%/28%,49%/49%,49%/72%; keep small quiet areas17%/24% and77%/49%. A low side hub table holds matching unmarked blue ceramic fittings ready to assemble. Sweeping white ribbon roof, frosted circular windows, rich navy cabinetry, no ID strings, locks, keys, code, connectivity lines or approval symbols.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-64b36bcc-e567-4b1b-8660-4a24b84dc7d0.png",
+        "sha256": "c8c36603c0d4f4610d953301389d9a329705f97852e8fda00a9253958b300b0a",
+        "bytes": 2698379,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/known-references-v1.png",
+        "sha256": "dc64a854959590085d322a7d9e9f6dab1a477f6c651ad1d6271e39e058c2b0dc",
+        "bytes": 886581,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-64b36bcc-e567-4b1b-8660-4a24b84dc7d0.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/known-references-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; archive/workshop landmarks and blue gradients preserved, no people, legible task text, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-developer-integration-05",
+      "missionId": "coupa-developer-integration-05",
+      "title": "Draft, Validate, Explain",
+      "alt": "A transparent blue validation atelier arranges blank input cards and a small modular draft beside clear review floors.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Draft, Validate, Explain. A beautiful transparent validation atelier with a cutaway blue-glass canopy. Separate upper-left and upper-right input benches hold blank cream cards, simple differently shaped ceramic components and empty blue folders. A compact central working model made from matching porcelain arches waits beside a low side table; one plain unfilled recess suggests a draft can be improved without displaying a verdict. Quiet broad central review floor at49%/46%, smaller lower-left resting terrace23%/72%, low-contrast upper center49%/24%, plus calm pockets17%/24%,66%/76%,77%/49%. Blank rolled plans and soft fabric pinboards at the back. Intimate warm workshop lighting against luminous cyan glass, craft and thoughtful revision, no error codes, bug creatures, red crosses, checkmarks or real product screen.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-e3cfe493-c80e-49f7-8a1e-7ea98548484d.png",
+        "sha256": "c18ca0c7f43dc944cb77056cb3b71dbf6f4464f00cf2a6fd542b38e117a8d925",
+        "bytes": 2873520,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/draft-validate-explain-v1.png",
+        "sha256": "3b3671602b4bab7cc611d84fd208c7c2b72b62bb97288274599e09d8eda6e2bd",
+        "bytes": 925292,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-e3cfe493-c80e-49f7-8a1e-7ea98548484d.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/draft-validate-explain-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; archive/workshop landmarks and blue gradients preserved, no people, legible task text, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending",
+        "compositionNote": "Central miniature architecture occupies part of the review floor; verify safe-surface overlay and objective contrast in the real board."
+      }
+    },
+    {
+      "id": "coupa-source-to-pay-06",
+      "missionId": "coupa-source-to-pay-06",
+      "title": "Close the Loop",
+      "alt": "Three blue record pavilions gather around calm white terraces in a dusk reconciliation garden.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Close the Loop. A magnificent dusk reconciliation garden brings three physical record pavilions together: a folio library, a delivery alcove with plain parcels, and a quiet invoice desk holding closed cream folders. Three vertically stacked clear porcelain terraces near49%/28%,49%/49%,49%/72% establish a calm visual spine; place the decorative record objects beside these spaces. Low horizontal blue benches flank the middle terrace and small ivory bridges connect gardens at the outer edges. Leave upper-left17%/24% and lower-right77%/71% quiet. Tiny warm lamps gradually illuminate the district, deep navy sky transitioning to royal-blue hour, silver-blue glass and rich foliage. Thoughtful comparison and closure, but no coin rain, payment symbolism, cash, approved stamps, checkmarks, literal circuit traces or claim that approved means paid.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-db0c85a5-5c35-48d1-98c8-48d991165d4f.png",
+        "sha256": "371009f3c0bede511aca96a514ad0b534f328e01d82608a6877fbfc8ecabc864",
+        "bytes": 3088372,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/close-the-loop-v1.png",
+        "sha256": "176b93f6ec0c0ba5bd34e85cc733e8c918e8eb3087604f600f7bd542b6ba8f51",
+        "bytes": 994506,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-db0c85a5-5c35-48d1-98c8-48d991165d4f.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/close-the-loop-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; record landmarks remain distinct and blue-hour/ivory gradients preserved, no legible task text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-product-operations-06",
+      "missionId": "coupa-product-operations-06",
+      "title": "Clear the Exception",
+      "alt": "An interconnected blue operations archive gathers record stations around a small unresolved folder and calm return terraces.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Clear the Exception. One grand but welcoming operations archive at late afternoon: three distinct record stations around the perimeter hold closed folios, plain parcels and blank cream document trays. A single lilac folder is set slightly aside on a small central desk as something to investigate, never surrounded by alarm or judgment. Upper-left and lower-right horizontal shelves frame a short central blue-glass divider. Leave large clear porcelain floor landings at24%/69% and72%/28%, quiet pockets17%/24% and77%/71%, and a wide open route around the central desk. Tall windows, soft skylight, comfortable empty review stools, brass reading lamps and a few planted balconies. A composed detective-like discovery scene about tracing records and finding the right owner, without a villain, solved answer, red error icon, UI or literal detective equipment.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-69394772-e15d-40c4-93bd-b5be1aa14322.png",
+        "sha256": "d7b0e8ff3c2faeba4cf5c6aa451c5e92ba264e9607a26b635ed1a5a2789e2449",
+        "bytes": 2673838,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/clear-the-exception-v1.png",
+        "sha256": "54555dc7657f068e77b902f2f474baff16f344bc3b7e933bc40a07a9c2fa38a2",
+        "bytes": 896391,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-69394772-e15d-40c4-93bd-b5be1aa14322.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/clear-the-exception-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; record landmarks remain distinct and blue-hour/ivory gradients preserved, no legible task text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-developer-integration-06",
+      "missionId": "coupa-developer-integration-06",
+      "title": "Run Ledger",
+      "alt": "A blue network archive displays organized record trays and a small recovery bench beneath a luminous roof.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Run Ledger. A sophisticated miniature network archive seen from high oblique view, with four distinct physical ledger stations connected by broad pale stone walks. Orderly blue record trays line three shelves; one small recovery bench with a single plain ivory tile set aside remains welcoming and reachable, suggesting a recoverable item without a red failure signal. Offset tall archive piers frame the left-upper and right-lower areas. Quiet open floor landings near20%/69%,50%/39%,50%/69%,80%/25%, plus small quiet pockets17%/24%,66%/76%,77%/49%. A luminous blue glass barrel roof reveals a crisp early-evening sky; calm amber shelf lamps, satin ceramic, substantial books with entirely unmarked covers. Finish with a feeling of careful stewardship and an inspectable record, not automatic success. No numbers, writing, code, screens, charts, server racks or glowing network wires.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-2b0de973-5fce-4d74-94dd-ba261a7c4b3e.png",
+        "sha256": "f8da1bf850b5f85b57cc8b151a2ad287c4c594732da5386d5bd768ea4f212abb",
+        "bytes": 3019299,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/run-ledger-v1.png",
+        "sha256": "7a9f66fb74c22ce6cdcc435e2f03dd85bfa4592e79ed53c33b03283edd780752",
+        "bytes": 969855,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-2b0de973-5fce-4d74-94dd-ba261a7c4b3e.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/run-ledger-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; record landmarks remain distinct and blue-hour/ivory gradients preserved, no legible task text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending",
+        "compositionNote": "Decorative record trays and gold shelf ornaments are prominent; check frontier/trail contrast over partial reveals and treat all ornaments as background, not gameplay markers."
+      }
+    },
+    {
+      "id": "coupa-inside-village-05",
+      "missionId": "coupa-inside-village-05",
+      "title": "Build Tomorrow",
+      "alt": "A sunlit blue invention greenhouse gathers separated craft benches around a calm shared prototype garden.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Build Tomorrow. A sunlit invention greenhouse within the miniature village, with two separated side craft benches displaying entirely blank sketch sheets, small blue ceramic test forms and an unfinished modular bridge model. A graceful suspended white-and-blue kinetic canopy above the rear workbench hints at a shared prototype, while the main center floor remains clear. Low horizontal planted shelves flank a central patch of softly textured pale-blue floor, not a literal hazard. Quiet landing spaces upper-middle49%/25%,lower-middle49%/72%,lower-left16%/68%; keep center near49%/47% visually muted and objective pockets17%/24%,77%/71% calm. Small test pieces are easy to move, no finished triumph implied; reversibility and curiosity conveyed through lightweight crafted materials. Bright hopeful morning, greenhouse panes, mature houseplants and a few lilac flowers. No writing, charts, labels, people, tools used dangerously, screens or verdict.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-fd79273c-a8b9-44a8-bf9a-eabbaf84935a.png",
+        "sha256": "26f79bac0dc1fd0f0947fdcf5d564e39f0005f1ef10d8c4e08802b1b3735ba68",
+        "bytes": 2819106,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/build-tomorrow-v1.png",
+        "sha256": "f44ca426cec434334b31cadddab96a036c365f2a0492a39d935c73fe2475c14f",
+        "bytes": 914825,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-fd79273c-a8b9-44a8-bf9a-eabbaf84935a.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/build-tomorrow-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; broad quiet floors and distinct community/invention landmarks remain clear, no legible text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-inside-village-06",
+      "missionId": "coupa-inside-village-06",
+      "title": "All of Us",
+      "alt": "Six welcoming blue village landmarks gather around a shared festival garden with three quiet porcelain plazas.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission All of Us. A magnificent empty community festival garden at gentle blue hour brings six small familiar village landmarks into one continuous architectural composition: a listening pavilion, reading nook, handoff atelier, little greenhouse, open library and welcoming blue-roofed hall. They surround three broad quiet porcelain plazas across the middle at19%/46%,49%/46%,81%/46%. Soft unmarked blue and ivory fabric swags curve high above the rear buildings; generous wide stone terraces join the spaces without thin luminous trails. Warm lanterns, pots of lilac flowers, small shared craft models and empty varied seating celebrate contributions without judging anyone. Keep17%/24% and77%/71% quiet. A rich coherent community scene with inviting depth, not a six-panel montage. No confetti, fireworks, audience, people, written values, badges, award podium or logo.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-a56431d3-d371-45c9-9596-c4b9f2125741.png",
+        "sha256": "4007de825268cc93d7893ea1d095049a0fa0caaddb7b9818b61cbe5c5df984d4",
+        "bytes": 3103142,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/all-of-us-v1.png",
+        "sha256": "556af50d368e0912547dc03f9b6854b43b13cea825fe5d3d0ad0979ab8e00f3b",
+        "bytes": 997763,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-a56431d3-d371-45c9-9596-c4b9f2125741.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/all-of-us-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; broad quiet floors and distinct community/invention landmarks remain clear, no legible text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-spend-in-motion-02",
+      "missionId": "coupa-spend-in-motion-02",
+      "title": "Supplier Square",
+      "alt": "Friendly blue supplier arcades surround two quiet white market courts divided by a planted colonnade.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Supplier Square. A lively yet unoccupied miniature supplier square in fresh morning light. Two elegant porcelain market courts are ringed by friendly blue awnings and small open display stalls with plain crafted supply cases, ceramic household goods and unmarked parcels. A tall slim royal-blue colonnade with climbing plants separates the courts near the center, with generous open crossings at its ends. Keep quiet pale landing floors near26%/42% and72%/56%, with a small quiet upper-left area22%/24%. This is a welcoming commercial neighborhood, not a competitive tournament; every stall looks respected and inviting. Distant aqueduct and blue-domed workshop roofs provide deep scenic continuity; rich navy shadows and controlled bright blue roof planes. No shop signs, prices, labels, people, supplier enemies or floating paper creatures.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-2c71ecd5-8243-4297-aaf0-3418b192752a.png",
+        "sha256": "95cfb8aa37727a8ae5c1288d2980af4ec289eb097277d10d8e94044ba6483f81",
+        "bytes": 3084218,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/supplier-square-v1.png",
+        "sha256": "0d539a4f1fc673b5c28622eb29aab7c124f29dc947646829cd00e839f246bd81",
+        "bytes": 1008350,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-2c71ecd5-8243-4297-aaf0-3418b192752a.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/supplier-square-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; market courts, folded-paper architecture or harbor dock are distinct and gradients remain smooth. No people, legible task text, identifiable logos, UI or active enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-spend-in-motion-03",
+      "missionId": "coupa-spend-in-motion-03",
+      "title": "Paper Jam",
+      "alt": "Folded blank-paper architecture becomes an orderly blue city arcade around a clear central court and a small lower-left terrace.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Paper Jam. A playful grand miniature city arcade built around sculptural folds of completely blank ivory paper. Large smooth folded ribbon roofs and accordion-like architectural canopies curve over navy document ateliers, becoming an orderly and surprisingly beautiful district. Two separated low horizontal paper-and-blue-metal arcades sit upper-left and lower-right; the central court and a small lower-left side terrace remain open. Quiet floor near49%/49% and17%/68%, quiet small upper-left25%/21%. Rolled blank sheets and tidy unmarked navy folios stay on shelves around the perimeter; no tiny typography or paper ruling. Bright midday light, porcelain, matte paper fibers, frosted glass and planted courtyards. The paper is friendly scenery, never an active enemy or cut trail; no knots or creatures that could confuse the actual moving hazards.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-969be2a9-d216-4872-aae7-70ed4d5b47e5.png",
+        "sha256": "d67b07ddf7a1ee73eb1d9a2a7436b26bce82b01969c870b6b840cb4e70b99562",
+        "bytes": 2802355,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/paper-jam-v1.png",
+        "sha256": "27ce16100d34d2c9675dda83ba044413e949324e5fa2aaf5ab895142419f11b8",
+        "bytes": 934944,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-969be2a9-d216-4872-aae7-70ed4d5b47e5.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/paper-jam-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; market courts, folded-paper architecture or harbor dock are distinct and gradients remain smooth. No people, legible task text, identifiable logos, UI or active enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending",
+        "compositionNote": "A static folded-paper sculpture sits in the central court despite the requested open floor. Verify it remains clearly scenery beside real moving paper hazards and safe-ground overlays."
+      }
+    },
+    {
+      "id": "coupa-spend-in-motion-04",
+      "missionId": "coupa-spend-in-motion-04",
+      "title": "Shared Routes",
+      "alt": "A long blue harbor dock and a small workshop landing connect through bright porcelain bridges and planted terraces.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Shared Routes. An expansive miniature harbor and inventive workshop become one connected neighborhood. A long broad ivory dock stretches through the lower-middle foreground, with quiet surface centered43%/57%; a small upper-right workshop landing near76%/25% holds a blue-roofed atelier just beside its empty floor. Gentle broad white bridges join the harbor, a planted terrace and the workshop. A long low blue canopy lines the upper-left; a narrow tall workshop wall frames the right-middle. Plain supply cases, a moored empty blue cargo boat and small crafted bridge models provide discoverable detail at the outer edges. Leave17%/24% quiet. Glorious afternoon reflections on blue canal water, strong long horizontal dock silhouette, generous navigable-looking spaces but no literal route diagram. No people, arrows, labels, payment tokens or machinery in use.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-14a4e4ed-ba20-4ff8-af45-f1d547e829c9.png",
+        "sha256": "7328143b9cd78bf2fe6a2dd603a28eb33be076304fdd82df1281e5b70dc38fd9",
+        "bytes": 2657603,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/shared-routes-v1.png",
+        "sha256": "17ac9b2b0ddbe1810eba1940080b346b7840bd97ac01c18cdf9783039e7b3a64",
+        "bytes": 911169,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-14a4e4ed-ba20-4ff8-af45-f1d547e829c9.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/shared-routes-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; market courts, folded-paper architecture or harbor dock are distinct and gradients remain smooth. No people, legible task text, identifiable logos, UI or active enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-spend-in-motion-05",
+      "missionId": "coupa-spend-in-motion-05",
+      "title": "Quarter-End Weather",
+      "alt": "A blue village district glows after passing rain, with two sheltered quiet courts and a soft central promenade.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Quarter-End Weather. Revisit a familiar sophisticated miniature village district during luminous blue twilight just after a light rain. Layered clouds part behind a skyline of navy-and-royal-blue arcades, the roofs and porcelain paving gently reflecting small warm lamps. Two sheltered ivory courts sit upper-middle and lower-middle near48%/33% and47%/69%; a broad muted blue-gray promenade lies between them near45%/49%. Offset slender planted architecture stands left-upper and right-lower, creating depth without overcrowding the quiet courts. Keep small upper-left22%/24% quiet. A curved outer colonnade suggests a busier perimeter, but no actual hazard, storm disaster, lightning, rain streaks or active weather effects. Organized closed folders are subtle window-display details only. Calm, resilient, beautiful dusk atmosphere, deep blue skyline, generous soft surfaces for game overlays.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-e9fdc5f9-01ae-4530-9cf2-36e2fec3aa2a.png",
+        "sha256": "d50e2284abd0e70854e35627213716429df9e5044cbaf43460ac22492b674ea4",
+        "bytes": 2792510,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/quarter-end-weather-v1.png",
+        "sha256": "1cf77eb26a6b2347e95fc5e65e59ecd8391cefd7af1f703dcf7122e84f393f3d",
+        "bytes": 940778,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-e9fdc5f9-01ae-4530-9cf2-36e2fec3aa2a.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/quarter-end-weather-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; night/weather mood and broad quiet plazas preserved, no legible text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    },
+    {
+      "id": "coupa-spend-in-motion-06",
+      "missionId": "coupa-spend-in-motion-06",
+      "title": "Make Room for Tomorrow",
+      "alt": "The complete blue village gathers around a broad moonlit central plaza and two peaceful outer gardens.",
+      "prompt": "Use case: stylized-concept. Asset type: one finished opaque ultra-wide 2:1 mission reward illustration for a fictional Coupa Village arcade game. Premium cinematic miniature-world 3D editorial illustration, high oblique elevated camera, tactile matte porcelain architecture, anodized royal-blue metal, frosted glass, planted gardens, warm natural light, sophisticated beautiful architecture and inviting discoverable detail. Coherent large forms at thumbnail size, no collage. Coupa-inspired palette navy #081D4D, royal blue #1565C0, clean ivory-white, restrained cyan, pistachio foliage and lilac with tiny warm brass details. Scenic architecture only: do not draw the actual board, walls, safe zones, hazards or objective markers. Keep the specified quiet floor regions unobstructed and low contrast for gameplay overlays. Fill the entire opaque 2:1 landscape frame with one scene. Absolutely no people, employees, faces, text, letters, digits, readable paper marks, logos, flower emblems, UI, controls, screens, grid, capture trails, game enemies or watermark. No glowing thin decorative lines resembling game trails. Fictional illustrative architecture, not a photograph or claim about a real Coupa workplace. No depicted choice implies a correct business answer.\n\nMission Make Room for Tomorrow. The grand finale of a fictional miniature blue village, viewed from a high oblique cinematic perspective beneath a clear deep navy night sky. Warmly lit market arcades, a ribbon-roofed workshop, blue archive conservatory and harbor terraces join one beautifully coherent neighborhood. A broad quiet central porcelain plaza occupies49%/47%; two smaller peaceful gardens leave clear landing space near19%/74% and78%/21%. Low planted horizontal benches frame rather than fill the central plaza; generous broad bridges and softly lit stone walks connect all districts. Keep upper-left26%/24% calm. Tiny architectural window lights and subtle moonlit water, restrained lavender foliage, strong royal-blue roofs. Hopeful sense of space for future building and shared achievement; no fireworks, confetti, stars shaped as collectible icons, people, celebration text, brand marks, trophies or victory badge. The rewards are the revealed neighborhood itself.",
+      "original": {
+        "path": "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-f6ef1616-fbf8-4d7b-a82f-4b1a665a772e.png",
+        "sha256": "f54aa5828ae9931ae87a57f1c7b174ee7ab094a8630551cb24b9f00ca3740b07",
+        "bytes": 3075976,
+        "width": 1774,
+        "height": 887
+      },
+      "selected": {
+        "path": "game/editions/assets/coupa/bulk-02/make-room-for-tomorrow-v1.png",
+        "sha256": "83d2875d09e4c0685980c5be1e1a147f1325ab8eff44b7097f054c2e17e64296",
+        "bytes": 987441,
+        "width": 960,
+        "height": 480
+      },
+      "derivation": {
+        "kind": "mechanical-resize",
+        "tool": "/usr/bin/sips",
+        "command": [
+          "/usr/bin/sips",
+          "-z",
+          "480",
+          "960",
+          "$CODEX_HOME/generated_images/01a0dbec-03b0-7922-a31b-9d791f738055/exec-f6ef1616-fbf8-4d7b-a82f-4b1a665a772e.png",
+          "--out",
+          "game/editions/assets/coupa/bulk-02/make-room-for-tomorrow-v1.png"
+        ],
+        "changes": "Proportional native resize only; no crop, repainting, palette quantization, semantic edit, or change to the original.",
+        "opaque": true
+      },
+      "review": {
+        "status": "candidate",
+        "original": "Inspected generated original; no visible people, legible text, identifiable logos, UI or enemies.",
+        "selected": "Inspected exact 960x480 native PNG export; night/weather mood and broad quiet plazas preserved, no legible text, people, identifiable logos, UI or enemies. Actual gameplay overlay review pending.",
+        "inGame": "pending",
+        "humanArtworkApproval": "pending"
+      }
+    }
+  ]
+}

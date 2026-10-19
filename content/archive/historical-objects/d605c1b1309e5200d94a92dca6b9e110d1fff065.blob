@@ -1,0 +1,63 @@
+{
+  "themes": [
+    {
+      "actorRecipes": {
+        "border-patrol": "stale-fragments",
+        "bouncer": "paper-tangle",
+        "claimed-rover": "missing-cloud",
+        "contour-patrol": "missing-cloud",
+        "eroder": "stale-fragments",
+        "lane-boss": "backlog-knot",
+        "relay-sentinel": "backlog-knot"
+      },
+      "bossShape": "core",
+      "classBodies": {
+        "bomber": "coupa-flower",
+        "carrier": "coupa-flower",
+        "fiber": "coupa-flower",
+        "impact": "coupa-flower",
+        "interceptor": "coupa-flower",
+        "scout": "coupa-flower",
+        "trapper": "coupa-flower"
+      },
+      "coverColor": "#081D4D",
+      "enemyShape": "cube",
+      "family": "company",
+      "id": "coupa-village",
+      "labels": {
+        "ability": "Support",
+        "boss": "Backlog knot",
+        "currency": "Connections",
+        "enemy": "Paper tangle",
+        "objective": "Connection",
+        "supply": "Support station"
+      },
+      "name": "Coupa",
+      "palette": {
+        "accent": "#5FD6FF",
+        "danger": "#FF9A88",
+        "field": "#081D4D",
+        "grid": "#193866",
+        "ink": "#081D4D",
+        "land": "#1565C0",
+        "muted": "#B8CAE5",
+        "paper": "#FFFFFF",
+        "safe": "#96EAAA",
+        "sky": "#D8F0FF"
+      },
+      "patrolShape": "spark",
+      "player": "coupa-flower",
+      "scene": "network",
+      "soundtrack": {
+        "genre": "chiptune",
+        "id": "village-connections",
+        "name": "Village Connections",
+        "root": 60,
+        "scale": "major",
+        "tempo": 108
+      },
+      "subtitle": "Connected work. Shared possibilities."
+    }
+  ],
+  "version": "xonix-themes.v1"
+}

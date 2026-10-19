@@ -4,6 +4,28 @@ import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 const root = new URL('../', import.meta.url);
 const json = async (name) => JSON.parse(await readFile(new URL(name, root), 'utf8'));
+test('named historical versions retain exact Git identities outside the playable app', async () => {
+  const receipt = await json('migration/historical-owned-object-receipt.json');
+  assert.equal(receipt.format, 'revealline-named-history-preservation.v1');
+  assert.match(receipt.sourceGraphRefsSHA256, /^[a-f0-9]{64}$/);
+  assert.equal(receipt.items.length, 336);
+  const identities = new Set();
+  for (const row of receipt.items) {
+    assert.ok(row.destination.startsWith('content/'));
+    assert.ok(!row.destination.split('/').includes('..'));
+    assert.ok(!identities.has(row.sourceGitBlob));
+    identities.add(row.sourceGitBlob);
+    const bytes = await readFile(new URL(row.destination, root));
+    assert.equal(bytes.length, row.bytes, row.sourcePath);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), row.sha256, row.sourcePath);
+    assert.equal(
+      createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex'),
+      row.sourceGitBlob,
+      row.sourcePath,
+    );
+  }
+});
+
 test('every named ownership candidate is preserved with its original Git blob and byte hash', async () => {
   const inventory = await json('migration/upstream-inventory.json'),
     receipt = await json('migration/owned-source-receipt.json');

@@ -1,45 +1,39 @@
-# Coupa ownership migration
+# Content ownership and migration receipts
 
-This directory records the migration from RevealLine. It is not included in the Pages artifact.
+The dedicated app owns its branded content and presentation. The shared RevealLine engine is imported at the exact revision in `upstream.lock.json`; `app/` remains generated. A normal app build uses only committed local inputs.
 
-- `content-receipt.json`: original selected edition files, content identities, Git blobs and SHA-256 hashes at upstream `cdbda99ac881eb9cac62d536543d9078b92ac081` (v0.151.1).
-- `supplemental-receipt.json`: eight native 2D collections, 20 selected missions, recipes and source artwork. The mixed Neon Mosaic and Equipment Workshop archives retain only the owned level entries. `content/archive/` is authoring/provenance material, never a runtime import catalog.
-- `upstream-inventory.json`: current-tree ownership **candidates**, including names, textual references, exact-byte matches and embedded archives. This is not a deletion list; mixed registries and archives require individual disposition.
+The playable catalog contains five primary chapters / 30 missions with Solo, Versus and Team; 240 official grid-Snake missions in those three modes; and eight supplemental collections / 20 Solo missions. SIM and Survivals are excluded. Historical authoring files do not create playable launch options or ship in the Pages artifact.
 
-The app uses the upstream deterministic engine and official Snake recipes. Local inputs own the five Coupa chapters, supplemental recipes, artwork, menu scenes, actor adapters and interface policy. Existing chapter and mission identities are unchanged. Multiplayer uses the retained standalone edition projection. Supplemental native missions retain their original geometry and class recipes and are currently exposed in Solo. Snake retains all 240 official recipes and supports Solo, matched-board Versus and shared-board Team. No SIM or Survivals runtime is published.
+## Owned authoring
 
-Verification covers every official Snake recipe in each of the three modes, export/restoration, all 20 supplemental recipes with replay verification, all 30 original missions and their two-player host admission, storage boundaries, retained presentation identities, and every published dependency/hash. Browser verification includes locked entry points, mode startup/pause, terminal Snake results/restoration, expansion content and settings/network audits. The current password verifier and app-specific storage namespace are retained.
+`authoring/company/` contains the five chapter generators and their lesson, reward, layout and presentation inputs. Its verifier reconstructs 48 JSON files using the pinned generic engine: all content values and identities match, and 47 files also reproduce the original bytes. The remaining catalog differs only in serialization. Ten owned test suites and two support files retain their original source provenance; the authoring checks include all 180 primary-chapter route proofs.
 
-## Sequencing and remaining history work
+`authoring/collections/` compiles the eight locally owned native packs into all 20 supplemental recipes. The source packs, complete ordered mission list, output recipes and dependency hashes are checked. Existing mission numbers are retained by `level-numbering-receipt.json`: 47 previously numbered missions keep their numbers, and three previously unnumbered supplemental missions remain unnumbered.
 
-The dedicated deployment must be verified before removing original-game content. Current-source removal, full authoring/history preservation, remote ref cutover, release/artifact cleanup, pending PR reconciliation, and synchronization against cleaned upstream are subsequent migration steps. Do not treat this app update or the candidate inventory as proof that historical removal is complete.
+Run these checks against a checkout containing the locked engine commit:
 
-Backup material and remote-ref/PR snapshots live outside both repositories on the Mac mini share. A local Git bundle preserves the original local graph, and a separate full remote-history bundle has been verified. Original dirty worktrees are not reset or deleted. Historical rewriting must operate on a separate mirror, retain the old-to-new commit map outside the cleaned repository, and check expected remote refs before publication.
+```sh
+npm test
+npm run build
+npm run verify:authoring -- --source /path/to/revealline
+npm run verify:collections
+```
 
-## Current-source preservation receipts
+## Receipts
 
-`owned-source-receipt.json` accounts for every named ownership candidate in the migration inventory, reusing identical live inputs and archiving the other originals under `content/archive/owned-source/`. SHA-256 and original Git blob checks verify those copies. `generator-fragment-receipt.json` preserves owner-specific data and code excerpts from mixed generators without turning the other communities' generators into app dependencies. These excerpts are provenance, not a claim that all mixed registries have been split or that historical extraction is complete. The runnable app still consumes its local native content files through the pinned shared compiler.
+- `content-receipt.json` and `owned-source-receipt.json` retain the original runtime content and named authoring sources, including their Git blob IDs and SHA-256 hashes.
+- `company-authoring-receipt.json` and `generator-fragment-receipt.json` record the executable local generators and the original mixed-generator excerpts.
+- `mixed-source-receipt.json` accounts for 2,241 structured entries from 105 mixed files. Original JSON pointers and source hashes distinguish extracted records from the original complete artifacts.
+- `code-fragment-receipt.json` records 146 excerpts from 71 source and documentation files.
+- `additional-owned-source-receipt.json` preserves 122 complete source, authoring and evidence files. These include the earlier Navi and Spend Network material and mixed originals needed to document the ownership split.
+- `presentation-source-receipt.json` records 165 extracted records covering 33 owned slots, 33 recipe revisions and their bindings.
+- `owned-test-receipt.json` records the original owned regression suites and support files.
+- `historical-owned-object-receipt.json` preserves 336 named historical file versions from the verified backup graph. Of these, 244 already exist byte-for-byte in local content; 92 additional objects occupy about 3 MB under `content/archive/historical-objects/`. Tests verify the original Git object identity, SHA-256 and length of every version.
 
-The first application update was merged in PR #5 at `432ca959b6e5b6c88627ae716595476bd2d99593`. Its CI tests and build passed. The initial private-repository deployment hit the account's Actions artifact quota and Pages plan restriction. The owner then explicitly authorized making this repository public. [Deployment run 39275226323](https://github.com/mekhovov/revealline-mmm/actions/runs/39275226323) published `9fc0e2aa223f90a286d1ac4307473e759e7c91c5`, and live browser checks passed for the password gate, capture Solo/Versus/Team, Snake's three modes and save restoration, all 20 supplemental missions, clean settings and asset requests. The first cold capture load exceeded a 20-second readiness wait; all modes passed with a longer loading allowance. No gameplay change was required.
+Archived records retain their original bytes and claims as historical evidence. They are not current release certifications. Derived upstream records receive new hashes and explicit projection notes rather than reusing an original artifact's verification identity.
 
-## Runnable chapter authoring
+## Historical scope and remaining work
 
-`authoring/company/` now contains executable local generators for the five primary chapters, their lessons and rewards. `company-authoring-receipt.json` records the source and local hashes. `npm run verify:authoring` reconstructs 48 JSON files using only these owned generators plus pinned generic engine helpers; all JSON values retain their original identities, and 47 files also reproduce the original bytes. The catalog differs only in serialization. The four original lesson test fixtures remain valid. This advances the mixed-generator split; supplemental generators, unnamed ownership dependencies and historical migration still require completion.
+The historical-object receipt covers named ownership candidates from one preserved Git graph. It is not a claim that mixed files, every path alias, embedded archives, new remote commits or GitHub-hosted artifacts have all been migrated. The full Git backup and compact release backup are stored outside both repositories. Compact preservation retains full Git history, unique content and evidence, and one complete verified release instead of every duplicate release archive.
 
-## Native collection authoring
-
-`authoring/collections/` treats the eight locally preserved native packs as editable source, replacing reliance on mixed upstream theme assembly scripts. Its compiler retains all 20 selected mission recipes and identities. CI verifies each admitted source hash, the exact ordered mission list and complete generated recipe values against the local shipped files. The older producer excerpts remain provenance; current upstream mixed-registry removal and historical migration are still outstanding.
-
-`level-numbering-receipt.json` preserves the 47 previously assigned mission display numbers. The other three supplemental missions had no shared-registry number and retain that behavior. The dedicated app owns this small registry, so retiring its entries upstream cannot renumber local missions or expose another community through the registry.
-# Additional archive ownership
-
-`mixed-source-receipt.json` accounts for 564 owned records split from 68 shared registries and proof files. Each archive includes original JSON pointers, Git blob and source hashes. Every pointer was checked against the exact original committed JSON before the upstream cleanup. These are selected source records, not replacements presented as the original verified files.
-
-`additional-owned-source-receipt.json` preserves 64 files found under the earlier Navi Network, reserve Spend Network, and Spend role-presentation names. It records exact Git blobs, SHA-256 hashes, source revisions, and local destinations. `content/archive/coupa-reserve-art.json` selects the ten Coupa reserve illustration records with their source provenance. These are authoring archives and do not add playable modes or prohibited presentation options to the published app.
-
-
-## Owned regression coverage
-
-`owned-test-receipt.json` preserves five original learning and session suites, the owned part of the shared campaign route suite, and all 180 original Coupa route proofs. All 32 checks in this migrated suite pass. The authoring verifier assembles these local tests with the pinned generic engine and local chapter generators, so future engine updates must retain their behavior. The original game keeps the 234 other-community routes and its shared restoration and reward tests use a synthetic fixture.
-
-`presentation-source-receipt.json` records the 33 owned presentation slots, 33 recipe revisions and their bindings extracted from the original compiled authoring document. These source records stay outside the published game.
+The original game's source cleanup is tracked separately in [RevealLine PR #1755](https://github.com/mekhovov/revealline/pull/1755). Historical rewriting, hosted artifact cleanup, pending-PR reconciliation and the final regeneration from rewritten upstream `main` remain separate steps. Original dirty worktrees must not be reset. A final migration report must distinguish repository-owner-controlled records from GitHub-owned PR references, cached objects and external copies.

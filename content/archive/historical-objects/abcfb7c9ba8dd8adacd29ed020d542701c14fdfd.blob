@@ -1,0 +1,376 @@
+[
+  {
+    "brief": "Configure an illustrative Core API read. No request is sent and no customer instance is used.",
+    "campaignId": "coupa-developer-integration",
+    "fields": [
+      {
+        "expected": "suppliers",
+        "explanation": "Choose the business object required by the lookup.",
+        "id": "resource",
+        "label": "Resource",
+        "options": [
+          { "label": "suppliers", "value": "suppliers" },
+          { "label": "invoices", "value": "invoices" }
+        ]
+      },
+      {
+        "expected": "GET",
+        "explanation": "This task reads an existing record.",
+        "id": "method",
+        "label": "Operation",
+        "options": [
+          { "label": "GET", "value": "GET" },
+          { "label": "POST", "value": "POST" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-developer-integration-01-lesson",
+    "kind": "practice",
+    "missionId": "coupa-developer-integration-01",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "requirement",
+        "lines": [
+          "Read one known supplier record for a small on-demand lookup.",
+          "The job does not update the supplier."
+        ],
+        "title": "Integration requirement"
+      },
+      {
+        "id": "resources",
+        "lines": [
+          "Supplier records belong to the suppliers resource.",
+          "API reads suit the on-demand lookup; bulk file imports serve a different job."
+        ],
+        "title": "Resource notes"
+      }
+    ],
+    "revision": "2",
+    "role": "Integration developer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Get started",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/get-started-with-the-api"
+      }
+    ],
+    "success": "Local request plan: GET one supplier record. No network request was made.",
+    "title": "Plan a resource read"
+  },
+  {
+    "brief": "Configure a fictional system-to-system client. Scope labels are training labels, not a list to paste into a live instance.",
+    "campaignId": "coupa-developer-integration",
+    "fields": [
+      {
+        "expected": "Client credentials",
+        "explanation": "There is no end user in this scheduled job.",
+        "id": "grant",
+        "label": "Grant type",
+        "options": [
+          { "label": "Client credentials", "value": "Client credentials" },
+          { "label": "Authorization code", "value": "Authorization code" }
+        ]
+      },
+      {
+        "expected": "Read accounting",
+        "explanation": "Choose only the read permission the job needs.",
+        "id": "scope",
+        "label": "Training permission",
+        "options": [
+          { "label": "Read accounting", "value": "Read accounting" },
+          { "label": "Read and write accounting", "value": "Read and write accounting" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-developer-integration-02-lesson",
+    "kind": "practice",
+    "missionId": "coupa-developer-integration-02",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "job",
+        "lines": [
+          "A scheduled backend job reads accounting reference data.",
+          "No end user is present and the job never writes data."
+        ],
+        "title": "Job context"
+      },
+      {
+        "id": "access",
+        "lines": [
+          "Client credentials: system-to-system. Authorization code: user-involved consent.",
+          "Read accounting grants the needed read; write accounting is broader than this job."
+        ],
+        "title": "Available training choices"
+      }
+    ],
+    "revision": "2",
+    "role": "Integration developer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — OpenID Connect clients",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/oauth-2.0-and-oidc/openid-connect-clients"
+      }
+    ],
+    "success": "Fictional client configured for client credentials and accounting read only.",
+    "title": "Choose the narrow access"
+  },
+  {
+    "brief": "Complete a frozen, two-page local response set. The fixture is small; the documented Core API page bound is separate.",
+    "campaignId": "coupa-developer-integration",
+    "fields": [
+      {
+        "expected": "101, 102, 103",
+        "explanation": "The first page is not the complete dataset.",
+        "id": "ids",
+        "label": "Combined result IDs",
+        "options": [
+          { "label": "101, 102", "value": "101, 102" },
+          { "label": "101, 102, 103", "value": "101, 102, 103" }
+        ]
+      },
+      {
+        "expected": "Keep active-supplier filter",
+        "explanation": "Pagination must retain the intended query.",
+        "id": "filter",
+        "label": "Filter on subsequent page",
+        "options": [
+          { "label": "Keep active-supplier filter", "value": "Keep active-supplier filter" },
+          { "label": "Drop filter", "value": "Drop filter" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-developer-integration-03-lesson",
+    "kind": "practice",
+    "missionId": "coupa-developer-integration-03",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "page-one",
+        "lines": [
+          "Filter: active suppliers. IDs returned: 101, 102.",
+          "The fixture indicates another page exists."
+        ],
+        "title": "Local page 1"
+      },
+      {
+        "id": "page-two",
+        "lines": [
+          "Same filter. ID returned: 103. No further page.",
+          "The combined result contains three unique records."
+        ],
+        "title": "Local page 2"
+      }
+    ],
+    "revision": "2",
+    "role": "Integration developer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Querying options",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/get-started-with-the-api/querying-options"
+      }
+    ],
+    "success": "Local ledger completed with IDs 101, 102 and 103 under the same filter.",
+    "title": "Finish the filtered read"
+  },
+  {
+    "brief": "Prepare a fictional transaction using existing active references. This is not a complete production payload.",
+    "campaignId": "coupa-developer-integration",
+    "fields": [
+      {
+        "expected": "S-10",
+        "explanation": "Resolve an active, existing supplier.",
+        "id": "supplier",
+        "label": "Supplier reference",
+        "options": [
+          { "label": "S-10", "value": "S-10" },
+          { "label": "S-11", "value": "S-11" },
+          { "label": "S-99", "value": "S-99" }
+        ]
+      },
+      {
+        "expected": "WORKSHOP",
+        "explanation": "Use the existing accounting reference declared by this fixture.",
+        "id": "account",
+        "label": "Accounting reference",
+        "options": [
+          { "label": "WORKSHOP", "value": "WORKSHOP" },
+          { "label": "UNLISTED", "value": "UNLISTED" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-developer-integration-04-lesson",
+    "kind": "practice",
+    "missionId": "coupa-developer-integration-04",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "references",
+        "lines": [
+          "Supplier S-10: active. Supplier S-11: inactive.",
+          "Requester U-7: active. Accounting code WORKSHOP: exists."
+        ],
+        "title": "Available reference records"
+      },
+      {
+        "id": "draft",
+        "lines": [
+          "The transaction requires the active supplier, requester U-7 and existing code WORKSHOP.",
+          "Do not invent a missing supplier or change the intended requester."
+        ],
+        "title": "Draft requirement"
+      }
+    ],
+    "revision": "2",
+    "role": "Integration developer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Requisitions",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/requisitions-api-requisitions"
+      }
+    ],
+    "success": "Active supplier and existing accounting references linked to the fictional draft.",
+    "title": "Resolve valid references"
+  },
+  {
+    "brief": "Inspect a deterministic local validation response and repair only the missing field.",
+    "campaignId": "coupa-developer-integration",
+    "fields": [
+      {
+        "expected": "3",
+        "explanation": "The request requires three kits.",
+        "id": "quantity",
+        "label": "Line quantity",
+        "options": [
+          { "label": "0", "value": "0" },
+          { "label": "3", "value": "3" }
+        ]
+      },
+      {
+        "expected": "Create draft",
+        "explanation": "A successful draft creation does not issue an order.",
+        "id": "operation",
+        "label": "Successful next operation",
+        "options": [
+          { "label": "Create draft", "value": "Create draft" },
+          { "label": "Mark order issued", "value": "Mark order issued" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-developer-integration-05-lesson",
+    "kind": "practice",
+    "missionId": "coupa-developer-integration-05",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "request",
+        "lines": [
+          "One quantity-based line: electronics kit. Currency EUR. Quantity missing.",
+          "The intended quantity is 3. This exercise creates a draft only."
+        ],
+        "title": "Fictional draft request"
+      },
+      {
+        "id": "response",
+        "lines": [
+          "Validation failed: quantity is required for this quantity-based line.",
+          "No draft was created on the failed attempt; correct the request before retrying."
+        ],
+        "title": "Local response"
+      }
+    ],
+    "revision": "2",
+    "role": "Integration developer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Requisitions",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/requisitions-api-requisitions"
+      }
+    ],
+    "success": "Local validation passed. Fictional draft created; no real API was called.",
+    "title": "Repair the validation error"
+  },
+  {
+    "brief": "Use the fixture’s recovery policy. Coupa endpoint-specific idempotency and retry behavior must be checked separately.",
+    "campaignId": "coupa-developer-integration",
+    "fields": [
+      {
+        "expected": "B only",
+        "explanation": "The fixture already confirms successful destination records for A and C.",
+        "id": "retry",
+        "label": "Records to retry",
+        "options": [
+          { "label": "B only", "value": "B only" },
+          { "label": "A, B and C", "value": "A, B and C" }
+        ]
+      },
+      {
+        "expected": "All intended records reconciled",
+        "explanation": "Sending a retry is not proof of successful processing.",
+        "id": "completion",
+        "label": "Completion condition",
+        "options": [
+          {
+            "label": "All intended records reconciled",
+            "value": "All intended records reconciled"
+          },
+          { "label": "Retry command sent", "value": "Retry command sent" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-developer-integration-06-lesson",
+    "kind": "practice",
+    "missionId": "coupa-developer-integration-06",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "ledger",
+        "lines": [
+          "A: processed, destination ID 901. B: failed validation, no destination record. C: processed, destination ID 903.",
+          "Run result: failed because B is unresolved."
+        ],
+        "title": "Local integration run"
+      },
+      {
+        "id": "recovery",
+        "lines": [
+          "Correct B and retry only B after confirming no destination record exists.",
+          "Do not blindly repeat successful creates A or C. Verify every intended record before marking the run successful."
+        ],
+        "title": "Recovery policy for this fixture"
+      }
+    ],
+    "revision": "2",
+    "role": "Integration developer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Integration runs",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/integrations-api-integrations/integration-runs-api"
+      },
+      {
+        "title": "Coupa Core API — Get started",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/get-started-with-the-api"
+      }
+    ],
+    "success": "Recovery plan targets B only and requires reconciliation before success.",
+    "title": "Recover the failed item"
+  }
+]

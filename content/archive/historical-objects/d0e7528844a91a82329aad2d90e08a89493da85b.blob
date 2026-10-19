@@ -1,0 +1,378 @@
+[
+  {
+    "brief": "Prepare the requirement for a fictional workshop opening. The chosen record must describe the need, not prematurely choose a supplier.",
+    "campaignId": "coupa-source-to-pay",
+    "fields": [
+      {
+        "expected": "Electronics kit",
+        "explanation": "Use what learners need, not the unsolicited offer.",
+        "id": "item",
+        "label": "Required item",
+        "options": [
+          { "label": "Electronics kit", "value": "Electronics kit" },
+          { "label": "Camera case", "value": "Camera case" }
+        ]
+      },
+      {
+        "expected": "12",
+        "explanation": "There is one kit for each of twelve learners.",
+        "id": "quantity",
+        "label": "Required quantity",
+        "options": [
+          { "label": "10", "value": "10" },
+          { "label": "12", "value": "12" }
+        ]
+      },
+      {
+        "expected": "12 October",
+        "explanation": "The requirement must support the workshop date.",
+        "id": "needBy",
+        "label": "Required arrival",
+        "options": [
+          { "label": "12 October", "value": "12 October" },
+          { "label": "16 October", "value": "16 October" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-source-to-pay-01-lesson",
+    "kind": "practice",
+    "missionId": "coupa-source-to-pay-01",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "need",
+        "lines": [
+          "Twelve learners each need one electronics kit.",
+          "The workshop starts 14 October. Kits must arrive by 12 October."
+        ],
+        "title": "Workshop brief"
+      },
+      {
+        "id": "offer",
+        "lines": [
+          "Supplier Birch offers ten camera cases arriving 16 October.",
+          "An offer is evidence to compare, not the requirement itself."
+        ],
+        "title": "Unsolicited offer"
+      }
+    ],
+    "revision": "2",
+    "role": "Requester",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa glossary — Source to pay",
+        "url": "https://docs.coupa.com/en/coupa-glossary/overview/s"
+      }
+    ],
+    "success": "Requirement saved: 12 electronics kits, needed by 12 October.",
+    "title": "Write the requirement"
+  },
+  {
+    "brief": "Select an offer against the declared need and budget. These fictional suppliers are collaborators, not enemies.",
+    "campaignId": "coupa-source-to-pay",
+    "fields": [
+      {
+        "expected": "Birch",
+        "explanation": "Compare completeness, delivery and budget together.",
+        "id": "supplier",
+        "label": "Selected offer",
+        "options": [
+          { "label": "Birch", "value": "Birch" },
+          { "label": "Cedar", "value": "Cedar" },
+          { "label": "Maple", "value": "Maple" }
+        ]
+      },
+      {
+        "expected": "Meets scope, date and budget",
+        "explanation": "Lowest price alone does not meet the declared requirement.",
+        "id": "basis",
+        "label": "Recorded decision basis",
+        "options": [
+          { "label": "Meets scope, date and budget", "value": "Meets scope, date and budget" },
+          { "label": "Lowest displayed price", "value": "Lowest displayed price" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-source-to-pay-02-lesson",
+    "kind": "practice",
+    "missionId": "coupa-source-to-pay-02",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "requirement",
+        "lines": [
+          "12 electronics kits by 12 October. Maximum total: 600 credits.",
+          "All kits must include a reusable case."
+        ],
+        "title": "Approved requirement"
+      },
+      {
+        "id": "offers",
+        "lines": [
+          "Birch: 12 kits with cases, 570 credits, 11 October.",
+          "Cedar: 12 kits without cases, 510 credits, 10 October.",
+          "Maple: 12 kits with cases, 540 credits, 15 October."
+        ],
+        "title": "Comparable offers"
+      }
+    ],
+    "revision": "2",
+    "role": "Buyer",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa glossary — Source to pay",
+        "url": "https://docs.coupa.com/en/coupa-glossary/overview/s"
+      }
+    ],
+    "success": "Birch offer linked to the requirement with its decision basis.",
+    "title": "Compare the offers"
+  },
+  {
+    "brief": "Connect the chosen offer to a fictional contract brief. This exercise is a document handoff, not legal advice.",
+    "campaignId": "coupa-source-to-pay",
+    "fields": [
+      {
+        "expected": "12 kits with cases",
+        "explanation": "Keep the complete awarded scope.",
+        "id": "scope",
+        "label": "Contract scope",
+        "options": [
+          { "label": "12 kits with cases", "value": "12 kits with cases" },
+          { "label": "12 cases only", "value": "12 cases only" }
+        ]
+      },
+      {
+        "expected": "30 days after invoice date",
+        "explanation": "Record the agreed terms rather than inventing a faster payment.",
+        "id": "paymentTerm",
+        "label": "Payment term",
+        "options": [
+          { "label": "30 days after invoice date", "value": "30 days after invoice date" },
+          { "label": "Pay immediately on order", "value": "Pay immediately on order" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-source-to-pay-03-lesson",
+    "kind": "practice",
+    "missionId": "coupa-source-to-pay-03",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "award",
+        "lines": [
+          "Birch: 12 electronics kits with reusable cases.",
+          "Total 570 credits; arrival 11 October."
+        ],
+        "title": "Chosen offer"
+      },
+      {
+        "id": "terms",
+        "lines": [
+          "The parties have agreed payment 30 days after invoice date.",
+          "The contract brief must retain the chosen scope and those terms."
+        ],
+        "title": "Agreed scenario terms"
+      }
+    ],
+    "revision": "2",
+    "role": "Sourcing coordinator",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa glossary — Source to pay",
+        "url": "https://docs.coupa.com/en/coupa-glossary/overview/s"
+      }
+    ],
+    "success": "Contract brief prepared with the awarded scope and agreed payment term.",
+    "title": "Prepare the terms handoff"
+  },
+  {
+    "brief": "A draft request is ready. Apply the fictional organization’s handoff policy; this is not a live Coupa configuration.",
+    "campaignId": "coupa-source-to-pay",
+    "fields": [
+      {
+        "expected": "Department approver",
+        "explanation": "The draft needs the required internal review.",
+        "id": "nextOwner",
+        "label": "Next owner",
+        "options": [
+          { "label": "Department approver", "value": "Department approver" },
+          { "label": "Supplier", "value": "Supplier" }
+        ]
+      },
+      {
+        "expected": "Pending approval",
+        "explanation": "Submitting a request does not itself issue a purchase order.",
+        "id": "nextState",
+        "label": "Requested next state",
+        "options": [
+          { "label": "Pending approval", "value": "Pending approval" },
+          { "label": "Issued order", "value": "Issued order" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-source-to-pay-04-lesson",
+    "kind": "practice",
+    "missionId": "coupa-source-to-pay-04",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "request",
+        "lines": [
+          "12 kits, total 570 credits. Status: Draft.",
+          "Supplier and contract references are present."
+        ],
+        "title": "Request R-104"
+      },
+      {
+        "id": "policy",
+        "lines": [
+          "A department approver reviews requests above 500 credits.",
+          "Only an approved request can proceed to the buyer for order issuance."
+        ],
+        "title": "Scenario policy"
+      }
+    ],
+    "revision": "2",
+    "role": "Requester",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa glossary — Approval",
+        "url": "https://docs.coupa.com/en/coupa-glossary/overview/a"
+      },
+      {
+        "title": "Coupa Core API — Requisitions",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/requisitions-api-requisitions"
+      }
+    ],
+    "success": "Request R-104 routed for approval; no purchase order has been issued.",
+    "title": "Route the request"
+  },
+  {
+    "brief": "Update the fictional receiving record using the delivery evidence. Leave undelivered quantities outstanding.",
+    "campaignId": "coupa-source-to-pay",
+    "fields": [
+      {
+        "expected": "PO-204 / line 1",
+        "explanation": "Link the receipt to the actual order line.",
+        "id": "line",
+        "label": "Order line",
+        "options": [
+          { "label": "PO-204 / line 1", "value": "PO-204 / line 1" },
+          { "label": "PO-999 / line 1", "value": "PO-999 / line 1" }
+        ]
+      },
+      {
+        "expected": "8",
+        "explanation": "Record only the quantity that arrived.",
+        "id": "received",
+        "label": "Quantity received today",
+        "options": [
+          { "label": "8", "value": "8" },
+          { "label": "12", "value": "12" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-source-to-pay-05-lesson",
+    "kind": "practice",
+    "missionId": "coupa-source-to-pay-05",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "order",
+        "lines": ["Line 1: 12 electronics kits. Previously received: 0."],
+        "title": "Order PO-204"
+      },
+      {
+        "id": "delivery",
+        "lines": ["8 kits arrived intact today.", "The remaining 4 kits are scheduled for later."],
+        "title": "Delivery note D-204A"
+      }
+    ],
+    "revision": "2",
+    "role": "Receiver",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Core API — Receipts",
+        "url": "https://docs.coupa.com/en/developer-documentation/the-coupa-core-api/resources/transactional-resources/receipts-api"
+      }
+    ],
+    "success": "Receipt recorded for 8 kits. Four kits remain outstanding.",
+    "title": "Record what arrived"
+  },
+  {
+    "brief": "Reconcile the example’s three-document check and prepare the correct handoff. A later payment is a separate event.",
+    "campaignId": "coupa-source-to-pay",
+    "fields": [
+      {
+        "expected": "Documents match",
+        "explanation": "All three quantities and the agreed total now match.",
+        "id": "match",
+        "label": "Reconciliation result",
+        "options": [
+          { "label": "Documents match", "value": "Documents match" },
+          { "label": "Quantity mismatch", "value": "Quantity mismatch" }
+        ]
+      },
+      {
+        "expected": "Approved for payment",
+        "explanation": "Approval is not evidence that a payment occurred.",
+        "id": "state",
+        "label": "After the review",
+        "options": [
+          { "label": "Approved for payment", "value": "Approved for payment" },
+          { "label": "Paid", "value": "Paid" }
+        ]
+      }
+    ],
+    "fixtureRevision": "1",
+    "format": "revealline-learning-lesson.v1",
+    "id": "coupa-source-to-pay-06-lesson",
+    "kind": "practice",
+    "missionId": "coupa-source-to-pay-06",
+    "notice": "Fictional, offline training. Illustrative records; no live Coupa actions or certification.",
+    "records": [
+      {
+        "id": "chain",
+        "lines": [
+          "PO-204 ordered 12 kits. Receipts now total 12 kits.",
+          "Invoice INV-204 is for 12 kits at the agreed 570 credits."
+        ],
+        "title": "Order and receipt"
+      },
+      {
+        "id": "status",
+        "lines": [
+          "Status: Pending approval. No payment record exists.",
+          "The scenario requires an AP review before payment scheduling."
+        ],
+        "title": "Current invoice"
+      }
+    ],
+    "revision": "2",
+    "role": "Accounts payable",
+    "sourceReviewedAt": "2026-09-26",
+    "sources": [
+      {
+        "title": "Coupa Supplier Portal — View and manage invoices",
+        "url": "https://docs.coupa.com/en/supplier-documentation/coupa-for-suppliers/the-coupa-supplier-portal-or-csp/features-and-processes-in-the-coupa-supplier-portal/invoices/view-and-manage-invoices"
+      }
+    ],
+    "success": "Invoice approved for payment scheduling. It has not been marked paid.",
+    "title": "Close the record chain"
+  }
+]

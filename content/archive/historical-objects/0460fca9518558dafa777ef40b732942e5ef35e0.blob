@@ -1,0 +1,487 @@
+{
+  "actorCatalogId": "journey-actors-v1",
+  "assets": [
+    {
+      "alt": "A fictional illustrated Coupa Village district, with shared workspaces and connected routes.",
+      "bytes": 2105228,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-product-operations-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/coupa-product-operations-key.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "371ab48050bb585c118346bcbbf97e8cdec3234415c3f41b16859874bda83604",
+      "width": 1280
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 1,
+      "format": "CampaignDesignV1",
+      "id": "coupa-product-operations",
+      "missionIds": [
+        "coupa-product-operations-01",
+        "coupa-product-operations-02",
+        "coupa-product-operations-03",
+        "coupa-product-operations-04",
+        "coupa-product-operations-05",
+        "coupa-product-operations-06"
+      ],
+      "name": "A Day in Coupa",
+      "revision": "1"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v1",
+  "format": "ContentProjectV1",
+  "id": "coupa-product-operations",
+  "maps": [
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 10, "x": 13, "y": 11 },
+        { "h": 5, "w": 10, "x": 48, "y": 20 }
+      ],
+      "height": 36,
+      "id": "coupa-product-operations-01-map",
+      "name": "Find Your Work",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 18.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 2, "w": 11, "x": 31, "y": 18 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 10, "x": 30, "y": 15 },
+        { "h": 3, "w": 9, "x": 14, "y": 25 }
+      ],
+      "height": 36,
+      "id": "coupa-product-operations-02-map",
+      "name": "Repair the Draft",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 10, "x": 17, "y": 8 },
+        { "h": 2, "w": 10, "x": 43, "y": 8 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 7, "x": 12, "y": 17 },
+        { "h": 4, "w": 8, "x": 31, "y": 10 },
+        { "h": 4, "w": 7, "x": 53, "y": 17 }
+      ],
+      "height": 36,
+      "id": "coupa-product-operations-03-map",
+      "name": "Review the Request",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 12, "w": 3, "x": 24, "y": 12 },
+        { "h": 12, "w": 3, "x": 44, "y": 12 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 8, "x": 32, "y": 10 },
+        { "h": 4, "w": 8, "x": 32, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-product-operations-04-map",
+      "name": "Handle the Change",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 17, "x": 12, "y": 13 },
+        { "h": 2, "w": 17, "x": 44, "y": 21 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 8, "x": 12, "y": 24 },
+        { "h": 6, "w": 9, "x": 31, "y": 14 },
+        { "h": 4, "w": 8, "x": 53, "y": 8 }
+      ],
+      "height": 36,
+      "id": "coupa-product-operations-05-map",
+      "name": "Record the Delivery",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 15, "x": 27, "y": 22 }],
+      "walls": [
+        { "h": 13, "w": 3, "x": 21, "y": 7 },
+        { "h": 13, "w": 3, "x": 46, "y": 18 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 13, "y": 23 },
+        { "h": 4, "w": 9, "x": 47, "y": 8 }
+      ],
+      "height": 36,
+      "id": "coupa-product-operations-06-map",
+      "name": "Clear the Exception",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 18.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 11, "x": 15, "y": 11 },
+        { "h": 2, "w": 11, "x": 45, "y": 23 },
+        { "h": 6, "w": 2, "x": 35, "y": 15 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.48,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["foundations"],
+        "lesson": "Identify the task that needs action from your current role.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A readable, fictional task desk sits within a bright operations courtyard.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Reveal the task stations before taking the longer route around the desk."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-product-operations-01",
+      "map": { "id": "coupa-product-operations-01-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Find Your Work",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-product-operations-01-picture",
+        "themeId": "coupa-village"
+      },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.53,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Correct a missing field and save a valid fictional draft.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Loose request cards become a tidy, complete draft at the review desk.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Visit the two evidence shelves using their short interior returns."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-product-operations-02",
+      "map": { "id": "coupa-product-operations-02-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Repair the Draft",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.56,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Apply the scenario’s stated review policy to the evidence.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A calm review room shows a request and its supporting documents together.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Bring both evidence rooms into view before crossing the central review lane."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-product-operations-03",
+      "map": { "id": "coupa-product-operations-03-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Review the Request",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 32.5, "y": 10.5 }],
+      "coverage": 0.58,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["perimeter-patrol"],
+        "lesson": "Route an order change to its owner while it awaits review.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A marked change request travels between a supplier dock and a buyer desk.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Use the change desk to shorten the return from the outer dock."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-product-operations-04",
+      "map": { "id": "coupa-product-operations-04-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Handle the Change",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 12.5, "y": 24.5 }],
+      "coverage": 0.6,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Record the actual partial quantity against the right line.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A delivery bay keeps arrived and outstanding packages visibly separate.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Connect the arrived-goods bay without confusing it with the later delivery."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-product-operations-05",
+      "map": { "id": "coupa-product-operations-05-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Record the Delivery",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 13.5, "y": 23.5 }],
+      "coverage": 0.64,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Trace an invoice discrepancy and choose the appropriate handoff.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A linked operations room makes one unresolved record stand out clearly.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Reveal the three record stations before linking the exception desk."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-product-operations-06",
+      "map": { "id": "coupa-product-operations-06-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Clear the Exception",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "A Day in Coupa",
+  "packs": [
+    {
+      "campaignIds": ["coupa-product-operations"],
+      "format": "PackDesignV1",
+      "id": "coupa-product-operations-pack",
+      "name": "A Day in Coupa",
+      "revision": "1"
+    }
+  ],
+  "policyId": "journey-arcade-v2",
+  "revision": "1"
+}

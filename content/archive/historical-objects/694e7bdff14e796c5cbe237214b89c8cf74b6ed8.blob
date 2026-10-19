@@ -1,0 +1,483 @@
+{
+  "actorCatalogId": "journey-actors-v1",
+  "assets": [
+    {
+      "alt": "A fictional illustrated Coupa Village district, with shared workspaces and connected routes.",
+      "bytes": 2021650,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-source-to-pay-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/coupa-source-to-pay-key.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "bbfb32e28c42863a2c444de4c42d5843f107ae8573d8f773817abe9488801f3b",
+      "width": 1280
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 1,
+      "format": "CampaignDesignV1",
+      "id": "coupa-source-to-pay",
+      "missionIds": [
+        "coupa-source-to-pay-01",
+        "coupa-source-to-pay-02",
+        "coupa-source-to-pay-03",
+        "coupa-source-to-pay-04",
+        "coupa-source-to-pay-05",
+        "coupa-source-to-pay-06"
+      ],
+      "name": "From Need to Value",
+      "revision": "1"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v1",
+  "format": "ContentProjectV1",
+  "id": "coupa-source-to-pay",
+  "maps": [
+    {
+      "format": "MapDesignV1",
+      "foundations": [{ "h": 4, "w": 10, "x": 17, "y": 12 }],
+      "height": 36,
+      "id": "coupa-source-to-pay-01-map",
+      "name": "Find the Need",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 22.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 10, "w": 2, "x": 42, "y": 13 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 12, "x": 29, "y": 10 },
+        { "h": 4, "w": 12, "x": 29, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-02-map",
+      "name": "Choose Together",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 15, "w": 2, "x": 17, "y": 10 },
+        { "h": 15, "w": 2, "x": 49, "y": 10 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 15, "x": 30, "y": 14 },
+        { "h": 4, "w": 7, "x": 11, "y": 22 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-03-map",
+      "name": "Terms Bridge",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 10, "x": 20, "y": 8 },
+        { "h": 2, "w": 10, "x": 43, "y": 25 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 8, "x": 11, "y": 11 },
+        { "h": 4, "w": 8, "x": 31, "y": 17 },
+        { "h": 4, "w": 8, "x": 53, "y": 22 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-04-map",
+      "name": "Request to Order",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 15.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 10, "w": 3, "x": 22, "y": 16 },
+        { "h": 10, "w": 3, "x": 48, "y": 8 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 10, "x": 13, "y": 17 },
+        { "h": 4, "w": 10, "x": 49, "y": 12 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-05-map",
+      "name": "Received in Part",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 18.5, "y": 0.5 }],
+      "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 9, "x": 30, "y": 23 }],
+      "walls": [
+        { "h": 10, "w": 2, "x": 28, "y": 8 },
+        { "h": 10, "w": 2, "x": 42, "y": 19 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 12, "x": 29, "y": 8 },
+        { "h": 4, "w": 12, "x": 29, "y": 24 },
+        { "h": 3, "w": 6, "x": 32, "y": 16 }
+      ],
+      "height": 36,
+      "id": "coupa-source-to-pay-06-map",
+      "name": "Close the Loop",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 8, "x": 17, "y": 16 },
+        { "h": 2, "w": 8, "x": 46, "y": 16 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.48,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["foundations"],
+        "lesson": "Turn a fictional business need into a clear requirement.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A small community workshop prepares a well-defined supply request.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Reveal the requirement desk before crossing toward the supplier offers."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-01",
+      "map": { "id": "coupa-source-to-pay-01-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Find the Need",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-source-to-pay-01-picture",
+        "themeId": "coupa-village"
+      },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.53,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Compare offers against the declared requirement.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Friendly market pavilions display distinct offers rather than rival villains.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Use the offer islands as short returns while inspecting all the evidence."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-02",
+      "map": { "id": "coupa-source-to-pay-02-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Choose Together",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.56,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Connect the chosen offer to the agreed scope and terms.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A clear bridge links a supplier pavilion with a contract library.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Connect the contract landing before reaching the far delivery district."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-03",
+      "map": { "id": "coupa-source-to-pay-03-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Terms Bridge",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 11.5, "y": 11.5 }],
+      "coverage": 0.58,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["perimeter-patrol"],
+        "lesson": "Distinguish a request, its review and an issued order.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Three labelled neighbourhoods show the handoff from request to order.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Build a return at each handoff instead of committing to one long crossing."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-04",
+      "map": { "id": "coupa-source-to-pay-04-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Request to Order",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 13.5, "y": 17.5 }],
+      "coverage": 0.6,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Record only the goods that arrived in the fictional delivery.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Two dockside deliveries arrive at different times beside an open ledger.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Use the first delivery landing before connecting the second, distant dock."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-05",
+      "map": { "id": "coupa-source-to-pay-05-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Received in Part",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 29.5, "y": 8.5 }],
+      "coverage": 0.64,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Reconcile the records and distinguish approved from paid.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Order, delivery and invoice landmarks form a complete illuminated circuit.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Join the three record islands while preserving a safe way back."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-source-to-pay-06",
+      "map": { "id": "coupa-source-to-pay-06-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Close the Loop",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "From Need to Value",
+  "packs": [
+    {
+      "campaignIds": ["coupa-source-to-pay"],
+      "format": "PackDesignV1",
+      "id": "coupa-source-to-pay-pack",
+      "name": "From Need to Value",
+      "revision": "1"
+    }
+  ],
+  "policyId": "journey-arcade-v2",
+  "revision": "1"
+}

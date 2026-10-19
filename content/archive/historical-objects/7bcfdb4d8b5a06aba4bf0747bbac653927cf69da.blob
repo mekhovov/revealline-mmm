@@ -1,0 +1,1897 @@
+{
+  "format": "revealline-demo-availability.v1",
+  "startedAt": "2026-10-15T21:44:39.782Z",
+  "config": {
+    "policies": [
+      "immediate",
+      "grid-center"
+    ],
+    "offline": false,
+    "workers": true,
+    "inventoryOnly": false,
+    "limit": null,
+    "packs": [],
+    "levels": [],
+    "edition": "coupa-all",
+    "journey": false,
+    "report": "docs/verification/demo-gap-recovery-2026-10-15/coupa-final.json"
+  },
+  "qualification": "Node real-core preparation and replay verification. Not real hardware, browser scheduling, audio or viewing quality.",
+  "sources": [
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-01",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-01",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1570,
+      "result": "won",
+      "simulationSeconds": 26.633333333333333,
+      "coverage": 0.9521367521367521,
+      "lives": 3,
+      "elapsedMs": 1721
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-02",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-02",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1180,
+      "result": "won",
+      "simulationSeconds": 21.075,
+      "coverage": 1,
+      "lives": 3,
+      "elapsedMs": 1284
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-03",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-03",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3300,
+      "result": "won",
+      "simulationSeconds": 79.60833333333333,
+      "coverage": 0.8980132450331125,
+      "lives": 2,
+      "elapsedMs": 3725
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-04",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-04",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 383,
+      "result": "won",
+      "simulationSeconds": 7.525,
+      "coverage": 0.7846291331546024,
+      "lives": 3,
+      "elapsedMs": 431
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-05",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-05",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 981,
+      "result": "won",
+      "simulationSeconds": 19.9,
+      "coverage": 0.8627276765881831,
+      "lives": 3,
+      "elapsedMs": 1103
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-06",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-06",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1947,
+      "result": "won",
+      "simulationSeconds": 39.93333333333333,
+      "coverage": 0.8732014388489209,
+      "lives": 3,
+      "elapsedMs": 2263
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-01",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-01",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 2505,
+      "result": "won",
+      "simulationSeconds": 35.59166666666667,
+      "coverage": 0.5978835978835979,
+      "lives": 2,
+      "elapsedMs": 2748
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-02",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-02",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3060,
+      "result": "won",
+      "simulationSeconds": 56.608333333333334,
+      "coverage": 0.6169176262178919,
+      "lives": 2,
+      "elapsedMs": 3477
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-03",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-03",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 691,
+      "result": "won",
+      "simulationSeconds": 13.258333333333333,
+      "coverage": 0.8224043715846995,
+      "lives": 3,
+      "elapsedMs": 810
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-04",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-04",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 2009,
+      "result": "won",
+      "simulationSeconds": 41.025,
+      "coverage": 0.726063829787234,
+      "lives": 2,
+      "elapsedMs": 2337
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-05",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-05",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3369,
+      "result": "won",
+      "simulationSeconds": 56.44166666666667,
+      "coverage": 0.9662971175166297,
+      "lives": 2,
+      "elapsedMs": 3775
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-06",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-06",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 4503,
+      "result": "won",
+      "simulationSeconds": 73.325,
+      "coverage": 0.9550612800726282,
+      "lives": 2,
+      "elapsedMs": 5037
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-01",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-01",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3035,
+      "result": "won",
+      "simulationSeconds": 60.25833333333333,
+      "coverage": 0.9349137931034482,
+      "lives": 2,
+      "elapsedMs": 3397
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-02",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-02",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 2431,
+      "result": "won",
+      "simulationSeconds": 51.641666666666666,
+      "coverage": 0.8633093525179856,
+      "lives": 2,
+      "elapsedMs": 2811
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-03",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-03",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3044,
+      "result": "won",
+      "simulationSeconds": 49.86666666666667,
+      "coverage": 0.8929840142095915,
+      "lives": 3,
+      "elapsedMs": 3331
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-04",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-04",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 2062,
+      "result": "won",
+      "simulationSeconds": 31.891666666666666,
+      "coverage": 0.9303057553956835,
+      "lives": 2,
+      "elapsedMs": 2329
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-05",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-05",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 4448,
+      "result": "won",
+      "simulationSeconds": 74.95,
+      "coverage": 0.8561946902654868,
+      "lives": 1,
+      "elapsedMs": 4967
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-06",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-06",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3667,
+      "result": "won",
+      "simulationSeconds": 60.95,
+      "coverage": 0.7717099373321397,
+      "lives": 2,
+      "elapsedMs": 4068
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-01",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-01",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 2399,
+      "result": "won",
+      "simulationSeconds": 43.825,
+      "coverage": 0.9942426926483614,
+      "lives": 3,
+      "elapsedMs": 2607
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-02",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-02",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 6792,
+      "result": "won",
+      "simulationSeconds": 71.6,
+      "coverage": 0.7432611577551922,
+      "lives": 1,
+      "elapsedMs": 7825
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-03",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-03",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 9321,
+      "result": "won",
+      "simulationSeconds": 56.958333333333336,
+      "coverage": 0.6765765765765765,
+      "lives": 2,
+      "elapsedMs": 9783
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-04",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-04",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3953,
+      "result": "lost",
+      "simulationSeconds": 49.61666666666667,
+      "coverage": 0.4435053380782918,
+      "lives": 0,
+      "elapsedMs": 4599
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-05",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-05",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 12040,
+      "result": "won",
+      "simulationSeconds": 128.38333333333333,
+      "coverage": 0.983058608058608,
+      "lives": 2,
+      "elapsedMs": 13079
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-06",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-06",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 6845,
+      "result": "lost",
+      "simulationSeconds": 83.78333333333333,
+      "coverage": 0.5643652561247215,
+      "lives": 0,
+      "elapsedMs": 7827
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-01",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-01",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 6434,
+      "result": "won",
+      "simulationSeconds": 75.36666666666666,
+      "coverage": 0.914612676056338,
+      "lives": 2,
+      "elapsedMs": 6853
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-02",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-02",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 3117,
+      "result": "won",
+      "simulationSeconds": 62.4,
+      "coverage": 0.7404951370468612,
+      "lives": 3,
+      "elapsedMs": 3600
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-03",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-03",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "failed",
+      "error": {
+        "name": "Error",
+        "code": null,
+        "message": "No complete purposeful performance is available for this level."
+      },
+      "elapsedMs": 5157
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-04",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-04",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 2648,
+      "result": "won",
+      "simulationSeconds": 53.74166666666667,
+      "coverage": 1,
+      "lives": 2,
+      "elapsedMs": 3028
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-05",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-05",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1070,
+      "result": "won",
+      "simulationSeconds": 27.491666666666667,
+      "coverage": 1,
+      "lives": 3,
+      "elapsedMs": 1197
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-06",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-06",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1761,
+      "result": "won",
+      "simulationSeconds": 31.708333333333332,
+      "coverage": 1,
+      "lives": 2,
+      "elapsedMs": 1963
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-01",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-01",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1570,
+      "result": "won",
+      "simulationSeconds": 26.633333333333333,
+      "coverage": 0.9521367521367521,
+      "lives": 3,
+      "elapsedMs": 1749
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-02",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-02",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1708,
+      "result": "won",
+      "simulationSeconds": 21.075,
+      "coverage": 1,
+      "lives": 3,
+      "elapsedMs": 1825
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-03",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-03",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 4582,
+      "result": "won",
+      "simulationSeconds": 79.60833333333333,
+      "coverage": 0.8980132450331125,
+      "lives": 2,
+      "elapsedMs": 5288
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-04",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-04",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 432,
+      "result": "won",
+      "simulationSeconds": 7.525,
+      "coverage": 0.7846291331546024,
+      "lives": 3,
+      "elapsedMs": 487
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-05",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-05",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 1000,
+      "result": "won",
+      "simulationSeconds": 19.9,
+      "coverage": 0.8627276765881831,
+      "lives": 3,
+      "elapsedMs": 1131
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-06",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-06",
+      "kind": "improv",
+      "turnPolicy": "immediate",
+      "status": "verified",
+      "preparationMs": 2547,
+      "result": "won",
+      "simulationSeconds": 39.93333333333333,
+      "coverage": 0.8732014388489209,
+      "lives": 3,
+      "elapsedMs": 2869
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-01",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-01",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 2273,
+      "result": "won",
+      "simulationSeconds": 34.44166666666667,
+      "coverage": 0.7094017094017094,
+      "lives": 3,
+      "elapsedMs": 2502
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-02",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-02",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 2403,
+      "result": "won",
+      "simulationSeconds": 31.966666666666665,
+      "coverage": 1,
+      "lives": 2,
+      "elapsedMs": 2734
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-03",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-03",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 3274,
+      "result": "won",
+      "simulationSeconds": 53.96666666666667,
+      "coverage": 0.5708609271523178,
+      "lives": 2,
+      "elapsedMs": 3648
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-04",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-04",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 485,
+      "result": "won",
+      "simulationSeconds": 7.525,
+      "coverage": 0.7846291331546024,
+      "lives": 3,
+      "elapsedMs": 565
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-05",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-05",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 1284,
+      "result": "won",
+      "simulationSeconds": 19.85,
+      "coverage": 0.8627276765881831,
+      "lives": 3,
+      "elapsedMs": 1416
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-06",
+      "levelKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844/coupa-spend-in-motion-06",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 4740,
+      "result": "won",
+      "simulationSeconds": 53.55,
+      "coverage": 0.7378597122302158,
+      "lives": 2,
+      "elapsedMs": 5191
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-01",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-01",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 2787,
+      "result": "won",
+      "simulationSeconds": 35.56666666666667,
+      "coverage": 0.5978835978835979,
+      "lives": 2,
+      "elapsedMs": 3150
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-02",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-02",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 6654,
+      "result": "won",
+      "simulationSeconds": 66.025,
+      "coverage": 0.704162976085031,
+      "lives": 2,
+      "elapsedMs": 7274
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-03",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-03",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 1111,
+      "result": "won",
+      "simulationSeconds": 13.233333333333333,
+      "coverage": 0.8224043715846995,
+      "lives": 3,
+      "elapsedMs": 1286
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-04",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-04",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 3542,
+      "result": "won",
+      "simulationSeconds": 38.9,
+      "coverage": 0.8324468085106383,
+      "lives": 2,
+      "elapsedMs": 4234
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-05",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-05",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 6165,
+      "result": "won",
+      "simulationSeconds": 74.23333333333333,
+      "coverage": 0.7702882483370288,
+      "lives": 2,
+      "elapsedMs": 6972
+    },
+    {
+      "id": "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-06",
+      "levelKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec/coupa-inside-village-06",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 7572,
+      "result": "won",
+      "simulationSeconds": 75.15,
+      "coverage": 0.9718565592374036,
+      "lives": 2,
+      "elapsedMs": 8755
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-01",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-01",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 3766,
+      "result": "won",
+      "simulationSeconds": 52.391666666666666,
+      "coverage": 0.8,
+      "lives": 2,
+      "elapsedMs": 4248
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-02",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-02",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 4119,
+      "result": "won",
+      "simulationSeconds": 51.583333333333336,
+      "coverage": 0.8633093525179856,
+      "lives": 2,
+      "elapsedMs": 4609
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-03",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-03",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 5386,
+      "result": "won",
+      "simulationSeconds": 66.04166666666667,
+      "coverage": 0.7153641207815276,
+      "lives": 2,
+      "elapsedMs": 5943
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-04",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-04",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 3694,
+      "result": "won",
+      "simulationSeconds": 31.85,
+      "coverage": 0.9303057553956835,
+      "lives": 2,
+      "elapsedMs": 4365
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-05",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-05",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 9353,
+      "result": "won",
+      "simulationSeconds": 75.58333333333333,
+      "coverage": 0.7460176991150442,
+      "lives": 2,
+      "elapsedMs": 10053
+    },
+    {
+      "id": "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-06",
+      "levelKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e/coupa-source-to-pay-06",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "failed",
+      "error": {
+        "name": "DemoLoadingTimeoutError",
+        "code": "demo-load-timeout",
+        "message": "Demo preparation exceeded its loading deadline."
+      },
+      "elapsedMs": 15372
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-01",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-01",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 6860,
+      "result": "won",
+      "simulationSeconds": 28.341666666666665,
+      "coverage": 0.9813994685562445,
+      "lives": 3,
+      "elapsedMs": 7252
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-02",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-02",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 8329,
+      "result": "won",
+      "simulationSeconds": 52.2,
+      "coverage": 0.6716747680070703,
+      "lives": 2,
+      "elapsedMs": 9124
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-03",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-03",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 6457,
+      "result": "won",
+      "simulationSeconds": 38.1,
+      "coverage": 0.7774774774774775,
+      "lives": 2,
+      "elapsedMs": 7472
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-04",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-04",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "failed",
+      "error": {
+        "name": "DemoLoadingTimeoutError",
+        "code": "demo-load-timeout",
+        "message": "Demo preparation exceeded its loading deadline."
+      },
+      "elapsedMs": 15003
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-05",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-05",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 12986,
+      "result": "lost",
+      "simulationSeconds": 96.675,
+      "coverage": 0.8594322344322345,
+      "lives": 0,
+      "elapsedMs": 13905
+    },
+    {
+      "id": "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-06",
+      "levelKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d/coupa-product-operations-06",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 9290,
+      "result": "lost",
+      "simulationSeconds": 84.40833333333333,
+      "coverage": 0.6819599109131403,
+      "lives": 0,
+      "elapsedMs": 10371
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-01",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-01",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 10817,
+      "result": "lost",
+      "simulationSeconds": 104.575,
+      "coverage": 0.5506161971830986,
+      "lives": 0,
+      "elapsedMs": 11874
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-02",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-02",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 6042,
+      "result": "won",
+      "simulationSeconds": 75.5,
+      "coverage": 0.8567639257294429,
+      "lives": 1,
+      "elapsedMs": 7019
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-03",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-03",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 4782,
+      "result": "won",
+      "simulationSeconds": 56.833333333333336,
+      "coverage": 0.8680926916221033,
+      "lives": 2,
+      "elapsedMs": 5221
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-04",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-04",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 1923,
+      "result": "won",
+      "simulationSeconds": 35.99166666666667,
+      "coverage": 1,
+      "lives": 2,
+      "elapsedMs": 2193
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-05",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-05",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 1610,
+      "result": "won",
+      "simulationSeconds": 27.425,
+      "coverage": 1,
+      "lives": 3,
+      "elapsedMs": 1802
+    },
+    {
+      "id": "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-06",
+      "levelKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1/coupa-developer-integration-06",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 1983,
+      "result": "won",
+      "simulationSeconds": 31.608333333333334,
+      "coverage": 1,
+      "lives": 2,
+      "elapsedMs": 2238
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-01",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-01",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 2035,
+      "result": "won",
+      "simulationSeconds": 34.44166666666667,
+      "coverage": 0.7094017094017094,
+      "lives": 3,
+      "elapsedMs": 2247
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-02",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-02",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 1742,
+      "result": "won",
+      "simulationSeconds": 31.966666666666665,
+      "coverage": 1,
+      "lives": 2,
+      "elapsedMs": 1919
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-03",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-03",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 2405,
+      "result": "won",
+      "simulationSeconds": 53.96666666666667,
+      "coverage": 0.5708609271523178,
+      "lives": 2,
+      "elapsedMs": 2709
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-04",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-04",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 393,
+      "result": "won",
+      "simulationSeconds": 7.525,
+      "coverage": 0.7846291331546024,
+      "lives": 3,
+      "elapsedMs": 451
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-05",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-05",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 978,
+      "result": "won",
+      "simulationSeconds": 19.85,
+      "coverage": 0.8627276765881831,
+      "lives": 3,
+      "elapsedMs": 1097
+    },
+    {
+      "id": "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-06",
+      "levelKey": "coupa-spend-in-motion/4/6793d7f2ea4df844/coupa-spend-in-motion-06",
+      "kind": "improv",
+      "turnPolicy": "grid-center",
+      "status": "verified",
+      "preparationMs": 3922,
+      "result": "won",
+      "simulationSeconds": 53.55,
+      "coverage": 0.7378597122302158,
+      "lives": 2,
+      "elapsedMs": 4324
+    }
+  ],
+  "sourceHashes": {
+    "game/editions/catalog.json": "e42d7a3d02247a882745c0b823143b85293cb2acfc0d7c133601013dacdd9c3e",
+    "game/content/company-campaigns/coupa-spend-in-motion.json": "571a8f1c11344300de9e715b6490daf17a1087c9742efdf87ce38566e82f308a",
+    "game/content/company-campaigns/coupa-inside-village.json": "584fdb801dcc747de97d01b0cd6992e20d87ae67e610218ee137403d16c36a36",
+    "game/content/company-campaigns/coupa-source-to-pay.json": "385ef30f002cd5f2fc11e2e080d877538cd83f6862ec6c440ed23fb75eab537e",
+    "game/content/company-campaigns/coupa-product-operations.json": "c31d0285ff6b24dd3a2bce30c4b0877b457a4ae3870ee6fb8f7996c8454668d8",
+    "game/content/company-campaigns/coupa-developer-integration.json": "1baebc02667516bf1c8aaf7cc4f0a394254e599e671f6d2f0526b341d6640ae0",
+    "game/content/company-boot/coupa-all/archives.json": "1ea74a6b13c74781fba202bacdcd5832e0e5170b888f46a31d5bf86681ed6b50",
+    "game/content/company-boot/coupa-all/campaign.json": "1e7cbceb30377bd9ffd1a8a23e07dc5954d9ccc3c2e9a151c2fb001b9029f77e",
+    "game/content/company-boot/coupa-all/classes.json": "410a8e205346ed00e27856a6b727f1ed980db7fa26ed599a7201578962e363c0",
+    "game/content/company-boot/coupa-all/packs.json": "1ea74a6b13c74781fba202bacdcd5832e0e5170b888f46a31d5bf86681ed6b50",
+    "game/content/company-boot/coupa-all/presets.json": "64eb4dc5e0b8a91f65e3c7233a306039448af3c5ba781d4eab423f512b44b7bf",
+    "game/content/company-boot/coupa-all/themes.json": "ab584882c6cc0b8a88d79473c565a7672d612f0afe0555042b26b31ffb91d2fb",
+    "game/content/company-campaigns/coupa-inside-village.lessons.json": "d9a7a65c5643a2915aa714c9640c30f14b0645ef5f65ae3d2b54b7a5ac8f1106",
+    "game/content/company-campaigns/coupa-source-to-pay.lessons.json": "82e91fae0b85c8aae6584c89c51d8c40a06d7ebb932375a003611d5426ee6707",
+    "game/content/company-campaigns/coupa-product-operations.lessons.json": "5041d09618f4bd9cc7c424dce2b3d840973dbb7dc2358f36a545075bf1d1dadb",
+    "game/content/company-campaigns/coupa-developer-integration.lessons.json": "b7518328e989823c59da74709831e86e8dca55edcc139abb4a5d14eeab475f86",
+    "game/content/company-campaigns/coupa-spend-in-motion.rewards.json": "cb85acdb99639a27117a49c80337f10c0f5ae4f1dfa093a2c024c86927a6ad7e",
+    "game/content/company-campaigns/coupa-source-to-pay.rewards.json": "f81e54560992325853f030b3a926a96c6bf19d62d0d32bcc05a1394a765d0b29",
+    "scripts/audit-demo-availability.mjs": "bfca079f1f2389df21fa47653e1c1b79afd46f57257d26a5557faea568932483",
+    "game/i18n/index.mjs": "29f40a6d92826ced1eb53283ed32e342ac6e95920abbf8d549f2d78e65b48d07",
+    "game/i18n/catalogs.mjs": "4b6b7e84870fa34925d81bb5d4daab2b8542926ca0fe07674eea060b10bd92ea",
+    "game/mastery.mjs": "2794850285f343ac3ea30dabd22bac1e80bc45e6a73734597e364272af9d8504",
+    "game/campaign-contexts.mjs": "0cfbc653dedff1bb47d6f98b498580e06a66e82325e27973b7d5b88eb707e11a",
+    "game/campaign-difficulty.mjs": "d1e7aa765d4dd63b3c7cbae074b2f33f7bd444229353041d37de35c8ae810aa1",
+    "game/data-json.mjs": "4483fea98f02a9af815cd7efce7ad2a3bb5ab9aa98ba792e2448cb3dc6d93093",
+    "game/demo-audio-feedback.mjs": "3b685ae8bfa0459fbdb72fab80833328c71f151ad0cefe2032c844bb8b0015d9",
+    "game/demo-bot-player.mjs": "f3a7fe364fbaa6760f27f2207aa0d6ac0569f102e03e3c5ce58a1c4214713d5a",
+    "game/demo-bot-worker.mjs": "135b0c9aefbef402be23fdbd91fd16a3549a30e68d34aabdd6998152a18dc837",
+    "game/demo-bot.mjs": "541c6e2005924af85cfc55023762193ba6ba70d4efda83f9541f6b5b534412bb",
+    "game/demo-catalog.mjs": "3d295b7154017806f36cd7a0d2980b7e10c8d8f0108cf9ad35d464c926bda307",
+    "game/demo-director.mjs": "7a56e0ea15fcde19d2130262d2ff59637faeaaf505047151a64a5adcf053aa69",
+    "game/demo-experience.mjs": "22fe26aa0e66e9458f5ed2f3322bb9af44312aac84ca27a54e831bc7d01da0da",
+    "game/demo-improv-player.mjs": "86ed27550976567c50f9362ce67fbed1e0273d2c48533f4753992ed4905dbdba",
+    "game/demo-library.mjs": "b41aa582fb958fbdff02548e4f119ca96425892a50ecdf86f332426cc6fea250",
+    "game/demo-loading.mjs": "8b35db9e51774eb606af0904c762b5f206382a633aff7104932236944e5c7353",
+    "game/demo-sources.mjs": "26199603e5199cd7325031a016e68170a7cd16d71fd0b5d479ef07e3edf14154",
+    "game/gameplay-tuning-v1.mjs": "6213bc6c3a67370ea00dea600f2951736fb5aed108cdc4037703f9254503e91b",
+    "game/gameplay-tuning-v2.mjs": "3bfecf33324e2f5c83aca5f86ef183dd7147108be356cd9aa31cb1f1e1a24c5c",
+    "game/gameplay-tuning-v3.mjs": "82dfa8e48511485ee76a670dee689970e7af7b69e73861f0b950b9449fa4f9af",
+    "game/gameplay-tuning.mjs": "6b4123c0668676da01af91393feee274c42faa883e30401f423cb19093d27140",
+    "game/library.mjs": "cda2d2aa7bb3675b6a8991ae0080d0a4f7f15f23e44df973dd2e8d8aca8d152c",
+    "game/replay-actor-context.mjs": "533a9bc90a16a6971ba3268fd7518f999a65ff44362b06205760761b40063062",
+    "game/replay-installed-rules.mjs": "322b4b9f82666337e2551ca457b4de27381e786a58bcb9e4067643086a170652",
+    "game/replay-player.mjs": "8013c240be6914099ba7f38753b784ffaa7ea110c9e6551006e4ae01bd17ba70",
+    "game/replay-presentation.mjs": "c17e564120a5fef399385807e4fc974487b2fce782dfdd61da95dc332f8eead8",
+    "game/replay-proof-store.mjs": "45a33a4c98c8cf5bd9e779f0cab715ab82b33bd01bd3138b01c28dd8be9fd99d",
+    "game/replay.mjs": "c0bfc6842743f931dab1a9612e8799c240c542fcb7f9895ab6f866989ae41a6d",
+    "game/core/abilities.mjs": "bb7cb0df95beb6878878d77cac40b2cb6f2403f74e089db46432659098fb3cde",
+    "game/core/arcade-actions.mjs": "fa88d2371b6a6c889550ab196ac0cfbc5dced9ad8493cda126928f4cd53f2726",
+    "game/core/bonus-opportunity.mjs": "df7a08d3d965a445153881a3423c09b1cbfca5c91231d05570c59e7ef18baa90",
+    "game/core/capture-regions.mjs": "82680114409789d83ad1af09ef18a61cacc8e86ee246d1937c87ecc7c7ecf575",
+    "game/core/capture.mjs": "9ea5eec1db293445c3e93cf809ca08bded13062bbbdfe3ac6b7c1306a3cac731",
+    "game/core/classic-contour.mjs": "39f096ad8a10605031eecf49227c06d77cf5032042325c0053439ed311ce5da8",
+    "game/core/classic-definition.mjs": "a1663a97efb2d04dc2d3e9dc20983740c9be32bc6a84494612b77144892a9270",
+    "game/core/classic-motion.mjs": "23ded4bc7e90cddb838ea08d320b6ac8a6df3755cf12dc362ea10e5d7bcc8c2b",
+    "game/core/classic-state.mjs": "6b8001326238729541bb9515bfa1f92fdb4d18c961f49e7b2a6c68e41a42726f",
+    "game/core/classic-step.mjs": "468441bee309496488e34497dcf673382197694610e596a89828bb0575aa61b6",
+    "game/core/classic-topology.mjs": "c63830a351caa1c45938382d7793aa7ccbc308fac60b5cd477a14fb1962d5131",
+    "game/core/combat-definition.mjs": "41e64dc55ef9bb88f2df6c8116dbd7ea01b0f171f4ae399e2a2593e7427f97d6",
+    "game/core/combat-motion.mjs": "c5b7eb7da31040493b8c2c54ebe0e32a1b845b51b28ead193a4d20c0cc34e28b",
+    "game/core/combat-patrols.mjs": "e7c68452b47910d5ae33fc38eb8c3b5dcbb81303556eede1548b3a635d2be472",
+    "game/core/contacts.mjs": "d8c8294bf7141471a125dc325ab1202e2a705ca62ad7632d89129907c8072df4",
+    "game/core/coverage.mjs": "9bd7899414967a00a5a46c32257fce0961ad2ea15eb91e65f2496aed4793db4b",
+    "game/core/directional-fields.mjs": "b93cf46cd2a845ffa4792410d8d42852afca701dd07ee04a9969fecd417b5f17",
+    "game/core/encounter.mjs": "5543956a0dc81a613c33e1244a6f02621d1c089ec6cade4e34ff1fcc569d279b",
+    "game/core/enemy-pressure.mjs": "e66302eab2bc961c3328f0fc572f21d3ea67ee32132c4d0d8f15c1c08d04a2cb",
+    "game/core/field-course.mjs": "fbd86842f281334088a35e1793c65ba4d323fe64209f81546e47a06f87af0e0d",
+    "game/core/foundations.mjs": "5bba8689aed68d43bafca509fbcb26e0783d96efbb1ed64a07083d3b7a86cd71",
+    "game/core/geometry.mjs": "ad980ff30fef2cb8afd307f2a8dccf0329d1dc996dbd9fa3d13e3d2e9f2ae3d4",
+    "game/core/index.mjs": "d5fead46c41a9651da86003f70417a9d2bbd5a61830c007011b205581b2a3330",
+    "game/core/level.mjs": "4d0b9f171ace4d8ff4c35ae7d50b4fccaabee218605e422c098aa23d2c5c5b5c",
+    "game/core/line-impact.mjs": "e3a11756a9fb7272ad660dbf9a2c175095f89e26f889e3f3edb25865b2b7c5a0",
+    "game/core/movement.mjs": "216e03da20b388c8278be19a9829a8ef642fea30291125b645c5373e5902c261",
+    "game/core/registry.mjs": "ca7e365071ab3c49514343ea7683d8e552d2cd3f9fdbd0f317df64a57c0b7c2c",
+    "game/core/relay-gates.mjs": "6ebaf6d4fbe5b2b53336d048a2e10a876c5f8f796c70b4474927185d55ee9117",
+    "game/core/systems.mjs": "ecfc946dbe6caf9feacab674730b8b1844e2f133c40566069d722206c6e546b6",
+    "game/core/timed-bonuses.mjs": "8a9330bce36416d3f9a3ac74c2876f90756f28995c9bbd38be4a9bc94d0ce0ea",
+    "game/core/versions.mjs": "715a8990f897e7605e3fe045e5c1a064e163ccbbae7a26ba060214443d1b22f2",
+    "game/demo-data/authored-mistake-signal-03.replay.json": "d0baf94ffb72251b7b7fbb9e9fdf0b08fe2d8aa2c4872bdee5f213be8b1cfcb7",
+    "game/demo-data/authored-mistake-signal-06.replay.json": "323af6e8f277c44b1a2ed4c42db057899b6c0bce302de14160a280383266b151",
+    "game/demo-data/authored-mistake-signal-08.replay.json": "f2359fbb9caa704a0442dab579c12966e4284487501f9b035313ae58f3f8a4fb",
+    "game/demo-data/authored-mistake-signal-10.replay.json": "14f389a5ffcadf9f7c0be0fa0918942caa844534792ead34feec5180d23e8d84",
+    "game/demo-data/authored-mistake-signal-11.replay.json": "3b269abc7f53bb41a92db3097d278996f8dfd1f83d3446f0f925ef72f8f290ca",
+    "game/demo-data/authored-mistake-signal-12.replay.json": "83711c9b93d556aa31842b88d06ceda2c37a0bfa44a7636d4f833b0e021601a6",
+    "game/demo-data/catalog.json": "44276f64f2532b4776373f5048d73a821622290c5f44fdd588d1097be41e2a3f",
+    "game/demo-data/ci-variant-provenance.json": "ea97bac94db34ba002805df4bc522890ce76f72d38b992e69f934dc93c3feaaf",
+    "game/demo-data/courtyard-exits-circuit.replay.json": "d170c28d8a97eb1a94d78a996c0e4c230e73c7d95f7669b996e8fca4850c0c3d",
+    "game/demo-data/crosswind-openings.chromium-macos.replay.json": "11dd1280e1f0899947d9697eb20e75c28b27bcc35d102eb4058a81256d18c94f",
+    "game/demo-data/crosswind-openings.replay.json": "a8eb595988bd478a99bec31a4cc5a2c2f53413778a890fe8a7de36c93c841676",
+    "game/demo-data/first-signal-left.chromium-macos.replay.json": "b18d9d343ffca2b7efec6c3ec0266d80ed0603804420f444159e4214533bd11e",
+    "game/demo-data/first-signal-left.replay.json": "900f921146e37324dfefc90f55bfc60c03bd8a2954d53353ecae25df8a55c54a",
+    "game/demo-data/first-signal-right.chromium-macos.replay.json": "c20c847103c652b3cf04f081b17bed8ddb1b0fca4b04e8e29cc72da23cf3849e",
+    "game/demo-data/first-signal-right.node20-linux-x64.replay.json": "36aa993898faef782499daffed7f7d977729b315a1197c5ed6b38df213f44b2b",
+    "game/demo-data/first-signal-right.replay.json": "1670c4dff98ebfb56d4b6a44bac010c3f796d98f16abb4abe71e56a2ec5c8fc7",
+    "game/demo-data/hidden-frequency-search.chromium-macos.replay.json": "56c7600b96686d17e84b5e1292ca848112767a15a6d192d8b11accb0d242f89c",
+    "game/demo-data/hidden-frequency-search.node20-linux-x64.replay.json": "3346eba1031a728b99fb7a0c4be5f41b147378e716f895f46dd02498c319647b",
+    "game/demo-data/hidden-frequency-search.replay.json": "dd5e26c19ad433acf88b926ac1e595fa3f2e1df0d040d1879ca8190f7dd18537",
+    "game/demo-data/last-light-recovery.replay.json": "6039f47e25f5c154e13d63b5423ea8958cc653f2352b14d6ec41fba885f98493",
+    "game/demo-data/night-patrol-loop.chromium-macos.replay.json": "2ac0bb990b4eca72e5854c1d56b59188a3cad2968a5049e8ee77900895410e2d",
+    "game/demo-data/night-patrol-loop.replay.json": "f83e60de8f61ac2a44ba4bdc98228cc72abfdbc8e70fe3843946281a17d632e9",
+    "game/demo-data/orchard-crossing-circuit.node20-linux-x64.replay.json": "40462bcd7d43e23cff65e0e21221998d49febe70eb2a87d8668c56c607720005",
+    "game/demo-data/orchard-crossing-circuit.replay.json": "e3d53e6fbfa01a85772eb19043ca05c7139c4131f0f603f3baee08ba33147411",
+    "game/demo-data/relay-orchard-loop.chromium-macos.replay.json": "58a4196d25f5759260e716d175e78c29c157ef5f366ffe833648bcc7c25f9ebc",
+    "game/demo-data/relay-orchard-loop.replay.json": "d48bab6ab5f1fb1513d8261a8758519f0d9faccd91a0f334946f802260738627",
+    "game/demo-data/relay-orchard-stairs.chromium-macos.replay.json": "605add619e47a1d7762813897ead1368c98048819874b1b84816dce69e2af358",
+    "game/demo-data/relay-orchard-stairs.replay.json": "d145e8462f193a707e8bb3d8059a06fd1b0a407e8141a63101ebcf56b446cfb1",
+    "game/demo-data/signal-garden-route.chromium-macos.replay.json": "8129f40d4713dc8f44c6023d09f2827ba4c98624ad6c88fa723d82f5c96959c1",
+    "game/demo-data/signal-garden-route.replay.json": "a12a33a32a6583ae18680f891af2f4f0304569c024ef474d507041f6ad3e3572",
+    "game/demo-data/stone-lanes-detour.chromium-macos.replay.json": "5081c6c54a80dd43954005a8eef2f79d8fe2019572d3b3328fecab95def25673",
+    "game/demo-data/stone-lanes-detour.replay.json": "137b26ecdac3ea17780a293b961f93c4cb0722f50d5e19b3f6188ccbb8603b99",
+    "game/demo-data/supply-circuit-recovery.node20-linux-x64.replay.json": "ac9d26ff789ff875c39c318c8813f569f158f5f153ca405cd12894c839ac765b",
+    "game/demo-data/supply-circuit-recovery.replay.json": "00f20aede9a668a71bd8038ad22032d4ca57a425ee004e8c608bababd680719c",
+    "game/demo-data/the-crossing-windows.chromium-macos.replay.json": "03fe9a5ea307d82093badf26968a06686605a01832d5ef6048a8fa38c13e9f2f",
+    "game/demo-data/the-crossing-windows.replay.json": "b52aa84d5bcc15a75d998dc40ab91cf8c36dca5e25562873223d86ae33f9982c",
+    "game/demo-data/variant-provenance.json": "701d0c04385779caa7c2660fa30216df9b856738f2da040e02434131e31f39b6"
+  },
+  "contentSHA256": "239ae962d94f53a3ebc4ba50b83409675314af95aa6caba9d38d5ae0422d91a8",
+  "levelCoverage": [
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-01",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-02",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-03",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-04",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-05",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-06",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-01",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-02",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-03",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-04",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-05",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-06",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-01",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-02",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-03",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-04",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-05",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-06",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-01",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-02",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-03",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-04",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-05",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-06",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-01",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-02",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-03",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-03"
+      ],
+      "verifiedSourceIds": []
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-04",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-05",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-06",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-01",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-02",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-03",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-04",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-05",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-06",
+      "turnPolicy": "immediate",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-01",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-02",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-03",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-04",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-05",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-06",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/candidate-a10ed701f9413c3e/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-01",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-02",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-03",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-04",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-05",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec",
+      "levelId": "coupa-inside-village-06",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-inside-village/candidate-ebe04cee1d314489/b10471696561b8ec-coupa-inside-village-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-01",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-02",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-03",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-04",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-05",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e",
+      "levelId": "coupa-source-to-pay-06",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-source-to-pay/candidate-da1d210a61109f42/5d2181226350354e-coupa-source-to-pay-06"
+      ],
+      "verifiedSourceIds": []
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-01",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-02",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-03",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-04",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-04"
+      ],
+      "verifiedSourceIds": []
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-05",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d",
+      "levelId": "coupa-product-operations-06",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-product-operations/candidate-4117fa1b4fff3731/062bc81d5e5b0c3d-coupa-product-operations-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-01",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-02",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-03",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-04",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-05",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1",
+      "levelId": "coupa-developer-integration-06",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-developer-integration/candidate-a242ad1c061d9876/aa78cac6ca8003d1-coupa-developer-integration-06"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-01",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-01"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-02",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-02"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-03",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-03"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-04",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-04"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-05",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-05"
+      ]
+    },
+    {
+      "executionKey": "coupa-spend-in-motion/4/6793d7f2ea4df844",
+      "levelId": "coupa-spend-in-motion-06",
+      "turnPolicy": "grid-center",
+      "sourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ],
+      "verifiedSourceIds": [
+        "improv-coupa-spend-in-motion/4/6793d7f2ea4df844-coupa-spend-in-motion-06"
+      ]
+    }
+  ],
+  "discovery": [
+    {
+      "turnPolicy": "immediate",
+      "elapsedMs": 563,
+      "sources": 36,
+      "registeredSources": 36
+    },
+    {
+      "turnPolicy": "grid-center",
+      "elapsedMs": 953,
+      "sources": 36,
+      "registeredSources": 36
+    }
+  ],
+  "changedSources": [],
+  "errors": [],
+  "elapsedSeconds": 330.714423667,
+  "cleanup": {
+    "ownersBeforeForcedCleanup": 0,
+    "listeners": 0
+  },
+  "finishedAt": "2026-10-15T21:50:10.500Z",
+  "summary": {
+    "registered": 72,
+    "registeredLevels": 72,
+    "usableLevels": 69,
+    "verified": 69,
+    "failed": 3,
+    "notExercised": 0,
+    "remainingWorkers": 0,
+    "uncoveredLevels": 0
+  },
+  "passed": false
+}

@@ -1,0 +1,200 @@
+{
+  "format": "revealline-source-art-verification.v1",
+  "baseCommit": "4a9b040100312fe69c121064320810011c9b8d39",
+  "sourceCandidates": 9,
+  "newGeometries": 0,
+  "totalOriginalBytes": 23108412,
+  "method": "Exact SHA/bytes; all PNG chunk CRCs, bounded full RGB8 scanline decompression and filters; existing unchanged decoder; no output image transformations.",
+  "visualReview": "All nine actual generated images visually inspected by the authoring agent. Per-image observations and deviations are in provenance and README; independent review is separate.",
+  "limits": "Source-art checks only; no browser/pack/storage/offline/gameplay/device/animation or rights certification.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5504,
+      "sha256": "eadccd93624f9a497733c0f01564a0b68fba15dd1ec05b5052ce37c271529147"
+    },
+    {
+      "path": "prompts.json",
+      "bytes": 15504,
+      "sha256": "5f2a12f075dc6f9c2480ee46824a4366d86be7a76dbd6ee510f406883d088987"
+    },
+    {
+      "path": "generation-results.json",
+      "bytes": 10843,
+      "sha256": "e71c446707c05e5c3be658fbc10e8c045f05615165399a6ae3ab0e6d25602079"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 16174,
+      "sha256": "48cfad28a7454317d4f16dbdbd0c593ee6ad0bf5aa2a94152a7f27be9ef5e948"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 7194,
+      "sha256": "27ab5ba0eb07e25468a12fae81bcc38006603154d20e429c85af326bbc3282d2"
+    },
+    {
+      "path": "ukraine/originals/listening-court.png",
+      "bytes": 3018491,
+      "sha256": "f67723506534671cf8a1979d45f07f2fb442ba08485009924f211540a54bdb91"
+    },
+    {
+      "path": "ukraine/originals/switchyard-gates.png",
+      "bytes": 2682645,
+      "sha256": "2d8864ab2d18b130d80f0f8b3738689f00cf65e68093286753e5485db1c3d0a3"
+    },
+    {
+      "path": "ukraine/originals/open-the-circuit.png",
+      "bytes": 2462247,
+      "sha256": "47fde83552f6fc155f4efc41ca834c8a672b116fb392c5bdd893d6f8e6565ebb"
+    },
+    {
+      "path": "retro/originals/listening-court.png",
+      "bytes": 2455383,
+      "sha256": "93c98fc631c7148040d42d8818153e55c32a562096dfc39c66af7d008df9e6cf"
+    },
+    {
+      "path": "retro/originals/switchyard-gates.png",
+      "bytes": 2662328,
+      "sha256": "0acd0b721c9d066e890970a1e6d429f4d2ccb8d94b31893e2fdae34f37a75239"
+    },
+    {
+      "path": "retro/originals/open-the-circuit.png",
+      "bytes": 2423183,
+      "sha256": "03a1ee0b83a70df661885d0c9da0c2830a2349b583556be1012ee07264405eee"
+    }
+  ],
+  "decoded": [
+    {
+      "cellId": "sentinel-circuit/listening-court/ukraine",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "2f06cc77ce640bcb0a729e861eaededd35aa2da848b6470419d933752c6287ef",
+      "bytes": 3018491,
+      "sha256": "f67723506534671cf8a1979d45f07f2fb442ba08485009924f211540a54bdb91"
+    },
+    {
+      "cellId": "sentinel-circuit/switchyard-gates/ukraine",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "66998baf81b91f0e4ce9cbf64d45c96fd1b41e4a035e004859d00c7c8289d562",
+      "bytes": 2682645,
+      "sha256": "2d8864ab2d18b130d80f0f8b3738689f00cf65e68093286753e5485db1c3d0a3"
+    },
+    {
+      "cellId": "sentinel-circuit/open-the-circuit/ukraine",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "30007a14db577d93280eab0a3db6e4b92082b066f0995677062f02c4667c1f8f",
+      "bytes": 2462247,
+      "sha256": "47fde83552f6fc155f4efc41ca834c8a672b116fb392c5bdd893d6f8e6565ebb"
+    },
+    {
+      "cellId": "sentinel-circuit/listening-court/retro",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "3b978d5d5a3b26ef7e89a5a36df99e186ba77d249477bffefb09a7481a19df72",
+      "bytes": 2455383,
+      "sha256": "93c98fc631c7148040d42d8818153e55c32a562096dfc39c66af7d008df9e6cf"
+    },
+    {
+      "cellId": "sentinel-circuit/switchyard-gates/retro",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "1e0a8fbaf65dcdbe484ae4738d716faf1870afb3040e9142686b079104b74a03",
+      "bytes": 2662328,
+      "sha256": "0acd0b721c9d066e890970a1e6d429f4d2ccb8d94b31893e2fdae34f37a75239"
+    },
+    {
+      "cellId": "sentinel-circuit/open-the-circuit/retro",
+      "naturalWidth": 1774,
+      "naturalHeight": 887,
+      "pixelBytes": 4720614,
+      "pixelsSha256": "e3c52571e80cca0d48e5a457980b89652201c700bc5e42d4d635a18529ae8561",
+      "bytes": 2423183,
+      "sha256": "03a1ee0b83a70df661885d0c9da0c2830a2349b583556be1012ee07264405eee"
+    }
+  ],
+  "protectedContext": [
+    {
+      "path": "authoring/library/sentinel-circuit-art/README.md",
+      "bytes": 3611,
+      "sha256": "1809dafcb1a69cd0cef3f659135374533a8e7493fcad8a003961187049b1a7bd"
+    },
+    {
+      "path": "authoring/library/sentinel-circuit-art/prompts.json",
+      "bytes": 5239,
+      "sha256": "f9b49ac3e9ecee16b7da7e3d5e8512f97e4c1b63aa683d10eb03ed8ab07c3dcd"
+    },
+    {
+      "path": "authoring/library/sentinel-circuit/README.md",
+      "bytes": 9959,
+      "sha256": "472c2a2a52e3ee9938bc26004fa0c3e9e3426afe8c126d44b38b732bca17dc37"
+    },
+    {
+      "path": "authoring/library/sentinel-circuit-external/descriptor.json",
+      "bytes": 1766,
+      "sha256": "4bfccdbd97cddc63b5a89b10e07aacbab9e45cfc20a8aa154f6d0142815c539d"
+    },
+    {
+      "path": "authoring/library/four-worlds-chapters/verify-images.mjs",
+      "bytes": 3838,
+      "sha256": "100995d31bb65ed7797b0941988624cab76a2c37b297c81ec98ab8e16febcc34"
+    },
+    {
+      "path": "game/media-library.mjs",
+      "bytes": 12188,
+      "sha256": "ed1f1abe0b95b9889741ec8929522f0fcaba29a5438b09df18016d3ffffc6eb4"
+    },
+    {
+      "path": "authoring/library/sentinel-circuit-art/originals/listening-court.png",
+      "bytes": 2948372,
+      "sha256": "1fc560183995092042e7ddbdfe7020412498f177f1f57cbae2e987c78fdb70e1"
+    },
+    {
+      "path": "authoring/library/sentinel-circuit-art/originals/switchyard-gates.png",
+      "bytes": 2933729,
+      "sha256": "d6160676bdd2bb8b1e0f79bcc39736321881a9320f1482a8c844ab4c673cc6b3"
+    },
+    {
+      "path": "authoring/library/sentinel-circuit-art/originals/open-the-circuit.png",
+      "bytes": 2701967,
+      "sha256": "102d6083b7dcc21a6a310e80e6e19ee1357fa7f117e3de895db8848829426fe3"
+    },
+    {
+      "path": "authoring/library/ukraine-route-art/prompts.json",
+      "bytes": 8000,
+      "sha256": "174ddd61513939cebf605a5bb17c922b5e7f36958cab510a134b9a833d3e4a33"
+    },
+    {
+      "path": "authoring/library/ukraine-route-art/provenance.json",
+      "bytes": 6805,
+      "sha256": "3adda886c26bad6ad56322c1cc2472104f80d4c9d572d8f54a499652b6934139"
+    },
+    {
+      "path": "authoring/library/retro-route-art/prompts.json",
+      "bytes": 5057,
+      "sha256": "08a8f9959c9fa11c17488a107e028645e7b3f1d04e30620b12369e82a1a348da"
+    },
+    {
+      "path": "authoring/library/retro-route-art/provenance.json",
+      "bytes": 4104,
+      "sha256": "286114f072ac5f73f4aa1d840553d2a03eab7a40a828ef71343a89d5ef579133"
+    },
+    {
+      "path": "authoring/library/spend-route-art/prompts.json",
+      "bytes": 5088,
+      "sha256": "6ad44570fe6576f2880802e427f8c4fc793ab35061d1273a1061c6d00bd01c55"
+    },
+    {
+      "path": "authoring/library/spend-route-art/provenance.json",
+      "bytes": 5024,
+      "sha256": "273a5ef4dfbb51e9f4da2fabdf7aeb7f6d788cf1470a7fb8efaa4c62d482e4bc"
+    }
+  ]
+}

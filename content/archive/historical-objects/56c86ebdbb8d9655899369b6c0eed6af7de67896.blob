@@ -1,0 +1,479 @@
+{
+  "actorCatalogId": "journey-actors-v1",
+  "assets": [
+    {
+      "alt": "An illustrated Coupa Village with a connection plaza, supplier market and harbour.",
+      "bytes": 2072920,
+      "format": "AssetRevisionV1",
+      "height": 853,
+      "id": "coupa-spend-in-motion-01-picture",
+      "kind": "reveal-background",
+      "path": "editions/assets/coupa/home.png",
+      "review": "candidate",
+      "revision": "1",
+      "sha256": "23fde0cc8d4af4cacb906bdd5c3a7146d24e436a129c221d7535171bee72fbb9",
+      "width": 1280
+    }
+  ],
+  "campaigns": [
+    {
+      "band": 1,
+      "format": "CampaignDesignV1",
+      "id": "coupa-spend-in-motion",
+      "missionIds": [
+        "coupa-spend-in-motion-01",
+        "coupa-spend-in-motion-02",
+        "coupa-spend-in-motion-03",
+        "coupa-spend-in-motion-04",
+        "coupa-spend-in-motion-05",
+        "coupa-spend-in-motion-06"
+      ],
+      "name": "Spend in Motion",
+      "revision": "1"
+    }
+  ],
+  "difficultyCatalogId": "journey-difficulty-v1",
+  "format": "ContentProjectV1",
+  "id": "coupa-spend-in-motion",
+  "maps": [
+    {
+      "format": "MapDesignV1",
+      "foundations": [{ "h": 5, "w": 8, "x": 30, "y": 14 }],
+      "height": 36,
+      "id": "coupa-spend-in-motion-01-map",
+      "name": "First Connection",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 34.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 14, "y": 13 },
+        { "h": 4, "w": 8, "x": 48, "y": 18 }
+      ],
+      "height": 36,
+      "id": "coupa-spend-in-motion-02-map",
+      "name": "Supplier Square",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 18.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [{ "h": 15, "w": 3, "x": 34, "y": 10 }],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 5, "w": 8, "x": 31, "y": 15 },
+        { "h": 3, "w": 7, "x": 9, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-spend-in-motion-03-map",
+      "name": "Paper Jam",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 13, "x": 15, "y": 8 },
+        { "h": 2, "w": 14, "x": 40, "y": 24 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 3, "w": 18, "x": 22, "y": 19 },
+        { "h": 4, "w": 6, "x": 52, "y": 7 }
+      ],
+      "height": 36,
+      "id": "coupa-spend-in-motion-04-map",
+      "name": "Shared Routes",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 28.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 19, "x": 14, "y": 9 },
+        { "h": 13, "w": 2, "x": 45, "y": 13 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 4, "w": 9, "x": 30, "y": 10 },
+        { "h": 4, "w": 9, "x": 29, "y": 23 }
+      ],
+      "height": 36,
+      "id": "coupa-spend-in-motion-05-map",
+      "name": "Quarter-End Weather",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [{ "h": 3, "id": "slow-1", "kind": "slow", "w": 17, "x": 24, "y": 16 }],
+      "walls": [
+        { "h": 10, "w": 3, "x": 19, "y": 7 },
+        { "h": 9, "w": 3, "x": 46, "y": 20 }
+      ],
+      "width": 72
+    },
+    {
+      "format": "MapDesignV1",
+      "foundations": [
+        { "h": 8, "w": 9, "x": 31, "y": 13 },
+        { "h": 3, "w": 8, "x": 10, "y": 25 },
+        { "h": 3, "w": 8, "x": 52, "y": 6 }
+      ],
+      "height": 36,
+      "id": "coupa-spend-in-motion-06-map",
+      "name": "Make Room for Tomorrow",
+      "revision": "1",
+      "spawns": [{ "id": "home", "x": 35.5, "y": 0.5 }],
+      "terrain": [],
+      "walls": [
+        { "h": 2, "w": 9, "x": 13, "y": 13 },
+        { "h": 2, "w": 9, "x": 48, "y": 19 }
+      ],
+      "width": 72
+    }
+  ],
+  "missions": [
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.48,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["foundations"],
+        "lesson": "Light the first district by closing a safe loop.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "A welcoming plaza opens around the Coupa flower.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Choose a short return to the central plaza before crossing the broad east field."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-spend-in-motion-01",
+      "map": { "id": "coupa-spend-in-motion-01-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "First Connection",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": {
+        "backgroundAssetId": "coupa-spend-in-motion-01-picture",
+        "themeId": "coupa-village"
+      },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.53,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 1,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Connect the market courts while watching the paper drifters.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Friendly supplier stalls surround two connected courtyards.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Take the western arcade or split the two courts from the central landing."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-spend-in-motion-02",
+      "map": { "id": "coupa-spend-in-motion-02-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Supplier Square",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 27.5
+        }
+      ],
+      "bonuses": [],
+      "coverage": 0.56,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": [],
+        "counterplay": "Watch the visible field drifters and shorten a risky cut by returning to an island.",
+        "difficulty": {
+          "band": 1,
+          "coordination": 0,
+          "execution": 1,
+          "mechanicLoad": 1,
+          "planning": 1,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Untangle the district around two wandering duplicate-paper knots.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Folded paper ribbons become an orderly, playful city arcade.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Separate the wandering knots before committing to the long middle aisle."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-spend-in-motion-03",
+      "map": { "id": "coupa-spend-in-motion-03-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Paper Jam",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 7.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 22.5, "y": 19.5 }],
+      "coverage": 0.58,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": ["perimeter-patrol"],
+        "lesson": "Bring the harbour and workshop into the same revealed network.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "Bright bridges join a busy harbour to a miniature workshop.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Use the long dock as a return or cross between the smaller loading islands."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-spend-in-motion-04",
+      "map": { "id": "coupa-spend-in-motion-04-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Shared Routes",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 12.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 30.5, "y": 10.5 }],
+      "coverage": 0.6,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 2,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Find a calm route through a familiar, busier district.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "An evening skyline glows above streams of orderly information.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Use the inner refuges while the border patrol passes the outer rail."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-spend-in-motion-05",
+      "map": { "id": "coupa-spend-in-motion-05-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Quarter-End Weather",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 15.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    },
+    {
+      "actors": [
+        {
+          "heading": [-1, -1],
+          "id": "paper-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 61.5,
+          "y": 28.5
+        },
+        {
+          "heading": [1, -1],
+          "id": "second-drifter",
+          "role": "field-keeper",
+          "tier": "measured",
+          "x": 12.5,
+          "y": 28.5
+        },
+        {
+          "clockwise": true,
+          "id": "outer-backlog",
+          "role": "perimeter-patrol",
+          "tier": "measured",
+          "x": 71.5,
+          "y": 18.5
+        }
+      ],
+      "bonuses": [{ "id": "steady-return", "kind": "extra-life", "x": 31.5, "y": 13.5 }],
+      "coverage": 0.64,
+      "design": {
+        "captureConsequence": "A completed cut reveals the picture and can connect a workstation; it never grants a real-world approval or changes a business record.",
+        "combines": ["foundations", "perimeter-patrol"],
+        "counterplay": "Use the interior returns to avoid the outer patrol; read the field drifters before leaving a safe surface.",
+        "difficulty": {
+          "band": 2,
+          "coordination": 0,
+          "execution": 2,
+          "mechanicLoad": 2,
+          "planning": 2,
+          "threatDensity": 3,
+          "timePressure": 0
+        },
+        "durationSeconds": [40, 180],
+        "introduces": [],
+        "lesson": "Reconnect the whole neighbourhood using the routes you have learned.",
+        "mastery": "Connect the objective and finish without losing a life; learning assignments remain separate from arcade score.",
+        "memorableMoment": "The completed village celebrates beneath a clear blue night sky.",
+        "practices": ["closure", "enemy-seeded-closure"],
+        "routeDecision": "Join the central plaza first or connect the two quieter outer gardens."
+      },
+      "format": "MissionDesignV1",
+      "id": "coupa-spend-in-motion-06",
+      "map": { "id": "coupa-spend-in-motion-06-map", "revision": "1" },
+      "modes": ["solo"],
+      "name": "Make Room for Tomorrow",
+      "objectives": [
+        { "hidden": false, "id": "connection", "required": true, "x": 18.5, "y": 8.5 }
+      ],
+      "presentation": { "backgroundAssetId": null, "themeId": "coupa-village" },
+      "revision": "1",
+      "spawnId": "home",
+      "timeLimitSeconds": 0
+    }
+  ],
+  "name": "Spend in Motion",
+  "packs": [
+    {
+      "campaignIds": ["coupa-spend-in-motion"],
+      "format": "PackDesignV1",
+      "id": "coupa-spend-in-motion-pack",
+      "name": "Spend in Motion",
+      "revision": "1"
+    }
+  ],
+  "policyId": "journey-arcade-v2",
+  "revision": "1"
+}
