@@ -1,0 +1,69 @@
+{
+  "format": "reserve-picture-source-preparation.v1",
+  "at": "2026-09-14T16:49:33.258111+00:00",
+  "baseCommit": "2687b20c55f685fb566b3ebdfde807abf842f324",
+  "scope": "Four original source reserve pictures only; no maps, packs, registrations, runtime adoption or animation.",
+  "copyBudgetBytes": 33554432,
+  "budgetModel": "Count new tool original + exact workspace original + conservative uncompressed Git original bytes, plus generated inspection panels/text. Four outputs near3MiB each could approach limit; measure before copies and commit. No original output deletion.",
+  "skills": [
+    "imagegen",
+    "xonix-asset-creator",
+    "xonix-background-stylist"
+  ],
+  "adaptedPromptTemplates": [
+    "fpv-02-reveal-art",
+    "atlas-02-reveal-art",
+    "retro-02-reveal-art",
+    "navi-02-reveal-art"
+  ],
+  "adaptation": "Explicit parent requested2:1 wide new scenes overrides legacy4:3 templates. All four are fresh built-in generation calls with no image inputs, references studied only.",
+  "referencesInspected": [
+    {
+      "themeSource": "fpv-pressure-art",
+      "sourceProvenanceGitBlob": "7ed593fdc269389a69f9f0f1e78f8220057ef416",
+      "inspectedPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a09400-f402-7f71-8289-ab75741bf69b/exec-572641fd-9685-4b6a-8e1c-a041f4c33114.png",
+      "recordedBytes": 2999096,
+      "recordedSha256": "20f3a1c03a074d3aae981c989cb063a092d577cb0c0318ea4a1fd1df1d0653fc",
+      "actualOrdinarySize": 2999096,
+      "imageInputToGeneration": false,
+      "inspection": "Viewed the complete original via view_image before prompt preparation; broad foreground focus, layered scenic discoveries, bright warm/cool separation and detailed pixel-style material treatment."
+    },
+    {
+      "themeSource": "ukraine-atlas-art",
+      "sourceProvenanceGitBlob": "3b7b9defce2b72292a683957824224189cd994ff",
+      "inspectedPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-c9c438ab-1885-4904-a61c-11a81e12edf4.png",
+      "recordedBytes": 2920551,
+      "recordedSha256": "df27fc7bd2eac13a8cec95a95d95016d5755104830ce30ce922551c5067de0ee",
+      "actualOrdinarySize": 2920551,
+      "imageInputToGeneration": false,
+      "inspection": "Viewed the complete original via view_image before prompt preparation; broad foreground focus, layered scenic discoveries, bright warm/cool separation and detailed pixel-style material treatment."
+    },
+    {
+      "themeSource": "1994-forever-art",
+      "sourceProvenanceGitBlob": "ec58d509a356f556ec03d9469564e941c50baade",
+      "inspectedPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-5fa64958-4d47-4096-b9c4-b7e48736f109.png",
+      "recordedBytes": 2522301,
+      "recordedSha256": "8782b71fffc1f84b7c802d1740cec684bbcf1738beb4528106135311afdc72f0",
+      "actualOrdinarySize": 2522301,
+      "imageInputToGeneration": false,
+      "inspection": "Viewed the complete original via view_image before prompt preparation; broad foreground focus, layered scenic discoveries, bright warm/cool separation and detailed pixel-style material treatment."
+    },
+    {
+      "themeSource": "spend-network-art",
+      "sourceProvenanceGitBlob": "f25f9eb1b7234802e2c9fd7c8ddb07f8fb89e42b",
+      "inspectedPath": "/Users/oleksandr.mekhovov/.codex/generated_images/01a097a2-47c9-7462-8534-695c751580eb/exec-64ff0766-b741-4e01-b6d5-9da440c29268.png",
+      "recordedBytes": 2577915,
+      "recordedSha256": "d80e371a2bc008ce1b893268725add92a5b9a18bc8589e7b5145cbb4a75b46fa",
+      "actualOrdinarySize": 2577915,
+      "imageInputToGeneration": false,
+      "inspection": "Viewed the complete original via view_image before prompt preparation; broad foreground focus, layered scenic discoveries, bright warm/cool separation and detailed pixel-style material treatment."
+    }
+  ],
+  "culturalReference": {
+    "title": "Tradition of Kosiv painted ceramics",
+    "url": "https://ich.unesco.org/en/RL/tradition-of-kosiv-painted-ceramics-01456",
+    "readDate": "2026-09-14",
+    "scope": "UNESCO text describes cream clay ground, green/yellow coloring and figurative flora/fauna ornament. This supports broad cultural inspiration only; generated motifs, architecture, site and craft arrangement are invented. No source photo supplied or copied."
+  },
+  "sparseInitialization": "No-checkout index was initially empty; populated exactHEAD using read-tree before any art edit. Current original source entries are preserved and no source bodies hydrated."
+}

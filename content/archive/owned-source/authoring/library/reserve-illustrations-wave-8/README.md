@@ -1,0 +1,22 @@
+# Reserve illustrations · wave 8
+
+Four new source reward scenes follow [wave 7](../reserve-illustrations-wave-7/README.md), exploring larger pixel clusters and simpler focal shapes. They add no runtime binding, playable level, animation, pack or release.
+
+| Theme | Original | Composition |
+| --- | --- | --- |
+| FPV Front | [Peach Rooftop Dawn](originals/fpv-peach-rooftop-dawn.png) | A clearly separated four-motor quad on a broad teal parapet against a peach city sunrise. |
+| Ukraine Atlas | [Amber Orchard Gate](originals/ukraine-amber-orchard-gate.png) | An open turquoise gate, large apples and golden canopies frame a winding orchard path. |
+| 1994 Forever | [Violet Video Nook](originals/retro-violet-video-nook.png) | Blank colored cases, a purple shelf, cyan CRT and checkerboard floor make a compact interior. |
+| Spend Network | [Mint Canal Tram](originals/spend-mint-canal-tram.png) | A mint freight vehicle and parcel wagon stand beside a coral depot and an arched canal bridge. |
+
+The four selected PNGs total **5,928,803 bytes**. Each returned original is **1774 × 887, RGB, 8-bit**, exactly **2:1**. Requested 1536 × 768 dimensions and about twenty colors were targets. The images have visible stepped contours and broad clusters, but retain soft light variation and many more colors; this is neither an exact low-resolution grid nor a certified limited-palette asset.
+
+Four separate built-in `image_gen.imagegen` calls used the exact [prompts](prompts/) without reference images. All four outputs were selected and preserved; no variants were rejected or pixels edited. [Tool responses](provenance/tool-responses.json) retain each returned path. Tool originals remain unchanged; workspace copies are independent-inode APFS clones with matching SHA-256. [Original records](provenance/originals.json) bind byte counts, dimensions, prompt hashes, color observations and qualifications.
+
+The author viewed every complete original at original resolution. PNG chunk CRCs, Pillow verification and full decoding passed. The read-only [inspector](provenance/png-inspect.py) can repeat those checks against the manifest. The rooftop original was first viewed at its retained tool path while intake was capacity-held; its later workspace clone matched exactly. The first capacity refusal made no workspace copy and caused no new generation; intake resumed only after fresh admission. The **36 MiB** budget counts tool originals, workspace files, prospective raw Git additions and cache evidence without clone-sharing credit. Every action requires fresh free space of at least **3.5 GB**, preserving **3.4 GB**.
+
+The rooftop drone is fictional scenic equipment, not a specific product or technical reference. The orchard ornament is an invented folk-inspired geometric decoration, not authenticated Ukrainian embroidery or geography. The video nook includes an extra abstract sun picture despite the requested absence of posters; no recognizable film image or readable title was identified. Its blank cases may also read as books, so exact video packaging is not claimed. The canal vehicle is a stylized tram-like freight machine; wheels and roof pickup are not a railway engineering reference. Extra crate/wall, plants, sailboat and seagull details are retained. No recognizable brand, legible wording, copied game artwork or gore was identified in the full views.
+
+The [comparison page](provenance/index.html) places complete originals beside wave 7 at **320 × 160 CSS pixels**. The finite loopback [server](provenance/serve.py) exposes only that page and eight selected PNGs. Pass `--previous /absolute/path/to/reserve-illustrations-wave-7` to reuse prior originals without copying them. Root reviewed all eight loaded images and both comparison regions at that configured size, approving the four new works as source illustrations. The author also viewed all three unmodified native captures; [inspection.json](provenance/inspection.json) binds their hashes and limitations. The full-page export is scaled down, while viewport captures show the configured small-view composition. Native review confirms readable chunky silhouettes while retaining the ambiguous books/cases, abstract poster and stylized tram qualifications.
+
+This accepted wave brings the source series to thirty-two selected works. That is an illustration count, not playable-content coverage. Map crop, reveal-mask readability, reward timing, offline packaging and actual gameplay remain separate work.
