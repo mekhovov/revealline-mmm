@@ -61,3 +61,5 @@ Pushes to `main` run tests and verification, build the app, deploy to GitHub Pag
 The source content and artwork retain their upstream attribution and provenance. This community application does not perform live Coupa operations.
 
 Nineteen original production checkpoint oracles are preserved in `content/archive/production-oracle-originals/`, with exact byte and Git identities in `migration/production-oracle-originals-receipt.json`. They document the original historical artifacts before the shared engine's catalog migration and stay outside the playable build.
+
+The compact archive inventory in `migration/embedded-upstream-20261020-receipt.json` preserves 42 unique embedded originals from 21 later upstream evidence archives, accounting for all 354 observed member paths. Exact affected archives are backed up separately; the compressed original records in this repository retain their own byte identities and remain outside the playable build.

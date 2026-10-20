@@ -1,0 +1,2909 @@
+{
+  "format": "revealline-embedded-upstream-originals.v1",
+  "sourceRevision": "de59e798e3d94346a45519f842d6c5cbcdb0935e",
+  "scope": "Compact preservation: every affected original archive is verified externally; unique owned or mixed embedded leaf records are retained exactly as inert compressed authoring originals, with every observed member path. Unrelated members remain in the verified Git backup and shared source.",
+  "archives": [
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "gitBlob": "e5ac1643eca06fbad3673f896a2803b3e77bab4d",
+      "sha256": "3f46b98053ce92c745e0c38878b4e3d624cab5802e50f4850d5311911e936ab0",
+      "bytes": 2441345
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "gitBlob": "36414421ddfdef4ec3fe17c22bff4076309cbbe9",
+      "sha256": "b8e25dccba8be0546b2c31ea49ff6b881e19dfcd150f93baf60201c3452f5a4c",
+      "bytes": 3845559
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "gitBlob": "cba811712e3e7aa0cf5e351ab19c83160a84c27f",
+      "sha256": "b72696f22c72809c9fd28403f9f26b53fd3c9bc6fb724ed2dba1b316e61d9580",
+      "bytes": 1490389
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "gitBlob": "607c131588ff3eca07c4bf739c26139dbdd03c96",
+      "sha256": "8a26ac2a813dc34cf889367443bc50ccb54178f21ad92fcbb4f4377ba0a6b1a4",
+      "bytes": 2138140
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "gitBlob": "d54270f30b0634093bef5f043b9d30884fa0452c",
+      "sha256": "af7ba4d991bbcb54ae75f112f60356c7317c7dbaa7a2d30309caf3217b1c7f45",
+      "bytes": 3218259
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "gitBlob": "2f2a63ba81840ed5b0b98399eff123d5a115cfd9",
+      "sha256": "75292e0d0a848f50eb4f3ed674dbda3e2394fed0e5646486a304aa4ec8db023d",
+      "bytes": 2330188
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "gitBlob": "d3493fbafb1f1b535a04d6f9c39e4f2e4cda1c67",
+      "sha256": "fee5930c1c4125708e649d33ce9be01ee155bebb16b678c64c677bb9ad8e2732",
+      "bytes": 2326582
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "gitBlob": "ae3d725f19558f7f91a3d5718d44f176fe61b0ce",
+      "sha256": "1c81725c60fc4c0d6ffcf1d8c8b724e8f9d7da2ec9b55a5d72b79bf5e50ffbf4",
+      "bytes": 2328847
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "gitBlob": "782021c34794178cf0f5941f14a55fa8bcc638a1",
+      "sha256": "b03f83df43bf3295dd582083bb9043e50c218fb0b114c2d592674568e8c5415c",
+      "bytes": 2009189
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "gitBlob": "249736ff48a120cf160ff435c1214715ee7107e5",
+      "sha256": "8006ed47155f08605906cf6e134e5276d3ef0ab9b0e039e7ae9af5d4934e45ac",
+      "bytes": 2365291
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "gitBlob": "a4a5987e150765abf274d3c3d5d4957021d503ff",
+      "sha256": "b90b038b4ca266ad8357d1d0fba679a3a98a1419d8754b015b46976bb23abbcc",
+      "bytes": 3844848
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "gitBlob": "3f86cb5bd7eecfe7f4c9c5f239467a49db48b811",
+      "sha256": "bd409bb99d7826c31204d090dc6f6c140b2748d75e270b53c0a9152978c64b46",
+      "bytes": 2544166
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "gitBlob": "be419e36bfc5300b7cb7568559557c2d2b1fb600",
+      "sha256": "854e1bb901692c3ee4da56eb54ccf4f2ebaeca904cba474b89e29fbe063ae91d",
+      "bytes": 6250555
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "gitBlob": "d895fc9e4764edb38923395b02c8853026945e67",
+      "sha256": "cdf2bf34abdfbdf38d1b231914943ceacaed2912f3db266b0648c6461cff7cb5",
+      "bytes": 2230120
+    },
+    {
+      "sourcePath": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "gitBlob": "61354bf2fc97e978fc81152b1fdb0bd959a1f2dc",
+      "sha256": "5140f0c57c5da692c7ec8ef494d1e7b04629bfadb6ee4671fef3024759ca6bb3",
+      "bytes": 2333203
+    },
+    {
+      "sourcePath": "docs/flight-practice-execution-20261018-evidence.tgz",
+      "gitBlob": "3bd4d3adbdb31fc246d94794ac5b3b4297b87ea1",
+      "sha256": "6a4c78e957e2572113e4063e50e48299fbf4ee795af4d4b124c76b3cecef0e37",
+      "bytes": 27380232
+    },
+    {
+      "sourcePath": "docs/flight-practice-integration-followup-20261018-evidence.tgz",
+      "gitBlob": "7151c9de631db656734429ad680c340fd658fc08",
+      "sha256": "d989b935b5c7509f14b53a556bd8126ff9ac7c08fd35496afa601c2317ba79f6",
+      "bytes": 9619296
+    },
+    {
+      "sourcePath": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "gitBlob": "23b50d50bdc53ca938a07c97ed07b5cae07a5f55",
+      "sha256": "beea4c2255250a3fdbe08f12528f41d4a7a7448fcb4f435a8ec8030eb8a5abed",
+      "bytes": 3896062
+    },
+    {
+      "sourcePath": "docs/flight-practice-macmini-20261019-evidence.tgz",
+      "gitBlob": "c1ead794a13e1f084d3b1e24edbc672c3bc7272c",
+      "sha256": "bfd3ff3dfb826f55bc2ed1b7e7a8140ccd043fbdd4e75546c42f0e542820eb4b",
+      "bytes": 548798
+    },
+    {
+      "sourcePath": "docs/flight-practice-main-237-20261018-evidence.tgz",
+      "gitBlob": "c56fb37f137398c094a2d7e71b8a98477fd181dc",
+      "sha256": "1a0f3da8ca6b037a71d00ba1777f913fd3bdf268ed2a653dcb4518ff6e2ebf8c",
+      "bytes": 7387734
+    },
+    {
+      "sourcePath": "docs/flight-practice-main36-local-qualification-20261019-evidence.tgz",
+      "gitBlob": "66db75e36ec13581aa018bba0a214ca22339825a",
+      "sha256": "1cc4525f978ed2ca42bd2558d2d2e23c82846d132832cb91e12fe982a9ce81ff",
+      "bytes": 19121762
+    }
+  ],
+  "leaves": [
+    {
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "archiveSHA256": "88ff3ab9a2d225cc1f6048b01e82b17e7d72c32ca4f985bac24d853b8e86cc38",
+      "archiveBytes": 2490,
+      "path": "content/archive/embedded-upstream-20261020/80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02.gz"
+    },
+    {
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "archiveSHA256": "abcb6aff2be67e36c14e82383f2e3e718ecea268cb059ff19c3d2cb526b66d10",
+      "archiveBytes": 2792,
+      "path": "content/archive/embedded-upstream-20261020/3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba.gz"
+    },
+    {
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "archiveSHA256": "eaf0b6aef1657c07ba6cf080f0fd19cf970f7d53682cd151eca9053903700b8e",
+      "archiveBytes": 7563,
+      "path": "content/archive/embedded-upstream-20261020/4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66.gz"
+    },
+    {
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "archiveSHA256": "691db594b9070f838377bb5e9259f88dc79ba6d2421b8fe7bb2845782d59eea2",
+      "archiveBytes": 3424,
+      "path": "content/archive/embedded-upstream-20261020/7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441.gz"
+    },
+    {
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "archiveSHA256": "4ec4a1a7dac6eabd06e183f2133358361ef3da004e8fa0a8c69840e9731d3dcf",
+      "archiveBytes": 1867,
+      "path": "content/archive/embedded-upstream-20261020/f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd.gz"
+    },
+    {
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "archiveSHA256": "db71eedc3d9fb23e177eed11be966107bf8d6ace84906f77f025d29a34062ef7",
+      "archiveBytes": 15698,
+      "path": "content/archive/embedded-upstream-20261020/8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85.gz"
+    },
+    {
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "archiveSHA256": "a7519a91a3dd2dad76ad5a0f160896bf57344c6681ead27a80a9a79737aa762d",
+      "archiveBytes": 6082,
+      "path": "content/archive/embedded-upstream-20261020/bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6.gz"
+    },
+    {
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "archiveSHA256": "8ce961c79c6bad0a18b77b44fef292b75cce5b8e003d7ec23f063ab8b210badb",
+      "archiveBytes": 6428,
+      "path": "content/archive/embedded-upstream-20261020/8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af.gz"
+    },
+    {
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "archiveSHA256": "f472e9f19d86b0be778d5d157b1605e7f6a3c9157c5c088bf9e1a0c55d5ead73",
+      "archiveBytes": 2272,
+      "path": "content/archive/embedded-upstream-20261020/856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29.gz"
+    },
+    {
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "archiveSHA256": "0c43b3ae6ab421c2ca05bb460a0eb464d406294b64945850d9a795fe9842b413",
+      "archiveBytes": 2905,
+      "path": "content/archive/embedded-upstream-20261020/9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73.gz"
+    },
+    {
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "archiveSHA256": "5a8e71f5b9a08ef65e1a7c711b82da1e60e334f647defa3bf9c07bc2e9c417f8",
+      "archiveBytes": 1637,
+      "path": "content/archive/embedded-upstream-20261020/eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934.gz"
+    },
+    {
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "archiveSHA256": "676d88292c0a878c9535c35190ccc45f63446ce51e65c447467918806bd5421f",
+      "archiveBytes": 5645,
+      "path": "content/archive/embedded-upstream-20261020/5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c.gz"
+    },
+    {
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "archiveSHA256": "5db0d29a149a3deafef31cca479b4e5f441b499b22bece5f014153ffc90df089",
+      "archiveBytes": 6257,
+      "path": "content/archive/embedded-upstream-20261020/d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f.gz"
+    },
+    {
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "archiveSHA256": "24a3a1898fc27081177cc3ed78f480328d76d34e5c6fcd7b68a840f14b2b1af2",
+      "archiveBytes": 3205,
+      "path": "content/archive/embedded-upstream-20261020/135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048.gz"
+    },
+    {
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "archiveSHA256": "403d437e49551efdfbe30639fad373d1ec90c438f8eb40d6909504cb96b10c1c",
+      "archiveBytes": 13783,
+      "path": "content/archive/embedded-upstream-20261020/27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2.gz"
+    },
+    {
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "archiveSHA256": "75923d3918097f712e2db4792b9935e3b1a2f1f43a681244385a2136f262eb23",
+      "archiveBytes": 3873,
+      "path": "content/archive/embedded-upstream-20261020/72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba.gz"
+    },
+    {
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "archiveSHA256": "9dbc00d0aad089c1b143a8d2937d2b50842897e63d916981c43ca700753d4569",
+      "archiveBytes": 4892,
+      "path": "content/archive/embedded-upstream-20261020/6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba.gz"
+    },
+    {
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "archiveSHA256": "2ac48d5b04caa1c029ab1b1c7e50af44453287ae4ca147e694ffc2c4816f2363",
+      "archiveBytes": 4937,
+      "path": "content/archive/embedded-upstream-20261020/ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb.gz"
+    },
+    {
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "archiveSHA256": "5eb15b4121bdb4ea51fa06565bcfe75938c3cf92b1610f42d8eb31adfb1ca050",
+      "archiveBytes": 3424,
+      "path": "content/archive/embedded-upstream-20261020/9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51.gz"
+    },
+    {
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "archiveSHA256": "a47e75e76971169c3100d016625224006558e9d934b021f69403e7e580b8b68d",
+      "archiveBytes": 4899,
+      "path": "content/archive/embedded-upstream-20261020/a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2.gz"
+    },
+    {
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "archiveSHA256": "d1aedbdef39a0b41bad54de5c884761c25c4dcf2d298e309ad05e356172e6419",
+      "archiveBytes": 3195,
+      "path": "content/archive/embedded-upstream-20261020/5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c.gz"
+    },
+    {
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "archiveSHA256": "5ba63762212a9fb09520f09d7c9107814064f4a6f0f227a200cba40b00b1f008",
+      "archiveBytes": 3066,
+      "path": "content/archive/embedded-upstream-20261020/ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed.gz"
+    },
+    {
+      "rawSHA256": "b0d4b17e86635c30ac5ce8447d515f58340a2c0f398703c02331c36b10a564b4",
+      "rawBytes": 547358,
+      "archiveSHA256": "2f7538902bd2f198938788f2ee329caef5988bd311022dd7f8e05d5b41c7c7b4",
+      "archiveBytes": 125628,
+      "path": "content/archive/embedded-upstream-20261020/b0d4b17e86635c30ac5ce8447d515f58340a2c0f398703c02331c36b10a564b4.gz"
+    },
+    {
+      "rawSHA256": "179309a60e6f18e27a4403bb48026766e0080b1566cf2a077a5b1108392adbce",
+      "rawBytes": 519850,
+      "archiveSHA256": "5d58599ecadf5c1cf653340626b6158525b4cc14b487c311dad0749531b20f61",
+      "archiveBytes": 179596,
+      "path": "content/archive/embedded-upstream-20261020/179309a60e6f18e27a4403bb48026766e0080b1566cf2a077a5b1108392adbce.gz"
+    },
+    {
+      "rawSHA256": "5f8cfdbb23b49f7cbab03cf867e1e357e74b1dbff500627f3da541e0fd1f9fc8",
+      "rawBytes": 1669389,
+      "archiveSHA256": "fe12e876775ed2c3451845d80bef6d40e592e80c0823c0b8c56f89ebff6ba1a4",
+      "archiveBytes": 430039,
+      "path": "content/archive/embedded-upstream-20261020/5f8cfdbb23b49f7cbab03cf867e1e357e74b1dbff500627f3da541e0fd1f9fc8.gz"
+    },
+    {
+      "rawSHA256": "f15c40a3196b8999ea03cc2219c87f57c441ead62fddf2a9d67d8e5fb41f0296",
+      "rawBytes": 898857,
+      "archiveSHA256": "00388551939c419c26436383be45777def2daf6b5c453bfa10120be7c0740b32",
+      "archiveBytes": 236205,
+      "path": "content/archive/embedded-upstream-20261020/f15c40a3196b8999ea03cc2219c87f57c441ead62fddf2a9d67d8e5fb41f0296.gz"
+    },
+    {
+      "rawSHA256": "2f1077048f1ac97fef2a9b201f46b3541c09a33398840068de4657c42af4a50d",
+      "rawBytes": 1615472,
+      "archiveSHA256": "94eb5f2ad55b6e32e7ee078636777143893c154ea325cb5ea2aa693acc7cbf62",
+      "archiveBytes": 459837,
+      "path": "content/archive/embedded-upstream-20261020/2f1077048f1ac97fef2a9b201f46b3541c09a33398840068de4657c42af4a50d.gz"
+    },
+    {
+      "rawSHA256": "9ccb499025872936e2dd4c6cb287c082672c837d4adab43969ec4b14da00c478",
+      "rawBytes": 1615203,
+      "archiveSHA256": "91cf0f16fb70420caf1a3f61db0045b2ac59ab82776e0cca9cc96c4660d18799",
+      "archiveBytes": 459696,
+      "path": "content/archive/embedded-upstream-20261020/9ccb499025872936e2dd4c6cb287c082672c837d4adab43969ec4b14da00c478.gz"
+    },
+    {
+      "rawSHA256": "f17f336902c4c01b0679eb839289fabeac474782976d471f81ad9d907fe7b3b6",
+      "rawBytes": 529548,
+      "archiveSHA256": "a31cc87bc30439f9b571ad64ff59840274a6963d57ba6654b0b1c50138c05b7c",
+      "archiveBytes": 182970,
+      "path": "content/archive/embedded-upstream-20261020/f17f336902c4c01b0679eb839289fabeac474782976d471f81ad9d907fe7b3b6.gz"
+    },
+    {
+      "rawSHA256": "95df4d5b2aa59efec8cd991091c04551ca1b7ccf536b34acc01076d1b0452e25",
+      "rawBytes": 1692924,
+      "archiveSHA256": "f4f000397cb94f56e2cd0b224d5cadb4a0114dd10d9507e8825c1d10d36503b5",
+      "archiveBytes": 439588,
+      "path": "content/archive/embedded-upstream-20261020/95df4d5b2aa59efec8cd991091c04551ca1b7ccf536b34acc01076d1b0452e25.gz"
+    },
+    {
+      "rawSHA256": "a3e85d7a65ec2eb6a80fa85fb5ab935ea1c7c587b04404d50f64b53797ceca73",
+      "rawBytes": 7306,
+      "archiveSHA256": "a83ee080883e3e83399c3c54aa0bdf81b51bd0b4d87d457d7a1ce6115a523eb5",
+      "archiveBytes": 2541,
+      "path": "content/archive/embedded-upstream-20261020/a3e85d7a65ec2eb6a80fa85fb5ab935ea1c7c587b04404d50f64b53797ceca73.gz"
+    },
+    {
+      "rawSHA256": "a257b68f2cbf488c39411289eaeea6879dbf398d9dd699ea41ce2ba0a6c18378",
+      "rawBytes": 11050,
+      "archiveSHA256": "de98dcf46999139f685655b053d3bb9b5a616042afef3aac308897f108a37f8f",
+      "archiveBytes": 3135,
+      "path": "content/archive/embedded-upstream-20261020/a257b68f2cbf488c39411289eaeea6879dbf398d9dd699ea41ce2ba0a6c18378.gz"
+    },
+    {
+      "rawSHA256": "d1dad148a388020ef875ac1faeac3df75ab80e7a9e0b3f82c5f68da518c93c08",
+      "rawBytes": 64785,
+      "archiveSHA256": "32fd8e3e281d988502e69f90f09ff21cab67b215f089c1e1af92078f223a71c6",
+      "archiveBytes": 15018,
+      "path": "content/archive/embedded-upstream-20261020/d1dad148a388020ef875ac1faeac3df75ab80e7a9e0b3f82c5f68da518c93c08.gz"
+    },
+    {
+      "rawSHA256": "ed7686d827c199c8ecc2bf77f0bcd4da36f315b2613e2f7e676ccf9bf08b7224",
+      "rawBytes": 62567,
+      "archiveSHA256": "48463447338f5f2aece5c2c807eec039a88978d2eb450239de93460aff270a31",
+      "archiveBytes": 14523,
+      "path": "content/archive/embedded-upstream-20261020/ed7686d827c199c8ecc2bf77f0bcd4da36f315b2613e2f7e676ccf9bf08b7224.gz"
+    },
+    {
+      "rawSHA256": "2ad114bee1dfd5c0de59326a4ae3b76c3d2c7fc84a159b98fd5daff5e29b7a21",
+      "rawBytes": 196519,
+      "archiveSHA256": "777242860ead74e8e73d8bd044847d6bd18ad7e49e88acac70e6fcdf33bd0e19",
+      "archiveBytes": 33504,
+      "path": "content/archive/embedded-upstream-20261020/2ad114bee1dfd5c0de59326a4ae3b76c3d2c7fc84a159b98fd5daff5e29b7a21.gz"
+    },
+    {
+      "rawSHA256": "4827a1830edeb7b2e315e7f3c40b16cb5235dc49db42ff44ce6f203e860414c9",
+      "rawBytes": 234213,
+      "archiveSHA256": "c039d7946172b3448aedf14383b7560de98d2a26730192f817d4c5bb861ed24e",
+      "archiveBytes": 35119,
+      "path": "content/archive/embedded-upstream-20261020/4827a1830edeb7b2e315e7f3c40b16cb5235dc49db42ff44ce6f203e860414c9.gz"
+    },
+    {
+      "rawSHA256": "3bbe5d2aebb72291e6503e9371da4e0bee02f63f5dea23847c17d3cb1b16e0ad",
+      "rawBytes": 1617510,
+      "archiveSHA256": "acc9fc10257346ad3647d8f2baadfbd0f4e9f0f9a93ff5722f0529b500639a30",
+      "archiveBytes": 460741,
+      "path": "content/archive/embedded-upstream-20261020/3bbe5d2aebb72291e6503e9371da4e0bee02f63f5dea23847c17d3cb1b16e0ad.gz"
+    },
+    {
+      "rawSHA256": "89a32f27796ad5f9cc385118ec1dbb977eddec6b7213da221f14db57e96bcb87",
+      "rawBytes": 1616883,
+      "archiveSHA256": "d18eb85e8b89fc7315fc419e218eb1d1973c29a6db8864f8c9b8a9fa7e808b7b",
+      "archiveBytes": 460417,
+      "path": "content/archive/embedded-upstream-20261020/89a32f27796ad5f9cc385118ec1dbb977eddec6b7213da221f14db57e96bcb87.gz"
+    },
+    {
+      "rawSHA256": "ce581355c15e6914099083e7689485a3c510d6d5a5be1470c0008110c30e28e0",
+      "rawBytes": 651384,
+      "archiveSHA256": "2f68c0c005854e48632e10dee159f8ac5952c5b70d5f467cb6608541f7167144",
+      "archiveBytes": 185415,
+      "path": "content/archive/embedded-upstream-20261020/ce581355c15e6914099083e7689485a3c510d6d5a5be1470c0008110c30e28e0.gz"
+    },
+    {
+      "rawSHA256": "7121d7d81259d954240a8f5efe9b8b1e3a08566dd83d9b20a02840f6eef20120",
+      "rawBytes": 1618322,
+      "archiveSHA256": "42c391de5ab08471eca0486e4e4e4a34d08d094a2b36083f359f1ef7f2198fda",
+      "archiveBytes": 460998,
+      "path": "content/archive/embedded-upstream-20261020/7121d7d81259d954240a8f5efe9b8b1e3a08566dd83d9b20a02840f6eef20120.gz"
+    },
+    {
+      "rawSHA256": "a1755908cc8159ed0a0fa0bee5af3aad1f19900a5f015fd50cc738fba811e166",
+      "rawBytes": 529812,
+      "archiveSHA256": "00d8e765ec3ce435cd5eb981b9b2881719935a4f8ccd33e8fcafc1a6899cb8d6",
+      "archiveBytes": 183135,
+      "path": "content/archive/embedded-upstream-20261020/a1755908cc8159ed0a0fa0bee5af3aad1f19900a5f015fd50cc738fba811e166.gz"
+    },
+    {
+      "rawSHA256": "570989f7c225f4a9b97eeb2363b50c4ade6b1affab15c9dfaf0f5c6c35f4de9e",
+      "rawBytes": 983539,
+      "archiveSHA256": "56b59b51ea981b8234a46f39e9893d02e3354f8dc7b0d24a8c84311e99176e50",
+      "archiveBytes": 256867,
+      "path": "content/archive/embedded-upstream-20261020/570989f7c225f4a9b97eeb2363b50c4ade6b1affab15c9dfaf0f5c6c35f4de9e.gz"
+    }
+  ],
+  "files": [
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-first-failed-originals.tgz!!gzip!practice-native-8fac-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/all-six-offline-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/feedback-overall-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-752e-failed-originals.tgz!!gzip!practice-native-752e-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-8e29-passed-originals.tgz!!gzip!practice-native-8e29-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-8c93-passed-originals.tgz!!gzip!practice-native-8c93-authority-20261016.tgz!!gzip!game/app.mjs",
+      "rawSHA256": "b0d4b17e86635c30ac5ce8447d515f58340a2c0f398703c02331c36b10a564b4",
+      "rawBytes": 547358,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-bffb-failed-originals.tgz!!gzip!practice-native-bffb-authority-20261016.tgz!!gzip!game/app.mjs",
+      "rawSHA256": "b0d4b17e86635c30ac5ce8447d515f58340a2c0f398703c02331c36b10a564b4",
+      "rawBytes": 547358,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-e636-failed-originals.tgz!!gzip!practice-native-e636-authority-20261016.tgz!!gzip!game/app.mjs",
+      "rawSHA256": "b0d4b17e86635c30ac5ce8447d515f58340a2c0f398703c02331c36b10a564b4",
+      "rawBytes": 547358,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/native-c9-first-failed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-pwa-continuity-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/onboarding-six-offline-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-home-diagnostic-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-production-memory-20261016-run1/production-manifest.json",
+      "rawSHA256": "179309a60e6f18e27a4403bb48026766e0080b1566cf2a077a5b1108392adbce",
+      "rawBytes": 519850,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-production-memory-20261016-run1/observation.json",
+      "rawSHA256": "5f8cfdbb23b49f7cbab03cf867e1e357e74b1dbff500627f3da541e0fd1f9fc8",
+      "rawBytes": 1669389,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-memory-passed-originals.tgz!!gzip!practice-native-888-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-production-personal-appearance-v2-20261016-run2/production-manifest.json",
+      "rawSHA256": "179309a60e6f18e27a4403bb48026766e0080b1566cf2a077a5b1108392adbce",
+      "rawBytes": 519850,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-production-personal-appearance-v2-20261016-run2/observation.json",
+      "rawSHA256": "f15c40a3196b8999ea03cc2219c87f57c441ead62fddf2a9d67d8e5fb41f0296",
+      "rawBytes": 898857,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/production-run2-failed-originals.tgz!!gzip!practice-native-ddac-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-localization-pages.mjs",
+      "rawSHA256": "72a81010a41b590cfe6824128643225c19d0b29a4de3086cb761eb0e709ed0ba",
+      "rawBytes": 14971,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-production-countercurrent.mjs",
+      "rawSHA256": "5163bdf974d5e355cc0df32dfa485cce063f7e75f734232661ed6c51f6feaa4c",
+      "rawBytes": 11044,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/audit-journey.mjs",
+      "rawSHA256": "80dce7d362f787f48756774e2434ddd1d7c91aae969dc901975e0018690d6f02",
+      "rawBytes": 6708,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-offline-core-closure.mjs",
+      "rawSHA256": "6d1352c70dccd4d0fe4cbe39ec9d6c396b400f8754c858202727b02a118cf1ba",
+      "rawBytes": 28440,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-pages-current-entry.mjs",
+      "rawSHA256": "a69f109e3bf15aff232162a54cac98e52640b2e84c8cd1e431d814afc7f859a2",
+      "rawBytes": 16831,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-edition-offline.mjs",
+      "rawSHA256": "d9f4e2d8f9190db860bc12355575123e4b9c00e88ce067b700fd214fa1e86b0f",
+      "rawBytes": 23715,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-company-content-inventory.mjs",
+      "rawSHA256": "eea9cb5a3326c695dd2105434e591d5d77e5a50396e83bd0d5bf6bcff38c9934",
+      "rawBytes": 4996,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-company-route-fixtures.mjs",
+      "rawSHA256": "3f81a1f53196b4894112d47db0f8c0a52b004aea1fec83c50e66fc66df25deba",
+      "rawBytes": 7803,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-company-review.mjs",
+      "rawSHA256": "5f5aa1a83dac41a921f7e9040933c24e9c76a80d6a6003ab71ffe1eb173f069c",
+      "rawBytes": 22372,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-production-fracture-themes.mjs",
+      "rawSHA256": "ff260d48b25bcc6542fafe2b610f0a40e97545a06cabf071fe644cfd27e2e7ed",
+      "rawBytes": 10003,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/produce-company-content.mjs",
+      "rawSHA256": "9207de44cdb360781206a02fc884a93ec83fa8473d3b53fd1dcea11c1d19fd73",
+      "rawBytes": 10159,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/prepare-menu-scenes.py",
+      "rawSHA256": "856a5033371b138384610c43f3777e5b5e55e41bfcf9343d9d71812f09c40f29",
+      "rawBytes": 6913,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-optional-fpv-package.mjs",
+      "rawSHA256": "ac9ce85c61043cb0a221cdbbca388a80f31920d73d9d673494fd318476a952cb",
+      "rawBytes": 18544,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-neon-mosaic.mjs",
+      "rawSHA256": "4d4556e62edfe770a7b49a34444c9d0ed7418bbad2a657229fd2fd0d4f55be66",
+      "rawBytes": 22339,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/external-distribution.mjs",
+      "rawSHA256": "f0d91db8311a483d8d008612760b7ad7ae3741f5a7c6aae9df8fb04f3e1463cd",
+      "rawBytes": 6651,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-game-cli.mjs",
+      "rawSHA256": "27141b73d36616e230e385a2a9adbc4b492c54b2f77e7f2b66b1a96b676e9ea2",
+      "rawBytes": 58684,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-external-distribution.mjs",
+      "rawSHA256": "135a18cf99e79878f7a8dd31126ed8f9e5b5f0a27385156307a55e9b5e1b1048",
+      "rawBytes": 10106,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/test-optional-practice.mjs",
+      "rawSHA256": "9b93f6ea4439230e2d5cdcef52a330ea27296152ffa6a3de26956bf8e7bd5d51",
+      "rawBytes": 10396,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/picture-production-migration.json",
+      "rawSHA256": "8ce7f796526d0eb3a2f47fb381cd29a4079f94290e346ceef06cadc5b1a2b9af",
+      "rawBytes": 32780,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/build-workshop-pack.mjs",
+      "rawSHA256": "7596b1aa355003fad788dae9c390ac57e8f2150e4f6455f257fb422b2c520441",
+      "rawBytes": 9412,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/native-cli.test.mjs",
+      "rawSHA256": "bba9b780c6955b2f1b5edf8c341ebdef6044aaba3c07590bade80f31123bb0c6",
+      "rawBytes": 25685,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz",
+      "member": "docs/flight-practice-continuation-20261016/pwa-activation-passed-originals.tgz!!gzip!practice-native-57d3-authority-20261016.tgz!!gzip!scripts/fixtures/actor-effects20-predecessors.json",
+      "rawSHA256": "8e8554a4b8c5f833c76b11a2eb99ee9e65e1d11f3b94f840633e55a040ba3c85",
+      "rawBytes": 60303,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-execution-20261018-evidence.tgz",
+      "member": "docs/flight-practice-execution-20261018-evidence.tgz!!gzip!flight-practice-20261018-evidence/frozen-production-local-build/receipt.json",
+      "rawSHA256": "2f1077048f1ac97fef2a9b201f46b3541c09a33398840068de4657c42af4a50d",
+      "rawBytes": 1615472,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-execution-20261018-evidence.tgz",
+      "member": "docs/flight-practice-execution-20261018-evidence.tgz!!gzip!flight-practice-20261018-evidence/frozen-production-build/receipt.json",
+      "rawSHA256": "9ccb499025872936e2dd4c6cb287c082672c837d4adab43969ec4b14da00c478",
+      "rawBytes": 1615203,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-integration-followup-20261018-evidence.tgz",
+      "member": "docs/flight-practice-integration-followup-20261018-evidence.tgz!!gzip!practice-integration-followup-20261018-evidence/practice-current-production-directory-20261018/production-manifest.json",
+      "rawSHA256": "f17f336902c4c01b0679eb839289fabeac474782976d471f81ad9d907fe7b3b6",
+      "rawBytes": 529548,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-integration-followup-20261018-evidence.tgz",
+      "member": "docs/flight-practice-integration-followup-20261018-evidence.tgz!!gzip!practice-integration-followup-20261018-evidence/practice-current-production-directory-20261018/observation.json",
+      "rawSHA256": "95df4d5b2aa59efec8cd991091c04551ca1b7ccf536b34acc01076d1b0452e25",
+      "rawBytes": 1692924,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/practice-distribution-preparation-phase-20261019/phases.jsonl",
+      "rawSHA256": "a3e85d7a65ec2eb6a80fa85fb5ab935ea1c7c587b04404d50f64b53797ceca73",
+      "rawBytes": 7306,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/practice-distribution-preparation-phase-20261019/receipt.json",
+      "rawSHA256": "a257b68f2cbf488c39411289eaeea6879dbf398d9dd699ea41ce2ba0a6c18378",
+      "rawBytes": 11050,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/source-56acb4240/test-game-cli.mjs",
+      "rawSHA256": "d1dad148a388020ef875ac1faeac3df75ab80e7a9e0b3f82c5f68da518c93c08",
+      "rawBytes": 64785,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/source-623918462/test-game-cli.mjs",
+      "rawSHA256": "d1dad148a388020ef875ac1faeac3df75ab80e7a9e0b3f82c5f68da518c93c08",
+      "rawBytes": 64785,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/source-929348a20/test-game-cli.mjs",
+      "rawSHA256": "ed7686d827c199c8ecc2bf77f0bcd4da36f315b2613e2f7e676ccf9bf08b7224",
+      "rawBytes": 62567,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/practice-core-preparation-phase-20261019/phases.jsonl",
+      "rawSHA256": "2ad114bee1dfd5c0de59326a4ae3b76c3d2c7fc84a159b98fd5daff5e29b7a21",
+      "rawBytes": 196519,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/practice-core-preparation-phase-20261019/receipt.json",
+      "rawSHA256": "4827a1830edeb7b2e315e7f3c40b16cb5235dc49db42ff44ce6f203e860414c9",
+      "rawBytes": 234213,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz",
+      "member": "docs/flight-practice-local-diagnosis-20261019-evidence.tgz!!gzip!practice-local-diagnosis-20261019-evidence/practice-macmini-progress-build-20261019/receipt.json",
+      "rawSHA256": "3bbe5d2aebb72291e6503e9371da4e0bee02f63f5dea23847c17d3cb1b16e0ad",
+      "rawBytes": 1617510,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-macmini-20261019-evidence.tgz",
+      "member": "docs/flight-practice-macmini-20261019-evidence.tgz!!gzip!practice-macmini-followup-20261019-evidence/practice-macmini-production-build-20261019/receipt.json",
+      "rawSHA256": "89a32f27796ad5f9cc385118ec1dbb977eddec6b7213da221f14db57e96bcb87",
+      "rawBytes": 1616883,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-main-237-20261018-evidence.tgz",
+      "member": "docs/flight-practice-main-237-20261018-evidence.tgz!!gzip!practice-main-237-20261018-evidence/loose-site-retention.json",
+      "rawSHA256": "ce581355c15e6914099083e7689485a3c510d6d5a5be1470c0008110c30e28e0",
+      "rawBytes": 651384,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-main36-local-qualification-20261019-evidence.tgz",
+      "member": "docs/flight-practice-main36-local-qualification-20261019-evidence.tgz!!gzip!practice-main36-local-qualification-20261019-evidence/practice-main36-local-build-20261019/receipt.json",
+      "rawSHA256": "7121d7d81259d954240a8f5efe9b8b1e3a08566dd83d9b20a02840f6eef20120",
+      "rawBytes": 1618322,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-main36-local-qualification-20261019-evidence.tgz",
+      "member": "docs/flight-practice-main36-local-qualification-20261019-evidence.tgz!!gzip!practice-main36-local-qualification-20261019-evidence/practice-main36-browser-refresh-20261019/production/production-manifest.json",
+      "rawSHA256": "a1755908cc8159ed0a0fa0bee5af3aad1f19900a5f015fd50cc738fba811e166",
+      "rawBytes": 529812,
+      "reason": "owned-content-or-dependency"
+    },
+    {
+      "sourceArchive": "docs/flight-practice-main36-local-qualification-20261019-evidence.tgz",
+      "member": "docs/flight-practice-main36-local-qualification-20261019-evidence.tgz!!gzip!practice-main36-local-qualification-20261019-evidence/practice-main36-browser-refresh-20261019/production/observation.json",
+      "rawSHA256": "570989f7c225f4a9b97eeb2363b50c4ade6b1affab15c9dfaf0f5c6c35f4de9e",
+      "rawBytes": 983539,
+      "reason": "owned-content-or-dependency"
+    }
+  ]
+}
