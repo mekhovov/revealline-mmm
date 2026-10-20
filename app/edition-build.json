@@ -361,8 +361,8 @@
     },
     {
       "path": "game/audio/effects/bank.mjs",
-      "bytes": 13444,
-      "sha256": "0f969f6aa5baffb030f87b921b56a319fedf659d8c22e64ab6546112191ec4f2"
+      "bytes": 193,
+      "sha256": "5d57143b501c2375e3b6efc06b0ec91838d0be8b20b8741bc33867ce92d77ca0"
     },
     {
       "path": "game/backup-set.mjs",
