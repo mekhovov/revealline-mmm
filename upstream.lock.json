@@ -924,9 +924,9 @@
     ]
   },
   "repository": "mekhovov/revealline",
-  "requestedRef": "1db5ca9d16b9473bd814e44241d044877eb391fb",
-  "commit": "1db5ca9d16b9473bd814e44241d044877eb391fb",
-  "tree": "3fce3de541dc84c9c30b03cd4a7203e94c7240b6",
+  "requestedRef": "2762ea7fe1c9f23aec4215282972128ca75d483a",
+  "commit": "2762ea7fe1c9f23aec4215282972128ca75d483a",
+  "tree": "69785d1b3d3e3fd4005653bb76606f34b9f28ae6",
   "upstreamVersion": "0.151.1",
   "editionId": "coupa-all",
   "brandId": "coupa",
@@ -1418,8 +1418,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1275851,
-      "sha256": "0839253f847baad6ece6a66129692405ed62a11b73b2ce08d164c08d00209df4"
+      "bytes": 1276259,
+      "sha256": "ac19af8c86c5163872bdbc8b02bbe00492d2f6afe3d668b482abf6ee816e8298"
     },
     {
       "path": "game/i18n/index.mjs",
@@ -4110,8 +4110,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1276159,
-      "sha256": "19852da397d397f6ed2f0a4c14b780e3efc6145176eee486018535d3e2937d01"
+      "bytes": 1276887,
+      "sha256": "cc2b801e7bb852d2801c138fa450648654e7a35bab19c3469d7a9e0f8e9923ea"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -5800,8 +5800,8 @@
     },
     {
       "path": "game/ui/couch-touch.mjs",
-      "bytes": 3978,
-      "sha256": "891079326fc17b4872108a8d94ac557a62136a5cb0f93a1e529a9331997aeb88"
+      "bytes": 4092,
+      "sha256": "841b84faf0063ab3bc697de1b0659a165ae61ff9a9bc7ae463c0a9831a5bdc26"
     },
     {
       "path": "game/ui/demo-audio.mjs",
@@ -7215,7 +7215,7 @@
     {
       "path": "edition-build.json",
       "bytes": 181060,
-      "sha256": "00d4402516d765c90214e9fd4b1116c2029ef1a9cdc80452ad0d0ba0a76d39ee"
+      "sha256": "a73d59079cfec70af388f72a1347e3bb87d372a2efdcbb1cb7e04e3890e37679"
     },
     {
       "path": "edition-catalog.json",
@@ -7320,7 +7320,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "4c21403e2df6ea3465fbd755623467ef2d6b4bc69cd078c97623eda2800f0890"
+      "sha256": "fb3ec23b90245f1f59d0d80460a0f2e02a6545d2124275040f97d56ac4e9e8cf"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -9404,8 +9404,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 943911,
-      "sha256": "d1ba9b71eed042027ee10edf82ed040585d7c9b06f1530d04b8c66ffa99e9a88"
+      "bytes": 944251,
+      "sha256": "a9bd5bdc865552d4a3f511626afd9197ed23aeff131015acdae130ab2f863747"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -10959,8 +10959,8 @@
     },
     {
       "path": "game/ui/couch-touch.mjs",
-      "bytes": 3978,
-      "sha256": "891079326fc17b4872108a8d94ac557a62136a5cb0f93a1e529a9331997aeb88"
+      "bytes": 4092,
+      "sha256": "841b84faf0063ab3bc697de1b0659a165ae61ff9a9bc7ae463c0a9831a5bdc26"
     },
     {
       "path": "game/ui/coupa-landing.css",

@@ -296,7 +296,7 @@
     "coupa-all"
   ],
   "version": "v0.151.1",
-  "sourceRevision": "1db5ca9d16b9473bd814e44241d044877eb391fb",
+  "sourceRevision": "2762ea7fe1c9f23aec4215282972128ca75d483a",
   "catalogSha256": "50c96b78e95cf5ba27238fc25e1b0c1609145c2bae958f10a6c6868802df0730",
   "files": [
     {
@@ -417,7 +417,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "4c21403e2df6ea3465fbd755623467ef2d6b4bc69cd078c97623eda2800f0890"
+      "sha256": "fb3ec23b90245f1f59d0d80460a0f2e02a6545d2124275040f97d56ac4e9e8cf"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -2501,8 +2501,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 943911,
-      "sha256": "d1ba9b71eed042027ee10edf82ed040585d7c9b06f1530d04b8c66ffa99e9a88"
+      "bytes": 944251,
+      "sha256": "a9bd5bdc865552d4a3f511626afd9197ed23aeff131015acdae130ab2f863747"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -4056,8 +4056,8 @@
     },
     {
       "path": "game/ui/couch-touch.mjs",
-      "bytes": 3978,
-      "sha256": "891079326fc17b4872108a8d94ac557a62136a5cb0f93a1e529a9331997aeb88"
+      "bytes": 4092,
+      "sha256": "841b84faf0063ab3bc697de1b0659a165ae61ff9a9bc7ae463c0a9831a5bdc26"
     },
     {
       "path": "game/ui/coupa-landing.css",

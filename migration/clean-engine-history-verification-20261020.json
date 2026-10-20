@@ -1,0 +1,49 @@
+{
+  "format": "branded-engine-history-verification.v1",
+  "at": "2026-10-20T11:29:49.212030+00:00",
+  "originalEngineCommit": "2429fa2c044cebde6d394cc1845be9e7c611a370",
+  "cleanEngineCommit": "2762ea7fe1c9f23aec4215282972128ca75d483a",
+  "retainedRefs": 2307,
+  "retainedCommits": 15421,
+  "auditedObjects": 158066,
+  "ownershipFindings": 0,
+  "auditIssues": 0,
+  "unrelatedTreeChangeIssues": 0,
+  "commitMap": {
+    "file": "migration/upstream-history-map-20261020.txt.gz",
+    "uncompressedSHA256": "05402b6cb547e19820525f4d1884c44829a95e8c8872fc39749284bcd1f19aa7"
+  },
+  "evidenceSHA256": {
+    "candidate-live-filter-result.json": "fe8d90ead9f116e98918165d2b41001b98232953ee5ee416595bfd23f45d15b3",
+    "candidate-live-reachable-ownership-audit.json": "f2f80837937dc327cc7c8eb623250e2ccb6f51b490c815ecd6ff13941da1aa31",
+    "candidate-live-ref-tree-change-verification.json": "151f56eb53fef6ffef1ca6a6f164d869825dbe22d0fe2faf5d7e894a9c3f13d7",
+    "live-clean-engine-snapshot-receipt.json": "15ff76da1de55edebaa4d643dcd7467682b2aa8634361a094bb40506a554e8bb",
+    "dedicated-live-clean-engine-sync-verification.json": "7bb98b620fc3adba58cfd886b1b9ddb3ab306dc9fabf3a9f352dd718dd1cff5f",
+    "dedicated-staged-clean-engine-sync-verification.json": "d9880a72a11c828af63d1622885e3082b89ff0755994444170c4ff5537f1d8cc",
+    "cutover-result.json": "c04c8a58ab6f5233e2ea232a337de85caa05189d149c0b0168bbf92973b4b4dd"
+  },
+  "verification": {
+    "appTests": 43,
+    "authoringTests": 58,
+    "generatedFiles": 48,
+    "chapters": 5,
+    "supplementalCollections": 8,
+    "supplementalMissions": 20,
+    "build": "pass",
+    "authoringVerificationEngine": "f38955bfdadba8762c80659ecd800f1693b3ce83",
+    "authoringInheritance": "The final engine increment changes only unrelated verification files. None of the compiler/selected input paths or local authoring/content/projection files changed after the passing 58-test authoring and collection verification.",
+    "finalIncrementChangedPaths": [
+      ".github/workflows/world-fixture-memory-scalars.yml",
+      "docs/verification/world-fixture-memory-scalars.md",
+      "game/test/fpv-world-appearance-ui.test.mjs",
+      "scripts/world-fixture-memory-scalars-pins.json",
+      "scripts/world-fixture-memory-scalars.py"
+    ],
+    "browser": "Final engine passed desktop, mobile and touch checks: password gate, all three Snake play modes, terminal results/restoration, expansion mechanics, capture settings, and clean network. Screenshots inspected for flower/paper/abstract presentation."
+  },
+  "publication": {
+    "upstreamHistory": "Verified atomic cutover complete; temporary transfer branch removed and publishing restored.",
+    "dedicatedDeployment": "This commit is verified before publication; the deployed dedicated revision is recorded by deployment.json."
+  },
+  "hostedHistoricalCleanup": "In progress; this engine verification does not claim that hosted logs, release downloads, or GitHub-owned references are fully removed."
+}
