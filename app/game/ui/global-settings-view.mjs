@@ -19,7 +19,6 @@ export const GLOBAL_SETTINGS = Object.freeze(
     { key: 'musicLibrary', category: 'audio' },
     { key: 'touchPresentation', category: 'controls' },
     { key: 'profileRecovery', category: 'data' },
-    { key: 'updates', category: 'extras' },
   ].map(Object.freeze),
 );
 

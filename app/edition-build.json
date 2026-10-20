@@ -401,13 +401,13 @@
     },
     {
       "path": "game/boot.mjs",
-      "bytes": 10996,
-      "sha256": "e8bb966af0e9ee3aa7c344f06912de1f4b625799d2741f48ebffacc37c692926"
+      "bytes": 11008,
+      "sha256": "d11e0614c5ee7490ad2f00c91bf4ce18ddd9b14759d8e1573474da66c47121d5"
     },
     {
       "path": "game/branded-isolation.mjs",
-      "bytes": 6983,
-      "sha256": "447bf159240e781f1ed05b3acf5eaf867ca71a4ea3dd77b2f89983019dce2f45"
+      "bytes": 6997,
+      "sha256": "d0a33988c4e02049ab0409d21aeb1566c10ca9e007eb2ba8bafb957aca870560"
     },
     {
       "path": "game/build-config.json",
@@ -491,8 +491,8 @@
     },
     {
       "path": "game/collections/coupa-collections.mjs",
-      "bytes": 11910,
-      "sha256": "162d3291e3e095b16e7a948623a612ca772aa4f415e1c64f3a28770a07a3f5c7"
+      "bytes": 13343,
+      "sha256": "03bcf1679743966875dc4b7f4992130935b234dc5c90f8bc276156f276240cf9"
     },
     {
       "path": "game/collections/fracture/fault-fan-coupa.png",
@@ -516,8 +516,8 @@
     },
     {
       "path": "game/collections/index.html",
-      "bytes": 6958,
-      "sha256": "22004337aea4d3903a16e47b1516aa5e6dfce9ac0881af78b5db01c76b00d148"
+      "bytes": 7080,
+      "sha256": "dedd5f2df746ddd80b550142d0ad212e56f1909ee26ab2378dd64c04440c4603"
     },
     {
       "path": "game/collections/moving/breakwater-return-coupa.png",
@@ -676,8 +676,8 @@
     },
     {
       "path": "game/company.html",
-      "bytes": 6581,
-      "sha256": "3aea3378feee004eba0b59fd25f59c5219bc0a6cabbb3fc1b62db76f7264cbe7"
+      "bytes": 6597,
+      "sha256": "f739abb16c7bd441a272345e71690b251e95c49b8ddca1addd946deec8695f22"
     },
     {
       "path": "game/content-design/actor-marker.mjs",
@@ -1746,8 +1746,8 @@
     },
     {
       "path": "game/couch/index.html",
-      "bytes": 43793,
-      "sha256": "c5874f00225390278d4d185fd1a5732989a6a3a295aeb5428bb50a3cbaa91a54"
+      "bytes": 43862,
+      "sha256": "a73556225b45e9b44043bcbfe9576054325c95a546a728baf3efcbf3f543658b"
     },
     {
       "path": "game/couch/keyboard-bindings.mjs",
@@ -1781,8 +1781,8 @@
     },
     {
       "path": "game/couch/relay-rescue.html",
-      "bytes": 51799,
-      "sha256": "2f44e93fdaa5fe387b16668226a9831f001a8bd0bb2e060e88d14fd1110f5f97"
+      "bytes": 51866,
+      "sha256": "9042b9756c40e438eaaa4393226832ed61550c4c53f4a288e84a1d13e557308e"
     },
     {
       "path": "game/couch/relay-rescue.mjs",
@@ -2496,8 +2496,8 @@
     },
     {
       "path": "game/i18n/bootstrap.mjs",
-      "bytes": 15549,
-      "sha256": "d302019dc8375335f362173f1d74f5e221ae43c21a85e4408eae15e65afc5688"
+      "bytes": 15694,
+      "sha256": "a8c405b93d731d75707b4c12c34546d6988a2a39f9717319520c23bdd4b2a4f7"
     },
     {
       "path": "game/i18n/catalogs.mjs",
@@ -2541,8 +2541,8 @@
     },
     {
       "path": "game/index.html",
-      "bytes": 126306,
-      "sha256": "932c48b53451655bdb8af014fc5e3c571ae9087cd859d243421a10c1beba4de4"
+      "bytes": 126336,
+      "sha256": "1647894eec44e7c82493760af9fbae0bcb78326a27a97a059bc9b59d0358c49a"
     },
     {
       "path": "game/input-presentation.mjs",
@@ -3581,28 +3581,28 @@
     },
     {
       "path": "game/snake/coupa-art.mjs",
-      "bytes": 2436,
-      "sha256": "657b3943ea373c73d8dd1131c95dc2dd88e40eacaf78e14b3ffa05995c1ebf93"
+      "bytes": 3012,
+      "sha256": "a841d595e92e1e5c908889e97257a01aa51f405970430da882b272542224b7c2"
     },
     {
       "path": "game/snake/coupa-snake.css",
-      "bytes": 3169,
-      "sha256": "63a05ea1cb8d826e6fc86c1e8de921477737dbc642962d52271e1b1439ad72f8"
+      "bytes": 3202,
+      "sha256": "5f0c87252dd117a1bae7651513738f8c048ee23ed3a2a434c81e129a56c8e54b"
     },
     {
       "path": "game/snake/coupa-snake.mjs",
-      "bytes": 13690,
-      "sha256": "9aabfcbade251e21b91fdf4fd5d7f6f6908fd254bac58f50e45c1cc600ac6e97"
+      "bytes": 15201,
+      "sha256": "0337c055f7120abb6cfe5b6fc1ab8970a5aa06272c5f099a0929f3273cb3cf32"
     },
     {
       "path": "game/snake/index.html",
-      "bytes": 7178,
-      "sha256": "67288f9b372250698913801f17b337e0fa537e9a2d61f18379f6ef55c6086678"
+      "bytes": 7294,
+      "sha256": "d5f7acd7c5f8f371a1471afb45b61ea164ec361e714375a3aa9b774e884469b7"
     },
     {
       "path": "game/snake/play.html",
-      "bytes": 7178,
-      "sha256": "67288f9b372250698913801f17b337e0fa537e9a2d61f18379f6ef55c6086678"
+      "bytes": 7294,
+      "sha256": "d5f7acd7c5f8f371a1471afb45b61ea164ec361e714375a3aa9b774e884469b7"
     },
     {
       "path": "game/snake/route.js",
@@ -3891,8 +3891,8 @@
     },
     {
       "path": "game/ui/brand-identity.mjs",
-      "bytes": 2592,
-      "sha256": "c779e4d98ba8d6a915235f0b3f42268ef42b791ca6550d1c9ed47e011c385d8b"
+      "bytes": 2580,
+      "sha256": "213cc5ce14e57e2254975cab89f75192f285fc8e24985fcde62d038ae04279c3"
     },
     {
       "path": "game/ui/candidate-flight-pictures.mjs",
@@ -4061,8 +4061,23 @@
     },
     {
       "path": "game/ui/coupa-landing.css",
-      "bytes": 7302,
-      "sha256": "4551a5952fc7804ed4c6d79a4a8e93773cc62cca31e20d0d18619719aad2d3ba"
+      "bytes": 11830,
+      "sha256": "799c4c5bd65a0fd218432c7c3fc4a77194a43116c498933052036e211caa1a6f"
+    },
+    {
+      "path": "game/ui/coupa-mode-choice.css",
+      "bytes": 1034,
+      "sha256": "318b582562c28f2bd9ee5c820bad14a08c75ee2876b6f9f504bdd54400428daf"
+    },
+    {
+      "path": "game/ui/coupa-play-shell.css",
+      "bytes": 7441,
+      "sha256": "8e30077ce35fe4815c42b3f852e34bae1a5a42e46e40d5d37908879ecea26562"
+    },
+    {
+      "path": "game/ui/coupa-play-shell.mjs",
+      "bytes": 6169,
+      "sha256": "90b229d2b551c2c9c3c3330e7e782dc8a866126f667b20307b768c4ffdc6c6a4"
     },
     {
       "path": "game/ui/demo-audio.mjs",
@@ -4231,8 +4246,8 @@
     },
     {
       "path": "game/ui/edition-solo.mjs",
-      "bytes": 18842,
-      "sha256": "d2b11db2823528d860678d03f14ded273cb923216f2e07c9b856a072ce05e373"
+      "bytes": 18885,
+      "sha256": "f14986a23b36c73283edb189d79648c1b0bef3bf8eb329f51ee03a685426d322"
     },
     {
       "path": "game/ui/edition-theme-label.mjs",
@@ -4501,8 +4516,8 @@
     },
     {
       "path": "game/ui/game-updates.mjs",
-      "bytes": 1146,
-      "sha256": "ba8186d8f47f3261c3960e76da438c2d538c6df260aa181fbad3080979d18a90"
+      "bytes": 237,
+      "sha256": "79ce0390e84796faa28224aae6e3232627008eea7fd20aff085f9cfecf294cfa"
     },
     {
       "path": "game/ui/game-wake-lock.mjs",
@@ -4546,8 +4561,8 @@
     },
     {
       "path": "game/ui/global-settings-view.mjs",
-      "bytes": 13120,
-      "sha256": "d5093589fa380e8cb1805519259e341cc71ac1bccbc08e15912666d5f7030bbf"
+      "bytes": 13076,
+      "sha256": "49bf934948824dc62948565a900e54dc66aa646e16808d1db5d112c7c3a17098"
     },
     {
       "path": "game/ui/handheld-play.css",
@@ -4806,18 +4821,28 @@
     },
     {
       "path": "game/ui/mode-choice.css",
-      "bytes": 10437,
-      "sha256": "9d87ec7246add9fb5684c709a4ddd94a063bb5254ad9c7cb8fffe2301f8e09be"
+      "bytes": 10497,
+      "sha256": "e580fc70b9080b8c2bf61f55bdd485d76f3506998cf97d2e55a2df0f9e9950d3"
     },
     {
       "path": "game/ui/mode-choice.mjs",
-      "bytes": 1359,
-      "sha256": "140c2d77a970b462341eed54eb96ed28c8183ea24782d47360f37dd2ede3c615"
+      "bytes": 2034,
+      "sha256": "e8653dff0aa9da997f30456404d3813cae0595bf57325e46853b0b1d40ab83a8"
+    },
+    {
+      "path": "game/ui/mode-play-shell.css",
+      "bytes": 12889,
+      "sha256": "54d7920bab1675d54dfb31c41473a9d9223b0fe7197a4d66452ad4c13f52940d"
     },
     {
       "path": "game/ui/mode-play-shell.mjs",
       "bytes": 28731,
       "sha256": "838dd343b749b3400f6d4f21267565a1684a595f293c8bfea244457b45c84fd7"
+    },
+    {
+      "path": "game/ui/mode-settings-view.css",
+      "bytes": 5779,
+      "sha256": "25ae7f3a9760717b942ee854a469868ba1dbf84ff3fca4da1d4274a23dfcb6a9"
     },
     {
       "path": "game/ui/mode-settings-view.mjs",
@@ -4866,8 +4891,8 @@
     },
     {
       "path": "game/ui/native-menus.mjs",
-      "bytes": 26549,
-      "sha256": "dbd437a70bb03800f5c3260600ab4316817ecfef9a78a35af9d8e3649f5bd26c"
+      "bytes": 26503,
+      "sha256": "ba1862573e58106b4d8e3db12049bd0d2423cbb11ab4ae3e1565bc8e044a3b61"
     },
     {
       "path": "game/ui/offline-copy.mjs",
@@ -4948,6 +4973,11 @@
       "path": "game/ui/pixel-theme.css",
       "bytes": 26504,
       "sha256": "69409a0b484f7778f05a72dbc539cdbe0efcdbd5c0ac33c7a1c095df998d7f3e"
+    },
+    {
+      "path": "game/ui/play-input.mjs",
+      "bytes": 470,
+      "sha256": "0590e0ea4890c86e1eff7c80791f79fb4248063cceb2514ad20da75f7f61b907"
     },
     {
       "path": "game/ui/player-body-layout.mjs",

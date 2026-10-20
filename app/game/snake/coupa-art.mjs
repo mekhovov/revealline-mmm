@@ -1,17 +1,30 @@
 export const COUPA_PALETTE = Object.freeze({field:'#071c47',alternate:'#102956',grid:'#4bb9df',text:'#fff',muted:'#91b9db',accent:'#ffdf70',safe:'#56d7ed',danger:'#ffad63'});
 const ANGLES={up:0,right:Math.PI/2,down:Math.PI,left:-Math.PI/2};
-export function drawCoupaHead(ctx,snake,ink,{timeMs=0,reduced=false}={}) {
+let flower=null,preparation=null;
+/** Use the retained original brand asset, rather than approximating its petals. */
+export function prepareCoupaHeadArt({ImageClass=globalThis.Image}={}){
+  if(preparation)return preparation;
+  if(!ImageClass)return Promise.resolve(null);
+  preparation=new Promise(resolve=>{
+    const image=new ImageClass();
+    image.onload=()=>{flower=image;resolve(image)};
+    image.onerror=()=>resolve(null);
+    image.src=new URL('../editions/assets/coupa/flower-blue.png',import.meta.url).href;
+  });
+  return preparation;
+}
+export function drawCoupaHead(ctx,snake,ink,{timeMs=0,reduced=false}={}){
   const head=snake.body[0];
   ctx.save();ctx.translate((head.x+.5)*28,(head.y+.5)*28);
-  ctx.strokeStyle=ink.edge;ctx.lineWidth=1;ctx.strokeRect(-13,-13,26,26);
-  ctx.rotate(reduced?0:timeMs/1600);
-  for(let i=0;i<12;i++) {
-    ctx.rotate(Math.PI/6);ctx.fillStyle=snake.id?'#e3b5ff':'#64d8f4';
-    ctx.beginPath();ctx.moveTo(-2,-3);ctx.lineTo(-3,-12);ctx.lineTo(3,-8);ctx.lineTo(2,-3);ctx.closePath();ctx.fill();
-  }
-  ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(0,0,3,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=snake.id?'#eee5ff':'#edfbff';
+  ctx.strokeStyle=snake.id?'#d8b8ff':ink.edge;ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.arc(0,0,12.5,0,Math.PI*2);ctx.fill();ctx.stroke();
+  ctx.rotate(reduced?0:timeMs/8000);
+  if(flower)ctx.drawImage(flower,-11,-11,22,22);
+  else{ctx.fillStyle='#1565c0';ctx.font='bold 18px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('C',0,1)}
   ctx.restore();ctx.save();ctx.translate((head.x+.5)*28,(head.y+.5)*28);ctx.rotate(ANGLES[snake.direction]??0);
-  ctx.fillStyle='#fff';ctx.beginPath();ctx.moveTo(0,-13);ctx.lineTo(-3,-10);ctx.lineTo(3,-10);ctx.closePath();ctx.fill();ctx.restore();
+  ctx.strokeStyle=snake.id?'#d8b8ff':'#64d8f4';ctx.lineWidth=2;
+  ctx.beginPath();ctx.moveTo(-4,-15);ctx.lineTo(0,-18);ctx.lineTo(4,-15);ctx.stroke();ctx.restore();
 }
 const SYMBOLS={still:'•',runner:'↗',sprinter:'»',jumper:'◇',wanderer:'~',guard:'⊓',jammer:'≋',lane:'↔',relay:'⊙',perimeter:'□',contour:'⌁',rover:'↗',ricochet:'⌃',eroder:'−'};
 export function drawConnectionToken(ctx,x,y,size,options,state) {

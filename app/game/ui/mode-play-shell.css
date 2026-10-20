@@ -1,0 +1,477 @@
+@import url('./mode-choice.css');
+@import url('./pause-menu.css');
+@import url('./mode-settings-view.css');
+@import url('./global-settings-view.css');
+
+@layer legacy {
+  /* Shared Field Kit structure; the accepted theme continues to own all colours. */
+  .mode-play-shell {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    min-height: 0;
+    margin: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+      env(safe-area-inset-left);
+    color: var(--fk-text, var(--ink, #f4f2e5));
+    background: var(--fk-bg, var(--paper, #0b1018));
+    font-family: inherit;
+  }
+  .mode-play-shell *,
+  .mode-play-shell *::before,
+  .mode-play-shell *::after {
+    box-sizing: border-box;
+  }
+  .mode-play-shell [hidden] {
+    display: none !important;
+  }
+  .mode-play-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 12px;
+    border-bottom: 1px solid var(--fk-line, var(--line, #4b626e));
+    min-height: 52px;
+  }
+  .mode-play-name {
+    flex: 1;
+    min-width: 0;
+    font-size: calc(0.85rem * var(--overflight-text-scale, 1));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--fk-text-muted, var(--muted, #aebdc4));
+  }
+  .mode-play-stage {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .mode-play-stage > * {
+    min-width: 0;
+    min-height: 0;
+  }
+  .mode-play-shell .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.6em 1em;
+    border: 2px solid var(--fk-line, var(--line, #4b626e));
+    border-radius: 0;
+    background: var(--fk-panel-raised, var(--panel, #182431));
+    color: var(--fk-text, var(--ink, #f4f2e5));
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .mode-play-shell .button.primary {
+    background: var(--fk-accent, var(--accent, #83dcef));
+    color: var(--fk-on-accent, var(--paper, #0b1018));
+    border-color: var(--fk-accent, var(--accent, #83dcef));
+  }
+  .mode-play-shell :focus-visible {
+    outline: 3px solid var(--fk-focus, var(--fk-accent, #83dcef));
+    outline-offset: 3px;
+  }
+  .mode-play-shell button:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+  .mode-play-dialog {
+    color: var(--fk-text, var(--ink, #f4f2e5));
+    background: var(--fk-bg, var(--paper, #0b1018));
+    border: 2px solid var(--fk-line, var(--line, #4b626e));
+    border-radius: 0;
+    width: min(900px, calc(100vw - 24px));
+    max-width: none;
+    max-height: calc(100dvh - 24px);
+    padding: 0;
+    overflow: hidden;
+    margin: auto;
+  }
+  .mode-play-dialog[open] {
+    display: flex;
+    flex-direction: column;
+  }
+  .mode-play-dialog::backdrop {
+    background: #030710e8;
+  }
+  .mode-play-dialog-head,
+  .mode-play-content,
+  .mode-play-actions {
+    padding: 16px clamp(16px, 3vw, 32px);
+  }
+  .mode-play-dialog-head {
+    flex: none;
+    border-bottom: 1px solid var(--fk-line, var(--line, #4b626e));
+  }
+  .mode-play-dialog h1 {
+    font: inherit;
+    font-size: clamp(
+      calc(1.25rem * var(--overflight-text-scale, 1)),
+      calc(3vw * var(--overflight-text-scale, 1)),
+      calc(2rem * var(--overflight-text-scale, 1))
+    );
+    font-weight: 800;
+    margin: 0;
+  }
+  .mode-play-content {
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+  .mode-play-content > * {
+    max-width: 100%;
+  }
+  .mode-play-content > .button {
+    margin-block: 4px;
+  }
+  .mode-play-actions {
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid var(--fk-line, var(--line, #4b626e));
+  }
+  .mode-play-home {
+    width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border: 0;
+    padding: max(clamp(20px, 5vw, 72px), env(safe-area-inset-top))
+      max(clamp(20px, 5vw, 72px), env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom))
+      max(clamp(20px, 5vw, 72px), env(safe-area-inset-left));
+    overflow: auto;
+    background-image: linear-gradient(
+      90deg,
+      transparent 73%,
+      color-mix(in srgb, var(--fk-accent, var(--accent, #83dcef)) 8%, transparent) 73.2%,
+      transparent 73.5%
+    );
+  }
+  .mode-play-home .mode-play-dialog-head,
+  .mode-play-home .mode-play-content,
+  .mode-play-home .mode-play-actions {
+    width: min(100%, 510px);
+    border: 0;
+    margin-inline: 0;
+  }
+  .mode-play-home .mode-play-content {
+    overflow: visible;
+    flex: 1 0 auto;
+    padding-top: 0;
+  }
+  .mode-play-home .mode-play-wordmark {
+    font-size: clamp(
+      calc(2rem * var(--overflight-text-scale, 1)),
+      calc(7vw * var(--overflight-text-scale, 1)),
+      calc(4rem * var(--overflight-text-scale, 1))
+    );
+  }
+  .mode-play-wordmark img {
+    display: block;
+    width: min(100%, 430px);
+    max-height: 115px;
+    object-fit: contain;
+    object-position: left;
+    image-rendering: pixelated;
+  }
+  .mode-play-edition,
+  .mode-play-mission,
+  .mode-play-version {
+    color: var(--fk-text-muted, var(--muted, #aebdc4));
+    font-size: calc(0.9rem * var(--overflight-text-scale, 1));
+    margin: 8px 0 16px;
+  }
+  .mode-play-edition {
+    font-family: var(--fk-font-mono, monospace);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .mode-play-modes {
+    margin-block: 16px 24px;
+  }
+  .mode-play-main-menu {
+    display: grid;
+    gap: 8px;
+    max-width: none;
+  }
+  .mode-play-main-menu .button {
+    min-height: 52px;
+    justify-content: flex-start;
+    text-align: start;
+  }
+  @media (max-width: 480px) {
+    .mode-play-dialog {
+      width: calc(100vw - 12px);
+      max-height: calc(100dvh - 12px);
+    }
+    .mode-play-home {
+      width: 100%;
+      max-height: 100dvh;
+    }
+    .mode-play-dialog-head,
+    .mode-play-content,
+    .mode-play-actions {
+      padding: 12px;
+    }
+    .mode-play-bar {
+      gap: 6px;
+      padding-inline: 6px;
+      justify-content: space-between;
+    }
+    .mode-play-name {
+      display: none;
+    }
+    .mode-play-home .mode-play-dialog-head,
+    .mode-play-home .mode-play-content,
+    .mode-play-home .mode-play-actions {
+      margin-inline: 0;
+      padding-inline: 0;
+    }
+    .mode-play-actions > .button {
+      flex: 1;
+    }
+  }
+  .mode-play-shell [data-menu-icon]::before {
+    content: '';
+    flex: 0 0 1.1em;
+    width: 1.1em;
+    height: 1.1em;
+    background: currentColor;
+    mask: var(--native-menu-icon) center / contain no-repeat;
+  }
+  .mode-play-shell .mode-play-brand-button::before {
+    display: none;
+  }
+  .mode-play-brand-button img {
+    width: 118px;
+    height: 34px;
+    object-fit: contain;
+    image-rendering: pixelated;
+  }
+
+  /* Shared title rhythm: game selection, play actions, then quiet device controls. */
+  .mode-play-home[open] {
+    justify-content: safe center;
+    isolation: isolate;
+  }
+  .mode-play-home .mode-play-content {
+    flex: 0 0 auto;
+    padding: 0;
+  }
+  .mode-play-home .mode-play-dialog-head {
+    padding: 0 0 20px;
+  }
+  .mode-play-home .mode-play-wordmark img {
+    width: min(100%, 430px);
+    margin-inline: 0;
+    object-position: left;
+  }
+  .mode-play-modes {
+    margin: 0 0 20px;
+  }
+  .mode-play-mission {
+    margin: 0 0 12px;
+    font-size: calc(0.8rem * var(--overflight-text-scale, 1));
+  }
+  .mode-play-utilities {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--fk-line, var(--line, #4b626e));
+  }
+  .mode-play-utilities > .button {
+    min-width: 0;
+    min-height: 44px;
+    padding: 8px;
+    font-size: clamp(
+      calc(12px * var(--overflight-text-scale, 1)),
+      calc(3.3vw * var(--overflight-text-scale, 1)),
+      calc(16px * var(--overflight-text-scale, 1))
+    );
+    line-height: 1.2;
+  }
+  .mode-play-utilities > [hidden] + .button {
+    grid-column: 1 / -1;
+  }
+  .mode-play-home .mode-play-actions:empty {
+    display: none;
+  }
+  .mode-play-dialog[data-mode-surface='pause'] {
+    width: min(740px, calc(100vw - 24px));
+  }
+  .mode-play-dialog[data-mode-surface='pause'] .mode-play-dialog-head {
+    padding-block: 12px;
+    border: 0;
+  }
+  .mode-play-dialog[data-mode-surface='pause'] h1 {
+    font-size: calc(1rem * var(--overflight-text-scale, 1));
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* Scene framing matches the main game's title while optional packages keep a
+   resource-free style projection. The host provides its accepted artwork URL. */
+.mode-play-artwork {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--fk-bg, #080e18);
+}
+.mode-play-artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.mode-play-artwork::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #050a14ed 0%, #050a14bf 28%, #050a1438 63%, #050a1414),
+    linear-gradient(0deg, #050a14a6, transparent 30%);
+}
+.mode-play-home > :not(.mode-play-artwork, .menu-scene) {
+  position: relative;
+  z-index: 1;
+}
+
+/* A title is a full-page surface, never a framed settings card. */
+html body .mode-play-home {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: max(clamp(20px, 5vw, 72px), env(safe-area-inset-top))
+    max(clamp(20px, 5vw, 72px), env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom))
+    max(clamp(20px, 5vw, 72px), env(safe-area-inset-left));
+  border: 0;
+  border-image: none;
+  box-shadow: none;
+  background: var(--fk-bg, #080e18);
+}
+.mode-play-home > .mode-play-dialog-head,
+.mode-play-home > .mode-play-content,
+.mode-play-home > .mode-play-actions {
+  border: 0;
+  border-image: none;
+  box-shadow: none;
+  background: transparent;
+}
+.mode-play-shell .mode-play-utilities .button {
+  padding-inline: 6px;
+  font-size: clamp(
+    calc(12px * var(--overflight-text-scale, 1)),
+    calc(3.3vw * var(--overflight-text-scale, 1)),
+    calc(16px * var(--overflight-text-scale, 1))
+  );
+  overflow-wrap: normal;
+  word-break: normal;
+  --ui-action-fill: var(--iw-button-default-background, var(--fk-panel-raised, #182431));
+  --ui-action-ink: var(--iw-button-default-foreground, var(--fk-text, #f4f2e5));
+  color: var(--ui-action-ink);
+  background: var(--ui-control-finish, none), var(--ui-action-fill);
+  border-image: var(--ui-raised-frame, none);
+}
+.mode-play-dialog:is([data-mode-surface='home'], [data-mode-surface='pause']) > .sim-menu-hint {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.sim-settings-destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  margin-block: 16px;
+}
+
+.mode-play-shell .mode-play-brand-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  line-height: 1;
+  padding: 4px 8px;
+}
+.mode-play-shell .mode-play-brand-button::before,
+.mode-play-shell .mode-play-brand-button::after {
+  display: none;
+}
+
+.mode-play-dialog[data-mode-surface='pause'] h1 {
+  font: 600 calc(18px * var(--overflight-text-scale, 1)) / 1.3 var(--fk-font-ui, sans-serif);
+  text-transform: none;
+  letter-spacing: normal;
+}
+.sim-menu-boot {
+  display: none;
+}
+html[data-mode-shell-pending='true'] body > :not(.sim-menu-boot) {
+  display: none !important;
+}
+html[data-mode-shell-pending='true'] .sim-menu-boot {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 16px;
+  min-height: 100dvh;
+  padding: 24px;
+  text-align: center;
+}
+.sim-menu-boot a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* The optional SIM artwork follows the same shared menu-motion intent. */
+@keyframes mode-play-artwork-drift {
+  from {
+    transform: scale(1.025) translateX(-0.4%);
+  }
+  to {
+    transform: scale(1.05) translateX(0.4%);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-menu-animation='on']:not([data-theme-motion='reduced'])
+    .mode-play-home[open]
+    .mode-play-artwork
+    img {
+    animation: mode-play-artwork-drift 24s ease-in-out infinite alternate;
+  }
+}
+
+/* The optional SIM uses the same interface backdrop policy as menu-scenes.mjs. */
+[data-theme-styled='true']:not([data-interface-theme='industrial-workshop']) .mode-play-artwork img,
+[data-theme-styled='true'][data-theme-contrast='high'] .mode-play-artwork img {
+  display: none;
+}
+[data-theme-styled='true']:not([data-interface-theme='industrial-workshop'])
+  .mode-play-artwork::after,
+[data-theme-styled='true'][data-theme-contrast='high'] .mode-play-artwork::after {
+  background: transparent;
+}

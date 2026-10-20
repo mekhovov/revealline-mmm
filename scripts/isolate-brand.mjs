@@ -10,6 +10,7 @@ const json = (value) => encoder(JSON.stringify(value) + "\n");
 const hiddenIds = [
   "first-flight-home-enter",
   ...["", "race-", "coop-"].flatMap(prefix => ["enemy-remains", "enemy-remains-hint", "enemy-remains-status", "enemy-remains-retry", "journey-reactions-enabled", "journey-reactions-help", "journey-reactions-status", "journey-reactions-retry", "menu-palette", "menu-ornaments"].map(id => prefix + id)),
+  "boot-local",
   "shell-home-fpv",
   "enemy-remains", "enemy-remains-hint", "enemy-remains-status", "enemy-remains-retry",
   "menu-actor-style", "menu-actor-note",
@@ -304,6 +305,10 @@ function projectHTML(source, name, config, brandIconPath) {
             )
           ),
       );
+    if (node.tagName === 'title' || node.attrs?.some(entry => entry.name === 'id' && entry.value === 'boot-title')) {
+      const family = name.includes('/snake/') ? 'Snake' : name.includes('/collections/') ? 'Collections' : name.includes('/relay-rescue') ? 'Team' : name.includes('/couch/') ? 'Versus' : 'Capture';
+      node.childNodes = [{nodeName:'#text', value:family + ' · Coupa Village', parentNode:node}];
+    }
     if (node.attrs) {
       const attr = (key) =>
         node.attrs.find((entry) => entry.name === key)?.value;
@@ -319,6 +324,11 @@ function projectHTML(source, name, config, brandIconPath) {
         const label = attr('data-i18n') === 'interface:sunflower' ? 'Player 1' : 'Player 2';
         node.attrs = node.attrs.filter(entry => !entry.name.startsWith('data-i18n'));
         node.childNodes = [{nodeName:'#text',value:label,parentNode:node}];
+      }
+      if (attr('id') === 'boot-online') {
+        add('href', './index.html?edition=' + config.editionId);
+        node.attrs = node.attrs.filter(entry => !entry.name.startsWith('data-i18n') && entry.name !== 'hidden');
+        node.childNodes = [{nodeName:'#text', value:'Back to the game', parentNode:node}];
       }
       if (attr('name') === 'revealline-access-title') add('content', 'Coupa Village');
       if (attr('aria-label') === 'FPV / LINE') add('aria-label', 'Coupa Village');
@@ -524,6 +534,21 @@ function projectLanding(files) {
       "Coupa landing logo",
     ),
   );
+  edit(files, "game/ui/edition-solo.mjs", source => once(source,
+    "(home.querySelector('.home-content') ?? home).prepend(logo);",
+    "(home.querySelector('.landing-identity') ?? home.querySelector('.home-content') ?? home).prepend(logo);",
+    "Coupa logo follows shared landing identity"));
+  edit(files, "game/ui/mode-choice.css", source => source.replaceAll(':is(a, button)', ':is(a, button, span)'));
+  for (const name of ["game/couch/index.html", "game/couch/relay-rescue.html"])
+    edit(files, name, source => once(source, "</head>",
+      '<link rel="stylesheet" href="../ui/coupa-landing.css"></head>', "shared Coupa landing styles"));
+  // The dedicated app fixes language and appearance, leaving Solo's Display
+  // category empty. Give it the same actual fullscreen action as both players.
+  edit(files, 'game/ui/native-menus.mjs', source => once(once(source,
+    "const settingsFullscreen = mode === 'solo' ? null : make('button');",
+    "const settingsFullscreen = make('button');", 'Solo display action'),
+    "if (mode !== 'solo') panels.display.append(settingsFullscreen);",
+    "panels.display.append(settingsFullscreen);", 'Display action placement'));
   // The new CSS capture trails own ambient motion. Keep the upstream motion
   // switch, reduced-motion, visibility and dialog pause lifecycle, without
   // starting photograph distortion or analog interference renderers.
@@ -559,11 +584,13 @@ function projectEnglishMultiplayer(files, config, catalog) {
   const brandedCopy = {
   "errors": {
     "loadingFlightSystems": "Loading your game…",
-    "flightOnHold": "Game paused.",
+    "flightOnHold": "Unable to open the game.",
     "stillPreparingYourArcadeYouCanWaitReloadOrUse": "Still preparing your game. You can wait or reload. Your saved progress is unchanged."
   },
   "interface": {
     "loadingMissionsAndFlightEquipment": "Loading your missions…",
+    "oneSharedArenaSunflowerIsMarked1AndSkylineIs": "One shared arena. Player 1 is marked 1 and Player 2 is marked 2.",
+    "couchCoOp": "TEAM",
     "closingACutStopsYourCraftChooseAFreshDirection": "Closing a cut stops your marker; choose a fresh direction.",
     "closingACutStopsYourCraftTapAFreshDirection": "Closing a cut stops your marker; tap a fresh direction to move again.",
     "tapADirectionToFlyAgain": "Tap a direction to move again.",
@@ -1054,6 +1081,8 @@ export function mountEditionNavigation({provider, document: doc}) {
       "brand fallback",
     ),
   );
+  edit(files, 'game/ui/brand-identity.mjs', source => once(source,
+    'return `${base} / LINE`;', 'return base;', 'dedicated display name'));
   const brandIcon = catalog.assets.find(
     (asset) => asset.id === catalog.brands[0].iconAssetId,
   );

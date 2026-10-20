@@ -13,7 +13,7 @@ export function editionDisplayName(name, editionId) {
       : String(name || GAME_BRAND_NAME)
           .replace(/\s*\/\s*LINE\s*$/i, '')
           .trim();
-  return `${base} / LINE`;
+  return base;
 }
 
 /** Keep a real accessible title and a text fallback if artwork cannot load. */

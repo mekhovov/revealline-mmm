@@ -33,7 +33,7 @@ test('branded English messages override inherited copy and preserve interpolatio
   assert.ok(writes.every(([key]) => key.startsWith('revealline-mmm.')));
   assert.equal(language.t('errors:loadingFlightSystems'), 'Loading your game…');
   assert.equal(language.t('interface:loadingMissionsAndFlightEquipment'), 'Loading your missions…');
-  assert.equal(language.t('errors:flightOnHold'), 'Game paused.');
+  assert.equal(language.t('errors:flightOnHold'), 'Unable to open the game.');
   assert.equal(
     language.t('gameplay:lineSecuredRevealedTapADirectionToFlyAgain', { value1: 75 }),
     'Line secured. 75% revealed. Tap a direction to move again.',

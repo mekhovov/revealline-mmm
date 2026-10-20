@@ -33,7 +33,7 @@ export function projectBrandSource(name, bytes) {
     source = source.replace(boundary, '  if (false)\n    for (const [key, category, title, route, icon]');
   }
   if (name === 'game/ui/global-settings-view.mjs') {
-    source = source.replace(/    \{ key: '(?:language|appearance|offlineTools|storageRetention|creatorTools|controllerTools|about)'[^\n]+\n/g, '');
+    source = source.replace(/    \{ key: '(?:language|appearance|offlineTools|storageRetention|creatorTools|controllerTools|about|updates)'[^\n]+\n/g, '');
   }
   if (name === 'game/ui/mode-settings-view.mjs') {
     source = source.replace("display: 'Display & Language'", "display: 'Display'");

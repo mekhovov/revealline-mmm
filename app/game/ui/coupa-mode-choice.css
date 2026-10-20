@@ -1,0 +1,28 @@
+html[data-branded-app] body.field-kit .game-mode-choice > :is(a, button, span) {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  padding: 10px 6px;
+  border: 1px solid #83c7f050;
+  border-radius: 10px;
+  color: #e2efff;
+  background: #12285bd9;
+  font: 400 13px/1.25 var(--brand-font, sans-serif);
+  text-decoration: none;
+  gap: 7px;
+}
+html[data-branded-app] body.field-kit .game-mode-choice > [aria-current='page'] {
+  color: #fff;
+  border-color: #6ddff6;
+  background: #1d4776;
+  box-shadow: inset 0 -3px #6ddff6;
+}
+
+@media (max-width: 540px) {
+  html[data-branded-app] body.field-kit .game-mode-choice { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  html[data-branded-app] body.field-kit .game-mode-choice > :is(a, button, span) { grid-column: span 2; min-height: 52px; font-size: 13px; }
+  html[data-branded-app] body.field-kit .game-mode-choice > :is([data-mode='snake'], [data-mode='collections']) { grid-column: span 3; }
+}
