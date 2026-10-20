@@ -27,6 +27,7 @@ test('branded English messages override inherited copy and preserve interpolatio
   }
   const language = context.RevealLineI18n;
   assert.equal(language.getLocale(), 'en');
+  assert.ok(language.t('interface:couchCoOp').includes('[[slot0]]'), 'The Team header must retain its live mission-label slot');
   assert.throws(() => language.setLocale('uk'), /Unsupported locale/);
   language.setLocale('en');
   assert.equal(language.getLocale(), 'en');

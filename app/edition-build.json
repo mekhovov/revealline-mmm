@@ -2496,8 +2496,8 @@
     },
     {
       "path": "game/i18n/bootstrap.mjs",
-      "bytes": 15694,
-      "sha256": "a8c405b93d731d75707b4c12c34546d6988a2a39f9717319520c23bdd4b2a4f7"
+      "bytes": 15675,
+      "sha256": "f4eb21ab23ca94838821ed0d48d0b5c51d86f8a9f4e801dc1dd85cc3c43cf096"
     },
     {
       "path": "game/i18n/catalogs.mjs",

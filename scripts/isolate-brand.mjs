@@ -590,7 +590,6 @@ function projectEnglishMultiplayer(files, config, catalog) {
   "interface": {
     "loadingMissionsAndFlightEquipment": "Loading your missions…",
     "oneSharedArenaSunflowerIsMarked1AndSkylineIs": "One shared arena. Player 1 is marked 1 and Player 2 is marked 2.",
-    "couchCoOp": "TEAM",
     "closingACutStopsYourCraftChooseAFreshDirection": "Closing a cut stops your marker; choose a fresh direction.",
     "closingACutStopsYourCraftTapAFreshDirection": "Closing a cut stops your marker; tap a fresh direction to move again.",
     "tapADirectionToFlyAgain": "Tap a direction to move again.",

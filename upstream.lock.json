@@ -7242,8 +7242,8 @@
     },
     {
       "path": "scripts/isolate-brand.mjs",
-      "bytes": 57868,
-      "sha256": "2a69b82b1b470b6e6727d8839de5b91886b7e716b575334e9a13ae3d08466e03"
+      "bytes": 57843,
+      "sha256": "d028075d0124c5a1f1b5e1a3b3692e21e1bd11351d191d714a73824fff0599f6"
     },
     {
       "path": "scripts/presentation-policy.mjs",
@@ -7275,7 +7275,7 @@
     {
       "path": "edition-build.json",
       "bytes": 182032,
-      "sha256": "783fa635666282f8a3bd89ccc4f79c114d146739830cbea5dc9b4e67166c90f1"
+      "sha256": "029f19f0b3e234dba5266a4ba990825980851fab1f8afce3b4a6a8e1400b392f"
     },
     {
       "path": "edition-catalog.json",
@@ -9459,8 +9459,8 @@
     },
     {
       "path": "game/i18n/bootstrap.mjs",
-      "bytes": 15694,
-      "sha256": "a8c405b93d731d75707b4c12c34546d6988a2a39f9717319520c23bdd4b2a4f7"
+      "bytes": 15675,
+      "sha256": "f4eb21ab23ca94838821ed0d48d0b5c51d86f8a9f4e801dc1dd85cc3c43cf096"
     },
     {
       "path": "game/i18n/catalogs.mjs",
