@@ -59,3 +59,5 @@ A new upstream UI or content format can require a deliberate projection update. 
 Pushes to `main` run tests and verification, build the app, deploy to GitHub Pages, and verify the published commit in `deployment.json`. Pull requests run the build without deploying. `upstream.lock.json` identifies the game source separately from the dedicated repository's deployment commit.
 
 The source content and artwork retain their upstream attribution and provenance. This community application does not perform live Coupa operations.
+
+Nineteen original production checkpoint oracles are preserved in `content/archive/production-oracle-originals/`, with exact byte and Git identities in `migration/production-oracle-originals-receipt.json`. They document the original historical artifacts before the shared engine's catalog migration and stay outside the playable build.

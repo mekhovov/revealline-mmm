@@ -1,0 +1,50 @@
+{
+  "source": "280321ca77eef81d1bce9de8c23247548ae9dd03",
+  "tree": "de24f6b19f104ae450e0deba67fa4d26d46211c7",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "gitBlob": "ee60d86a7061f9b29b41a28f135d3dd529dab729",
+    "bytes": 8472841,
+    "sha256": "a6343c77e63b3ff2ad1d401f8193795f484d5eb046797049452191051051d14b"
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 102,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 102
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2646,
+      "sha256": "c66871ed92ee90f75979fd67274517939161623c31911c55b5b72614c13d3700"
+    },
+    "themes": {
+      "count": 103,
+      "sha256": "67f57b021a66042299fecf1d573c011e448a6cbb53b895f87c9f231eb145e5a1"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "bytes": 4009342,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  },
+  "scope": "Exact pre-radio-continuation canonical production102. Original binary imported, all original payloads validated and exported byte-identically. The separate divergent discovery103 archive stays immutable; numeric revisions are not interchangeable."
+}

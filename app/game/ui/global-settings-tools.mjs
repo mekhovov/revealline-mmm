@@ -90,6 +90,7 @@ export function mountGlobalSettingsTools({
   getOwner = () => null,
   isOwnerCurrent = () => true,
   onOpen = () => {},
+  onPresentationChange = () => {},
   currentVersion = doc.documentElement.dataset.buildVersion,
   resolveSourceVersion,
   packaged = !!currentVersion && !currentVersion.includes('__'),
@@ -177,6 +178,7 @@ export function mountGlobalSettingsTools({
       getOwner,
       isOwnerCurrent,
       onOpen,
+      onPresentationChange,
       ...(loadRecovery ? { load: loadRecovery } : {}),
     });
   }
@@ -307,8 +309,10 @@ export function mountGlobalSettingsTools({
     localizedAttribute(toolFrame, 'title', () => t(title));
     toolFrame.src = url.href;
     doc.getElementById(`${prefix}-tool-open-page`).href = url.href;
+    const opening = !toolDialog.open;
     toolDialog.showModal();
     doc.getElementById(`${prefix}-tool-back`).focus({ preventScroll: true });
+    if (opening) onPresentationChange();
   };
   if (false)
     for (const [key, category, title, route, icon] of [

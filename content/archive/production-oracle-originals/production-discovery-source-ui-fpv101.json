@@ -1,0 +1,52 @@
+{
+  "at": "2026-09-29T02:21:21.872Z",
+  "source": "d541946f4e9d49e97cfcb2b0ce4054f3dac7d2cf",
+  "tree": "04034155a858fd6ecf786163fc1413b10c013576",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "gitBlob": "0489a211bf926eedbfd35dd83f914fbaf178c9a9",
+    "bytes": 8324280,
+    "sha256": "faf48769df378b53888fc7598e86f70477b3fe2d0ee10fb7d14aab1c171f5731"
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 101,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 101
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2638,
+      "sha256": "325afbc833068eed2583c201f1d0d061d9c106609d9419446f9c5a5800dff2dd"
+    },
+    "themes": {
+      "count": 102,
+      "sha256": "7a7f140f9a7962dbd8058f40d9cb6dd353d5e4b60eefa7d4f17278561a8214f4"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "bytes": 4009342,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  },
+  "audioRecords": 432,
+  "scope": "Exact production101 predecessor, independently read from immutable d541946f4e9d49e97cfcb2b0ce4054f3dac7d2cf Git bytes before the scoped WebP UI continuation. Includes the preserved source-stage UI23 checkpoint and reviewed audio53 records. This oracle records historical bytes, not UI, listening, device or release approval."
+}

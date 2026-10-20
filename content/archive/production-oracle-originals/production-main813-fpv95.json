@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-28T08:33:13.526Z",
+  "source": "813dee5feff5d42c54ef91292f6dd434d39d311a",
+  "tree": "2903c17451c64325bcbf20cc00f72e30bfaa768f",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "gitBlob": "6a32b9a852cb53b30adc9c2232478e5344611a3d",
+    "bytes": 7916418,
+    "sha256": "8e1c09373758982f6cc0092f03998915b60046c8dfb6ce9f665dbe23863dfe24"
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 95,
+    "selection": {
+      "base": { "id": "base", "revision": 1 },
+      "collection": null,
+      "theme": { "id": "fpv", "revision": 95 }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2566,
+      "sha256": "3a95d54d578ba16fb6f7cb34182164d74689e67a76e48978f51f621048b56262"
+    },
+    "themes": {
+      "count": 96,
+      "sha256": "d640c7f3f4c918af7d19a29f16928b69570cb45a5679dc7d62d9174e639e1a51"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "bytes": 4009342,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  },
+  "audioRecords": 384,
+  "scope": "Exact accepted main95 original ledger decoded locally; not candidate-derived, not generated-output download or publication approval."
+}

@@ -1,0 +1,52 @@
+{
+  "at": "2026-09-29T03:35:10.411Z",
+  "source": "336a7b58b9a614da61e701fca7626b948ba9ec11",
+  "tree": "4d696c2461e59e30360965dad98a66c3b19940f7",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "gitBlob": "f195d1046e550fe1866416632ef5f6ed5dcd71d3",
+    "bytes": 8405354,
+    "sha256": "171c41569a07bb187f1954a0e986fae4b4b57af3340958fe3a0375b33c109495"
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 102,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 102
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2662,
+      "sha256": "537663a07b01f4db1278e59b42f8c058d42913b8a05a77e47dc1a119775a37f7"
+    },
+    "themes": {
+      "count": 103,
+      "sha256": "941519edf108a830ec386a067b0aae84566b0b8602a3bf5bf3c4964699c608ec"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "bytes": 4009342,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  },
+  "audioRecords": 432,
+  "scope": "Exact production102 predecessor, independently read and re-exported byte-identically from immutable 336a7b58b9a614da61e701fca7626b948ba9ec11 Git bytes before the scoped gp4 restore continuation. All reviewed UI24, audio53, historical records and original payloads are preserved. This oracle records historical bytes, not human, listening, device or release approval."
+}

@@ -43,6 +43,7 @@ export function attachProfileRecoveryDialog({
   unavailable = () => '',
   onOpen = () => {},
   onClose = () => {},
+  onPresentationChange = () => {},
   isSettingsOpen = () => doc.getElementById('settings-dialog')?.open === true,
   getOwner = () => null,
   isOwnerCurrent = () => true,
@@ -133,6 +134,7 @@ export function attachProfileRecoveryDialog({
       message: t('interface:loadingStoredProfileRecovery'),
       isCurrent: () => operation === active && !closing,
     });
+    const opening = !dialog.open;
     dialog.showModal();
     back.focus({ preventScroll: true });
     refresh();
@@ -207,6 +209,7 @@ export function attachProfileRecoveryDialog({
         clearTimeout(timer);
       }
     })();
+    if (opening) onPresentationChange();
     return active.ready.then(() => current(active));
   }
   const cancel = () => {

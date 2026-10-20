@@ -1,0 +1,50 @@
+{
+  "format": "revealline-production-history-oracle.v1",
+  "provenance": {
+    "source": "c93019a344f6f4c6ac03940c77ea09c81122d911",
+    "tree": "f6055cbcba92d45ef1da2b5d16e7e4f1158c8d2a",
+    "tag": "v0.58.1",
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "bytes": 6829381,
+    "sha256": "c9e893cb6970596463e06b30f93f15ecc9ca52ec311c018de7ff70a8ff042cc7",
+    "scope": "Immutable published source oracle; scoped P02-A acceptance and P03 generation are separate."
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 24,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 24
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 293,
+      "sha256": "75ceaae41400f20fced4bfb885d2c9175082eb4f5cbdcea30175191b56d93c68"
+    },
+    "assets": {
+      "count": 1082,
+      "sha256": "99021d5f5de8c4b0e1b7f0b66fe74a0d8b73e222376cf31bdb7fa0f7f12d8dc5"
+    },
+    "themes": {
+      "count": 25,
+      "sha256": "40afeb56d9b35facc5c7d719dd5d540434489aad81340a5f263ac984e9b8ee6e"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 127,
+    "sha256": "8117060274f4e7525d8bc71d172ae915671e8aea610640b28084a14f59523bef"
+  }
+}

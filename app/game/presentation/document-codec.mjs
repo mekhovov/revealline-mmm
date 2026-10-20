@@ -3,7 +3,9 @@ import { boundedJSON, canonicalJSON, exactKeys, plainObject, required } from '..
 export const PRESENTATION_METADATA_FORMAT = 'revealline-presentation-metadata.v1';
 export const PRESENTATION_METADATA_LIMITS = Object.freeze({
   encodedBytes: 5 * 1024 * 1024,
-  logicalBytes: 8 * 1024 * 1024,
+  // Immutable source/review successors expand after dictionary decoding.
+  // Keep the serialized cap, record/node bounds and per-string limits unchanged.
+  logicalBytes: 12 * 1024 * 1024,
   nodes: 125000,
   legacyNodes: 100000,
   legacyEnvelopeNodes: 110000,

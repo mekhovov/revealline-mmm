@@ -1,0 +1,44 @@
+{
+  "format": "revealline-production-history-oracle.v1",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "bytes": 7045489,
+    "sha256": "ebd4db96c7e0f14921571c538879be84f4e6513737a503654d7c556a25a7ea2b",
+    "observedHead": "9fe6276fff0c470480a466669c435b3edc92a9a4",
+    "observedTree": "11f73290439a53dd22b12078afc3349808c0958c",
+    "committedAtObservation": false,
+    "scope": "Measured Journey P02 shared-music source-stage fpv33; not reviewed or published. Prefix hashes preserve the intermediate stage through later scoped review."
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 33,
+    "selection": {
+      "base": { "id": "base", "revision": 1 },
+      "collection": null,
+      "theme": { "id": "fpv", "revision": 33 }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 293,
+      "sha256": "75ceaae41400f20fced4bfb885d2c9175082eb4f5cbdcea30175191b56d93c68"
+    },
+    "assets": {
+      "count": 1177,
+      "sha256": "bdea9313954874e8876f688445a89ae8d7ed180731722805cd7d27f1bd1c7bf4"
+    },
+    "themes": {
+      "count": 34,
+      "sha256": "9b24723a86890347706d98da15d2cb8c2703b9f13685ad17b2606511a4c4899d"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 127,
+    "sha256": "8117060274f4e7525d8bc71d172ae915671e8aea610640b28084a14f59523bef"
+  }
+}
