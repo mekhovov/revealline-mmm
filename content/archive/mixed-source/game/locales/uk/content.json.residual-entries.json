@@ -13,6 +13,30 @@
     {
       "pointer": "/sharedHarbor",
       "value": "Спільна гавань"
+    },
+    {
+      "pointer": "/deliveryParcel",
+      "value": "Посилка доставки"
+    },
+    {
+      "pointer": "/auditCursor",
+      "value": "Курсор аудиту"
+    },
+    {
+      "pointer": "/expenseCart",
+      "value": "Візок витрат"
+    },
+    {
+      "pointer": "/budgetShredder",
+      "value": "Подрібнювач бюджету"
+    },
+    {
+      "pointer": "/approvalGate",
+      "value": "Брама погодження"
+    },
+    {
+      "pointer": "/policyVault",
+      "value": "Сховище правил"
     }
   ]
 }

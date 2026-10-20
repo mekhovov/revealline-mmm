@@ -13,6 +13,30 @@
     {
       "pointer": "/sharedHarbor",
       "value": "Shared Harbor"
+    },
+    {
+      "pointer": "/deliveryParcel",
+      "value": "Delivery parcel"
+    },
+    {
+      "pointer": "/auditCursor",
+      "value": "Audit cursor"
+    },
+    {
+      "pointer": "/expenseCart",
+      "value": "Expense cart"
+    },
+    {
+      "pointer": "/budgetShredder",
+      "value": "Budget shredder"
+    },
+    {
+      "pointer": "/approvalGate",
+      "value": "Approval gate"
+    },
+    {
+      "pointer": "/policyVault",
+      "value": "Policy vault"
     }
   ]
 }

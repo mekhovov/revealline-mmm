@@ -296,7 +296,7 @@
     "coupa-all"
   ],
   "version": "v0.151.1",
-  "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+  "sourceRevision": "2a5fd3d3def34c6defa67187ac5bf9f46d96f45d",
   "catalogSha256": "50c96b78e95cf5ba27238fc25e1b0c1609145c2bae958f10a6c6868802df0730",
   "files": [
     {
@@ -417,7 +417,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "4fbeb03a75fcfe72c0721fd8a2925ed80d12ae2a9a1bcd02d5a593da18187397"
+      "sha256": "b0d7f51fc193716852ce85bc8326b3cf7117a89d556d11e00a2fd266aadeda6b"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -2636,8 +2636,8 @@
     },
     {
       "path": "game/library.mjs",
-      "bytes": 36387,
-      "sha256": "f8426e3e96b7b9eac3c2d0ef819d97b9a03712bc16af62bcf85628411ebde555"
+      "bytes": 37470,
+      "sha256": "6ac76f70faf8f6f61aa7c72078b73c50b6ac4f166f72f65a6d2d0a28aafba02c"
     },
     {
       "path": "game/local-support-summary.mjs",
@@ -3288,11 +3288,6 @@
       "path": "game/replay.mjs",
       "bytes": 33108,
       "sha256": "04bbd4426dfe4528f7ae7028a61da65a318895bd318d26bb8d2ad1503c341a41"
-    },
-    {
-      "path": "game/retained-campaign-progress.mjs",
-      "bytes": 1180,
-      "sha256": "8a8a1479004c864618866b933bc194e3ea93357641ab3b7644730e25a986b5c4"
     },
     {
       "path": "game/rewards/audio-groups.mjs",
