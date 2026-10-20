@@ -1,0 +1,133 @@
+{
+  "format": "OwnedRecoveryPublicationOriginals.v1",
+  "at": "2026-10-20T13:12:48.420484+00:00",
+  "scope": "Nine additional directly named Coupa publication records found in the original public recovery archive inventory. Preserved byte-for-byte outside generated app output; these records do not enable archived game families or imports. Original archive containers remain backed up separately.",
+  "items": [
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646078378,
+      "sourceArchiveSHA256": "f966df1dc59abd44344edaff5b55d52fd5e0719183533aa84ad53ab64a123063",
+      "sourceMember": "objects/2dea1f079f7f81bce604d73c7ae086dd9e77e62469ee2ed4c2d3ad41aac82429",
+      "sourcePaths": [
+        "flight-practice-publication.sMOWmR/.xonix-build-rNivMM/game/communities/coupa/index.html"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/2dea1f079f7f81bce604d73c7ae086dd9e77e62469ee2ed4c2d3ad41aac82429.html",
+      "bytes": 3425,
+      "sha256": "2dea1f079f7f81bce604d73c7ae086dd9e77e62469ee2ed4c2d3ad41aac82429",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/3a772a945dbf0adeee50d7f99bda6ff36b09d5c57f1280ba8931aa7e5521cb6c",
+      "sourcePaths": [
+        "fpv-package-qualification-20261014/pr1269/company-capacity/manifest-coupa-developers.json"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/3a772a945dbf0adeee50d7f99bda6ff36b09d5c57f1280ba8931aa7e5521cb6c.json",
+      "bytes": 144161,
+      "sha256": "3a772a945dbf0adeee50d7f99bda6ff36b09d5c57f1280ba8931aa7e5521cb6c",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/48b95591c72c3ec14960ebdd1002df9316e3fbddaa2ab5a5bcb776b49d9e808a",
+      "sourcePaths": [
+        "fpv-package-qualification-20261014/pr1269/company-capacity/manifest-coupa-foundations.json"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/48b95591c72c3ec14960ebdd1002df9316e3fbddaa2ab5a5bcb776b49d9e808a.json",
+      "bytes": 144483,
+      "sha256": "48b95591c72c3ec14960ebdd1002df9316e3fbddaa2ab5a5bcb776b49d9e808a",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/7fe9aa907f8a8df808228b2160af0076a377a663ba4239368bc6ff45cf452785",
+      "sourcePaths": [
+        "fpv-package-qualification-20261014/pr1269/company-capacity/manifest-coupa-all.json"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/7fe9aa907f8a8df808228b2160af0076a377a663ba4239368bc6ff45cf452785.json",
+      "bytes": 149701,
+      "sha256": "7fe9aa907f8a8df808228b2160af0076a377a663ba4239368bc6ff45cf452785",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/9b63767bfe33bbb54d462fca16dcfe0757776da2d312cc645c8ab00d7d6d94ce",
+      "sourcePaths": [
+        "fpv-package-qualification-20261014/pr1269/company-capacity/manifest-coupa-culture.json"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/9b63767bfe33bbb54d462fca16dcfe0757776da2d312cc645c8ab00d7d6d94ce.json",
+      "bytes": 143980,
+      "sha256": "9b63767bfe33bbb54d462fca16dcfe0757776da2d312cc645c8ab00d7d6d94ce",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/9e1f1152fdf64a4376790194635055d7ce2a1ce7c6ddcd561f689cd28c73c76a",
+      "sourcePaths": [
+        "fpv-package-qualification-20261014/pr1269/company-capacity/manifest-coupa-operations.json"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/9e1f1152fdf64a4376790194635055d7ce2a1ce7c6ddcd561f689cd28c73c76a.json",
+      "bytes": 144177,
+      "sha256": "9e1f1152fdf64a4376790194635055d7ce2a1ce7c6ddcd561f689cd28c73c76a",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/d580b8c4ba78c919b2140774b4d2235f653f77f11a1b95c6088a7153ca4e56bb",
+      "sourcePaths": [
+        "fpv-temp/fpv-rates-pages-20261016.w7p0UM/site-concurrent/game/communities/coupa/index.html"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/d580b8c4ba78c919b2140774b4d2235f653f77f11a1b95c6088a7153ca4e56bb.html",
+      "bytes": 3425,
+      "sha256": "d580b8c4ba78c919b2140774b4d2235f653f77f11a1b95c6088a7153ca4e56bb",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/de42565a02b18bf95e8b5845b4c1cadbed68d7530664a8ba207364847f7492db",
+      "sourcePaths": [
+        "fpv-package-qualification-20261014/pr1269/company-capacity/manifest-coupa-adventure.json"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/de42565a02b18bf95e8b5845b4c1cadbed68d7530664a8ba207364847f7492db.json",
+      "bytes": 144166,
+      "sha256": "de42565a02b18bf95e8b5845b4c1cadbed68d7530664a8ba207364847f7492db",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    },
+    {
+      "sourceRepository": "https://github.com/mekhovov/revealline",
+      "sourceRelease": "fpv-development-preservation-20261016",
+      "sourceReleaseAssetId": 646181621,
+      "sourceArchiveSHA256": "102e33a30593f1df5ac75fd810880d170344552b2d6bdc2728d45275a0e775d0",
+      "sourceMember": "objects/fa579a2262c7e8bff4995ad3bf814e70bc8031ffc4c0eacf9608262db73267d3",
+      "sourcePaths": [
+        "fpv-temp/fpv-rates-pages-20261016.w7p0UM/.xonix-build-LUSAOn/game/communities/coupa/index.html"
+      ],
+      "destination": "content/archive/recovery-publication-originals-20261020/fa579a2262c7e8bff4995ad3bf814e70bc8031ffc4c0eacf9608262db73267d3.html",
+      "bytes": 3425,
+      "sha256": "fa579a2262c7e8bff4995ad3bf814e70bc8031ffc4c0eacf9608262db73267d3",
+      "disposition": "historical-authoring-and-publication-evidence-only"
+    }
+  ]
+}
