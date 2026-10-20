@@ -34,8 +34,8 @@
   margin: 0 0 20px;
   min-width: 0;
 }
-body.field-kit .game-mode-choice > :is(a, button),
-body.field-kit #couch-app .game-mode-choice > :is(a, button) {
+body.field-kit .game-mode-choice > :is(a, button, span),
+body.field-kit #couch-app .game-mode-choice > :is(a, button, span) {
   position: relative;
   display: flex;
   box-sizing: border-box;
@@ -89,8 +89,8 @@ body.field-kit #couch-app .game-mode-choice > :is(a, button) {
   outline-offset: 3px;
 }
 @media (max-width: 360px) {
-  body.field-kit .game-mode-choice > :is(a, button),
-  body.field-kit #couch-app .game-mode-choice > :is(a, button) {
+  body.field-kit .game-mode-choice > :is(a, button, span),
+  body.field-kit #couch-app .game-mode-choice > :is(a, button, span) {
     font-size: calc(11px * var(--overflight-text-scale, 1));
   }
 }
@@ -121,12 +121,12 @@ body.field-kit #couch-app .game-mode-choice[data-modes-expanded='true'] > [data-
 }
 
 /* Hover/focus indicate navigation; only the current mode uses selected paint. */
-.game-mode-choice > :is(a, button):not([aria-current='page']) {
+.game-mode-choice > :is(a, button, span):not([aria-current='page']) {
   --ui-action-hover-fill: var(--ui-action-fill);
   --ui-action-hover-ink: var(--ui-action-ink);
   --ui-action-hover-frame: var(--ui-action-frame);
 }
-.game-mode-choice > :is(a, button):hover:not([aria-current='page']) {
+.game-mode-choice > :is(a, button, span):hover:not([aria-current='page']) {
   outline: 2px solid var(--fk-focus, #78dce8);
   outline-offset: 1px;
 }
@@ -294,7 +294,7 @@ body[data-couch-status='paused'] #race-main .landing-layout .native-menu-utiliti
   html body .landing-layout :is(.fpv-line-wordmark, .mode-play-wordmark img) {
     max-height: 72px;
   }
-  html body .landing-layout .game-mode-choice > :is(a, button) {
+  html body .landing-layout .game-mode-choice > :is(a, button, span) {
     min-height: 64px;
   }
   html body .landing-layout .game-mode-choice > .game-mode-more-toggle[aria-expanded='true'] {
@@ -321,7 +321,7 @@ html body #coop-menu.native-landing:has(.landing-layout) > .menu-copy {
   display: none;
 }
 
-html body .landing-layout .game-mode-choice > :is(a, button) {
+html body .landing-layout .game-mode-choice > :is(a, button, span) {
   font-size: clamp(
     calc(12px * var(--overflight-text-scale, 1)),
     calc(3.5vw * var(--overflight-text-scale, 1)),
@@ -338,7 +338,7 @@ html body .landing-identity .mode-play-dialog-head {
   border-image: none;
   box-shadow: none;
 }
-html body[data-text-size='large'] .landing-layout .game-mode-choice > :is(a, button) {
+html body[data-text-size='large'] .landing-layout .game-mode-choice > :is(a, button, span) {
   font-size: calc(20px * var(--overflight-text-scale, 1));
   white-space: normal;
 }
@@ -348,7 +348,7 @@ html body[data-text-size='large'] .landing-layout .game-mode-choice > :is(a, but
   html[data-branded-app] body.field-kit .game-mode-choice {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  html[data-branded-app] body.field-kit .game-mode-choice > :is(a, button) {
+  html[data-branded-app] body.field-kit .game-mode-choice > :is(a, button, span) {
     grid-column: span 2;
     min-height: 56px;
   }

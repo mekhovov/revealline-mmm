@@ -9,8 +9,12 @@ import { createClassicSnakeRecords } from './classic-records.mjs';
 import { drawClassicBoard } from './classic-view.mjs';
 import { classicOperationStatus } from './classic-operation-status.mjs';
 import { boundedJSON } from '../data-json.mjs';
+import { blocksPlayInput } from '../ui/play-input.mjs';
+import { mountCoupaPlayShell } from '../ui/coupa-play-shell.mjs';
+import { prepareCoupaHeadArt } from './coupa-art.mjs';
 
 await globalThis.RevealLineAccess?.ready;
+await prepareCoupaHeadArt();
 const $=id=>document.getElementById(id);
 const STORAGE='revealline-mmm.snake.round.v1', PREFS='revealline-mmm.snake.controls.v1';
 const MODES=['solo','versus','team'], PACES=['slow','normal','fast'];
@@ -28,6 +32,7 @@ const records=createClassicSnakeRecords({onWarning:()=>notice('Progress is kept 
 await records.read();
 let match=null,entry=null,level=null,pace='normal',paused=true,finished=false,lastFrame=0,lastSaved=0,clock=0;
 let soundContext=null,previousCatches=0;
+let shell=null,savedRound=false;
 const reducedMedia=matchMedia('(prefers-reduced-motion: reduce)');
 try {
   const prefs=JSON.parse(localStorage.getItem(PREFS)??'{}');
@@ -56,7 +61,9 @@ function missions(){
     const number=document.createElement('small');number.textContent=`${String(index+1).padStart(2,'0')} · ${records.cleared(row.id)?'✓ Complete':'Ready to connect'}`;
     const title=document.createElement('strong');title.textContent=communityCopy(row.title);
     const description=document.createElement('span');description.textContent=communityCopy(row.description);
-    button.append(number,title,description);button.onclick=()=>start(row);$('missions').append(button);
+    button.append(number,title,description);button.onclick=()=>start(row);
+    if(row.id===entry?.id)button.setAttribute('aria-current','true');
+    $('missions').append(button);
   }
   $('progress').textContent=`${LEVELS.filter(row=>records.cleared(row.id)).length} of ${LEVELS.length} missions completed. All missions are available to explore.`;
 }
@@ -85,7 +92,7 @@ function showPlay(){
   $('mission-title').textContent=communityCopy(entry.title);$('briefing').textContent=communityCopy(entry.description);
   paused=true;finished=match.status==='finished';lastFrame=0;clock=0;previousCatches=match.runs.reduce((n,r)=>n+r.catches,0);
   $('pause').textContent=finished?'Round complete':'Start';$('pause').disabled=finished;$('next').hidden=!finished;
-  makeBoards();draw();$('pause').focus();
+  makeBoards();draw();shell?.showPlay();$('pause').focus({preventScroll:true});
 }
 function start(row){
   entry=row;pace=$('pace').value;level=prepareClassicSnakeLevel(row,{pace});
@@ -94,7 +101,7 @@ function start(row){
   match=createClassicSnakeMatch(level,options);void records.visit(row.id);showPlay();save();
 }
 function snapshot(){return {format:'coupa-snake-round.v1',levelId:entry.id,pace,match:exportClassicSnakeMatch(match)}}
-function save(){if(!match)return;try{localStorage.setItem(STORAGE,JSON.stringify(snapshot()))}catch{notice('Saving is unavailable. Export your round to keep it.')}}
+function save(){if(!match)return;try{localStorage.setItem(STORAGE,JSON.stringify(snapshot()));savedRound=true}catch{notice('Saving is unavailable. Export your round to keep it.')}shell?.refresh()}
 function restore(source){
   const value=boundedJSON(source,{maxBytes:8*1024*1024,maxNodes:250000,maxDepth:32,maxString:100000});
   if(value.format!=='coupa-snake-round.v1'||!PACES.includes(value.pace))throw new Error('This is not a supported Coupa Snake round.');
@@ -102,35 +109,37 @@ function restore(source){
   const prepared=prepareClassicSnakeLevel(found,{pace:value.pace});
   const restored=restoreClassicSnakeMatch(value.match,{level:prepared});
   if(!MODES.includes(restored.options.mode))throw new Error('This mode is unavailable.');
-  entry=found;pace=value.pace;level=prepared;match=restored;$('mode').value=match.options.mode;$('pace').value=pace;showPlay();
+  entry=found;pace=value.pace;level=prepared;match=restored;$('mode').value=match.options.mode;$('pace').value=pace;
+  $('campaign').value=CAMPAIGNS.find(c=>c.chapterIds.includes(found.chapterId)).id;chapters();$('chapter').value=found.chapterId;missions();showPlay();
 }
-try{$('restore').hidden=!localStorage.getItem(STORAGE)}catch{}
+try{savedRound=!!localStorage.getItem(STORAGE);$('restore').hidden=!savedRound}catch{}
 $('restore').onclick=()=>{try{restore(localStorage.getItem(STORAGE));notice('Saved round restored and paused.')}catch(error){notice(error.message)}};
 $('import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>8*1024*1024)throw new Error('Round file is too large.');restore(await file.text());save();notice('Round restored and paused.')}catch(error){notice(error.message)}e.target.value=''};
-$('export').onclick=()=>{if(!match)return;const url=URL.createObjectURL(new Blob([JSON.stringify(snapshot())],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='coupa-snake-round.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+$('export').onclick=()=>{if(!match)return;setPaused(true);const url=URL.createObjectURL(new Blob([JSON.stringify(snapshot())],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='coupa-snake-round.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 function setPaused(value){if(!match||finished)return;paused=value;lastFrame=0;$('pause').textContent=paused?'Resume':'Pause';save();draw()}
 $('pause').onclick=()=>setPaused(!paused);
 $('retry').onclick=()=>start(entry);
-$('menu').onclick=()=>{setPaused(true);$('play').hidden=true;$('library').hidden=false;$('restore').hidden=!match;missions()};
+$('menu').onclick=()=>{setPaused(true);missions();shell.showMissions()};
 $('next').onclick=()=>start(LEVELS[(LEVELS.findIndex(row=>row.id===entry.id)+1)%LEVELS.length]);
 $('fullscreen').onclick=()=>{if(document.fullscreenElement)void document.exitFullscreen();else void $('play').requestFullscreen?.()};
 function turn(seat,direction){if(!match||finished||$('play').hidden||paused)return;queueClassicSnakeMatchTurn(match,seat,direction)}
 const keys={ArrowUp:[0,'up'],ArrowDown:[0,'down'],ArrowLeft:[0,'left'],ArrowRight:[0,'right'],w:[1,'up'],s:[1,'down'],a:[1,'left'],d:[1,'right']};
 document.addEventListener('keydown',e=>{
-  if($('play').hidden||['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName))return;
+  if(blocksPlayInput(e,{blocked:shell?.blocksPlay(),hidden:$('play').hidden}))return;
   if([' ','Escape'].includes(e.key)){e.preventDefault();if(!e.repeat)setPaused(!paused);return}
   const input=keys[e.key]??keys[e.key.toLowerCase()];if(input){e.preventDefault();turn(match?.options.mode==='solo'?0:input[0],input[1])}
 });
 document.addEventListener('visibilitychange',()=>{if(document.hidden)setPaused(true)});
 window.addEventListener('pagehide',()=>{setPaused(true);save()});
+window.addEventListener('blur',()=>setPaused(true));
 const gamepadStates=new Map();
 function controllers(){
   for(const [seat,pad] of [...(navigator.getGamepads?.()??[])].filter(Boolean).slice(0,2).entries()){
     const pressed=pad.buttons[9]?.pressed===true;
     const direction=pad.buttons[12]?.pressed||pad.axes[1]<-.55?'up':pad.buttons[13]?.pressed||pad.axes[1]>.55?'down':pad.buttons[14]?.pressed||pad.axes[0]<-.55?'left':pad.buttons[15]?.pressed||pad.axes[0]>.55?'right':null;
     const before=gamepadStates.get(seat)??{};
-    if(pressed&&!before.pressed)setPaused(!paused);
-    if(direction&&direction!==before.direction)turn(seat,direction);
+    if(!shell?.blocksPlay()&&pressed&&!before.pressed)setPaused(!paused);
+    if(!shell?.blocksPlay()&&direction&&direction!==before.direction)turn(seat,direction);
     gamepadStates.set(seat,{pressed,direction});
   }
 }
@@ -141,8 +150,9 @@ function collectionSound(){
 async function finish(){
   finished=true;paused=true;$('pause').disabled=true;$('pause').textContent='Round complete';$('next').hidden=false;save();
   const proof=exportClassicSnakeMatch(match), completedMatch=match, completedEntry=entry, completedLevel=level;
+  draw();shell?.showResults();
   for(const run of completedMatch.runs)try{await records.remember(run,{mode:completedMatch.options.mode,chapterId:completedEntry.chapterId,level:completedLevel,match:proof,policy:completedMatch.options.policy})}catch{notice('This round could not be saved to progress. You can still export it.')}
-  draw();
+  if(match===completedMatch)draw();
 }
 function draw(){
   if(!match)return;
@@ -156,20 +166,29 @@ function draw(){
   const operation=classicOperationStatus(match.runs[0]);
   const result=match.result;
   $('status').textContent=finished?(match.options.mode==='versus'?`Round complete · ${result==='draw'?'Draw':result==='p2'?'Player 2 wins':'Player 1 wins'}`:match.runs[0].status==='won'?'Connections complete. Well done!':'Route closed. Try another path.'):
-    `${paused?'Paused · Press Start or Resume. ':''}${operation||`Collect ${match.runs[0].level.goal} connection tokens. Keep your path clear.`}`;
+    `${paused?'Paused · Press Start or Resume. ':''}${communityCopy(operation)||`Collect ${match.runs[0].level.goal} connection tokens. Keep your path clear.`}`;
 }
 function frame(now){
   controllers();
   if(match&&!$('play').hidden){
-    if(!paused&&!finished){
+    if(!paused&&!finished&&!shell?.blocksPlay()){
       const delta=lastFrame?Math.min(100,now-lastFrame):0;clock+=delta;
       advanceClassicSnakeMatchTo(match,match.elapsedMs+delta);
       const catches=match.runs.reduce((sum,run)=>sum+run.catches,0);if(catches>previousCatches)collectionSound();previousCatches=catches;
       if(match.status==='finished')void finish();
       if(now-lastSaved>2500){save();lastSaved=now}
     }
-    draw();lastFrame=now;
+    draw();shell?.refresh();lastFrame=now;
   }
   requestAnimationFrame(frame);
-}
+}shell=mountCoupaPlayShell({
+  family:'snake',missions:$('library'),play:$('play'),settings:document.querySelector('aside'),notice:$('notice'),sound:$('sound'),
+  hasSavedRound:()=>!!match||savedRound,
+  getState:()=>({phase:!match?'ready':finished?'results':paused?'paused':'playing',missionName:entry?communityCopy(entry.title):'',
+    mode:$('mode').selectedOptions[0].textContent,summary:$('status').textContent,canNext:finished}),
+  onStart:()=>start(entry??LEVELS.find(row=>row.chapterId===$('chapter').value)),
+  onContinue:()=>{if(match){if(finished)start(entry);else{setPaused(false);shell.showPlay()}}else $('restore').onclick()},
+  onRetry:()=>entry&&start(entry),onPause:()=>setPaused(true),
+  onNext:()=>start(LEVELS[(LEVELS.findIndex(row=>row.id===entry.id)+1)%LEVELS.length]),
+});
 requestAnimationFrame(frame);

@@ -1,0 +1,96 @@
+@import url('./field-kit-tokens.css');
+@import url('./field-kit-components.css');
+@import url('./field-kit-compiled.css');
+@import url('./mode-play-shell.css');
+@import url('./coupa-mode-choice.css');
+
+:root { color-scheme: dark; }
+body.coupa-arcade {
+  margin: 0; --fk-font-ui: var(--brand-font, sans-serif);
+  --fk-font-display: var(--brand-font, sans-serif); --fk-font-pixel: var(--brand-font, sans-serif);
+  font-family: var(--brand-font, sans-serif); font-size: 16px; line-height: 1.5;
+}
+.coupa-arcade *, .coupa-arcade *::before, .coupa-arcade *::after { box-sizing: border-box; }
+.coupa-arcade [hidden] { display: none !important; }
+.coupa-arcade > main { margin: 0; padding: 0; }
+.coupa-arcade :is(button, .button, select, input) { font: inherit; }
+.coupa-arcade :is(button, .button, select) {
+  min-height: 44px; border: 1px solid #5284a9; border-radius: 10px;
+  background: #15365f; color: #f6fbff; padding: 10px 16px;
+}
+.coupa-arcade :is(button, .button, a, select, input):focus-visible { outline: 3px solid #69def5; outline-offset: 3px; }
+.coupa-arcade button:not(:disabled) { cursor: pointer; }
+.coupa-arcade button:disabled { opacity: .6; cursor: default; }
+.coupa-arcade button:hover:not(:disabled) { background: #244e7b; }
+.coupa-arcade a { color: #69def5; }
+.coupa-arcade h1, .coupa-arcade h2, .coupa-arcade h3 { color: #f6fbff; font-family: inherit; }
+.coupa-arcade .mode-play-stage { display: block; overflow: auto; }
+.coupa-arcade .mode-play-bar { padding: 8px clamp(12px, 3vw, 32px); background: #0a2048; }
+.coupa-arcade .mode-play-brand-button img { width: 28px; height: 28px; filter: brightness(0) invert(1); }
+.coupa-arcade .mode-play-name { font-size: 15px; font-weight: 600; }
+.coupa-arcade .mode-play-dialog { border: 1px solid #5284a9; border-radius: 18px; background: #0c254d; color: #f6fbff; }
+.coupa-arcade .mode-play-dialog h1 { font: 600 clamp(23px, 3vw, 32px)/1.2 var(--brand-font, sans-serif); letter-spacing: -.03em; }
+.coupa-arcade .mode-play-dialog-head { padding: 20px 24px 12px; }
+.coupa-arcade .mode-play-content { padding: 12px 24px 24px; }
+.coupa-arcade .mode-play-actions { padding: 14px 24px; background: #0a2048; }
+.coupa-arcade .mode-play-home { border: 0; border-radius: 0; background: #0c1d4b; }
+.coupa-arcade .mode-play-home[open] { display: flex; justify-content: flex-start; }
+.coupa-arcade .mode-play-home .mode-play-content { flex: none; margin: auto; width: 100%; overflow: visible; }
+.coupa-arcade .mode-play-home .landing-layout { width: min(100%, 940px); margin: auto; gap: 48px; }
+.coupa-arcade .mode-play-home .landing-identity { gap: 20px; }
+.coupa-arcade .mode-play-home .mode-play-dialog-head { padding: 0; margin: 0; }
+.coupa-arcade .coupa-wordmark { display: flex; flex-direction: column; gap: 24px; font-size: clamp(36px, 4.4vw, 58px); font-weight: 400; line-height: 1.12; letter-spacing: -.05em; }
+.coupa-arcade .coupa-wordmark small { display: block; margin-top: 12px; color: #8ee6f7; font-size: .42em; letter-spacing: -.02em; }
+.coupa-arcade .coupa-wordmark img { width: 78px; height: 78px; object-fit: contain; filter: brightness(0) invert(1); animation: coupa-menu-flower 40s linear infinite; }
+.coupa-arcade .mode-play-home .mode-play-wordmark .coupa-wordmark img {
+  width: 78px; height: 78px; max-height: none; max-width: none;
+  aspect-ratio: 1; object-fit: contain; object-position: center; margin: 0;
+}
+.coupa-arcade .mode-play-home .mode-play-edition { display: none; }
+.coupa-arcade .mode-play-home .mode-play-mission { font-size: 14px; color: #b6d3e8; margin: 0 0 12px; }
+.coupa-arcade .mode-play-home .mode-play-main-menu { display: grid; gap: 10px; }
+.coupa-arcade .mode-play-home .mode-play-main-menu > .button { min-height: 54px; font-size: 17px; border-radius: 12px; }
+.coupa-arcade .mode-play-home .mode-play-main-menu > .primary { min-height: 64px; color: #092344; background: #64dcf7; border-color: #8fe9fa; }
+.coupa-arcade .mode-play-home .mode-play-utilities .button { font-size: 14px; }
+.coupa-arcade .mode-play-artwork::after { background: linear-gradient(90deg, #0c1d4bf5 5%, #0c1d4bd9 40%, #0c1d4b4d); }
+.coupa-arcade .mode-play-artwork img { object-position: center; }
+.coupa-arcade [data-menu-icon]::before { content: ''; display: inline-block; width: 18px; height: 18px; flex: 0 0 18px; background: currentColor; mask: var(--native-menu-icon) center/contain no-repeat; }
+.coupa-arcade .mode-play-modes .game-mode-choice { margin: 0; }
+.coupa-arcade .game-mode-choice > [aria-current] { background: #245485; border-color: #6ed9f2; color: #fff; }
+.coupa-menu-trails { position: absolute; inset: 0 0 0 auto; width: min(76vw, 900px); height: 100%; fill: none; stroke: #85e7fa; stroke-width: 2; opacity: .32; pointer-events: none; }
+.coupa-arcade .mode-play-home > .coupa-menu-trails { position: absolute; z-index: 0; }
+.coupa-menu-trails path { stroke-dasharray: 120 1400; animation: coupa-menu-trail 18s linear infinite; }
+.coupa-menu-trails path:nth-child(2) { animation-delay: -9s; opacity: .6; }
+.coupa-arcade .mode-play-home:not([open]) :is(.coupa-menu-trails path, .coupa-wordmark img) { animation-play-state: paused; }
+.coupa-arcade[data-coupa-motion='off'] :is(.coupa-menu-trails path, .coupa-wordmark img) { animation: none; }
+.coupa-live-notice { color: #ffdf70; font-size: 14px; overflow-wrap: anywhere; }
+.coupa-live-notice:empty { display: none; }
+.coupa-arcade aside { border: 0; padding: 0; margin: 0; display: grid; gap: 18px; }
+.coupa-arcade aside label { display: flex; align-items: center; gap: 12px; }
+.coupa-arcade aside input[type='checkbox'] { width: 20px; height: 20px; accent-color: #69def5; }
+.coupa-arcade .import { display: grid; gap: 8px; }
+.coupa-arcade .import input { width: 100%; min-width: 0; }
+.coupa-arcade .coupa-result-summary { font-size: 18px; margin-bottom: 24px; }
+@keyframes coupa-menu-trail { to { stroke-dashoffset: -1520; } }
+@keyframes coupa-menu-flower { to { transform: rotate(360deg); } }
+@media (min-width: 900px) { .coupa-arcade .mode-play-home .landing-layout { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
+@media (max-width: 899px) {
+  .coupa-arcade .mode-play-home .landing-layout { width: min(100%, 500px); gap: 26px; }
+  .coupa-arcade .coupa-wordmark { flex-direction: row; align-items: center; gap: 20px; font-size: clamp(30px, 6vw, 46px); }
+  .coupa-arcade .coupa-wordmark img { width: 62px; height: 62px; }
+  .coupa-arcade .mode-play-home .mode-play-wordmark .coupa-wordmark img { width: 62px; height: 62px; }
+}
+@media (max-width: 540px) {
+  .coupa-arcade .mode-play-dialog { max-width: calc(100vw - 20px); border-radius: 14px; }
+  .coupa-arcade .mode-play-home { max-width: 100vw; border-radius: 0; }
+  .coupa-arcade .mode-play-content, .coupa-arcade .mode-play-dialog-head { padding-inline: 18px; }
+  .coupa-arcade .mode-play-home .mode-play-content { padding-inline: 0; }
+  .coupa-arcade .mode-play-actions { padding-inline: 18px; }
+  .coupa-arcade .mode-play-home .mode-play-main-menu > .button { min-height: 48px; font-size: 16px; }
+}
+@media (max-height: 570px) and (min-width: 700px) {
+  .coupa-arcade .mode-play-home .landing-layout { width: min(100%, 940px); grid-template-columns: 1fr 1fr; gap: 24px; }
+  .coupa-arcade .coupa-wordmark img { width: 48px; height: 48px; }
+  .coupa-arcade .coupa-wordmark { font-size: 32px; gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { .coupa-arcade :is(.coupa-menu-trails path, .coupa-wordmark img) { animation: none; } }

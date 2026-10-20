@@ -342,12 +342,12 @@ export function prepareNativeMenus({
       ? ['coop-selection-status', 'coop-boot-slot']
       : [])
     moveId(id, commands);
-  const settingsFullscreen = mode === 'solo' ? null : make('button');
+  const settingsFullscreen = make('button');
   if (settingsFullscreen) {
     if (!settingsFullscreen.id) settingsFullscreen.id = `${prefix}-fullscreen`;
     settingsFullscreen.type = 'button';
     settingsFullscreen.removeAttribute('data-i18n-aria-label');
-    if (mode !== 'solo') panels.display.append(settingsFullscreen);
+    panels.display.append(settingsFullscreen);
   }
   for (const [button, parent] of [
     [landingFullscreen, utilities],

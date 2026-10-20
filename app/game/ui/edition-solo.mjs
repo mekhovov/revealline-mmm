@@ -196,7 +196,7 @@ export async function mountEditionSoloUI({
     if (propeller) logo.classList.add('edition-propeller');
     logo.src = provider.assetURL(logoAsset);
     logo.alt = brandName;
-    (home.querySelector('.home-content') ?? home).prepend(logo);
+    (home.querySelector('.landing-identity') ?? home.querySelector('.home-content') ?? home).prepend(logo);
   }
   const picker = node('label'),
     pickerTitle = copy('span', 'chooseEdition'),

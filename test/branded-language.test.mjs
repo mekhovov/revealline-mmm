@@ -27,13 +27,14 @@ test('branded English messages override inherited copy and preserve interpolatio
   }
   const language = context.RevealLineI18n;
   assert.equal(language.getLocale(), 'en');
+  assert.ok(language.t('interface:couchCoOp').includes('[[slot0]]'), 'The Team header must retain its live mission-label slot');
   assert.throws(() => language.setLocale('uk'), /Unsupported locale/);
   language.setLocale('en');
   assert.equal(language.getLocale(), 'en');
   assert.ok(writes.every(([key]) => key.startsWith('revealline-mmm.')));
   assert.equal(language.t('errors:loadingFlightSystems'), 'Loading your game…');
   assert.equal(language.t('interface:loadingMissionsAndFlightEquipment'), 'Loading your missions…');
-  assert.equal(language.t('errors:flightOnHold'), 'Game paused.');
+  assert.equal(language.t('errors:flightOnHold'), 'Unable to open the game.');
   assert.equal(
     language.t('gameplay:lineSecuredRevealedTapADirectionToFlyAgain', { value1: 75 }),
     'Line secured. 75% revealed. Tap a direction to move again.',

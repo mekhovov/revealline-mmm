@@ -15,7 +15,7 @@
     'errors:theGameRendererIsUnavailable': 'The game renderer is unavailable.',
     'errors:theGameCouldNotStartReloadToTryAgainOr':
       'The game could not start. Reload to try again, or open the online game. Your saved progress has not been changed by this launch screen.',
-    'errors:flightOnHold': 'Game paused.',
+    'errors:flightOnHold': 'Unable to open the game.',
   };
   fallback['errors:loadingGameStyles'] = 'Loading game styles…';
   fallback['errors:loadingFlightSystems'] = 'Loading your game…';
