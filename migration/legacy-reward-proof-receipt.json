@@ -1,0 +1,15 @@
+{
+  "format": "revealline-owned-legacy-reward-proof.v1",
+  "scope": "Exact historical Spend Network / Clear Ledger reward screenshot. Visually reviewed ownership; retained outside the playable app. No new gameplay asset or claim of historical release verification.",
+  "sourceRepository": "https://github.com/mekhovov/revealline",
+  "sourceCommit": "ff63cad0ee40a5f5800d61544ed5e21252a1e6d3",
+  "items": [
+    {
+      "originalPath": "docs/verification/round-19/screenshots/candidate-clear-ledger.jpg",
+      "gitBlob": "8147a70ab44c5ca93adca34b72bb510cfd1b09d5",
+      "sha256": "cddbb54019717a556e1bf9f7ee4e37123c2d367b18aa80efb5b276eed962bcee",
+      "bytes": 75860,
+      "preservedPath": "content/archive/legacy-reward-proof-20261020/cddbb54019717a556e1bf9f7ee4e37123c2d367b18aa80efb5b276eed962bcee.jpg"
+    }
+  ]
+}
