@@ -834,7 +834,7 @@ export function resolvePresentation({
     highContrast: accessibility.highContrast === true,
     opaqueHud: accessibility.opaqueHud === true,
     textFace: accessibility.textFace === 'plain' ? 'plain' : 'pixel',
-    textSize: accessibility.textSize === 'large' ? 'large' : 'standard',
+    textSize: ['large', 'extra-large'].includes(accessibility.textSize) ? 'large' : 'standard',
     reducedEffects:
       accessibility.effectiveReducedEffects === true || accessibility.reducedEffects === true,
     coarsePointer: accessibility.coarsePointer === true,

@@ -1,12 +1,12 @@
 import { actorImagePaintMetrics } from '../ui/actor-presentation.mjs';
-import { resolveTextSize } from '../text-size.mjs';
+import { effectiveTextSize } from '../text-size.mjs';
 
 // Cosmetic geometry only. All positions passed to the core remain untouched.
 const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
 export function coopCueScale(width, columns = 72, textSize = 'standard') {
   // Canvas role labels have their own readable minimum: 12 → 16 CSS pixels.
   // Scale after the existing clamp so resizing introduces no new breakpoint.
-  const factor = resolveTextSize(textSize) === 'large' ? 4 / 3 : 1;
+  const factor = effectiveTextSize(textSize) === 'large' ? 4 / 3 : 1;
   const cssWidth = Number.isFinite(width) && width > 0 ? width : 1152;
   const cell = cssWidth / columns;
   return Object.freeze({

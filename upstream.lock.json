@@ -924,9 +924,9 @@
     ]
   },
   "repository": "mekhovov/revealline",
-  "requestedRef": "de59e798e3d94346a45519f842d6c5cbcdb0935e",
-  "commit": "de59e798e3d94346a45519f842d6c5cbcdb0935e",
-  "tree": "48db62dde5eec06266889b46384d10e184a8b661",
+  "requestedRef": "bd95b9a05",
+  "commit": "bd95b9a05298f11ffea48be86d9fab2af561e7e2",
+  "tree": "c072cae79298beb58df8fc7c608573ad72e4275e",
   "upstreamVersion": "0.151.1",
   "editionId": "coupa-all",
   "brandId": "coupa",
@@ -1418,8 +1418,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1275559,
-      "sha256": "23603e864c2f5dbd29188cf8c3c959733ae9d17ec393d8ac999c0531f5735116"
+      "bytes": 1275859,
+      "sha256": "0c1dc3f0963e53f10aa6e1fba9f3aae8d3d710e68b0f8a2ceb4c9d0bcbb7e086"
     },
     {
       "path": "game/i18n/index.mjs",
@@ -1613,8 +1613,8 @@
     },
     {
       "path": "game/presentation/theme-system.mjs",
-      "bytes": 65878,
-      "sha256": "f1ab57202233decee84e5c8378f85ac58b97e655af233594e5b407d7238d41f0"
+      "bytes": 65901,
+      "sha256": "c3bdb357d05ebe9546d93a27ff994dd677d78f6d4445478e394502264691128a"
     },
     {
       "path": "game/progress.mjs",
@@ -1703,8 +1703,8 @@
     },
     {
       "path": "game/text-size.mjs",
-      "bytes": 251,
-      "sha256": "a2517c4ae10a8283865594c5d04bdcc385733b6813c024ed1c635e05755c717a"
+      "bytes": 538,
+      "sha256": "d91978a8e2c9b710270d8cdb1c4ba257f922e1a75c33b4a174efef19f43b293c"
     },
     {
       "path": "game/touch-controls.mjs",
@@ -1823,8 +1823,8 @@
     },
     {
       "path": "scripts/refresh-theme-bootstrap.mjs",
-      "bytes": 12060,
-      "sha256": "7c0ff64d91cf8626db8780aaf47baf36fbff32acef66beecfaa47a644fc7e9d4"
+      "bytes": 12099,
+      "sha256": "8b0769834e00af66991aaacdb3640aaecd0cb1f5d516deadede79d3a3247d0a6"
     }
   ],
   "selectedInputs": [
@@ -1855,8 +1855,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 626824,
-      "sha256": "da92fd00b3c2eeb1a7f502eeeb7c9f65d7c1fa09902cf44a7caebd715d6be132"
+      "bytes": 626964,
+      "sha256": "44bd6f9eef1ff1705ca9d151e44c3101784510e95d56fc998f99ef6d771d0bc2"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -3055,8 +3055,8 @@
     },
     {
       "path": "game/couch/coop-actor-layout.mjs",
-      "bytes": 11782,
-      "sha256": "230bbd56731a9fc9f682c92158acca83b133dfb2a9ec4a2bc0f40bcfc855dd78"
+      "bytes": 11786,
+      "sha256": "dabb6801ea8a1ca68c29f0aee67144bbd3ca45b423468d4fa9e780bc85392df6"
     },
     {
       "path": "game/couch/coop-actor-presentation.mjs",
@@ -3240,8 +3240,8 @@
     },
     {
       "path": "game/couch/couch.mjs",
-      "bytes": 211083,
-      "sha256": "60584f5bce2644bc3a7e5d871032190d1b165a61c717b6b09572be584d9e1cb4"
+      "bytes": 211195,
+      "sha256": "65c03eeadd28772f95a8ca7c6f2546400e5c7053efce74670738c9e3f6b92aef"
     },
     {
       "path": "game/couch/creator-team-import.mjs",
@@ -3290,8 +3290,8 @@
     },
     {
       "path": "game/couch/relay-rescue.mjs",
-      "bytes": 295800,
-      "sha256": "68aac8935504adf8c1d5652c0fec2339a4bf8131abe5328dde004979f22d92f5"
+      "bytes": 295921,
+      "sha256": "8ba1fca2e211757230abc144ad52c7fec2a62fd301ab018f2a62d0c2e5214a70"
     },
     {
       "path": "game/couch/start-cue.mjs",
@@ -3575,8 +3575,8 @@
     },
     {
       "path": "game/display-preferences.mjs",
-      "bytes": 9379,
-      "sha256": "a6102531eb2c7a3e043a43c4519f84d85d47ec0c1823e8b6ff3535502ebf695d"
+      "bytes": 9519,
+      "sha256": "55dd4205982f01fa1717682f6701c5d82830562203c0e40003f578588654a710"
     },
     {
       "path": "game/download-catalogue.mjs",
@@ -4115,8 +4115,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1275399,
-      "sha256": "9edeca1c9de48e3420ae54d829e3ad72745fef6ca54f52c0fe862644270b7a7c"
+      "bytes": 1276191,
+      "sha256": "1c901e59dc9248f6b39288388a8e67f5bf7ad7ad0de2ad2e459e72f8e22a3cd8"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -4830,8 +4830,8 @@
     },
     {
       "path": "game/presentation/theme-system.mjs",
-      "bytes": 65878,
-      "sha256": "f1ab57202233decee84e5c8378f85ac58b97e655af233594e5b407d7238d41f0"
+      "bytes": 65901,
+      "sha256": "c3bdb357d05ebe9546d93a27ff994dd677d78f6d4445478e394502264691128a"
     },
     {
       "path": "game/presentation/visual-theme-catalogue.mjs",
@@ -4955,8 +4955,8 @@
     },
     {
       "path": "game/replay-theater/display.mjs",
-      "bytes": 3241,
-      "sha256": "968abd78462a05113a5251982321ca11537fc6d34aadc169c0c5ba88a70ca7ac"
+      "bytes": 3353,
+      "sha256": "b40960602b3ee35ad9acc94ab00ae9a83bfdf5b83b463e68278e194822d73280"
     },
     {
       "path": "game/replay-theater/event-copy.mjs",
@@ -5450,8 +5450,8 @@
     },
     {
       "path": "game/text-size.mjs",
-      "bytes": 251,
-      "sha256": "a2517c4ae10a8283865594c5d04bdcc385733b6813c024ed1c635e05755c717a"
+      "bytes": 538,
+      "sha256": "d91978a8e2c9b710270d8cdb1c4ba257f922e1a75c33b4a174efef19f43b293c"
     },
     {
       "path": "game/touch-controls.mjs",
@@ -6110,8 +6110,8 @@
     },
     {
       "path": "game/ui/field-kit-surfaces.mjs",
-      "bytes": 3756,
-      "sha256": "676ad23d4697089babe755ee7cbccd66368e3d36a990eb384511d6a2311c5c97"
+      "bytes": 3794,
+      "sha256": "c7f84eb2bc28bbcd912b43b4825619f36bc2b7e9c29738a2ae7125ba1d7b0283"
     },
     {
       "path": "game/ui/field-kit-tokens.css",
@@ -6300,8 +6300,8 @@
     },
     {
       "path": "game/ui/global-settings-view.mjs",
-      "bytes": 12960,
-      "sha256": "2338f205a21c22b40ffe396e34a4107fb1bc6d07a857bc85a9b696d450f19f86"
+      "bytes": 13120,
+      "sha256": "d5093589fa380e8cb1805519259e341cc71ac1bccbc08e15912666d5f7030bbf"
     },
     {
       "path": "game/ui/handheld-play.css",
@@ -7039,6 +7039,11 @@
       "sha256": "0d87b3f2f1f561b41b0a7f7002dedacf26ee86e27e13b9d77698940901c32a64"
     },
     {
+      "path": "game/ui/text-size-control.mjs",
+      "bytes": 2759,
+      "sha256": "f0abd0dc0a0edf8a0f725034209275bdb88b07f5c485f1ae6cae36bc4ed3d3a9"
+    },
+    {
       "path": "game/ui/theme-family-controls.mjs",
       "bytes": 65,
       "sha256": "67bb3dcfec5ec1bb7ee74ef3575ce79bf98f40e36809f108c662ccd9de64692b"
@@ -7055,8 +7060,8 @@
     },
     {
       "path": "game/ui/tool-display.mjs",
-      "bytes": 3740,
-      "sha256": "68de5165970a8d78936285f632eb9a25ed653b7d97ac395b6eafb41fc8838b58"
+      "bytes": 3938,
+      "sha256": "8b044118e34012f351198b832c958e12f200c23e122b8cbba3961d113b950d0c"
     },
     {
       "path": "game/ui/touch-steering.css",
@@ -7219,8 +7224,8 @@
     },
     {
       "path": "edition-build.json",
-      "bytes": 181065,
-      "sha256": "d7db0e15d051a5073fa9e4660a00ac23bbbae61a2cd1a5cfcaff6a93545e6d50"
+      "bytes": 181229,
+      "sha256": "8207a48dc28ff25a7e135d1accaa18fdcfe8dc4a299644bbdb89dec4e61eb4ed"
     },
     {
       "path": "edition-catalog.json",
@@ -7244,8 +7249,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 627408,
-      "sha256": "1a121f7f81715aae233cc181a9c5ed004ad3c7edcf10ab73241c117615fc7f4d"
+      "bytes": 627548,
+      "sha256": "9824e8ef755236681180cc2bd0d3575a5643a2acfc0f8fbf8cd1a73ec7d3254e"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -7325,7 +7330,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "22c4ef40239ae54d03c6113486590dfb0fd0d93197c1a066b5bcc3cba064e8cb"
+      "sha256": "08e8dfbadf42607326ad238d61cb3fc91a3ea5e8cc0099102ad830d5a6a4fed9"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -8459,8 +8464,8 @@
     },
     {
       "path": "game/couch/coop-actor-layout.mjs",
-      "bytes": 11782,
-      "sha256": "230bbd56731a9fc9f682c92158acca83b133dfb2a9ec4a2bc0f40bcfc855dd78"
+      "bytes": 11786,
+      "sha256": "dabb6801ea8a1ca68c29f0aee67144bbd3ca45b423468d4fa9e780bc85392df6"
     },
     {
       "path": "game/couch/coop-actor-presentation.mjs",
@@ -8644,8 +8649,8 @@
     },
     {
       "path": "game/couch/couch.mjs",
-      "bytes": 211440,
-      "sha256": "cb374fce7cc9ed958aa95594d79faa20d750811e3de2382f03af93202aa622ff"
+      "bytes": 211552,
+      "sha256": "e006e00e3e7f87231d2eff30cf92dce67baac86d3f93ede0e082c4d6d1480275"
     },
     {
       "path": "game/couch/creator-team-import.mjs",
@@ -8694,8 +8699,8 @@
     },
     {
       "path": "game/couch/relay-rescue.mjs",
-      "bytes": 297995,
-      "sha256": "13b466c80737579c8be8a37c483041a18e9f66c62fcf0beac9699377895fa5e6"
+      "bytes": 298116,
+      "sha256": "403dc696421a715688b84b57ae97b410786ffefc3eabb2f4a2f227f67b5d97a6"
     },
     {
       "path": "game/couch/start-cue.mjs",
@@ -8879,8 +8884,8 @@
     },
     {
       "path": "game/display-preferences.mjs",
-      "bytes": 9383,
-      "sha256": "d9723b2820d1c1a25fd969d1ef9ab55fb5a6870089c3c7811bf5e68cbde22875"
+      "bytes": 9523,
+      "sha256": "f42da9b7df9cc1ddc81f3165e25c5dac7594fdccbd12aa886f1750e4f27aa01c"
     },
     {
       "path": "game/download-catalogue.mjs",
@@ -9409,8 +9414,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 943947,
-      "sha256": "81ba113f163271f11682b820e0d43a0fea7d1dc36140ccf11e49cf372b66780b"
+      "bytes": 944003,
+      "sha256": "b16dd6a9fc9569dcc1b29aac7c2dc6f356fd3c5968302f34ce20128419e3954a"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -10079,8 +10084,8 @@
     },
     {
       "path": "game/presentation/theme-system.mjs",
-      "bytes": 65902,
-      "sha256": "2f81f1917f7ed25043a3e7ac21d9308a6c4c52f0047e9f5f15df4b927ee65bd7"
+      "bytes": 65925,
+      "sha256": "0e832a5df6f5b83a349c25a361a145dc8b84e127225e36edf57110ebb38b9f91"
     },
     {
       "path": "game/presentation/visual-theme-catalogue.mjs",
@@ -10644,8 +10649,8 @@
     },
     {
       "path": "game/text-size.mjs",
-      "bytes": 251,
-      "sha256": "a2517c4ae10a8283865594c5d04bdcc385733b6813c024ed1c635e05755c717a"
+      "bytes": 538,
+      "sha256": "d91978a8e2c9b710270d8cdb1c4ba257f922e1a75c33b4a174efef19f43b293c"
     },
     {
       "path": "game/touch-controls.mjs",
@@ -11274,8 +11279,8 @@
     },
     {
       "path": "game/ui/field-kit-surfaces.mjs",
-      "bytes": 3756,
-      "sha256": "676ad23d4697089babe755ee7cbccd66368e3d36a990eb384511d6a2311c5c97"
+      "bytes": 3794,
+      "sha256": "c7f84eb2bc28bbcd912b43b4825619f36bc2b7e9c29738a2ae7125ba1d7b0283"
     },
     {
       "path": "game/ui/field-kit-tokens.css",
@@ -11459,8 +11464,8 @@
     },
     {
       "path": "game/ui/global-settings-view.mjs",
-      "bytes": 12960,
-      "sha256": "2338f205a21c22b40ffe396e34a4107fb1bc6d07a857bc85a9b696d450f19f86"
+      "bytes": 13120,
+      "sha256": "d5093589fa380e8cb1805519259e341cc71ac1bccbc08e15912666d5f7030bbf"
     },
     {
       "path": "game/ui/handheld-play.css",
@@ -12166,6 +12171,11 @@
       "path": "game/ui/terrain-feedback.mjs",
       "bytes": 1335,
       "sha256": "0d87b3f2f1f561b41b0a7f7002dedacf26ee86e27e13b9d77698940901c32a64"
+    },
+    {
+      "path": "game/ui/text-size-control.mjs",
+      "bytes": 2759,
+      "sha256": "f0abd0dc0a0edf8a0f725034209275bdb88b07f5c485f1ae6cae36bc4ed3d3a9"
     },
     {
       "path": "game/ui/theme-family-controls.mjs",
