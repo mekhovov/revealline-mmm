@@ -1,4 +1,4 @@
-import { t, localizedText } from '../i18n/index.mjs';
+import { t, localizedText, localizedAttribute } from '../i18n/index.mjs';
 import { createTouchPreferences } from '../touch-preferences.mjs';
 
 /** Both local seats use Solo's gesture engine and preference vocabulary. */
@@ -42,7 +42,9 @@ export function attachCouchTouch({
     const instruction = doc.createElement('span');
     instruction.className = 'touch-instruction';
     surface.append(compass, instruction);
-    surface.setAttribute('aria-label', `Player ${Number(pad.dataset.player) + 1} steering area`);
+    localizedAttribute(surface, 'aria-label', () =>
+      t('interface:playerSteeringArea', { player: Number(pad.dataset.player) + 1 }),
+    );
     const indicator = doc.createElement('span');
     indicator.className = 'touch-indicator';
     indicator.hidden = true;
@@ -57,27 +59,27 @@ export function attachCouchTouch({
   for (const [key, title, choices] of [
     [
       'mode',
-      t('interface:steering'),
+      () => t('interface:steering'),
       [
-        ['stick', t('interface:floatingStick')],
-        ['swipe', t('interface:swipe')],
-        ['dpad', t('interface:directionPad')],
+        ['stick', () => t('interface:floatingStick')],
+        ['swipe', () => t('interface:swipe')],
+        ['dpad', () => t('interface:directionPad')],
       ],
     ],
     [
       'size',
-      t('interface:controlSize'),
+      () => t('interface:controlSize'),
       [
-        ['regular', t('interface:regular')],
-        ['large', t('interface:large')],
+        ['regular', () => t('interface:regular')],
+        ['large', () => t('interface:large')],
       ],
     ],
     [
       'opacity',
-      t('interface:visibility'),
+      () => t('interface:visibility'),
       [
-        ['0.55', t('interface:soft')],
-        ['1', t('interface:solid')],
+        ['0.55', () => t('interface:soft')],
+        ['1', () => t('interface:solid')],
       ],
     ],
   ]) {
@@ -89,12 +91,12 @@ export function attachCouchTouch({
       select.max = '1';
       select.step = '0.05';
     }
-    localizedText(label, () => title);
+    localizedText(label, title);
     select.dataset.touchSetting = key;
     for (const [value, text] of key === 'opacity' ? [] : choices) {
       const option = doc.createElement('option');
       option.value = value;
-      localizedText(option, () => text);
+      localizedText(option, text);
       select.append(option);
     }
     select.onchange = () =>
