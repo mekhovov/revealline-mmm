@@ -69,3 +69,5 @@ Eleven original packed catalogs, recovery records and replay-diagnostic inputs a
 Public issue, comment and release originals affected by the migration are preserved in `content/archive/hosted-migration-provenance-20261020/`. The receipt in `migration/hosted-provenance-originals-receipt.json` records their exact hashes and the original historical intake record. These provenance records stay outside the playable app.
 
 Eight generated native chapter package originals from historical releases are retained in `content/archive/release-native-originals-20261020/`, with exact published paths, release tags and hashes in `migration/native-release-originals-receipt.json`. They preserve the original package identities without exposing historical launch routes in the app.
+
+Original historical file aliases corrected during the final history audit are preserved in `content/archive/history-alias-originals-20261020/`. `migration/history-alias-originals-receipt.json` records their exact original Git identities and byte hashes. These records remain outside the playable app.

@@ -1,0 +1,268 @@
+{
+  "format": "revealline-history-alias-originals.v1",
+  "scope": "Exact original records whose duplicate paths required additional historical projections. These immutable source and evidence snapshots stay outside the playable app; later derived records do not replace their original hashes.",
+  "capturedAt": "2026-10-20T09:07:42.541909+00:00",
+  "items": [
+    {
+      "sourcePath": "publishing/pages-controller/evidence/archive-18/append-v0581/job-104711755143.raw.log",
+      "gitBlob": "949191b567daaec1b651ac4168fcbf73e570c1be",
+      "sha256": "1be27ab22efc6046fa1b0315bc61b31e395eb1df6c1c04887fe022fa48254519",
+      "bytes": 192722,
+      "archive": "content/archive/history-alias-originals-20261020/1be27ab22efc6046fa1b0315bc61b31e395eb1df6c1c04887fe022fa48254519.gz",
+      "archiveSHA256": "a4f2515822681847b57e0ea7fe4bcb61528d65234d1741c549a6b1a80b8075fe",
+      "archiveBytes": 38241
+    },
+    {
+      "sourcePath": "publishing/pages-controller/evidence/archive-51-v0821/deploy-run.log",
+      "gitBlob": "aa615c92737bd91908c5020638dda9d48001ad12",
+      "sha256": "cba4052777587edcd643b9e1433d5dd72ee2b929fdae4ad3ab4e67fd2e109113",
+      "bytes": 236401,
+      "archive": "content/archive/history-alias-originals-20261020/cba4052777587edcd643b9e1433d5dd72ee2b929fdae4ad3ab4e67fd2e109113.gz",
+      "archiveSHA256": "d72d8c1e18ad1527143b63d31a3f6410922bac5a5fc9e489b5c16ec8184a8402",
+      "archiveBytes": 32615
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/actual-discard-7438d14d6-fixture/credential-1.html.txt",
+      "gitBlob": "42f20c5a568a1765bfd8c5fdd980b7f20274233d",
+      "sha256": "e5c8229a627fcaecf7568c24d2223a8c732a492b4929219e6239285fcf2630be",
+      "bytes": 148785,
+      "archive": "content/archive/history-alias-originals-20261020/e5c8229a627fcaecf7568c24d2223a8c732a492b4929219e6239285fcf2630be.gz",
+      "archiveSHA256": "fe2537da88dc0e716e5b1b503a2d09b5854e9b4b8311edbbc8aed826f83245e9",
+      "archiveBytes": 29091
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/actual-discard-7438d14d6-fixture/credential-14.html.txt",
+      "gitBlob": "e4254dade1ed160862eec7ac83fcf2ee5932237a",
+      "sha256": "ad28d7dfbb98d421c919635c551c469d8004139e79970fcc0ce7f47df88679f7",
+      "bytes": 17659,
+      "archive": "content/archive/history-alias-originals-20261020/ad28d7dfbb98d421c919635c551c469d8004139e79970fcc0ce7f47df88679f7.gz",
+      "archiveSHA256": "8fc4931f3b9c10571cba868581ab88889d8f480be4e9f7bd8a9c092c40c0fed5",
+      "archiveBytes": 4465
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/actual-discard-7438d14d6-fixture/credential-6.html.txt",
+      "gitBlob": "fb491d8a34e48f860cfd80987f69b9f73dc98706",
+      "sha256": "29e74ec48d464393b04ce34fbdc9b3f18f2d73b1b1e100038699ea740f2ebd28",
+      "bytes": 17621,
+      "archive": "content/archive/history-alias-originals-20261020/29e74ec48d464393b04ce34fbdc9b3f18f2d73b1b1e100038699ea740f2ebd28.gz",
+      "archiveSHA256": "d750105ecadf1dccf1139eaf7c536991937dff3f1f480e80ce6244c8e011c589",
+      "archiveBytes": 4561
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/actual-discard-native-emitted-693947ed1-fixture/credential-1.html.txt",
+      "gitBlob": "1e81ecd8b531e10a261e8591fb00cbd0b8a08ffb",
+      "sha256": "f7b9763619eb424bf737ee3e676695b5e364c45164deb5178aa91b9294b6ccac",
+      "bytes": 148287,
+      "archive": "content/archive/history-alias-originals-20261020/f7b9763619eb424bf737ee3e676695b5e364c45164deb5178aa91b9294b6ccac.gz",
+      "archiveSHA256": "09cdba5738916b4502970ac9491668f1ce4b7878ae0a44def757115db5a48a46",
+      "archiveBytes": 29005
+    },
+    {
+      "sourcePath": "docs/qualification/shared-demos/webkit-blob-owner-emitted-preparation-71a0ac38a/game__app.mjs.emitted.txt",
+      "gitBlob": "8261fa5e5e44b520983706d15ea237b2f9f513a0",
+      "sha256": "8110efdf57db9a88236c0c293451db4ac3e4ea9369036bd538d15164f51d8ba7",
+      "bytes": 492495,
+      "archive": "content/archive/history-alias-originals-20261020/8110efdf57db9a88236c0c293451db4ac3e4ea9369036bd538d15164f51d8ba7.gz",
+      "archiveSHA256": "dd2a210e6935d4900982cf102ee2787cbe9c380135be9409f5db0952bba7aa83",
+      "archiveBytes": 129814
+    },
+    {
+      "sourcePath": "scripts/test-optional-fpv-package.mjs",
+      "gitBlob": "6d8bb10f94d712a7d2c4d0c4894d7906cecc78cf",
+      "sha256": "5a744cc5cd4bdf71cddce76f61f9c9163ec50004d4385133042e11ee21e03617",
+      "bytes": 27958,
+      "archive": "content/archive/history-alias-originals-20261020/5a744cc5cd4bdf71cddce76f61f9c9163ec50004d4385133042e11ee21e03617.gz",
+      "archiveSHA256": "651e72ba60be6bb8bc863aaad1003908cfb862fdf29e3bc1debb9cfe850e6830",
+      "archiveBytes": 6821
+    },
+    {
+      "sourcePath": "game/build-config.json",
+      "gitBlob": "f911701b9be5a190e9678df71da718171402431b",
+      "sha256": "0733b61462a6eccdcd1853b32ff13ac21d8847a7f993a9bf7fd0a33ba74036e1",
+      "bytes": 19616,
+      "archive": "content/archive/history-alias-originals-20261020/0733b61462a6eccdcd1853b32ff13ac21d8847a7f993a9bf7fd0a33ba74036e1.gz",
+      "archiveSHA256": "9ce0f85c6921d1b50850d48c8279cc6e516525a93fb960a9854eba3c9db480aa",
+      "archiveBytes": 3691
+    },
+    {
+      "sourcePath": "game/app.mjs",
+      "gitBlob": "046ba7c0e4a3781faf809f1bb846956c62ac2ff7",
+      "sha256": "8549a1dd8665148fb2aed7e2e831f7a1f6e176477f1d4ae307e308b496b278df",
+      "bytes": 544829,
+      "archive": "content/archive/history-alias-originals-20261020/8549a1dd8665148fb2aed7e2e831f7a1f6e176477f1d4ae307e308b496b278df.gz",
+      "archiveSHA256": "91dd6daa2c5046b89c61d416bc2f1115d29371c0c7149565252c84136b16a4ef",
+      "archiveBytes": 125065
+    },
+    {
+      "sourcePath": "docs/enemy-catalog.md",
+      "gitBlob": "c8d63df610caa0960e137e54c9c924318a4f6f46",
+      "sha256": "a85fe032af8f5cae75602b645c64e46d8420acb1d4281d36461286c3390ac286",
+      "bytes": 11170,
+      "archive": "content/archive/history-alias-originals-20261020/a85fe032af8f5cae75602b645c64e46d8420acb1d4281d36461286c3390ac286.gz",
+      "archiveSHA256": "f7d9c3241938965186b2f86b6e13e3981228f071ad5893a0e5c081f187cec56a",
+      "archiveBytes": 5028
+    },
+    {
+      "sourcePath": "docs/menu-scenes.md",
+      "gitBlob": "b064050ba6caa167e5fbf48d3f020bb12e33e1d8",
+      "sha256": "15735e10c0ecaf6b4f54a8a2f4180819e80562f16699b695344efaccbd3e1714",
+      "bytes": 18896,
+      "archive": "content/archive/history-alias-originals-20261020/15735e10c0ecaf6b4f54a8a2f4180819e80562f16699b695344efaccbd3e1714.gz",
+      "archiveSHA256": "9f0bd78b82f14492655b0a9b360c74c82bc43fd8446832d84794251c7ba1b7ab",
+      "archiveBytes": 6728
+    },
+    {
+      "sourcePath": "scripts/prepare-menu-scenes.py",
+      "gitBlob": "23ed990a3c6baaaea6a5d9f52dda3c7b5e3261d4",
+      "sha256": "320b8fdfb4144ac97c98872e1d7fb7c887ccb9cf9aaf1d4498203b7e06b0cfdb",
+      "bytes": 5217,
+      "archive": "content/archive/history-alias-originals-20261020/320b8fdfb4144ac97c98872e1d7fb7c887ccb9cf9aaf1d4498203b7e06b0cfdb.gz",
+      "archiveSHA256": "e06ee4fa1524bd44af5bfeeb411d46c6473cdfddd6fbf3b256b48d78136597b2",
+      "archiveBytes": 1974
+    },
+    {
+      "sourcePath": "docs/verification/historical-proposal-review-2026-09-29/branch-proposals/patches/classic-race-tour-game-integration.patch",
+      "gitBlob": "e229461b7944afbf4ee2ee34c8c09915272cf0cd",
+      "sha256": "9725dc506a34d0d2f9db69c8b54e37f1b3611fce03ca0452021e9313b71f526b",
+      "bytes": 78569,
+      "archive": "content/archive/history-alias-originals-20261020/9725dc506a34d0d2f9db69c8b54e37f1b3611fce03ca0452021e9313b71f526b.gz",
+      "archiveSHA256": "54e999282e924de94e6a4bb18da7ee9d856212a668b72a86169f0b47e6fc5ecc",
+      "archiveBytes": 19907
+    },
+    {
+      "sourcePath": "docs/verification/local-release-review-2026-09-29/primary-review.md",
+      "gitBlob": "8b57917d9d419fd50fe5259899d3ca321c3dd190",
+      "sha256": "ab36d07084667b5dc78dfed2089273e9089a3be61faad004fa9563e9847fb52d",
+      "bytes": 45297,
+      "archive": "content/archive/history-alias-originals-20261020/ab36d07084667b5dc78dfed2089273e9089a3be61faad004fa9563e9847fb52d.gz",
+      "archiveSHA256": "434f4c50049e4bed3dab9f2d7ae2d80f15d0d4d8fefe00515cb4358274de831b",
+      "archiveBytes": 11024
+    },
+    {
+      "sourcePath": "docs/verification/local-release-review-2026-09-29/refresh.json",
+      "gitBlob": "6c5b7ce47355afd4fa4df3e727c27422f4b77503",
+      "sha256": "6778f43a6664a536fb2cecba14ccc83b956c86d230393e221b334e710324c894",
+      "bytes": 201250,
+      "archive": "content/archive/history-alias-originals-20261020/6778f43a6664a536fb2cecba14ccc83b956c86d230393e221b334e710324c894.gz",
+      "archiveSHA256": "2df54b26721d7e1d2aade39f75637efdab743f2ca55d2074e43053c036f68497",
+      "archiveBytes": 22581
+    },
+    {
+      "sourcePath": "docs/verification/local-release-review-2026-09-29/remaining-branches.json",
+      "gitBlob": "b3b04950ca3801140e0ee404944a5fff3b290b31",
+      "sha256": "e0232a46502a732544491a479b34bddb927bad992a802b4faf5ddaf5243433bd",
+      "bytes": 111718,
+      "archive": "content/archive/history-alias-originals-20261020/e0232a46502a732544491a479b34bddb927bad992a802b4faf5ddaf5243433bd.gz",
+      "archiveSHA256": "97e05b6ce4a07369e24dff2344f74b31ac818f50872b02cb9a4eea89a7fc91c5",
+      "archiveBytes": 17789
+    },
+    {
+      "sourcePath": "docs/verification/local-release-review-2026-09-29/source-intake-update.md",
+      "gitBlob": "921e6806729634e50aa5eb30a2ae379e2da4523a",
+      "sha256": "35ddfbe5be261c1d052c408d062951aef3938e079de2a8e939e64029f734fcb5",
+      "bytes": 10713,
+      "archive": "content/archive/history-alias-originals-20261020/35ddfbe5be261c1d052c408d062951aef3938e079de2a8e939e64029f734fcb5.gz",
+      "archiveSHA256": "f3219abaa4ff0d914aa59cb207ac0c63b9176a76f9e438ccaf7c5469e095efd1",
+      "archiveBytes": 4427
+    },
+    {
+      "sourcePath": "docs/verification/local-release-review-2026-09-29/worktree-inventory.json",
+      "gitBlob": "6e9895a5702b2658f7da5c510173b1d8ce485be7",
+      "sha256": "824bb5e2afc3a9d1d9e00c9adb15806eb826db0bbd7919788bbd8c6908de8873",
+      "bytes": 906266,
+      "archive": "content/archive/history-alias-originals-20261020/824bb5e2afc3a9d1d9e00c9adb15806eb826db0bbd7919788bbd8c6908de8873.gz",
+      "archiveSHA256": "c4eb1c3052813b2ecbcb60739c05f7c4ec75d9dd53269bfaee12dcd81e05b1e4",
+      "archiveBytes": 78328
+    },
+    {
+      "sourcePath": "docs/plan-status-2026-09-28.md",
+      "gitBlob": "545d2c40bba30311abeb0692360b8826c8e1a74f",
+      "sha256": "10623c4752b504bf2cad7de4b6e3e827c3cddf69df6d5ce707fcdde5be9989d7",
+      "bytes": 28738,
+      "archive": "content/archive/history-alias-originals-20261020/10623c4752b504bf2cad7de4b6e3e827c3cddf69df6d5ce707fcdde5be9989d7.gz",
+      "archiveSHA256": "31a4e79ec47edcbd580a17489084f45085337502ed406a5d58413f4dcaef9454",
+      "archiveBytes": 10678
+    },
+    {
+      "sourcePath": "working-tree/docs/enemy-catalog.md",
+      "gitBlob": "1418fbb52becc8f22b5c7c42554cb0f832d2e77b",
+      "sha256": "6b3d8d722ad91d52f90279823cb6dd69541814b79f99321b734fc6be747d3c01",
+      "bytes": 12557,
+      "archive": "content/archive/history-alias-originals-20261020/6b3d8d722ad91d52f90279823cb6dd69541814b79f99321b734fc6be747d3c01.gz",
+      "archiveSHA256": "27225cdd0a70e19d28e9176983a74d695de70aefc2b58416298ebce3a5821967",
+      "archiveBytes": 5568
+    },
+    {
+      "sourcePath": "working-tree/docs/cross-mode-execution.md",
+      "gitBlob": "035bda5d286aab211c6241e064b5a249536a0a5e",
+      "sha256": "16ba55e45b8a1a2331c2b56e363e04dead143e4314e8999b77bf9938c7445f74",
+      "bytes": 69279,
+      "archive": "content/archive/history-alias-originals-20261020/16ba55e45b8a1a2331c2b56e363e04dead143e4314e8999b77bf9938c7445f74.gz",
+      "archiveSHA256": "d56ac0c2c65084c74d86ef2e22626181cfc60257579655cbbd7e387157e2cf14",
+      "archiveBytes": 23546
+    },
+    {
+      "sourcePath": "authoring/library/community-art-cohort-v1/README.md",
+      "gitBlob": "dbace8c109fc8984dc55beb28ee680bb66039461",
+      "sha256": "8258bce3e286b5202cc8ae01aeda48839acb5cf27b196f5daf4612a6be3f7e9d",
+      "bytes": 4550,
+      "archive": "content/archive/history-alias-originals-20261020/8258bce3e286b5202cc8ae01aeda48839acb5cf27b196f5daf4612a6be3f7e9d.gz",
+      "archiveSHA256": "556420f0d3659cdded984451caf1da70a1e69ce4e3b437f498a41b6977d95dcf",
+      "archiveBytes": 2043
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-animation-director/SKILL.md",
+      "gitBlob": "c4adc7107e6e888c6cbb1ef35149a1c4e4cc5da6",
+      "sha256": "c682189d1d3973b698882edbb9d24f46bf576a5a5e94db06bbc95ede1cb30d63",
+      "bytes": 30891,
+      "archive": "content/archive/history-alias-originals-20261020/c682189d1d3973b698882edbb9d24f46bf576a5a5e94db06bbc95ede1cb30d63.gz",
+      "archiveSHA256": "5edf1465a38f7582a8418cdf10f609a4b8d0973a3f95f1d142fcda0a20387020",
+      "archiveBytes": 12296
+    },
+    {
+      "sourcePath": "game/app.mjs",
+      "gitBlob": "ac2d7e1ba3672f813b4cb7f47c05b150cce07859",
+      "sha256": "08b0575d825c323f7475efe2a89b45920f8c0ba55ce5f7c1944c66017eb66525",
+      "bytes": 395470,
+      "archive": "content/archive/history-alias-originals-20261020/08b0575d825c323f7475efe2a89b45920f8c0ba55ce5f7c1944c66017eb66525.gz",
+      "archiveSHA256": "7433fa59c23589dfdc9bec9af4e44a2ee2398a68fe1e5d550352a6e44b8fc456",
+      "archiveBytes": 93976
+    },
+    {
+      "sourcePath": "game/app.mjs",
+      "gitBlob": "d716cc1ca2f059c3d358a5929fdfee8d1257bb15",
+      "sha256": "b6c744b9b4db18389d72cbde9e17a3994fb5c751a527f61616d27dcff2ddb20b",
+      "bytes": 396113,
+      "archive": "content/archive/history-alias-originals-20261020/b6c744b9b4db18389d72cbde9e17a3994fb5c751a527f61616d27dcff2ddb20b.gz",
+      "archiveSHA256": "5e5d00fb1cec8f68f5dbd42f3b6d31293d023ed646b038b53c83c29d9686044d",
+      "archiveBytes": 94127
+    },
+    {
+      "sourcePath": "authoring/skills/xonix-asset-creator/SKILL.md",
+      "gitBlob": "27aac7ef895aba98d781d419881917dffc687370",
+      "sha256": "2a99d78247e0a5c8899c90dec13679ddccae074974c3ee69df16c5a9f2ed8a19",
+      "bytes": 23574,
+      "archive": "content/archive/history-alias-originals-20261020/2a99d78247e0a5c8899c90dec13679ddccae074974c3ee69df16c5a9f2ed8a19.gz",
+      "archiveSHA256": "b43cace3bfc28f32123df7f9cc5fecf91faa08f29992d6fb83c26b342618d86d",
+      "archiveBytes": 9312
+    },
+    {
+      "sourcePath": "docs/enemy-catalog.md",
+      "gitBlob": "f7d752e8e2eac9415caed34c254fb5353d9d54d9",
+      "sha256": "a2586e600ee95fead5ee40d88da4ba71e5970734a4d83947b44dc343323a1b7f",
+      "bytes": 13791,
+      "archive": "content/archive/history-alias-originals-20261020/a2586e600ee95fead5ee40d88da4ba71e5970734a4d83947b44dc343323a1b7f.gz",
+      "archiveSHA256": "80f736a4b3469b9178f688d746ad5e489c9a3c2a432830c3ee1f1b5cfac8c3e4",
+      "archiveBytes": 5982
+    },
+    {
+      "sourcePath": "authoring/motion-lab/README.md",
+      "gitBlob": "2e0036f09e77fcced75a18521b77dbb01b1d0596",
+      "sha256": "f921bddc21917fd5c19865aee1f66abb8703dddef6806807f411d9d48c2c7e58",
+      "bytes": 43445,
+      "archive": "content/archive/history-alias-originals-20261020/f921bddc21917fd5c19865aee1f66abb8703dddef6806807f411d9d48c2c7e58.gz",
+      "archiveSHA256": "37039b4aaaeb58b610deac8371d89bf412c19367ec5ce1c18871a76a64d1864f",
+      "archiveBytes": 15851
+    }
+  ]
+}
