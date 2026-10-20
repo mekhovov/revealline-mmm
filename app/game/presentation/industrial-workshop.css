@@ -413,7 +413,7 @@
   box-sizing: border-box;
   padding: 8px 14px;
   font-family: var(--iw-font-ui);
-  font-size: var(--iw-text-size);
+  font-size: calc(var(--iw-text-size) * var(--overflight-text-scale, 1));
   font-weight: 600;
   line-height: 1.35;
   text-shadow: none;
@@ -584,7 +584,7 @@
   border-image: none;
   border-radius: 0;
   font-family: var(--iw-font-ui);
-  font-size: var(--iw-text-size);
+  font-size: calc(var(--iw-text-size) * var(--overflight-text-scale, 1));
   accent-color: var(--iw-accent);
   box-shadow: var(--ui-inset-depth, inset 0 1px 2px #0003);
 }
@@ -957,7 +957,7 @@
 }
 [data-theme-text-size='large']:not([data-interface-theme='legacy'])
   :where(p, label, button, select, input, textarea, .micro-note) {
-  font-size: max(18px, 1em);
+  font-size: max(calc(18px * var(--overflight-text-scale, 1)), 1em);
 }
 
 .theme-family-controls {
@@ -1141,7 +1141,7 @@
   line-height: 1.2;
 }
 .theme-preview-card small {
-  font-size: 13px;
+  font-size: calc(13px * var(--overflight-text-scale, 1));
   font-weight: 400;
   line-height: 1.32;
   opacity: 0.9;
@@ -1205,7 +1205,7 @@
   background: var(--iw-ink);
   color: var(--iw-text);
   font-family: var(--iw-font-ui);
-  font-size: var(--iw-text-size, 16px);
+  font-size: calc(var(--iw-text-size, 16px) * var(--overflight-text-scale, 1));
   text-align: left;
   line-height: 1.35;
   isolation: isolate;
@@ -1294,7 +1294,7 @@
 }
 .theme-material-preview[data-preview-compact='true'] {
   padding: 8px;
-  font-size: 12px;
+  font-size: calc(12px * var(--overflight-text-scale, 1));
   pointer-events: none;
 }
 .theme-material-preview[data-preview-compact='true'] .theme-material-panel {
@@ -1312,7 +1312,7 @@
   gap: 6px;
 }
 .theme-material-preview[data-theme-text-size='large'] {
-  font-size: 16px;
+  font-size: calc(16px * var(--overflight-text-scale, 1));
 }
 .theme-material-preview[data-theme-text-size='large'] .theme-material-field {
   grid-template-columns: 1fr;
@@ -1499,7 +1499,7 @@
   color: var(--iw-on-accent);
   background: var(--iw-accent);
   border-color: var(--iw-accent);
-  font-size: 0.75rem;
+  font-size: calc(0.75rem * var(--overflight-text-scale, 1));
 }
 [data-theme-styled='true'] .soundtrack-now-card::after {
   background: var(--iw-accent);
@@ -1577,7 +1577,7 @@
   gap: 10px;
 }
 [data-theme-styled='true'] :where(.soundtrack-dialog, .optional-worlds-dialog) .micro-note {
-  font-size: var(--fk-text-secondary);
+  font-size: calc(var(--fk-text-secondary) * var(--overflight-text-scale, 1));
 }
 /* Session transport is one control group. Its volume label must not run into
    the last button when a long translation or enlarged text wraps the row. */

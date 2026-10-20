@@ -363,7 +363,7 @@ export function mountContinuousPlayControls({
     const style = doc.createElement('style');
     style.id = 'continuous-play-style';
     style.textContent = `
-.continuous-play-controls {display:flex;align-items:center;flex-wrap:wrap;gap:.35rem .65rem;min-width:0;max-width:100%;margin:0;font-size:.85rem;}
+.continuous-play-controls {display:flex;align-items:center;flex-wrap:wrap;gap:.35rem .65rem;min-width:0;max-width:100%;margin:0;font-size:calc(.85rem * var(--overflight-text-scale, 1));}
 .continuous-play-controls[hidden] {display:none!important;}
 .continuous-play-controls p {margin:0;overflow-wrap:anywhere;}
 .continuous-play-controls .button {min-height:44px;padding:.35rem .65rem;font-size:inherit;}

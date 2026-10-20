@@ -48,7 +48,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     color: var(--fk-muted, var(--muted, currentColor));
-    font-size: 0.8rem;
+    font-size: calc(0.8rem * var(--overflight-text-scale, 1));
   }
   .quick-music-controls button {
     flex: 1 1 auto;

@@ -27,7 +27,7 @@
   }
   #install-offline-dialog .install-offline-header h2 {
     flex: 1;
-    font-size: 1.1rem;
+    font-size: calc(1.1rem * var(--overflight-text-scale, 1));
     margin: 0;
   }
   .install-offline-header button {

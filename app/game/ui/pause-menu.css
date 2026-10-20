@@ -22,7 +22,7 @@ body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-section {
 body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-section > h3 {
   margin: 0;
   color: var(--fk-muted, #bec6c5);
-  font: 600 11px/1.2 var(--fk-font-ui, sans-serif);
+  font: 600 calc(11px * var(--overflight-text-scale, 1)) / 1.2 var(--fk-font-ui, sans-serif);
   text-transform: uppercase;
   letter-spacing: 0.09em;
 }
@@ -46,7 +46,7 @@ body :is(.shared-pause-menu, #shared-pause-menu) :is(button, a, summary) {
   height: auto;
   margin: 0;
   padding: 8px 6px;
-  font-size: 14px;
+  font-size: calc(14px * var(--overflight-text-scale, 1));
   line-height: 1.25;
   text-align: center;
   white-space: normal;
@@ -56,7 +56,11 @@ body :is(.shared-pause-menu, #shared-pause-menu) :is(button, a, summary) {
 body :is(.shared-pause-menu, #shared-pause-menu) [data-pause-group='missions'] :is(button, a) {
   flex-direction: column;
   gap: 4px;
-  font-size: clamp(11px, 2.8vw, 14px);
+  font-size: clamp(
+    calc(11px * var(--overflight-text-scale, 1)),
+    calc(2.8vw * var(--overflight-text-scale, 1)),
+    calc(14px * var(--overflight-text-scale, 1))
+  );
   white-space: nowrap;
   min-height: 58px;
 }
@@ -138,7 +142,7 @@ body[data-text-size='large']
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 body[data-text-size='large'] :is(.shared-pause-menu, #shared-pause-menu) :is(button, a, summary) {
-  font-size: 20px;
+  font-size: calc(20px * var(--overflight-text-scale, 1));
 }
 
 body.field-kit[data-coop-paused='true'] #coop-overlay {
@@ -166,7 +170,7 @@ body.field-kit[data-coop-paused='true'] #coop-overlay .overlay-actions {
 body.field-kit[data-coop-paused='true'] #coop-overlay-title,
 body.field-kit[data-couch-status='paused'] #race-title {
   margin: 0 0 12px;
-  font: 600 18px/1.25 var(--fk-font-ui, sans-serif);
+  font: 600 calc(18px * var(--overflight-text-scale, 1)) / 1.25 var(--fk-font-ui, sans-serif);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -180,7 +184,7 @@ body.field-kit[data-coop-paused='true'] #coop-pause-core:empty {
   }
   body :is(.shared-pause-menu, #shared-pause-menu) [data-pause-group='missions'] :is(button, a) {
     padding-inline: 2px;
-    font-size: 11px;
+    font-size: calc(11px * var(--overflight-text-scale, 1));
   }
 }
 
@@ -259,13 +263,13 @@ body :is(.shared-pause-menu, #shared-pause-menu) .pause-command-notice {
   border: 1px solid var(--fk-line, #46504f);
   background: transparent !important;
   color: var(--fk-muted, #bec6c5) !important;
-  font-size: 12px;
+  font-size: calc(12px * var(--overflight-text-scale, 1));
 }
 body[data-text-size='large']
   :is(.shared-pause-menu, #shared-pause-menu)
   [data-pause-group='missions']
   :is(button, a) {
-  font-size: 20px;
+  font-size: calc(20px * var(--overflight-text-scale, 1));
   white-space: normal;
 }
 @media (forced-colors: active) {

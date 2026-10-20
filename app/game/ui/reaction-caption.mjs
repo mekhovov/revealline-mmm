@@ -28,7 +28,7 @@ export function renderResultReactionCaption(node, line, options, enabled, locale
   // Result surfaces also have legacy footnote rules; the explicit caption
   // preference takes precedence without exposing a hidden parent surface.
   node.style.display = node.hidden ? 'none' : 'block';
-  node.style.fontSize = `${options.scale}rem`;
+  node.style.fontSize = `calc(${options.scale}rem * var(--overflight-text-scale, 1))`;
   node.style.lineHeight = '1.45';
   node.style.color = 'var(--fk-text, #f1f5fa)';
   node.style.background = options.background ? 'var(--fk-panel, #172126)' : 'transparent';

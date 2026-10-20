@@ -25,23 +25,30 @@ export function renderTextSizeFallback(container, desired, { locale } = {}) {
   }
 }
 
-/** Render existing desired intent without making an unqualified size selectable.
- * This view never saves, dispatches change or moves keyboard focus. */
-export function renderTextSizeControl(control, desired, { locale } = {}) {
+/** Only an opted-in host offers the additional size; other hosts retain intent
+ * as a disabled choice. Never save, dispatch or move keyboard focus. */
+export function renderTextSizeControl(control, desired, { locale, extraLarge = false } = {}) {
   resolveTextSize(desired);
   if (!control) return;
   let retained = control.querySelector('[data-text-size-retained]');
   let notice = notices.get(control);
-  if (desired === 'extra-large') {
+  if (extraLarge || desired === 'extra-large') {
     if (!retained) {
       retained = control.ownerDocument.createElement('option');
       retained.value = 'extra-large';
-      retained.disabled = true;
       retained.dataset.textSizeRetained = 'true';
       control.append(retained);
     }
-    localizedText(retained, () => t('interface:textSizeCompatibility.retained', { lng: locale }));
-    if (!notice) {
+    retained.disabled = !extraLarge;
+    localizedText(retained, () =>
+      t(
+        extraLarge
+          ? 'interface:textSizeCompatibility.extraLarge'
+          : 'interface:textSizeCompatibility.retained',
+        { lng: locale },
+      ),
+    );
+    if (!notice && !extraLarge) {
       notice = control.ownerDocument.createElement('span');
       notice.id = `${control.id || `text-size-${++nextNotice}`}-fallback`;
       notice.className = 'micro-note';
@@ -49,13 +56,19 @@ export function renderTextSizeControl(control, desired, { locale } = {}) {
       control.after(notice);
       notices.set(control, notice);
     }
-    localizedText(notice, () => t('interface:textSizeCompatibility.fallback', { lng: locale }));
-    notice.hidden = false;
+    if (notice) {
+      localizedText(notice, () => t('interface:textSizeCompatibility.fallback', { lng: locale }));
+      notice.hidden = extraLarge;
+    }
     const descriptions = new Set(
       (control.getAttribute('aria-describedby') ?? '').split(/\s+/).filter(Boolean),
     );
-    descriptions.add(notice.id);
-    control.setAttribute('aria-describedby', [...descriptions].join(' '));
+    if (notice) {
+      if (extraLarge) descriptions.delete(notice.id);
+      else descriptions.add(notice.id);
+    }
+    if (descriptions.size) control.setAttribute('aria-describedby', [...descriptions].join(' '));
+    else control.removeAttribute('aria-describedby');
   } else {
     retained?.remove();
     if (notice) {

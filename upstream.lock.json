@@ -924,9 +924,9 @@
     ]
   },
   "repository": "mekhovov/revealline",
-  "requestedRef": "2a5fd3d3d",
-  "commit": "2a5fd3d3def34c6defa67187ac5bf9f46d96f45d",
-  "tree": "06288b8804406d2d4d99ad9fc3a0d0c932db7783",
+  "requestedRef": "1db5ca9d16b9473bd814e44241d044877eb391fb",
+  "commit": "1db5ca9d16b9473bd814e44241d044877eb391fb",
+  "tree": "3fce3de541dc84c9c30b03cd4a7203e94c7240b6",
   "upstreamVersion": "0.151.1",
   "editionId": "coupa-all",
   "brandId": "coupa",
@@ -1418,8 +1418,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1275739,
-      "sha256": "e57d9f2aadb8f39cef7c2e2dd9821ea2a2ce8ebcf2bac692aa0659eb3f659fec"
+      "bytes": 1275851,
+      "sha256": "0839253f847baad6ece6a66129692405ed62a11b73b2ce08d164c08d00209df4"
     },
     {
       "path": "game/i18n/index.mjs",
@@ -1613,8 +1613,8 @@
     },
     {
       "path": "game/presentation/theme-system.mjs",
-      "bytes": 65901,
-      "sha256": "c3bdb357d05ebe9546d93a27ff994dd677d78f6d4445478e394502264691128a"
+      "bytes": 66046,
+      "sha256": "8cdf2fd6bdeffc745ae851c33614c42d963fc5491d6df5e8193d1b9a6e545f7a"
     },
     {
       "path": "game/progress.mjs",
@@ -1698,8 +1698,8 @@
     },
     {
       "path": "game/text-size.mjs",
-      "bytes": 538,
-      "sha256": "d91978a8e2c9b710270d8cdb1c4ba257f922e1a75c33b4a174efef19f43b293c"
+      "bytes": 558,
+      "sha256": "d8043014ba7ac0ed31d9eef2677f1e0ba221e046c27263525cdac3f3baa9af3e"
     },
     {
       "path": "game/touch-controls.mjs",
@@ -1818,8 +1818,8 @@
     },
     {
       "path": "scripts/refresh-theme-bootstrap.mjs",
-      "bytes": 12099,
-      "sha256": "8b0769834e00af66991aaacdb3640aaecd0cb1f5d516deadede79d3a3247d0a6"
+      "bytes": 12375,
+      "sha256": "c65e632a46ff7c2a83977388885a6c5c48851548e9845f16e11451deb44c7b44"
     }
   ],
   "selectedInputs": [
@@ -1835,8 +1835,8 @@
     },
     {
       "path": "game/access-gate.css",
-      "bytes": 2233,
-      "sha256": "18a5079bf8211a4546db46ee76c518fcdef2ce24ea5fb51efb9b6e8a27b632bd"
+      "bytes": 2419,
+      "sha256": "ea3043ceb9a40d057ace74ea8d77b5beb536189563c763cd677855e4b413d511"
     },
     {
       "path": "game/access-gate.mjs",
@@ -3570,8 +3570,8 @@
     },
     {
       "path": "game/display-preferences.mjs",
-      "bytes": 9519,
-      "sha256": "55dd4205982f01fa1717682f6701c5d82830562203c0e40003f578588654a710"
+      "bytes": 9573,
+      "sha256": "5dd336cc6128aaeaeec7245b9d92616ebd855dc2c578c1538f6c6f0d5658ac7e"
     },
     {
       "path": "game/download-catalogue.mjs",
@@ -4110,8 +4110,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 1276099,
-      "sha256": "79acb9b18da0700689b257c7618554db2a40e46aba32d74e6ccf1cc8d84437f3"
+      "bytes": 1276159,
+      "sha256": "19852da397d397f6ed2f0a4c14b780e3efc6145176eee486018535d3e2937d01"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -4735,8 +4735,8 @@
     },
     {
       "path": "game/presentation/industrial-workshop.css",
-      "bytes": 104931,
-      "sha256": "91ce430661a02939b276e069559cc767978275bca24b32a5349a2d6a621bb00d"
+      "bytes": 105291,
+      "sha256": "55664f1a4361649c3a76c848221007abda6eceb72d61801a0b19046868dfa1b8"
     },
     {
       "path": "game/presentation/journey-actor-materials.mjs",
@@ -4825,8 +4825,8 @@
     },
     {
       "path": "game/presentation/theme-system.mjs",
-      "bytes": 65901,
-      "sha256": "c3bdb357d05ebe9546d93a27ff994dd677d78f6d4445478e394502264691128a"
+      "bytes": 66046,
+      "sha256": "8cdf2fd6bdeffc745ae851c33614c42d963fc5491d6df5e8193d1b9a6e545f7a"
     },
     {
       "path": "game/presentation/visual-theme-catalogue.mjs",
@@ -5440,8 +5440,8 @@
     },
     {
       "path": "game/text-size.mjs",
-      "bytes": 538,
-      "sha256": "d91978a8e2c9b710270d8cdb1c4ba257f922e1a75c33b4a174efef19f43b293c"
+      "bytes": 558,
+      "sha256": "d8043014ba7ac0ed31d9eef2677f1e0ba221e046c27263525cdac3f3baa9af3e"
     },
     {
       "path": "game/touch-controls.mjs",
@@ -5705,8 +5705,8 @@
     },
     {
       "path": "game/ui/continuous-play.mjs",
-      "bytes": 16013,
-      "sha256": "47197f333ad6a115eb7c3e3c51d7da4149b5220c3e1f1006deda8c91fd50a3dc"
+      "bytes": 16053,
+      "sha256": "2e9c409e7596c4557c6af6ea92ba04244035384e68ba6f2f66bfaa036786168e"
     },
     {
       "path": "game/ui/control-lab.css",
@@ -5745,8 +5745,8 @@
     },
     {
       "path": "game/ui/controller-field-editor.css",
-      "bytes": 2254,
-      "sha256": "8c9a57a82c6f877039fa56394356cc2aa554017a2cbd58ef9b584917b58f9fc0"
+      "bytes": 2482,
+      "sha256": "2e25ac3f84a3d08ce0fa73133ef626a54e768941f4e4247bb1110d04adde80a4"
     },
     {
       "path": "game/ui/controller-field-editor.mjs",
@@ -6275,8 +6275,8 @@
     },
     {
       "path": "game/ui/global-settings-tools.css",
-      "bytes": 842,
-      "sha256": "5adf034ecf6f20d84dacd55cabf0058369f05f8a254301eac72c532bb6456eac"
+      "bytes": 882,
+      "sha256": "c35608a094f5fd655987b04eec2e6f0bd14d15ec12292d0c531585f5e5ece726"
     },
     {
       "path": "game/ui/global-settings-tools.mjs",
@@ -6285,8 +6285,8 @@
     },
     {
       "path": "game/ui/global-settings-view.css",
-      "bytes": 1461,
-      "sha256": "457aac6fe231491ba10eddf65dd3ca0d635c5e22e2e3e3ef3aaf133d69bd97d3"
+      "bytes": 1503,
+      "sha256": "25f89bfec03f81cf83f0ba45b760c95e7d4c425e2ed1c0f79afb85d4b80e4774"
     },
     {
       "path": "game/ui/global-settings-view.mjs",
@@ -6320,8 +6320,8 @@
     },
     {
       "path": "game/ui/install-offline-panel.css",
-      "bytes": 1084,
-      "sha256": "973ae9ac8266e79df81ff205ca996030652a75fb1c2cac11cdcd55727aca0c16"
+      "bytes": 1124,
+      "sha256": "c6b93d91f24d2408463e1bc4e93b1a6eb633cc4776200b7be92773b30a010f86"
     },
     {
       "path": "game/ui/install-offline-panel.mjs",
@@ -6385,8 +6385,8 @@
     },
     {
       "path": "game/ui/journey.css",
-      "bytes": 45856,
-      "sha256": "4cbad1caafc772dff3a0997dd97d01badda82ffaa1ab74d7665923cb90cf1477"
+      "bytes": 47440,
+      "sha256": "a5c8831357e3a181b7df84eef9cb850aaacb489062084a786001cb40093949cb"
     },
     {
       "path": "game/ui/key-settings.mjs",
@@ -6550,8 +6550,8 @@
     },
     {
       "path": "game/ui/mode-choice.css",
-      "bytes": 9323,
-      "sha256": "bdfa47a370c30ac0ea5775e29bd6e63e65432265302ccce023a990bf688487e4"
+      "bytes": 9977,
+      "sha256": "056e80e58d97e30d217885638eae9adae6de5147f2a95d2eeef08ab7535b6f04"
     },
     {
       "path": "game/ui/mode-choice.mjs",
@@ -6670,8 +6670,8 @@
     },
     {
       "path": "game/ui/optional-practice-panel.css",
-      "bytes": 3082,
-      "sha256": "700745359dcdc5538b090467d1a6632065615e777c945ed013c5ef31c1249774"
+      "bytes": 3122,
+      "sha256": "9ce17aadede0f898c7d7ffd9ca0dff7c0e5bd5b174794d9e83048b63bd6c4c34"
     },
     {
       "path": "game/ui/optional-practice-panel.mjs",
@@ -6685,8 +6685,8 @@
     },
     {
       "path": "game/ui/pause-menu.css",
-      "bytes": 9247,
-      "sha256": "56a8d2867438b07144f3476101f60483b622b127ee362d047329ec0608b9c6a6"
+      "bytes": 9667,
+      "sha256": "0b1d727536621fe9849e3ce14814591b5722a611e862271014c1f523e94cf893"
     },
     {
       "path": "game/ui/pause-menu.mjs",
@@ -6765,8 +6765,8 @@
     },
     {
       "path": "game/ui/profile-recovery-dialog.css",
-      "bytes": 1955,
-      "sha256": "fc7c71c89eda0ee8ae05ca164c1eb5661cdc395343331fa3e36ef4eeba1f00f4"
+      "bytes": 1995,
+      "sha256": "ac36cbfbbcf413c1ae06481a08c30e77c0ca8c1d0f654ec7e121fdd4c7fedc7f"
     },
     {
       "path": "game/ui/profile-recovery-dialog.mjs",
@@ -6800,8 +6800,8 @@
     },
     {
       "path": "game/ui/quick-music-controls.css",
-      "bytes": 1586,
-      "sha256": "180733204148033593eec45f4f29ea690525386617c3fe25ea568714f761669a"
+      "bytes": 1626,
+      "sha256": "41acadb4f6d24226f5c5bdaa63d5bf1a785a62deae9b96bc08d3c44972c91109"
     },
     {
       "path": "game/ui/quick-music-controls.mjs",
@@ -6815,8 +6815,8 @@
     },
     {
       "path": "game/ui/reaction-caption.mjs",
-      "bytes": 2195,
-      "sha256": "5b7edf3006681a02b40134ff4eee2b1f7da3770eec2b5e9b9ae70c39332a5890"
+      "bytes": 2235,
+      "sha256": "4bb936f010f3508167d25f60429c4c1b851d8dee3c92f98028132e5bb8e15842"
     },
     {
       "path": "game/ui/reaction-danger.mjs",
@@ -6960,8 +6960,8 @@
     },
     {
       "path": "game/ui/soundtrack-panel.css",
-      "bytes": 11867,
-      "sha256": "c5b77233195ed0f844bef0df7e0cd07e2a140f38a0b5576d0c240fefaa8c580e"
+      "bytes": 12573,
+      "sha256": "1f28154041615378941c5831e2c70df5f27d371bac2cc692af9ed5927083fd16"
     },
     {
       "path": "game/ui/soundtrack-panel.mjs",
@@ -7030,8 +7030,8 @@
     },
     {
       "path": "game/ui/text-size-control.mjs",
-      "bytes": 2759,
-      "sha256": "f0abd0dc0a0edf8a0f725034209275bdb88b07f5c485f1ae6cae36bc4ed3d3a9"
+      "bytes": 3124,
+      "sha256": "044703382bb1a17d999c90376782259ac989fa00218a75f0458519fbce8c388e"
     },
     {
       "path": "game/ui/theme-family-controls.mjs",
@@ -7215,7 +7215,7 @@
     {
       "path": "edition-build.json",
       "bytes": 181059,
-      "sha256": "029b9f169e9eff9f65975ea960a67e0da682a382afd1ff852546cf59677cb6b3"
+      "sha256": "6adcb05ead3694e8927754275ce75f96db96e563f2fef0e8946711b1ceeb6047"
     },
     {
       "path": "edition-catalog.json",
@@ -7320,7 +7320,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "b0d7f51fc193716852ce85bc8326b3cf7117a89d556d11e00a2fd266aadeda6b"
+      "sha256": "4c21403e2df6ea3465fbd755623467ef2d6b4bc69cd078c97623eda2800f0890"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -8874,8 +8874,8 @@
     },
     {
       "path": "game/display-preferences.mjs",
-      "bytes": 9523,
-      "sha256": "f42da9b7df9cc1ddc81f3165e25c5dac7594fdccbd12aa886f1750e4f27aa01c"
+      "bytes": 9577,
+      "sha256": "9b0eef7ca032b0131e11422035372639a5bda1d4a31a7c198f4bba69d58d69a4"
     },
     {
       "path": "game/download-catalogue.mjs",
@@ -9404,8 +9404,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 944003,
-      "sha256": "b16dd6a9fc9569dcc1b29aac7c2dc6f356fd3c5968302f34ce20128419e3954a"
+      "bytes": 943911,
+      "sha256": "d1ba9b71eed042027ee10edf82ed040585d7c9b06f1530d04b8c66ffa99e9a88"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -9994,8 +9994,8 @@
     },
     {
       "path": "game/presentation/industrial-workshop.css",
-      "bytes": 104931,
-      "sha256": "91ce430661a02939b276e069559cc767978275bca24b32a5349a2d6a621bb00d"
+      "bytes": 105291,
+      "sha256": "55664f1a4361649c3a76c848221007abda6eceb72d61801a0b19046868dfa1b8"
     },
     {
       "path": "game/presentation/journey-actor-materials.mjs",
@@ -10074,8 +10074,8 @@
     },
     {
       "path": "game/presentation/theme-system.mjs",
-      "bytes": 65925,
-      "sha256": "0e832a5df6f5b83a349c25a361a145dc8b84e127225e36edf57110ebb38b9f91"
+      "bytes": 66070,
+      "sha256": "db924a6f814f5e8250b20420b86b2568c366e89c4f1e5974a82fb1d054c937c5"
     },
     {
       "path": "game/presentation/visual-theme-catalogue.mjs",
@@ -10634,8 +10634,8 @@
     },
     {
       "path": "game/text-size.mjs",
-      "bytes": 538,
-      "sha256": "d91978a8e2c9b710270d8cdb1c4ba257f922e1a75c33b4a174efef19f43b293c"
+      "bytes": 558,
+      "sha256": "d8043014ba7ac0ed31d9eef2677f1e0ba221e046c27263525cdac3f3baa9af3e"
     },
     {
       "path": "game/touch-controls.mjs",
@@ -10869,8 +10869,8 @@
     },
     {
       "path": "game/ui/continuous-play.mjs",
-      "bytes": 16017,
-      "sha256": "4402db47076ba8ca0073262da92f4e7147c256887db126bd90367b8a9a841c01"
+      "bytes": 16057,
+      "sha256": "92d3053d3814643cca470c759b675634ace14615f4127fd05134375661ccb9e4"
     },
     {
       "path": "game/ui/control-lab.css",
@@ -10904,8 +10904,8 @@
     },
     {
       "path": "game/ui/controller-field-editor.css",
-      "bytes": 2254,
-      "sha256": "8c9a57a82c6f877039fa56394356cc2aa554017a2cbd58ef9b584917b58f9fc0"
+      "bytes": 2482,
+      "sha256": "2e25ac3f84a3d08ce0fa73133ef626a54e768941f4e4247bb1110d04adde80a4"
     },
     {
       "path": "game/ui/controller-field-editor.mjs",
@@ -11434,8 +11434,8 @@
     },
     {
       "path": "game/ui/global-settings-tools.css",
-      "bytes": 842,
-      "sha256": "5adf034ecf6f20d84dacd55cabf0058369f05f8a254301eac72c532bb6456eac"
+      "bytes": 882,
+      "sha256": "c35608a094f5fd655987b04eec2e6f0bd14d15ec12292d0c531585f5e5ece726"
     },
     {
       "path": "game/ui/global-settings-tools.mjs",
@@ -11444,8 +11444,8 @@
     },
     {
       "path": "game/ui/global-settings-view.css",
-      "bytes": 1461,
-      "sha256": "457aac6fe231491ba10eddf65dd3ca0d635c5e22e2e3e3ef3aaf133d69bd97d3"
+      "bytes": 1503,
+      "sha256": "25f89bfec03f81cf83f0ba45b760c95e7d4c425e2ed1c0f79afb85d4b80e4774"
     },
     {
       "path": "game/ui/global-settings-view.mjs",
@@ -11479,8 +11479,8 @@
     },
     {
       "path": "game/ui/install-offline-panel.css",
-      "bytes": 1084,
-      "sha256": "973ae9ac8266e79df81ff205ca996030652a75fb1c2cac11cdcd55727aca0c16"
+      "bytes": 1124,
+      "sha256": "c6b93d91f24d2408463e1bc4e93b1a6eb633cc4776200b7be92773b30a010f86"
     },
     {
       "path": "game/ui/install-offline-panel.mjs",
@@ -11544,8 +11544,8 @@
     },
     {
       "path": "game/ui/journey.css",
-      "bytes": 45856,
-      "sha256": "4cbad1caafc772dff3a0997dd97d01badda82ffaa1ab74d7665923cb90cf1477"
+      "bytes": 47440,
+      "sha256": "a5c8831357e3a181b7df84eef9cb850aaacb489062084a786001cb40093949cb"
     },
     {
       "path": "game/ui/key-settings.mjs",
@@ -11709,8 +11709,8 @@
     },
     {
       "path": "game/ui/mode-choice.css",
-      "bytes": 9278,
-      "sha256": "6b03fc798edb656bc1f929351b96c20be8943b6ae95ffb42e41fbba5822cdce9"
+      "bytes": 9932,
+      "sha256": "dcb8b2fd6b719f770e237d4deeca3d8f41cd706c68e124fb27ee3a7ee2bc023d"
     },
     {
       "path": "game/ui/mode-choice.mjs",
@@ -11829,8 +11829,8 @@
     },
     {
       "path": "game/ui/pause-menu.css",
-      "bytes": 9247,
-      "sha256": "56a8d2867438b07144f3476101f60483b622b127ee362d047329ec0608b9c6a6"
+      "bytes": 9667,
+      "sha256": "0b1d727536621fe9849e3ce14814591b5722a611e862271014c1f523e94cf893"
     },
     {
       "path": "game/ui/pause-menu.mjs",
@@ -11909,8 +11909,8 @@
     },
     {
       "path": "game/ui/profile-recovery-dialog.css",
-      "bytes": 1955,
-      "sha256": "fc7c71c89eda0ee8ae05ca164c1eb5661cdc395343331fa3e36ef4eeba1f00f4"
+      "bytes": 1995,
+      "sha256": "ac36cbfbbcf413c1ae06481a08c30e77c0ca8c1d0f654ec7e121fdd4c7fedc7f"
     },
     {
       "path": "game/ui/profile-recovery-dialog.mjs",
@@ -11944,8 +11944,8 @@
     },
     {
       "path": "game/ui/quick-music-controls.css",
-      "bytes": 1586,
-      "sha256": "180733204148033593eec45f4f29ea690525386617c3fe25ea568714f761669a"
+      "bytes": 1626,
+      "sha256": "41acadb4f6d24226f5c5bdaa63d5bf1a785a62deae9b96bc08d3c44972c91109"
     },
     {
       "path": "game/ui/quick-music-controls.mjs",
@@ -11959,8 +11959,8 @@
     },
     {
       "path": "game/ui/reaction-caption.mjs",
-      "bytes": 2195,
-      "sha256": "5b7edf3006681a02b40134ff4eee2b1f7da3770eec2b5e9b9ae70c39332a5890"
+      "bytes": 2235,
+      "sha256": "4bb936f010f3508167d25f60429c4c1b851d8dee3c92f98028132e5bb8e15842"
     },
     {
       "path": "game/ui/reaction-danger.mjs",
@@ -12099,8 +12099,8 @@
     },
     {
       "path": "game/ui/soundtrack-panel.css",
-      "bytes": 11867,
-      "sha256": "c5b77233195ed0f844bef0df7e0cd07e2a140f38a0b5576d0c240fefaa8c580e"
+      "bytes": 12573,
+      "sha256": "1f28154041615378941c5831e2c70df5f27d371bac2cc692af9ed5927083fd16"
     },
     {
       "path": "game/ui/soundtrack-panel.mjs",
@@ -12159,8 +12159,8 @@
     },
     {
       "path": "game/ui/text-size-control.mjs",
-      "bytes": 2759,
-      "sha256": "f0abd0dc0a0edf8a0f725034209275bdb88b07f5c485f1ae6cae36bc4ed3d3a9"
+      "bytes": 3124,
+      "sha256": "044703382bb1a17d999c90376782259ac989fa00218a75f0458519fbce8c388e"
     },
     {
       "path": "game/ui/theme-family-controls.mjs",

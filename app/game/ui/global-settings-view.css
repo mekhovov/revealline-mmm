@@ -6,7 +6,7 @@
 }
 .global-settings-group > .global-settings-heading {
   margin: 0 0 12px;
-  font: 600 12px/1.4 var(--fk-font-ui, sans-serif);
+  font: 600 calc(12px * var(--overflight-text-scale, 1)) / 1.4 var(--fk-font-ui, sans-serif);
   color: var(--fk-muted, #b8c4ca);
 }
 .global-settings-option {

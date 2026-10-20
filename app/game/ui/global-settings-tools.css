@@ -20,7 +20,7 @@
 }
 .global-settings-tool-dialog h2 {
   flex: 1;
-  font-size: 18px;
+  font-size: calc(18px * var(--overflight-text-scale, 1));
   margin: 0;
 }
 .global-settings-tool-dialog :is(button, a) {

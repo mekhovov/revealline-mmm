@@ -834,7 +834,12 @@ export function resolvePresentation({
     highContrast: accessibility.highContrast === true,
     opaqueHud: accessibility.opaqueHud === true,
     textFace: accessibility.textFace === 'plain' ? 'plain' : 'pixel',
-    textSize: ['large', 'extra-large'].includes(accessibility.textSize) ? 'large' : 'standard',
+    textSize:
+      accessibility.textSize === 'extra-large' && accessibility.extraLarge === true
+        ? 'extra-large'
+        : ['large', 'extra-large'].includes(accessibility.textSize)
+          ? 'large'
+          : 'standard',
     reducedEffects:
       accessibility.effectiveReducedEffects === true || accessibility.reducedEffects === true,
     coarsePointer: accessibility.coarsePointer === true,
@@ -872,7 +877,8 @@ export function resolvePresentation({
     resolvedFonts.ui = "'Field Kit UI', 'Exo 2', sans-serif";
     resolvedFonts.display = resolvedFonts.ui;
   }
-  const targetSize = density === 'studio' && !a.coarsePointer && a.textSize !== 'large' ? 32 : 44;
+  const targetSize =
+    density === 'studio' && !a.coarsePointer && a.textSize === 'standard' ? 32 : 44;
   const materials = {
     panel: material(
       tokens.panel,
