@@ -1152,7 +1152,21 @@ export const createLessonObserver = denyBrandedImport;
     )
       files.delete(name);
   }
-  edit(files, "game/ui/mode-choice.css", source => once(source, "@import url('./optional-practice-panel.css');", '', 'optional practice stylesheet'));
+  edit(files, "game/ui/mode-choice.css", source => once(source, "@import url('./optional-practice-panel.css');", '', 'optional practice stylesheet') + `
+/* Keep the three capture modes together and give other families readable labels. */
+@media (max-width: 540px) {
+  html[data-branded-app] body.field-kit .game-mode-choice {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  html[data-branded-app] body.field-kit .game-mode-choice > :is(a, button) {
+    grid-column: span 2;
+    min-height: 56px;
+  }
+  html[data-branded-app] body.field-kit .game-mode-choice > :is([data-mode='snake'], [data-mode='collections']) {
+    grid-column: span 3;
+  }
+}
+`);
   projectEnglishMultiplayer(files, config, catalog);
   for (const [name, bytes] of files) {
     if (/\.(?:mjs|js)$/.test(name))

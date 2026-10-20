@@ -342,3 +342,17 @@ html body[data-text-size='large'] .landing-layout .game-mode-choice > :is(a, but
   font-size: calc(20px * var(--overflight-text-scale, 1));
   white-space: normal;
 }
+
+/* Keep the three capture modes together and give other families readable labels. */
+@media (max-width: 540px) {
+  html[data-branded-app] body.field-kit .game-mode-choice {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  html[data-branded-app] body.field-kit .game-mode-choice > :is(a, button) {
+    grid-column: span 2;
+    min-height: 56px;
+  }
+  html[data-branded-app] body.field-kit .game-mode-choice > :is([data-mode='snake'], [data-mode='collections']) {
+    grid-column: span 3;
+  }
+}
