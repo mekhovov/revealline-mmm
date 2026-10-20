@@ -1,6 +1,6 @@
 import { installBrandedIsolation, assertBrandedLocation, assertBrandedPacks, denyBrandedImport } from './branded-isolation.mjs';
-import { renderTextSizeControl } from './ui/text-size-control.mjs';
 import './i18n/main-entry.mjs';
+import { renderTextSizeControl } from './ui/text-size-control.mjs';
 import { loadBaseArtwork } from './base-artwork.mjs';
 import { continuousPlayPreferences } from './ui/continuous-play.mjs';
 import { nativeArtReviewURL } from './ui/art-review-navigation.mjs';
