@@ -706,6 +706,11 @@
       "sha256": "2a23379f8b15156597fd087c76bbea725d2129391b99608b46106bccede4f8f9"
     },
     {
+      "path": "game/audio/effects/bank.mjs",
+      "bytes": 193,
+      "sha256": "5d57143b501c2375e3b6efc06b0ec91838d0be8b20b8741bc33867ce92d77ca0"
+    },
+    {
       "path": "game/base-artwork.mjs",
       "bytes": 136,
       "sha256": "a7c83d884a231a1f42669e39418130d58e94e3ab99311d5205f79b6f266588b4"
@@ -1875,8 +1880,8 @@
     },
     {
       "path": "game/audio/effects/bank.mjs",
-      "bytes": 13444,
-      "sha256": "0f969f6aa5baffb030f87b921b56a319fedf659d8c22e64ab6546112191ec4f2"
+      "bytes": 193,
+      "sha256": "5d57143b501c2375e3b6efc06b0ec91838d0be8b20b8741bc33867ce92d77ca0"
     },
     {
       "path": "game/audio/soundtracks/d4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58.mp3",
@@ -7214,8 +7219,8 @@
     },
     {
       "path": "edition-build.json",
-      "bytes": 181060,
-      "sha256": "a73d59079cfec70af388f72a1347e3bb87d372a2efdcbb1cb7e04e3890e37679"
+      "bytes": 181058,
+      "sha256": "40e2bea726fd0f5f27e4c83bbecb103e30e0d1f4631f34fc46be71ca552af7e0"
     },
     {
       "path": "edition-catalog.json",
@@ -7264,8 +7269,8 @@
     },
     {
       "path": "game/audio/effects/bank.mjs",
-      "bytes": 13444,
-      "sha256": "0f969f6aa5baffb030f87b921b56a319fedf659d8c22e64ab6546112191ec4f2"
+      "bytes": 193,
+      "sha256": "5d57143b501c2375e3b6efc06b0ec91838d0be8b20b8741bc33867ce92d77ca0"
     },
     {
       "path": "game/backup-set.mjs",
