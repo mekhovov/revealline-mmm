@@ -2,6 +2,7 @@ await globalThis.RevealLineAccess?.ready;
 import { assertBrandedLocation, installBrandedIsolation, denyBrandedImport } from '../branded-isolation.mjs';
 assertBrandedLocation(location.href);
 installBrandedIsolation();
+import { renderTextSizeControl } from '../ui/text-size-control.mjs';
 import { supplementalTeamSources } from '../mission-library/supplemental-hunt.mjs';
 import {
   acceptAttemptAppearance,
@@ -429,10 +430,10 @@ export function bootCoop({
   });
   const renderDisplayPreferences = (state) => {
     document.body.dataset.textFace = state.textFace;
-    document.body.dataset.textSize = state.textSize;
+    document.body.dataset.textSize = state.effectiveTextSize ?? state.textSize;
     document.body.dataset.effects = state.effectiveReducedEffects ? 'reduced' : 'full';
     $('coop-text-face').value = state.textFace;
-    $('coop-text-size').value = state.textSize;
+    renderTextSizeControl($('coop-text-size'), state.textSize);
     $('coop-reduced').checked = state.reducedEffects;
     localizedText($('coop-system-reduction'), () =>
       state.effectiveReducedEffects && !state.reducedEffects
@@ -2287,7 +2288,7 @@ export function bootCoop({
       blood: encounterDisplay.snapshot().blood,
       encounterLevel: attemptTuning.get(run)?.encounterLevel ?? null,
       textFace: displayPreferences.snapshot().textFace,
-      textSize: displayPreferences.snapshot().textSize,
+      textSize: displayPreferences.snapshot().effectiveTextSize,
       picture: acceptedPicture?.binding ?? null,
       actorAppearance: acceptedPicture?.actorAppearance ?? null,
       pictureLevel: attemptTuning.get(run)?.pictureLevel ?? run.level,

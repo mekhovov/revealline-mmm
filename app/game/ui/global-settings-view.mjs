@@ -1,4 +1,5 @@
 import { continuousPlayBindings } from './continuous-play.mjs';
+import { renderTextSizeControl } from './text-size-control.mjs';
 // One logical settings inventory. Shared flow preferences have one lightweight
 // owner; hosts retain audio, simulation and profile lifecycle ownership.
 export const GLOBAL_SETTINGS = Object.freeze(
@@ -149,6 +150,7 @@ export function mountGlobalSettings({
     if (!row.input || !row.binding) return;
     const value = row.binding.get();
     if (row.spec.type === 'checkbox') row.input.checked = !!value;
+    else if (row.spec.key === 'textSize') renderTextSizeControl(row.input, value, { locale });
     else row.input.value = String(value);
     if (row.output) row.output.textContent = `${Math.round(Number(value) * 100)}%`;
     const feedback = row.binding.feedback?.(locale),

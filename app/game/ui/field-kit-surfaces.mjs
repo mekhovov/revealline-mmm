@@ -4,6 +4,7 @@ import { createMenuStylePreferences } from '../menu-style-preferences.mjs';
 import { createMenuAppearance } from './menu-appearance.mjs';
 import { hasEditionToolRequest } from './edition-tool-provider.mjs';
 import { prepareNativeMenus } from './native-menus.mjs';
+import { effectiveTextSize } from '../text-size.mjs';
 
 /** Presentation navigation only. Original host controls own preferences and saves. */
 export function attachFieldKitSurfaces({
@@ -60,7 +61,7 @@ export function attachFieldKitSurfaces({
   listen(doc.getElementById('collection-records'), 'click', () => openLibrary('scores'));
   for (const control of doc.querySelectorAll('[data-field-kit-text-size]')) {
     listen(control, 'change', () => {
-      doc.body.dataset.textSize = control.value === 'large' ? 'large' : 'standard';
+      doc.body.dataset.textSize = effectiveTextSize(control.value);
     });
   }
   return {

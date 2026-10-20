@@ -296,7 +296,7 @@
     "coupa-all"
   ],
   "version": "v0.151.1",
-  "sourceRevision": "de59e798e3d94346a45519f842d6c5cbcdb0935e",
+  "sourceRevision": "bd95b9a05298f11ffea48be86d9fab2af561e7e2",
   "catalogSha256": "50c96b78e95cf5ba27238fc25e1b0c1609145c2bae958f10a6c6868802df0730",
   "files": [
     {
@@ -336,8 +336,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 627408,
-      "sha256": "1a121f7f81715aae233cc181a9c5ed004ad3c7edcf10ab73241c117615fc7f4d"
+      "bytes": 627548,
+      "sha256": "9824e8ef755236681180cc2bd0d3575a5643a2acfc0f8fbf8cd1a73ec7d3254e"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -417,7 +417,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "22c4ef40239ae54d03c6113486590dfb0fd0d93197c1a066b5bcc3cba064e8cb"
+      "sha256": "08e8dfbadf42607326ad238d61cb3fc91a3ea5e8cc0099102ad830d5a6a4fed9"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -1551,8 +1551,8 @@
     },
     {
       "path": "game/couch/coop-actor-layout.mjs",
-      "bytes": 11782,
-      "sha256": "230bbd56731a9fc9f682c92158acca83b133dfb2a9ec4a2bc0f40bcfc855dd78"
+      "bytes": 11786,
+      "sha256": "dabb6801ea8a1ca68c29f0aee67144bbd3ca45b423468d4fa9e780bc85392df6"
     },
     {
       "path": "game/couch/coop-actor-presentation.mjs",
@@ -1736,8 +1736,8 @@
     },
     {
       "path": "game/couch/couch.mjs",
-      "bytes": 211440,
-      "sha256": "cb374fce7cc9ed958aa95594d79faa20d750811e3de2382f03af93202aa622ff"
+      "bytes": 211552,
+      "sha256": "e006e00e3e7f87231d2eff30cf92dce67baac86d3f93ede0e082c4d6d1480275"
     },
     {
       "path": "game/couch/creator-team-import.mjs",
@@ -1786,8 +1786,8 @@
     },
     {
       "path": "game/couch/relay-rescue.mjs",
-      "bytes": 297995,
-      "sha256": "13b466c80737579c8be8a37c483041a18e9f66c62fcf0beac9699377895fa5e6"
+      "bytes": 298116,
+      "sha256": "403dc696421a715688b84b57ae97b410786ffefc3eabb2f4a2f227f67b5d97a6"
     },
     {
       "path": "game/couch/start-cue.mjs",
@@ -1971,8 +1971,8 @@
     },
     {
       "path": "game/display-preferences.mjs",
-      "bytes": 9383,
-      "sha256": "d9723b2820d1c1a25fd969d1ef9ab55fb5a6870089c3c7811bf5e68cbde22875"
+      "bytes": 9523,
+      "sha256": "f42da9b7df9cc1ddc81f3165e25c5dac7594fdccbd12aa886f1750e4f27aa01c"
     },
     {
       "path": "game/download-catalogue.mjs",
@@ -2501,8 +2501,8 @@
     },
     {
       "path": "game/i18n/catalogs.mjs",
-      "bytes": 943947,
-      "sha256": "81ba113f163271f11682b820e0d43a0fea7d1dc36140ccf11e49cf372b66780b"
+      "bytes": 944003,
+      "sha256": "b16dd6a9fc9569dcc1b29aac7c2dc6f356fd3c5968302f34ce20128419e3954a"
     },
     {
       "path": "game/i18n/content-registry.mjs",
@@ -3171,8 +3171,8 @@
     },
     {
       "path": "game/presentation/theme-system.mjs",
-      "bytes": 65902,
-      "sha256": "2f81f1917f7ed25043a3e7ac21d9308a6c4c52f0047e9f5f15df4b927ee65bd7"
+      "bytes": 65925,
+      "sha256": "0e832a5df6f5b83a349c25a361a145dc8b84e127225e36edf57110ebb38b9f91"
     },
     {
       "path": "game/presentation/visual-theme-catalogue.mjs",
@@ -3736,8 +3736,8 @@
     },
     {
       "path": "game/text-size.mjs",
-      "bytes": 251,
-      "sha256": "a2517c4ae10a8283865594c5d04bdcc385733b6813c024ed1c635e05755c717a"
+      "bytes": 538,
+      "sha256": "d91978a8e2c9b710270d8cdb1c4ba257f922e1a75c33b4a174efef19f43b293c"
     },
     {
       "path": "game/touch-controls.mjs",
@@ -4366,8 +4366,8 @@
     },
     {
       "path": "game/ui/field-kit-surfaces.mjs",
-      "bytes": 3756,
-      "sha256": "676ad23d4697089babe755ee7cbccd66368e3d36a990eb384511d6a2311c5c97"
+      "bytes": 3794,
+      "sha256": "c7f84eb2bc28bbcd912b43b4825619f36bc2b7e9c29738a2ae7125ba1d7b0283"
     },
     {
       "path": "game/ui/field-kit-tokens.css",
@@ -4551,8 +4551,8 @@
     },
     {
       "path": "game/ui/global-settings-view.mjs",
-      "bytes": 12960,
-      "sha256": "2338f205a21c22b40ffe396e34a4107fb1bc6d07a857bc85a9b696d450f19f86"
+      "bytes": 13120,
+      "sha256": "d5093589fa380e8cb1805519259e341cc71ac1bccbc08e15912666d5f7030bbf"
     },
     {
       "path": "game/ui/handheld-play.css",
@@ -5258,6 +5258,11 @@
       "path": "game/ui/terrain-feedback.mjs",
       "bytes": 1335,
       "sha256": "0d87b3f2f1f561b41b0a7f7002dedacf26ee86e27e13b9d77698940901c32a64"
+    },
+    {
+      "path": "game/ui/text-size-control.mjs",
+      "bytes": 2759,
+      "sha256": "f0abd0dc0a0edf8a0f725034209275bdb88b07f5c485f1ae6cae36bc4ed3d3a9"
     },
     {
       "path": "game/ui/theme-family-controls.mjs",
