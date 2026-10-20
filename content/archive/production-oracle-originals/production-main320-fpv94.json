@@ -1,0 +1,43 @@
+{
+  "format": "revealline-production-history-oracle.v1",
+  "provenance": {
+    "source": "320fd3d8b0e3f83cb26b67a0ed05e71f64a8f81b",
+    "tree": "4c21d42d7bddf625d15d62403be4bd42cf7b1717",
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "bytes": 7840089,
+    "sha256": "f161302ce44b46d3adb589a6184d296587e883fa1d2ccb485e706ce0d45c9815",
+    "scope": "Exact merged main320 production predecessor, independently decoded locally with original payload SHA verification; not a public release or browser acceptance claim."
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 94,
+    "selection": {
+      "base": { "id": "base", "revision": 1 },
+      "collection": null,
+      "theme": { "id": "fpv", "revision": 94 }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2548,
+      "sha256": "23465ccea618102d36f8a57bd374e9e30e83f24fcc926b84708c0277e9465ea4"
+    },
+    "themes": {
+      "count": 95,
+      "sha256": "c99b789b5baf0dd79e10af86fa6af2f875551fafa988781321fbd4902334ad7e"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  }
+}

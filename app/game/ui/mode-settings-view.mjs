@@ -46,6 +46,7 @@ export function mountModeSettings({
   setMenuIcon = () => {},
   attachPanels,
   beforeSelect,
+  onPresentationChange,
 } = {}) {
   const doc = root?.ownerDocument;
   if (!doc || !content || !root.contains(content) || typeof attachPanels !== 'function')
@@ -107,7 +108,7 @@ export function mountModeSettings({
   rootClasses.forEach((name) => root.classList.add(name));
   if (contentClass) content.classList.add('mode-settings-content');
   content.append(layout);
-  const navigation = attachPanels({ root, document: doc, beforeSelect });
+  const navigation = attachPanels({ root, document: doc, beforeSelect, onPresentationChange });
   let destroyed = false;
   const api = Object.freeze({
     navigation,

@@ -1,0 +1,50 @@
+{
+  "source": "1b99d2ea791074ff79f6be9b8176594b0733874f",
+  "tree": "84d148c461544cc5c462809c1c61c4ebb56346e4",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "gitBlob": "b169ce37169c01c42d817376babf06d97a93b36f",
+    "bytes": 8557998,
+    "sha256": "9d1670f2cb9330afef70bd82e34b03d2d8e639196dbee20573c68b65c6d6b3e1"
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 103,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 103
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2654,
+      "sha256": "4fcbed951b4a34ed3327e52375bb7b5b45e9b691d2623a08312b12710baac8a9"
+    },
+    "themes": {
+      "count": 104,
+      "sha256": "ed29383b3e3916878df71bf0701f1da075bf0df8b9fc8aadfd8cd1610175f35d"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "bytes": 4009342,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  },
+  "scope": "Exact accepted main canonical production103. Independently parsed as RLTHM3 bounded data; canonical encoded metadata and every original raw payload hash/length match, with no trailing bytes. No product module, producer, compiler, test, image decoder or audio audition executed. Separate divergent103 history is not this predecessor."
+}

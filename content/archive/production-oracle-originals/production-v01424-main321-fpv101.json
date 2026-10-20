@@ -1,0 +1,50 @@
+{
+  "source": "321408a3cfd75ae230d760f39fb692503652601a",
+  "tree": "8aec84892f218190b8836041b9587e545e5fc4be",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "gitBlob": "6a16e049cdf7fdb6fc2ca9298c32129d18de88c1",
+    "bytes": 8308005,
+    "sha256": "b4075802871ebd6927a8abb7608a3178c3c2f920cb8d9a2a40b9fd20f2de143d"
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 101,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 101
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2614,
+      "sha256": "8954332a0007a37897d4a09cf7793b68993b5793597a87777dbfdb6fce61b619"
+    },
+    "themes": {
+      "count": 102,
+      "sha256": "02d9dc2ae119929531c1aaa3e02dcc022cb339bf7023ff02353d44faf2c7c3da"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "bytes": 4009342,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  },
+  "scope": "Independent original Git bytes, validated and re-exported byte-identically before main/candidate reconciliation. Numeric revisions are lineage-specific; exact bundle and runtime hashes distinguish them. This historical oracle does not qualify new source, human/device acceptance or publication."
+}

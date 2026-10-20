@@ -1,0 +1,50 @@
+{
+  "format": "revealline-production-history-oracle.v1",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "bytes": 6849997,
+    "sha256": "25602d3d50dcf5f3c0071d0c2b265d593db8becd0620a6bc71bb27f80e4aa901",
+    "observedHead": "beb0140eff7315b63269ee78ded07155de3e7084",
+    "observedTree": "979a7186d58e5aa97420839feb5af24b982fbe9d",
+    "committedAtObservation": false,
+    "scope": "Measured P03 source-stage checkpoint, not published or reviewed. Prefix hashes preserve this intermediate stage through later review successors."
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 25,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 25
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 293,
+      "sha256": "75ceaae41400f20fced4bfb885d2c9175082eb4f5cbdcea30175191b56d93c68"
+    },
+    "assets": {
+      "count": 1096,
+      "sha256": "4b0311c6f5adf4bf4c2384a366f45d762c18151ab69b65fd54035b6eee61ceaa"
+    },
+    "themes": {
+      "count": 26,
+      "sha256": "6b0302db2db4f9686c739f4cb183728af252868cf0436452db62b5ef3d3ba8af"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 127,
+    "sha256": "8117060274f4e7525d8bc71d172ae915671e8aea610640b28084a14f59523bef"
+  }
+}

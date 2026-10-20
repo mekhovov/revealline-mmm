@@ -10,6 +10,7 @@ export function attachLocalSupportSummary({
   window: win = globalThis.window,
   root = doc.getElementById('support-summary-root'),
   settings = doc.getElementById('settings-dialog'),
+  getSettingsOpen = () => settings.open,
   getHost,
   collect = collectSupportSummary,
   exportFile = exportJSONFile,
@@ -54,7 +55,7 @@ export function attachLocalSupportSummary({
     disposed = false;
   const visible = () =>
     !disposed &&
-    settings.open &&
+    getSettingsOpen() === true &&
     root.isConnected &&
     !root.closest('[hidden],[inert]') &&
     !doc.hidden &&
@@ -168,7 +169,7 @@ export function attachLocalSupportSummary({
     }
   }
   const closed = () => {
-    if (!settings.open) reset();
+    if (!getSettingsOpen()) reset();
   };
   const hidden = () => {
     if (doc.hidden) reset();
@@ -191,5 +192,12 @@ export function attachLocalSupportSummary({
   settings.addEventListener('close', closed);
   doc.addEventListener('visibilitychange', hidden);
   win.addEventListener('pagehide', pagehide);
-  return { refresh, download: downloadReport, destroy };
+  return {
+    refresh,
+    download: downloadReport,
+    invalidate: () => {
+      if (!disposed) reset();
+    },
+    destroy,
+  };
 }

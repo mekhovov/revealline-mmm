@@ -1,0 +1,290 @@
+{
+  "format": "revealline-preserved-production-oracles.v1",
+  "sourceRevision": "45f7cfa76c50f0e86c8077b85c1a82f6770f16cc",
+  "scope": "Exact original checkpoint oracles preserved before migration. Source bundles were independently verified against original Git blobs or reconstructed from exact pinned group and payload hashes. These originals remain authoring archives and are not part of the playable build.",
+  "items": [
+    {
+      "sourcePath": "game/test/fixtures/production-p01-v0574.json",
+      "path": "content/archive/production-oracle-originals/production-p01-v0574.json",
+      "bytes": 1413,
+      "sha256": "99adb3dc9f9566b2381d940dd045b928cd7573e8586e1b6afe188aaf6dec3e45",
+      "gitBlob": "04bfec3f71ff7f7e7308764b10b2052fe9227ba2",
+      "derivedFixtureSHA256": "1ce93deea2b81ffdbf897aa3f0b87d169ecbf4cd72c28398fb6139bb2e24e5de",
+      "sourceBundle": {
+        "source": "856850ce8d4597c1fb6e8bb28ddb8a63db337a8c",
+        "tree": "4cd7f24680af174ea35773d28e07e54e5f39e01f",
+        "tag": "v0.57.4",
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "bytes": 6808841,
+        "sha256": "f0e8f98c63b6871a6c3ab60eaef7d265912e370db3522b336cc60a408ac92b4a",
+        "scope": "Immutable published source oracle; public P01 acceptance is separate."
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-p02-v0581.json",
+      "path": "content/archive/production-oracle-originals/production-p02-v0581.json",
+      "bytes": 1435,
+      "sha256": "60d52efd727f8fc3524fbb6a0fb63803253ae5ec83dcbe6d50cd2baf140d9ce3",
+      "gitBlob": "333ce94c300d7004cdfbaf0403901f8b4c511ab9",
+      "derivedFixtureSHA256": "cd044bf8a1f2c27d7a41fa580bb10ee27a3b441d0715ef06dd8eb2a9c813c984",
+      "sourceBundle": {
+        "source": "c93019a344f6f4c6ac03940c77ea09c81122d911",
+        "tree": "f6055cbcba92d45ef1da2b5d16e7e4f1158c8d2a",
+        "tag": "v0.58.1",
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "bytes": 6829381,
+        "sha256": "c9e893cb6970596463e06b30f93f15ecc9ca52ec311c018de7ff70a8ff042cc7",
+        "scope": "Immutable published source oracle; scoped P02-A acceptance and P03 generation are separate."
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-p03-source-fpv25.json",
+      "path": "content/archive/production-oracle-originals/production-p03-source-fpv25.json",
+      "bytes": 1517,
+      "sha256": "e0300153ae13a816fe0ed94bb41cd0cb0114a9d8f0eecf06ba6e183122816486",
+      "gitBlob": "32ab6c363b732cf74383abb894c5fafdbddd7404",
+      "derivedFixtureSHA256": "d71257667b2f7680e3037ef76f3226b7aecd2a9047acc170ab7ca3b72ef8a64e",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "bytes": 6849997,
+        "sha256": "25602d3d50dcf5f3c0071d0c2b265d593db8becd0620a6bc71bb27f80e4aa901",
+        "observedHead": "beb0140eff7315b63269ee78ded07155de3e7084",
+        "observedTree": "979a7186d58e5aa97420839feb5af24b982fbe9d",
+        "committedAtObservation": false,
+        "scope": "Measured P03 source-stage checkpoint, not published or reviewed. Prefix hashes preserve this intermediate stage through later review successors."
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-journey-p02-source-fpv33.json",
+      "path": "content/archive/production-oracle-originals/production-journey-p02-source-fpv33.json",
+      "bytes": 1484,
+      "sha256": "0112e4be80849cf0aab99a5f84a9d3e15c63961301c1798b4672fedb87718c62",
+      "gitBlob": "ebb6697eaedc52af1e271765fc3393caafe43710",
+      "derivedFixtureSHA256": "4ddc9a661117d53e63f10f0879bc55f5eb2033058607bdb0846447a0443113d3",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "bytes": 7045489,
+        "sha256": "ebd4db96c7e0f14921571c538879be84f4e6513737a503654d7c556a25a7ea2b",
+        "observedHead": "9fe6276fff0c470480a466669c435b3edc92a9a4",
+        "observedTree": "11f73290439a53dd22b12078afc3349808c0958c",
+        "committedAtObservation": false,
+        "scope": "Measured Journey P02 shared-music source-stage fpv33; not reviewed or published. Prefix hashes preserve the intermediate stage through later scoped review."
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-journey-p05-fpv34.json",
+      "path": "content/archive/production-oracle-originals/production-journey-p05-fpv34.json",
+      "bytes": 1402,
+      "sha256": "8a7a157d23a52d2c3d68367df1fd7b3f1f1dbfe1ac146d6780272228797e9a5e",
+      "gitBlob": "7820f36b304502408c7b3b9afd33ace43be81ccd",
+      "derivedFixtureSHA256": "cb2c4cdf09e05958e4eb0e5c9bb572b163e72c0af1cd6f00c7b18a7d3a5bc8e3",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "bytes": 7062205,
+        "sha256": "8254c62d3093c8a7a6086387b7c0f15aaa729a94f562991142edd2687183c01e",
+        "observedHead": "8a970b07bfb52d15f7037d18ec89815248010956",
+        "observedTree": "d8b7588a1a7e69ac6f365ff96fa1bb6e27a197e7",
+        "committedAtObservation": true,
+        "scope": "Qualified P05 fpv34 source; immutable historical oracle, not a P08 review."
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-main320-fpv94.json",
+      "path": "content/archive/production-oracle-originals/production-main320-fpv94.json",
+      "bytes": 1442,
+      "sha256": "bb13e0229deb8003ab4ec9c4750d1beb6f411d368edd5fa03841bd4f57c58cb5",
+      "gitBlob": "7683b9f585ac65e186b7f8baf9d54c71f7b49d6f",
+      "derivedFixtureSHA256": "8050840aba175e52a637b1a573c78a11371cbcc68b5c777eff5cc66f2fb36fb5",
+      "sourceBundle": {
+        "source": "320fd3d8b0e3f83cb26b67a0ed05e71f64a8f81b",
+        "tree": "4c21d42d7bddf625d15d62403be4bd42cf7b1717",
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "bytes": 7840089,
+        "sha256": "f161302ce44b46d3adb589a6184d296587e883fa1d2ccb485e706ce0d45c9815",
+        "scope": "Exact merged main320 production predecessor, independently decoded locally with original payload SHA verification; not a public release or browser acceptance claim."
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-main813-fpv95.json",
+      "path": "content/archive/production-oracle-originals/production-main813-fpv95.json",
+      "bytes": 1489,
+      "sha256": "20b7252756047fb392190db6a1413b10d64a96ff1b55f9bcef1d6f52653f01ef",
+      "gitBlob": "da35850d0109c731ca79d1ebb4d1837516ff4c41",
+      "derivedFixtureSHA256": "7c53f21ac2b812bdc87e7fda78aa8486dff4116b566848f3fd0765066f052cef",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "6a32b9a852cb53b30adc9c2232478e5344611a3d",
+        "bytes": 7916418,
+        "sha256": "8e1c09373758982f6cc0092f03998915b60046c8dfb6ce9f665dbe23863dfe24"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-localization14-fpv96.json",
+      "path": "content/archive/production-oracle-originals/production-localization14-fpv96.json",
+      "bytes": 1536,
+      "sha256": "7895a68d2d73504ee58c08cafc79b732a14b9eb79964f60c595ecadaa229d406",
+      "gitBlob": "74ebb736723afa2ea34669534c02ce3815a190bc",
+      "derivedFixtureSHA256": "c906e31d1a06a5cf6fb60c884532df1c7c0d0079a40c030f2368d404de8da982",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "59c5303e292ddb2ab35571a579428e49ed60c72a",
+        "bytes": 7967763,
+        "sha256": "345bf5b22d2e2031c489cdcb3314ff0525f640a007740496506c357e4eed7359"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-main7138-fpv97.json",
+      "path": "content/archive/production-oracle-originals/production-main7138-fpv97.json",
+      "bytes": 1535,
+      "sha256": "5fc2c4b239fcfc95cac47b9a94a7dbe6c78b117d9d15d114b5f26ea4191fb9ed",
+      "gitBlob": "5e065c72ae77ea35c64c7df800b8bab20edb6742",
+      "derivedFixtureSHA256": "32d2467bad7e083f1333b3f0e1635008e1dd3c4d770fb81a9bd63a1e0035055b",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "e06ea86b87c293f51ee8f83304786fcae99486bf",
+        "bytes": 8023148,
+        "sha256": "6057fb6e524bb7f2ed7306c44be671ca2aa755cfffe160ce1cdc7947e5aff679"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-pr770-0d165-audio50.json",
+      "path": "content/archive/production-oracle-originals/production-pr770-0d165-audio50.json",
+      "bytes": 1539,
+      "sha256": "e397af798928a72502c970276fe212eaad8d2a4889f5afe02587559244496714",
+      "gitBlob": "af5ffac0e8a5e4eb8675690d84f3cec9dd992327",
+      "derivedFixtureSHA256": "5d1f445c48e2954d506175c3d9057b5621577c2a4e6df320d6b3e6cd7ddc2b35",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "dcce2267046eaa542e9e505e9bbb07cf8224da8d",
+        "bytes": 8084131,
+        "sha256": "9c15bb198ac606f06d6b0e0bcbfaf5f613d5fd7d10dd4bbf8202e10109a615ab"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-v01422-a585-fpv99.json",
+      "path": "content/archive/production-oracle-originals/production-v01422-a585-fpv99.json",
+      "bytes": 1499,
+      "sha256": "528361f4e7823a23b02b261ca1de0c9b3157d1a17cbba643e4ff7e67073bc0a7",
+      "gitBlob": "c64ae23d13f733f71d3e43002165f0e297b9d56d",
+      "derivedFixtureSHA256": "33d7957966e0b5983dcadca1be2b49fe095def2682bd3d723103e8955e2d832b",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "e33a46b954fbf2ce4ce1ffcb8f5dfa8a57832547",
+        "bytes": 8152874,
+        "sha256": "d9991c729d38dd378d9cde2d9656ed3e40e0ac9a78bd62df4979561c9500b64d"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-v01423-6a67-fpv100.json",
+      "path": "content/archive/production-oracle-originals/production-v01423-6a67-fpv100.json",
+      "bytes": 1659,
+      "sha256": "cf19ad831cc0347f4f84c2ac310a1168354858e75f40991b35ffec18ea58d0b7",
+      "gitBlob": "c8808ecf9506195f29506e86b7bfe7d55d776995",
+      "derivedFixtureSHA256": "75699191934948a2a1aa6e0edb450f467d4dbefeeddabdd7a983c1b89b7be01e",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "98873caea65e6e655d2420c1f3948b6f3250c783",
+        "bytes": 8227540,
+        "sha256": "3cfdf800e5794058de080edddf5a91a914ddd20098015a25a27818694478c71f"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-discovery-source-ui-fpv101.json",
+      "path": "content/archive/production-oracle-originals/production-discovery-source-ui-fpv101.json",
+      "bytes": 1728,
+      "sha256": "bb8ef5f69c674d36737dcfd8a23267eb5207fd0bc2757965ae841da552b2551c",
+      "gitBlob": "9e2af9266f26448fde034bd73ef3aab3d8f70ec6",
+      "derivedFixtureSHA256": "c5c018b7a4995c226e77c77e84d53883b10163f26ed60f4bc004664f8f189093",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "0489a211bf926eedbfd35dd83f914fbaf178c9a9",
+        "bytes": 8324280,
+        "sha256": "faf48769df378b53888fc7598e86f70477b3fe2d0ee10fb7d14aab1c171f5731"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-discovery-reviewed-ui-fpv102.json",
+      "path": "content/archive/production-oracle-originals/production-discovery-reviewed-ui-fpv102.json",
+      "bytes": 1770,
+      "sha256": "88f08a4ed55e2d7a26e491828d808d1a2c6784ab5e811acce7537009a68ad315",
+      "gitBlob": "5b91bc207301461b692fd53c14e5ab7f483b64bc",
+      "derivedFixtureSHA256": "9490e504b3b0c4e29d86193f758d958b1d668a79d48f8a997287a0fdebdcd4c2",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "f195d1046e550fe1866416632ef5f6ed5dcd71d3",
+        "bytes": 8405354,
+        "sha256": "171c41569a07bb187f1954a0e986fae4b4b57af3340958fe3a0375b33c109495"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-v01423-b5ab-fpv100.json",
+      "path": "content/archive/production-oracle-originals/production-v01423-b5ab-fpv100.json",
+      "bytes": 1546,
+      "sha256": "db9cc258d79aaa0caaf587fa3c73be5fcc55cea5f6129524c59255f04f3bbeb0",
+      "gitBlob": "749c66a7d9ba24cc31d696169338d34da7b06965",
+      "derivedFixtureSHA256": "e5c733a6d2df9f69cfe93a89ce3b5d6ba5566c5c8596b9eef852d2f18b9ef254",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "98873caea65e6e655d2420c1f3948b6f3250c783",
+        "bytes": 8227540,
+        "sha256": "3cfdf800e5794058de080edddf5a91a914ddd20098015a25a27818694478c71f"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-v01424-main321-fpv101.json",
+      "path": "content/archive/production-oracle-originals/production-v01424-main321-fpv101.json",
+      "bytes": 1639,
+      "sha256": "aeb03a91c4da24fe300a9312b79ef986265d6bc78ce6f1f3893549d5fb5a8daa",
+      "gitBlob": "38b6ffd6bea099927e94f2ada004c7408d093bcc",
+      "derivedFixtureSHA256": "05555eed2da70ffe09a5f40e742c839acf7fe5908b1fcf857478da5db857561c",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "6a16e049cdf7fdb6fc2ca9298c32129d18de88c1",
+        "bytes": 8308005,
+        "sha256": "b4075802871ebd6927a8abb7608a3178c3c2f920cb8d9a2a40b9fd20f2de143d"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-radio-head280-fpv102.json",
+      "path": "content/archive/production-oracle-originals/production-radio-head280-fpv102.json",
+      "bytes": 1591,
+      "sha256": "83c4153ec97c693526b6d00baf722b4494a107cd48f03a991f7e2de64b7de3d2",
+      "gitBlob": "fb0b085b4a7f802229a15e6b44b34d066da3aa73",
+      "derivedFixtureSHA256": "b11eb41978ef730661a0ece2d128e71ac790f0d073080173c7f1d43fd1dc9ce0",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "ee60d86a7061f9b29b41a28f135d3dd529dab729",
+        "bytes": 8472841,
+        "sha256": "a6343c77e63b3ff2ad1d401f8193795f484d5eb046797049452191051051d14b"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-discovery-db4-fpv103.json",
+      "path": "content/archive/production-oracle-originals/production-discovery-db4-fpv103.json",
+      "bytes": 1639,
+      "sha256": "9aac97ef9ded7270148887d8148fc01fec378f5e5ef612ca86b3353015263e91",
+      "gitBlob": "58da73d365e4eb11550afd1c67c2d17bee49bee0",
+      "derivedFixtureSHA256": "421c40d4fa67ffcaffe7394b060757bb0392a82a56981a2a42c2982eb96f2e22",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "840c70aadea90eea744f1e3ead58467e40902061",
+        "bytes": 8492839,
+        "sha256": "01e8db067359589dc20fcde86b8b36f7617b9229f3d666df8e2524a49378fed0"
+      }
+    },
+    {
+      "sourcePath": "game/test/fixtures/production-native-main1b-fpv103.json",
+      "path": "content/archive/production-oracle-originals/production-native-main1b-fpv103.json",
+      "bytes": 1677,
+      "sha256": "21e92eaf18e5ed619c91d47c734ef1602aa8dac5ae859d7c1837d71b0b161257",
+      "gitBlob": "e72e1b02807446ab42cdc6980ceb12b57764b379",
+      "derivedFixtureSHA256": "382488d5ffab564d185cfcc5530fab6a50e69cddf74848c22275ee2c37809fe7",
+      "sourceBundle": {
+        "path": "authoring/library/fpv-field-kit/production.rltheme",
+        "gitBlob": "b169ce37169c01c42d817376babf06d97a93b36f",
+        "bytes": 8557998,
+        "sha256": "9d1670f2cb9330afef70bd82e34b03d2d8e639196dbee20573c68b65c6d6b3e1"
+      }
+    }
+  ]
+}

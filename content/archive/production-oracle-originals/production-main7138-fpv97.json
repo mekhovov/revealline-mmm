@@ -1,0 +1,52 @@
+{
+  "at": "2026-09-28T16:30:00.000Z",
+  "source": "7138e7b6187bf69991d50313c3f9ac1620427778",
+  "tree": "18adaadac8ebf677bbda619ebd22c5ff6ae53d34",
+  "provenance": {
+    "path": "authoring/library/fpv-field-kit/production.rltheme",
+    "gitBlob": "e06ea86b87c293f51ee8f83304786fcae99486bf",
+    "bytes": 8023148,
+    "sha256": "6057fb6e524bb7f2ed7306c44be671ca2aa755cfffe160ce1cdc7947e5aff679"
+  },
+  "metadata": {
+    "format": "revealline-theme-bundle.v1",
+    "id": "field-kit",
+    "revision": 97,
+    "selection": {
+      "base": {
+        "id": "base",
+        "revision": 1
+      },
+      "collection": null,
+      "theme": {
+        "id": "fpv",
+        "revision": 97
+      }
+    }
+  },
+  "groups": {
+    "slots": {
+      "count": 335,
+      "sha256": "f2d853890e884c926450d6cbe7ed2648676e62a079a9e8768fc73a8fc12d1051"
+    },
+    "assets": {
+      "count": 2582,
+      "sha256": "33cc3f9ead9d5a119e41c21d0c09563840206066c05a33e2c9f169eb8f3d122c"
+    },
+    "themes": {
+      "count": 98,
+      "sha256": "a0845ab82d30a83b83c229f968f09f3ac3f39a9df44c62a21176d51d6b90bd39"
+    },
+    "collections": {
+      "count": 1,
+      "sha256": "74daee988fe6fe616d1ecc4a6ffd9f6c9c47b2fc00584259232f8f1477db1b57"
+    }
+  },
+  "payloads": {
+    "count": 132,
+    "bytes": 4009342,
+    "sha256": "4932cc57542adc364f44cb548011a7ca26afa7e0cb1eb00e00647fe5c381738c"
+  },
+  "audioRecords": 400,
+  "scope": "Exact accepted main 7138e7b theme97 bundle reconstructed from pinned Git-object groups and payloads; independent of candidate theme98."
+}

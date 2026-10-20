@@ -296,7 +296,7 @@
     "coupa-all"
   ],
   "version": "v0.151.1",
-  "sourceRevision": "a3cf3972c5c210b6306038f1cbd44e8e48eb0a83",
+  "sourceRevision": "e9cff6f371f330b0e6a4b53e4eb21b3a73cfde91",
   "catalogSha256": "50c96b78e95cf5ba27238fc25e1b0c1609145c2bae958f10a6c6868802df0730",
   "files": [
     {
@@ -417,7 +417,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "5f3e89ece2c41be61bbf099f24cb231779ab81376d0a9bbe6a33bb806cd84b3b"
+      "sha256": "e6d2b73d3d19750dd272aa30d9e7c3da186b4116f4eb934d838197d16caba2fd"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -1701,8 +1701,8 @@
     },
     {
       "path": "game/couch/couch-music-host.mjs",
-      "bytes": 17098,
-      "sha256": "14a5bad008466a9744466e2a9ac52de10c10e52fbf3f05dbe797ccbac50fb8f9"
+      "bytes": 17159,
+      "sha256": "33045c51049ed362e2117e6f4bf302e7434086afe6ed4042ce4be468906a042d"
     },
     {
       "path": "game/couch/couch-music-library.mjs",
@@ -3041,8 +3041,8 @@
     },
     {
       "path": "game/presentation/document-codec.mjs",
-      "bytes": 6406,
-      "sha256": "a55c12280b6a5ea4c6e718179d2ebad2857d3870dd4b0e26e47802d920f13b6b"
+      "bytes": 6563,
+      "sha256": "a9491093732884c2b1f54a4281f06542aba3cc680b9a33bf34ee5daa7d2d32dd"
     },
     {
       "path": "game/presentation/dom-ownership.mjs",
@@ -4531,8 +4531,8 @@
     },
     {
       "path": "game/ui/global-settings-tools.mjs",
-      "bytes": 14260,
-      "sha256": "cc8921e44220ead9789bb0cceb626f41c5e84abb914c614a4057ec8b152f0eba"
+      "bytes": 14402,
+      "sha256": "54ca279e4037fa7a2e028d37ec587608ddb37a5ffafcf47985b5364b5d2016a6"
     },
     {
       "path": "game/ui/global-settings-view.css",
@@ -4666,8 +4666,8 @@
     },
     {
       "path": "game/ui/local-support-summary.mjs",
-      "bytes": 6802,
-      "sha256": "405e19daea88d8910870925a36e32083536e4d300bcf4443f447ee61000d3919"
+      "bytes": 6936,
+      "sha256": "208761d54fdb7979d8358a9615f5f5a8adf4e4ba54d799cb7eb0dd075710b121"
     },
     {
       "path": "game/ui/mastery-view.mjs",
@@ -4816,8 +4816,8 @@
     },
     {
       "path": "game/ui/mode-settings-view.mjs",
-      "bytes": 5154,
-      "sha256": "d921832267dd50114339cae039cb58e0c9542677ac186a6e8d9b2002381f052f"
+      "bytes": 5200,
+      "sha256": "84a41ec0d7a55b227031ef4c6a2a8e218780a877c26922ee56e6cc698878047e"
     },
     {
       "path": "game/ui/movement-audio.mjs",
@@ -5006,8 +5006,8 @@
     },
     {
       "path": "game/ui/profile-recovery-dialog.mjs",
-      "bytes": 8729,
-      "sha256": "c14495e4084f3284529fa6af4f396a0d969f6667a6ded426e879061895c40c3d"
+      "bytes": 8839,
+      "sha256": "9da29d8254ae7c736f69c9709b7c16ad90be1c8030fbac80e8622c16c3499795"
     },
     {
       "path": "game/ui/profile-recovery.mjs",
@@ -5161,8 +5161,8 @@
     },
     {
       "path": "game/ui/settings-panels.mjs",
-      "bytes": 9977,
-      "sha256": "4875177dc5ffe25f2d6719e62b85193675dc086839320006fda42ff3ef5eb4df"
+      "bytes": 11780,
+      "sha256": "7145dee5932ad2d181b4182863cd0444fece143371fef6afa12d76ca9d20bcce"
     },
     {
       "path": "game/ui/settings.css",
