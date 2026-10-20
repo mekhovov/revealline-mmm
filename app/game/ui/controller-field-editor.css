@@ -14,7 +14,7 @@
     color: var(--fk-text, #f3f0db);
     border: 2px solid var(--fk-focus, #78dce8);
     box-shadow: 0 0 0 100vmax #030911e8;
-    font: 16px/1.4 var(--fk-font-ui, sans-serif);
+    font: calc(16px * var(--overflight-text-scale, 1)) / 1.4 var(--fk-font-ui, sans-serif);
     isolation: isolate;
   }
   .controller-field-editor h2 {
@@ -33,7 +33,7 @@
     max-block-size: 25dvh;
     color: inherit;
     background: #070f18;
-    font: 16px/1.4 monospace;
+    font: calc(16px * var(--overflight-text-scale, 1)) / 1.4 monospace;
     resize: vertical;
     white-space: pre;
   }
@@ -48,7 +48,11 @@
     min-block-size: 44px;
     padding: 4px;
     font: inherit;
-    font-size: clamp(12px, 2vw, 18px);
+    font-size: clamp(
+      calc(12px * var(--overflight-text-scale, 1)),
+      calc(2vw * var(--overflight-text-scale, 1)),
+      calc(18px * var(--overflight-text-scale, 1))
+    );
     color: inherit;
     background: var(--fk-panel-raised, #233443);
     border: 1px solid var(--fk-line, #526877);

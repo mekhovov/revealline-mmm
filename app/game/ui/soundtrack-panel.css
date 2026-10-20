@@ -14,7 +14,7 @@
     box-shadow:
       0 0 0 4px #080d19,
       0 0 64px #000b;
-    font: 14px/1.5 var(--fk-font-mono, monospace);
+    font: calc(14px * var(--overflight-text-scale, 1)) / 1.5 var(--fk-font-mono, monospace);
     overflow: auto;
     overscroll-behavior: contain;
   }
@@ -28,20 +28,24 @@
   }
   .soundtrack-dialog h2 {
     margin: 0;
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(
+      calc(20px * var(--overflight-text-scale, 1)),
+      calc(3vw * var(--overflight-text-scale, 1)),
+      calc(30px * var(--overflight-text-scale, 1))
+    );
     flex: 1;
     text-shadow: 3px 3px 0 #12354d;
   }
   .soundtrack-dialog h3 {
     margin: 0 0 12px;
-    font-size: 16px;
+    font-size: calc(16px * var(--overflight-text-scale, 1));
   }
   .soundtrack-dialog p {
     overflow-wrap: anywhere;
   }
   .soundtrack-dialog .micro-note {
     color: #a7b6ce;
-    font-size: 12px;
+    font-size: calc(12px * var(--overflight-text-scale, 1));
   }
   .soundtrack-actions {
     display: flex;
@@ -83,7 +87,7 @@
   .soundtrack-listen-card > h3,
   .soundtrack-now-card > h3,
   .soundtrack-online-card > h3 {
-    font-size: 18px;
+    font-size: calc(18px * var(--overflight-text-scale, 1));
   }
   .soundtrack-online-card {
     border-color: #7f6ab7;
@@ -209,7 +213,7 @@
     gap: 4px;
     min-width: 0;
     overflow-wrap: anywhere;
-    font-size: 0.8rem;
+    font-size: calc(0.8rem * var(--overflight-text-scale, 1));
   }
   .soundtrack-lede {
     max-width: 62ch;
@@ -223,7 +227,7 @@
     color: #07121b;
     background: #a5f5ec;
     border-radius: 3px;
-    font-size: 12px;
+    font-size: calc(12px * var(--overflight-text-scale, 1));
     font-weight: 800;
   }
   .soundtrack-quick-grid {
@@ -248,12 +252,12 @@
   .soundtrack-choice strong {
     margin: 9px 0 2px;
     color: #fff2b3;
-    font-size: 16px;
+    font-size: calc(16px * var(--overflight-text-scale, 1));
   }
   .soundtrack-choice p {
     margin: 4px 0 12px;
     color: #aebed2;
-    font-size: 12px;
+    font-size: calc(12px * var(--overflight-text-scale, 1));
   }
   .soundtrack-choice .soundtrack-field {
     margin: 8px 0 12px;
@@ -264,7 +268,7 @@
   }
   .soundtrack-choice-kicker {
     color: #63d9ca;
-    font-size: 11px;
+    font-size: calc(11px * var(--overflight-text-scale, 1));
     font-weight: 900;
     letter-spacing: 0.16em;
   }
@@ -344,7 +348,7 @@
     width: 20px;
     color: #80decf;
     content: '+';
-    font-size: 23px;
+    font-size: calc(23px * var(--overflight-text-scale, 1));
     line-height: 1;
     text-align: center;
     transform: translateY(-50%);
@@ -355,13 +359,13 @@
   .soundtrack-advanced-title {
     align-self: center;
     color: #dffbf7;
-    font-size: 14px;
+    font-size: calc(14px * var(--overflight-text-scale, 1));
     font-weight: 800;
   }
   .soundtrack-advanced-description {
     align-self: center;
     color: #7f94ae;
-    font-size: 11px;
+    font-size: calc(11px * var(--overflight-text-scale, 1));
     text-align: right;
   }
   .soundtrack-advanced-body {
@@ -378,7 +382,7 @@
     color: #cbd8ef;
   }
   .soundtrack-field > span {
-    font-size: 12px;
+    font-size: calc(12px * var(--overflight-text-scale, 1));
   }
   .soundtrack-dialog input,
   .soundtrack-dialog select,
@@ -403,7 +407,7 @@
     accent-color: #89ead8;
   }
   .soundtrack-dialog input[type='file'] {
-    font-size: 12px;
+    font-size: calc(12px * var(--overflight-text-scale, 1));
   }
   .soundtrack-dialog select[size] {
     min-height: 112px;

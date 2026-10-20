@@ -19,7 +19,11 @@
   }
   .journey-chooser h2 {
     margin: 0;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(
+      calc(1.5rem * var(--overflight-text-scale, 1)),
+      calc(4vw * var(--overflight-text-scale, 1)),
+      calc(2.5rem * var(--overflight-text-scale, 1))
+    );
   }
   .journey-filters {
     display: flex;
@@ -95,7 +99,7 @@
     grid-column: 1 / -1;
     overflow: hidden;
     color: #94c6b0;
-    font-size: 0.72rem;
+    font-size: calc(0.72rem * var(--overflight-text-scale, 1));
     font-weight: 700;
     letter-spacing: 0.08em;
     text-overflow: ellipsis;
@@ -120,10 +124,10 @@
     }
     #journey-chooser > p {
       margin: 0.25rem 0;
-      font-size: 0.85rem;
+      font-size: calc(0.85rem * var(--overflight-text-scale, 1));
     }
     #journey-chooser h2 {
-      font-size: 1.35rem;
+      font-size: calc(1.35rem * var(--overflight-text-scale, 1));
       line-height: 1.1;
     }
     #journey-chooser .journey-filters {
@@ -138,12 +142,12 @@
   }
   .journey-card-number {
     grid-row: span 3;
-    font-size: 2rem;
+    font-size: calc(2rem * var(--overflight-text-scale, 1));
     color: #c7e78e;
   }
   .journey-card strong {
     min-width: 0;
-    font-size: 1.1rem;
+    font-size: calc(1.1rem * var(--overflight-text-scale, 1));
     overflow-wrap: anywhere;
   }
   .journey-card-campaign {
@@ -153,7 +157,7 @@
   }
   .journey-card-progress {
     color: #c7e78e;
-    font-size: 0.85rem;
+    font-size: calc(0.85rem * var(--overflight-text-scale, 1));
   }
   .journey-card-edition,
   .journey-card-tags,
@@ -227,10 +231,10 @@
   }
   .journey-card-edition {
     color: #bacdc0;
-    font-size: 0.85rem;
+    font-size: calc(0.85rem * var(--overflight-text-scale, 1));
   }
   .journey-card-tags {
-    font-size: 0.85rem;
+    font-size: calc(0.85rem * var(--overflight-text-scale, 1));
     color: #f5ffba;
   }
   .journey-card-action {
@@ -315,7 +319,7 @@
   .journey-card-picture-status {
     grid-column: 1 / -1;
     color: #bacdc0;
-    font-size: 0.75rem;
+    font-size: calc(0.75rem * var(--overflight-text-scale, 1));
     line-height: 1.25;
   }
   .journey-card-challenge,
@@ -326,16 +330,16 @@
   }
   .journey-card-challenge {
     color: #f5ffba;
-    font-size: 0.8rem;
+    font-size: calc(0.8rem * var(--overflight-text-scale, 1));
     letter-spacing: 0.04em;
   }
   .journey-card-route {
-    font-size: 0.95rem;
+    font-size: calc(0.95rem * var(--overflight-text-scale, 1));
   }
   .journey-card-mastery {
     padding-top: 0.35rem;
     color: #bacdc0;
-    font-size: 0.8rem;
+    font-size: calc(0.8rem * var(--overflight-text-scale, 1));
   }
   @media (max-height: 480px) and (min-width: 600px) {
     .journey-cards {
@@ -501,7 +505,7 @@
   #journey-chooser #coop-library-status p,
   #journey-chooser #race-library-status p {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: calc(0.8rem * var(--overflight-text-scale, 1));
     line-height: 1.25;
   }
   #journey-chooser #coop-library-remote-feedback {
@@ -551,7 +555,7 @@
     }
     #journey-chooser.mission-library-chooser h2 {
       margin: 0;
-      font-size: 1.25rem;
+      font-size: calc(1.25rem * var(--overflight-text-scale, 1));
       line-height: 1.2;
     }
     .mission-library-chooser .journey-library-copy {
@@ -638,7 +642,7 @@
     }
     #journey-chooser.mission-library-chooser #journey-chooser-status {
       margin: 0;
-      font-size: 0.8rem;
+      font-size: calc(0.8rem * var(--overflight-text-scale, 1));
       line-height: 1.25;
     }
     #journey-chooser.mission-library-chooser .journey-cards {
@@ -654,15 +658,15 @@
       gap: 0.2rem 0.5rem;
     }
     .mission-library-chooser .journey-card-number {
-      font-size: 1.35rem;
+      font-size: calc(1.35rem * var(--overflight-text-scale, 1));
     }
     .mission-library-chooser .journey-card strong {
-      font-size: 1rem;
+      font-size: calc(1rem * var(--overflight-text-scale, 1));
     }
     .mission-library-chooser .journey-card-edition,
     .mission-library-chooser .journey-card-tags,
     .mission-library-chooser .journey-card-progress {
-      font-size: 0.75rem;
+      font-size: calc(0.75rem * var(--overflight-text-scale, 1));
       line-height: 1.2;
     }
     #journey-chooser.mission-library-chooser .journey-card-map {
@@ -838,7 +842,7 @@
     background: transparent;
     border: 0;
     font-family: var(--fk-font-mono, monospace);
-    font-size: 0.78rem;
+    font-size: calc(0.78rem * var(--overflight-text-scale, 1));
     letter-spacing: 0.08em;
     line-height: 1.2;
     text-overflow: ellipsis;
@@ -911,7 +915,7 @@
     right: 0.45rem;
     display: none;
     color: var(--level-card-award);
-    font-size: 0.9rem;
+    font-size: calc(0.9rem * var(--overflight-text-scale, 1));
     font-weight: 900;
   }
   #journey-chooser .journey-card[data-completion-state='completed'] .journey-card-check {
@@ -931,7 +935,7 @@
     grid-row: 1;
     color: var(--level-card-focus);
     font-family: var(--fk-font-mono, monospace);
-    font-size: 0.78rem;
+    font-size: calc(0.78rem * var(--overflight-text-scale, 1));
     font-weight: 800;
     letter-spacing: 0.05em;
     line-height: 1.25;
@@ -942,7 +946,7 @@
     grid-row: 2;
     display: -webkit-box;
     overflow: hidden;
-    font-size: 0.94rem;
+    font-size: calc(0.94rem * var(--overflight-text-scale, 1));
     line-height: 1.2;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -953,7 +957,7 @@
     display: block;
     overflow: hidden;
     color: var(--level-card-muted);
-    font-size: 0.7rem;
+    font-size: calc(0.7rem * var(--overflight-text-scale, 1));
     line-height: 1.2;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -963,7 +967,7 @@
     grid-row: 3;
     color: var(--level-card-muted);
     font-family: var(--fk-font-mono, monospace);
-    font-size: 0.7rem;
+    font-size: calc(0.7rem * var(--overflight-text-scale, 1));
     font-variant-numeric: tabular-nums;
   }
   #journey-chooser .journey-card-progress {
@@ -971,7 +975,7 @@
     grid-row: 4;
     overflow: hidden;
     color: var(--level-card-muted);
-    font-size: 0.68rem;
+    font-size: calc(0.68rem * var(--overflight-text-scale, 1));
     line-height: 1.2;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -981,7 +985,7 @@
     grid-row: 4;
     color: var(--level-card-award);
     font-family: var(--fk-font-mono, monospace);
-    font-size: 0.82rem;
+    font-size: calc(0.82rem * var(--overflight-text-scale, 1));
     letter-spacing: 0.03em;
     line-height: 1;
     white-space: nowrap;
@@ -1020,7 +1024,7 @@
     overflow: hidden;
     color: var(--fk-bg, #070b12);
     background: var(--level-card-award);
-    font-size: 0.65rem;
+    font-size: calc(0.65rem * var(--overflight-text-scale, 1));
     line-height: 1.2;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1229,7 +1233,7 @@
     margin: 0;
     overflow-wrap: anywhere;
     color: var(--level-card-muted);
-    font-size: 0.78rem;
+    font-size: calc(0.78rem * var(--overflight-text-scale, 1));
     line-height: 1.25;
   }
   #journey-chooser.mission-library-chooser #journey-goal-status::before {
@@ -1273,7 +1277,7 @@
       min-height: 44px;
       margin: 0;
       padding: 0.35rem 0.5rem;
-      font-size: 0.78rem;
+      font-size: calc(0.78rem * var(--overflight-text-scale, 1));
       line-height: 1.15;
     }
     #journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
@@ -1283,7 +1287,7 @@
       justify-content: center;
       min-height: 44px;
       padding: 0.35rem 0.5rem;
-      font-size: 0.78rem;
+      font-size: calc(0.78rem * var(--overflight-text-scale, 1));
       line-height: 1.15;
       text-align: center;
     }
@@ -1333,7 +1337,7 @@
     }
     #journey-chooser.mission-library-chooser #journey-search-clear::before {
       content: '×';
-      font-size: 1.35rem;
+      font-size: calc(1.35rem * var(--overflight-text-scale, 1));
       line-height: 1;
     }
     #journey-chooser.mission-library-chooser #journey-search::-webkit-search-cancel-button {
@@ -1355,7 +1359,7 @@
       min-width: 0;
       min-height: 44px;
       padding: 0.3rem;
-      font-size: 0.72rem;
+      font-size: calc(0.72rem * var(--overflight-text-scale, 1));
       line-height: 1.1;
     }
     #journey-chooser.mission-library-chooser .journey-footer > .mission-library-setup {
@@ -1370,7 +1374,7 @@
     }
     #journey-chooser.mission-library-chooser .mission-library-setup > summary::before {
       content: '⚙';
-      font-size: 1.1rem;
+      font-size: calc(1.1rem * var(--overflight-text-scale, 1));
       line-height: 1;
     }
     #journey-chooser.mission-library-chooser .journey-goal {
@@ -1389,7 +1393,7 @@
     #journey-chooser.mission-library-chooser .journey-goal-actions > button {
       min-width: 44px;
       padding: 0.25rem 0.4rem;
-      font-size: 0.68rem;
+      font-size: calc(0.68rem * var(--overflight-text-scale, 1));
     }
     #journey-chooser.mission-library-chooser
       .journey-goal-actions
@@ -1474,7 +1478,7 @@
   }
   #journey-backup h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: calc(1.5rem * var(--overflight-text-scale, 1));
   }
   .journey-backup-content {
     overflow: auto;
@@ -1527,7 +1531,7 @@
     height: 1em;
     color: #080d1c;
     background: #f3c84b;
-    font-size: 1rem;
+    font-size: calc(1rem * var(--overflight-text-scale, 1));
     font-weight: bold;
     line-height: 1;
   }

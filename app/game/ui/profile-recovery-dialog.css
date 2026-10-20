@@ -11,7 +11,7 @@
     background: var(--paper, #070914);
   }
   .game-shell[data-text-size='large'] #profile-recovery-dialog {
-    font-size: 22px;
+    font-size: calc(22px * var(--overflight-text-scale, 1));
   }
   #profile-recovery-root :is(button, select, a, label, h2) {
     font: inherit;

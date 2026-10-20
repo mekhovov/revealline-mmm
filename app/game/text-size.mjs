@@ -6,8 +6,8 @@ export function resolveTextSize(value) {
   return value;
 }
 
-/** Preserve desired intent separately. No host is qualified for the additional
- * size yet; the established Large presentation is the explicit fallback. */
-export function effectiveTextSize(value) {
-  return resolveTextSize(value) === 'extra-large' ? 'large' : value;
+/** Hosts explicitly opt into their additional layout. The established Large
+ * presentation remains every other host's fallback. */
+export function effectiveTextSize(value, { extraLarge = false } = {}) {
+  return resolveTextSize(value) === 'extra-large' && !extraLarge ? 'large' : value;
 }
