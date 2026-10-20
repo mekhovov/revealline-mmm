@@ -30,6 +30,7 @@ npm run verify:collections
 - `owned-test-receipt.json` records the original owned regression suites and support files.
 - `historical-owned-object-receipt.json` preserves 336 named historical file versions from the verified backup graph. Of these, 244 already exist byte-for-byte in local content; 92 additional objects occupy about 3 MB under `content/archive/historical-objects/`. Tests verify the original Git object identity, SHA-256 and length of every version.
 - `recovery-publication-originals-receipt.json` preserves nine additional publication records found in the public recovery archives: six Coupa capacity manifests and three historical community entry pages. Every original byte and SHA-256 is retained under `content/archive/recovery-publication-originals-20261020/`; these files are excluded from the playable app.
+- `hosted-entry-originals-receipt.json` preserves three further historical community entry pages recovered from fully audited Actions archives. Their exact bytes, original archive hashes and artifact identities are retained under `content/archive/hosted-entry-originals-20261020/`, outside the playable application.
 
 Archived records retain their original bytes and claims as historical evidence. They are not current release certifications. Derived upstream records receive new hashes and explicit projection notes rather than reusing an original artifact's verification identity.
 

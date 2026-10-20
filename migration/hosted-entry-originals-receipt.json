@@ -1,0 +1,52 @@
+{
+  "format": "OwnedHostedEntryOriginals.v1",
+  "at": "2026-10-20T13:58:17.098145+00:00",
+  "scope": "Three additional exact historical community entry pages recovered from fully audited build archives. These inert originals are excluded from the generated application and Pages; they do not create launch routes or certify an altered release.",
+  "items": [
+    {
+      "destination": "content/archive/hosted-entry-originals-20261020/16ae8129e6243c264567aebd76f59db282b8c5ad4dc371a5071dfd61ec0cda36.html",
+      "bytes": 3425,
+      "sha256": "16ae8129e6243c264567aebd76f59db282b8c5ad4dc371a5071dfd61ec0cda36",
+      "sources": [
+        {
+          "sourceRepository": "https://github.com/mekhovov/revealline",
+          "sourceActionsArtifactId": 12083998509,
+          "sourceArchiveSHA256": "4a2b41aa1e1f3ec30d181f5c9a328116be5435dd4c40b637c176607b9ea0d1c9",
+          "sourceMember": "12083998509!artifact.tar!./game/communities/coupa/index.html",
+          "auditReceiptSHA256": "fa53410ed84438534f6a76a9c30775bb7468d920406c6760c8c16e5e23d5cc8a"
+        }
+      ],
+      "disposition": "historical-publication-evidence-only"
+    },
+    {
+      "destination": "content/archive/hosted-entry-originals-20261020/4bab5fe97200bb1631be95c4d81bf8fe1b52f61dc07573a6052f2573f6de73b3.html",
+      "bytes": 3425,
+      "sha256": "4bab5fe97200bb1631be95c4d81bf8fe1b52f61dc07573a6052f2573f6de73b3",
+      "sources": [
+        {
+          "sourceRepository": "https://github.com/mekhovov/revealline",
+          "sourceActionsArtifactId": 11974973872,
+          "sourceArchiveSHA256": "8e188a3d43aaa1a24c64b258a12e783c32e1a8237ba19a01fd039a8f4514b008",
+          "sourceMember": "11974973872!distribution.zip!game/communities/coupa/index.html",
+          "auditReceiptSHA256": "e578ef944fc517c9ec1f1a496378a80b6ff9d855ca57abb276112238c207dc19"
+        }
+      ],
+      "disposition": "historical-publication-evidence-only"
+    },
+    {
+      "destination": "content/archive/hosted-entry-originals-20261020/f70e00b37d02390a51da1e6c48fa366b0dba7ab7bb4c6ef98fc2b3f99692250e.html",
+      "bytes": 3425,
+      "sha256": "f70e00b37d02390a51da1e6c48fa366b0dba7ab7bb4c6ef98fc2b3f99692250e",
+      "sources": [
+        {
+          "sourceRepository": "https://github.com/mekhovov/revealline",
+          "sourceActionsArtifactId": 12025731428,
+          "sourceArchiveSHA256": "ad8db7a3abb8f2c79a7dc331958f226c3c3e45f2b25c79507de8838b97f8176b",
+          "sourceMember": "12025731428!artifact.tar!./game/communities/coupa/index.html",
+          "auditReceiptSHA256": "4d7f4dd1d48825fc84318659bb9060b7d77b1327260fea7d74d8273b2188d837"
+        }
+      ],
+      "disposition": "historical-publication-evidence-only"
+    }
+  ]
+}
