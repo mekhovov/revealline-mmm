@@ -1,0 +1,42 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/uk/content.json",
+  "sourceRevision": "bd95b9a05298f11ffea48be86d9fab2af561e7e2",
+  "sourceGitBlob": "118ddae47aae434691b61e93ee294d176d8adaa0",
+  "sourceSHA256": "1ccf0cc346436ba50e56e7288eef112f7261d5f853c9a0ee33eff43d2c0c622d",
+  "scope": "Two unused historical character and mission labels identified by their retired content identities. Preserve original locale values outside the playable build.",
+  "entries": [
+    {
+      "pointer": "/strayInvoice",
+      "value": "Заблукалий рахунок"
+    },
+    {
+      "pointer": "/sharedHarbor",
+      "value": "Спільна гавань"
+    },
+    {
+      "pointer": "/deliveryParcel",
+      "value": "Посилка доставки"
+    },
+    {
+      "pointer": "/auditCursor",
+      "value": "Курсор аудиту"
+    },
+    {
+      "pointer": "/expenseCart",
+      "value": "Візок витрат"
+    },
+    {
+      "pointer": "/budgetShredder",
+      "value": "Подрібнювач бюджету"
+    },
+    {
+      "pointer": "/approvalGate",
+      "value": "Брама погодження"
+    },
+    {
+      "pointer": "/policyVault",
+      "value": "Сховище правил"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "format": "revealline-owned-source-fragments.v1",
+  "sourcePath": "game/locales/en/content.json",
+  "sourceRevision": "bd95b9a05298f11ffea48be86d9fab2af561e7e2",
+  "sourceGitBlob": "17dd7c7f379adb4fb43eb8281aadd582b0fdf3de",
+  "sourceSHA256": "b5d47109e6dc996c87a37785960fee2e9904b5ba7e15ec899ba7170927282af1",
+  "scope": "Two unused historical character and mission labels identified by their retired content identities. Preserve original locale values outside the playable build.",
+  "entries": [
+    {
+      "pointer": "/strayInvoice",
+      "value": "Stray invoice"
+    },
+    {
+      "pointer": "/sharedHarbor",
+      "value": "Shared Harbor"
+    },
+    {
+      "pointer": "/deliveryParcel",
+      "value": "Delivery parcel"
+    },
+    {
+      "pointer": "/auditCursor",
+      "value": "Audit cursor"
+    },
+    {
+      "pointer": "/expenseCart",
+      "value": "Expense cart"
+    },
+    {
+      "pointer": "/budgetShredder",
+      "value": "Budget shredder"
+    },
+    {
+      "pointer": "/approvalGate",
+      "value": "Approval gate"
+    },
+    {
+      "pointer": "/policyVault",
+      "value": "Policy vault"
+    }
+  ]
+}

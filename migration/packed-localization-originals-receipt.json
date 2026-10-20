@@ -1,0 +1,118 @@
+{
+  "format": "coupa-packed-localization-originals.v1",
+  "sourceRepository": "mekhovov/revealline",
+  "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+  "scope": "Exact original fixtures, recovery files and diagnostic metadata before embedded ownership projection. Archives are authoring/provenance inputs, never playable assets.",
+  "files": [
+    {
+      "path": "docs/performance/fixtures/solo-replay-portability/node-1255-catalogs.fixture",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "e8c91f7eefb112ac7f16fa5a05ce4a8a00676407",
+      "bytes": 1264959,
+      "sha256": "ba333d67a719078e6fca92094bee9d60e7fdcfd2ed197adadefed115766e9224",
+      "archivePath": "content/archive/packed-localization-20261020/ba333d67a719078e6fca92094bee9d60e7fdcfd2ed197adadefed115766e9224.gz",
+      "archiveBytes": 943685,
+      "archiveSHA256": "1d877faa0041c9c511de09a2730f98754671e6ac06f0f83b1df7b737b1aa58ec"
+    },
+    {
+      "path": "recovery/local-worktrees-20261009/team-terminal-retry-v137/conflict-stages/game/i18n/catalogs.mjs.stage1",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "38afe32d97ce478e91013e815175d0cdceebf7dd",
+      "bytes": 869535,
+      "sha256": "b294862d5c63fe0b4edde6dd8dd19b95dc76c60dbad0dd531f0b4d489db2590a",
+      "archivePath": "content/archive/packed-localization-20261020/b294862d5c63fe0b4edde6dd8dd19b95dc76c60dbad0dd531f0b4d489db2590a.gz",
+      "archiveBytes": 647275,
+      "archiveSHA256": "0c43426233e93f70084eb41e87ae1f9983b727256b33ddf92ad2f61fe88fbc9f"
+    },
+    {
+      "path": "recovery/local-worktrees-20261009/team-terminal-retry-v137/conflict-stages/game/i18n/catalogs.mjs.stage2",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "815a56ba09b12a5eab5a5ad6787193de4a9974ca",
+      "bytes": 909247,
+      "sha256": "8214dca7d56845a9943d9bde25b3ec36a0e522e250849c2b1122f0d902daf020",
+      "archivePath": "content/archive/packed-localization-20261020/8214dca7d56845a9943d9bde25b3ec36a0e522e250849c2b1122f0d902daf020.gz",
+      "archiveBytes": 677121,
+      "archiveSHA256": "9ab3b18b0507676e627ea00142ae1766997c447f50574d14c2517f89afe9f657"
+    },
+    {
+      "path": "recovery/local-worktrees-20261009/team-terminal-retry-v137/conflict-stages/game/i18n/catalogs.mjs.stage3",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "d9b28d392fb2c2be0c82302c5a6fe15e79f1d609",
+      "bytes": 869499,
+      "sha256": "95cb3a4dde4c17af4f9b43e1002e95568abddc4cb51b2c4f34c1342321a0ad3d",
+      "archivePath": "content/archive/packed-localization-20261020/95cb3a4dde4c17af4f9b43e1002e95568abddc4cb51b2c4f34c1342321a0ad3d.gz",
+      "archiveBytes": 647265,
+      "archiveSHA256": "a9bc391087cc2ee209f30a0d0caffec28a9e5602261be870b1f2230d95035c52"
+    },
+    {
+      "path": "recovery/local-worktrees-20261009/team-terminal-retry-v137/working-tree.patch",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "f35344a4a0c7a6c5cfcecfc63c49f5b25c1f9b55",
+      "bytes": 2655128,
+      "sha256": "2744821805ea3e5d6ab430d544c8e329413d48763e43af2b0419680e4e52a387",
+      "archivePath": "content/archive/packed-localization-20261020/2744821805ea3e5d6ab430d544c8e329413d48763e43af2b0419680e4e52a387.gz",
+      "archiveBytes": 1973828,
+      "archiveSHA256": "45ddcef20b3717bd222d29d00e829b810640f16253d937f3311f7dce6c49fde7"
+    },
+    {
+      "path": "recovery/local-worktrees-20261009/unified-game-menus/working-tree.patch",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "23e55a6e6501a993b56c40a700b536796316f878",
+      "bytes": 2958646,
+      "sha256": "1a040b0b2d23d10d4f6c0b45e293bfdeec298e88a50659323b61c540fec6765a",
+      "archivePath": "content/archive/packed-localization-20261020/1a040b0b2d23d10d4f6c0b45e293bfdeec298e88a50659323b61c540fec6765a.gz",
+      "archiveBytes": 1915998,
+      "archiveSHA256": "68263dcce07247a58d41f44d736f4c5dd787eef8f35ef5791046c23cd6563e00"
+    },
+    {
+      "path": "recovery/local-worktrees-20261009/v135-replay-audit/local-commits.patch",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "9f44c34b6da829ff93ba764f4c642afb2adb8df9",
+      "bytes": 1868537,
+      "sha256": "d9532ba19e67536990c2b3578eb21a48142a85a7f14172dc2c8edd8976b7c01e",
+      "archivePath": "content/archive/packed-localization-20261020/d9532ba19e67536990c2b3578eb21a48142a85a7f14172dc2c8edd8976b7c01e.gz",
+      "archiveBytes": 1332365,
+      "archiveSHA256": "849f5fc363570607f9d295f746a777142789e9e3df05901c52216dcc3ebc1e79"
+    },
+    {
+      "path": "docs/performance/fixtures/solo-replay-portability/first-eight-39109911286.json",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "9025fe70065b1f5b1bd82e77ab2f50d3c9d66a4b",
+      "bytes": 71317,
+      "sha256": "e8cffec26417e4199593a80c43def7ac94d6ffca50bf41dc853a856cc7d069fb",
+      "archivePath": "content/archive/packed-localization-20261020/e8cffec26417e4199593a80c43def7ac94d6ffca50bf41dc853a856cc7d069fb.gz",
+      "archiveBytes": 8109,
+      "archiveSHA256": "c73ceb59c4c18381b850605d031ca8abccb952b3f5adbae4055697901cb9e951"
+    },
+    {
+      "path": "scripts/solo-replay-portability-diagnostic.mjs",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "6b9d1bc93633dcf8fee382a1863812c988b27cc7",
+      "bytes": 22780,
+      "sha256": "742cc13043d234c43dc1eccf0606a29cee479934d519fee2674c8446ac4fbf3b",
+      "archivePath": "content/archive/packed-localization-20261020/742cc13043d234c43dc1eccf0606a29cee479934d519fee2674c8446ac4fbf3b.gz",
+      "archiveBytes": 6660,
+      "archiveSHA256": "c752d3e49bc5b0bf61fcc93dcd1a430bfdd32e31f701103c64425a02d61ce8a2"
+    },
+    {
+      "path": "scripts/solo-replay-portability-diagnostic.test.mjs",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "dff524e49090ed3203d1cb15af7b15f98aeb0ead",
+      "bytes": 26201,
+      "sha256": "34b9c33fc9f68560234b1ee7603307dc4653ad4506eece33dff264c5e2abe0a9",
+      "archivePath": "content/archive/packed-localization-20261020/34b9c33fc9f68560234b1ee7603307dc4653ad4506eece33dff264c5e2abe0a9.gz",
+      "archiveBytes": 6808,
+      "archiveSHA256": "e3913f1c3977635934a2b88aee458be6d8a116439e66d8f6eeb77399cf8b414b"
+    },
+    {
+      "path": "recovery/local-worktrees-20261009/README.md",
+      "sourceRevision": "4ec0fb00bf7ca97c54a1fdda3e6a3c5bb67926bf",
+      "gitBlob": "26f950c4fb28d2a0d5033f37b0ffde2801fd6f76",
+      "bytes": 585,
+      "sha256": "7f1ee7e5dc5e4a4a04f340710bc249146e804779db6256b895216cd9644c833b",
+      "archivePath": "content/archive/packed-localization-20261020/7f1ee7e5dc5e4a4a04f340710bc249146e804779db6256b895216cd9644c833b.gz",
+      "archiveBytes": 374,
+      "archiveSHA256": "2593c9b4c44dc23bf0fd0fe5333061ba56de64b24504c1521189b0e68856bb33"
+    }
+  ]
+}
