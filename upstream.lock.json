@@ -924,9 +924,9 @@
     ]
   },
   "repository": "mekhovov/revealline",
-  "requestedRef": "e9cff6f37",
-  "commit": "e9cff6f371f330b0e6a4b53e4eb21b3a73cfde91",
-  "tree": "bfea023022707a1fc93ae7b8c4cd7733b42dabd4",
+  "requestedRef": "de59e798e3d94346a45519f842d6c5cbcdb0935e",
+  "commit": "de59e798e3d94346a45519f842d6c5cbcdb0935e",
+  "tree": "48db62dde5eec06266889b46384d10e184a8b661",
   "upstreamVersion": "0.151.1",
   "editionId": "coupa-all",
   "brandId": "coupa",
@@ -1855,8 +1855,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 626792,
-      "sha256": "88053ffcf0b88d4ab37727927f69111952ba3dc5bda6afc87f44994e950849e3"
+      "bytes": 626824,
+      "sha256": "da92fd00b3c2eeb1a7f502eeeb7c9f65d7c1fa09902cf44a7caebd715d6be132"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -4132,6 +4132,16 @@
       "path": "game/i18n/index.mjs",
       "bytes": 417,
       "sha256": "29f40a6d92826ced1eb53283ed32e342ac6e95920abbf8d549f2d78e65b48d07"
+    },
+    {
+      "path": "game/i18n/main-entry-locale.mjs",
+      "bytes": 541,
+      "sha256": "4bd48a9580da33614b11e7ede181c92e2c9e77485e0f184e65c587ff001afe39"
+    },
+    {
+      "path": "game/i18n/main-entry.mjs",
+      "bytes": 326,
+      "sha256": "2900c43c125a27c86cee16e91298699e46dbc97f38077328b19b82ccd49b144d"
     },
     {
       "path": "game/i18n/style.css",
@@ -7209,8 +7219,8 @@
     },
     {
       "path": "edition-build.json",
-      "bytes": 180742,
-      "sha256": "dd6b5d875599c95677c2b5b698b1a23237af3118dfa0fee7ea59f6f6c79b281b"
+      "bytes": 181065,
+      "sha256": "d7db0e15d051a5073fa9e4660a00ac23bbbae61a2cd1a5cfcaff6a93545e6d50"
     },
     {
       "path": "edition-catalog.json",
@@ -7234,8 +7244,8 @@
     },
     {
       "path": "game/app.mjs",
-      "bytes": 627376,
-      "sha256": "8a0fe512f177627116a487e2472ee4094e607b9d37883bf7e7949fd29db6d41e"
+      "bytes": 627408,
+      "sha256": "1a121f7f81715aae233cc181a9c5ed004ad3c7edcf10ab73241c117615fc7f4d"
     },
     {
       "path": "game/attempt-export.mjs",
@@ -7315,7 +7325,7 @@
     {
       "path": "game/build-info.json",
       "bytes": 180,
-      "sha256": "e6d2b73d3d19750dd272aa30d9e7c3da186b4116f4eb934d838197d16caba2fd"
+      "sha256": "22c4ef40239ae54d03c6113486590dfb0fd0d93197c1a066b5bcc3cba064e8cb"
     },
     {
       "path": "game/campaign-contexts.mjs",
@@ -9416,6 +9426,16 @@
       "path": "game/i18n/index.mjs",
       "bytes": 417,
       "sha256": "29f40a6d92826ced1eb53283ed32e342ac6e95920abbf8d549f2d78e65b48d07"
+    },
+    {
+      "path": "game/i18n/main-entry-locale.mjs",
+      "bytes": 541,
+      "sha256": "4bd48a9580da33614b11e7ede181c92e2c9e77485e0f184e65c587ff001afe39"
+    },
+    {
+      "path": "game/i18n/main-entry.mjs",
+      "bytes": 326,
+      "sha256": "2900c43c125a27c86cee16e91298699e46dbc97f38077328b19b82ccd49b144d"
     },
     {
       "path": "game/i18n/style.css",
