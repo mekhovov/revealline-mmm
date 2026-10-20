@@ -65,3 +65,7 @@ Nineteen original production checkpoint oracles are preserved in `content/archiv
 The compact archive inventory in `migration/embedded-upstream-20261020-receipt.json` preserves 42 unique embedded originals from 21 later upstream evidence archives, accounting for all 354 observed member paths. Exact affected archives are backed up separately; the compressed original records in this repository retain their own byte identities and remain outside the playable build.
 
 Eleven original packed catalogs, recovery records and replay-diagnostic inputs are preserved in `content/archive/packed-localization-20261020/`. Their exact Git and byte identities are recorded in `migration/packed-localization-originals-receipt.json`; derived upstream fixtures cannot be mistaken for these originals. All preserved records stay outside the playable build.
+
+Public issue, comment and release originals affected by the migration are preserved in `content/archive/hosted-migration-provenance-20261020/`. The receipt in `migration/hosted-provenance-originals-receipt.json` records their exact hashes and the original historical intake record. These provenance records stay outside the playable app.
+
+Eight generated native chapter package originals from historical releases are retained in `content/archive/release-native-originals-20261020/`, with exact published paths, release tags and hashes in `migration/native-release-originals-receipt.json`. They preserve the original package identities without exposing historical launch routes in the app.

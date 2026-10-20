@@ -1,0 +1,21 @@
+{
+  "format": "revealline-migration-provenance.v1",
+  "scope": "Archive-only original public records and the two remaining retired-path references in a current historical intake record. These are not playable build inputs. Originals remain available independently of the cleaned upstream Git history.",
+  "items": [
+    {
+      "path": "content/archive/hosted-migration-provenance-20261020/public-metadata-originals.json.gz",
+      "originalBytes": 314211,
+      "originalSHA256": "c781a9decdf954e9c6f910d75b77c30c3dedf261057f67c0557dadb6abbe6e39",
+      "gzipSHA256": "ba4c454682d39146e84549c2122055d2be82836ab75d088860031cc43c04d0fc",
+      "records": 159
+    },
+    {
+      "path": "content/archive/hosted-migration-provenance-20261020/original-current-worktree-intake.json.gz",
+      "originalUpstreamPath": "docs/verification/local-worktree-intake-2026-09-30/inventory.json.gz",
+      "gitBlob": "5d254df2c72039b9ea2dcd5912749b4496e8ed2c",
+      "originalBytes": 38544,
+      "originalSHA256": "d3efdb51550b0004eb6ff6840ba1e8d3ebee8d52f8873c2fa3e9398f2d8e4533",
+      "decodedSHA256": "c03a7759f3784c221ea651b38d0bb1df66afe074fa68d14f944db35358701a44"
+    }
+  ]
+}
