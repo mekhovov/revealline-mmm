@@ -892,8 +892,8 @@
     },
     {
       "path": "game/ui/mode-choice.mjs",
-      "bytes": 1261,
-      "sha256": "1885e298049a0181d64a1f8eb85520b36a437fb74ad33efd8d5e1fb30a627f6a"
+      "bytes": 1359,
+      "sha256": "140c2d77a970b462341eed54eb96ed28c8183ea24782d47360f37dd2ede3c615"
     },
     {
       "path": "game/ui/radio-audio.mjs",
@@ -6555,8 +6555,8 @@
     },
     {
       "path": "game/ui/mode-choice.mjs",
-      "bytes": 1261,
-      "sha256": "1885e298049a0181d64a1f8eb85520b36a437fb74ad33efd8d5e1fb30a627f6a"
+      "bytes": 1359,
+      "sha256": "140c2d77a970b462341eed54eb96ed28c8183ea24782d47360f37dd2ede3c615"
     },
     {
       "path": "game/ui/mode-play-shell.mjs",
@@ -7182,8 +7182,8 @@
     },
     {
       "path": "scripts/isolate-brand.mjs",
-      "bytes": 55126,
-      "sha256": "b610b78965e1d571432eecf3ac59fd68699534fa97d8815ebf4cbe61318cfdb8"
+      "bytes": 55636,
+      "sha256": "1fa9645843b1135dd7374c41f8f19fd2202dadb1dbe9dd5f54193c09206bf30a"
     },
     {
       "path": "scripts/presentation-policy.mjs",
@@ -7214,8 +7214,8 @@
     },
     {
       "path": "edition-build.json",
-      "bytes": 181059,
-      "sha256": "6adcb05ead3694e8927754275ce75f96db96e563f2fef0e8946711b1ceeb6047"
+      "bytes": 181060,
+      "sha256": "00d4402516d765c90214e9fd4b1116c2029ef1a9cdc80452ad0d0ba0a76d39ee"
     },
     {
       "path": "edition-catalog.json",
@@ -11709,13 +11709,13 @@
     },
     {
       "path": "game/ui/mode-choice.css",
-      "bytes": 9932,
-      "sha256": "dcb8b2fd6b719f770e237d4deeca3d8f41cd706c68e124fb27ee3a7ee2bc023d"
+      "bytes": 10437,
+      "sha256": "9d87ec7246add9fb5684c709a4ddd94a063bb5254ad9c7cb8fffe2301f8e09be"
     },
     {
       "path": "game/ui/mode-choice.mjs",
-      "bytes": 1261,
-      "sha256": "1885e298049a0181d64a1f8eb85520b36a437fb74ad33efd8d5e1fb30a627f6a"
+      "bytes": 1359,
+      "sha256": "140c2d77a970b462341eed54eb96ed28c8183ea24782d47360f37dd2ede3c615"
     },
     {
       "path": "game/ui/mode-play-shell.mjs",
